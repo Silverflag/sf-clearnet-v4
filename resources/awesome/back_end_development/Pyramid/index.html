@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pyramid</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pyramid</h1>
+
+<p><strong>Repository:</strong> https://github.com/uralbash/awesome-pyramid#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<h1>Awesome Pyramid</h1>
+<p><a href="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg"><img src="https://github.com/sindresorhus/awesome" alt="Awesome</a>"></p>
+<p>[![IRC</p>
+<p>Freenode](https://img.shields.io/badge/irc-freenode-blue.svg)](https://webchat.freenode.net/?channels=pyramid)</p>
+
+<p>A curated list of awesome Pyramid apps, projects and resources. Inspired by and</p>
+<p>based on <a href="https://github.com/vinta/awesome-python/">awesome-python</a>.</p>
+
+<ul>
+<li><a href="#awesome-pyramid">Awesome Pyramid</a></li>
+<ul>
+<li><a href="#admin-interface">Admin Interface</a></li>
+</ul>
+<ul>
+<li><a href="#asset-management">Asset Management</a></li>
+</ul>
+<ul>
+<li><a href="#async">Async</a></li>
+</ul>
+<ul>
+<li><a href="#authentication">Authentication</a></li>
+</ul>
+<ul>
+<li><a href="#authorization">Authorization</a></li>
+</ul>
+<ul>
+<li><a href="#caching--session">Caching & Session</a></li>
+</ul>
+<ul>
+<li><a href="#debugging">Debugging</a></li>
+</ul>
+<ul>
+<li><a href="#email">Email</a></li>
+</ul>
+<ul>
+<li><a href="#forms">Forms</a></li>
+</ul>
+<ul>
+<li><a href="#media-management">Media-Management</a></li>
+</ul>
+<ul>
+<li><a href="#restful-api">RESTful API</a></li>
+</ul>
+<ul>
+<li><a href="#search">Search</a></li>
+</ul>
+<ul>
+<li><a href="#security">Security</a></li>
+</ul>
+<ul>
+<li><a href="#services">Services</a></li>
+</ul>
+<ul>
+<li><a href="#settings">Settings</a></li>
+</ul>
+<ul>
+<li><a href="#storage">Storage</a></li>
+</ul>
+<ul>
+<li><a href="#task-queue">Task Queue</a></li>
+</ul>
+<ul>
+<li><a href="#testing">Testing</a></li>
+</ul>
+<ul>
+<li><a href="#translations">Translations</a></li>
+</ul>
+<ul>
+<li><a href="#web-frontend-integration">Web frontend integration</a></li>
+</ul>
+<ul>
+<li><a href="#workflows">Workflows</a></li>
+</ul>
+<ul>
+<li><a href="#other">Other</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#projects">Projects</a></li>
+<ul>
+<li><a href="#framework">Framework</a></li>
+</ul>
+<ul>
+<li><a href="#cms">CMS</a></li>
+</ul>
+<ul>
+<li><a href="#cookiecutters">Cookiecutters</a></li>
+</ul>
+<ul>
+<li><a href="#e-commerce">e-Commerce</a></li>
+</ul>
+<ul>
+<li><a href="#project-management">Project Management</a></li>
+</ul>
+<ul>
+<li><a href="#other">Other</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#resources">Resources</a></li>
+<ul>
+<li><a href="#books">Books</a></li>
+</ul>
+<ul>
+<li><a href="#websites">Websites</a></li>
+</ul>
+<ul>
+<li><a href="#conferences">Conferences</a></li>
+</ul>
+<ul>
+<li><a href="#videos">Videos</a></li>
+</ul>
+<ul>
+<li><a href="#who-uses-it">Who uses it?</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#contributing">Contributing</a></li>
+</('ul', 0)>
+<h2>Admin interface</h2>
+
+<p><em>Packages that extend the Admin interface, adding or improving features.</em></p>
+
+<ul>
+<li><a href="https://github.com/FormAlchemy/pyramid<em>formalchemy">pyramid</em>formalchemy</a> -</li>
+</ul>
+<p>provides a CRUD interface for pyramid based on FormAlchemy.</p>
+<ul>
+<li><a href="https://github.com/sacrud/pyramid<em>sacrud">pyramid</em>sacrud</a> -    Pyramid CRUD interface.</li>
+</ul>
+<p>Provides an administration web interface for Pyramid.</p>
+<p>Unlike classic CRUD, pyramid_sacrud allows overrides and flexibility to</p>
+<p>customize your interface, similar to django.contrib.admin but uses a</p>
+<p>different backend to provide resources. [New Architecture](</p>
+<p><a href="http://pyramid-sacrud.readthedocs.io/pages/contribute/architecture.html">http://pyramid-sacrud.readthedocs.io/pages/contribute/architecture.html</a>)</p>
+<p>built on the resources and mechanism traversal, allows to use it in various cases.</p>
+<ul>
+<li><a href="https://github.com/sacrud/ps<em>alchemy">ps</em>alchemy</a> - extension for pyramid_sacrud</li>
+</ul>
+<p>which provides SQLAlchemy models.</p>
+<ul>
+<li><a href="https://github.com/sacrud/ps<em>tree">ps</em>tree</a> - extension for</li>
+</ul>
+<p><a href="https://github.com/sacrud/pyramid<em>sacrud">pyramid</em>sacrud</a> which displays</p>
+<p>a list of records as tree. This works fine with models from</p>
+<p><a href="https://github.com/uralbash/sqlalchemy<em>mptt">sqlalchemy</em>mptt</a>.</p>
+<ul>
+<li><a href="https://websauna.org/docs/">Websauna</a> - a full stack application framework for Pyramid</li>
+</('ul', 0)>
+<h2>Asset Management</h2>
+
+<p><em>Packages that help manage the static assets of a project.</em></p>
+
+<ul>
+<li><a href="https://github.com/sontek/pyramid<em>webassets">pyramid</em>webassets</a> - Pyramid</li>
+</ul>
+<p>extension for working with the webassets library.</p>
+<ul>
+<li><a href="https://github.com/mrijken/pyramid<em>bowerstatic">pyramid</em>bowerstatic</a> -</li>
+</ul>
+<p>integration of Bowerstatic in Pyramid</p>
+
+<h2>Async</h2>
+
+<ul>
+<li><a href="https://github.com/housleyjk/aiopyramid">aiopyramid</a> - Run pyramid using</li>
+</ul>
+<p>asyncio.</p>
+<ul>
+<li><a href="https://github.com/abourget/gevent-socketio">gevent-socketio</a> -</li>
+</ul>
+<p>gevent-socketio is a Python implementation of the Socket.IO protocol,</p>
+<p>developed originally for Node.js by LearnBoost and then ported to other</p>
+<p>languages.</p>
+<ul>
+<li><a href="https://github.com/boothead/stargate">Stargate</a> - Stargate is a package for</li>
+</ul>
+<p>adding WebSockets support to pyramid applications using the excellent</p>
+<p>eventlet library for long running connections.</p>
+<ul>
+<li><a href="https://github.com/AppEnlight/channelstream">channelstream</a> - websocket communication server (gevent).</li>
+</('ul', 0)>
+<h2>Authentication</h2>
+
+<p><em>Packages that improve or extend the authentication methods of Pyramid.</em></p>
+
+<ul>
+<li><a href="https://github.com/Pylons/pyramid<em>ldap">pyramid</em>ldap</a> - an LDAP</li>
+</ul>
+<p>authentication policy for Pyramid.</p>
+<ul>
+<li><a href="https://github.com/Cito/pyramid<em>ldap3">pyramid</em>ldap3</a> - Provides LDAP authentication</li>
+</ul>
+<p>services for your Pyramid application based on the ldap3 package.</p>
+<ul>
+<li><a href="https://github.com/Pylons/pyramid<em>who">pyramid</em>who</a> - Authentication policy</li>
+</ul>
+<p>for pyramid using repoze.who 2.0 API.</p>
+<ul>
+<li><a href="https://github.com/bbangert/velruse">velruse</a> - Simplifying third-party</li>
+</ul>
+<p>authentication for web applications. it supports most of auth</p>
+<p><a href="https://github.com/bbangert/velruse/tree/master/velruse/providers">providers</a>.</p>
+<ul>
+<li><a href="https://github.com/thruflo/pyramid<em>simpleauth">pyramid</em>simpleauth</a> - session</li>
+</ul>
+<p>based authentication and role based security for Pyramid application</p>
+<ul>
+<li><a href="https://github.com/omab/python-social-auth">Python Social Auth</a> - Social</li>
+</ul>
+<p>authentication/registration mechanism with support for a large number of</p>
+<p><a href="https://github.com/omab/python-social-auth#auth-providers">providers</a>.</p>
+<ul>
+<li><a href="https://github.com/authomatic/authomatic">Authomatic</a> -  Simple yet powerful</li>
+</ul>
+<p>authorization / authentication client library for Python web applications.</p>
+<ul>
+<li><a href="https://github.com/cd34/apex">apex</a> - Toolkit for Pyramid, a Pylons Project,</li>
+</ul>
+<p>to add Authentication and Authorization using Velruse (OAuth) and/or a local</p>
+<p>database, CSRF, ReCaptcha, Sessions, Flash messages and I18N.</p>
+<ul>
+<li><a href="https://github.com/usingnamespace/pyramid<em>authsanity">pyramid</em>authsanity</a> -</li>
+</ul>
+<p>That will make it simpler to have a secure authentication policy with an easy</p>
+<p>to use backend.</p>
+<ul>
+<li><a href="https://github.com/wichert/pyramid<em>jwt">pyramid</em>jwt</a> - This package</li>
+</ul>
+<p>implements an authentication policy for Pyramid that using [JSON Web Tokens].</p>
+<p>This standard ([RFC 7519]) is often used to secure backens APIs. The</p>
+<p>excellent [PyJWT] library is used for the JWT encoding / decoding logic.</p>
+<ul>
+<li><a href="https://github.com/mozilla-services/pyramid<em>ipauth">pyramid</em>ipauth</a> -</li>
+</ul>
+<p>Pyramid authentication policy based on remote ip address.</p>
+
+<p>[JSON Web Tokens]: https://jwt.io/</p>
+<p>[RFC 7519]: https://tools.ietf.org/html/rfc7519</p>
+<p>[PyJWT]: https://pyjwt.readthedocs.io/en/latest/</p>
+
+<h2>Authorization</h2>
+
+<p><em>Packages related to authorization infrastructure and permissions.</em></p>
+
+<ul>
+<li><a href="https://github.com/ergo/ziggurat<em>foundations">ziggurat</em>foundations</a> -</li>
+</ul>
+<p>Framework agnostic set of sqlalchemy classes that make building applications</p>
+<p>that require permissions an easy task.</p>
+<ul>
+<li><a href="https://github.com/mozilla-services/pyramid<em>multiauth">pyramid</em>multiauth</a> -</li>
+</ul>
+<p>An authentication policy for Pyramid that proxies to a stack of other</p>
+<p>authentication policies.</p>
+<ul>
+<li><a href="https://github.com/wichert/pyramid<em>authstack">pyramid</em>authstack</a> -  Use</li>
+</ul>
+<p>multiple authentication policies with Pyramid.</p>
+<ul>
+<li><a href="https://github.com/Pylons/horus">horus</a> - User registration and login system</li>
+</ul>
+<p>for the Pyramid Web Framework.</p>
+<ul>
+<li><a href="https://github.com/YosaiProject/pyramid<em>yosai">pyramid</em>yosai</a> - Pyramid integration with security Framework for Python applications featuring Authorization (rbac permissions and roles), Authentication (2fa totp), Session Management and an extensive Audit Trail https://yosaiproject.github.io/yosai/</li>
+</('ul', 0)>
+<h2>Caching & Session</h2>
+
+<p><em>Packages that help with caching and session.</em></p>
+
+<ul>
+<li><a href="https://github.com/Pylons/pyramid<em>beaker">pyramid</em>beaker</a> - A Beaker session</li>
+</ul>
+<p>factory backend for Pyramid, also cache configurator.</p>
+<ul>
+<li>[Why You'll Want to Switch to</li>
+</ul>
+<p>dogpile.cache](http://techspot.zzzeek.org/2012/04/19/using-beaker-for-caching-why-you-ll-want-to-switch-to-dogpile.cache/)</p>
+<ul>
+<li><a href="https://github.com/ericrasmussen/pyramid<em>redis</em>sessions">pyramid<em>redis</em>sessions</a> -</li>
+</ul>
+<p>Pyramid web framework session factory backed by Redis.</p>
+<ul>
+<li><a href="https://github.com/moriyoshi/pyramid<em>dogpile</em>cache">pyramid<em>dogpile</em>cache</a> -</li>
+</ul>
+<p>dogpile.cache configuration package for Pyramid</p>
+<ul>
+<li><a href="https://github.com/joulez/pyramid<em>sessions">pyramid</em>sessions</a> - Multiple</li>
+</ul>
+<p>session support for the Pyramid Web Framework</p>
+<ul>
+<li><a href="https://github.com/Pylons/pyramid<em>nacl</em>session">pyramid<em>nacl</em>session</a> -</li>
+</ul>
+<p>defines an encrypting, pickle-based cookie serializer, using</p>
+<p><a href="http://pynacl.readthedocs.io/en/latest/secret/">PyNaCl</a> to generate the</p>
+<p>symmetric encryption for the cookie state.</p>
+
+<h2>Debugging</h2>
+
+<p><em>Packages that help hunt down bugs.</em></p>
+
+<ul>
+<li><a href="https://github.com/Pylons/pyramid<em>debugtoolbar">pyramid</em>debugtoolbar</a> -</li>
+</ul>
+<p>provides a debug toolbar useful while you're developing your Pyramid</p>
+<p>application.</p>
+<ul>
+<li><a href="https://github.com/Pylons/pyramid<em>exclog">pyramid</em>exclog</a> - a package which</li>
+</ul>
+<p>logs exceptions from Pyramid applications.</p>
+<ul>
+<li><a href="https://github.com/jvanasco/pyramid<em>debugtoolbar</em>dogpile">pyramid<em>debugtoolbar</em>dogpile</a> -</li>
+</ul>
+<p>dogpile caching support for pyramid_debugtoolbar</p>
+<ul>
+<li><a href="https://github.com/Pylons/pyramid<em>ipython">pyramid</em>ipython</a> - IPython</li>
+</ul>
+<p>bindings for Pyramid's pshell</p>
+<ul>
+<li><a href="https://github.com/Pylons/pyramid<em>bpython">pyramid</em>bpython</a> - bpython</li>
+</ul>
+<p>bindings for Pyramid's pshell</p>
+<ul>
+<li><a href="https://github.com/disko/pyramid<em>pycallgraph">pyramid</em>pycallgraph</a> - Pyramid tween to generate a callgraph image for every request</li>
+</('ul', 0)>
+<h2>Email</h2>
+
+<p><em>Packages that help manage email sending.</em></p>
+
+<ul>
+<li><a href="https://github.com/Pylons/pyramid<em>mailer">pyramid</em>mailer</a> - A package for</li>
+</ul>
+<p>sending email from your Pyramid application.</p>
+<ul>
+<li><a href="https://github.com/domenkozar/pyramid<em>marrowmailer">pyramid</em>marrowmailer</a> -</li>
+</ul>
+<p>Pyramid integration package for marrow.mailer, formerly known as TurboMail</p>
+<ul>
+<li><a href="https://github.com/evannook/pyramid<em>mailgun">pyramid</em>mailgun</a> - Mailgun integration for Pyramid framework.</li>
+</('ul', 0)>
+<h2>Forms</h2>
+
+<p><em>Packages that extend the functionality of forms or add new types of forms.</em></p>
+
+<ul>
+<li><a href="https://github.com/Pylons/deform">deform</a> - is a Python HTML form generation</li>
+</ul>
+<p>library.</p>
+<ul>
+<li><a href="https://github.com/Pylons/colander">colander</a> - A</li>
+</ul>
+<p>serialization/deserialization/validation library for strings, mappings and</p>
+<p>lists.</p>
+<ul>
+<li><a href="https://github.com/wtforms/wtforms">WTForms</a> - is a flexible forms</li>
+</ul>
+<p>validation and rendering library for python web development.</p>
+<ul>
+<li><a href="https://github.com/stefanofontanelli/ColanderAlchemy">ColanderAlchemy</a> -</li>
+</ul>
+<p>helps you to auto-generate Colander schemas that are based on SQLAlchemy</p>
+<p>mapped classes.</p>
+<ul>
+<li><a href="https://github.com/marshmallow-code/marshmallow">marshmallow</a> - A</li>
+</ul>
+<p>lightweight library for converting complex objects to and from simple Python</p>
+<p>datatypes (i.e. (de)serialization and validation).</p>
+
+<h2>Media-Management</h2>
+
+<ul>
+<li><a href="https://github.com/uralbash/pyramid<em>elfinder">pyramid</em>elfinder</a> - This is</li>
+</ul>
+<p>conector for elfinder file manager, written for pyramid framework.</p>
+<ul>
+<li><a href="https://github.com/danjac/pyramid<em>storage">pyramid</em>storage</a> - This is a package for handling file uploads in your Pyramid framework application.</li>
+</('ul', 0)>
+<h2>RESTful API</h2>
+
+<p><em>Packages for developing RESTful APIs.</em></p>
+
+<ul>
+<li><a href="https://github.com/Cornices/cornice">cornice</a> - provides helpers to</li>
+</ul>
+<p>build & document REST-ish Web Services with Pyramid, with decent default</p>
+<p>behaviors. It takes care of following the HTTP specification in an automated</p>
+<p>way where possible.</p>
+<ul>
+<li><a href="https://github.com/wichert/rest<em>toolkit">rest</em>toolkit</a> - is a Python package</li>
+</ul>
+<p>which provides a very convenient way to build REST servers. It is build on</p>
+<p>top of Pyramid, but you do not need to know much about Pyramid to use</p>
+<p>rest_toolkit.</p>
+<ul>
+<li><a href="https://github.com/hadrien/pyramid<em>royal">pyramid</em>royal</a> - Royal is a</li>
+</ul>
+<p>pyramid extension which eases writing RESTful web applications.</p>
+<ul>
+<li><a href="https://github.com/mozilla-services/cliquet">cliquet</a> - Cliquet is a toolkit</li>
+</ul>
+<p>to ease the implementation of HTTP microservices, such as data-driven REST</p>
+<p>APIs.</p>
+<ul>
+<li><a href="https://github.com/sloria/webargs">webargs</a> - A friendly library for parsing</li>
+</ul>
+<p>HTTP request arguments, with built-in support for popular web frameworks.</p>
+<ul>
+<li><a href="https://github.com/ramses-tech/ramses">ramses</a> - Generate a RESTful API using</li>
+</ul>
+<p>RAML. It uses Nefertari which provides ElasticSearch-powered views.</p>
+<ul>
+<li><a href="https://github.com/ramses-tech/nefertari">nefertari</a> -  Nefertari is a REST</li>
+</ul>
+<p>API framework sitting on top of Pyramid and ElasticSearch.</p>
+<ul>
+<li><a href="https://github.com/striglia/pyramid<em>swagger">pyramid</em>swagger</a> - Convenient</li>
+</ul>
+<p>tools for using Swagger to define and validate your interfaces in a Pyramid webapp. (Swagger 2.0 document)</p>
+<ul>
+<li><a href="https://github.com/niteoweb/pyramid<em>openapi3">pyramid-openapi3</a> - Validate Pyramid views against an OpenAPI 3.0 document. Similar to pyramid</em>swagger but for OpenAPI 3.0.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/colinhiggs/pyramid-jsonapi">pyramid_jsonapi</a> - Automatically </li>
+</ul>
+<p>create a <a href="http://jsonapi.org/">JSON API</a> standard API from a database using the</p>
+<p>sqlAlchemy ORM and pyramid framework.</p>
+<ul>
+<li><a href="https://github.com/ergo/pyramid<em>apispec">pyramid</em>apispec</a> - Create an OpenAPI</li>
+</ul>
+<p>specification file using apispec and Marshmallow schemas.</p>
+
+<h2>Search</h2>
+
+<p><em>Packages that provide search capabilities to projects.</em></p>
+
+<ul>
+<li><a href="https://github.com/Pylons/hypatia">hypatia</a> - A Python indexing and</li>
+</ul>
+<p>searching system.</p>
+
+<h2>Security</h2>
+
+<p><em>Packages that improve the security of a project.</em></p>
+
+<h2>Services</h2>
+
+<ul>
+<li><a href="https://github.com/websauna/pyramid<em>sms">pyramid</em>sms</a> -</li>
+</ul>
+<p>SMS services for Pyramid web framework.</p>
+
+<h2>Settings</h2>
+
+<p><em>Packages that help manage the configurability of projects.</em></p>
+
+<ul>
+<li><a href="https://github.com/Pylons/pyramid<em>zcml">pyramid</em>zcml</a> - Zope Configuration</li>
+</ul>
+<p>Markup Language configuration support for Pyramid.</p>
+<ul>
+<li><a href="https://github.com/mmerickel/pyramid<em>services">pyramid</em>services</a> - defines a</li>
+</ul>
+<p>pattern and helper methods for accessing a pluggable service layer from</p>
+<p>within your Pyramid apps.</p>
+<ul>
+<li><a href="https://github.com/Pylons/hupper">hupper</a> - A process monitor/reloader for developers</li>
+</ul>
+<p>that can watch files for changes and restart the process.</p>
+
+<h2>Storage</h2>
+
+<p>*Packages that extend the functionality of the existing storage backend or</p>
+<p>provide new storage backends.*</p>
+
+<ul>
+<li><a href="https://github.com/Pylons/pyramid<em>tm">pyramid</em>tm</a> - Centralized transaction</li>
+</ul>
+<p>management for Pyramid applications (without middleware).</p>
+<ul>
+<li><a href="https://github.com/zopefoundation/zope.sqlalchemy">zope.sqlalchemy</a> -</li>
+</ul>
+<p>Integration of SQLAlchemy with transaction management.</p>
+<ul>
+<li>[What the Zope Transaction Manager Means To Me (and</li>
+</ul>
+<p>you)](https://metaclassical.com/what-the-zope-transaction-manager-means-to-me-and-you/)</p>
+<ul>
+<li><a href="https://github.com/wichert/pyramid<em>sqlalchemy">pyramid</em>sqlalchemy</a> -</li>
+</ul>
+<p>provides some basic glue to facilitate using SQLAlchemy with Pyramid.</p>
+<ul>
+<li><a href="https://github.com/Pylons/pyramid<em>zodbconn">pyramid</em>zodbconn</a> - ZODB</li>
+</ul>
+<p>Database connection management for Pyramid.</p>
+<ul>
+<li><a href="https://github.com/marioidival/pyramid<em>mongoengine">pyramid</em>mongoengine</a> -</li>
+</ul>
+<p>pyramid-mongoengine package based on flask-mongoengine</p>
+<ul>
+<li><a href="https://github.com/niallo/pyramid<em>mongodb">pyramid</em>mongodb</a> - </li>
+</ul>
+<p>Basic Pyramid Scaffold to easily use MongoDB for persistence with the Pyramid Web framework</p>
+<ul>
+<li><a href="https://github.com/pyexcel-webwares/pyramid-excel">pyramid-excel</a> - pyramid-excel is based on <a href="https://github.com/pyexcel/pyexcel">pyexcel</a> and makes it easy to consume/produce information stored in excel files over HTTP protocol as well as on file system. This library can turn the excel data into a list of lists, a list of records(dictionaries), dictionaries of lists. And vice versa. Hence it lets you focus on data in Pyramid based web development, instead of file formats.</li>
+</('ul', 0)>
+<h2>Task Queue</h2>
+
+<p><em>Packages that make working with task/background queues easier.</em></p>
+
+<ul>
+<li><a href="https://github.com/sontek/pyramid<em>celery">pyramid</em>celery</a> - Pyramid</li>
+</ul>
+<p>configuration with celery integration. Allows you to use pyramid .ini files</p>
+<p>to configure celery and have your pyramid configuration inside celery tasks.</p>
+<ul>
+<li><a href="https://github.com/wichert/pyramid<em>rq">pyramid</em>rq</a> - Support using the rq</li>
+</ul>
+<p>queueing system with pyramid. The easiest way to monitor and use</p>
+<p><a href="http://python-rq.org">RQ</a> in your Pyramid projects.</p>
+
+<h2>Templates</h2>
+
+<ul>
+<li><a href="https://github.com/Pylons/pyramid<em>mako">pyramid</em>mako</a> - Mako templating</li>
+</ul>
+<p>system bindings for the Pyramid web framework.</p>
+<ul>
+<li><a href="https://github.com/Pylons/pyramid<em>chameleon">pyramid</em>chameleon</a> - Chameleon</li>
+</ul>
+<p>template compiler for pyramid.</p>
+<ul>
+<li><a href="https://github.com/Pylons/pyramid<em>jinja2">pyramid</em>jinja2</a> - Jinja2</li>
+</ul>
+<p>templating system bindings for the Pyramid web framework.</p>
+<ul>
+<li><a href="https://github.com/ztane/Tonnikala">Tonnikala</a> - Python templating engine</li>
+</ul>
+<p>with Pyramid integration</p>
+<ul>
+<li><a href="https://github.com/nandoflorestan/kajiki">Kajiki</a> - provides fast well-formed XML templates, with <a href="https://github.com/nandoflorestan/kajiki/blob/master/kajiki/integration/pyramid.py">Pyramid integration</a></li>
+</('ul', 0)>
+<h2>Testing</h2>
+
+<p><em>Packages that help test code or generate test data.</em></p>
+
+<ul>
+<li><a href="https://github.com/Pylons/webtest">webtest</a> - Wraps any WSGI application and</li>
+</ul>
+<p>makes it easy to send test requests to that application, without starting up</p>
+<p>an HTTP server.</p>
+
+<h2>Translations</h2>
+
+<p><em>Packages help with the task of translating projects.</em></p>
+
+<ul>
+<li><a href="https://github.com/wichert/lingua">lingua</a> - Lingua is a package with tools</li>
+</ul>
+<p>to extract translatable texts from your code, and to check existing</p>
+<p>translations. It replaces the use of the xgettext command from gettext, or</p>
+<p>pybabel from Babel.</p>
+<ul>
+<li><a href="https://github.com/sahama/pyramid<em>i18n</em>helper">pyramid<em>i18n</em>helper</a> - helper to create new smgid and translate msgid to local langs .</li>
+</('ul', 0)>
+<h2>Web frontend integration</h2>
+
+<ul>
+<li><a href="https://github.com/eddyekofo94/pyramidVue">PyramidVue</a> - Pyramid and VueJs (JavaScript) template with Hot-Module-Replacement starter template.</li>
+</('ul', 0)>
+<h2>Workflows</h2>
+
+<p><em>Packages that do process, procedure and/or business tasks management.</em></p>
+
+<h2>Other</h2>
+
+<ul>
+<li><a href="https://github.com/Pylons/pyramid<em>layout">pyramid</em>layout</a> - Pyramid add-on</li>
+</ul>
+<p>for managing UI layouts.</p>
+<ul>
+<li><a href="https://github.com/Pylons/pyramid<em>skins">pyramid</em>skins</a> - This package</li>
+</ul>
+<p>provides a simple framework to integrate code with templates and resources.</p>
+<ul>
+<li><a href="https://github.com/Pylons/waitress">waitress</a> - Waitress is meant to be a</li>
+</ul>
+<p>production-quality pure-Python WSGI server with very acceptable performance.</p>
+<p>It has no dependencies except ones which live in the Python standard library.</p>
+<ul>
+<li><a href="https://github.com/Pylons/pyramid<em>handlers">pyramid</em>handlers</a> - analogue of</li>
+</ul>
+<p>Pylons-style “controllers” for Pyramid.</p>
+<ul>
+<li><a href="https://github.com/Pylons/pyramid<em>rpc">pyramid</em>rpc</a> - RPC service add-on for</li>
+</ul>
+<p>Pyramid, supports XML-RPC in a more extensible manner than pyramid_xmlrpc</p>
+<p>with support for JSON-RPC and AMF.</p>
+<ul>
+<li><a href="https://github.com/SurveyMonkey/pyramid<em>autodoc">pyramid</em>autodoc</a> - Sphinx</li>
+</ul>
+<p>extension for documenting your Pyramid APIs.</p>
+<ul>
+<li><a href="https://github.com/uralbash/pyramid<em>pages">pyramid</em>pages</a> - Provides a</li>
+</ul>
+<p>collections of tree pages to your Pyramid application. This is very similar</p>
+<p>to django.contrib.flatpages but with a tree structure and traversal algorithm</p>
+<p>in URL dispatch.</p>
+<ul>
+<li><a href="https://github.com/Pylons/paginate">paginate</a> - Python pagination module.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lxneng/pyramid<em>tablib">pyramid</em>tablib</a> - tablib renderer</li>
+</ul>
+<p>(xlsx, xls, csv) for pyramid</p>
+<ul>
+<li><a href="https://github.com/sontek/tomb<em>routes">tomb</em>routes</a> - Simple utility library</li>
+</ul>
+<p>around pyramid routing</p>
+<ul>
+<li><a href="https://github.com/jenner/pyramid<em>extdirect">pyramid</em>extdirect</a> - This pyramid plugin provides a router for the ExtDirect Sencha API included in ExtJS. ExtDirect allows to run server-side callbacks directly through JavaScript without the extra AJAX boilerplate. </li>
+</ul>
+<ul>
+<li><a href="https://github.com/Pylons/pyramid<em>retry">pyramid</em>retry</a> - pyramid_retry is an execution policy for Pyramid that wraps requests and can retry them a configurable number of times under certain "retryable" error conditions before indicating a failure to the client.</li>
+</('ul', 0)>
+<h1>Projects</h1>
+
+<p><em>Outstanding Pyramid projects.</em></p>
+
+<h2>Framework</h2>
+
+<ul>
+<li><a href="http://www.ringo-framework.org/">Ringo</a> - Ringo is a Python based high level</li>
+</ul>
+<p>web application framework build on top of Pyramid. The framework can be used</p>
+<p>to build form based management or administration software.</p>
+<ul>
+<li><a href="https://github.com/conestack/cone.app">cone.app</a> - A comprehensive web application stub on top of Pyramid.</li>
+</('ul', 0)>
+<h2>CMS</h2>
+
+<ul>
+<li><a href="https://github.com/nive/nive<em>cms">nive</em>cms</a> - Nive is professional out the</li>
+</ul>
+<p>box content management system for mobile and desktop websites based on python</p>
+<p>and the webframework pyramid. Please refer to the website cms.nive.co for</p>
+<p>detailed information.</p>
+<ul>
+<li><a href="https://github.com/Pylons/substanced">substanced</a> - An application server</li>
+</ul>
+<p>built upon the Pyramid web framework. It provides a user interface for</p>
+<p>managing content as well as libraries and utilities which make it easy to</p>
+<p>create applications.</p>
+<ul>
+<li><a href="https://github.com/Kotti/Kotti">Kotti</a> - A user-friendly, light-weight and</li>
+</ul>
+<p>extensible web content management system. Based on Pyramid and SQLAlchemy.</p>
+<ul>
+<li><a href="https://karlproject.readthedocs.io/en/latest/">KARL</a> - A moderately-sized</li>
+</ul>
+<p>application (roughly 80K lines of Python code) built on top of Pyramid. It is</p>
+<p>an open source web</p>
+<p>system for collaboration, organizational intranets, and knowledge management.</p>
+<p>It provides facilities for wikis, calendars, manuals, searching, tagging,</p>
+<p>commenting, and file uploads. See the KARL site for download and installation</p>
+<p>details.</p>
+
+<h2>Cookiecutters</h2>
+
+<ul>
+<li><a href="https://github.com/Pylons?q=cookiecutter">Pylons</a> - official cookiecutter templates</li>
+</ul>
+<ul>
+<li><a href="https://github.com/asif-mahmud/pyramid_runner">Pyramid Runner</a> - A minimal Pyramid</li>
+</ul>
+<p>scaffold that aims to provide a starter template to build small to large web services.</p>
+
+<ul>
+<li>Traversal based application</li>
+</ul>
+<ul>
+<li>JSON only response</li>
+</ul>
+<ul>
+<li>JWT authentication policy</li>
+</ul>
+<ul>
+<li>Alembic for database revisions</li>
+</ul>
+<ul>
+<li>Some simple modifications to base tests, views and models base to reduce typing</li>
+</('ul', 2)>
+<h2>e-Commerce</h2>
+
+<h2>Other</h2>
+
+<ul>
+<li><a href="https://github.com/Pylons/cluegun">cluegun</a> - A simple pastebin application</li>
+</ul>
+<p>based on Rocky Burt’s ClueBin. It demonstrates form processing, security, and</p>
+<p>the use of ZODB within a Pyramid application.</p>
+<ul>
+<li><a href="https://github.com/Pylons/shootout">shootout</a> - An example “idea</li>
+</ul>
+<p>competition” application by Carlos de la Guardia and Lukasz Fidosz. It</p>
+<p>demonstrates URL dispatch, simple authentication, integration with SQLAlchemy</p>
+<p>and pyramid_simpleform.</p>
+<ul>
+<li><a href="https://github.com/Pylons/virginia">virginia</a> - A very simple dynamic</li>
+</ul>
+<p>file rendering application. It is willing to render structured text</p>
+<p>documents, HTML documents, and images from a filesystem directory. It’s also</p>
+<p>a good example of traversal. An earlier version of this application runs the</p>
+<p>repoze.org website.</p>
+<ul>
+<li><a href="https://docs.pylonsproject.org/projects/akhet/en/latest/">Akhet</a> -     A</li>
+</ul>
+<p>Pyramid library and demo application with a Pylons-like feel. Its most known</p>
+<p>for its former application scaffold, which helped users transition from</p>
+<p>Pylons and those preferring a more Pylons-like API. The scaffold has been</p>
+<p>retired but the demo plays a similar role.</p>
+<ul>
+<li><a href="http://khufuproject.github.io/">Khufu Project</a> - Khufu is an application</li>
+</ul>
+<p>scaffolding for Pyramid that provides an environment to work with Jinja2 and</p>
+<p>SQLAlchemy.</p>
+<ul>
+<li><a href="https://github.com/ptahproject/ptah">Ptah</a> - Ptah is a fast, fun, open</li>
+</ul>
+<p>source high-level Python web development environment.</p>
+<ul>
+<li><a href="https://github.com/pypa/warehouse">warehouse</a> - Warehouse is a next</li>
+</ul>
+<p>generation Python Package Repository designed to replace the legacy code base</p>
+<p>that currently powers PyPI.</p>
+<ul>
+<li><a href="https://github.com/mazvv/travelcrm">travelcrm</a> - TravelCRM is effective free and open source application for the automation of customer relationships for travel agencies at all levels, from small to large networks.</li>
+</ul>
+<ul>
+<li><a href="https://rhodecode.com/">RhodeCode</a> - enterprise source code management platform. It applies unified user control, permissions, code reviews, and tool integration across Mercurial, Git, and Subversion repositories. Large and growing software teams all over the world use RhodeCode to collaborate in a secure, behind-the-firewall environment. </li>
+</('ul', 0)>
+<h2>Project Management</h2>
+
+<ul>
+<li><a href="https://getappenlight.com/">AppEnlight</a> - Performance, exception, and uptime monitoring for the Web</li>
+</('ul', 0)>
+<h1>Resources</h1>
+
+<p>Where to discover new Pyramid apps and projects.</p>
+
+<h2>Books</h2>
+
+<ul>
+<li><a href="http://www.oreilly.com/web-platform/free/python-web-frameworks.csp">Python Web Frameworks</a> - Dive into details on the top</li>
+</ul>
+<p>six Python frameworks—Django, Flask, Tornado, Bottle, Pyramid, and CherryPy.</p>
+
+<h2>Websites</h2>
+
+<ul>
+<li><a href="https://trypyramid.com/">Try Pyramid</a> - The Start Small, Finish Big,</li>
+</ul>
+<p>Stay Finished Framework. Official website.</p>
+
+<h2>Conferences</h2>
+
+<ul>
+<li><a href="https://2018.ploneconf.org/sprints">Sushi Sprint at PloneConf 2018 in Tokyo, Japan</a> (November 10-11, 2018)</li>
+</ul>
+<ul>
+<li><a href="https://pyconweb.com/talks/28-05-2017/pyramid-workshop">Pyramid Workshop in Munich, Germany.</a> (May 28, 2017, 10:30 a.m. - 12:30 p.m.)</li>
+</ul>
+<ul>
+<li><a href="https://2017.ploneconf.org/">PloneConf 2017</a> - Barcelona Plone Digital Experience Conference (16~22 Oct. 2017)</li>
+</ul>
+<ul>
+<li><a href="https://2016.ploneconf.org/">PloneConf 2016</a> - Boston Plone Digital Experience Conference (17~23 Oct. 2016)</li>
+</ul>
+<ul>
+<li><a href="http://dragonsprint.com/">DragonSprint 2016</a> - DragonSprint is a week-long sprint on Pyramid. The sprint takes place in Ljubljana, Slovenia, EU in the first week of December (5th to 9th). The main two sprint topics are Pyramid 2.0 and Pyramid for Newcomers.</li>
+</('ul', 0)>
+<h2>Videos</h2>
+<ul>
+<li><a href="https://docs.pylonsproject.org/projects/pyramid_cookbook/en/latest/misc/videos.html">List of videos from the official site</a></li>
+</ul>
+<ul>
+<li><a href="https://training.talkpython.fm/courses/all">Online Video Courses at Talk Python Training</a></li>
+</ul>
+<ul>
+<li>[Web Applications with Python and the Pyramid</li>
+</ul>
+<p>Framework](http://shop.oreilly.com/product/0636920041900.do) -</p>
+<p>In this Web Applications with Python and the Pyramid Framework training</p>
+<p>course, expert author Paul Everitt will teach you about the features needed</p>
+<p>for Python web development, as well as Pyramid's unique features. This</p>
+<p>course is designed for users that already have a basic knowledge of Python.</p>
+
+<p>You will start by learning about single file web apps, templating, and</p>
+<p>multiple routes and views. From there, Paul will teach you about MyApp</p>
+<p>Python package, views and routes, and templating and static assets. This</p>
+<p>video tutorial also covers forms, databases, and sessions, authentication</p>
+<p>and authorization, and JSON. Finally, you will learn about extensibility,</p>
+<p>including custom configuration settings, extending and overriding, and</p>
+<p>custom view predicates.</p>
+
+<p>Once you have completed this computer based training course, you will have</p>
+<p>gained a basic understanding of the features needed for Python web</p>
+<p>development and the features unique to Pyramid.</p>
+
+<h2>Who uses it?</h2>
+
+<ul>
+<li>[Projects, Websites, Companies and Organizations that use</li>
+</ul>
+<p>Pyramid](https://trypyramid.com/community-powered-by-pyramid.html) - add your project to the list</p>
+
+<h1>Contributing</h1>
+
+<p>Just fork and send a pull request with your awesome Pyramid apps, projects or</p>
+<p>resources.</p>
+
+<h2>License</h2>
+
+<p><a href="https://licensebuttons.net/p/zero/1.0/88x31.png"><img src="https://creativecommons.org/publicdomain/zero/1.0/" alt="CC0</a>"></p>
+
+<p>To the extent possible under law, @uralbash has waived all copyright and related</p>
+<p>or neighboring rights to this work.</p>
+
+</body>
+</html>

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vagrant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Vagrant</h1>
+
+<p><strong>Repository:</strong> https://github.com/iJackUA/awesome-vagrant#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<h1>Awesome Vagrant</h1>
+<p><a href="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg"><img src="https://github.com/sindresorhus/awesome" alt="Awesome</a>"> <a href="https://badges.gitter.im/Join%20Chat.svg"><img src="https://gitter.im/iJackUA/awesome-vagrant?utm<em>source=badge&utm</em>medium=badge&utm_campaign=pr-badge" alt="Gitter</a>"> <a href="https://api.travis-ci.org/iJackUA/awesome-vagrant.svg?branch=master"><img src="https://travis-ci.org/iJackUA/awesome-vagrant" alt="Build Status</a>"></p>
+
+<p>A curated list of awesome Vagrant resources, plugins, tutorials and other nice things.</p>
+
+<h2>Official resources</h2>
+
+<ul>
+<li><a href="https://www.vagrantup.com/">Vagrant site</a> - installation instruction, official manuals and docs.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/hashicorp/vagrant">GitHub repo</a> - source code, issues discussion and collaboration.</li>
+</('ul', 0)>
+<h2>Boxes</h2>
+
+<p><em>Where to find OS boxes ?</em></p>
+
+<ul>
+<li><a href="http://www.vagrantbox.es/">Vagrantbox.es</a> - the biggest list of all available boxes, maintained by community via GitHub pull requests.</li>
+</ul>
+<ul>
+<li><a href="https://app.vagrantup.com/boxes/search">Vagrant Cloud</a> - config share, boxes distribution and discovery (also premium features of private collaboration and sharing).</li>
+</ul>
+<ul>
+<li><a href="https://cloud-images.ubuntu.com/vagrant/">Cloud Images Ubuntu.com</a> - "clean" official Ubuntu cloud images.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/chef/bento#current-baseboxes">Baseboxes from Opscode</a> - CentOS, Fedora, Debian, FreeBSD, Ubuntu.</li>
+</ul>
+<ul>
+<li><a href="http://puppet-vagrant-boxes.puppetlabs.com/">Puppet Labs Vagrant Boxes</a> - these boxes are provided to be used by various Puppet projects.</li>
+</ul>
+<ul>
+<li><a href="https://cloudsmith.io">Cloudsmith</a> - A fully managed package management SaaS with support for Vagrant repositories (and many others).</li>
+</('ul', 0)>
+<h2>Provisioning</h2>
+
+<ul>
+<li><a href="https://www.vagrantup.com/docs/provisioning">All available build in provisioning providers</a> - official doc.</li>
+</ul>
+<ul>
+<li><a href="http://fideloper.github.io/Vaprobash/index.html">Vaprobash</a> - Vagrant Provisioning Bash Scripts.</li>
+</('ul', 0)>
+<h2>Notable plugins</h2>
+
+<p><em>You can install these modules by this command <code>vagrant plugin install MODULE-NAME</code></em></p>
+
+<ul>
+<li><a href="https://github.com/hashicorp/vagrant/wiki/Available-Vagrant-Plugins">List of available Vagrant plugins from GitHub wiki</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dotless-de/vagrant-vbguest">vagrant-vbguest</a> - autoupdate VirtualBox guest additions (according to VB version).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/cogitatio/vagrant-hostsupdater">vagrant-hostsupdater</a> - adds an entry to your /etc/hosts file on the host system.</li>
+</ul>
+<ul>
+<li><a href="http://fgrehm.viewdocs.io/vagrant-cachier/">vagrant-cachier</a> - share a common package (apt-get, npm, etc.) cache among similar VM instances.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/phinze/vagrant-host-shell">vagrant-host-shell</a> - a vagrant provisioner to run commands on the host when a VM boots.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jaugustin/vagrant-ansible-local">vagrant-ansible-local</a>  allow provisioning your VM with ansible playbooks directly from the guest VM.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jedi4ever/sahara">sahara</a> - easy manage VM state (commit/rollback while experimenting with software stack).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/projectatomic/adb-vagrant-registration">vagrant-registration</a> - add "register" and "unregister" capabilities to Vagrant guests for updates on systems with a subscription model(like Red Hat Enterprise Linux).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/projectatomic/vagrant-service-manager">vagrant-service-manager</a> - enable easier access to the features and services provided by the <a href="https://github.com/projectatomic/adb-atomic-developer-bundle">Atomic Developer Bundle (ADB)</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/invernizzi/vagrant-scp">vagrant-scp</a> - Copy files to a Vagrant VM via SCP.</li>
+</('ul', 0)>
+<h2>Helpers / Tools</h2>
+
+<ul>
+<li><a href="https://www.packer.io/">Packer</a> - a tool for creating identical machine images for multiple platforms from a single source configuration. For fast infrastructure deployment with multi-provider portability.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Thomvaill/tads-boilerplate">T.A.D.S. boilerplate</a> - boilerplate to create, develop and deploy a Docker Swarm environment, using Vagrant to reproduce production environment locally.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jedi4ever/veewee">Veewee</a> - a tool for easily (and repeatedly) building custom Vagrant base boxes, KVMs, and virtual machine images.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins#vagrant">Vagrant plugin for ZSH shell</a> - auto-complete for commands, task names, box names and built-in documentation.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/MunGell/vgm">CLI Vagrant Manager</a> - simple command-line tool to manage multiple vagrant boxes</li>
+</('ul', 0)>
+<h2>Desktop tools</h2>
+
+<ul>
+<li><a href="http://vagrantmanager.com/">Vagrant Manager</a> for OS X.</li>
+</('ul', 0)>
+<h2>Web services</h2>
+
+<p><em>To generate Vagrantfile with automated provisioning scripts.</em></p>
+
+<ul>
+<li><a href="http://phansible.com/">Phansible</a> - provides an easy to use interface that helps you generate Ansible Playbooks for PHP based projects.</li>
+</ul>
+<ul>
+<li><a href="https://puphpet.com/">PuPHPet</a> - a simple GUI to set up virtual machines for <s>PHP</s> Web development.</li>
+</ul>
+<ul>
+<li><a href="http://getprotobox.com/">Protobox</a> - PuPHPet analog, but uses own installer with YAML configuration format to control everything that is installed on the virtual machine.</li>
+</ul>
+<ul>
+<li><a href="http://rove.io/">Rove</a> - a service that allows you to pregenerate typical Vagrant builds.</li>
+</('ul', 0)>
+<h2>Proxy services</h2>
+
+<p><em>To proxy your local web server and make it publicly available over the internet.</em></p>
+
+<ul>
+<li><a href="https://www.vagrantup.com/docs/share/">Vagrant share</a> - allows you to share your Vagrant environment with anyone in the world.</li>
+</ul>
+<ul>
+<li><a href="http://nip.io">nip.io</a> - a magic domain name that provides wildcard DNS</li>
+</ul>
+<p>for any IP address.</p>
+<ul>
+<li><a href="https://ngrok.com/">ngrok</a> - tool to create secure tunnels to expose a local server behind a NAT or firewall to the internet.</li>
+</ul>
+<ul>
+<li><a href="https://serveo.net/">serveo</a> - expose local servers to the internet, without installing any client!</li>
+</ul>
+<ul>
+<li><a href="http://proxylocal.com">proxylocal.com</a> - proxy your local web-server and make it publicly available over the internet.</li>
+</ul>
+<ul>
+<li><a href="https://localtunnel.github.io/www/">localtunnel.me</a> - assign you a unique publicly accessible url that will proxy all requests to your locally running webserver.</li>
+</ul>
+<ul>
+<li><a href="https://portmap.io/">portmap.io</a> - OpenVPN based free port forwarding solution.</li>
+</('ul', 0)>
+<h2>Tutorials</h2>
+
+<ul>
+<li><a href="http://www.thisprogrammingthing.com/2013/getting-started-with-vagrant/">Getting Started With Vagrant</a> by This Programming Thing.</li>
+</ul>
+<ul>
+<li><a href="http://stdout.in/en/post/getting<em>started</em>with<em>vagrant</em>automated<em>dev</em>servers<em>deploy</em>and_provisioning">Getting started with Vagrant - automated dev servers deploy and provisioning.</a></li>
+</ul>
+<ul>
+<li><a href="http://confluence.jetbrains.com/display/PhpStorm/Working+with+Advanced+Vagrant+features+in+PhpStorm">Working with Advanced Vagrant features in PhpStorm.</a></li>
+</ul>
+<ul>
+<li><a href="https://scotch.io/tutorials/sharing-your-virtual-machine-on-the-web-with-vagrant-share">Sharing Your Virtual Machine on the Web with Vagrant Share</a>.</li>
+</ul>
+<ul>
+<li><a href="https://hackr.io/tutorials/learn-vagrant">Programming Community Curated Resources for Learning Vagrant</a></li>
+</ul>
+<ul>
+<li><a href="https://classpert.com/vagrant">Vagrant Online Courses at Classpert</a> List of Vagrant Online Courses (free and paid)</li>
+</('ul', 0)>
+<h2>Books</h2>
+
+<ul>
+<li><a href="https://www.amazon.com/Vagrant-Running-Virtualized-Development-Environments/dp/1449335837">Vagrant: Up and Running</a> by Mitchell Hashimoto.</li>
+</ul>
+<ul>
+<li><a href="https://leanpub.com/vagrantcookbook">Vagrant CookBook</a> by Erika Heidi.</li>
+</ul>
+<ul>
+<li><a href="https://www.amazon.com/Pro-Vagrant-Wlodzimierz-Gajda/dp/1484200748/">Pro Vagrant</a> by by Wlodzimierz Gajda.</li>
+</ul>
+<ul>
+<li><a href="http://shop.oreilly.com/product/9781849519182.do">Creating Development Environments with Vagrant</a> / <a href="http://shop.oreilly.com/product/9781784397029.do">2nd Edition</a> by Michael Peacock</li>
+</ul>
+<ul>
+<li><a href="http://shop.oreilly.com/product/9781784393748.do">Vagrant Virtual Development Environment Cookbook</a> by Chad Thompson</li>
+</('ul', 0)>
+<h2>Popular readymade environments</h2>
+
+<ul>
+<li><a href="https://github.com/vagrantpress/vagrantpress">Vagrantpress</a> - development environment for creating and modifying WordPress sites.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Varying-Vagrant-Vagrants/VVV">Varying Vagrant Vagrants</a> - An open source Vagrant configuration focused on WordPress development.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/joomlatools/joomlatools-vagrant">Joomla-Vagrant</a>.</li>
+</ul>
+<ul>
+<li><a href="https://www.drupal.org/project/vdd">VDD</a> - Vagrant Drupal Development.</li>
+</ul>
+<ul>
+<li><a href="https://www.drupalvm.com/">Drupal VM</a> - A VM for local Drupal development, built with Vagrant + Ansible</li>
+</ul>
+<ul>
+<li><a href="https://github.com/iJackUA/try-yii2">Try Yii2</a> - try Yii2 with Vagrant VM + Ansible provisioning = Complete readymade virtual server playground.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/bryannielsen/Laravel4-Vagrant">Laravel4-Vagrant</a> - run Laravel 4 inside a Ubuntu 12.04 Vagrant Virtual Machine w/PHP 5.5.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/openstack-ansible/openstack-ansible">OpenStack on Ansible with Vagrant</a>.</li>
+</ul>
+<ul>
+<li><a href="https://laravel.com/docs/master/homestead">Laravel Homestead</a> - Official Vagrant Box for Laravel development, based on Ubuntu 16.04 LTS, PHP 7, Nginx, and multiple database platforms.</li>
+</ul>
+<ul>
+<li><a href="https://scotch.io/bar-talk/announcing-scotch-box-2-0-our-dead-simple-vagrant-lamp-stack-improved">Scotch Box</a> - Simple Vagrant Box with <a href="https://en.m.wikipedia.org/wiki/LAMP<em>%28software</em>bundle%29">LAMP</a> stack, plus some useful extras, based on Ubuntu 14.04 LTS.</li>
+</('ul', 0)>
+<h2>License</h2>
+
+<p><a href="https://licensebuttons.net/p/zero/1.0/88x31.png"><img src="https://creativecommons.org/publicdomain/zero/1.0/" alt="CC0</a>"></p>
+
+<p>To the extent possible under law, <a href="http://stdout.in/">Ievgen Kuzminov</a> has waived all copyright and related or neighboring rights to this work.</p>
+
+</body>
+</html>

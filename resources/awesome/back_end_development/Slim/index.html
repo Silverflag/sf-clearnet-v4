@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slim</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Slim</h1>
+
+<p><strong>Repository:</strong> https://github.com/nekofar/awesome-slim#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<h1>Awesome Slim <a href="https://awesome.re/badge.svg"><img src="https://awesome.re" alt="Awesome</a>"></h1>
+
+<!--lint ignore double-link-->
+<p><a href="https://www.slimframework.com"><img src="assets/slim-logo.png" align="right" width="260" alt="Slim Framework"></a></p>
+
+<!--lint ignore double-link-->
+<blockquote>
+<p>A curated list of awesome <a href="https://www.slimframework.com">Slim</a> framework packages and resources.</p>
+</blockquote>
+
+<!--lint ignore double-link-->
+<p><a href="https://www.slimframework.com">Slim</a> is a PHP micro framework that helps you quickly write simple yet powerful web applications and APIs.</p>
+
+<h2>Contents</h2>
+
+<ul>
+<li><a href="#educational">Educational</a></li>
+</ul>
+<ul>
+<li><a href="#boilerplate">Boilerplate</a></li>
+</ul>
+<ul>
+<li><a href="#middlewares">Middlewares</a></li>
+</ul>
+<ul>
+<li><a href="#templating">Templating</a></li>
+</ul>
+<ul>
+<li><a href="#development">Development</a></li>
+</ul>
+<ul>
+<li><a href="#miscellaneous">Miscellaneous</a></li>
+</('ul', 0)>
+<h2>Educational</h2>
+
+<ul>
+<li><a href="https://www.slimframework.com/docs/v4/">User Guide</a> - The official documentation for Slim Framework.</li>
+</ul>
+<ul>
+<li><a href="https://stackoverflow.com/questions/tagged/slim">Stack Overflow</a> - Slim Framework questions over Stack Overflow.</li>
+</ul>
+<ul>
+<li><a href="https://discourse.slimframework.com">Discussion Forum</a> - The official Slim Framework discussion forum.</li>
+</ul>
+<ul>
+<li><a href="https://odan.github.io/2021/08/12/slim-graphql.html">Slim 4 - GraphQL</a> - Creating a modern HTTP APIs usig GraphQL.</li>
+</ul>
+<ul>
+<li><a href="https://odan.github.io/2021/08/14/slim-reactphp.html">Slim 4 - ReactPHP</a> - Slim in combination with ReactPHP for the performance boost.</li>
+</('ul', 0)>
+<h2>Boilerplate</h2>
+
+<ul>
+<li><a href="https://github.com/semhoun/slim-skeleton-mvc">Slim 4 MVC Skeleton</a> - This is a simple web application skeleton project.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/adriansuter/Slim4-Skeleton">Slim 4 Skeleton</a> - Web application skeleton that uses the PHP-DI, Nyholm PSR7 and Twig.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/odan/slim4-skeleton">Slim 4 Skeleton</a> - This is a skeleton to quickly set up a new Slim 4 application.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/slimphp/Slim-Skeleton">Slim Skeleton</a> - The official Slim Framework 4 Skeleton Application.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/nbayramberdiyev/slim-4-starter">Slim 4 Starter</a> - An opinionated Slim 4 starter template for the small-to-medium PHP applications.</li>
+</('ul', 0)>
+<h2>Middlewares</h2>
+
+<ul>
+<li><a href="https://github.com/tuupola/slim-basic-auth">Slim Basic Auth</a> - PSR-7 and PSR-15 HTTP Basic Authentication Middleware.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/slimphp/Slim-Csrf">Slim CSRF</a> - Slim Framework CSRF protection middleware.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/slimphp/Slim-HttpCache">Slim HTTP Cache</a> - Slim Framework HTTP cache middleware and service provider.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tuupola/slim-jwt-auth">Slim JWT Auth</a> - PSR-7 and PSR-15 JWT Authentication Middleware.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/christianklisch/slim-minify">Slim Minify</a> - Slim middleware to minify HTML output generated by the slim.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/bryanjhv/slim-session">Slim Session</a> - A very simple session middleware for Slim Framework.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/zeuxisoo/php-slim-whoops">Slim Whoops</a> - PHP whoops error on slim framework.</li>
+</('ul', 0)>
+<h2>Templating</h2>
+
+<ul>
+<li><a href="https://github.com/slimphp/Twig-View">Slim Twig View</a> - Slim Framework view helper built on top of the Twig templating component.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/projek-xyz/slim-plates">Slim Plates</a> - Render your Slim application views using Plates template engine.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/slimphp/PHP-View">Slim PHP View</a> - This is a renderer for rendering PHP view scripts into a PSR-7 Response object.</li>
+</('ul', 0)>
+<h2>Development</h2>
+
+<ul>
+<li><a href="https://github.com/nekofar/pest-plugin-slim">Pest Slim Plugin</a> - The Slim Plugin for Pest gives your basic functionality for testing.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/nekofar/slim-test">Slim Test</a> - Slim Framework test helper built on top of the PHPUnit test framework.</li>
+</('ul', 0)>
+<h2>Miscellaneous</h2>
+
+<ul>
+<li><a href="https://github.com/selective-php/basepath">BasePath</a> - Base path detector for Slim 4.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/PHP-DI/Slim-Bridge">PHP-DI Slim Bridge</a> - PHP-DI integration with the Slim framework.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/DavidePastore/Slim-Config">Slim Config</a> - A file configuration loader that supports PHP, INI, XML, JSON, and YML files.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/slimphp/Slim-Console">Slim Console</a> - Slim Framework Console.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/slimphp/Slim-Flash">Slim Flash</a> - Slim Framework flash messages service provider.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/entomb/slim-json-api">Slim JSON API</a> - Slim extension to implement fast JSON API's.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/DavidePastore/Slim-Validation">Slim Validation</a> - A validation library for the Slim Framework.</li>
+</ul>
+<ul>
+<li><a href="https://plugins.jetbrains.com/plugin/18751-slim">IntelliJ Slim</a> - Provides boilerplate codes for easier new project creation using skeleton.</li>
+</('ul', 0)>
+<h2>Contributing</h2>
+
+<p>Contributions welcome! Read the <a href="CONTRIBUTING.md">contribution guidelines</a> first.</p>
+
+</body>
+</html>

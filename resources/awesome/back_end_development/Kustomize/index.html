@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kustomize</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Kustomize</h1>
+
+<p><strong>Repository:</strong> https://github.com/DevOpsHiveHQ/awesome-kustomize#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<!-- omit in toc -->
+<h1>Awesome Kustomize <a href="https://raw.githubusercontent.com/sindresorhus/awesome/main/media/badge.svg"><img src="https://github.com/sindresorhus/awesome" alt="Awesome</a>"> <a href="https://img.shields.io/badge/PRs-welcome-brightgreen.svg"><img src="https://github.com/aabouzaid/awesome-kustomize/compare" alt="PRs Welcome</a>"></h1>
+
+<p align="center">
+  <a href="https://kustomize.io">
+    <img src="img/awesome-kustomize.svg" width="90%">
+  </a>
+</p>
+
+<blockquote>
+<p>A curated and collaborative list of awesome Kustomize resources.</p>
+</blockquote>
+
+<p><a href="https://kustomize.io">Kustomize</a> introduces a template-free way to customize Kubernetes manifests. It's extensible and uses a purely declarative approach to configuration customization, which will help you efficiently manage your Infrastructure as a code (IaC).</p>
+
+<p>Contributions are welcome, add links through <a href="https://github.com/aabouzaid/awesome-kustomize/pulls">pull requests</a> or create an issue to start a discussion.</p>
+
+<p>Push it forward and add the project badge in your repo to support the community! ⭐</p>
+
+<p>Markdown:</p>
+
+<pre><code class="language-text">
+[![Awesome Kustomize](https://devopshive.com/badges/awesome-kustomize.svg)](https://github.com/DevOpsHiveHQ/awesome-kustomize)
+</code></pre>
+
+<p>Preview:</p>
+
+<p><a href="https://raw.githubusercontent.com/DevOpsHiveHQ/awesome-kustomize/main/img/awesome-kustomize-badge.svg"><img src="https://github.com/DevOpsHiveHQ/awesome-kustomize" alt="Awesome Kustomize</a>"></p>
+
+<!-- omit in toc -->
+<h2>Contents</h2>
+
+<ul>
+<li><a href="#overview">Overview</a></li>
+</ul>
+<ul>
+<li><a href="#plugins">Plugins</a></li>
+<ul>
+<li><a href="#generators">Generators</a></li>
+</ul>
+<ul>
+<li><a href="#transformers">Transformers</a></li>
+</ul>
+<ul>
+<li><a href="#validators">Validators</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#guides">Guides</a></li>
+<ul>
+<li><a href="#novice">Novice</a></li>
+</ul>
+<ul>
+<li><a href="#intermediate">Intermediate</a></li>
+</ul>
+<ul>
+<li><a href="#advanced">Advanced</a></li>
+</ul>
+<ul>
+<li><a href="#tips--tricks">Tips \& Tricks</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#misc">Misc</a></li>
+</ul>
+<ul>
+<li><a href="#related-lists">Related lists</a></li>
+</('ul', 0)>
+<h2>Overview</h2>
+
+<p>Kustomize works as a standalone binary; also, it's built into <code>kubectl</code> (since v1.14). It can be used with off-the-shelf applications like <strong>Helm charts</strong>. Also, it has a deep integration with different <strong>GitOps</strong> tools like ArgoCD, Flux, and many others.</p>
+
+<h2>Plugins</h2>
+
+<p>Kustomize has 3 types of plugins <code>generator</code>, <code>transformer</code>, and <code>validator</code>.</p>
+
+<blockquote>
+<p>Note</p>
+<p>></p>
+<p>If you are a plugin developer, it's highly recommended to support the new plugins standard</p>
+<p><a href="https://github.com/kubernetes-sigs/kustomize/blob/master/cmd/config/docs/api-conventions/functions-spec.md">KRM function</a>.</p>
+</blockquote>
+
+<h3>Generators</h3>
+
+<ul>
+<li><a href="https://github.com/bbl/secretize">Secretize</a> - Generating Kubernetes Secret from various sources. It's like a swiss army knife, but for Kubernetes secrets (Exec).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/goabout/kustomize-sopssecretgenerator/">SopsSecretGenerator</a> - Generating Secrets from sops-encrypted files (Exec, Exec KRM).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/viaduct-ai/kustomize-sops">KSops</a> - Generating Secrets from sops-encrypted files (Exec).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/open-cluster-management-io/policy-generator-plugin">PolicyGenerator</a> - Generating Open Cluster Management policies (Exec).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kaweezle/krmfnbuiltin">KRMFfnBuiltin</a> - Running builtin generators transformers (Exec).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/aabouzaid/kustomize-plugin-merger">Merger</a> - Generating manifests seamlessly by extending Kustomize merge strategies using schemaless StrategicMerge (Containerized KRM, Exec KRM).</li>
+</('ul', 0)>
+<h3>Transformers</h3>
+
+<ul>
+<li><a href="https://github.com/openinfradev/kustomize-helm-transformer">HelmValuesTransformer</a> - Transforming values in HelmRelease CustomResource. It helps to manage a lot of HelmRelease's value in single transformer file (Exec).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/joshdk/template-transformer">TemplateTransformer</a> - Providing a set of KRM Functions to run builtin transformers in place (Containerized KRM, Exec KRM).</li>
+</('ul', 0)>
+<h3>Validators</h3>
+
+<ul>
+<li><a href="https://github.com/aabouzaid/kustomize-kubeconformvalidator">KubeconformValidator</a> - Validating Kubernetes manifests using embedded Kubeconform (Containerized KRM, Exec KRM).</li>
+</('ul', 0)>
+<h2>Guides</h2>
+
+<p>Kustomize guides based on their level or type like 📰 Article, 📺 Video, 🧪 Lab.</p>
+
+<h3>Novice</h3>
+
+<ul>
+<li>📰 <a href="https://kubernetes.io/docs/tasks/manage-kubernetes-objects/kustomization/">Declarative Management of Kubernetes Objects Using Kustomize</a> - The official Kubernetes documentation task for Kustomize.</li>
+</ul>
+<ul>
+<li>📰 <a href="https://cloud.google.com/anthos-config-management/docs/concepts/kustomize">Configure Kubernetes with Kustomize</a> - A guide helps to get started with Kustomize, understand its intended use cases, and find resources for using it with other Google Cloud tools.</li>
+</ul>
+<ul>
+<li>📺 <a href="https://www.youtube.com/watch?v=1fCAwFGX38U">Organizing the YAML mess with Kustomize</a> - A talk shows how Kustomize could help to manage Kubernetes YAML files with a growing number of services and environments.</li>
+</ul>
+<ul>
+<li>📺 <a href="https://www.youtube.com/watch?v=ahMIBxufNR0">Kustomize: Deploy Your App with Template Free YAML</a> - A talk introduces Kustomize, a declarative application management system, that allows deployments to be described as template free YAML.</li>
+</('ul', 0)>
+<h3>Intermediate</h3>
+
+<ul>
+<li>🧪 <a href="https://redhat-scholars.github.io/argocd-tutorial/argocd-tutorial/03-kustomize.html">ArgoCD GitOps Tutorial - Working with Kustomize</a> - A hands-on lab covers using Kustomize in GitOps and it goes through the Kustomize syntax and deploying a Kustomized application.</li>
+</ul>
+<ul>
+<li>📰 <a href="https://tech.aabouzaid.com/2020/09/3-ways-to-customize-off-the-shelf-helm-charts-with-kustomize-kubernetes.html">3 ways to customize off-the-shelf Helm charts with Kustomize</a> - A guide covers 3 different ways to use Kustomize and Helm together.</li>
+</ul>
+<ul>
+<li>📰 <a href="https://blog.scottlowe.org/2021/11/01/using-kustomize-components-with-cluster-api/">Using Kustomize Components with Cluster API</a> - A clear use case of using Kustomize Components.</li>
+</('ul', 0)>
+<h3>Advanced</h3>
+
+<ul>
+<li>📰 <a href="https://www.innoq.com/en/blog/advanced-kustomize-features/">Advanced Kustomize features</a> - A guide covers more than 5 advanced Kustomize capabilities.</li>
+</ul>
+<ul>
+<li>📰 <a href="https://tech.aabouzaid.com/2022/11/set-openapi-patch-strategy-for-kubernetes-custom-resources-kustomize.html">Set OpenAPI patch strategy for Kubernetes Custom Resources</a> - A guide shows how to provide schema to control the patch strategy of the CRDs.</li>
+</ul>
+<ul>
+<li>📺 <a href="https://www.youtube.com/watch?v=YlFUv4F5PYc">Customizing Kustomize with Client-Side Custom Resources</a> - A talk covers extending Kustomize via plugins to address common yet idiosyncratic application needs.</li>
+</ul>
+<ul>
+<li>📺 <a href="https://www.youtube.com/watch?v=Xoh_OpLoVtI">Own your YAML: extending Kustomize via Plugins</a> - A talk shows how to create custom resources using Kustomize external plugins.</li>
+</ul>
+<ul>
+<li>📰 <a href="https://www.innoq.com/en/blog/kustomize-enhancement-with-krm-functions/">Kustomize Enhancement with KRM Functions</a> - A detailed guide covers KRM concept and how to use it in Kustomize plugins.</li>
+</('ul', 0)>
+<h3>Tips & Tricks</h3>
+
+<ul>
+<li>📰 <a href="https://tech.aabouzaid.com/2021/05/delete-a-manifest-from-kustomize-base.html">Delete a manifest from a Kustomize base</a> - A handy way to delete named manifest using Kustomize patch.</li>
+</ul>
+<ul>
+<li>📰 <a href="https://tech.aabouzaid.com/2022/04/apply-kustomize-builtin-transformers-on-a-single-resource.html">Apply Kustomize builtin transformers on a single resource</a> - A way to use internal transformers on specific resources.</li>
+</ul>
+<ul>
+<li>📰 <a href="https://tech.aabouzaid.com/2022/12/pass-extra-data-to-the-containerized-krm-function.html">Pass extra data to the Containerized KRM function</a> - Different cases of share data with Containerized KRM function.</li>
+</('ul', 0)>
+<h2>Misc</h2>
+
+<ul>
+<li><a href="https://github.com/Banno/asdf-kustomize">Asdf-kustomize</a> - Kustomize plugin for asdf version manager.</li>
+</('ul', 0)>
+<h2>Related lists</h2>
+
+<ul>
+<li><a href="https://github.com/ramitsurana/awesome-kubernetes">Awesome Kubernetes</a> - A curated list of awesome Kubernetes resources.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ishantanu/awesome-kubectl-plugins">Awesome Kubectl plugins</a> - A curated list of awesome Kubectl plugins.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/cdwv/awesome-helm">Awesome Helm</a> - A curated list of awesome Helm charts and resources.</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kubernetes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <p>Awesome-Kubernetes</p>
+<p>=======================================================================</p>
+
+<p><a href="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg"><img src="https://github.com/sindresorhus/awesome" alt="Awesome</a>"></p>
+<p><a href="https://github.com/ramitsurana/awesome-kubernetes/actions/workflows/links.yaml/badge.svg"><img src="https://github.com/ramitsurana/awesome-kubernetes/actions/workflows/links.yaml" alt="Links validator</a>"></p>
+<p><a href="https://github.com/ramitsurana/awesome-kubernetes/actions/workflows/main.yml/badge.svg"><img src="https://github.com/ramitsurana/awesome-kubernetes/actions/workflows/main.yml" alt="Python application</a>"></p>
+<p><a href="https://img.shields.io/badge/Slack-Channel-blue.svg?style=flat-square"><img src="https://kubernetes.slack.com/messages/awesome-kubernetes" alt="Slack Widget</a>"></p>
+<p><a href="https://readthedocs.org/projects/awesome-kubernetes-by-ramitsurana/badge/?version=latest"><img src="https://awesome-kubernetes-by-ramitsurana.readthedocs.io/en/latest/?badge=latest" alt="Documentation Status</a>"></p>
+<p><a href="https://mybinder.org/badge_logo.svg"><img src="https://mybinder.org/v2/gh/ramitsurana/awesome-kubernetes/master" alt="Binder</a>"></p>
+
+<p>A curated list for awesome kubernetes sources inspired by <a href="https://github.com/sindresorhus/awesome">@sindresorhus' awesome</a></p>
+
+<p>!<a href="https://cloud.githubusercontent.com/assets/8342133/26794201/62c1a006-4a3e-11e7-8bf9-4449814648f2.png">final-k8s</a></p>
+
+<blockquote>
+<p>"Talent wins games, but teamwork and intelligence wins championships."</p>
+<p>></p>
+<p>-- Michael Jordan</p>
+</blockquote>
+
+<p>Without the help from these <a href="https://github.com/ramitsurana/awesome-kubernetes/graphs/contributors">amazing contributors</a>,</p>
+<p>building this awesome-repo would never have been possible. Thank You very much everyone !!</p>
+
+<p><strong>Thanks to Gitbook.This awesome list can now be downloaded and read in the form of a book. Check it out -->  https://ramitsurana.gitbook.io/awesome-kubernetes/docs .Keep Learning Keep Sharing !!</strong></p>
+
+<p><strong>If you see a package or project here that is no longer maintained or is not a good fit, please submit a pull request to improve this file. Thank you!</strong></p>
+
+<h2>What is Kubernetes?</h2>
+
+<blockquote>
+<p>Kubernetes is an open-source system for automating deployment, scaling, and management of containerized applications.</p>
+</blockquote>
+<p>It groups containers that make up an application into logical units for easy management and discovery.</p>
+
+<p><em>Source:</em> <a href="http://kubernetes.io/">What is Kubernetes</a></p>
+
+<h2>History</h2>
+
+<p><strong>Kubernetes is known to be a descendant of Google's system BORG</strong></p>
+
+<blockquote>
+<p>The first unified container-management system developed at Google was the system we internally call Borg.</p>
+</blockquote>
+<p>It was built to manage both long-running services and batch jobs, which had previously been handled by two separate</p>
+<p>systems: Babysitter and the Global Work Queue. The latter’s architecture strongly influenced Borg, but was focused on</p>
+<p>batch jobs; both predated Linux control groups.</p>
+
+<p><em>Source:</em> <a href="http://research.google.com/pubs/archive/44843.pdf">Kubernetes Past</a></p>
+
+<h2>Date of Birth</h2>
+
+<p>Kubernetes celebrates its birthday every year on 21st July. Kubernetes 1.0 was released on July 21 2015, after being first announced to the public at Dockercon in June 2014.</p>
+
+<h2>Roadmap</h2>
+
+<p>The awesome-kubernetes will now soon be available in the form of different releases and package bundles, It means that you can</p>
+<p>download the awesome kubernetes release up to a certain period of time, The release for awesome kubernetes 2015 bundle is released. Checkout the releases column for more info.</p>
+
+<h2>Featured On</h2>
+
+<ul>
+<li><a href="https://cloud.google.com/community/">Google Cloud</a></li>
+</ul>
+<ul>
+<li><a href="https://www.freecodecamp.org/news/a-friendly-introduction-to-kubernetes-670c50ce4542/">freeCodeCamp</a></li>
+</ul>
+<p>-----------------------------------------------------------------------</p>
+
+<p>Starting Point</p>
+<p>=======================================================================</p>
+
+<p><em>A place that marks the beginning of a journey</em></p>
+
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1JqcALpsg07eH665ZXQrIvOcin6SzzsIUjMRRVivrZMg/edit?usp=sharing">Kubernetes Community Overview and Contributions Guide</a> by <a href="https://twitter.com/idvoretskyi/">Ihor Dvoretskyi</a></li>
+</ul>
+<ul>
+<li><a href="https://www.linkedin.com/pulse/you-ready-manage-your-infrastructure-like-google-matthew-bates/">Are you Ready to Manage your Infrastructure like Google?</a></li>
+</ul>
+<ul>
+<li><a href="http://www.businessinsider.in/Google-is-years-ahead-when-it-comes-to-the-cloud-but-its-happy-the-world-is-catching-up/articleshow/47793327.cms">Google is years ahead when it comes to the cloud, but it's happy the world is catching up</a></li>
+</ul>
+<ul>
+<li><a href="http://www.ctl.io/developers/blog/post/what-is-kubernetes-and-how-to-use-it/">An Intro to Google’s Kubernetes and How to Use It</a> by <a href="https://twitter.com/rhein_wein">Laura Frank</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/meteorhacks/meteorhacks.github.io/blob/master/_posts/2015-04-22-learn-kubernetes-the-future-of-the-cloud.md">Kubernetes: The Future of Cloud Hosting</a> by <a href="https://twitter.com/meteorhacks">Meteorhacks</a></li>
+</ul>
+<ul>
+<li><a href="http://thevirtualizationguy.wordpress.com/tag/kubernetes/">Kubernetes by Google</a> by <a href="https://twitter.com/GastonPantana">Gaston Pantana</a></li>
+</ul>
+<ul>
+<li><a href="http://blog.arungupta.me/key-concepts-kubernetes/">Key Concepts</a> by <a href="https://twitter.com/arungupta">Arun Gupta</a></li>
+</ul>
+<ul>
+<li><a href="https://keithtenzer.com/containers/application-containers-kubernetes-and-docker-from-scratch/">Application Containers: Kubernetes and Docker from Scratch</a> by <a href="https://twitter.com/keithtenzer">Keith Tenzer</a></li>
+</ul>
+<ul>
+<li><a href="http://omerio.com/2015/12/18/learn-the-kubernetes-key-concepts-in-10-minutes/">Learn the Kubernetes Key Concepts in 10 Minutes</a> by <a href="https://twitter.com/omerio">Omer Dawelbeit</a></li>
+</ul>
+<ul>
+<li><a href="https://kubernetes.io/blog/2016/06/illustrated-childrens-guide-to-kubernetes/">The Children's Illustrated Guide to Kubernetes</a> by <a href="https://github.com/deis">Deis</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/eficode-academy/kubernetes-katas/">Kubernetes Katas, A selection of exercises for Kubernetes</a></li>
+</ul>
+<ul>
+<li><a href="http://medium.com/@mhausenblas/the-kubectl-run-command-27c68de5cb76#.mlwi5an7o">The ‘kubectl run’ command</a> by <a href="https://twitter.com/mhausenblas">Michael Hausenblas</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/xiaopeng163/docker-k8s-lab">Docker Kubernetes Lab Handbook</a> by <a href="https://twitter.com/xiaopeng163">Peng Xiao</a></li>
+</ul>
+<ul>
+<li><a href="https://hackr.io/tutorials/learn-kubernetes">Curated Resources for Kubernetes</a></li>
+</ul>
+<ul>
+<li><a href="https://cloud.google.com/kubernetes-engine/kubernetes-comic/">Kubernetes Comic</a> by <a href="https://cloud.google.com/">Google Cloud Platform</a></li>
+</ul>
+<ul>
+<li><a href="https://medium.com/google-cloud/kubernetes-101-pods-nodes-containers-and-clusters-c1509e409e16">Kubernetes 101: Pods, Nodes, Containers, and Clusters</a> by <a href="https://medium.com/@sanche">Dan Sanche</a></li>
+</ul>
+<ul>
+<li><a href="http://www.digitalocean.com/community/tutorials/an-introduction-to-kubernetes">An Introduction to Kubernetes</a> by <a href="https://twitter.com/jmellingwood">Justin Ellingwood</a></li>
+</ul>
+<ul>
+<li><a href="https://rinormaloku.com/introduction-application-architecture/">Kubernetes and everything else - Introduction to Kubernetes and it's context</a> by <a href="https://twitter.com/rinormaloku">Rinor Maloku</a></li>
+</ul>
+<ul>
+<li><a href="http://severalnines.com/blog/installing-kubernetes-cluster-minions-centos7-manage-pods-services">Installation on Centos 7</a></li>
+</ul>
+<ul>
+<li><a href="https://mherman.org/blog/2018/08/20/setting-up-a-kubernetes-cluster-on-ubuntu/">Setting Up a Kubernetes Cluster on Ubuntu 18.04</a></li>
+</ul>
+<ul>
+<li><a href="https://landscape.cncf.io/">Cloud Native Landscape</a></li>
+</ul>
+<ul>
+<li><a href="https://www.freecodecamp.org/news/the-kubernetes-handbook/">The Kubernetes Handbook</a> by <a href="https://twitter.com/frhnhsin">Farhan Hasin Chowdhury</a></li>
+</ul>
+<ul>
+<li><a href="https://www.manning.com/books/bootstrapping-microservices-with-docker-kubernetes-and-terraform">Bootstrapping Microservices</a> by <a href="https://twitter.com/ashleydavis75">Ashley Davis</a></li>
+</ul>
+<ul>
+<li><a href="https://www.manning.com/books/bootstrapping-microservices-with-docker-kubernetes-and-terraform-second-edition">Bootstrapping Microservices with Docker, Kubernetes, and Terraform, Second Edition</a> by <a href="https://twitter.com/ashleydavis75">Ashley Davis</a></li>
+</ul>
+<ul>
+<li><a href="https://www.manning.com/books/kubernetes-native-microservices-with-quarkus-and-microprofile">Kubernetes Native Microservices with Quarkus, and MicroProfile</a> by <a href="https://twitter.com/jclingan">John Clingan</a> and <a href="https://twitter.com/kenfinnigan">Ken Finnigan</a></li>
+</ul>
+<ul>
+<li><a href="https://www.loginradius.com/blog/async/rest-api-kubernetes/">How to Deploy a REST API in Kubernetes</a></li>
+</ul>
+<ul>
+<li><a href="https://www.manning.com/books/securing-kubernetes-secrets">Securing Kubernetes Secrets</a> by <a href="https://github.com/lordofthejars">Alex Soto Bueno</a> and <a href="https://github.com/sabre1041">Andrew Block</a></li>
+</ul>
+<ul>
+<li><a href="https://www.manning.com/books/continuous-delivery-for-kubernetes">Continuous Delivery for Kubernetes</a> by <a href="https://github.com/salaboy">Mauricio Salatino</a> </li>
+</ul>
+<ul>
+<li><a href="https://www.manning.com/books/gitops-and-kubernetes">GitOps and Kubernetes</a> by <a href="https://github.com/billyy">Billy Yuen</a>, [Alexander Matyushentsev] (https://github.com/alexmt), <a href="https://github.com/tekenstam">Todd Ekenstam</a>, <a href="https://github.com/jessesuen">Jesse Suen</a></li>
+</ul>
+<ul>
+<li><a href="https://www.manning.com/books/knative-in-action">Knative in Action</a> by <a href="https://github.com/jchester">Jacques Chester</a></li>
+</ul>
+<ul>
+<li><a href="https://www.manning.com/books/learn-kubernetes-in-a-month-of-lunches">Learn Kubernetes in a Month of Lunches</a> by <a href="https://github.com/sixeyed">Elton Stoneman</a></li>
+</ul>
+<ul>
+<li><a href="https://www.manning.com/books/cloud-native-spring-in-action">Cloud Native Spring in Action</a> by <a href="https://github.com/ThomasVitale">Thomas Vitale</a></li>
+</ul>
+<ul>
+<li><a href="https://www.manning.com/books/securing-cloud-applications">Securing Cloud Applications</a> by <a href="https://github.com/asaikali">Adib Saikali</a></li>
+</ul>
+<ul>
+<li><a href="https://www.manning.com/books/google-anthos-in-action">Google Anthos in Action</a> by <a href="https://www.linkedin.com/in/searchguy/?originalSubdomain=uk">Antonio Gulli et al.</a></li>
+</ul>
+<ul>
+<li><a href="https://blog.brainboard.co/kubernetes-explained">Kubernetes explained</a></li>
+</ul>
+<ul>
+<li><a href="https://www.manning.com/books/cloud-observability-in-action">Cloud Observabillity in Action</a> by <a href="https://github.com/mhausenblas">Michael Hausenblas</a></li>
+</ul>
+<ul>
+<li><a href="https://www.manning.com/books/core-kubernetes">Core Kubernetes</a> by <a href="https://github.com/chrislovecnm">Chris Love</a></li>
+</ul>
+<ul>
+<li><a href="https://www.manning.com/books/road-to-kubernetes">Road to Kubernetes</a> by <a href="https://github.com/jmitchel3">Justin Mitchel</a></li>
+</ul>
+<ul>
+<li><a href="https://www.manning.com/books/kubernetes-on-windows">Kubernetes on Windows</a> by <a href="https://twitter.com/jayunit100">Jay Vyas</a> and James Sturtevant</li>
+</ul>
+<ul>
+<li><a href="https://blog.brainboard.co/kubernetes-explained-dde470707cb2">Kubernetes explained</a></li>
+</ul>
+<ul>
+<li><a href="https://spacelift.io/blog/kubernetes-secrets">How to Manage Secrets in Kubernetes – A Complete Guide</a></li>
+</ul>
+<ul>
+<li><a href="https://dev.to/idanref/kubernetes-concepts-deep-dive-50en">Kubernetes Concepts: Deep Dive</a> by <a href="https://www.linkedin.com/in/idan-refaeli-65082a175/">Idan Refaeli</a></li>
+</ul>
+<ul>
+<li><a href="https://www.manning.com/books/fluent-bit-with-kubernetes">Fluent Bit with Kubernetes</a> by <a href="https://www.linkedin.com/in/philwilkins/">Phil Wilkins</a></li>
+</ul>
+<ul>
+<li><a href="https://medium.com/@ghumare64/kubernetes-from-scratch-part-1-4b40cb6c1aba">Kubernetes from scratch</a> by <a href="https://www.linkedin.com/in/rohit-ghumare/">Rohit Ghumare</a></li>
+</ul>
+<p>Contributing</p>
+<p>=======================================================================</p>
+
+<p>Contributions are most welcome!</p>
+
+<p>This list is just getting started, please contribute to make it super awesome.</p>
+
+<p>Check out the <a href="https://github.com/ramitsurana/awesome-kubernetes/blob/master/docs/guidelines/CONTRIBUTING.md">Contributing Guidelines</a>.</p>
+
+<p>License</p>
+<p>=======================================================================</p>
+
+<p><a rel="license" href="http://creativecommons.org/licenses/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">awesome-kubernetes</span> by <a xmlns:cc="http://creativecommons.org" href="http://www.linkedin.com/in/ramitsurana" property="cc:attributionName" rel="cc:attributionURL">Ramit Surana</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>
+
+</body>
+</html>
