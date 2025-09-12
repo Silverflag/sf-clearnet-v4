@@ -1,0 +1,1734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flutter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flutter</h1>
+
+<p><strong>Repository:</strong> https://github.com/Solido/awesome-flutter#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<p><a href="https://flutter.dev/"><img src="https://user-images.githubusercontent.com/1295961/45949308-cbb2f680-bffb-11e8-8054-28c35ed6d132.png" align="center" width="850"></a></p>
+
+<p align="center">
+<a href="https://github.com/sindresorhus/awesome">
+<img alt="Awesome" src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" />
+</a>
+<a href="https://twitter.com/blueaquilae">
+<img alt="Awesome" src="https://img.shields.io/twitter/url/https/twitter.com/blueaquilae.svg?style=social&label=Follow%20%40blueaquilae" />
+</a>
+</p>
+
+<p align="center">
+<a href="https://trendshift.io/repositories/9391" target="_blank"><img src="https://trendshift.io/api/badge/repositories/9391" alt="Solido%2Fawesome-flutter | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+</p>
+
+<p><a href="https://flutter.dev/">Flutter</a> is Google’s UI toolkit for building beautiful, natively compiled applications for mobile, web, and desktop from a single codebase.</p>
+<p>If you appreciate the content 📖, support projects visibility, give 👍| ⭐| 👏</p>
+
+<p align="center">
+  <a href="https://getstream.io/chat/sdk/flutter/?utm_source=Github&utm_medium=Github_Repo_Content_Ad&utm_content=Developer&utm_campaign=Github_Mar2022_FlutterChatSDK&utm_term=Awesome">
+    <img src="assets/images/stream-logo.png" width="450" alt="Stream Chat" style="margin: 20px auto;" />
+  </a>
+</p>
+
+<p align="center">
+<p>Stream helps developers build engaging apps that scale to millions with performant and flexible Chat, Video, Voice, Feeds, and Moderation APIs and SDKs powered by a global edge network and enterprise-grade infrastructure.</p>
+</p>
+
+<h4>Demonstrations</h4>
+<div style="text-align: center"><table><tr>
+<td style="text-align: center, width: 180">
+
+<p><a href="https://getstream.io/chat/sdk/flutter/?utm<em>source=Github&utm</em>medium=Github<em>Repo</em>Content<em>Ad&utm</em>content=Developer&utm<em>campaign=Github</em>Mar2022<em>FlutterChatSDK&utm</em>term=Awesome">Instant Chat Integration</a></p>
+
+<a href="https://getstream.io/chat/sdk/flutter/?utm_source=Github&utm_medium=Github_Repo_Content_Ad&utm_content=Developer&utm_campaign=Github_Mar2022_FlutterChatSDK&utm_term=Awesome">
+<img alt="Stream" src="./.github/stream-animation.gif" />
+</a>
+
+<p><a href="https://getstream.io/chat/sdk/flutter/?utm<em>source=Github&utm</em>medium=Github<em>Repo</em>Content<em>Ad&utm</em>content=Developer&utm<em>campaign=Github</em>Mar2022<em>FlutterChatSDK&utm</em>term=Awesome">with Stream!</a></p>
+
+</td>
+<td style="text-align: center">
+<img width="180" alt="BMW" src="https://user-images.githubusercontent.com/1295961/160239273-ce881c0c-c3de-4953-9448-dfd12d7ffe30.png">
+
+<p>BMW</p>
+<p>Connect</p>
+
+</td>
+<td style="text-align: center">
+<img width="180" alt="BlueAquilae Twitter Meteo" src="https://user-images.githubusercontent.com/1295961/160238906-540a4a0d-b721-4c73-8b58-58b96b5e6414.png">
+
+<p>Calendar</p>
+<p>Meteo</p>
+
+</td>
+
+</tr></table></div>
+
+<h2>Contents</h2>
+
+<ul>
+<li><a href="#articles">Articles</a></li>
+</ul>
+<ul>
+<li><a href="#videos">Videos</a></li>
+</ul>
+<ul>
+<li><a href="#components">Components</a></li>
+</ul>
+<ul>
+<li><a href="#navigation">Navigation</a></li>
+</ul>
+<ul>
+<li><a href="#templates">Template</a></li>
+</ul>
+<ul>
+<li><a href="#plugins">Plugins</a></li>
+</ul>
+<ul>
+<li><a href="#frameworks">Frameworks</a></li>
+</ul>
+<ul>
+<li><a href="#experimental">Experimental</a></li>
+</ul>
+<ul>
+<li><a href="#open-source-apps">Open Source Apps</a></li>
+</ul>
+<ul>
+<li><a href="#web">Web</a></li>
+</ul>
+<ul>
+<li><a href="#utilities">Utilities</a></li>
+</ul>
+<ul>
+<li><a href="#bonus">Bonus</a></li>
+</ul>
+<ul>
+<li><a href="#community">Community</a></li>
+</('ul', 0)>
+<h2>Articles</h2>
+
+<h3>Introduction</h3>
+
+<ul>
+<li><a href="https://medium.com/flutter-io/building-beautiful-flexible-user-interfaces-with-flutter-material-theming-and-official-material-13ae9279ef19">Google IO 2018</a>  - Building beautiful, flexible user interfaces</li>
+</ul>
+<ul>
+<li><a href="https://speakerdeck.com/hjjunior/why-i-chose-flutter">Presentation</a> - by <a href="https://github.com/hjJunior">Helio S. Junior</a></li>
+</ul>
+<ul>
+<li><a href="https://medium.com/flutter-community/ins-and-outs-of-flutter-web-7a82721dc19a">Flutter Web</a>  - Ins and Outs of Flutter Web by <a href="https://github.com/nash0x7e2">Nash</a></li>
+</('ul', 0)>
+<h3>Websites / Blogs</h3>
+
+<ul>
+<li><a href="https://didierboelens.com">Welcome to Flutter</a> - English and French blog dedicated to providing practical solutions to most asked questions about Flutter by Didier Boelens</li>
+</ul>
+<ul>
+<li><a href="https://marcinszalek.pl/">SZAŁKO-BLOG</a> - Step by step advanced design by <a href="https://marcinszalek.pl">Marcin Szalek</a>.</li>
+</ul>
+<ul>
+<li><a href="https://flutterbyexample.com/">Flutter by Example</a> - Tutorials based on Redux, Firebase, Custom Animations, and UI</li>
+</ul>
+<ul>
+<li><a href="https://flutter.institute/">Flutter Institute</a> - Very original content and tutorials by <a href="https://twitter.com/flutterinst">Brian Armstrong</a></li>
+</ul>
+<ul>
+<li><a href="https://medium.com/@norbertkozsir">Norbert</a> - In depth articles, features and app creation by <a href="https://github.com/Norbert515">Norbert515</a></li>
+</ul>
+<ul>
+<li><a href="https://medium.com/@diegoveloper">Flutter Tips</a> - Articles, tips & tricks in the development by <a href="https://twitter.com/diegoveloper">Diego Velásquez</a></li>
+</ul>
+<ul>
+<li><a href="https://www.filledstacks.com/">FilledStacks</a> - Tutorials and guides on development by <a href="https://www.instagram.com/filledstacks/">Dane Mackier</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/erluxman/awesomefluttertips/">Awesome Flutter tips</a> - Tips to help developers increase productivity by <a href="https://twitter.com/erluxman/">erluxman</a>.</li>
+</ul>
+<ul>
+<li><a href="http://flutter4fun.com">Flutter4Fun</a> - UI Challenge implementation blog by <a href="https://github.com/imaNNeoFighT">Iman Khoshabi</a>.</li>
+</ul>
+<ul>
+<li><a href="https://blog.canopas.com/tagged/canopas-flutter-weekly">Flutter Stack Weekly</a> - Weekly newsletter on new development and updates curated by <a href="https://twitter.com/jimmys0251">Jimmy Sanghani</a></li>
+</('ul', 0)>
+<h3>Tutorial</h3>
+
+<ul>
+<li><a href="https://codelabs.developers.google.com/codelabs/flutter/#0">Animated Chat</a> - Building beautiful UIs by Google Code Labs</li>
+</ul>
+<ul>
+<li><a href="https://codelabs.developers.google.com/codelabs/flutter-firebase/#0">Firebase Chat</a> - Firebase integration by Google Code Labs</li>
+</ul>
+<ul>
+<li><a href="https://suragch.medium.com/flutter-and-dart-development-articles-981be9ef7b23">Flutter and Dart development</a> - Articles and tutorials by <a href="https://twitter.com/Suragch1">Suragch</a></li>
+</('ul', 0)>
+<h3>Beginner</h3>
+
+<ul>
+<li><a href="https://github.com/olexale/flutter_roadmap">Roadmap to Flutter Development</a> [5433⭐] - Visual roadmap with principles, patterns, and frameworks for Flutter newbies by <a href="https://github.com/olexale">Olexandr Leuschenko</a>.</li>
+</ul>
+<ul>
+<li><a href="https://medium.com/flutter-community/flutter-layout-cheat-sheet-5363348d037e">Layout Cheat Sheet</a> - Extensive examples of layout widgets by <a href="https://github.com/tomaszpolanski">Tomek Polański</a></li>
+</ul>
+<ul>
+<li><a href="https://www.raywenderlich.com/24499516-getting-started-with-flutter">Getting Started with Flutter</a> - by <a href="https://www.raywenderlich.com">raywenderlich.com</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/antz22/ultimate-guide-to-flutter">Beginner's Guide</a> [377⭐] - Comprehensive guide to the basics of Flutter and Firebase by <a href="https://github.com/antz22">Anthony</a></li>
+</('ul', 0)>
+<h3>Intermediate</h3>
+
+<ul>
+<li><a href="https://suragch.medium.com/flutter-state-management-for-minimalists-4c71a2f2f0c1?sk=6f9cedfb550ca9cc7f88317e2e7055a0">Flutter state management for minimalists</a> - Understanding app architecture without relying on third-party frameworks by <a href="https://twitter.com/Suragch1">Suragch</a>. See also <a href="#state-management">State Management</a></li>
+</('ul', 0)>
+<h3>Advanced</h3>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=UUfXWzp0-DU">Rendering Pipeline</a> [1140👍] and <a href="https://www.youtube.com/watch?v=VsYbFnucHsU">Let's build a render tree</a> - Engine architecture by Adam Barth</li>
+</ul>
+<ul>
+<li><a href="https://medium.com/flutter-community/flutter-what-are-widgets-renderobjects-and-elements-630a57d05208">Render Objects</a>  - What are Widgets, RenderObjects and Elements? by <a href="https://github.com/Norbert515">Norbert515</a></li>
+</ul>
+<ul>
+<li><a href="https://skillsmatter.com/skillscasts/12254-flutter-with-streams-and-rxdart">Streams and RxDart</a> - Skillmatters presentation by <a href="https://github.com/brianegan">Brian Egan</a></li>
+</ul>
+<ul>
+<li><a href="https://medium.com/flutter-community/flutter-deep-dive-gestures-c16203b3434f">Gesture System</a>  - Flutter Deep Dive: Gestures by <a href="https://github.com/nash0x7e2">Nash</a></li>
+</ul>
+<ul>
+<li><a href="https://www.didierboelens.com/2018/06/widget---state---context---inheritedwidget/">Schemas</a> - Widget, State, Context and InheritedWidget explanations by <a href="https://didierboelens.com">Didier Boelens</a></li>
+</ul>
+<ul>
+<li><a href="https://medium.com/saugo360/flutters-rendering-engine-a-tutorial-part-1-e9eff68b825d">Rendering Engine Tutorial</a>  - Flutter's Rendering Engine: A Tutorial by <a href="https://github.com/AbdulRahmanAlHamali/">AbdulRahman AlHamali</a></li>
+</ul>
+<ul>
+<li><a href="https://medium.com/@chemamolins/is-flutters-inheritedwidget-a-good-fit-to-hold-app-state-2ec5b33d023e">Inherited Widget</a> - Flutter’s InheritedWidget to hold app state by <a href="https://github.com/jmolins">Chema Molins</a></li>
+</ul>
+<ul>
+<li><a href="https://medium.com/flutter-community/flutter-from-mobile-to-desktop-93635e8de64e">From Mobile to Desktop</a> - Building applications for smartphones and desktops by <a href="https://neppel.com.br">Marcelo Henrique Neppel</a></li>
+</ul>
+<ul>
+<li><a href="https://medium.com/flutter-community/a-deep-dive-into-flutters-accessibility-widgets-eb0ef9455bc">Accessibility widgets</a>  - Deep dive information about all aspects of accessibility by <a href="https://twitter.com/salihgueler">Muhammed Salih Güler</a></li>
+</ul>
+<ul>
+<li><a href="https://medium.com/flutter-io/profiling-flutter-applications-using-the-timeline-a1a434964af3">Profiling w/ Timeline</a>  - Using the Timeline allows you to find and address specific performance issues in your application by <a href="https://medium.com/@chinmaygarde">Chinmay Garde</a></li>
+</('ul', 0)>
+<h2>Advanced graphics rendering</h2>
+
+<ul>
+<li><a href="https://wolfenrain.medium.com/flutter-shaders-an-initial-look-d9eb98d3fd7a">Shaders</a> - Fragment shaders, set it up, how it works and making it work by <a href="https://twitter.com/wolfenrain">Jochum van der Ploeg</a></li>
+</('ul', 0)>
+<h3>Howtos</h3>
+
+<ul>
+<li><a href="https://marcinszalek.pl/flutter/tickets-challenge-parallax">Parallax Effect</a> - Parallax & non linear animation by <a href="https://marcinszalek.pl">Marcin Szalek</a>.</li>
+</ul>
+<ul>
+<li><a href="https://medium.com/@salvatoregiordanoo/flavoring-flutter-392aaa875f36">Build Flavor</a>  - Define build configurations and switch them by <a href="https://medium.com/@salvatoregiordanoo">Salvatore Giordano</a></li>
+</ul>
+<ul>
+<li><a href="https://medium.com/@angeloavv/easily-build-flavors-in-flutter-android-and-ios-with-flutter-flavorizr-d48cbf956e4">Build Flavor</a> - Easily build flavors in Flutter (Android and iOS) with flutter_flavorizr by <a href="https://medium.com/@angeloavv">Angelo Cassano</a></li>
+</('ul', 0)>
+<h2>Videos</h2>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=CPmN4-i9zC8&list=PLOU2XLYxmsIK0r_D-zWcmJ1plIcDNnRkK">Boring Show</a> - Exploration with the Flutter Team.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=WwhyaqNtNQY&list=PLJbE2Yu2zumDqr_-hqpAN0nIr6m14TAsd">Tensor Programming</a>  - Very rich content by <a href="http://tensor-programming.com/">Tensor Programming</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=qWL1lGchpRA&list=PLR2qQy0Zxs_UdqAcaipPR3CG1Ly57UlhV">Mtechviral</a>  - [Hindi/English] Mtechviral Series By <a href="https://github.com/iampawan">Pawan Kumar</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/playlist?list=PLhXZp00uXBk5TSY6YOdmpzp1yG3QbFvrN">Flutter in Practice</a> - Free video courssd for beginners & non-programmers by <a href="https://zaiste.net/">Zaiste</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/c/whatsupcoders">Whatsupcoders</a>  - Free video series on Flutter Widgets by <a href="https://github.com/whatsupcoders">Kamal</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/channel/UCSIvrn68cUk8CS8MbtBmBkA">Reso Coder</a> - Intermediate and advanced videos by <a href="https://github.com/ResoCoder">Matej Rešetár</a></li>
+</('ul', 0)>
+<h2>Components</h2>
+
+<h3>Demonstrations</h3>
+
+<ul>
+<li><a href="https://github.com/flutter/gallery">Official Gallery</a> - Demo for the material design widgets provided by Flutter Team</li>
+</ul>
+<ul>
+<li><a href="https://github.com/nisrulz/flutter-examples">Flutter Examples</a> [6923⭐] - Simple basic isolated apps for devs by <a href="https://github.com/nisrulz">Nishant Srivastava</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/X-Wei/flutter_catalog">Flutter Catalog</a> [2167⭐] - showcasing Flutter components, with side-by-side source code view, by <a href="https://github.com/X-Wei">X-Wei</a></li>
+</('ul', 0)>
+<h3>UI</h3>
+
+<ul>
+<li><a href="https://github.com/duytq94/facebook-reaction-animation">Facebook Reactions</a> [425⭐] - Facebook reactions widget by <a href="https://github.com/duytq94">Duy Tran</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/AndreHaueisen/flushbar">Flushbar</a> [1004⭐] - Highly configurable Snackbar by <a href="https://github.com/AndreHaueisen">Andre Haueisen</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/Rahiche/stepper_touch">Stepper Touch</a> [303⭐] - Lateral value stepper nicely animated by <a href="https://github.com/Rahiche">Raouf Rahiche</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/aagarwal1012/Liquid-Pull-To-Refresh">Liquid Pull To Refresh</a> [1249⭐] - A beautiful and custom refresh indicator by <a href="https://github.com/aagarwal1012/">Ayush Agarwal</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/LanarsInc/direct-select-flutter">Direct Select</a> [774⭐] - Selection widget with an ethereal, full-screen modal popup by <a href="https://github.com/iyatsouba">Ivan Yatsouba</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/xsahil03x/before_after">Before After</a> [913⭐] - Beautiful slider which makes it easier to display the difference between two images, by <a href="https://github.com/xsahil03x">Sahil Kumar</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/vintage/scratcher">Scratcher</a> [573⭐] - Scratch card widget which temporarily hides content from user, by <a href="https://github.com/vintage">Kamil Rykowski</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jaweii/Flutter<em>beautiful</em>popup">Beautiful_Popup</a> [677⭐] - Beautify your app popup by <a href="https://github.com/jaweii">jaweii</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sbilketay/animated<em>selection</em>slide">Animated Selection Slide</a> An animated selection widget by swiping by <a href="https://github.com/sbilketay">Sezgin Bilgetay</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Idean/Flutter-Neumorphic">Flutter Neumorphic</a> [2007⭐] - Ready to use Neumorphic kit for Flutter with 🕶️ dark mode.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/HatFeather/flutter_dough">Dough</a> [704⭐] - Widgets for a squishy user interface by <a href="https://github.com/HatFeather">Josiah Saunders</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/codegrue/card_settings">Card Settings</a> [545⭐] - package for building settings forms by <a href="https://github.com/codegrue">codegrue</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/chulwoo-park/timelines">Timelines</a> [712⭐] - Powerful & Easy to use timeline package by <a href="https://github.com/chulwoo-park">Chulwoo Park</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/JHBitencourt/timeline_tile">Timeline Tile</a> [735⭐] - Tile to help build beautiful and customisable timelines by <a href="https://github.com/JHBitencourt">Julio Bitencourt</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/chrisedg87/flutter<em>rounded</em>loading_button">Rounded Loading Button</a> [325⭐] - Button with a loading indicator, complete with success and error animations by <a href="https://twitter.com/ChrisTheEdg">Chris Edgington</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/flyerhq/flutter<em>chat</em>ui">Flyer Chat</a> [1594⭐] - Community-driven chat UI implementation by the <a href="https://github.com/flyerhq">Flyer Chat team</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/Milad-Akarie/smooth<em>page</em>indicator">Smooth Page Indicator</a> [1199⭐] - Customizable animated page indicator with a set of built-in effects. <a href="https://github.com/Milad-Akarie">Milad Akarie</a></li>
+</('ul', 0)>
+<h4>Libraries</h4>
+
+<ul>
+<li><a href="https://github.com/forus-labs/forui">Forui</a> [359⭐] - Minimalistic UI library heavily inspired by shadcn/ui by <a href="https://github.com/forus-labs">Forus Labs</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/nank1ro/flutter-shadcn-ui">Shadcn</a> [894⭐] - Shadcn-ui port. Fully customizable UI components.</li>
+</('ul', 0)>
+<h4>List</h4>
+
+<ul>
+<li><a href="https://github.com/superlistapp/super<em>sliver</em>list">Super List</a> [283⭐] - Drop-in replacement for SliverList and ListView that can handle large amount of items with variable extents by <a href="https://github.com/knopp">Matej Knopp</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/hanshengchiu/reorderables">Reorderables</a> [726⭐] - Drag&Drop Table, Row, Column, Wrap(Grid) and SliverList elements by <a href="https://github.com/hanshengchiu">Hansheng Chiu</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/aagarwal1012/Liquid-Pull-To-Refresh">Liquid Pull To Refresh</a> [1249⭐] - A beautiful and custom refresh indicator by <a href="https://github.com/aagarwal1012/">Ayush Agarwal</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/bosskmk/pluto_grid">PlutoGrid</a> [661⭐] - Web and desktop datagrid that can be controlled by the keyboard by <a href="https://github.com/bosskmk">bosskmk</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/AbdulRahmanAlHamali/flutter_typeahead">Typeahead</a> [817⭐] - Display overlay suggestions to users as they type by <a href="https://github.com/AbdulRahmanAlHamali">Abdul Rahman Al Hamali</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/letsar/flutter<em>staggered</em>grid_view">StaggeredGridView</a> [3122⭐] - GridView with tiles of variable sizes by <a href="https://github.com/letsar">Romain Rastel</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/slightfoot/flutter<em>sticky</em>headers">Sticky Headers</a> [1080⭐] - Configurable sticky headers by <a href="http://www.devangels.london/">Simon Lightfoot</a></li>
+</('ul', 0)>
+<h4>Drawers</h4>
+
+<ul>
+<li><a href="https://github.com/RafaelBarbosatec/hidden<em>drawer</em>menu">Hidden Drawer Menu</a> [351⭐] - Beautiful drawer mode menu feature with perspective animations by <a href="https://github.com/RafaelBarbosatec">Rafael Almeida Barbosa</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Dn-a/flutter<em>inner</em>drawer">Flutter Inner Drawer</a> [513⭐] - Easy way to create an internal drawer (left / right) where you can enter a list-menu or other by <a href="https://github.com/Dn-a">Di Natale Antonino</a>.</li>
+</('ul', 0)>
+<h4>Bottom bars</h4>
+
+<ul>
+<li><a href="https://github.com/tunitowen/fancy<em>bottom</em>navigation">Fancy Bottom Navigation</a> [758⭐] - Animated bottom navigation by <a href="https://github.com/tunitowen">Tony Owen</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/imaNNeoFighT/circular<em>bottom</em>navigation">Circular Bottom Navigation</a> [653⭐] - Beautiful animated bottom navigation bar by <a href="https://github.com/imaNNeoFighT">Iman Khoshabi</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pedromassango/bottom<em>navy</em>bar">Bottom Navy Bar</a> [1022⭐] - Beautiful and colorful animated bottom navigation bar by <a href="https://github.com/pedromassango">Pedro Massango</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sooxt98/google<em>nav</em>bar">Google Nav Bar</a> [737⭐] - A modern google style nav bar for flutter by <a href="http://github.com/sooxt98">Sooxt98</a></li>
+</('ul', 0)>
+<h4>Bottom Sheets</h4>
+<ul>
+<li><a href="https://github.com/mcrovero/rubber">Rubber Bottom Sheet</a> [562⭐] - Elastic material bottom sheet by <a href="https://github.com/mcrovero">Mattia Crovero</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jamesblasco/modal<em>bottom</em>sheet">Modal Bottom Sheet</a> [1860⭐] - Modal bottom sheet with Material, Cupertino iOS13 or custom appareance by <a href="https://github.com/jamesblasco">Jaime Blasco</a>.</li>
+</('ul', 0)>
+<h4>Sliders</h4>
+
+<ul>
+<li><a href="https://github.com/boeledi/RangeSlider">RangeSlider</a> [374⭐] - 2-thumb configurable RangeSlider by <a href="https://www.didierboelens.com">Didier Boelens</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/Ali-Azmoud/flutter_xlider">Flutter Xlider</a> [518⭐] - A material design slider and range slider, horizontal and vertical, with RTL support by <a href="https://github.com/Ali-Azmoud">Ali-Azmoud</a></li>
+</('ul', 0)>
+<h4>UI Helpers</h4>
+
+<ul>
+<li><a href="https://github.com/jogboms/flutter_offline">Offline</a> [1054⭐] - Tidy utility to handle offline/online connectivity by <a href="https://twitter.com/jogboms">Jeremiah Ogbomo</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/simformsolutions/flutter_showcaseview">ShowCaseView</a> [1488⭐] - Way to showcase your app features on iOS and Android by <a href="https://github.com/simformsolutions">Simform</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/leoafarias/mix">Mix</a> [561⭐] - An expressive way to effortlessly build design systems by <a href="https://github.com/leoafarias">Leo Farias</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/fluttercommunity/flutter_blurhash">Blurhash</a> [520⭐] - Compact representation of a placeholder for an image. Encode a blurry image under 30 caracters by <a href="https://www.linkedin.com/in/robert-felker/">Robert Felker</a></li>
+</('ul', 0)>
+<h4>Material Design</h4>
+
+<ul>
+<li><a href="https://github.com/letsar/flutter_slidable">Slidable</a> [2690⭐] - Slidable list item with left and right slide actions by <a href="https://github.com/letsar">Romain Rastel</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/fluttercommunity/backdrop">Backdrop</a> [331⭐] - <a href="https://material.io/design/components/backdrop.html">Backdrop</a> implementation for flutter.</li>
+</('ul', 0)>
+<h4>Effect</h4>
+
+<ul>
+<li><a href="http://stackoverflow.com/questions/43550853/how-do-i-do-the-frosted-glass-effect-in-flutter">Frosted Glass</a> - Render effect by <a href="http://www.collinjackson.com">Collin Jackson</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/hnvn/flutter_shimmer">Shimmer</a> [1784⭐] - Shimmer effect while content is loading by <a href="https://github.com/hnvn">HungHD</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/i-protoss/wave">Wave</a> [1106⭐] - Displaying some waves with custom color, duration, floating and blur effects by <a href="https://github.com/RockerFlower">RockerFlower</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/iamSahdeep/liquid<em>swipe</em>flutter">Liquid Swipe</a> - Liquid swipe to your stacked containers by <a href="https://github.com/iamSahdeep">Sahdeep Singh</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/skkallayath/photofilters">PhotoFilters</a> [403⭐] - Apply filters to an image by <a href="https://github.com/skkallayath">Sharafudheen KK</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/JonathanMonga/flutter_shine.dart">Shine</a> [146⭐]  - Pretty shadows with dynamic light positions by <a href="https://github.com/JonathanMonga/">Jonathan Monga</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mcaubrey/clay_containers">Clay Containers</a> [437⭐] - Neumorphic widget primitives to serve as the foundation of your own designs by <a href="https://github.com/mcaubrey">Michael Charles</a>.</li>
+</('ul', 0)>
+<h4>Calendar</h4>
+
+<ul>
+<li><a href="https://github.com/dooboolab/flutter<em>calendar</em>carousel">Calendar Carousel Widget</a> <!-- stargazers:dooboolab/flutter<em>calendar</em>carousel--> - Calendar carousel by <a href="https://github.com/dooboolab/flutter<em>calendar</em>carousel">dooboolab</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/aleksanderwozniak/table_calendar">Table Calendar</a> [1813⭐] - Calendar organized neatly into a Table, with vertical autosizing by <a href="https://github.com/aleksanderwozniak">Aleksander Woźniak</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/Jamalianpour/time_planner">Time Planner</a> [223⭐] - A beautiful, easy to use and customizable time planner for flutter mobile, desktop and web by <a href="https://github.com/Jamalianpour">Mohammad Jamalianpour</a></li>
+</('ul', 0)>
+<h4>Backend-Driven</h4>
+
+<ul>
+<li><a href="https://github.com/dengyin2000/dynamic_widget">Dynamic Widget</a> [1554⭐] - Build your dynamic UI with json, and the json format is very similar with flutter widget code by <a href="https://github.com/dengyin2000">Denny Deng</a>.</li>
+</('ul', 0)>
+<h3>Image</h3>
+
+<ul>
+<li><a href="https://github.com/serenader2014/flutter<em>carousel</em>slider">Carousel Slider</a> [1591⭐] - Carousel slider widget, support infinite scroll and custom child widget by <a href="https://github.com/serenader2014">serenader</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/renancaraujo/photo_view">Photo View</a> [1901⭐] - Scalable image view with loading placeholder by <a href="https://github.com/renancaraujo">Renan C. Araújo</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/dnfield/flutter_svg">SVG</a> [1661⭐] - SVG parsing, rendering, and widget library by <a href="https://github.com/dnfield">Dan Field</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/hnvn/flutter<em>image</em>cropper">Image Cropper</a> [993⭐] - Crop your images support ratio, rotation, zoom by <a href="https://github.com/hnvn">HungHD</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/renefloor/flutter<em>cached</em>network_image">Cached Network Image</a> [2431⭐] - Show images from the internet and keep them in the cache directory by</li>
+</ul>
+<ul>
+<li><a href="https://github.com/xvrh/lottie-flutter">Lottie</a> [1157⭐] - Use airbnb's popular <a href="https://airbnb.design/lottie/">After Effects Animation library</a> by <a href="https://github.com/xvrh/lottie-flutter">xvrh</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/renancaraujo/bitmap">Bitmap</a> [175⭐] - Perform Bitmap manipulations (such as contrast and exposure) with a help from the Dart FFI by <a href="https://github.com/renancaraujo">Renan C. Araújo</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/xclud/flutter_crop">Crop</a> [258⭐] - Crop any widget/image in Android, iOS, Web and Desktop by <a href="https://github.com/xclud/">Mahdi K. Fard</a></li>
+</('ul', 0)>
+<h4>Image Picker</h4>
+
+<ul>
+<li><a href="https://github.com/flutter/packages/tree/main/packages/image_picker">Image Picker</a> - Images Selection by <a href="http://www.collinjackson.com">Collin Jackson</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/fluttercandies/flutter<em>wechat</em>assets_picker">WeChat Assets Picker</a> [1496⭐] - Assets picker in WeChat style, support multi assets by <a href="https://github.com/AlexV525">Alex Li</a>.</li>
+</ul>
+<ul>
+<li><a href="https://pub.dev/packages/advance<em>image</em>picker">Advance Image Picker</a> - Select and edit images from Android/iOS library and capture camera shots from within the same view by <a href="https://github.com/weta-vn">WetaVN</a></li>
+</('ul', 0)>
+<h3>Map</h3>
+
+<ul>
+<li><a href="https://github.com/aloisdeniel/flutter_geocoder">GeoCoder</a> [185⭐] - Forward and reverse geocoding by <a href="https://aloisdeniel.github.com">Aloïs Deniel</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/fluttify-project/amap<em>map</em>fluttify">AMap</a> [538⭐] - Access to AMap services(高德地图) by <a href="https://github.com/fluttify-project">fluttify-project</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/xclud/flutter_map">Map</a> [129⭐] - Fully-fledged interactive Map widget for flutter written in pure Dart. Supports all platforms. by <a href="https://github.com/xclud/">Mahdi K. Fard</a></li>
+</('ul', 0)>
+<h3>Charts</h3>
+
+<ul>
+<li><a href="https://github.com/xqwzts/flutter<em>circular</em>chart">Circular Chart</a> [398⭐] - Animated radial and pie charts by <a href="https://github.com/xqwzts">Victor Choueiri</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/imaNNeoFighT/fl_chart">FL Chart</a> [6741⭐] - Draw fantastic charts in Flutter by <a href="http://www.ikhoshabi.com">Iman Khoshabi</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/aeyrium/bezier-chart">Bezier Chart</a> [446⭐] - Beautiful bezier line chart widget for flutter that is highly interactive and configurable by <a href="https://twitter.com/diegoveloper">Diego Velasquez</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/entronad/flutter_echarts">Echarts</a> [739⭐] - Large collection of advanced reactives charts by <a href="https://github.com/entronad">LIN Chen</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/entronad/graphic">Graphic</a> [1587⭐] - Data visualization library based on the Grammar of Graphics by <a href="https://github.com/entronad">LIN Chen</a></li>
+</('ul', 0)>
+<h3>Navigation</h3>
+
+<ul>
+<li><a href="https://github.com/goposse/fluro">Fluro</a> [3672⭐] - The brightest, hippest, coolest router for Flutter with Navigation, wildcard, query, transitions by <a href="http://goposse.com">Posse</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/jonataslaw/get">Get</a> [10245⭐] - Navigate between screens & display snackbars/dialogs/bottomSheets without context by <a href="https://github.com/jonataslaw">Jonny Borges</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/slovnicki/beamer">Beamer</a> [588⭐] - Route through guarded page stacks and URLs using the Navigator 2.0 API effortlessly by <a href="https://github.com/slovnicki">Sandro Lovnički</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/Milad-Akarie/auto<em>route</em>library">auto<em>route</a> [1570⭐] - AutoRoute is a declarative routing solution, where everything needed for navigation is automatically generated for you. <a href="https://github.com/Milad-Akarie">Milad</em>Akarie</a>.</li>
+</('ul', 0)>
+<h3>Auth</h3>
+
+<ul>
+<li><a href="https://github.com/flutter/packages/tree/main/packages/local_auth">Local Auth</a> - Touch ID, lock code, fingerprint auth on iOS and Android</li>
+</ul>
+<ul>
+<li><a href="https://github.com/flutter/packages/tree/main/packages/google<em>sign</em>in">Google Sign-In</a> - Google OAuth</li>
+</ul>
+<ul>
+<li><a href="https://github.com/FirebaseExtended/flutterfire/tree/master/packages/firebase_auth">Firebase Auth</a> - Firebase OAuth</li>
+</ul>
+<ul>
+<li><a href="https://medium.com/@gildaswise/flutter-adding-sign-in-with-google-and-phone-authentication-to-your-app-69f681518f9b">Firebase Phone Auth</a>  - Phone number auth via SMS by <a href="https://github.com/gildaswise">Gildásio Filho</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/Clancey/simple_auth">SimpleAuth</a> [352⭐] - Azure Active Directory, Amazon, Dropbox, Facebook, Github, Google, Instagram, Linked In, Microsoft Live Connect, Github, OAuth, Basic Auth by <a href="https://github.com/Clancey">James Clancey</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/MaikuB/flutter_appauth">Flutter AppAuth</a> [271⭐] - Plugin that provides a wrapper around the AppAuth iOS and Android SDKs by <a href="https://github.com/MaikuB">Michael Bui</a></li>
+</('ul', 0)>
+<h3>Text & Rich Content</h3>
+
+<ul>
+<li><a href="https://github.com/benhurott/flutter-masked-text">Masked Text</a> [276⭐] - Masked text with custom and monetary formatting by <a href="https://github.com/benhurott">Ben-hur Santos Ott</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/fleather-editor/fleather">Fleather</a> <!--stargazersfleather-editor/fleather--> - Soft & gentle rich text editor</li>
+</ul>
+<ul>
+<li><a href="https://github.com/leisim/auto<em>size</em>text">AutoSizeText</a> [2025⭐] - Automatically resizes text to fit perfectly within its bounds by <a href="https://github.com/leisim">Simon Leier</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/fayeed/flutter<em>parsed</em>text">Parsed Text</a> [219⭐] - Interactive text based on content recognition, also supports Regex by <a href="https://github.com/fayeed/">Fayeed Pawaskar</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/shah-xad/flutter_tex">TeX</a> [276⭐] - Render Mathematics Equations with full HTML and JavaScript support by <a href="https://github.com/shah-xad">Shahzad Akram</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/BertrandBev/code_field">Code Field</a> - Customizable code field widget supporting syntax highlighting by <a href="https://github.com/BertrandBev">Bertrand Bevillard</a></li>
+</('ul', 0)>
+<h3>Forms</h3>
+<ul>
+<li><a href="https://github.com/danvick/flutter<em>form</em>builder">Form Builder</a> [1480⭐] - Framework that simplifies building forms, validating fields, reacting to changes, and collecting the final user input by <a href="https://github.com/danvick">Danvick Miller</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/joanpablo/reactive_forms">Reactive Forms</a> [467⭐] - Model-driven approach to handling Forms inputs and validations, heavily inspired in Angular's Reactive Forms.</li>
+</('ul', 0)>
+<h3>Analytics</h3>
+
+<ul>
+<li><a href="https://github.com/dart-lang/usage">Usage</a> [146⭐] - Google Analytics wrapper for command-line, web, and Flutter apps</li>
+</ul>
+<ul>
+<li><a href="https://github.com/FirebaseExtended/flutterfire/tree/master/packages/firebase_analytics">Firebase Analytics</a> - Connect to Firebase Analytics API</li>
+</('ul', 0)>
+<h3>Internationalization</h3>
+
+<ul>
+<li><a href="https://github.com/KingWu/gen_lang">GenLang</a> [100⭐] - Code generator for Internationalization by <a href="https://github.com/KingWu">King Wu</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/bratan/flutter_translate">Flutter Translate</a> [401⭐] - Internationalization (i18n) library by <a href="http://bratan.me">Florin Bratan</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/fkirc/attranslate">attranslate</a> - Semi-automated translation of ARB or JSON files by <a href="https://github.com/fkirc">fkirc</a></li>
+</('ul', 0)>
+<h3>Styling</h3>
+
+<h3>Media</h3>
+
+<ul>
+<li><a href="https://github.com/fluttercandies/flutter<em>photo</em>manager">photo_manager</a> [671⭐] - Provides assets (image/video/audio) abstraction management APIs that can be easily integrated with custom UI widgets by <a href="https://github.com/CaiJingLong">CaiJingLong</a> and <a href="https://github.com/AlexV525">Alex Li</a>.</li>
+</('ul', 0)>
+<h4>Audio</h4>
+
+<ul>
+<li><a href="https://github.com/luanpotter/audioplayers">Audio Players Plugin</a> [1976⭐] - Play multiple audio files simultaneously (Android/iOS) by <a href="https://github.com/luanpotter">Luan Nico</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/shadow-app/flutter<em>audio</em>recorder">Flutter Audio Recorder</a> - Provides full controls and access to recording details such as level metering by <a href="https://github.com/nikli2009">Wenyan Li</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dooboolab/flutter_sound">Flutter Sound</a> [868⭐] - Flutter audio recorder and player at one hand by <a href="https://github.com/dooboolab">dooboolab</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/florent37/Flutter-AssetsAudioPlayer">AssetsAudioPlayer</a> [752⭐]  Simultaneous playback of audio from assets/network/file and displaying notifications [android / ios / web / macos]</li>
+</ul>
+<ul>
+<li><a href="https://pub.dev/packages/audio_service">Audio Service</a> - System background audio support by <a href="https://github.com/ryanheise">Ryan Heise</a>. <a href="https://suragch.medium.com/background-audio-in-flutter-with-audio-service-and-just-audio-3cce17b4a7d?sk=0837a1b1773e27a4f879ff3072e90305">Tutorial</a> by <a href="https://twitter.com/Suragch1">Suragch</a>.</li>
+</('ul', 0)>
+<h4>Video</h4>
+
+<ul>
+<li><a href="https://github.com/cloudwebrtc/flutter-webrtc">WebRTC</a> [4086⭐] - WebRTC plugin for iOS/Android by <a href="https://github.com/cloudwebrtc">CloudWebRtc</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/brianegan/chewie">Chewie</a> [1926⭐] - Provides low-level access to video playback by <a href="https://github.com/brianegan">Brian Egan</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/sbis04/video_trimmer">Video Trimmer</a> [432⭐] - Visualise and trim videos by <a href="https://github.com/sbis04">Souvik Biswas</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/Apparence-io/camera_awesome">CamerAwesome</a> [952⭐] - Community camera plugin rework by <a href="https://apparence.io">Apparence.io studio</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/LeGoffMael/video_editor">Video Editor</a> [386⭐] - Edit (crop, trim, rotate) a video and a its cover by <a href="https://github.com/LeGoffMael">Maël Le Goff</a></li>
+</('ul', 0)>
+<h4>Voice</h4>
+
+<ul>
+<li><a href="https://github.com/rxlabz/speech_recognition">Speech Recognition</a> [337⭐] - Speech to text by <a href="https://twitter.com/rxlabz">Erick Ghaumez</a></li>
+</ul>
+<ul>
+<li><a href="https://marcinszalek.pl/flutter/ok-google-flutter/">OK Google</a> - Integrate google assistant by <a href="https://marcinszalek.pl/">Marcin Szalek</a></li>
+</('ul', 0)>
+<h3>Storage</h3>
+
+<ul>
+<li><a href="https://github.com/FirebaseExtended/flutterfire/tree/master/packages/firebase_storage">Firebase Storage</a> - Firebase as data storage</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mogol/flutter<em>secure</em>storage">Secure Storage</a> [1118⭐] - Keychain and Keystore storage by <a href="https://github.com/mogol">German Saprykin</a></li>
+</('ul', 0)>
+<h4>Preferences</h4>
+
+<h3>Monetization</h3>
+
+<ul>
+<li><a href="https://pub.dev/packages/admob">Admob</a> - GoogleAdmob supports interstitial ads in both iOS and Android by Brett Nesbitt</li>
+</ul>
+<ul>
+<li><a href="https://github.com/FirebaseExtended/flutterfire/tree/master/packages/firebase_admob">Firebase AdMob</a> - Ad integration using Firebase</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dooboolab/flutter<em>inapp</em>purchase">Inapp Purchase</a> [550⭐] - Features set of 'in app purchase' derived from <a href="https://github.com/dooboolab/react-native-iap">react-native-iap</a> by <a href="https://github.com/dooboolab">dooboolab</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/kmcgill88/admob_flutter">Admob Flutter</a> - Admob plugin that shows banner ads using native platform views by <a href="https://github.com/YoussefKababe">Youssef Kababe</a> & <a href="https://github.com/kmcgill88">Kevin McGill</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dreamsoftin/facebook<em>audience</em>network">Facebook Audience Network</a> - Facebook Audience Network Ad plugin that shows banner, interstitial, in-stream video, rewarded video & natvie ads by <a href="https://github.com/dreamsoftin">Dreamsoft Innovations</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/square/in-app-payments-flutter-plugin">Square In-App Payments SDK</a> [339⭐] - Take payments by embedding a card entry form in your app that produces nonces from customer-provided card information or digital wallets by <a href="https://github.com/orgs/square">Square</a></li>
+</('ul', 0)>
+<h2>Templates</h2>
+
+<ul>
+<li><a href="https://github.com/CodemateLtd/FlutterMates">Mates</a> [592⭐] - How to load profiles from the randomuser.me API and a nice profile details page by <a href="https://github.com/roughike">Iiro Krankka</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/huextrat/TheGorgeousLogin">The Gorgeous Login</a> [1736⭐] - Design and smooth login template by <a href="https://github.com/huextrat">Hugo Extrat</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/longhoang2984/flutter<em>payment</em>app_ui">Liquid Pay Payment App</a> [304⭐] - Liquid Pay App Concept by <a href="https://github.com/longhoang2984">Long Hoang</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/JideGuru/FlutterFoodybite">FlutterFoodybite</a> [1567⭐] - Beautiful food app UI template by <a href="https://github.com/JideGuru">JideGuru</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/diegoveloper/flutter-samples">Flutter Samples</a> [3083⭐] - Collection of nice flutter samples by <a href="https://github.com/diegoveloper">Diego Velásquez</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/gregertw/actingweb<em>firstapp">ActingWeb First</em>App</a> [476⭐] - Starter app with basic elements for a team-developed production-quality app by <a href="https://github.com/gregertw">Greger Wedel</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/pawlik92/flutter_whirlpool">Smart Washing Machine</a> [880⭐] - Smart washing machine UI challenge app with Box2D physic engine by <a href="https://github.com/pawlik92">Tomasz Pawlikowski</a></li>
+</('ul', 0)>
+<h3>Clone</h3>
+
+<ul>
+<li><a href="https://github.com/pd4d10/git-touch">GitTouch</a> [1565⭐] - Open source mobile client for GitHub, GitLab, Bitbucket and Gitea by <a href="https://github.com/pd4d10">Rongjian Zhang</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/rustdesk/rustdesk">RustDesk</a> [72980⭐] - Open source virtual / remote desktop. TeamViewer alternative.  Built with Rust by <a href="https://www.rustdesk.com/">RustDesk team</a></li>
+</('ul', 0)>
+<h3>Machine Learning</h3>
+
+<ul>
+<li><a href="https://github.com/BayesWitnesses/m2cgen">m2cgen</a> [2792⭐] - CLI tool to convert ML models into native Dart code by <a href="https://github.com/BayesWitnesses">BayesWitnesses</a></li>
+</('ul', 0)>
+<h3>Vision</h3>
+
+<h4>Augmented Reality</h4>
+
+<ul>
+<li><a href="https://github.com/olexale/arkit<em>flutter</em>plugin">ARKit Plugin</a> [798⭐] - Wrapper for ARKit - Apple's augmented reality platform for iOS by <a href="https://github.com/olexale">Olexandr Leuschenko</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/giandifra/arcore<em>flutter</em>plugin">ARCore Plugin</a> [433⭐] - Augmented reality with ARCore platform by <a href="https://github.com/giandifra">Gian Marco Di Francesco</a>.</li>
+</('ul', 0)>
+<h2>Plugins</h2>
+
+<ul>
+<li><a href="https://pub.dev/flutter/packages">Pub packages</a> - Packages filter in Dart Pub Repository.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/flutter/packages/tree/main/packages">Plugins</a> - Official Flutter Team Plugins</li>
+</('ul', 0)>
+<h3>Device</h3>
+
+<ul>
+<li><a href="https://github.com/dart-flitter/flutter<em>webview</em>plugin">WebView</a> [1479⭐] - Render web content by <a href="https://twitter.com/HadrienLejard">Hadrien Lejard</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/Lyokone/flutterlocation">Location</a> [1104⭐] - Handle location, handling callbacks to get continuous location by <a href="https://github.com/Lyokone">Lyokone</a></li>
+</ul>
+<ul>
+<li><a href="https://pub.dev/packages/proximity_plugin">Proximity Sensor Plugin</a> - A plugin to access the proximity sensor of your device by <a href="https://github.com/Samaritan1011001">Manoj NB</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/MaikuB/flutter<em>local</em>notifications">Local Notifications</a> [2441⭐] - Plugin for displaying local notifications by <a href="https://github.com/MaikuB">Michael Bui</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/builttoroam/device_calendar">Device Calendar</a> - Plugin for modifying calendars on the user's device by <a href="http://builttoroam.com">Built to Roam</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/g123k/flutter<em>app</em>badger">Badger</a> [308⭐] - Update app badge on the launcher by <a href="https://twitter.com/g123k">Edouard Marquez</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/GigaDroid/flutter_udid">UDID</a> [245⭐] - Persistent UDID across app reinstalls by <a href="https://kukuk.me">Leon Kukuk</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/hnvn/flutter_downloader">Downloader</a> [906⭐] - Create and manage download tasks by <a href="https://github.com/hnvn">HungHD</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/pichillilorenzo/flutter_inappwebview">InAppWebView</a> [3178⭐] - Add inline WebView widgets or open an in-app browser window by <a href="https://github.com/pichillilorenzo">Lorenzo Pichilli</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/pichillilorenzo/flutter_appavailability">AppAvailability</a> [92⭐] - List, launch and check installed apps by <a href="https://github.com/pichillilorenzo">Lorenzo Pichilli</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/miguelpruivo/plugins<em>flutter</em>file_picker">File Picker</a> [1320⭐] - Native file explorer to load absolute file path by <a href="https://github.com/miguelpruivo">Miguel Ruivo</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/X-dea/Flutter_VPN">VPN</a> [350⭐] - Access VPN services by <a href="https://github.com/ctrysbita">Jason C.H</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/baseflow/flutter-geolocator">Geolocator</a> [1240⭐] - A Flutter geolocation plugin which provides easy access to the platform specific location services by <a href="https://baseflow.com">Baseflow</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/baseflow/flutter-permission-handler">Permission Handler</a> [2023⭐] - A Flutter permission plugin which provides a cross-platform (iOS, Android) API to request and check permissions by <a href="https://baseflow.com">Baseflow</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/istornz/live_activities">Live Activities</a> [164⭐] - A plugin to use iOS live activities & Dynamic Island features by <a href="https://github.com/istornz">Dimitri Dessus</a></li>
+</('ul', 0)>
+<h4>Scanner</h4>
+
+<h4>Bluetooth / NFC / Beacon</h4>
+
+<ul>
+<li><a href="https://github.com/pauldemarco/flutter_blue">Blue</a> [2378⭐] - Bluetooth by <a href="https://github.com/pauldemarco">Paul DeMarco</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/matteocrippa/flutter-nfc-reader">NFC Reader</a> [394⭐] - NFC reader plugin for iOS and Android by <a href="https://github.com/matteocrippa">Matteo Crippa</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/PhilipsHue/flutter<em>reactive</em>ble">Reactive Ble</a> [664⭐] - Handles BLE operations for multiple devices by <a href="https://github.com/PhilipsHue">Philips Hue</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/okadan/flutter-nfc-manager">NFC Manager</a> [200⭐] - Generic NFC plugin for iOS and Android by <a href="https://github.com/okadan">Naoki Okada</a></li>
+</('ul', 0)>
+<h3>Storage</h3>
+
+<ul>
+<li><a href="https://github.com/tekartik/sqflite">Sqflite</a> [2856⭐] - SQLite flutter plugin by <a href="https://www.linkedin.com/in/alextekartik/">Alexandre Roux</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/simolus3/drift">Drift</a> - Drift is an easy to use, reactive, typesafe persistence library for Dart & Flutter by [</li>
+</ul>
+<p>Simon Binder](https://github.com/simolus3)</p>
+<ul>
+<li><a href="https://github.com/objectbox/objectbox-dart">ObjectBox</a> - On-device database for fast cross-platform Dart object persistence by <a href="https://github.com/objectbox">ObjectBox</a></li>
+</('ul', 0)>
+<h3>Services</h3>
+
+<ul>
+<li><a href="https://github.com/OneSignal/OneSignal-Flutter-SDK">OneSignal</a> [615⭐] - Push notification service by <a href="https://github.com/OneSignal">OneSignal</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/britannio/in<em>app</em>review">In App Review</a> [311⭐] - Requesting and Writing Reviews for Android, iOS and MacOS by <a href="https://github.com/britannio">Britannio Jarrett</a></li>
+</('ul', 0)>
+<h2>Frameworks</h2>
+
+<h3>State management</h3>
+
+<h4>Standard</h4>
+
+<ul>
+<li><a href="https://github.com/felangel/bloc">Bloc</a> [11726⭐] - Collection of packages that help implement the BLoC design pattern by <a href="https://github.com/felangel">Felix Angelov</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/rrousselGit/provider">Provider</a> [5101⭐] - State-management library for Flutter by <a href="https://github.com/rrousselGit">Remi Rousselet</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/rrousselGit/river_pod">RiverPod</a> [6172⭐] - Provider, but different by <a href="https://github.com/rrousselGit">Remi Rousselet</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/fluttercommunity/get_it">Get It</a> [1323⭐] - Simple direct Service Locator that allows to decouple the interface from a concrete implementation by <a href="https://twitter.com/Thomasburkhartb">Thomas Burkhartb</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/jonataslaw/getx">GetX</a> [10245⭐] - Contextless, State-management & navigation by <a href="https://github.com/jonataslaw">Jonny Borges</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/mobxjs/mobx.dart">MobX</a> [2390⭐] - Supercharge the state-management in your apps with Transparent Functional Reactive Programming (TFRP). Port of MobX from the Js/React land.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/rodydavis/signals.dart">Signals</a> [433⭐] - Reactive programming made simple. Port of Signals pattern by <a href="https://github.com/rodydavis">Rody Davis</a></li>
+</('ul', 0)>
+<h4>Redux / ELM / Dependency Injection</h4>
+
+<ul>
+<li><a href="https://github.com/johnpryan/redux.dart">Redux.dart</a> [516⭐] - Port of Redux to Dart with an ecosystem of middleware, Flutter integrations, and time traveling dev tools by <a href="https://github.com/johnpryan">John Ryan</a> and <a href="https://gitlab.com/users/brianegan/projects">Brian Egan</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/brianegan/flutter_redux">Redux</a> [1653⭐] - Built to work with <a href="https://github.com/johnpryan/redux.dart">redux.dart</a>, utilities that allow you to easily consume a Redux Store to build Widgets</li>
+</ul>
+<ul>
+<li><a href="https://pub.dev/packages/async_redux">Async Redux</a> [229⭐] - Redux without boilerplate. Allows for both sync and async reducers by <a href="https://github.com/marcglasberg/">Marcelo Glasberg</a></li>
+</('ul', 0)>
+<h3>Widgets</h3>
+
+<ul>
+<li><a href="https://github.com/rrousselGit/flutter_hooks">Hooks</a> [3119⭐] - Advanced code sharing between widgets by <a href="https://github.com/rrousselGit">Remi Rousselet</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/rrousselGit/functional_widget">Functional widget</a> [595⭐] - Code generator writing widgets as functions with annotations by <a href="https://github.com/rrousselGit">Remi Rousselet</a></li>
+</('ul', 0)>
+<h3>Data</h3>
+
+<ul>
+<li><a href="https://github.com/zino-app/graphql-flutter">Graphql</a> [3243⭐] - Implementation of the GraphQL spec by <a href="https://github.com/zino-app">Zino App B.V.</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/DarshanGowda0/GeoFlutterFire">GeoFlutterFire</a> [305⭐] - Implementation of GeoFirestore for flutter by <a href="https://darshann.me/">Darshan Gowda</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/gql-dart/ferry">Ferry</a> [600⭐] - Powerful & Extensible GraphQL Client by <a href="https://github.com/smkhalsa">Sat Mandir Khalsa</a></li>
+</('ul', 0)>
+<h3>Backend</h3>
+
+<ul>
+<li><a href="https://github.com/dengyin2000/dynamic_widget">Dynamic Widget</a> [1554⭐] - Build your dynamic UI with json, and the json format is very similar with flutter widget code by <a href="https://github.com/dengyin2000">Denny Deng</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/aldycool/NETCoreSync">NETCoreSync</a> - Centralized database synchronization framework for multiple clients, built on top of <a href="https://github.com/simolus3/moor">Moor</a> library by <a href="https://github.com/aldycool">Aldy J</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/parse-community/Parse-SDK-Flutter/tree/master/packages/flutter">Parse for Flutter</a> [575⭐] Open source backend framework by <a href="https://parseplatform.org/">ParsePlatform</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/serverpod/serverpod">Serverpod</a> - Write your server-side code and API in Dart.</li>
+</('ul', 0)>
+<h3>Animation</h3>
+
+<ul>
+<li><a href="https://github.com/jogboms/flutter_spinkit">SpinKit</a> [2990⭐] - Animated loading indicators by <a href="https://twitter.com/jogboms">Jeremiah Ogbomo</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/aagarwal1012/Animated-Text-Kit">AnimatedTextKit</a> [1652⭐] - A collection of cool text animations by <a href="https://github.com/aagarwal1012/">Ayush Agarwal</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/biocarl/drawing_animation">Drawing Animation</a> [484⭐] - Create drawing line animations based on SVG path data by <a href="https://twitter.com/cahaucks">Carl Hauck</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/felixblaschke/simple_animations">Simple Animations</a> - Create awesome custom animations easily by <a href="https://github.com/felixblaschke">Felix Blaschke</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/mobiten/flutter<em>staggered</em>animations">Staggered Animations</a> [1566⭐] - Easily add staggered animations to your ListView, GridView, Column and Row by <a href="https://mobiten.com/">mobiten</a></li>
+</ul>
+<ul>
+<li><a href="https://pub.dev/packages/animate<em>do">Animate Do</a> - Animation package inspired in Animate.css by <a href="https://twitter.com/Fernando</em>Her85">Fernando Herrera</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/creativecreatorormaybenot/funvas">Funvas</a> [524⭐] - Create fun <em>time based canvas animations</em> by <a href="https://twitter.com/creativemaybeno">creativecreatorormaybenot</a>.</li>
+</ul>
+<ul>
+<li><a href="https://pub.dev/packages/flutter_animate">Flutter Animate</a> [915⭐] - A performant library that makes it simple to add almost any kind of animated effect by <a href="https://gskinner.com/">gskinner</a></li>
+</('ul', 0)>
+<h3>Testing</h3>
+
+<ul>
+<li><a href="https://github.com/fzyzcjy/flutter<em>convenient</em>test">flutter<em>convenient</em>test</a> [479⭐] - Tests with action history, time travelling, screenshots, rapid re-execution, video recordings, interactive mode by <a href="https://github.com/fzyzcjy">fzyzcjy</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/leancodepl/patrol">Patrol</a> [860⭐] - Easy-to-learn, powerful UI testing framework eliminating limitations of <code>flutter<em>test</code>, <code>integration</em>test</code>, and <code>flutter_driver</code> by <a href="https://leancode.co">LeanCode</a></li>
+</('ul', 0)>
+<h3>Web</h3>
+
+<ul>
+<li><a href="https://github.com/Codelessly/ResponsiveFramework">Responsive Framework</a> [1262⭐] - Automatically adapt UI to different screen sizes. Responsiveness made simple by <a href="https://codelessly.com">Codelessly</a></li>
+</('ul', 0)>
+<h2>Experimental</h2>
+
+<p>This section contains libraries that take an experimental or unorthodox approach.</p>
+
+<ul>
+<li><a href="https://github.com/ReinBentdal/styled<em>widget">styled</em>widget</a> [1260⭐] - Simplifying your widget tree structure by defining widgets using methods by <a href="https://github.com/ReinBentdal">Rein Gundersen Bentdal</a>.</li>
+</('ul', 0)>
+<h2>Engines</h2>
+
+<h3>Rendering</h3>
+
+<ul>
+<li><a href="https://github.com/roipeker/graphx">Graphx</a> [491⭐] - Making drawings and animations extremely simple, inspired by Flash, by <a href="https://github.com/roipeker">Roi Peker</a>.</li>
+</('ul', 0)>
+<h3>Game</h3>
+
+<ul>
+<li><a href="https://github.com/flame-engine/flame">Flame</a> [9154⭐] - Minimalist game engine by <a href="https://github.com/luanpotter">Luan Nico</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/RafaelBarbosatec/bonfire">Bonfire</a> [1217⭐] - Flame engine based game engine for 2D RPG games</li>
+</ul>
+<ul>
+<li><a href="https://github.com/flutterkit/zerker">Zerker</a> [681⭐] - Lightweight and powerful graphic animation library by <a href="https://github.com/drawcall">drawcall</a>.</li>
+</('ul', 0)>
+<h4>Open source games</h4>
+
+<ul>
+<li><a href="https://github.com/RedBrogdon/flutterflip">Flip</a> [265⭐] - Reversi game by <a href="https://github.com/RedBrogdon">Andrew Brogdon</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/boeledi/flutter_crush">Crush</a> [575⭐] - How to build a Math-3 game, like Candy Crush, Bejeweled by <a href="https://didierboelens.com">Didier Boelens</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/boyan01/flutter-tetris">Tetris</a> [1601⭐] - Tetris game by <a href="https://github.com/boyan01">YangBin</a></li>
+</('ul', 0)>
+<h4>Game Engine resources</h4>
+
+<ul>
+<li><a href="https://github.com/flame-engine/awesome-flame">Awesome Flame</a> [1047⭐] - Curated list of the best Flame games, projects, libraries, tools, tutorials, articles and more by <a href="https://github.com/flame-engine">Flame Engine</a></li>
+</('ul', 0)>
+<h2>Open Source Apps</h2>
+
+<h3>Premium</h3>
+
+<ul>
+<li><a href="https://github.com/AppFlowy-IO/appflowy">AppFlowy</a> [55783⭐] - Open Source Notion Alternative. You are in charge of your data and customizations. Built with Flutter and Rust by <a href="https://www.appflowy.io/">AppFlowy team</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/rustdesk/rustdesk">RustDesk</a> [72980⭐] - Open source virtual/remote desktop and TeamViewer alternative. Built with Flutter and Rust by <a href="https://www.rustdesk.com/">RustDesk team</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/KRTirtho/spotube">Spotube</a> - Open source Spotify client for desktop and mobile by <a href="https://github.com/KRTirtho">Kingkor Roy Tirtho</a></li>
+</('ul', 0)>
+<h3>Top</h3>
+
+<ul>
+<li><a href="https://github.com/flutter/samples">Flutter Team Samples</a> [17079⭐] - Collection of examples (including maps, json, Material and Cupertino) by the <a href="https://github.com/orgs/flutter/people">Flutter team</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/alibaba/flutter-common-widgets-app">Flutter Common Widgets</a> [23626⭐] - Collection of official widgets demos & docs in chinese to help developers learn quickly by <a href="https://github.com/alibaba-paimai-frontend">Alibaba Auction Frontend Team</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/iampawan/Flutter-Music-Player">Music Player</a> [1708⭐] - Full featured music player by <a href="https://about.me/imthepk">Pawan Kumar</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/burhanrashid52/WhatTodo">WhatTodo</a> [1175⭐] - Todoist like UI by <a href="https://about.me/burhanrashid52">Burhanuddin Rashid</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/mdanics/fluttergram">FlutterGram</a> [2314⭐] - Complete Instagram based on Firestore & Google Functions by <a href="https://github.com/mdanics">MDanics</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/trentpiercy/trace">Trace</a> [1108⭐] - Modern and powerful crypto portfolio & market explorer by <a href="https://github.com/trentpiercy">Trent Piercy</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/huextrat/Taskist">Taskist</a> [998⭐] - Taskist is a ToDo List app for Task Management by <a href="https://github.com/huextrat">Hugo EXTRAT</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/LinwoodCloud/Butterfly">Linwood Butterfly</a> [972⭐] - Powerful note taking app and an alternative to OneNote by <a href="https://github.com/CodeDoctorDE">CodeDoctorDE</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/matthewtory/trinity-orientation-2018">Trinity Orientation @ Univ Toronto</a> [617⭐] - Orientation week at Trinity College, U of T by <a href="https://github.com/matthewtory">Matthew Tory</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/DrPaulT/flutter-engine-test">Transform Widget</a> - Image widgets as 3D game engine sprites by <a href="https://github.com/DrPaulT">Paul Thomas</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/jogboms/tailor_made">TailorMade</a> [327⭐] - Managing a Fashion designer's daily routine using a mixture of ReBLoC w/ Firebase Cloud Store & Functions by <a href="https://twitter.com/jogboms">Jeremiah Ogbomo</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/jesusrp98/spacex-go">Spacex-Go</a> [869⭐] - Simple yet powerful, open-source SpaceX launch tracker. <a href="https://twitter.com/jesusrp98">jesusrp98</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/AmitJoki/Enigma">Enigma</a> - Privacy chat with end-to-end encryption by <a href="https://github.com/AmitJoki">AmitJoki</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/KarimElghamry/chillify">Chillify</a> - Fancy music app made with Provider and Bloc pattern by <a href="https://github.com/KarimElghamry">Karim Elghamry</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/scitbiz/flutter_pokedex">Pokedex</a> - Pokedex app with beautiful UI and smooth animation by <a href="https://github.com/scitbiz">Hung Pham</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/janoodleFTW/timy-messenger">Timy Messenger</a> [2081⭐] - Group messaging app with a focus on organizing events by <a href="https://github.com/miquelbeltran">Miguel Beltran</a> and <a href="https://github.com/fheinfling">Franz Heinfling</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/GitJournal/GitJournal">GitJournal</a> [3454⭐] - Journaling your data in a Git Repo by <a href="https://github.com/vHanda">Vishesh Handa</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/authpass/authpass">AuthPass</a> [2251⭐] - Keepass compatible password manager for mobile and desktop by <a href="https://github.com/hpoul">hpoul</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/TheAlphamerc/flutter<em>twitter</em>clone">Fwitter</a> [3858⭐] - Full Twitter clone using Firebase solution by <a href="https://github.com/TheAlphamerc">Sonu Sharma</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/robertodoering/harpy">Harpy</a> [2064⭐] - Feature rich Twitter client by <a href="https://github.com/robertodoering">Roberto Doering</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/ruskakimov/mooltik">Mooltik</a> [203⭐] - Animation app for making cartoons by <a href="https://github.com/ruskakimov">Rustem Kakimov</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/KRTirtho/spotube">Spotube</a> [28916⭐] - A lightweight free Spotify crossplatform-client with no Spotify premium account requirement by <a href="https://github.com/KRTirtho">KRTirtho</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/JideGuru/flutter<em>drawing</em>board">Let's Draw</a> [278⭐] - A simple drawing app made by <a href="https://github.com/JideGuru">JideGuru</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/mateusz-bak/openreads-android">Openreads</a> [872⭐] - A simple privacy oriented mobile books tracker using Open Library API by <a href="https://github.com/mateusz-bak">mateusz-bak</a></li>
+</('ul', 0)>
+<h2>Utilities</h2>
+
+<ul>
+<li><a href="https://github.com/franzsilva/flutter<em>launcher</em>icons">Launcher Icons</a> - Generate your launcher icons easily by <a href="https://github.com/MarkOSullivan94">Mark O'Sullivan</a> and <a href="https://github.com/franzsilva">Franz Silva</a></li>
+</ul>
+<ul>
+<li><a href="http://fluttericon.com/">FlutterIcon</a> [420⭐] - Icon set generator by <a href="https://github.com/ilikerobots">Mike Hoolehan</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/leoafarias/fvm">FVM</a> [4565⭐] - Flutter Version Management: A simple cli to manage Flutter SDK versions.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/TatsuUkraine/dart<em>environment</em>config">Environment Configuration</a> [92⭐] - CLI tool to generate <code>.env</code> configurations for application environments by <a href="https://github.com/TatsuUkraine">TatsuUkraine</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/AngeloAvv/flutter_flavorizr">Flutter Flavorizr</a> [453⭐] - CLI utility to easily generate flavors for Android and iOS in less than 3 minutes by <a href="https://github.com/AngeloAvv">Angelo Cassano</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/westracer/fontify">Fontify</a> [103⭐] - CLI tool to convert SVG icons to OTF font and generate Flutter-compatible class by <a href="https://github.com/westracer">Igor Kharakhordin</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/FlutterGen/flutter_gen">FlutterGen</a> [1460⭐] - Assets code generator for your images, fonts, colors, etc — Get rid of String-based APIs.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/VeryGoodOpenSource/very<em>good</em>cli">Very Good Cli</a> [2150⭐] - Very Good Command Line Interface for Dart created by  <a href="https://github.com/VeryGoodOpenSource">Very Good Ventures</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/leoafarias/sidekick">Flutter Sidekick</a>  [1529⭐] - Simple app to make Flutter development more delightful by <a href="https://github.com/leoafarias">Leo Farias</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/dart-code-checker/dart-code-metrics">Dart Code Metrics</a> [859⭐] - Additional linter which reports code metrics, checks for anti-patterns and provides additional rules for the Dart analyzer by <a href="https://github.com/dart-code-checker">Dart Code Checker team</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/invertase/melos">Melos</a> [1116⭐] - Manage projects with multiple packages, automated versioning, changelogs & publishing via Conventional Commits by <a href="https://github.com/invertase">Invertase</a></li>
+</('ul', 0)>
+<h3>VSCode</h3>
+
+<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=Nash.awesome-flutter-snippets">Awesome Snippets</a> - Collection of commonly used classes and methods by <a href="https://twitter.com/Nash0x7E2">Nash</a></li>
+</ul>
+<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=gornivv.vscode-flutter-files">Flutter Files</a> - Quick generation for BLoC templates files by context menu by <a href="https://github.com/gorniv">Gorniv</a>.</li>
+</ul>
+<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=localizely.flutter-intl">Flutter Intl</a> - i18n binding from arb files by <a href="https://twitter.com/localizely">Localizely</a></li>
+</('ul', 0)>
+<h3>IntelliJ / Android Studio</h3>
+
+<ul>
+<li><a href="https://github.com/marius-h/flutter<em>enhancement</em>suite">Enhancement_Suite</a> [286⭐] - Search for pub.dev libraries, update version, Bloc, Snippet, etc you're covered by <a href="https://github.com/marius-h">Marius Höfler</a></li>
+</ul>
+<ul>
+<li><a href="https://plugins.jetbrains.com/plugin/13666-flutter-intl">Flutter Intl</a> - 18n binding from arb files by <a href="https://twitter.com/localizely">Localizely</a></li>
+</('ul', 0)>
+<h3>Desktop</h3>
+
+<ul>
+<li><a href="https://github.com/google/flutter-desktop-embedding">Desktop Embedding</a> [7102⭐] - Desktop implementations of the Flutter embedding API by Google</li>
+</ul>
+<ul>
+<li><a href="https://github.com/go-flutter-desktop/go-flutter">Golang Desktop Embedder</a> [5856⭐] - Golang embedder for desktop by <a href="https://github.com/pchampio">Pierre Champion</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/nativeshell/nativeshell">Native Shell</a> [628⭐] - Experimental embedder for Flutter by <a href="https://twitter.com/matejknopp">Matej Knopp</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/gliheng/flutter-rs">Rust Desktop Embedder</a> [2101⭐] - Rust embedder for desktop by <a href="https://github.com/gliheng">juju</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/bitsdojo/bitsdojo<em>window">bitsdojo</em>window</a> <!--bitsdojo/bitsdojo_window--> - Customize windows owner-drawn chrome by <a href="https://github.com/bitsdojo">BitsDojo</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/ardera/flutter-pi">Raspberry Pi Embedder</a> [1587⭐] - Light-weight Embedder for Raspberry Pi by <a href="https://github.com/ardera">Hannes Winkler</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/bdlukaa/fluent_ui">Fluent UI</a> [2890⭐] - Microsoft's Fluent Design System in Flutter by <a href="https://twitter.com/bdlukaadev">Bruno D'Luka</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/GroovinChip/macos_ui">MacOS UI</a> [1820⭐] - Widgets and themes implementing the current macOS design language by <a href="https://twitter.com/GroovinChip">Groovin Chip</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/ubuntu/yaru.dart">Ubuntu Yaru</a> [195⭐] - Distinct look and feel of the Ubuntu Desktop by <a href="https://github.com/ubuntu">Ubuntu</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/leanflutter/awesome-flutter-desktop">Awesome Flutter Desktop</a> [1537⭐] - A curated list of awesome things related to Flutter desktop by <a href="https://github.com/leanflutter">LeanFlutter</a></li>
+</('ul', 0)>
+<h2>Podcasts</h2>
+
+<h3>English</h3>
+
+<ul>
+<li><a href="https://open.spotify.com/show/2qJVeu47e2eAum4j7lxXXv?si=d26QVJQsSRyRHeybfL_01Q">It's all widgets! Flutter podcast</a> - by <a href="https://twitter.com/hillelcoren">Hillel Coren</a>.</li>
+</('ul', 0)>
+<h3>Portuguese</h3>
+
+<ul>
+<li><a href="https://open.spotify.com/show/4AlxqGkkrqe0mfIx3Mi7Xt?si=1eC0a22MR1OkEAT7HErT-A">Universo Flutter</a> - by <a href="http://deandreamatias.com/">Matias de Andrea</a>.</li>
+</('ul', 0)>
+<h3>Spanish</h3>
+
+<ul>
+<li><a href="https://open.spotify.com/show/3QUTYR6jspNxHK8akJFxYf?si=MZtgjIMyTi6-WgN9Go6vZQ">Código Flutter</a> - by <a href="https://guillermogarcia.es/">Guillermo García</a>.</li>
+</('ul', 0)>
+<h3>Russian</h3>
+
+<ul>
+<li><a href="https://open.spotify.com/show/5qc1VFD4pkJlUYZBVTOFCI?si=OWn7VCELRO2QV03Gi2u8nA&nd=1">Flutter Dev Podcast</a> - by <a href="https://twitter.com/saturovv">Eugene Saturov</a>.</li>
+</('ul', 0)>
+<h2>Bonus</h2>
+
+<ul>
+<li><a href="https://itsallwidgets.com">It's All Widgets!</a> - Open list of published apps by <a href="https://twitter.com/hillelcoren">Hillel Coren</a>, <a href="https://twitter.com/ThomasBurkhartB">Thomas Burkhart</a>, <a href="https://twitter.com/devangelslondon">Simon Lightfoot</a> and <a href="https://twitter.com/scottstoll2017">Scott Stoll</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/jpnurmi/awesome-flutter-linux">Awesome Flutter Linux</a> - A curated list of awesome Linux-specific Flutter packages and projects by <a href="https://twitter.com/jpnurmi">J-P Nurmi</a></li>
+</('ul', 0)>
+<h3>Fun</h3>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=sIIgtClYq0s">The One</a> [459👍]</li>
+</('ul', 0)>
+<h3>Hardware</h3>
+
+<ul>
+<li><a href="https://github.com/bus710/matrix2">Matrix2</a> - Sense Hat's LED matrix control game by <a href="https://github.com/bus710">bus710</a></li>
+</('ul', 0)>
+<h3>Guide & Interviews</h3>
+
+<ul>
+<li><a href="https://github.com/whatsupcoders/Flutter-Interview-Questions">Interview Questions</a> - List of helpful questions you can use to interview potential candidates by <a href="https://github.com/whatsupcoders/Whatsupcoders-flutter">Whatsupcoders</a></li>
+</ul>
+<ul>
+<li><a href="https://medium.com/flutter-community/intl-flutter-starter-kit-18415e739fb6">The International Flutter Starter Kit</a> - Guide by the experts by <a href="https://twitter.com/BeyzaSunayGler1">Beyza Sunay Guler</a> & <a href="https://twitter.com/__nawalhmw">Nawal Alhamwi</a></li>
+</ul>
+<ul>
+<li><a href="https://roadmap.sh/flutter">Roadmap.sh/flutter</a> - A community curated flutter developer learning roadmap from the 6th most starred GitHub project.</li>
+</('ul', 0)>
+<h2>Community</h2>
+
+<h3>Presentation material</h3>
+
+<ul>
+<li><a href="https://drive.google.com/drive/folders/1GDGdQ0ghrxTNTx6aZLT41eV5sPZvV7bU">Logo</a> - Logo for stickers impressions</li>
+</('ul', 0)>
+<h3>Communication</h3>
+
+<ul>
+<li><a href="https://gitter.im/flutter/flutter">Gitter</a> - Exchange channel</li>
+</ul>
+<ul>
+<li><a href="https://www.reddit.com/r/FlutterDev/">r/FlutterDev</a> - Reddit community by <a href="https://www.reddit.com/user/JaapVermeulen">u/JaapVermeulen</a></li>
+</ul>
+<ul>
+<li><a href="https://discord.gg/N7Yshp4">Discord</a> - Discord server to discuss and get help by <a href="https://twitter.com/AndrewPritykin">Pritykin</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/fluttercommunity">Flutter Community</a> - Central place for community made packages</li>
+</ul>
+<ul>
+<li><a href="https://github.com/OpenFlutter">OpenFlutter</a> - Make it easier 让 Flutter 更简单</li>
+</ul>
+<ul>
+<li><a href="https://hashnode.com/n/flutter">Hashnode</a> - Read and write posts, participate in discussions or ask questions.</li>
+</('ul', 0)>
+<h4>Misc</h4>
+
+<ul>
+<li><a href="https://flutterevents.com">Flutter Events</a> - An open list of Flutter events by <a href="https://twitter.com/hillelcoren">@hillelcoren</a></li>
+</ul>
+<ul>
+<li><a href="https://flutterx.com">FlutterX</a> - Searchable list of resources by <a href="https://twitter.com/hillelcoren">Hillel Coren</a></li>
+</('ul', 0)>
+<h3>🇦🇴 Angola</h3>
+<ul>
+<li>Facebook <a href="https://facebook.com/groups/556888664681938">Group</a></li>
+</ul>
+<ul>
+<li>Facebook <a href="https://facebook.com/Flutter-Angola-2076395262380886/">Page</a></li>
+</ul>
+<ul>
+<li>Twitter <a href="https://twitter.com/AngolaFlutter">Page</a></li>
+</('ul', 0)>
+<h3>🇦🇺 Australia</h3>
+<ul>
+<li>Slack <a href="https://gdg-sydney.slack.com">GDG Sydney</a></li>
+</ul>
+<ul>
+<li>Meetup <a href="https://www.meetup.com/gdgsydney">GDG Sydney</a></li>
+</ul>
+<ul>
+<li>Twitter <a href="https://twitter.com/FlutterSydney">Flutter Sydney</a></li>
+</('ul', 0)>
+<h3>Bangladesh</h3>
+<ul>
+<li><a href="https://www.facebook.com/groups/flutter.bangladesh/">Facebook Group</a></li>
+</('ul', 0)>
+<h3>🇧🇷 Brazil</h3>
+<ul>
+<li>Slack <a href="https://flutterbr.slack.com">Flutter Brasil</a></li>
+</ul>
+<ul>
+<li>Medium <a href="https://medium.com/flutter-comunidade-br">Flutter Comunidade BR</a></li>
+</ul>
+<ul>
+<li>Twitter <a href="https://twitter.com/br_flutter">Flutter Comunidade BR</a></li>
+</ul>
+<ul>
+<li>Meetup <a href="https://www.meetup.com/flutter-sp">São Paulo</a></li>
+</ul>
+<ul>
+<li><a href="https://www.flutterparainiciantes.com.br">Flutter para iniciantes</a></li>
+</('ul', 0)>
+<h3>cm Cameroon</h3>
+
+<ul>
+<li>Twitter <a href="https://twitter.com/fluttercm">Flutter Cameroon</a></li>
+</ul>
+<ul>
+<li>Telegram <a href="https://t.me/fluttercameroon">Flutter & Dart Community CM</a></li>
+</('ul', 0)>
+<h3>🇨🇦 Canada</h3>
+
+<ul>
+<li>Meetup <a href="https://www.meetup.com/FlutterToronto">Toronto</a></li>
+</ul>
+<ul>
+<li>Meetup <a href="https://www.meetup.com/FlutterMontreal">Montreal</a></li>
+</ul>
+<ul>
+<li>Meetup <a href="https://www.meetup.com/FlutterCalgary">Calgary</a></li>
+</('ul', 0)>
+<h3>🇨🇮 Côte d'Ivoire (Ivory Coast)</h3>
+
+<ul>
+<li>Facebook <a href="https://web.facebook.com/flutterci/">Page</a></li>
+</ul>
+<ul>
+<li>Facebook <a href="https://web.facebook.com/groups/1725273507587759/">Group</a></li>
+</('ul', 0)>
+<h3>🇩🇰 Denmark</h3>
+
+<ul>
+<li>Meetup <a href="https://www.meetup.com/Flutter-Developers-Denmark/">Denmark</a></li>
+</('ul', 0)>
+<h3>🇪🇹 Ethiopia</h3>
+
+<ul>
+<li><a href="https://t.me/flutter_forum/">Telegram</a></li>
+</('ul', 0)>
+<h3>🇫🇷 France</h3>
+
+<ul>
+<li>Meetup <a href="https://www.meetup.com/fr-FR/Flutter-Bordeaux">Bordeaux</a> - <a href="https://www.meetup.com/fr-FR/Flutter-Lille">Lille</a> - <a href="https://www.meetup.com/fr-FR/Flutter-Paris">Paris</a> - <a href="https://www.meetup.com/fr-FR/Flutter-Rennes">Rennes</a> - <a href="https://www.meetup.com/fr-FR/flutter-nantes/">Nantes</a></li>
+</ul>
+<ul>
+<li><a href="https://twitter.com/FlutterFrance">Twitter</a></li>
+</ul>
+<ul>
+<li><a href="https://linktr.ee/flutter_france">Slack</a></li>
+</ul>
+<ul>
+<li><a href="https://www.flutter-digest.com/">Newsletter Flutter Digest</a></li>
+</('ul', 0)>
+<h3>🇩🇪 Germany</h3>
+
+<ul>
+<li>Meetup <a href="https://www.meetup.com/flutter-berlin/">Berlin</a> - <a href="https://www.meetup.com/flutter-school/">Düsseldorf</a> - <a href="https://www.meetup.com/Karlsruhe-Flutter-Meetup/">Karlsruhe</a> - <a href="https://www.meetup.com/Flutter-Hamburg/">Hamburg</a> - <a href="https://www.meetup.com/Flutter-Stuttgart/">Stuttgart</a> - <a href="https://www.meetup.com/Flutter-Munich">Munich</a></li>
+</ul>
+<ul>
+<li>Twitter <a href="https://twitter.com/flutterBerlin">Flutter Berlin</a> - <a href="https://twitter.com/flutter_school">Düsseldorf</a> - <a href="https://twitter.com/FlutterMunich">Munich</a></li>
+</ul>
+<ul>
+<li>Slack <a href="https://flutterberlin.slack.com/join/shared_invite/enQtMzQ1NDI0NjU4Mjc5LWVjOTg0NmUxZmU4YzZjZjFkMWNjYWYyYTI5NjMyZWE5MDZjNDM0YzgyNWQyM2EzM2E0NDE4ZmQyMzQyMzRlNjI">Flutter Berlin</a></li>
+</ul>
+<ul>
+<li>LinkedIn <a href="https://www.linkedin.com/company/Flutter-Munich">Munich</a></li>
+</('ul', 0)>
+<h3>🇬🇷 Greece</h3>
+
+<ul>
+<li>Meetup <a href="https://www.meetup.com/Athens-Flutter-Group/">Athens</a></li>
+</ul>
+<ul>
+<li>Slack <a href="https://join.slack.com/t/fluttergr/shared_invite/enQtNzQwODM2NzIxOTg0LWFjNWYxYzkyMTdmYWQ4ZWYyMWI2YjcyOTI4YzAzYjY2Nzk3OWNkMTkwZGRjNjRiMGFlNzgyOGRhMmEyZTQ3MmM">Flutter GR</a></li>
+</('ul', 0)>
+<h3>🇮🇹 Italy</h3>
+<ul>
+<li>Telegram <a href="https://t.me/flutteritdevs">Flutter Italia Developers</a></li>
+</ul>
+<ul>
+<li>Website <a href="https://flutteritalia.dev">flutteritalia.dev</a></li>
+</('ul', 0)>
+<h3>🇮🇳 India</h3>
+<ul>
+<li>Telegram <a href="https://t.me/flutterindia">Flutter India 🇮🇳</a></li>
+</('ul', 0)>
+<h3>🇮🇱 Israel</h3>
+<ul>
+<li>Facebook <a href="https://www.facebook.com/groups/2779846762051712">Flutter Israel Developers</a></li>
+</('ul', 0)>
+<h3>🇮🇩 Indonesia</h3>
+<ul>
+<li>Telegram <a href="https://t.me/flutter_id">Flutter Indonesia</a></li>
+</('ul', 0)>
+<h3>🇮🇷 Iran</h3>
+<ul>
+<li>Telegram <a href="https://t.me/persian_flutter">Persian Flutter</a></li>
+</('ul', 0)>
+<h3>🇯🇵 Japan</h3>
+
+<ul>
+<li>Meetup <a href="https://www.meetup.com/Tokyo-Flutter/">Tokyo Flutter Developers</a></li>
+</('ul', 0)>
+<h3>🇰🇪 Kenya</h3>
+<ul>
+<li>Meetup <a href="https://www.meetup.com/KenyaFlutterDev/">Flutter Developers Kenya</a></li>
+</ul>
+<ul>
+<li>Twitter <a href="https://twitter.com/KenyaFlutterDev/">Flutter Developers Kenya</a></li>
+</('ul', 0)>
+<h3>🇰🇷 Korea</h3>
+
+<ul>
+<li>Meetup <a href="https://www.meetup.com/ko-KR/Flutter-Korea/">Flutter Korea</a></li>
+</ul>
+<ul>
+<li>Facebook <a href="https://www.facebook.com/groups/flutterkorea/">Flutter Korea User Group</a></li>
+</ul>
+<ul>
+<li>Slack <a href="http://slack.gdg.kr/">GDG Korea #flutter channel</a></li>
+</('ul', 0)>
+<h3>🇲🇾 Malaysia</h3>
+
+<ul>
+<li>Telegram <a href="https://t.me/flutterdevmalaysia">Flutter/Dart Dev Malaysia</a></li>
+</('ul', 0)>
+<h3>🇳🇬 Nigeria</h3>
+
+<ul>
+<li>Slack <a href="https://devcenter-square-slack.herokuapp.com">DevCenter Square</a></li>
+</ul>
+<ul>
+<li>Telegram <a href="https://t.me/joinchat/PAH0fVA0l7F_zMM537lo9w">FlutterLagos</a></li>
+</ul>
+<ul>
+<li>Twitter <a href="https://twitter.com/FlutterLagos">FlutterLagos</a></li>
+</('ul', 0)>
+<h3>🇵🇰 Pakistan</h3>
+
+<ul>
+<li><a href="https://www.facebook.com/groups/FlutterPK/">Facebook Group</a></li>
+</('ul', 0)>
+<h3>🇵🇭 Philippines</h3>
+<ul>
+<li><a href="https://flutter.ph/">Website</a></li>
+</ul>
+<ul>
+<li><a href="https://www.meetup.com/flutterph/">Meetup</a></li>
+</ul>
+<ul>
+<li><a href="https://twitter.com/flutter_ph">Twitter</a></li>
+</ul>
+<ul>
+<li><a href="https://web.facebook.com/flutterphilippines/">Facebook Page</a></li>
+</ul>
+<ul>
+<li><a href="https://web.facebook.com/groups/flutterphilippines/">Facebook Group</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/flutterph">Github</a></li>
+</('ul', 0)>
+<h3>🇵🇱 Poland</h3>
+<ul>
+<li><a href="https://www.facebook.com/groups/2228619364094561/about/">Flutter Developers Poland Facebook Group</a></li>
+</ul>
+<ul>
+<li><a href="http://bit.ly/flutter-pl-slack">Flutter Poland Slack workspace</a></li>
+</ul>
+<ul>
+<li><a href="https://www.meetup.com/Flutter-Warsaw/">Flutter Warsaw Meetup</a></li>
+</ul>
+<ul>
+<li><a href="https://twitter.com/flutterwarsaw">Flutter Warsaw Twitter</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/channel/UCO7yMprO8cFwV4QnuhTMVlQ">Flutter Warsaw YouTube Channel</a></li>
+</ul>
+<ul>
+<li><a href="https://www.meetup.com/poznan-flutter-developers/">Poznan Flutter Developer Group</a></li>
+</ul>
+<ul>
+<li><a href="https://www.meetup.com/Flutter-Wroc%C5%82aw/">Flutter Wrocław Meetup</a></li>
+</ul>
+<ul>
+<li>Meetup <a href="https://www.meetup.com/pl-PL/Flutter-Tricity/">Tricity</a></li>
+</ul>
+<ul>
+<li>Twitter <a href="https://twitter.com/FlutterTricity/">Tricity</a></li>
+</('ul', 0)>
+<h3>🇵🇹 Portugal</h3>
+<ul>
+<li><a href="https://www.meetup.com/flutterportugal">Meetup</a></li>
+</('ul', 0)>
+<h3>🇵🇪 Peru</h3>
+
+<ul>
+<li>Facebook <a href="https://www.facebook.com/groups/flutterperu/">Flutter Peru Group</a></li>
+</ul>
+<ul>
+<li>Meetup <a href="https://meetup.com/Flutter-Peru/">Flutter Peru</a></li>
+</ul>
+<ul>
+<li>Twitter <a href="https://twitter.com/FlutterPeru">Flutter Peru</a></li>
+</('ul', 0)>
+<h3>🇷🇺 Russia</h3>
+
+<ul>
+<li><a href="https://t.me/rudart">Telegram</a></li>
+</ul>
+<ul>
+<li><a href="https://t.me/ohmyflutter">Telegram - Oh, my Flutter</a></li>
+</ul>
+<ul>
+<li>Meetup <a href="https://www.meetup.com/flutter-voronezh/">Flutter Voronezh</a></li>
+</('ul', 0)>
+<h3>🇪🇸 Spain</h3>
+
+<ul>
+<li><a href="https://flutter.madrid">Madrid Community</a></li>
+</ul>
+<ul>
+<li><a href="https://www.meetup.com/es-ES/Flutter-Madrid">Madrid Meetup</a></li>
+</ul>
+<ul>
+<li><a href="https://twitter.com/FlutterMadrid">Madrid Twitter</a></li>
+</('ul', 0)>
+<h3>🇱🇰 Sri Lanka</h3>
+
+<ul>
+<li><a href="https://gitter.im/Colombo-Flutter-Community">Gitter</a></li>
+</ul>
+<ul>
+<li><a href="https://fluttercmb.slack.com/">Slack</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/Colombo-Flutter-Meetup">Community GitHub Page</a></li>
+</ul>
+<ul>
+<li><a href="https://www.facebook.com/flutterCMB/">Facebook Page</a></li>
+</('ul', 0)>
+<h3>🇹🇷 Turkey</h3>
+
+<ul>
+<li><a href="https://twitter.com/flutter_turkiye">Twitter</a></li>
+</ul>
+<ul>
+<li><a href="https://medium.com/flutter-türkiye/">Medium</a></li>
+</ul>
+<ul>
+<li><a href="https://t.me/FlutterTurk">Telegram Channel</a></li>
+</ul>
+<ul>
+<li><a href="https://t.me/FlutterTR">Telegram Group</a></li>
+</ul>
+<ul>
+<li><a href="https://bit.ly/flutterTR">Slack</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/flutterturkey">Github</a></li>
+</('ul', 0)>
+<h3>🇺🇦 Ukraine</h3>
+<ul>
+<li><a href="https://t.me/artflutter">Telegram</a></li>
+</ul>
+<ul>
+<li><a href="https://twitter.com/ArtFlutter">Twitter</a></li>
+</('ul', 0)>
+<h3>🇬🇧 United Kingdom</h3>
+
+<ul>
+<li><a href="https://flutterldn.dev/">Flutter London</a></li>
+</ul>
+<ul>
+<li>Meetup <a href="https://www.meetup.com/FlutterLDN/">London</a></li>
+</ul>
+<ul>
+<li><a href="https://twitter.com/FlutterLDN">Twitter</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/channel/UC_a-vGdkAIRMKT1zzZ4I2ag">YouTube</a></li>
+</('ul', 0)>
+<h3>🇺🇸 United States</h3>
+
+<ul>
+<li>Meetup <a href="https://www.meetup.com/Flutter-Chicago/">Chicago</a></li>
+</ul>
+<ul>
+<li>Meetup [Washington DC] (https://www.meetup.com/DCFlutter/)</li>
+</ul>
+<ul>
+<li>Meetup <a href="https://www.meetup.com/flutter-nyc/">NYC</a></li>
+</('ul', 0)>
+<h3>🏴 Kurdistan</h3>
+
+<ul>
+<li>Meetup <a href="https://www.meetup.com/Flutter-Kurdistan/">Kurdistan</a></li>
+</('ul', 0)>
+<h3>🇳🇴 Norway</h3>
+<ul>
+<li><a href="https://www.meetup.com/Oslo-Flutter-Dart-Meetup/">Meetup Oslo</a></li>
+</ul>
+<ul>
+<li><a href="https://www.meetup.com/Flutter-Stavanger/">Meetup Stavanger</a></li>
+</ul>
+<ul>
+<li><a href="https://twitter.com/flutterNorway">Twitter</a></li>
+</('ul', 0)>
+<h3>🇺🇿 Uzbekistan</h3>
+<ul>
+<li><a href="https://t.me/dartdevuz">Telegram</a></li>
+</('ul', 0)>
+<h2>License</h2>
+
+<p><a href="http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg"><img src="https://creativecommons.org/publicdomain/zero/1.0/" alt="CC0</a>"></p>
+
+<p>To the extent possible under law, <a href="https://www.linkedin.com/in/robert-felker/">Robert Felker</a> has waived all copyright and related or neighboring rights to this work.</p>
+
+</body>
+</html>

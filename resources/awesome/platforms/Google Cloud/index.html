@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Cloud</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Google Cloud</h1>
+
+<p><strong>Repository:</strong> https://github.com/GoogleCloudPlatform/awesome-google-cloud#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<!--lint ignore no-dead-urls awesome-license-->
+<h1>Awesome Google Cloud <a href="https://awesome.re/badge.svg"><img src="https://awesome.re" alt="Awesome</a>"></h1>
+<!--lint ignore double-link-->
+<p><a href="https://cloud.google.com"><img src="https://www.gstatic.com/images/branding/productlogos/google<em>cloud/v8/web-96dp/logo</em>google<em>cloud</em>color<em>1x</em>web_96dp.png" align="right"></a></p>
+
+<!--lint ignore double-link-->
+<p>A curated list of awesome applications, tools, and resources for <a href="https://cloud.google.com">Google Cloud</a>.</p>
+
+<p>Google Cloud is a suite of modular cloud services including computing, data storage, data analytics, and machine learning, alongside a set of management tools.</p>
+
+<p>If you are new to Google Cloud, there is a <a href="https://cloud.google.com/free-trial/">free trial</a> to try it out.</p>
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<h2>Contents</h2>
+
+<ul>
+<li><a href="#general">General</a></li>
+</ul>
+<ul>
+<li><a href="#compute">Compute</a></li>
+<ul>
+<li><a href="#app-engine">App Engine</a></li>
+</ul>
+<ul>
+<li><a href="#cloud-functions">Cloud Functions</a></li>
+</ul>
+<ul>
+<li><a href="#cloud-run">Cloud Run</a></li>
+</ul>
+<ul>
+<li><a href="#kubernetes-engine">Kubernetes Engine</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#cross-product">Cross-product</a></li>
+<ul>
+<li><a href="#python">Python</a></li>
+</ul>
+<ul>
+<li><a href="#security">Security</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#cloud-ai">Cloud AI</a></li>
+<ul>
+<li><a href="#cloud-vision-api">Cloud Vision API</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#storage--databases">Storage & Databases</a></li>
+</ul>
+<ul>
+<li><a href="#monorepo">Monorepo</a></li>
+<ul>
+<li><a href="#bazel-grpc-protocol-buffers">Bazel, gRPC, Protocol Buffers</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#big-data">Big Data</a></li>
+<ul>
+<li><a href="#apache-beam--dataflow">Apache Beam & Dataflow</a></li>
+</ul>
+<ul>
+<li><a href="#bigtable">Bigtable</a></li>
+</ul>
+<ul>
+<li><a href="#bigquery">BigQuery</a></li>
+</ul>
+<ul>
+<li><a href="#pubsub">Pub/Sub</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#interactive-learning-resources">Interactive Learning Resources</a></li>
+</ul>
+<ul>
+<li><a href="#other-awesome-lists">Other Awesome Lists</a></li>
+</ul>
+<ul>
+<li><a href="#about-this-document">About This Document</a></li>
+<ul>
+<li><a href="#license">License</a></li>
+</ul>
+<ul>
+<li><a href="#disclaimer">Disclaimer</a></li>
+</ul>
+<ul>
+<li><a href="#contributing">Contributing</a></li>
+</ul>
+</ul>
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+<h2>General</h2>
+
+<ul>
+<li><a href="https://github.com/gregsramblings/google-cloud-4-words">"The Google Cloud Developer Cheat Sheet" by Greg Wilson</a> - A list of every product in the Google Cloud family described in 4 words or less.</li>
+</ul>
+<ul>
+<li><a href="https://www.linkedin.com/pulse/google-cloud-jumpstart-tutorials-community-david-das-neves/">"Google Cloud - Jumpstart, Tutorials & Community!" by David das Neves</a> - Additional links about GCP including tutorials, solutions and community.</li>
+</('ul', 0)>
+<h2>Compute</h2>
+
+<ul>
+<li><a href="https://cloud.google.com/products/compute/">Google Compute Engine</a> - From app platform to containers to VMs, cloud compute tailored to your needs.</li>
+</('ul', 0)>
+<h3>App Engine</h3>
+
+<ul>
+<li><a href="https://cloud.google.com/nodejs/resources/frameworks/parse-server">Running Parse server on Google App Engine</a> - Deploy and run Parse server on Google App Engine with a sample Node.js app.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/thesandlord/SlackEngine">SlackEngine</a> - Slack inviter running on Google App Engine.</li>
+</('ul', 0)>
+<h3>Cloud Functions</h3>
+
+<ul>
+<li><a href="https://github.com/GoogleCloudPlatform/functions-framework">Functions Framework</a> - An open source set of libraries for writing portable Google Cloud functions.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/anovis/goblet">Goblet</a> - An open source library for serverless Python application development using Google Cloud functions.</li>
+</('ul', 0)>
+<h3>Cloud Run</h3>
+
+<ul>
+<li><a href="https://github.com/steren/awesome-cloudrun">Awesome Cloud Run</a> - Extensive list of awesome Cloud Run applications.</li>
+</('ul', 0)>
+<h3>Kubernetes Engine</h3>
+
+<ul>
+<li><a href="https://github.com/google/gke-policy-automation">GKE Policy Automation</a> - Tool and policy library for validating GKE clusters against configuration best practices.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/grpc-ecosystem/grpc-simon-says">Real-time Simon Says</a> - If you have played the 70s handheld game "Simon" as a child, you know exactly what this is. There are example clients for the Web, IoT (arduino), Android, and command line. Built with <a href="https://grpc.io">gRPC</a> for bidirectional streaming and <a href="https://kubernetes.io">Kubernetes</a> for scalability.</li>
+</ul>
+<!--lint ignore double-link-->
+<ul>
+<li><a href="https://github.com/GoogleCloudPlatform/click-to-deploy/tree/master/k8s">Click to Deploy Charts Repo</a> - Source for Google Click to Deploy solutions listed on <a href="https://cloud.google.com/marketplace">Google Cloud Marketplace</a>. Provide several examples with detailed READMEs on how-to install in a <a href="https://cloud.google.com/kubernetes-engine">Google Kubernetes Engine</a> cluster.</li>
+</ul>
+<!--lint ignore double-link-->
+<ul>
+<li><a href="https://github.com/GoogleCloudPlatform/bank-of-anthos/">Bank of Anthos</a> - Sample HTTP-based web application that simulates a bank's payment processing network. It runs on <a href="https://cloud.google.com/kubernetes-engine">Google Kubernetes Engine (GKE)</a> and showcases many other Google Cloud products such as <a href="https://cloud.google.com/anthos/service-mesh">Anthos Service Mesh (ASM)</a>, <a href="https://cloud.google.com/anthos/config-management">Anthos Config Management (ACM)</a>, <a href="https://cloud.google.com/products/operations">Cloud Operations</a>, <a href="https://cloud.google.com/sql/docs">Cloud SQL</a>, <a href="https://cloud.google.com/build">Cloud Build</a>, and <a href="https://cloud.google.com/deploy">Cloud Deploy</a>.</li>
+</ul>
+<!--lint ignore double-link-->
+<ul>
+<li><a href="https://github.com/GoogleCloudPlatform/microservices-demo/">Online Boutique</a> - Sample gRPC-based web application that simulates an ecommerce store. It runs on <a href="https://cloud.google.com/kubernetes-engine">Google Kubernetes Engine (GKE)</a>, is built of 11 microservices in 5 different languages, and showcases many other Google Cloud products.</li>
+</('ul', 0)>
+<h2>Cross-product</h2>
+
+<h3>Python</h3>
+
+<ul>
+<li><a href="https://github.com/GoogleCloudPlatform/flask-talisman">Talisman</a> - Provides easy security headers (HTTPS, HSTS, and CSP) for <a href="http://flask.pocoo.org/">Flask</a> applications.</li>
+</('ul', 0)>
+<h3>Security</h3>
+
+<ul>
+<li><a href="https://forsetisecurity.org/">Forseti</a> - Scan your GCP resources to ensure that access controls are set as you intended and protected against unsafe changes.</li>
+</('ul', 0)>
+<h2>Cloud AI</h2>
+
+<ul>
+<li><a href="https://cloud.google.com/products/ai/">Google Cloud AI</a> - Fast, large scale, and easy-to-use AI products and services.</li>
+</('ul', 0)>
+<h3>Cloud Vision API</h3>
+
+<ul>
+<li><a href="https://github.com/jshin49/fb-vision-bot">Bot for Facebook Messenger</a> - This bot uses the Google Cloud Vision API to detect faces, labels, landmarks, logos, text, explicit content, and attributes in images that are sent to it.</li>
+</('ul', 0)>
+<h2>Storage & Databases</h2>
+
+<ul>
+<li><a href="https://cloud.google.com/products/storage/">Google Cloud Storage</a> - Storage for all your data needs.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/GoogleCloudPlatform/js-data-cloud-datastore">Cloud Datastore adapter for the JSData ORM</a> - <code>js-data-cloud-datastore</code> is an adapter for <a href="http://www.js-data.io">JSData</a>, an ORM for Node.js and the browser.</li>
+</('ul', 0)>
+<h2>Monorepo</h2>
+
+<h3>Bazel, gRPC, Protocol Buffers</h3>
+
+<ul>
+<li><a href="https://github.com/google/startup-os">StartupOS</a> - A monorepo with examples for using Google's Open Source tools and deploying to the cloud.</li>
+</('ul', 0)>
+<h2>Big Data</h2>
+
+<ul>
+<li><a href="https://cloud.google.com/products/big-data/">Google Cloud Big Data</a> - Efficiently capture, process, and analyze data with Google Cloud data analytics products.</li>
+</('ul', 0)>
+<h3>Apache Beam & Dataflow</h3>
+
+<ul>
+<li><a href="https://github.com/GoogleCloudPlatform/DataflowTemplates">Dataflow Templates</a> - Google-provided Cloud Dataflow template pipelines for solving simple in-Cloud data tasks.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/spotify/scio">Scio</a> - A Scala API for Google Cloud Dataflow and Apache Beam.</li>
+</('ul', 0)>
+<h3>Bigtable</h3>
+
+<ul>
+<li><a href="https://github.com/spotify/heroic">Heroic</a> - Time series database, works with Google Cloud Bigtable as its storage backend.</li>
+</ul>
+<ul>
+<li><a href="http://opentsdb.net/">OpenTSDB</a> - Time series database, works with Google Cloud Bigtable as its storage backend; <a href="https://cloud.google.com/solutions/opentsdb-cloud-platform">deploy it on GKE</a>.</li>
+</ul>
+<ul>
+<li><a href="http://janusgraph.org/">JanusGraph</a> - Distributed graph database, works with Google Cloud Bigtable as its storage backend; <a href="https://cloud.google.com/solutions/running-janusgraph-with-bigtable">deploy it on GKE</a>.</li>
+</ul>
+<ul>
+<li><a href="https://www.tensorflow.org/">TensorFlow</a> - Machine learning framework, integrates well with Google Cloud Bigtable as both a source and sink for high-performance ML model training; use it with CPU, GPU, and TPU. <a href="https://cloud.google.com/tpu/docs/tutorials/bigtable-resnet">Train ResNet-50 model with TensorFlow + Cloud Bigtable</a>.</li>
+</('ul', 0)>
+<h3>BigQuery</h3>
+
+<ul>
+<li><a href="http://zeppelin.apache.org/">Apache Zeppelin</a> - Web-based notebook for interactive analytics, works with Google BigQuery.</li>
+</ul>
+<ul>
+<li><a href="https://dekart.xyz/">Dekart</a> - Geospatial analysis tool for Google BigQuery based on Kepler.gl.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/evidence-dev/sqltools-bigquery-driver">SQLtools for BigQuery</a> - VSCode Extension to run queries and explore databases.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/GoogleCloudPlatform/bigquery-utils">BigQuery Utils</a> - Useful scripts, udfs, views, and other utilities for migration and data warehouse operations in BigQuery.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/spotify/spark-bigquery">Spark-BigQuery</a> - Support for Google BigQuery in Apache Spark, SQL and DataFrames.</li>
+</('ul', 0)>
+<h3>Pub/Sub</h3>
+
+<ul>
+<li><a href="https://github.com/GoogleCloudPlatform/psq">PSQ</a> - Distributed task queue for Python inspired by <a href="http://python-rq.org/">rq</a> using Google Cloud Pub/Sub.</li>
+</('ul', 0)>
+<h2>Interactive Learning Resources</h2>
+
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/tutorials">Google Cloud Training Docs</a> - Google's cloud own practical guide.</li>
+</ul>
+<ul>
+<li><a href="https://cloud.google.com/community/tutorials/">Google Cloud Community Documentation</a> - Learn how to use Google Cloud services by following these step-by-step walkthroughs and tutorials submitted from the Google Cloud community.</li>
+</ul>
+<ul>
+<li><a href="https://google.qwiklabs.com">Qwiklabs</a> - Hands-on Lab for learning Cloud Computing and get Badges.</li>
+</ul>
+<ul>
+<li><a href="https://codelabs.developers.google.com/cloud">Google Cloud Codelabs</a> - GCP Codelabs covers topics such as Google Cloud Basics, Compute, Data, Mobile, Monitoring, Machine Learning and Networking.</li>
+</ul>
+<ul>
+<li><a href="https://labs.play-with-k8s.com">Play with Kubernetes</a> - A simple, interactive and fun playground to learn Kubernetes.</li>
+</ul>
+<ul>
+<li><a href="https://www.coursera.org/googlecloud">Google Cloud Coursera Courses</a> - A list of available Google Cloud Courses on Coursera.</li>
+</('ul', 0)>
+<h2>Other Awesome Lists</h2>
+<!--lint ignore double-link-->
+<ul>
+<li><a href="https://github.com/sindresorhus/awesome">Awesome</a> - The awesome for awesomes.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jthegedus/awesome-firebase">Awesome Firebase</a> - App development platform built on Google Cloud.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/avelino/awesome-go">Awesome Go</a> - A statically typed, compiled high-level programming language designed at Google.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ramitsurana/awesome-kubernetes">Awesome Kubernetes</a> - An open-source container orchestration system for automating software deployment, scaling, and management.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jtoy/awesome-tensorflow">Awesome TensorFlow</a> - A free and open-source software library for machine learning and artificial intelligence.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ddneves/awesome-gcp-certifications">Awesome GCP Certifications</a> - Demonstrate your knowledge and skills with an industry-recognized Google Cloud certification.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Timtech4u/awesome-cloudbuild">Awesome Cloud Build</a> - Serverless CI/CD platform from Google Cloud.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/zrosenbauer/awesome-bigtable">Awesome Bigtable</a> - Low-latency NoSQL database service for machine learning, operational analytics, and user-facing applications at scale.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/rakyll/awesome-spanner">Awesome Spanner</a> - A highly scalable database that combines unlimited scalability with relational semantics.</li>
+</('ul', 0)>
+<h2>About This Document</h2>
+
+<h3>License</h3>
+<!--lint ignore double-link-->
+<p><a href="https://i.creativecommons.org/l/by/4.0/88x31.png"><img src="https://creativecommons.org/licenses/by/4.0/" alt="Creative Commons License</a>"></p>
+<!--lint ignore double-link-->
+<p>This work is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+
+<h3>Disclaimer</h3>
+
+<p>This list is not an official Google product. Links on this list also are not necessarily to official Google products.</p>
+
+<h3>Contributing</h3>
+
+<p>If you have found or built something awesome that uses Google Cloud, please follow the instructions in <a href="CONTRIBUTING.md">CONTRIBUTING.md</a> to get it included here.</p>
+
+</body>
+</html>

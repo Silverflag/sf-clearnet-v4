@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT &amp; Hybrid Apps</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>IoT & Hybrid Apps</h1>
+
+<p><strong>Repository:</strong> https://github.com/weblancaster/awesome-IoT-hybrid#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<h1>Awesome IoT & Hybrid <a href="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg"><img src="https://github.com/sindresorhus/awesome" alt="Awesome</a>"></h1>
+
+<blockquote>
+<p>The missing awesome list - collection of awesome IoT and Hybrid Apps frameworks, tools, resources, videos and shiny things.</p>
+</blockquote>
+
+<ul>
+<li><a href="#iot">IoT</a></li>
+<ul>
+<li><a href="#os">OS</a></li>
+</ul>
+<ul>
+<li><a href="#frameworks-tools">Frameworks/Tools</a></li>
+</ul>
+<ul>
+<li><a href="#resources-websites-projects">Resources/websites/projects</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#iiot">IIoT</a></li>
+</ul>
+<ul>
+<li><a href="#hybrid-desktop">Hybrid Desktop</a></li>
+</ul>
+<ul>
+<li><a href="#hybrid-mobile">Hybrid mobile</a></li>
+<ul>
+<li><a href="#tools-plugins">Tools/Plugins</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#miscellaneous">Miscellaneous</a></li>
+</('ul', 0)>
+<h2>IoT</h2>
+<ul>
+<li><a href="https://tessel.io/">Tessel</a></li>
+</ul>
+<ul>
+<li><a href="http://www.arduino.cc/">Arduino</a></li>
+</ul>
+<ul>
+<li><a href="http://beagleboard.org/bone">BeagleBoard</a></li>
+</ul>
+<ul>
+<li><a href="http://www.developers.meethue.com/">Hue</a></li>
+</ul>
+<ul>
+<li><a href="https://www.raspberrypi.org/">Raspberry Pi</a></li>
+</ul>
+<ul>
+<li><a href="https://www.kickstarter.com/projects/onion/onion-omega-invention-platform-for-the-internet-of/video_share">Onion Omega</a></li>
+</ul>
+<ul>
+<li><a href="https://www.particle.io/">Particle</a></li>
+</('ul', 0)>
+<h4>OS</h4>
+<ul>
+<li><a href="http://www.riot-os.org/">Riot OS</a></li>
+</ul>
+<ul>
+<li><a href="https://node-os.com/">Node OS</a></li>
+</ul>
+<ul>
+<li><a href="http://www.contiki-os.org/">Contiki OS</a></li>
+</ul>
+<ul>
+<li><a href="http://raspbian.org/">Raspbian</a></li>
+</ul>
+<ul>
+<li><a href="https://developers.google.com/brillo/">Project Brillo</a></li>
+</ul>
+<ul>
+<li><a href="https://www.balena.io/os/">BalenaOS</a></li>
+</('ul', 0)>
+<h4>Frameworks-Tools</h4>
+<ul>
+<li><a href="http://cylonjs.com/">CylonJS</a></li>
+</ul>
+<ul>
+<li><a href="http://nodered.org/">Node Red</a></li>
+</ul>
+<ul>
+<li><a href="http://iot.eclipse.org">IoT Eclipse</a></li>
+</ul>
+<ul>
+<li><a href="http://gladysproject.com">Gladys Project</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/lelylan/lelylan">Lelylan</a></li>
+</ul>
+<ul>
+<li><a href="https://www.balena.io/">BalenaCloud</a></li>
+</('ul', 0)>
+<h4>Resources-websites-projects</h4>
+<ul>
+<li><a href="https://hackaday.io/projects">Hackday</a></li>
+</ul>
+<ul>
+<li><a href="http://www.instructables.com/tag/type-id/category-technology/">Instructables - tech</a></li>
+</ul>
+<ul>
+<li><a href="http://www.hackster.io/">Hackster</a></li>
+</ul>
+<ul>
+<li><a href="https://www.mycontroller.org/#/home">My Controller</a></li>
+</ul>
+<ul>
+<li><a href="https://www.kaaproject.org/">Kaa Project</a></li>
+</('ul', 0)>
+<h2>IIoT (Industrial IoT)</h2>
+<ul>
+<li><a href="https://www.opc-router.com/">OPC Router</a> - IIoT Gateway/Workflow-Engine with various plug-ins (Mqtt Bridge, OPC UA Bridge, SQL Bridge, REST Bridge, SAP Bridge)</li>
+</('ul', 0)>
+<h2>Hybrid Desktop</h2>
+
+<ul>
+<li><a href="https://github.com/nwjs/nw.js">nw.js</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/atom/electron">Electron</a></li>
+</ul>
+<ul>
+<li><a href="https://bitbucket.org/chromiumembedded/cef">Chromium Embedded Framework</a></li>
+</ul>
+<ul>
+<li><a href="http://appjs.com/">AppJS</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/MacGapProject">MacGap</a></li>
+</('ul', 0)>
+<h2>Hybrid Mobile</h2>
+
+<ul>
+<li><a href="http://facebook.github.io/react-native/">React-Native</a></li>
+</ul>
+<ul>
+<li><a href="https://www.nativescript.org/">NativeScript</a></li>
+</ul>
+<ul>
+<li><a href="http://phonegap.com/">PhoneGap</a></li>
+</ul>
+<ul>
+<li><a href="http://coronalabs.com/">Corona</a></li>
+</ul>
+<ul>
+<li><a href="http://ionicframework.com/">Ionic</a></li>
+</ul>
+<ul>
+<li><a href="http://www.appcelerator.com/">Appcelerator</a></li>
+</ul>
+<ul>
+<li><a href="https://software.intel.com/en-us/html5/tools">Intel XDK</a></li>
+</ul>
+<ul>
+<li><a href="https://trigger.io/">Trigger.io</a></li>
+</ul>
+<ul>
+<li><a href="https://crosswalk-project.org/">Crosswalk</a></li>
+</ul>
+<ul>
+<li><a href="http://www.telerik.com/platform">Telerik Platform</a></li>
+</ul>
+<ul>
+<li><a href="https://www.meteor.com/">Meteor</a></li>
+</ul>
+<ul>
+<li><a href="https://tabrisjs.com/">Tabris.js</a></li>
+</('ul', 0)>
+<h4>Tools-Plugins</h4>
+
+<ul>
+<li><a href="https://github.com/petermetz/cordova-plugin-ibeacon">Cordova / Phonegap iBeacon plugin</a></li>
+</('ul', 0)>
+<h2>Miscellaneous</h2>
+
+<ul>
+<li><a href="https://www.mozilla.org/en-US/firefox/os/">Firefox OS</a></li>
+</ul>
+<ul>
+<li><a href="https://www.leapmotion.com/">Leap Motion</a></li>
+</('ul', 0)>
+<h2>Contributing</h2>
+
+<ol>
+<li>Fork it!</li>
+</ol>
+<ol>
+<li>Create your branch: <code>git checkout -b my-new-branch</code></li>
+</ol>
+<ol>
+<li>Commit your changes: <code>git commit -am 'fix stuff'</code></li>
+</ol>
+<ol>
+<li>Push to the branch: <code>git push origin my-new-branch</code></li>
+</ol>
+<ol>
+<li>Submit a pull request</li>
+</('ol', 0)>
+<h2>License</h2>
+
+<p>The MIT License (MIT)</p>
+
+<p>Copyright (c) 2014 Michael Lancaster</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy</p>
+<p>of this software and associated documentation files (the "Software"), to deal</p>
+<p>in the Software without restriction, including without limitation the rights</p>
+<p>to use, copy, modify, merge, publish, distribute, sublicense, and/or sell</p>
+<p>copies of the Software, and to permit persons to whom the Software is</p>
+<p>furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in all</p>
+<p>copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</p>
+<p>IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,</p>
+<p>FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE</p>
+<p>AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER</p>
+<p>LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,</p>
+<p>OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE</p>
+<p>SOFTWARE.</p>
+
+</body>
+</html>

@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Low Code</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Low Code</h1>
+
+<p><strong>Repository:</strong> https://github.com/zenitysec/awesome-low-code#readme</p>
+<p><strong>Source File:</strong> readme.md</p>
+
+<hr>
+
+<div align="center">
+	<img width="250" height="175" src="media/repo_logo.png" alt="Awesome Low Code">
+	<br>
+	<br>
+	<hr>
+	<p>
+		<sup>Maintained by:</sup>
+		<br>
+		<br>
+		<a href="https://www.zenity.io">
+			<img src="/media/zenity_logo.svg"/>
+		</a>
+        <p>
+<p>Secure and govern your Low Code No Code applications without disrupting the business</p>
+        </p>
+	</p>
+	<hr>
+</div>
+
+<h1>Awesome Low Code <a href="https://awesome.re/badge.svg"><img src="https://awesome.re" alt="Awesome</a>"></h1>
+
+<blockquote>
+<p>A curated list of Awesome Low Code platforms, vendors, tools and resources.</p>
+</blockquote>
+
+<blockquote>
+<p>Low Code platforms provide a development and runtime environment used to create all kinds of software application through an intuitive experience, with minimal to no coding skills requires.</p>
+</blockquote>
+
+<p>Contributions welcome! Please, read the <a href="contributing.md">contribution guidelines</a> first.</p>
+
+<h2>Contents</h2>
+
+<ul>
+<li><a href="#platforms">Platforms</a></li>
+<ul>
+<li><a href="#citizen-automation-and-development-platform">Citizen Automation and Development Platform</a></li>
+</ul>
+<ul>
+<li><a href="#low-code-application-platform">Low Code Application Platform</a></li>
+</ul>
+<ul>
+<li><a href="#business-process-management">Business Process Management</a></li>
+</ul>
+<ul>
+<li><a href="#robotic-process-automation">Robotic Process Automation</a></li>
+</ul>
+<ul>
+<li><a href="#intelligent-virtual-agent">Intelligent Virtual Agent</a></li>
+</ul>
+<ul>
+<li><a href="#integration-platform-as-a-service">Integration Platform as a Service</a></li>
+</ul>
+<ul>
+<li><a href="#low-code-api-management-platform">Low Code API Management Platform</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#tools-extensions-and-frameworks">Tools, Extensions and Frameworks</a></li>
+</ul>
+<ul>
+<li><a href="#reference-resources">Reference Resources</a></li>
+</ul>
+<ul>
+<li><a href="#learning-resources">Learning Resources</a></li>
+</ul>
+<ul>
+<li><a href="#samples-templates-and-solutions">Samples, Templates and Solutions</a></li>
+</ul>
+<ul>
+<li><a href="#community">Community</a></li>
+</ul>
+<ul>
+<li><a href="#blogs">Blogs</a></li>
+</ul>
+<ul>
+<li><a href="#other-lists">Other Lists</a></li>
+</('ul', 0)>
+<h2>Platforms</h2>
+
+<h3>Citizen Automation and Development Platform</h3>
+
+<p>A development platform for business users (citizen developer is a term for business users, not a role or a job title) that doesn't require coding skills and is based on intuitive drag & drop interfaces. Applications created in such platforms are usually made to automate or improve efficiency of business processes and of personal productivity, without going through IT. CADP are usually consumed as SaaS.</p>
+
+<ul>
+<li><a href="https://flow.microsoft.com/">Power Automate (Microsoft)</a> - An online workflow service that automates actions across the most common apps and services.</li>
+</ul>
+<ul>
+<li><a href="https://zapier.com/">Zapier</a> - Allows its users to easily connect and automate the apps they use.</li>
+</ul>
+<ul>
+<li><a href="https://www.salesforce.com/products/platform/einstein-automate/">Einstein Automate (Salesforce)</a> - Empower your employees to do more of what matters by automating business processes easily without needing specialized development skills.</li>
+</ul>
+<ul>
+<li><a href="https://www.atlassian.com/software/jira/features/automation">Jira Automation (Atlassian)</a> - Automation is a No Code rule builder that enables customers to build if-this-then-that-rules based on events in Jira.</li>
+</ul>
+<ul>
+<li><a href="https://trello.com/power-ups/category/automation">Trello Power-Ups (Atlassian)</a> - Helps teams meet their unique business needs through adaptable features and integrations.</li>
+</ul>
+<ul>
+<li><a href="https://www.zoho.com/flow/">Flow (Zoho)</a> - An integration platform that helps you connect your apps without any code.</li>
+</ul>
+<ul>
+<li><a href="https://formnx.com">FormNX</a> - A no-code platform that helps to create forms without coding for free. It also provides integration options with webhook, Mailchimp, and you can embed forms in your websites or web applications easily without any coding.</li>
+</ul>
+<ul>
+<li><a href="https://learning.postman.com/docs/postman-flows/overview/#get-started-with-flows">Postman Flows</a> -  Postman Flows low-code editor to prototype, build, and deploy API-first apps in a collaborative environment. Create flow modules that automate tasks, integrate systems, and showcase your APIs to others on your team or the entire world with the Postman API Network.</li>
+</('ul', 0)>
+<h3>Low Code Application Platform</h3>
+
+<p>An advanced development platform that enable organizations to create powerful enterprise grade applications with no to minimum extra coding requirements with easy to use drag & drop interfaces. Since such platforms simplify the application development process, more types of personas can contribute and accelerate the development process. Those platforms are PaaS development platforms, and can also reduce development cost and maintenance.</p>
+<ul>
+<li>[Tabidoo (https://tabidoo.cloud/) - Powerful Low Code platform, with mature workflows, rights management and integrations (REST API). Many predefined templates. No charge per user.</li>
+</ul>
+<ul>
+<li><a href="https://powerapps.com/">Power Apps (Microsoft)</a> - Build apps in hours—not months—that easily connect to data, use Excel-like expressions to add logic, and run on the web, iOS, and Android devices.</li>
+</ul>
+<ul>
+<li><a href="https://powerbi.microsoft.com/">Power BI</a> - Unify data from many sources to create interactive, immersive dashboards and reports that provide actionable insights and drive business results.</li>
+</ul>
+<ul>
+<li><a href="https://appian.com/">Appian</a> - Provides a Low Code software development platform that enables organizations to rapidly develop powerful applications.</li>
+</ul>
+<ul>
+<li><a href="https://mendix.com/">Mendix</a> - The fastest and easiest high-productivity platform to create and continuously improve multi-channel applications at scale.</li>
+</ul>
+<ul>
+<li><a href="https://www.outsystems.com/">OutSystems</a> - A Low Code platform that enables businesses to develop, deploy, and manage enterprise-grade apps.</li>
+</ul>
+<ul>
+<li><a href="https://www.servicenow.com/now-platform.html">Now Platform (ServiceNow)</a> - Build mission-critical apps quickly, with more creators and less complexity. Easily scale across the enterprise to deliver experiences users love.</li>
+</ul>
+<ul>
+<li><a href="https://www.zoho.com/creator/low-code-platform/">Creator (Zoho)</a> - Build applications from scratch without having to write endless lines of code.</li>
+</ul>
+<ul>
+<li><a href="https://www.bettyblocks.com/">BettyBlocks</a> - The #1 No Code platform for innovation, agility and empowerment. Used to create mobile, business and web applications at lightning speed.</li>
+</ul>
+<ul>
+<li><a href="https://apex.oracle.com/en/platform/low-code/">APEX (Oracle)</a> - A Low Code development platform that enables you to build scalable, secure enterprise apps, with world-class features, that can be deployed anywhere.</li>
+</ul>
+<ul>
+<li><a href="https://www.salesforce.com/products/platform">Salesforce Platform, prev. Force.com (Salesforce)</a> - Click, create, and ship from anywhere with Low Code.</li>
+</ul>
+<ul>
+<li><a href="https://n8n.io/">n8n</a> - Workflow automation tool with many integrations and with fair-code license.</li>
+</ul>
+<ul>
+<li><a href="https:/linx.software">Linx</a> - General-purpose low-code platform for building and hosting backends like APIs, automations and integrations.</li>
+</ul>
+<ul>
+<li><a href="https://www.dronahq.com/?ref=github-gs">DronaHQ</a> - Drag and drop low code platform to build internal apps for web as well as mobile.</li>
+</ul>
+<ul>
+<li><a href="https://www.illacloud.com/">ILLA Cloud</a> - A low-code platform for developers to build internal tools in minutes.</li>
+</ul>
+<ul>
+<li><a href="https://www.loopple.com">Loopple</a> - A low code drag and drop dashboard builder.</li>
+</ul>
+<ul>
+<li><a href="https://about.appsheet.com/home/">Appsheet (Google)</a> - Google AppSheet is a no-code development platform that enables users to create custom mobile and web applications without requiring extensive programming knowledge. It provides a drag-and-drop interface for building apps, and it can integrate with various data sources and APIs to automate workflows and improve productivity.</li>
+</ul>
+<ul>
+<li><a href="https://yepcode.io">YepCode</a> - All-in-one platform to connect APIs and services in a serverless environment working directly with JavaScript or Python. It allows the development, execution and monitoring of integration and automation processes.</li>
+</ul>
+<ul>
+<li><a href="https://www.dronahq.com/">DronaHQ</a> - DronaHQ - a low code platform helps engineering teams and product managers to build internal tools, custom user journeys, digital experiences, automations, custom admin panels, operational apps 10X faster.</li>
+</ul>
+<ul>
+<li><a href="https://rei3.de/en/home">REI3</a> - REI3 is an open low code application platform. It runs on almost any system, on-premise or in the cloud and is free to use for individuals and organizations.</li>
+</('ul', 0)>
+<h3>Business Process Management</h3>
+
+<p>A Low Code Application Platform dedicated to streamlining business processes. These platforms enable business users to automate complicated business workflows and actions with no coding background by providing an easy to use drag & drop interface. Automations that are built in such platforms are usually built in an event-driven mode (triggers) around critical business processes. BPA can be consumed via a SaaS or an on-premises appliance.</p>
+
+<ul>
+<li><a href="https://www.pega.com/">PegaSystems</a> - Provides business process and customer relationship management solutions for organizations.</li>
+</ul>
+<ul>
+<li><a href="https://agilepoint.com/">AgilePoint</a> - Deploy business-changing ideas in minutes, not months, with the AgilePoint digital process automation platform.</li>
+</ul>
+<ul>
+<li><a href="https://www.quickbase.com/">QuickBase</a> - Helps businesses quickly turn ideas about better ways to work into apps that make them more efficient, informed, and productive.</li>
+</ul>
+<ul>
+<li><a href="https://www.creatio.com/">Creatio</a> - A global software company providing a leading Low Code platform for process management and CRM.</li>
+</ul>
+<ul>
+<li><a href="https://www.auraquantic.com/">AuraQuantic</a> - A digital platform designed for business users to easily and rapidly build unlimited processes and applications.</li>
+</ul>
+<ul>
+<li><a href="https://www.kintone.com/">Kintone</a> - The best productivity software to business transformation Platform.</li>
+</ul>
+<ul>
+<li><a href="https://www.prontoforms.com/">ProntoForms</a> - Provides mobile business solutions to automate field sales, field service, and field data collection.</li>
+</ul>
+<ul>
+<li><a href="https://trackvia.com/">TrackVia</a> - The leading Low Code workflow platform for operations.</li>
+</ul>
+<ul>
+<li><a href="https://newgensoft.com/">NewGen</a> - Simplify your complex, content-driven business needs with one comprehensive Low Code platform.</li>
+</ul>
+<ul>
+<li><a href="https://naologic.com/">Naologic</a> - Productivity apps built by business users and process-driven professionals to simplify and automate complex processes.</li>
+</('ul', 0)>
+<h3>Robotic Process Automation</h3>
+
+<p>An automation platform that helps organizations remove human manual intensive processes and avoid errors, as well as making sure human required attention is efficiently maximized only on critical aspects of work. RPA technology introduced the concept of software robots, built by the end-user humans, to perform repetitive manual intensive processes in an automation fashion, and can understand and processes computer interactions with SaaS and on-premises applications just like a human-being. RPA technologies involve building, deploying, and managing those software robots.</p>
+
+<ul>
+<li><a href="https://powerautomate.microsoft.com/en-us/robotic-process-automation/">Power Automate Desktop (Microsoft)</a> - Automate everything from simple data transfers to complex business workflows—directly from your desktop—using RPA desktop flows in Power Automate Desktop.</li>
+</ul>
+<ul>
+<li><a href="https://www.servicetrace.com/">Servicetrace RPA (Salesforce)</a> - Develop innovation in robotic solutions.</li>
+</ul>
+<ul>
+<li><a href="https://appian.com/platform/complete-automation/robotic-process-automation-rpa.html">Appian RPA</a> - Orchestrate RPA bots with people, systems, and data in a single workflow, scaling automation across your entire organization.</li>
+</ul>
+<ul>
+<li><a href="https://www.workato.com/modern-rpa">Workato RPA</a> - Integration-powered RPA for Intelligent Automation.</li>
+</ul>
+<ul>
+<li><a href="https://www.uipath.com/">UiPath</a> - A leading provider of robotic process automation (RPA) software, which enables organizations to automate repetitive and time-consuming tasks, such as data entry and data processing. Its platform includes a visual designer for building automation workflows, a robot for executing the workflows, and analytics tools for monitoring and optimizing performance.</li>
+</ul>
+<ul>
+<li><a href="https://www.automationanywhere.com/">AutomationAnywhere</a> - A provider of robotic process automation (RPA) software that allows businesses to automate tasks using a combination of rules-based decision-making, machine learning, and artificial intelligence. Its platform includes a user-friendly interface for creating and deploying automation, and it can be used to automate tasks across various departments and industries.</li>
+</ul>
+<ul>
+<li><a href="https://www.blueprism.com/">BluePrism</a> - A provider of robotic process automation (RPA) software that allows organizations to automate repetitive and manual tasks, such as data entry, without requiring extensive coding knowledge. Its platform includes a digital workforce that can handle high-volume and complex tasks, and it can integrate with various systems and applications to streamline business operations.</li>
+</('ul', 0)>
+<h3>Intelligent Virtual Agent</h3>
+
+<p>A software application which is built and configured by its users to perform manual repetitive and error-prone tasks in an automated faster fashion. Bots are built and configured mostly in Low Code platforms via easy to use drag & drop interfaces. Examples to the use of bots could be seen in user conversation via messaging and voice platforms that help them take decisions and act through business processes.</p>
+
+<ul>
+<li><a href="https://powervirtualagents.microsoft.com/">Power Virtual Agents (Microsoft)</a> - Lets you create powerful chatbots that can answer questions posed by your customers, other employees, or visitors to your website or service.</li>
+</ul>
+<ul>
+<li><a href="https://docs.workato.com/workbot/overview.html">Workato Workbot</a> - A bot platform that allows you to build customizable workflows.</li>
+</('ul', 0)>
+<h3>Integration Platform as a Service</h3>
+
+<p>A platform that help organizations control, simplify and standardize the way that applications are integrated (internally developed or 3rd party SaaS). Such platforms help to share data between applications, automate business workflows and remove manual error prone ones, in an advanced controlled manner. iPaaS also enables more types of personas to integrate applications, removing the constant dependency on software developers. iPaaS can be deployed within an organization either as a SaaS or as on-premises appliance.</p>
+
+<ul>
+<li><a href="https://azure.microsoft.com/en-us/services/logic-apps/">Azure Logic Apps (Microsoft)</a> - A cloud-based platform for creating and running automated workflows that integrate your apps, data, services, and systems.</li>
+</ul>
+<ul>
+<li><a href="https://mulesoft.com/">MuleSoft (Salesforce)</a> - Provides an integration and API platform that makes it easy to connect data from any system to create connected experiences.</li>
+</ul>
+<ul>
+<li><a href="https://www.workato.com">Workato</a> - An enterprise automation platform that helps organizations work faster and smarter without compromising governance and security.</li>
+</('ul', 0)>
+<h3>Low Code API Management Platform</h3>
+
+<p>A Low Code platform which supports full lifecycle API management, including creation, management and monitoring of API endpoints.</p>
+
+<ul>
+<li><a href="https://www.mulesoft.com/platform/api-management">MuleSoft</a> - Manage your API lifecycle, quickly design, test, and publish APIs.</li>
+</ul>
+<ul>
+<li><a href="https://docs.workato.com/api-management.html">Workato API Management</a> - Turn callable recipes into endpoints and organize the endpoints into API collections, making it easier for users to find and consume the endpoints through other recipes or third-party apps, without requiring access to your Workato account.</li>
+</('ul', 0)>
+<h2>Tools, Extensions and Frameworks</h2>
+
+<h3>Power Platform (Microsoft)</h3>
+
+<ul>
+<li><a href="https://github.com/MscrmTools/XrmToolBox">XrmToolBox</a> - An application that gather multiple tools to ease the customization and configuration of Microsoft Dynamics CRM/365/Dataverse/PowerApps.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/rajyraman/Levelup-for-Dynamics-CRM">Levelup for Dynamics CRM</a> - Chrome, Edge Chromium and Firefox Extension for Dynamics CRM/365/Power Apps Power users.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/PowerPlatformAF/PowerPlatformAF">Power Platform Adoption Framework</a> - The framework that enables people to create beautiful and useful things on Power Platform deployed in large, enterprise-grade organizations.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Zerg00s/FlowPowerAppsMigrator">Flow & Power Apps Migrator</a> - Converts SharePoint Data sources for the MS Flow and PowerApps to a new tenant of your choice.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/TracyGH/SharePointWorkflowConverter">SharePoint Workflow Converter</a> - A proof-of-concept C# console application for retrieving legacy 2010 & 2013 custom SharePoint workflow definition files, and creating new Power Automate flows programmatically.</li>
+</('ul', 0)>
+<h2>Reference Resources</h2>
+
+<h3>Power Platform (Microsoft)</h3>
+
+<ul>
+<li><a href="https://github.com/microsoft/PowerPlatformConnectors">Power Platform Connectors</a> - This is a repository for Microsoft Power Automate, Power Apps, and Azure Logic Apps connectors.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/microsoft/Power-Fx">Microsoft Power Fx</a> - Power Fx Low Code programming language.</li>
+</('ul', 0)>
+<h3>Workato</h3>
+
+<ul>
+<li><a href="https://github.com/workato/custom<em>connector</em>docs">Custom Connector Docs</a> - Source files for Workato custom connector documentation.</li>
+</('ul', 0)>
+<h2>Learning Resources</h2>
+
+<h3>Power Platform (Microsoft)</h3>
+
+<ul>
+<li><a href="https://github.com/pnp/powerfx-samples">Power Fx Samples</a> - This repository contains samples for Power Fx Low Code programming language.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/microsoft/PowerApps-Azure-Lab">Power Apps & Azure Lab</a> - Repository to host the PowerApps Azure Lab.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/MicrosoftLearning/PL-900-Microsoft-Power-Platform-Fundamentals">PL-900: Power Platform Fundamentals</a> - Power Platform Fundamentals course materials.</li>
+</('ul', 0)>
+<h3>Workato</h3>
+
+<ul>
+<li><a href="https://github.com/workato/full-embed-sample">Embedding Guide</a> - A guided example on how to use Workato embedded.</li>
+</('ul', 0)>
+<h2>Samples, Templates and Solutions</h2>
+
+<h3>Power Platform (Microsoft)</h3>
+
+<ul>
+<li><a href="https://github.com/pnp/powerapps-samples">Power Apps Samples</a> - Contains curated community Microsoft Power App samples.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Eickhel/PowerApps-samples">PowerApps Samples</a> - Power Apps samples by Power Nimbus.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/iAmManCat/PowerApps-Branding-Template">Power Apps Branding Template</a> - A template to empower developers and reduce time wasted on control changes.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pnp/sp-power-platform-solutions">SharePoint Power Platform Solutions</a> - Sample PowerApps solutions designed to be used in SharePoint context.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pnp/powerautomate-samples">Power Automate Samples</a> - Contains curated community samples for Microsoft Power Automate.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/wortell/PowerAutomate-AutomatischeReistijd">Automatic travel time</a> - Automatic travel time in your Office 365 calendar.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ericsche/MCinTeams">Message Center in Teams</a> - Message Center in Teams is a simple PowerAutomate Solution to gather Message Center Announcement and post them in a Teams Channel.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ferrybouwman/Power-BI-Read-Only-REST-API">Consume Power BI</a> - Solution based on either Powershell or Power Automate (Flow) to consume the recently released Power BI Asynchronous Unified Scanning API.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/vaibhav21791/PostListItemToTwitter">Post List Item To Twitter</a> - A Microsoft Power Automate Flow to Post a SharePoint List Item to Twitter along with media content.</li>
+</('ul', 0)>
+<h3>Workato</h3>
+
+<ul>
+<li><a href="https://www.workato.com/solutions">Solution Marketplace</a> - A curated list of ready-to-use solutions built by Workato and vendors.</li>
+</ul>
+<ul>
+<li><a href="https://support.workato.com/en/support/solutions">Support History</a> - A public repository of resolved support tickets to help tackle issues.</li>
+</('ul', 0)>
+<h2>Community</h2>
+
+<h3>Power Platform (Microsoft)</h3>
+
+<ul>
+<li><a href="https://powerusers.microsoft.com/t5/Power-Apps-Community/ct-p/PowerApps1">Microsoft Power Apps Official Community</a></li>
+</ul>
+<ul>
+<li><a href="https://powerusers.microsoft.com/t5/Microsoft-Power-Automate/ct-p/MPACommunity">Microsoft Power Automate Official Community</a></li>
+</ul>
+<ul>
+<li><a href="https://powerusers.microsoft.com/t5/Power-Virtual-Agents-Community/ct-p/PVACommunity">Microsoft Power Virtual Agents Official Community</a></li>
+</ul>
+<ul>
+<li><a href="https://community.powerbi.com/">Microsoft Power BI Official Community</a></li>
+</ul>
+<ul>
+<li><a href="https://powp.co/">PowP.Co Discord Community</a> - A Discord community of Power Platform enthusiasts.</li>
+</('ul', 0)>
+<h3>Workato</h3>
+
+<ul>
+<li><a href="https://community.workato.com/">Workato Communities</a> - The official Workato communities website.</li>
+</ul>
+<ul>
+<li><a href="https://systematic.workato.com/">Systematic</a> - The only community for business systems.</li>
+</('ul', 0)>
+<h2>Blogs</h2>
+
+<h3>Power Platform (Microsoft)</h3>
+
+<ul>
+<li><a href="https://zenity.io/blog">Zenity</a> - Low Code security and governance.</li>
+</ul>
+<ul>
+<li><a href="https://www.darkreading.com/edge-articles/addressing-the-low-code-security-elephant-in-the-room">Addressing the Low Code Security Elephant in the Room</a> - The shared responsibility model for Low Code applications.</li>
+</ul>
+<ul>
+<li><a href="https://blog.powp.co/">PowPco</a> - Single-stop community for everything Power Platform Community related.</li>
+</('ul', 0)>
+<h3>Workato</h3>
+
+<ul>
+<li><a href="https://www.workato.com/the-connector/">The Connector</a> - Workato blog on Business Automation.</li>
+</('ul', 0)>
+<h2>Other Lists</h2>
+
+<h3>Power Platform (Microsoft)</h3>
+
+<ul>
+<li><a href="https://github.com/Power-Maverick/awesome-power-platform">Awesome Microsoft Power Platform</a> - A collection of awesome things regarding the Power Platform ecosystem.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/valentin-vogel/awesome-nocode-lowcode">Awesome No Code Low Code</a> - A collection of awesome No Code and Low Code resources.</li>
+</ul>
+</body>
+</html>

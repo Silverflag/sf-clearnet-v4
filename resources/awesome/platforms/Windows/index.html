@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Windows</h1>
+
+<p><strong>Repository:</strong> https://github.com/0pandadev/awesome-windows#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<p>!<a href="https://github.com/user-attachments/assets/b5897d15-99a5-42e5-a15a-de13687d70f3">Awesome Windows</a></p>
+
+<p><a href="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg"><img src="https://github.com/sindresorhus/awesome" alt="Awesome</a>"> <a href="https://img.shields.io/badge/Track<em>Awesome</em>List-494368?style=flat&logo=data:image/svg%2bxml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB3aWR0aD0iMTAxIiBoZWlnaHQ9Ijg2Ljk4NCIgdmlld0JveD0iMCAwIDEwMSA4Ni45ODQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPGc+CiAgICA8cmVjdCB3aWR0aD0iMTAxIiBoZWlnaHQ9Ijg2Ljk4NCIgLz4KICAgIDxwYXRoIGlkPSJWZWN0b3IiIGQ9Ik0yLjAwMDQ5IDE1LjUyMjFDMS4xODI3NCAxNC4wMTY0IDMuMTUyMzQgMTMuMDU0MiAzLjE1MjM0IDEzLjA1NDJDMy4xNTIzNCAxMy4wNTQyIDIuMDY5MzQgMTMuMDIwMSAyLjAwMDQ5IDExLjUyMjJDMS45MzE2NCAxMC4wMjQyIDMuNSA5LjAyMjE1IDMuNSA5LjAyMjE1QzMuNSA5LjAyMjE1IDIuMTE4OSA4LjY1Nzc0IDIuMDAwNDkgNy41MjIxNUMxLjg4MjA4IDYuMzg2NTYgMy4xNTIzNCA1LjUyMjE0IDMuMTUyMzQgNS41MjIxNEMzLjE1MjM0IDUuNTIyMTQgOS4wODYxOCAtMC40MDYwMjMgMjUgMC4wMjIxMjNDNDAuOTEzOCAwLjQ1MDI2OSA0Ny41MDAxIDguMDIyMjYgNDcuNTAwMSA4LjAyMjI2QzQ3LjUwMDEgOC4wMjIyNiA0OC45OTQzIDkuMjI3NTQgNDkgMTAuNTIyM0M0OS4wMDU3IDExLjgxNyA0Ny41MDAxIDEyLjUyMjMgNDcuNTAwMSAxMi41MjIzQzQ3LjUwMDEgMTIuNTIyMyA0OS4wODE4IDEzLjQxMyA0OSAxNC41MjIzQzQ4LjkxODMgMTUuNjMxNSA0Ny41MDAyIDE2LjUyMjMgNDcuNTAwMiAxNi41MjIzQzQ3LjUwMDIgMTYuNTIyMyA0OC40MjYxIDE4LjA1MzggNDcuNTAwMSAxOS4wMjIzQzQ2LjU3NCAxOS45OTA5IDQ1LjUwMDEgMTkuMDIyMyA0NS41MDAxIDE5LjAyMjNDNDUuNTAwMSAxOS4wMjIzIDM3LjQ4MjQgMTEuNjYxNCAyNS41IDExLjAyMjNDMTMuNTE3OSAxMC4zODMyIDUuMDAwOTggMTUuNTIyMSA1LjAwMDk4IDE1LjUyMjFDNS4wMDA5OCAxNS41MjIxIDIuODE4MzYgMTcuMDI3OCAyLjAwMDQ5IDE1LjUyMjFMMi4wMDA0OSAxNS41MjIxWk0yMy41IDE3LjUyMjJDMTAuNTIxNCAxNy41MjIyIDAgMjguMDQzNSAwIDQxLjAyMjJDMCA1NC4wMDA4IDEwLjUyMTQgNjQuNTIyMiAyMy41IDY0LjUyMjJDMzUuMzc5NiA2NC41MjIyIDQ1LjIwMDYgNTUuNzA3MyA0Ni43Nzg2IDQ0LjI2MTRDNDcuMTYwOSA0My45NDgxIDQ4LjA2NTcgNDMuNDcwMiA1MCA0My41MjIyQzUyLjg1MzggNDMuNTk4OCA1NCA0NS4wMjIyIDU0IDQ1LjAyMjJDNTQgNTguMDAxIDYxLjM5NTEgNjIuMTM2MiA2MS4zOTUxIDYyLjEzNjJDNjEuMzk1MSA2Mi4xMzYyIDY2LjA5MTcgNjAuMzY4MiA3NCA2MC41MjIyQzgxLjkwODMgNjAuNjc2MyA4OS41OTA4IDY1LjE3NzQgODkuNTkwOCA2NS4xNzc0Qzg5LjU5MDggNjUuMTc3NCAxMDEgNTguMDAxIDEwMSA0NS4wMjIyQzEwMSAzMi4wNDM1IDkwLjQ3ODggMjEuNTIyMiA3Ny41IDIxLjUyMjJDNjcuMDI1MyAyMS41MjIyIDU4LjE1MTIgMjguMzc1NCA1NS4xMTY5IDM3Ljg0MjZDNTQuMjc2OSAzNy40NjcyIDUyLjE3MzYgMzYuNjI1MyA1MCAzNi41MjIxQzQ3Ljc1MzMgMzYuNDE1NSA0Ni44ODI4IDM2LjY5NjggNDYuNjI0MyAzNi44MTM3QzQ0LjY0MDcgMjUuODQzMiAzNS4wNDIxIDE3LjUyMjIgMjMuNSAxNy41MjIyTDIzLjUgMTcuNTIyMlpNNDYgODUuMDIyMUw0OC40MDY0IDc4LjMyNDZDNDguNDA2NCA3OC4zMjQ2IDU3LjQ2NTggODEuMzEzMSA2My41IDc4LjAyMjJDNjkuNTM0MiA3NC43MzEyIDcyIDY3LjAyMjIgNzIgNjcuMDIyMkw3OSA2OS41MjIyQzc5IDY5LjUyMjIgNzcuNTA1OSA3OS4yOTEzIDY2IDg0LjUyMjFDNTQuNDk0MSA4OS43NTMgNDYgODUuMDIyMSA0NiA4NS4wMjIxTDQ2IDg1LjAyMjFaIiBmaWxsPSIjMDAwMDAwIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgMCkiIC8+CiAgICA8cGF0aCBpZD0iVmVjdG9yIiBkPSJNMC4yNjgzMTEgMC40MTU0NDNDMC4yNjgzMTEgMC40MTU0NDMgMS45NDMzNiAtMC4wMDg5MzQwMiAzLjUgMC4wMDAxNDQ5NThDNS4wNTY2NCAwLjAwOTIyMDEyIDguNSAxLjAwMDE0IDguNSAxLjAwMDE0TDggMy41MDAxNEM4IDMuNTAwMTQgNi4zNzUyNCAyLjEyOTE4IDQgMi4wMDAxNEMxLjYyNDc2IDEuODcxMDkgMCAyLjUwMDE0IDAgMi41MDAxNEwwLjI2ODMxMSAwLjQxNTQ0M1oiIGZpbGw9IiMxNDEzMTEiIGZpbGwtcnVsZT0iZXZlbm9kZCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNDYuNSAzOS4wMjIpIiAvPgogICAgPHBhdGggaWQ9Ik92YWwiIGQ9Ik0wIDE0LjVDMCA2LjQ5MTg3IDYuNDkxODcgMCAxNC41IDBDMjIuNTA4MSAwIDI5IDYuNDkxODcgMjkgMTQuNUMyOSAyMi41MDgxIDIyLjUwODEgMjkgMTQuNSAyOUM2LjQ5MTg3IDI5IDAgMjIuNTA4MSAwIDE0LjVaIiBmaWxsPSIjRkZDQzAwIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDkgMjYuNTIyKSIgLz4KICAgIDxwYXRoIGlkPSJPdmFsIiBkPSJNMCAxNC41QzAgNi40OTE4NyA2LjQ5MTg3IDAgMTQuNSAwQzIyLjUwODEgMCAyOSA2LjQ5MTg3IDI5IDE0LjVDMjkgMjIuNTA4MSAyMi41MDgxIDI5IDE0LjUgMjlDNi40OTE4NyAyOSAwIDIyLjUwODEgMCAxNC41WiIgZmlsbD0iI0ZGQ0MwMCIgZmlsbC1ydWxlPSJldmVub2RkIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg2MyAzMC41MjIpIiAvPgogIDwvZz4KPC9zdmc+&logoColor=black&labelColor=1284C5"><img src="https://www.trackawesomelist.com/0pandadev/awesome-windows/" alt="Track Awesome List</a>"></p>
+
+<p>![star] - Personal favorites<br></p>
+<p>![oss] - Open source<br></p>
+<p>![paid] - Paid</p>
+
+<blockquote>
+<p>\[!IMPORTANT]</p>
+<p>></p>
+<p><strong>Star this list</strong>, So you don't miss out on the latest apps \~ ⭐️</p>
+<p>></p>
+<p><a href="https://discord.gg/invite/Y7SbYphVw9">discord</a> - <a href="https://pandadev.net">pandadev.net</a></p>
+</blockquote>
+
+<h6>Check out my projects</h6>
+
+<table>
+  <tbody>
+    <tr>
+      <td><a href="https://github.com/0pandadev/ziit"><img src="https://github.com/user-attachments/assets/c0e9b5f4-a79c-49ae-96e1-d70b4ad90bab" width="14px"/> Ziit</a></td>
+      <td>The Swiss army knife of code time tracking.</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/0pandadev/qopy"><img src="https://github.com/user-attachments/assets/1a3c210d-ee6e-4e4e-8d5d-b0a05211a254" width="14px"/> Qopy</a></td>
+      <td>The fixed clipboard manager for Windows, macOS & Linux.</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/vleerapp/vleer"><img src="https://github.com/user-attachments/assets/966fdd74-9ee4-44c8-ac11-496d814e8838" width="14px"/> Vleer</a></td>
+      <td>Free & open source alternative to Spotify, Apple Music etc.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Contents</h2>
+
+<ul>
+<li><a href="#api-development">API Development</a></li>
+</ul>
+<ul>
+<li><a href="#application-launchers">Application Launchers</a></li>
+</ul>
+<ul>
+<li><a href="#audio">Audio</a></li>
+</ul>
+<ul>
+<li><a href="#backup">Backup</a></li>
+</ul>
+<ul>
+<li><a href="#browsers">Browsers</a></li>
+</ul>
+<ul>
+<li><a href="#cloud-storage">Cloud Storage</a></li>
+</ul>
+<ul>
+<li><a href="#command-line-tools">Command Line Tools</a></li>
+</ul>
+<ul>
+<li><a href="#communication">Communication</a></li>
+</ul>
+<ul>
+<li><a href="#compression">Compression</a></li>
+</ul>
+<ul>
+<li><a href="#customization">Customization</a></li>
+</ul>
+<ul>
+<li><a href="#data-recovery">Data Recovery</a></li>
+</ul>
+<ul>
+<li><a href="#databases-clients">Databases</a></li>
+</ul>
+<ul>
+<li><a href="#developer-utilities">Developer Utilities</a></li>
+</ul>
+<ul>
+<li><a href="#email">Email</a></li>
+</ul>
+<ul>
+<li><a href="#file-management">File Management</a></li>
+</ul>
+<ul>
+<li><a href="#game-stores">Games</a></li>
+</ul>
+<ul>
+<li><a href="#graphics">Graphics</a></li>
+</ul>
+<ul>
+<li><a href="#ides">IDEs</a></li>
+</ul>
+<ul>
+<li><a href="#networking">Networking</a></li>
+</ul>
+<ul>
+<li><a href="#office-suites">Office Suites</a></li>
+</ul>
+<ul>
+<li><a href="#password-managers">Password Managers</a></li>
+</ul>
+<ul>
+<li><a href="#productivity">Productivity</a></li>
+</ul>
+<ul>
+<li><a href="#proxy-and-vpn-tools">Proxy and VPN Tools</a></li>
+</ul>
+<ul>
+<li><a href="#remote-access">Remote Access</a></li>
+</ul>
+<ul>
+<li><a href="#screen-capture">Screen Capture</a></li>
+</ul>
+<ul>
+<li><a href="#screenshot">Screenshot</a></li>
+</ul>
+<ul>
+<li><a href="#security">Security</a></li>
+</ul>
+<ul>
+<li><a href="#system-utilities">System Utilities</a></li>
+</ul>
+<ul>
+<li><a href="#terminal">Terminal</a></li>
+</ul>
+<ul>
+<li><a href="#text-editors">Text Editors</a></li>
+</ul>
+<ul>
+<li><a href="#version-control">Version Control</a></li>
+</ul>
+<ul>
+<li><a href="#video-utilities">Video Utilities</a></li>
+</ul>
+<ul>
+<li><a href="#virtualization">Virtualization</a></li>
+</ul>
+<ul>
+<li><a href="#window-management">Window Management</a></li>
+</('ul', 0)>
+<h2>API Development</h2>
+
+<ul>
+<li><a href="https://www.usebruno.com/">Bruno</a> - Tests APIs with Git version control integration. [![Open-Source Software][oss]](https://github.com/usebruno/bruno)</li>
+</ul>
+<ul>
+<li><a href="https://hoppscotch.com/">Hoppscotch</a> - Tests APIs with real-time collaboration features. [![Open-Source Software][oss]](https://github.com/hoppscotch/hoppscotch)</li>
+</ul>
+<ul>
+<li><a href="https://httptoolkit.tech">HTTP Toolkit</a> - Intercepts and modifies HTTP traffic. [![Open-Source Software][oss]](https://github.com/httptoolkit)</li>
+</ul>
+<ul>
+<li><a href="https://insomnia.rest">Insomnia</a> - Tests APIs with GraphQL support. !<a href="/assets/opensource.svg">Open-Source Software</a></li>
+</ul>
+<ul>
+<li><a href="https://www.getpostman.com/postman">Postman</a> - Tests APIs with automated test scripts and monitoring.</li>
+</ul>
+<ul>
+<li><a href="https://yaak.app">Yaak</a> - Modern lightweight tauri based API testing application. [![Open-Source Software][oss]](https://github.com/mountain-loop/yaak) ![star]</li>
+</('ul', 0)>
+<h2>Application Launchers</h2>
+
+<ul>
+<li><a href="https://flowlauncher.com/">Flow Launcher</a> - Searches files and launches apps with plugin extensibility. [![Open-Source Software][oss]](https://github.com/Flow-Launcher/Flow.Launcher) ![star]</li>
+</ul>
+<ul>
+<li><a href="https://keypirinha.com/">Keypirinha</a> - Launches apps through fuzzy search and keyboard shortcuts.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kunkunsh/kunkun">kunkun</a> - Raycast/Alfred-like launcher with sandboxed extensions ![oss]</li>
+</ul>
+<ul>
+<li><a href="https://www.listary.com/">Listary</a> - Searches files with advanced filters and indexing.</li>
+</ul>
+<ul>
+<li><a href="https://ueli.app/#/">ueli</a> - Powerful keystroke launcher. [![Open-Source Software][oss]](https://github.com/oliverschwendener/ueli)</li>
+</ul>
+<ul>
+<li><a href="http://wox-launcher.github.io/Wox/">Wox</a> - Launches apps with web search integration. [![Open-Source Software][oss]](https://github.com/Wox-launcher/Wox/)</li>
+</('ul', 0)>
+<h2>Audio</h2>
+
+<ul>
+<li><a href="https://audacityteam.org/">Audacity</a> - Records and edits audio. [![Open-Source Software][oss]](https://github.com/audacity/audacity)</li>
+</ul>
+<ul>
+<li><a href="https://audionodes.com/">AudioNodes</a> - Produces music with mixing, effects, MIDI and synthesis.</li>
+</ul>
+<ul>
+<li><a href="https://cider.sh/">Cider</a> - Streams Apple Music. ![paid]</li>
+</ul>
+<ul>
+<li><a href="https://digimezzo.github.io/site/">Dopamine</a> - Plays and organizes music. [![Open-Source Software][oss]](https://github.com/digimezzo/dopamine)</li>
+</ul>
+<ul>
+<li><a href="https://www.foobar2000.org/">Foobar2000</a> - Plays audio with customization options.</li>
+</ul>
+<ul>
+<li><a href="https://mixxx.org/">Mixxx</a> - Mixes music for DJs. [![Open-Source Software][oss]](https://github.com/mixxxdj/mixxx)</li>
+</ul>
+<ul>
+<li><a href="https://www.mp3tag.de/en/">Mp3tag</a> - Edits music metadata and tags.</li>
+</ul>
+<ul>
+<li><a href="https://picard.musicbrainz.org/">MusicBrainz Picard</a> - Identifies and tags music files. [![Open-Source Software][oss]](https://github.com/metabrainz/picard)</li>
+</ul>
+<ul>
+<li><a href="https://musikcube.com/">musikcube</a> - Plays music through terminal. [![Open-Source Software][oss]](https://github.com/clangen/musikcube)</li>
+</ul>
+<ul>
+<li><a href="https://noramusic.netlify.app/">Nora</a> - Plays and manages music. [![Open-Source Software][oss]](https://github.com/Sandakan/Nora)</li>
+</('ul', 0)>
+<h2>Backup</h2>
+
+<ul>
+<li><a href="https://www.duplicati.com/">Duplicati</a> - Stores encrypted backups online. [![Open-Source Software][oss]](https://github.com/duplicati/duplicati)</li>
+</ul>
+<ul>
+<li><a href="https://kopia.io/">Kopia</a> - Creates incremental backups with client-side encryption and cloud support. [![Open-Source Software][oss]](https://github.com/kopia/kopia)</li>
+</ul>
+<ul>
+<li><a href="https://restic.net/">Restic</a> - Backs up data to various storage types. [![Open-Source Software][oss]](https://github.com/restic/restic/tree/master)</li>
+</('ul', 0)>
+<h2>Browsers</h2>
+
+<ul>
+<li><a href="https://arc.net">Arc</a> - Organizes tabs vertically for improved productivity.</li>
+</ul>
+<ul>
+<li><a href="https://brave.com">Brave</a> - Privacy focused browser with build in adblock. [![oss][oss]](https://github.com/brave/brave-browser)</li>
+</ul>
+<ul>
+<li><a href="https://firefox.com">Firefox</a> - Browser with privacy and customization. [![oss][]](https://hg.mozilla.org/mozilla-central)</li>
+</ul>
+<ul>
+<li><a href="https://floorp.app/">Floorp</a> - A Browser built for keeping the Open, Private and Sustainable Web alive. Based on Mozilla Firefox. [![Open-Source Software][oss]](https://github.com/floorp-Projects/floorp/)</li>
+</ul>
+<ul>
+<li><a href="https://ladybird.org/">Ladybird</a> - Built with a new browser engine from scratch. [![Open-Source Software][oss]](https://github.com/LadybirdBrowser/ladybird)</li>
+</ul>
+<ul>
+<li><a href="https://librewolf.net">Librewolf</a> - A custom version of Firefox, focused on privacy, security and freedom. [![Open-Source Software][oss]](https://codeberg.org/librewolf/source)</li>
+</ul>
+<ul>
+<li><a href="https://kagi.com/orion/">Orion</a> - Lightweight WebKit browser with Chrome/Firefox extension support.</li>
+</ul>
+<ul>
+<li><a href="https://www.torproject.org/">Tor Browser</a> - Privacy browser routing traffic over the Tor network. [![Open-Source Software][oss]](https://gitlab.torproject.org/tpo/core/tor)</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ungoogled-software/ungoogled-chromium">Ungoogled Chromium</a> - Removes Google integration and tracking. !<a href="/assets/opensource.svg">Open-Source Software</a></li>
+</ul>
+<ul>
+<li><a href="https://zen-browser.app/">Zen Browser</a> - Firefox-based with community modifications. [![Open-Source Software][oss]](https://github.com/zen-browser/desktop) ![star]</li>
+</('ul', 0)>
+<h2>Cloud Storage</h2>
+
+<ul>
+<li><a href="https://www.dropbox.com/">Dropbox</a> - Syncs files across devices with version history.</li>
+</ul>
+<ul>
+<li><a href="https://www.google.com/drive//">Google Drive</a> - Enables real-time collaboration on Google Docs, Sheets and Slides.</li>
+</ul>
+<ul>
+<li><a href="https://mega.nz/">Mega</a> - Encrypts files before they leave your device.</li>
+</ul>
+<ul>
+<li><a href="https://nextcloud.com/">Nextcloud</a> - Lets you host your own cloud storage and communication server. [![Open-Source Software][oss]](https://github.com/nextcloud)</li>
+</ul>
+<ul>
+<li><a href="https://onedrive.live.com/about/en-us/">OneDrive</a> - Integrates with Microsoft Office for document collaboration.</li>
+</ul>
+<ul>
+<li><a href="https://proton.me/drive">Proton Drive</a> - End-to-end encrypted cloud storage from Proton. ![star]</li>
+</ul>
+<ul>
+<li><a href="https://streamshare.wireway.ch">Streamshare</a> - Provides 1.5 TB storage with focus on media streaming.</li>
+</ul>
+<ul>
+<li><a href="https://www.pcloud.com">pCloud</a> - Offers one-time payment for lifetime storage access.</li>
+</ul>
+<ul>
+<li><a href="https://www.sync.com/">Sync</a> - Stores data exclusively in Canadian data centers for privacy compliance.</li>
+</('ul', 0)>
+<h2>Command Line Tools</h2>
+
+<ul>
+<li><a href="https://github.com/aristocratos/btop4win">btop4win</a> - Windows port of the famous btop resource monitor. !<a href="/assets/opensource.svg">Open-Source Software</a></li>
+</ul>
+<ul>
+<li><a href="https://chocolatey.org/">Chocolatey</a> - Package manager for Windows.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mikf/gallery-dl">gallery-dl</a> - Command-line program to download image galleries and collections from several image hosting sites. !<a href="/assets/opensource.svg">Open-Source Software</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/lukesampson/scoop">Scoop</a> - Command-line installer for Windows. !<a href="/assets/opensource.svg">Open-Source Software</a></li>
+</ul>
+<ul>
+<li><a href="https://learn.microsoft.com/en-us/windows/package-manager/winget/">winget</a> - Official Windows package manager from Microsoft. [![Open-Source Software][oss]](https://github.com/microsoft/winget-cli)</li>
+</ul>
+<ul>
+<li><a href="https://github.com/yt-dlp/yt-dlp">yt-dlp</a> - A feature-rich command-line audio/video downloader. !<a href="/assets/opensource.svg">Open-Source Software</a></li>
+</('ul', 0)>
+<h2>Communication</h2>
+
+<ul>
+<li><a href="https://legcord.app/">LegCord</a> - Discord client with Vencord and shelter integration. [![Open-Source Software][oss]](https://github.com/legcord/legcord)</li>
+</ul>
+<ul>
+<li><a href="https://beeper.com">Beeper</a> - Combines WhatsApp, Slack, Telegram, Signal, X, Instagram, SMS into one app.</li>
+</ul>
+<ul>
+<li><a href="https://discordapp.com">Discord</a> - Voice and text chat platform.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Equicord/Equicord">Equicord</a> - Fork of Vencord with additional plugins and features. [![Open-Source Software][oss]](https://github.com/Equicord/Equicord) ![star]</li>
+</ul>
+<ul>
+<li><a href="https://meetfranz.com/">Franz</a> - Combines multiple chat services into one app. [![Open-Source Software][oss]](https://github.com/meetfranz/franz)</li>
+</ul>
+<ul>
+<li><a href="https://matrix.org/">Matrix</a> - Network for secure, decentralized communication. [![Open-Source Software][oss]](https://github.com/matrix-org)</li>
+</ul>
+<ul>
+<li><a href="https://revolt.chat/">Revolt</a> - Chat platform built with modern web tech. [![Open-Source Software][oss]](https://github.com/revoltchat)</li>
+</ul>
+<ul>
+<li><a href="https://element.io/">Element</a> - Client for the Matrix protocol. [![Open-Source Software][oss]](https://github.com/element-hq/element-web)</li>
+</ul>
+<ul>
+<li><a href="https://desktop.telegram.org/">Telegram</a> - Messaging platform focused on speed and security. [![Open-Source Software][oss]](https://telegram.org/apps)</li>
+</ul>
+<ul>
+<li><a href="https://threema.ch">Threema</a> - Swiss messaging platform with open source code. [![Open-Source Software][oss]](https://github.com/threema-ch) ![paid] ![star]</li>
+</ul>
+<ul>
+<li><a href="https://github.com/UnigramDev/Unigram">Unigram</a> - Telegram client optimized for Windows. [![Open-Source Software][oss]](https://github.com/UnigramDev/Unigram)</li>
+</ul>
+<ul>
+<li><a href="https://vencord.dev">Vencord</a> - The cutest Discord client mod with lots of plugins. [![Open-Source Software][oss]](https://github.com/Vendicated/Vencord)</li>
+</ul>
+<ul>
+<li><a href="https://dedg3.com/wao/">Waow</a> - WhatsApp Web client with extra features.</li>
+</('ul', 0)>
+<h2>Compression</h2>
+
+<ul>
+<li><a href="https://www.7-zip.org/">7-Zip</a> - File archiver with multiple format support. [![Open-Source Software][oss]](https://github.com/ip7z/7zip)</li>
+</ul>
+<ul>
+<li><a href="https://www.bandisoft.com/bandizip/">Bandizip</a> - Archive manager with multiple format support.</li>
+</ul>
+<ul>
+<li><a href="https://apps.microsoft.com/detail/9n8g7tscl18r?hl=en-us&gl=US">NanaZip</a> - Windows-optimized 7-Zip variant. [![Open-Source Software][oss]](https://github.com/M2Team/NanaZip) ![star]</li>
+</ul>
+<ul>
+<li><a href="https://peazip.github.io/">PeaZip</a> - Archive manager with compression format support. [![Open-Source Software][oss]](https://github.com/peazip/PeaZip)</li>
+</ul>
+<ul>
+<li><a href="https://riot-optimizer.com/">Riot</a> - Compresses images with multiple optimization options.</li>
+</ul>
+<ul>
+<li><a href="https://www.rarlab.com/">WinRAR</a> - Compresses, backs up and splits files. ![paid]</li>
+</('ul', 0)>
+<h2>Customization</h2>
+
+<ul>
+<li><a href="https://rammichael.com/7-taskbar-tweaker">7+ Taskbar Tweaker</a> - Modifies Windows taskbar behavior.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Open-Shell/Open-Shell-Menu">OpenShell</a> - Restores traditional Start Menu interface. !<a href="/assets/opensource.svg">Open-Source Software</a></li>
+</ul>
+<ul>
+<li><a href="https://eartrumpet.app/">EarTrumpet</a> - Controls volume per application. [![Open-Source Software][oss]](https://github.com/File-New-Project/EarTrumpet)</li>
+</ul>
+<ul>
+<li><a href="https://qttabbar.wikidot.com/">QTTabBar</a> - Adds tabs to Explorer.</li>
+</ul>
+<ul>
+<li><a href="https://www.rainmeter.net/">Rainmeter</a> - Displays customizable skins and widgets. [![Open-Source Software][oss]](https://github.com/rainmeter/rainmeter)</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Taiizor/Sucrose">Sucrose Wallpaper Engine</a> - A live wallpaper app, a free and opensource alternative to Wallpaper Engine. [![Open-Source Software][oss]](https://github.com/Taiizor/Sucrose)</li>
+</ul>
+<ul>
+<li><a href="https://github.com/TranslucentTB/TranslucentTB">TranslucentTB</a> - Makes taskbar transparent. !<a href="/assets/opensource.svg">Open-Source Software</a></li>
+</ul>
+<ul>
+<li><a href="https://www.wallpaperengine.io/">Wallpaper Engine</a> - Animated wallpapers for you dekstop. ![paid]</li>
+</ul>
+<ul>
+<li><a href="https://windhawk.net/">WindHawk</a> - A list of useful software Tweaks. [![Open-Source Software][oss]](https://github.com/ramensoftware/windhawk)</li>
+</ul>
+<ul>
+<li><a href="https://github.com/amnweb/yasb">YASB</a> - Creates customizable status bars. !<a href="/assets/opensource.svg">Open-Source Software</a></li>
+</ul>
+<ul>
+<li><a href="https://www.zhornsoftware.co.uk/archive/index.html#zbar">ZBar</a> - Manages taskbars across multiple monitors.</li>
+</('ul', 0)>
+<h2>Data Recovery</h2>
+
+<ul>
+<li><a href="https://www.prosofteng.com/windows-data-recovery">Data Rescue</a> - Professional recovery solution for photos, videos, and documents.</li>
+</ul>
+<ul>
+<li><a href="https://www.isobuster.com/">IsoBuster</a> - Multi-format data recovery tool supporting various storage media.</li>
+</ul>
+<ul>
+<li><a href="https://www.ontrack.com/en-au/software/easyrecovery/windows">Ontrack EasyRecovery</a> - Advanced recovery tool with comprehensive filtering capabilities.</li>
+</ul>
+<ul>
+<li><a href="https://www.eassos.com/">PartitionGuru ｜ Eassos Recovery</a> - Specialized recovery tool for partitions and file systems. ![paid]</li>
+</ul>
+<ul>
+<li><a href="https://www.cgsecurity.org/wiki/TestDisk">TestDisk</a> - Free recovery utility focused on partition restoration and disk repair.</li>
+</('ul', 0)>
+<h2>Databases Clients</h2>
+
+<ul>
+<li><a href="https://github.com/qishibo/AnotherRedisDesktopManager">Another Redis Desktop Manager</a> - Fast and stable Redis GUI client with cluster, sentinel, SSH support. [![Open-Source Software][oss]](https://github.com/qishibo/AnotherRedisDesktopManager)</li>
+</ul>
+<ul>
+<li><a href="https://www.beekeeperstudio.io/">Beekeeper Studio</a> - A modern, easy to use, and good looking SQL client for MySQL, Postgres, SQLite, SQL Server, and more. [![Open-Source Software][oss]](https://github.com/beekeeper-studio/beekeeper-studio)</li>
+</ul>
+<ul>
+<li><a href="https://dataflare.app/">DataFlare</a> - Modern, lightweight database GUI for SQLite, MySQL and PostgreSQL. ![star]</li>
+</ul>
+<ul>
+<li><a href="https://sqlitebrowser.org/">DB Browser for SQLite</a> - Visual tool for creating and editing SQLite database files. !<a href="/assets/opensource.svg">Open-Source Software</a></li>
+</('ul', 0)>
+<h2>Developer Utilities</h2>
+
+<ul>
+<li><a href="https://www.cacher.io/">Cacher</a> - Syncs and organizes code snippets with Gist integration and IDE plugins.</li>
+</ul>
+<ul>
+<li><a href="https://www.mamp.info/en/">Mamp</a> - Runs Apache, MySQL and PHP stack locally.</li>
+</ul>
+<ul>
+<li><a href="https://pieces.app/">Pieces</a> - Uses AI to help capture, organize and reuse code snippets and dev resources.</li>
+</ul>
+<ul>
+<li><a href="https://velocity.silverlakesoftware.com/">Velocity</a> - Browses and searches API documentation without internet connection.</li>
+</ul>
+<ul>
+<li><a href="https://www.apachefriends.org/index.html">Xampp</a> - Bundles Apache, MariaDB, PHP and Perl for local development.</li>
+</('ul', 0)>
+<h2>Email</h2>
+
+<ul>
+<li><a href="https://www.bluemail.me/desktop/">BlueMail</a> - Cross-platform email client with modern interface.</li>
+</ul>
+<ul>
+<li><a href="https://www.mailbird.com/">Mailbird</a> - IMAP and POP3 email client with customization and multi-language support.</li>
+</ul>
+<ul>
+<li><a href="https://getmailspring.com/">Mailspring</a> - Modern email client built on web technologies. [![Open-Source Software][oss]](https://github.com/Foundry376/Mailspring) ![star]</li>
+</ul>
+<ul>
+<li><a href="https://postbox-inc.com/">Postbox</a> - Advanced email management application.</li>
+</ul>
+<ul>
+<li><a href="https://proton.me/mail">ProtonMail</a> - Encrypted email service with end-to-end encryption. [![Open-Source Software][oss]](https://github.com/ProtonMail) ![star]</li>
+</ul>
+<ul>
+<li><a href="https://www.mozilla.org/en-US/thunderbird/">Thunderbird</a> - Feature-rich email client with minimalist design. [![Open-Source Software][oss]](https://developer.mozilla.org/en-US/docs/Mozilla/Developer<em>guide/Build</em>Instructions/Simple<em>Thunderbird</em>build)</li>
+</ul>
+<ul>
+<li><a href="https://winomail.app">Wino Mail</a> - Modern mail client with integrated calendar. [![Open-Source Software][oss]](https://github.com/bkaankose/Wino-Mail)</li>
+</('ul', 0)>
+<h2>File Management</h2>
+
+<ul>
+<li><a href="https://www.voidtools.com/">Everything</a> - Instant file search utility.</li>
+</ul>
+<ul>
+<li><a href="https://file-converter.io/">File Converter</a> - A simple tool to convert and compress files using the context menu in windows explorer. [![Open-Source Software][oss]](https://github.com/Tichau/FileConverter) </li>
+</ul>
+<ul>
+<li><a href="https://nikkhokkho.sourceforge.io/static.php?page=FileOptimizer">FileOptimizer</a> - Lossless file size optimizer for multiple formats.</li>
+</ul>
+<ul>
+<li><a href="https://filezilla-project.org/">FileZilla</a> - FTP, FTPS and SFTP client. [![Open-Source Software][oss]](https://download.filezilla-project.org/client/)</li>
+</ul>
+<ul>
+<li><a href="https://www.freefilesync.org/">FreeFileSync</a> - File and folder backup with multiple sync modes.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jhspetersson/fselect">fselect</a> - SQL-like file search utility.</li>
+</ul>
+<ul>
+<li><a href="https://onecommander.com/">One Commander</a> - Modern file manager with miller columns.</li>
+</ul>
+<ul>
+<li><a href="https://www.spacedrive.com/">Spacedrive</a> - Cross-platform file manager with cloud integration. [![Open-Source Software][oss]](https://github.com/spacedriveapp/spacedrive)</li>
+</ul>
+<ul>
+<li><a href="https://www.codesector.com/teracopy">TeraCopy</a> - Faster than windows file transfers.</li>
+</ul>
+<ul>
+<li><a href="https://winscp.net/">WinSCP</a> - Free open source SFTP, FTP, WebDAV and SCP client.</li>
+</ul>
+<ul>
+<li><a href="https://www.netsarang.com/en/xftp/">Xftp 7</a> - Flexible SFTP/FTP client with advanced features for efficient file transfers. ![paid]</li>
+</ul>
+<ul>
+<li><a href="https://files.community/">Files</a> - A modern file manager that helps users organize their files and folders. [![Open-Source Software][oss]](https://github.com/files-community/Files)</li>
+</('ul', 0)>
+<h2>Game Stores</h2>
+
+<ul>
+<li><a href="https://github.com/leereilly/games">Awesome Games</a> - List of games hosted on GitHub.</li>
+</ul>
+<ul>
+<li><a href="https://www.epicgames.com/store/">Epic Games</a> - Digital game storefront for PC and Mac.</li>
+</ul>
+<ul>
+<li><a href="https://www.freeciv.org/">Freeciv</a> - Free empire-building strategy game inspired by human civilization. [![Open-Source Software][oss]](https://github.com/freeciv/)</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Kesomannen/gale">Gale</a> - Modern and lightweight mod manager for Thunderstore. !<a href="/assets/opensource.svg">Open-Source Software</a></li>
+</ul>
+<ul>
+<li><a href="https://godotengine.org/">Godot Engine</a> - Free and open source game engine with beginner-friendly workflow. [![Open-Source Software][oss]](https://github.com/godotengine/godot)</li>
+</ul>
+<ul>
+<li><a href="https://www.gog.com/">GOG</a> - DRM-free game store featuring classic and modern titles.</li>
+</ul>
+<ul>
+<li><a href="https://itch.io/app/">Itch.io</a> - Platform for discovering and distributing indie games. [![Open-Source Software][oss]](https://github.com/itchio/itch)</li>
+</ul>
+<ul>
+<li><a href="https://scormpool.com/luastudio">LuaStudio</a> - Free game development tool using Lua/LuaJIT with multi-platform export capabilities.</li>
+</ul>
+<ul>
+<li><a href="https://www.origin.com/en-in/store/">Origin</a> - EA's digital game distribution platform.</li>
+</ul>
+<ul>
+<li><a href="https://playnite.link/">Playnite</a> - Playnite is an open-source video game library manager that unifies game collections from various platforms. [![Open-Source Software][oss]](https://github.com/JosefNemec/Playnite/)</li>
+</ul>
+<ul>
+<li><a href="https://store.steampowered.com/">Steam</a> - Leading digital game distribution platform with extensive library management.</li>
+</ul>
+<ul>
+<li><a href="https://unity3d.com/">Unity</a> - Popular game engine with comprehensive learning resources.</li>
+</ul>
+<ul>
+<li><a href="https://www.unrealengine.com/what-is-unreal-engine-4">Unreal Engine</a> - Professional game engine with 5% revenue share model.</li>
+</('ul', 0)>
+<h2>Graphics</h2>
+
+<ul>
+<li><a href="https://www.aseprite.org/">Aseprite</a> - Professional pixel art and animation tool. [![Open-Source Software][oss]](https://github.com/aseprite/aseprite)</li>
+</ul>
+<ul>
+<li><a href="https://aspect.bildhuus.com/">Aspect</a> - Photo organizer with peer-to-peer synchronization.</li>
+</ul>
+<ul>
+<li><a href="https://www.blender.org/">Blender</a> - Professional 3D creation suite. [![Open-Source Software][oss]](https://developer.blender.org/)</li>
+</ul>
+<ul>
+<li><a href="https://www.figma.com/">Figma</a> - Collaborative interface design tool.</li>
+</ul>
+<ul>
+<li><a href="https://www.gimp.org/">GIMP</a> - Feature-rich image editor. [![Open-Source Software][oss]](https://www.gimp.org/source/)</li>
+</ul>
+<ul>
+<li><a href="https://inkscape.org/en/">Inkscape</a> - Professional vector graphics editor. [![Open-Source Software][oss]](https://gitlab.com/inkscape/inkscape)</li>
+</ul>
+<ul>
+<li><a href="https://krita.org/">Krita</a> - Professional digital painting program. [![Open-Source Software][oss]](https://krita.org/en/download/krita-desktop/)</li>
+</ul>
+<ul>
+<li><a href="https://icons8.com/lunacy">Lunacy</a> - Free design tool with built-in resources. ![star]</li>
+</ul>
+<ul>
+<li><a href="https://github.com/woelper/oculante">Oculante</a> - Lightweight, fast and simple image viewer written in rust. !<a href="/assets/opensource.svg">Open-Source Software</a> ![star]</li>
+</ul>
+<ul>
+<li><a href="https://www.getpaint.net/index.html">Paint.NET</a> - Feature-rich image editing tool.</li>
+</ul>
+<ul>
+<li><a href="https://pngquant.org/">pngquant</a> - Command-line PNG compression utility.</li>
+</('ul', 0)>
+<h2>IDEs</h2>
+
+<ul>
+<li><a href="https://developer.android.com/studio/index.html">Android Studio</a> - Develops and tests Android applications. [![Open-Source Software][oss]](https://sites.google.com/a/android.com/tools/)</li>
+</ul>
+<ul>
+<li><a href="https://www.jetbrains.com/clion/">CLion</a> - Debugs and profiles C/C++ code with memory analysis.</li>
+</ul>
+<ul>
+<li><a href="https://www.cursor.com/">Cursor</a> - AI-powered code editor with codebase understanding and natural language editing. ![star]</li>
+</ul>
+<ul>
+<li><a href="https://www.jetbrains.com/datagrip/">DataGrip</a> - Manages multiple databases with query optimization.</li>
+</ul>
+<ul>
+<li><a href="https://www.jetbrains.com/dataspell/">DataSpell</a> - Handles Jupyter notebooks and data visualization.</li>
+</ul>
+<ul>
+<li><a href="https://eclipse.org/downloads/">Eclipse</a> - Supports plugin-based development workflows. [![Open-Source Software][oss]](https://git.eclipse.org/c/)</li>
+</ul>
+<ul>
+<li><a href="https://www.jetbrains.com/go/">GoLand</a> - Specializes in Go debugging and testing.</li>
+</ul>
+<ul>
+<li><a href="https://www.jetbrains.com/idea/">IntelliJ IDEA</a> - Focuses on Java enterprise development. [![Open-Source Software][oss]](https://github.com/JetBrains/intellij-community)</li>
+</ul>
+<ul>
+<li><a href="https://www.jetbrains.com/toolbox/">JetBrains Toolbox App</a> - Controls JetBrains IDE installations and updates.</li>
+</ul>
+<ul>
+<li><a href="https://netbeans.org/">NetBeans IDE</a> - Emphasizes modular Java development. [![Open-Source Software][oss]](https://netbeans.org/community/sources/)</li>
+</ul>
+<ul>
+<li><a href="https://trypear.ai/">PearAI</a> - Open source AI code editor with curated integrations of multiple AI tools. [![Open-Source Software][oss]](https://github.com/peardocs/pearai) ![star]</li>
+</ul>
+<ul>
+<li><a href="https://www.jetbrains.com/phpstorm/">PhpStorm</a> - Integrates PHP frameworks and debugging tools.</li>
+</ul>
+<ul>
+<li><a href="https://www.jetbrains.com/pycharm">PyCharm</a> - Provides scientific tools for Python development. [![Open-Source Software][oss]](https://github.com/JetBrains/intellij-community/tree/master/python)</li>
+</ul>
+<ul>
+<li><a href="https://www.jetbrains.com/rider/">Rider</a> - Debugs Unity games and .NET applications.</li>
+</ul>
+<ul>
+<li><a href="https://www.jetbrains.com/ruby/">RubyMine</a> - Tests and profiles Ruby applications.</li>
+</ul>
+<ul>
+<li><a href="https://www.spyder-ide.org/">Spyder</a> - Open-source Python IDE designed for scientific development and data analysis [![Open-Source Software][oss]](https://github.com/spyder-ide/spyder)</li>
+</ul>
+<ul>
+<li><a href="https://www.visualstudio.com/vs/">Visual Studio</a> - Builds Windows and cloud applications.</li>
+</ul>
+<ul>
+<li><a href="https://code.visualstudio.com/">Visual Studio Code</a> - Customizes development with extensions. [![Open-Source Software][oss]](https://github.com/Microsoft/vscode)</li>
+</ul>
+<ul>
+<li><a href="https://www.jetbrains.com/webstorm/">WebStorm</a> - Debugs client-side and Node.js applications.</li>
+</ul>
+<ul>
+<li><a href="https://codeium.com/windsurf">Windsurf</a> - Agentic IDE with AI flows, multi-file editing and deep contextual awareness.</li>
+</ul>
+<ul>
+<li><a href="https://zed.dev">Zed</a> - A high-performance, multiplayer code editor from the creators of Atom. [![Open-Source Software][oss]](https://github.com/zed-industries/zed)</li>
+</('ul', 0)>
+<h2>Networking</h2>
+
+<ul>
+<li><a href="https://www.telerik.com/fiddler">Fiddler</a> - Web debugging proxy.</li>
+</ul>
+<ul>
+<li><a href="https://sniffnet.net/">Sniffnet</a> - Network monitoring tool to help you easily keep track of your Internet traffic. [![Open-Source Software][oss]](https://github.com/GyulyVGC/sniffnet)</li>
+</ul>
+<ul>
+<li><a href="https://www.wireshark.org/">Wireshark</a> - Network protocol analyzer. [![Open-Source Software][oss]](https://www.wireshark.org/docs/wsdg<em>html</em>chunked/ChIntroDevelopment.html)</li>
+</('ul', 0)>
+<h2>Office Suites</h2>
+
+<ul>
+<li><a href="https://www.freeoffice.com/en/">FreeOffice</a> - Reads and writes Microsoft Office file formats with high compatibility.</li>
+</ul>
+<ul>
+<li><a href="https://www.libreoffice.org/">LibreOffice</a> - Handles complex document formatting and supports extensive file formats. [![Open-Source Software][oss]](https://www.libreoffice.org/about-us/source-code/)</li>
+</ul>
+<ul>
+<li><a href="https://www.office.com">Microsoft Office</a> - Provides real-time collaboration and cloud integration across apps.</li>
+</ul>
+<ul>
+<li><a href="https://www.gonitro.com/pdf-reader">NitroPDF</a> - Converts and edits PDFs with OCR capabilities.</li>
+</ul>
+<ul>
+<li><a href="https://www.onlyoffice.com/">OnlyOffice</a> - Enables document co-editing with version control. [![Open-Source Software][oss]](https://github.com/ONLYOFFICE/DesktopEditors)</li>
+</ul>
+<ul>
+<li><a href="https://www.openoffice.org/">OpenOffice</a> - Focuses on stability and legacy format support. [![Open-Source Software][oss]](https://openoffice.apache.org/source.html)</li>
+</ul>
+<ul>
+<li><a href="https://www.sumatrapdfreader.org/free-pdf-reader.html">Sumatra PDF</a> - Opens documents instantly with minimal memory usage. [![Open-Source Software][oss]](https://github.com/sumatrapdfreader/sumatrapdf)</li>
+</ul>
+<ul>
+<li><a href="https://www.wps.com/office-free">WPS Office</a> - Offers mobile-desktop sync with built-in PDF tools.</li>
+</ul>
+<ul>
+<li><a href="https://www.pdfgear.com/">PDFGear</a> - Full-featured and free PDF editor, which provides read, edit, annotation, page management, and print PDF documents.</li>
+</('ul', 0)>
+<h2>Password Managers</h2>
+
+<ul>
+<li><a href="https://1password.com/">1Password</a> - Premium password manager with secure vault and team features. ![paid]</li>
+</ul>
+<ul>
+<li><a href="https://bitwarden.com/">Bitwarden</a> - Open-source password manager with encrypted vault. [![Open-Source Software][oss]](https://github.com/bitwarden) ![star]</li>
+</ul>
+<ul>
+<li><a href="https://padloc.app/">Padloc</a> - End-to-end encrypted password manager. [![Open-Source Software][oss]](https://github.com/padloc/padloc)</li>
+</ul>
+<ul>
+<li><a href="https://proton.me/pass">Proton Pass</a> - Zero-knowledge encrypted password manager.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dani-garcia/vaultwarden">Vaultwarden</a> - Lightweight Bitwarden server implementation. [![Open-Source Software][oss]](https://github.com/dani-garcia/vaultwarden) ![star]</li>
+</('ul', 0)>
+<h2>Productivity</h2>
+
+<ul>
+<li><a href="https://autohotkey.com/">AutoHotkey</a> - Automation scripting language for Windows. !<a href="/assets/opensource.svg">Open-Source Software</a></li>
+</ul>
+<ul>
+<li><a href="https://getcoldturkey.com">Cold Turkey</a> - Website blocker with strict enforcement mechanisms.</li>
+</ul>
+<ul>
+<li><a href="https://neosmart.net/EasySwitch/">Easy Window Switcher</a> - Fast application instance switcher.</li>
+</ul>
+<ul>
+<li><a href="https://stereopsis.com/flux/">f.lux</a> - Automatic screen color temperature adjustment.</li>
+</ul>
+<ul>
+<li><a href="https://www.filejuggler.com/">File Juggler</a> - Automated file organization with smart actions and PDF parsing.</li>
+</ul>
+<ul>
+<li><a href="https://www.inkdrop.info/">Inkdrop</a> - Markdown-focused note-taking application.</li>
+</ul>
+<ul>
+<li><a href="https://jan.ai">Jan</a> - Offline private AI assistant with CPU/GPU support. [![Open-Source Software][oss]](https://github.com/janhq/jan)</li>
+</ul>
+<ul>
+<li><a href="https://joplinapp.org/">Joplin</a> - Open-source note-taking app with Markdown support, cross-device sync and encryption. [![Open-Source Software][oss]](https://github.com/laurent22/joplin)</li>
+</ul>
+<ul>
+<li><a href="https://github.com/0xfrankz/Kaas">Kaas</a> - Privacy-focused LLM client for multiple AI services. !<a href="/assets/opensource.svg">Open-Source Software</a></li>
+</ul>
+<ul>
+<li><a href="https://www.ehiti.de/katmouse/">KatMouse</a> - Universal scrolling utility for Windows.</li>
+</ul>
+<ul>
+<li><a href="https://mularahul.github.io/keyviz/">Keywiz</a> - Real-time keystroke visualization tool. [![Open-Source Software][oss]](https://github.com/mulaRahul/keyviz)</li>
+</ul>
+<ul>
+<li><a href="https://multicommander.com/">MultiCommander</a> - Professional file manager.</li>
+</ul>
+<ul>
+<li><a href="https://ninite.com/">Ninite</a> - Streamlined software installation utility.</li>
+</ul>
+<ul>
+<li><a href="https://simplenote.com/">Simplenote</a> - Cross-platform note taking app with cloud sync.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ZGGSONG/STranslate">STranslate</a> - A ready-to-go translation ocr tool developed with WPF !<a href="/assets/opensource.svg">Open-Source Software</a> ![star]</li>
+</ul>
+<ul>
+<li><a href="https://taskade.com/">Taskade</a> - Collaborative task management with real-time sync.</li>
+</ul>
+<ul>
+<li><a href="https://timlens.wireway.ch">Timelens</a> - Cross-platform time tracking software. [![Open-Source Software][oss]](https://github.com/0pandadev/timelens)</li>
+</ul>
+<ul>
+<li><a href="https://abstractspoon.com/">ToDoList</a> - Feature-rich task management tool. [![Open-Source Software][oss]](https://github.com/abstractspoon/ToDoList)</li>
+</ul>
+<ul>
+<li><a href="https://wordweb.info/">WordWeb</a> - Comprehensive English dictionary.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sopaco/saga-reader">Saga Reader</a> - A Blazing-Fast and Extremely-Lightweight Internet Reader driven by AI.Supports fetching of search engine information and RSS.</li>
+</('ul', 0)>
+<h2>Proxy and VPN Tools</h2>
+
+<ul>
+<li><a href="https://github.com/trailofbits/algo">Algo</a> - Personal IPSEC VPN in the cloud.</li>
+</ul>
+<ul>
+<li><a href="https://1.1.1.1">Cloudflare WARP</a> - Fast, free VPN and DNS.</li>
+</ul>
+<ul>
+<li><a href="https://protonvpn.com/">ProtonVPN</a> - High-speed Swiss VPN that safeguards your privacy. ![star]</li>
+</ul>
+<ul>
+<li><a href="https://tailscale.com/">Tailscale</a> - Zero config VPN for building secure networks. ![star]</li>
+</ul>
+<ul>
+<li><a href="https://www.twingate.com/">Twingate</a> - Modern zero trust network access solution.</li>
+</ul>
+<ul>
+<li><a href="https://www.wireguard.com/">WireGuard</a> - Fast, modern, and secure VPN tunnel.</li>
+</('ul', 0)>
+<h2>Remote Access</h2>
+
+<ul>
+<li><a href="https://anydesk.com/">AnyDesk</a> - Free and lightweight remote access solution for ease of use.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/moonlight-stream/moonlight-qt">Moonlight</a> - Open-source GameStream client for Windows, Mac, Linux, and Steam Link. [![Open-Source Software][oss]](https://github.com/moonlight-stream/moonlight-qt)</li>
+</ul>
+<ul>
+<li><a href="https://parsec.app/">Parsec</a> - High-performance remote desktop solution with 4k streaming at 60fps and low latency.</li>
+</ul>
+<ul>
+<li><a href="https://www.realvnc.com">RealVNC</a> - Secure remote access for desktop and mobile devices.</li>
+</ul>
+<ul>
+<li><a href="https://www.royalapps.com/ts/win/features">RoyalTSX</a> - Remote access tool for IT professionals, supporting multiple protocols.</li>
+</ul>
+<ul>
+<li><a href="https://rustdesk.com/">RustDesk</a> - Open-source remote desktop software with a focus on simplicity and security. [![Open-Source Software][oss]](https://github.com/rustdesk/rustdesk)</li>
+</ul>
+<ul>
+<li><a href="https://store.steampowered.com/app/353380/Steam_Link/">Steam Link</a> - Play your Steam games across devices using the Steam Link app.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/LizardByte/Sunshine">Sunshine</a> - Open-source self-hosted game streaming server for use with Moonlight. [![Open-Source Software][oss]](https://github.com/LizardByte/Sunshine)</li>
+</ul>
+<ul>
+<li><a href="https://www.teamviewer.com/en">TeamViewer</a> - Popular remote control software for desktop sharing and file transfer.</li>
+</('ul', 0)>
+<h2>Screen Capture</h2>
+
+<ul>
+<li><a href="https://www.fraps.com/">Fraps</a> - DirectX/OpenGL game recording utility.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/greenshot/greenshot">Greenshot</a> - Screenshot capture and editing tool. !<a href="/assets/opensource.svg">Open-Source Software</a></li>
+</ul>
+<ul>
+<li><a href="https://www.cockos.com/licecap/">LICEcap</a> - Animated GIF screen capture tool.</li>
+</ul>
+<ul>
+<li><a href="https://obsproject.com/">OBS Studio</a> - Free and open source software for video recording and live streaming. [![Open-Source Software][oss]](https://github.com/obsproject/obs-studio)</li>
+</ul>
+<ul>
+<li><a href="https://support.microsoft.com/en-in/help/13776/windows-use-snipping-tool-to-capture-screenshots">Snipping Tool</a> - Built-in Windows screenshot utility.</li>
+</ul>
+<ul>
+<li><a href="https://technet.microsoft.com/en-us/sysinternals/zoomit.aspx">ZoomIt</a> - Screen zoom and annotation tool for presentations.</li>
+</('ul', 0)>
+<h2>Screenshot</h2>
+
+<ul>
+<li><a href="https://github.com/decipher3114/Capter">Capter</a> - A simple screenshot tool made in rust. ![oss]</li>
+</ul>
+<ul>
+<li><a href="https://flameshot.org/">Flameshot</a> - Customizable screenshot tool with an easy-to-use interface and built-in editor. [![Open-Source Software][oss]](https://github.com/flameshot-org/flameshot)</li>
+</ul>
+<ul>
+<li><a href="https://getgreenshot.org/">Greenshot</a> - Greenshot is a light-weight screenshot software tool for Windows. [![Open-Source Software][oss]](https://github.com/greenshot/greenshot)</li>
+</ul>
+<ul>
+<li><a href="https://app.prntscr.com/en/index.html">Lightshot</a> - A fast and intuitive screenshot tool that allows capturing and editing images instantly.</li>
+</ul>
+<ul>
+<li><a href="https://getsharex.com/">ShareX</a> - Powerful, open-source screenshot and screen recording tool with advanced editing options. [![Open-Source Software][oss]](https://github.com/ShareX/ShareX)</li>
+</('ul', 0)>
+<h2>Security</h2>
+
+<ul>
+<li><a href="https://toolslib.net/downloads/viewdownload/1-adwcleaner/">AdwCleaner</a> - Removal tool for adware, PUP/LPI, toolbars and hijackers.</li>
+</ul>
+<ul>
+<li><a href="https://www.bitdefender.com/">Bitdefender</a> - Comprehensive malware protection suite.</li>
+</ul>
+<ul>
+<li><a href="https://cryptomator.org/">Cryptomator</a> - Client-side encryption for cloud files. [![Open-Source Software][oss]](https://github.com/cryptomator/cryptomator)</li>
+</ul>
+<ul>
+<li><a href="https://macpaw.com/encrypto">ENCRYPTO</a> - File encryption utility.</li>
+</ul>
+<ul>
+<li><a href="https://www.glasswire.com/">GlassWire</a> - Network security monitoring and visualization tool.</li>
+</ul>
+<ul>
+<li><a href="https://www.nartac.com/Products/IISCrypto">IIS Crypto</a> - Windows encryption protocol configuration utility.</li>
+</ul>
+<ul>
+<li><a href="https://www.malwarebytes.org/">Malwarebytes</a> - Advanced threat protection and removal.</li>
+</ul>
+<ul>
+<li><a href="https://www.netlimiter.com">NetLimiter</a> - Internet traffic control and monitoring tool.</li>
+</ul>
+<ul>
+<li><a href="https://www.safer-networking.org/">SpyBot</a> - Malware and spyware detection and removal.</li>
+</ul>
+<ul>
+<li><a href="https://systemexplorer.net">System Explorer</a> - Enhanced task manager with advanced system monitoring.</li>
+</ul>
+<ul>
+<li><a href="https://www.torproject.org/">Tor Project</a> - Anonymous communication network. [![Open-Source Software][oss]](https://github.com/TheTorProject)</li>
+</ul>
+<ul>
+<li><a href="https://unchecky.com/">UnChecky</a> - Automated unwanted software offer prevention.</li>
+</ul>
+<ul>
+<li><a href="https://www.veracrypt.fr/en/Home.html">VeraCrypt</a> - Disk encryption software for multiple platforms. [![Open-Source Software][oss]](https://www.veracrypt.fr/code/VeraCrypt/)</li>
+</ul>
+<ul>
+<li><a href="https://www.sparklabs.com/viscosity/">Viscosity</a> - Enterprise-ready OpenVPN client.</li>
+</('ul', 0)>
+<h2>System Utilities</h2>
+
+<ul>
+<li><a href="https://www.advancedrenamer.com/">Advanced Renamer</a> - Batch file renamer with support for metadata and regex.</li>
+</ul>
+<ul>
+<li><a href="https://etcher.balena.io/">balenaEtcher</a> - Flash OS images to SD cards & USB drives safely and easily. [![Open-Source Software][oss]](https://github.com/balena-io/etcher)</li>
+</ul>
+<ul>
+<li><a href="https://www.bleachbit.org/">BleachBit</a> - BleachBit is a free and open-source system cleaner designed to free up disk space. [![Open-Source Software][oss]](https://github.com/bleachbit/bleachbit)</li>
+</ul>
+<ul>
+<li><a href="https://macpaw.com/cleanmypc">CleanMyPC</a> - System cleanup and optimization utility. ![paid]</li>
+</ul>
+<ul>
+<li><a href="https://www.cpuid.com/softwares/cpu-z.html">CPU-Z</a> - CPU monitoring and information tool.</li>
+</ul>
+<ul>
+<li><a href="https://crystalmark.info/en/software/crystaldiskinfo/">CrystalDiskInfo</a> - Open-source utility for monitoring S.M.A.R.T. data, disk temperature and more. [![Open-Source Software][oss]](https://github.com/hiyohiyo/CrystalDiskInfo)</li>
+</ul>
+<ul>
+<li><a href="https://getfancontrol.com/">Fan Control</a> - Highly focused fan controlling software. ![star]</li>
+</ul>
+<ul>
+<li><a href="https://www.techpowerup.com/gpuz/">GPU-Z</a> - GPU monitoring and information tool.</li>
+</ul>
+<ul>
+<li><a href="https://www.httrack.com/">HTTrack</a> - Offline website browser and mirror utility. [![Open-Source Software][oss]](https://github.com/xroche/httrack/tree/master)</li>
+</ul>
+<ul>
+<li><a href="https://www.hwinfo.com/">HWiNFO</a> - Comprehensive Hardware Analysis, Monitoring and Reporting for Windows and DOS.</li>
+</ul>
+<ul>
+<li><a href="https://www.cpuid.com/softwares/hwmonitor.html">HWMonitor</a> - Hardware monitoring for temperatures, voltages, and fan speeds.</li>
+</ul>
+<ul>
+<li><a href="https://www.irfanview.com/">IrfanView</a> - Fast and compact image viewer and converter.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Tyrrrz/LightBulb">LightBulb</a> - Adaptive screen brightness utility.</li>
+</ul>
+<ul>
+<li><a href="https://localsend.org/">LocalSend</a> - Free, open-source and cross-platform app that allows you to securely share files and messages with nearby devices over your local network without needing an internet connection. [![Open-Source Software][oss]](https://github.com/localsend/localsend)</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Abdenasser/neohtop">neohtop</a> - Modern system monitor built with Svelte and Rust. !<a href="/assets/opensource.svg">Open-Source Software</a> ![star]</li>
+</ul>
+<ul>
+<li><a href="https://www.nirsoft.net/utils/index.html">Nirsoft</a> - Collection of utility softwares.</li>
+</ul>
+<ul>
+<li><a href="https://learn.microsoft.com/en-us/windows/powertoys/install">PowerToys</a> - Microsoft's power user toolkit. [![Open-Source Software][oss]](https://github.com/microsoft/PowerToys)</li>
+</ul>
+<ul>
+<li><a href="https://processhacker.sourceforge.net/">Process Hacker</a> - Comprehensive system monitoring and management tool. [![Open-Source Software][oss]](https://github.com/PKRoma/ProcessHacker)</li>
+</ul>
+<ul>
+<li><a href="https://qbittorrent.org/">qBittorrent</a> - Free and reliable P2P Bittorrent client. [![Open-Source Software][oss]](https://github.com/qbittorrent/qBittorrent)</li>
+</ul>
+<ul>
+<li><a href="https://rufus.ie/">Rufus</a> - Bootable USB creation utility. [![Open-Source Software][oss]](https://github.com/pbatard/rufus)</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Genymobile/scrcpy">scrcpy</a> - Easily mirror and control your Android devices on computers via USB or WiFi. !<a href="/assets/opensource.svg">Open-Source Software</a></li>
+</ul>
+<ul>
+<li><a href="https://technet.microsoft.com/en-us/sysinternals/sdelete.aspx">SDelete</a> - Secure file deletion command-line utility.</li>
+</ul>
+<ul>
+<li><a href="https://speedcrunch.org/">SpeedCrunch</a> - Powerful scientific calculator. [![Open-Source Software][oss]](https://bitbucket.org/heldercorreia/speedcrunch/)</li>
+</ul>
+<ul>
+<li><a href="https://syncthing.net/">SyncThing</a> - Peer-to-peer file synchronization tool. [![Open-Source Software][oss]](https://github.com/syncthing/syncthing)</li>
+</ul>
+<ul>
+<li><a href="https://twinkletray.com/">Twinkle Tray</a> - Easily manage the brightness levels of multiple monitors. [![Open-Source Software][oss]](https://github.com/xanderfrangos/twinkle-tray)</li>
+</ul>
+<ul>
+<li><a href="https://softorino.com/waltr/">Waltr</a> - iOS media transfer utility without iTunes. ![paid]</li>
+</ul>
+<ul>
+<li><a href="https://winfindr.com/">WinFindr</a> - Multi-term file and registry search utility.</li>
+</ul>
+<ul>
+<li><a href="https://wiztree.en.lo4d.com/">WizTree</a> - Fast disk space analyzer.</li>
+</('ul', 0)>
+<h2>Terminal</h2>
+
+<ul>
+<li><a href="https://github.com/jwilm/alacritty">Alacritty</a> - Cross-platform, GPU-accelerated terminal emulator. !<a href="/assets/opensource.svg">Open-Source Software</a></li>
+</ul>
+<ul>
+<li><a href="https://cmder.app">Cmder</a> - Console emulator with clink shell integration. [![Open-Source Software][oss]](https://github.com/cmderdev/cmder)</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Maximus5/ConEmu">ConEmu</a> - Customizable terminal with tabs, splits, and quake-style dropdown.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/felixse/FluentTerminal">FluentTerminal</a> - UWP-based modern terminal emulator.</li>
+</ul>
+<ul>
+<li><a href="https://hyper.is">Hyper</a> - Terminal built on web technologies. [![Open-Source Software][oss]](https://github.com/vercel/hyper) ![star]</li>
+</ul>
+<ul>
+<li><a href="https://www.9bis.net/kitty/">Kitty</a> - Enhanced PuTTY with additional features.</li>
+</ul>
+<ul>
+<li><a href="https://mobaxterm.mobatek.net/">MobaXterm</a> - Enhanced terminal with X server and SSH client.</li>
+</ul>
+<ul>
+<li><a href="https://mremoteng.org/">mRemoteNG</a> - Multi-protocol remote connections manager. !<a href="/assets/opensource.svg">Open-Source Software</a></li>
+</ul>
+<ul>
+<li><a href="https://ttyplus.com/multi-tabbed-putty/">MTPuTTY</a> - Multi-tabbed PuTTY client.</li>
+</ul>
+<ul>
+<li><a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">PuTTY</a> - SSH and telnet client.</li>
+</ul>
+<ul>
+<li><a href="https://eugeny.github.io/terminus/">Terminus</a> - Configurable terminal built on web technologies. [![Open-Source Software][oss]](https://github.com/Eugeny/terminus)</li>
+</ul>
+<ul>
+<li><a href="https://www.warp.dev/">Warp</a> - AI-powered terminal with IDE-like features and team collaboration.</li>
+</ul>
+<ul>
+<li><a href="https://wezfurlong.org/wezterm/">WezTerm</a> - GPU-accelerated terminal emulator and multiplexer. [![Open-Source Software][oss]](https://github.com/wez/wezterm)</li>
+</ul>
+<ul>
+<li><a href="https://www.microsoft.com/en-us/p/windows-terminal-preview/9n0dx20hk701">Windows Terminal</a> - Official Microsoft terminal. [![Open-Source Software][oss]](https://github.com/microsoft/terminal)</li>
+</('ul', 0)>
+<h2>Text Editors</h2>
+
+<ul>
+<li><a href="https://www.vim.org/download.php#pc">GVim</a> - Highly configurable text editor optimized for efficiency. [![Open-Source Software][oss]](https://github.com/vim/vim-win32-installer/releases/tag/v9.1.0679)</li>
+</ul>
+<ul>
+<li><a href="https://www.lazyvim.org/">LazyVim</a> - Customizable Neovim configuration framework. [![Open-Source Software][oss]](https://github.com/LazyVim/LazyVim)</li>
+</ul>
+<ul>
+<li><a href="https://neovim.io/">Neovim</a> - Modern, extensible terminal-based editor. [![Open-Source Software][oss]](https://github.com/neovim/neovim)</li>
+</ul>
+<ul>
+<li><a href="https://notepad-plus-plus.org/">Notepad++</a> - Feature-rich source code editor. [![Open-Source Software][oss]](https://github.com/notepad-plus-plus/notepad-plus-plus)</li>
+</ul>
+<ul>
+<li><a href="https://www.flos-freeware.ch/notepad2.html">Notepad2</a> - Lightweight Notepad replacement with enhanced features. !<a href="/assets/opensource.svg">Open-Source Software</a></li>
+</ul>
+<ul>
+<li><a href="https://www.sublimetext.com/3">Sublime Text</a> - Advanced text editor with extensive plugin ecosystem.</li>
+</('ul', 0)>
+<h2>Version Control</h2>
+
+<ul>
+<li><a href="https://devhubapp.com/">DevHub</a> - GitHub notifications on your desktop as a tray app. [![Open-Source Software][oss]](https://github.com/devhubapp/devhub)</li>
+</ul>
+<ul>
+<li><a href="https://git-fork.com/">Fork</a> - Fast and friendly Git client for Windows and Mac.</li>
+</ul>
+<ul>
+<li><a href="https://gitextensions.github.io/">Git Extensions</a> - Powerful and user-friendly Git UI. [![Open-Source Software][oss]](https://github.com/gitextensions/gitextensions)</li>
+</ul>
+<ul>
+<li><a href="https://desktop.github.com/">GitHub Desktop</a> - Electron-based GitHub client. [![Open-Source Software][oss]](https://github.com/desktop/desktop)</li>
+</ul>
+<ul>
+<li><a href="https://www.gitkraken.com/">GitKraken</a> - Cross-platform Git client with intuitive interface.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/colinlienard/gitlight">GitLight</a> - Open-source GitHub & GitLab notifications client. !<a href="/assets/opensource.svg">Open-Source Software</a></li>
+</ul>
+<ul>
+<li><a href="https://meldmerge.org/">Meld</a> - Visual diff and merge tool. [![Open-Source Software][oss]](https://gitlab.gnome.org/GNOME/meld/)</li>
+</ul>
+<ul>
+<li><a href="https://www.sourcetreeapp.com/">SourceTree</a> - Free Git & Mercurial client.</li>
+</ul>
+<ul>
+<li><a href="https://tortoisegit.org/">TortoiseGit</a> - Git client with full shell integration. [![Open-Source Software][oss]](https://github.com/tortoisegit/tortoisegit/)</li>
+</ul>
+<ul>
+<li><a href="https://www.git-tower.com/windows">Tower</a> - Professional Git client with advanced features.</li>
+</('ul', 0)>
+<h2>Video Utilities</h2>
+
+<ul>
+<li><a href="https://www.blackmagicdesign.com/products/davinciresolve/">DaVinci Resolve</a> - Complete video production suite with color grading, VFX, and audio tools. ![star]</li>
+</ul>
+<ul>
+<li><a href="https://handbrake.fr/">HandBrake</a> - Converts videos between formats with compression options. [![Open-Source Software][oss]](https://github.com/HandBrake/HandBrake)</li>
+</ul>
+<ul>
+<li><a href="https://kdenlive.org/en/download/">Kdenlive</a> - Video editor focused on transitions and effects. [![Open-Source Software][oss]](https://invent.kde.org/multimedia/kdenlive)</li>
+</ul>
+<ul>
+<li><a href="https://mpv.io/">mpv</a> - Script-based media player with extensive keyboard controls. [![Open-Source Software][oss]](https://github.com/mpv-player/mpv) ![star]</li>
+</ul>
+<ul>
+<li><a href="https://www.olivevideoeditor.org/">Olive Video Editor</a> - Node-based video editor with real-time effects. [![Open-Source Software][oss]](https://github.com/olive-editor/olive)</li>
+</ul>
+<ul>
+<li><a href="https://potplayer.daum.net/">PotPlayer</a> - Media player with hardware acceleration and streaming capabilities.</li>
+</ul>
+<ul>
+<li><a href="https://www.screentogif.com/">ScreenToGif</a> - Records screen areas and saves as GIF or video. [![Open-Source Software][oss]](https://github.com/NickeManarin/ScreenToGif/)</li>
+</ul>
+<ul>
+<li><a href="https://www.shotcut.org/download/">Shotcut</a> - Video editor with native timeline filtering. [![Open-Source Software][oss]](https://github.com/mltframework/shotcut)</li>
+</ul>
+<ul>
+<li><a href="https://www.shutterencoder.com/">Shutter Encoder</a> - Converts between hundreds of media formats with processing options.</li>
+</ul>
+<ul>
+<li><a href="https://www.videolan.org/vlc/index.html">VLC</a> - Plays damaged/incomplete media files and network streams. [![Open-Source Software][oss]](https://github.com/videolan/vlc)</li>
+</('ul', 0)>
+<h2>Virtualization</h2>
+
+<ul>
+<li><a href="https://www.docker.com/products/docker-desktop/">Docker Desktop</a> - Containerization for Desktop, built on top of WSL2.</li>
+</ul>
+<ul>
+<li><a href="https://podman.io/">Podman Desktop</a> - Open source desktop containerization alternative to Docker. [![Open-Source Software][oss]](https://github.com/containers/podman-desktop)</li>
+</ul>
+<ul>
+<li><a href="https://www.qemu.org/">QEMU</a> - Open-source emulator and virtualizer for hardware and system virtualization.</li>
+</ul>
+<ul>
+<li><a href="https://rancherdesktop.io">Rancher Desktop</a> - Open-source application for managing containers and Kubernetes on the desktop.</li>
+</ul>
+<ul>
+<li><a href="https://www.vagrantup.com/">Vagrant</a> - Tool for building and managing virtual machines. [![Open-Source Software][oss]](https://github.com/mitchellh/vagrant)</li>
+</ul>
+<ul>
+<li><a href="http://www.virtualbox.org">VirtualBox</a> - Powerful x86 and AMD64/Intel64 virtualization software for creating and managing virtual machines. [![Open-Source Software][oss]](https://www.virtualbox.org/browser/vbox/trunk)</li>
+</('ul', 0)>
+<h2>Window Management</h2>
+
+<ul>
+<li><a href="https://github.com/RamonUnch/AltSnap">AltSnap</a> - Window snapping with keyboard shortcuts. ![oss]</li>
+</ul>
+<ul>
+<li><a href="https://github.com/microsoft/PowerToys">FancyZones</a> - PowerToys window manager for multi-monitor setups. ![oss]</li>
+</ul>
+<ul>
+<li><a href="https://lgug2z.github.io/komorebi/">Komorebi</a> - Tiles windows dynamically. [![Open-Source Software][oss]](https://github.com/LGUG2Z/komorebi)</li>
+</ul>
+<ul>
+<li><a href="https://github.com/glzr-io/glazewm">GlazeWM</a> - Rust-based tiling window manager. ![oss]</li>
+</('ul', 0)>
+<h2>Backers</h2>
+
+<p>Thanks to all contributors without you this project would not exist.</p>
+
+<a href='https://github.com/0PandaDEV'><img src='https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/70103896?v=4&fit=cover&mask=circle&maxage=7d' width='60' height='60' alt='0PandaDEV'/></a> <a href='https://github.com/helouism'><img src='https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/90733858?v=4&fit=cover&mask=circle&maxage=7d' width='60' height='60' alt='helouism'/></a> <a href='https://github.com/syntaxboybe'><img src='https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/113691000?v=4&fit=cover&mask=circle&maxage=7d' width='60' height='60' alt='syntaxboybe'/></a> <a href='https://github.com/onthejobtraining'><img src='https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/75716685?v=4&fit=cover&mask=circle&maxage=7d' width='60' height='60' alt='onthejobtraining'/></a> <a href='https://github.com/nukhes'><img src='https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/79018158?v=4&fit=cover&mask=circle&maxage=7d' width='60' height='60' alt='nukhes'/></a> <a href='https://github.com/NoCrypt'><img src='https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/57245077?v=4&fit=cover&mask=circle&maxage=7d' width='60' height='60' alt='NoCrypt'/></a> <a href='https://github.com/ZGGSONG'><img src='https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/49741009?v=4&fit=cover&mask=circle&maxage=7d' width='60' height='60' alt='ZGGSONG'/></a> <a href='https://github.com/peazip'><img src='https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/479850?v=4&fit=cover&mask=circle&maxage=7d' width='60' height='60' alt='peazip'/></a> <a href='https://github.com/luismgallegosc'><img src='https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/7239898?v=4&fit=cover&mask=circle&maxage=7d' width='60' height='60' alt='luismgallegosc'/></a> <a href='https://github.com/rodrigocfd'><img src='https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/1283868?v=4&fit=cover&mask=circle&maxage=7d' width='60' height='60' alt='rodrigocfd'/></a> <a href='https://github.com/sopaco'><img src='https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/15891288?v=4&fit=cover&mask=circle&maxage=7d' width='60' height='60' alt='sopaco'/></a> <a href='https://github.com/Taiizor'><img src='https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/41683699?v=4&fit=cover&mask=circle&maxage=7d' width='60' height='60' alt='Taiizor'/></a> <a href='https://github.com/Yukai-Qian'><img src='https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/100383998?v=4&fit=cover&mask=circle&maxage=7d' width='60' height='60' alt='Yukai-Qian'/></a> <a href='https://github.com/j3n1xnoname'><img src='https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/164738650?v=4&fit=cover&mask=circle&maxage=7d' width='60' height='60' alt='j3n1xnoname'/></a> <a href='https://github.com/n0vella'><img src='https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/197369591?v=4&fit=cover&mask=circle&maxage=7d' width='60' height='60' alt='n0vella'/></a> <a href='https://github.com/obvTiger'><img src='https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/83970850?v=4&fit=cover&mask=circle&maxage=7d' width='60' height='60' alt='obvTiger'/></a> 
+
+<p>Please, consider supporting me as it is a lot of work to maintain this list! Thanks a lot.</p>
+
+<a href="https://buymeacoffee.com/pandadev_"><img src="https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black"/></a>
+
+<p>[oss]: /assets/opensource.svg</p>
+<p>[paid]: /assets/paid.svg</p>
+<p>[star]: /assets/star.svg</p>
+
+</body>
+</html>

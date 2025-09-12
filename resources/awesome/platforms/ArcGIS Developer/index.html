@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArcGIS Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>ArcGIS Developer</h1>
+
+<p><strong>Repository:</strong> https://github.com/Esri/awesome-arcgis-developer#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<h1>Awesome ArcGIS Developers <a href="https://awesome.re/badge.svg"><img src="https://awesome.re" alt="Awesome</a>"></h1>
+
+<img src="esri-logo.png" align="right" width="100">
+
+<blockquote>
+<p>An awesome set of resources to help you <a href="https://www.esri.com/en-us/arcgis/products/develop-with-arcgis/overview">develop with ArcGIS Products</a>.</p>
+</blockquote>
+
+<p>ArcGIS products give you access to APIs, location services, and tools to develop your own mapping and spatial analysis applications. Use mapping products for developers to build web, native, offline, desktop, or integrated solutions for yourself, your organization, or other organizations. Access a full suite of location services to provide basemap layers, geocoding and routing capabilities, and other geospatial functionalities. Securely host and manage your data in the ArcGIS cloud.</p>
+
+<hr>
+
+<h2>Contents</h2>
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+<ul>
+<li><a href="#apis-and-sdks">APIs and SDKs</a></li>
+</ul>
+<ul>
+<li><a href="#arcgis-location-services">ArcGIS location services</a></li>
+</ul>
+<ul>
+<li><a href="#code-samples-and-snippets">Code samples and snippets</a></li>
+</ul>
+<ul>
+<li><a href="#data-conversion-tools">Data conversion tools</a></li>
+</ul>
+<ul>
+<li><a href="#data-integration-tools">Data integration tools</a></li>
+</ul>
+<ul>
+<li><a href="#debugging-tools">Debugging tools</a></li>
+</ul>
+<ul>
+<li><a href="#design-and-styling">Design and styling</a></li>
+</ul>
+<ul>
+<li><a href="#developer-guides">Developer guides</a></li>
+</ul>
+<ul>
+<li><a href="#helpers">Helpers</a></li>
+</ul>
+<ul>
+<li><a href="#map-and-data-exploration">Map and data exploration</a></li>
+</ul>
+<ul>
+<li><a href="#playgrounds">Playgrounds</a></li>
+</ul>
+<ul>
+<li><a href="#spatial-analysis">Spatial Analysis</a></li>
+</ul>
+<ul>
+<li><a href="#specifications">Specifications</a></li>
+</ul>
+<ul>
+<li><a href="#starter-apps-and-clis">Starter apps and CLIs</a></li>
+</ul>
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+<hr>
+
+<h2>APIs and SDKs</h2>
+
+<ul>
+<li><a href="https://developers.arcgis.com/python/">ArcGIS API for Python</a> - Guides, sample notebooks and API reference to do mapping, spatial analysis, data science, geospatial AI and automation using Python.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/esri/cityengine-sdk">ArcGIS CityEngine SDKs (C++)</a> - C++ APIs, documentation and examples for the Procedural Runtime (PRT).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Esri/pyprt">ArcGIS CityEngine SDKs (Python)</a> - Python bindings for the "Procedural Runtime" (PRT) of CityEngine.</li>
+</ul>
+<ul>
+<li><a href="https://doc.arcgis.com/en/arcgis-earth/automation-api/get-started.htm">ArcGIS Earth Automation API</a> - Guide, API reference and samples to communicate with ArcGIS Earth.</li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/enterprise-sdk/">ArcGIS Enterprise SDK</a> - Guides, API reference and sample code to extent ArcGIS Enterprise.</li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/net/">ArcGIS Maps SDK for .NET</a> - Guides, sample codes and API reference to build desktop and mobile apps using .Net.</li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/java/">ArcGIS Maps SDK for Java</a> - Guides, sample codes and API reference to build desktop apps.</li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/javascript/latest/">ArcGIS Maps SDK for JavaScript</a> - Guides, sample code, API references and showcase to build 2D and 3D interactive web apps unlocking geospatial data.</li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/kotlin/">ArcGIS Maps SDK for Kotlin</a> - Guides, sample codes and API reference to build mobile apps using Kotlin.</li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/qt/">ArcGIS Maps SDK for Qt</a> - Guides, sample codes and API reference to build mobile and desktop apps.</li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/swift/">ArcGIS Maps SDK for Swift</a> - Guides, sample codes and API reference to build mobile apps using Swift.</li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/unity/">ArcGIS Maps SDK for Unity</a> - Guides, API reference and sample code to use ArcGIS data and services to develop for Unity.</li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/unreal-engine/">ArcGIS Maps SDK for Unreal Engine</a> - Guides, API reference and sample code to use ArcGIS data and services to develop for Unreal Engine.</li>
+</ul>
+<ul>
+<li><a href="https://pro.arcgis.com/en/pro-app/latest/sdk/">ArcGIS Pro SDK for Microsoft .NET</a> - Documentation, tutorials, API reference, FAQ, etc. to extend ArcGIS Pro Desktop.</li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/rest/">ArcGIS REST APIs</a> - General documentation about ArcGIS REST APIs: location services, content management, portal administration, and more.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/esri-es/ArcGIS-REST-API">ArcGIS REST APIs collections</a> - Postman collections to work with some of the REST APIs: location services, hosted feature layers, ArcGIS Online, ArcGIS Hub, etc.</li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/arcgis-rest-js/">ArcGIS REST JS</a> - Key concepts, tutorials and API reference of a collection of JavaScript modules for accessing location services, ArcGIS Online, and ArcGIS Enterprise REST APIs.</li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/arcgis-urban-api/">ArcGIS Urban API</a> - Public GraphQL web service that can be used to interact with ArcGIS Urban data directly.</li>
+</ul>
+<ul>
+<li><a href="https://desktop.arcgis.com/en/arcobjects/latest/net/webframe.htm#RoadmapToExtendingArcObjects.htm">ArcObjects SDK for .Net</a> - Documentation about the .Net SDK for the library of Component Object Model (COM) components that make up the foundation of ArcGIS.</li>
+</ul>
+<ul>
+<li><a href="https://desktop.arcgis.com/en/arcobjects/latest/java/#80146cac-6b50-4c82-a9f5-7a5be3406c5b.htm">ArcObjects SDK for Java</a> - Documentation about the Java SDK for the library of Component Object Model (COM) components that make up the foundation of ArcGIS.</li>
+</ul>
+<ul>
+<li><a href="https://pro.arcgis.com/en/pro-app/arcpy/main/arcgis-pro-arcpy-reference.htm">ArcPy</a> - Documentation about the python package to perform geographic data analysis, data conversion, data management, and map automation in ArcGIS Desktop or ArcGIS Enterprise environments.</li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/esri-leaflet/">Esri Leaflet</a> - Key concepts, tutorials, API reference, plugins, sample code to help you build web apps using Leaflet with ArcGIS Location services.</li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/mapbox-gl-js/">MapLibre GL JS</a> - Guide and tutorials to help you start building web apps with MapLibre and ArcGIS location services.</li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/openlayers/">OpenLayers</a> - Guide and tutorials to help you start building web apps with OpenLayers and ArcGIS location services.</li>
+</('ul', 0)>
+<h2>ArcGIS location services</h2>
+
+<ul>
+<li><a href="https://www.postman.com/esridevs/workspace/arcgis-location-services">ArcGIS location services Postman Workspace</a> - Postman collections to facilitate work with many of the location services.</li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/documentation/mapping-apis-and-services/maps/services/basemap-layer-service/">Basemap styles service (v1)</a> - Access streets, satellite, and other basemap styles for maps and scenes.</li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/rest/basemap-styles/">Basemap styles service (v2)</a> - Access multiples map styles, add places of interest, set labels languages, word views and more.</li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/rest/places/">Places service</a> - Search for businesses and geographic locations around the world with detailed information about each place.</li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/rest/elevation/api-reference/get-started-with-elevation-services.htm">Elevation and hydrology services</a> - Generate elevation profiles and viewsheds, but also can trace water flow and generate watersheds.</li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/documentation/mapping-apis-and-services/search/services/geocoding-service/">Geocoding service</a> - Search for addresses, businesses, and places around the world.</li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/documentation/mapping-apis-and-services/demographics/services/geoenrichment-service/">GeoEnrichment service</a> - Find facts and demographic information about a location or area.</li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/documentation/mapping-apis-and-services/routing/services/routing-service/">Routing service</a> - Get turn-by-turn directions and solve advanced routing problems.</li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/rest/services-reference/enterprise/export-web-map-task.htm">Printing tools service</a> - Generate static maps (png, jpg, pdf, etc.) from advance web maps.</li>
+</ul>
+<!--lint disable double-link-->
+<ul>
+<li><a href="https://developers.arcgis.com/rest/analysis/api-reference/getting-started.htm">Spatial analysis service</a> - Process spatial datasets to discover relationships and patterns.</li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/rest/packaging/api-reference/create-map-area.htm">Offline packaging service</a> - Create and manage preplanned map areas for generating offline maps.</li>
+</('ul', 0)>
+<h2>Code samples and snippets</h2>
+
+<ul>
+<li><a href="https://github.com/Esri/application-base-js">application-base-js</a> - Core class for creating a configurable application using JavaScript/TypeScript.</li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/javascript/latest/sample-code/">ArcGIS API for JavaScript Sample Code</a> - Esri's official JavaScript API product team samples.</li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/python/sample-notebooks/">ArcGIS API for Python Sample Notebooks</a> - Esri's official Python API product team samples.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Esri/arcade-expressions">ArcGIS Arcade Expression Templates</a> - Collection of reusable Arcade expressions across all supported profiles.</li>
+</ul>
+<ul>
+<li><a href="http://codesharing.arcgis.com/">ArcGIS Code Sharing</a> - Search, browse, and use code, scripts, models, add-ins, widgets, and more.</li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/unity/sample-code/">ArcGIS Maps SDK for Unity samples</a> - Esri's official ArcGIS Maps SDK for Unity product team samples.</li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/unreal-engine/sample-code/">ArcGIS Maps SDK for Unreal Engine samples</a> - Esri's official ArcGIS Maps SDK for Unreal Engine product team samples.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Esri/arcgis-rest-js/tree/master/demos">ArcGIS REST JS demos</a> - Demo apps built by Esri's REST JS maintainers.</li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/java/sample-code/">ArcGIS Maps SDK for Java samples</a> - Esri's official ArcGIS Maps SDK for Java product team samples. (deprecated)</li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/net/maui/sample-code/">ArcGIS Maps SDK for .NET MAUI samples</a> - Esri's official ArcGIS Maps SDK MAUI product team samples.</li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/net/uwp/sample-code/">ArcGIS Maps SDK for .NET UWP samples</a> - Esri's official ArcGIS Maps SDK for .NET product team samples.</li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/net/winui/sample-code/">ArcGIS Maps SDK for .NET WinUI samples</a> - Esri's official ArcGIS Maps SDK WinUI product team samples.</li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/net/wpf/sample-code/">ArcGIS Maps SDK for .NET WPF samples</a> - Esri's official ArcGIS Maps SDK for .NET product team samples.</li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/android/java/sample-code/">ArcGIS Maps SDK for Android Java samples</a> - Esri's official ArcGIS Maps SDK for Android product team samples for Java.</li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/android/kotlin/sample-code/">ArcGIS Maps SDK for Android Kotlin samples</a> - Esri's official ArcGIS Maps SDK for Android product team samples for Kotlin.</li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/ios/swift/sample-code/">ArcGIS Maps SDK for iOS sample code</a> - Esri's official ArcGIS Maps SDK for iOS product team samples.</li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/qt/cpp/sample-code/">ArcGIS Maps SDK for Qt C++ sample code</a> - Esri's official ArcGIS Maps SDK for Qt product team samples for C++.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/hhkaos/arcgis-js-api-starter-apps">arcgis-js-api-starter-apps</a> - Collection of boilerplates to get started with the ArcGIS API for JavaScript 4.x.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Esri/arcgis-js-vscode-snippets">Esri/arcgis-js-vscode-snippets</a> - Collection of Visual Studio Code snippets for common code patterns for the ArcGIS API for JavaScript.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Esri/developer-support">Esri/developer-support</a> - Community samples to help be successful with all ArcGIS developer products (Python, NET, JavaScript, Android…).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Esri/jsapi-resources">Esri/jsapi-resources</a> - A collection of resources for developers using the ArcGIS API for JavaScript.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Esri/pyprt-examples">Esri/pyprt-examples</a> - Example for PyPRT (Python Bindings for the CityEngine SDK).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Esri/esri-loader#examples">esri-loader Examples</a> - Examples of how to use the ArcGIS API for JavaScript via esri-loader in applications built with React, Angular, Vue, and other frameworks.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/esridevevents">EsriDevEvents</a> - Supplemental source code, example projects, and resources supporting Esri Developer Summits, Developer Day at Esri UC, FedGIS, #GeoDev webinars, meetups, etc.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/esrinederland/CoolMaps">esrinederland/CoolMaps</a> - Shows cool example maps you can use.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/esrinederland/CoolScripts">esrinederland/CoolScripts</a> - Esri Netherlands scripts and snippets for reuse.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/RalucaNicola/code-snippets-arcgis-api-js">RalucaNicola/code-snippets-arcgis-api-js</a> - A collection of code snippets for ArcGIS API for JavaScript.</li>
+</('ul', 0)>
+<h2>Data conversion tools</h2>
+
+<ul>
+<li><a href="https://github.com/gavinr/arcgis-json-to-geojson">arcgis-json-to-geojson</a> - Convert layer in ArcGIS JSON spec to GeoJSON spec.</li>
+</ul>
+<ul>
+<li><a href="https://viglino.github.io/ol-ext/examples/misc/csv2geojson.html">csv2geojson</a> - Convert points from CSV format to GeoJSON.</li>
+</ul>
+<ul>
+<li><a href="http://shancarter.github.io/distillery/">Distillery</a> - Web application to simplify and project TopoJSON.</li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/rest/services-reference/enterprise/query-feature-service-layer-.htm">Feature Service Layer</a> - Use the <code>maxAllowableOffset</code> parameter to return generalized geometries with the <code>query</code> operation.</li>
+</ul>
+<ul>
+<li><a href="https://bit.ly/2VNPkuO">Generalize method</a> - GeometryEngine can produce a geometry with fewer vertices programatically. Several APIs supports it: JavaScript, iOS, Android, .NET, Qt and Java.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/OSGeo/gdal">gdal</a> - Translator library for raster and vector geospatial data formats.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/w8r/geojson2svg">geojson2svg</a> - Render GeoJSON into SVG using inline or external stylesheet.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ropensci/geojsonio">geojsonio</a> - Convert many data formats to and from GeoJSON and TopoJSON.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/gpxstudio/gpxstudio.github.io">gpxstudio</a> - Online and open source GPX file editor.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/node-geojson/gtfs2geojson">gtfs2geojson</a> - Convert GTFS data into GeoJSON.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/caseymm/img2geojson/">img2geojson</a> - Drag an image onto a map, trace the paths you need, and export as GeoJSON.</li>
+</ul>
+<ul>
+<li><a href="https://koopjs.github.io">Koop</a> - JavaScript toolkit for connecting spatial APIs. Transform geospatial data on the fly and serve as GeoJSON, vector tiles, feature services and more.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/azavea/loam">loam</a> - JavaScript wrapper for GDAL in the browser.</li>
+</ul>
+<ul>
+<li><a href="https://postgis.net/docs/ST<em>Simplify.html">PostGIS ST</em>Simplify</a> - This operation returns a "simplified" version of the given geometry using the Douglas-Peucker algorithm.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/terraformer-js/terraformer">terraformer</a> - Convert ArcGIS JSON to and from GeoJSON, convert WKT geometries to and from GeoJSON geometries, and other formats.</li>
+</ul>
+<ul>
+<li><a href="https://mapbox.github.io/togeojson/">togeojson</a> - Convert KML and GPX to GeoJSON, without the fuss.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mapbox/tokml">tokml</a> - Convert GeoJSON to KML.</li>
+</('ul', 0)>
+<h2>Data integration tools</h2>
+
+<ul>
+<li><a href="https://esri-es.github.io/awesome-arcgis/arcgis/products/extensions/data-interoperability/">ArcGIS Data Interoperability Extension</a> - Desktop tool to transform +400 data formats. </li>
+</ul>
+<ul>
+<li><a href="https://www.safe.com/integrate/">FME Server</a> - ETL allowing to easily transform almost any dataset into an ArcGIS compatible format and vice-versa. Support for 500+ formats and technologies.</li>
+</ul>
+<ul>
+<li><a href="https://www.make.com/en/integrations/survey123">Make.com</a> - iPaaS to automate repetitive tasks involved in using Survey123 and make your work easier.</li>
+</ul>
+<ul>
+<li><a href="https://flows.nodered.org/node/node-red-contrib-arcgis-rest">node-red-contrib-arcgis-rest</a> - Query, delete, update or insert data with low-code programming for event-driven applications of the JS Foundation.</li>
+</ul>
+<ul>
+<li><a href="https://marketplace.arcgis.com/listing.html?id=5ab7936269f8449b82b0f5c78695ab38">Zapier for ArcGIS</a> - iPaaS to automate integrations without writing any code.</li>
+</ul>
+<ul>
+<li><a href="https://tray.io/connectors/arcgis-integrations">Tray.io</a> - Manual, scheduled and webhook triggers to apply edits, get features, layers, etc. using Tray Platform's ArcGIS connector.</li>
+</('ul', 0)>
+<h2>Debugging tools</h2>
+
+<ul>
+<li><a href="https://cors-test.codehappy.dev/">cors-test.codehappy.dev</a> - App to test CORS requests.</li>
+</ul>
+<ul>
+<li><a href="https://www.telerik.com/fiddler/fiddler-classic">Fiddler Classic</a> - Windows tool that logs HTTP(s) network traffic.</li>
+</ul>
+<ul>
+<li><a href="https://geojsonlint.com/">GeoJSONLint</a> - Validate and view your GeoJSON.</li>
+</ul>
+<ul>
+<li><a href="https://json-schema.org/">json-schema.org</a> - Vocabulary that allows you to annotate and validate JSON documents (include multiple validators).</li>
+</ul>
+<ul>
+<li><a href="http://mapbox.github.io/geojson-vt/debug/">mapbox/geojson-vt/debug</a> - Validate GeoJSON or TopoJSON.</li>
+</ul>
+<ul>
+<li><a href="https://www.postman.com/product/postman-interceptor/">Postman interceptor</a> - Interceptor enables you to sync cookies from your browser and capture network requests directly from Chrome.</li>
+</ul>
+<ul>
+<li><a href="https://netbalancer.com/">netbalancer.com</a> - Windows application for local network traffic control and monitoring.</li>
+</('ul', 0)>
+<h2>Design and styling</h2>
+
+<ul>
+<li>Best practices, books, videos and training:</li>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=AGf_DjZZwXc">Cartography and Making Stunning Maps</a> - Short video showing some examples on what can be achieved using different blend modes effects.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=6vy-kVkIcRg&list=PLPjPOZQjCWEn6ezKrwN11L8NWhZ2JdpYd">How to style using ArcGIS Online</a> - Playlist with a collection of short videos showcasing some ArcGIS styling capabilities.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=crmWm80hwKI">Photoshop-style Graphics Effects for Your Layers and Data</a> - Video explaining how to use blend modes as well as layer and feature effects to create unique and stunning web maps using the ArcGIS API for JavaScript 4.x. </li>
+</ul>
+<ul>
+<li><a href="https://www.mapuipatterns.com/">MapUIPatterns</a> - Best practices & design principles. UI Patterns describe solutions to observed and recurring design problems.</li>
+</ul>
+</ul>
+<ul>
+<li>Developer tools:</li>
+<ul>
+<li><a href="https://developers.arcgis.com/calcite-design-system/">Calcite Design System</a> - Collection of mapping icons, web components, and good practices.</li>
+</ul>
+</ul>
+<ul>
+<li>GUIs:</li>
+<ul>
+<li><a href="https://developers.arcgis.com/documentation/mapping-apis-and-services/tools/vector-tile-style-editor/">ArcGIS Vector Tile Style Editor</a> - Style vector tile basemap layers for applications.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Esri/arcgis-vectortile-style-editor">arcgis-vectortile-style-editor</a> - Minimalistic tool to update the styles of Esri Vector Basemaps through JSON.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/EsriUK/mapstyler">EsriUK mapstyler</a> - Quickly style an Esri vector tile layer using an image.</li>
+</('ul', 1)>
+</('ul', 0)>
+<h2>Developer guides</h2>
+
+<ul>
+<li><a href="https://developers.arcgis.com/documentation/mapping-apis-and-services/content-management/">Content management</a> - Store, manage, and access private and public content.</li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/documentation/mapping-apis-and-services/data-hosting/">Data hosting</a> - Store, manage, and access your data as data services.</li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/documentation/mapping-apis-and-services/demographics/">Demographics</a> - Discover local facts and demographic information with the GeoEnrichment service.</li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/documentation/mapping-apis-and-services/maps/">Maps</a> - Display 2D maps and 3D scenes using the basemap layer service and data services.</li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/documentation/mapping-apis-and-services/offline/">Offline</a> - Display, analyze, and edit data while disconnected.</li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/documentation/mapping-apis-and-services/routing/">Routing</a> - Find routes and directions with the routing service.</li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/documentation/mapping-apis-and-services/search/">Search</a> - Search for addresses, businesses, and places of interest (POIs) with the geocoding service.</li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/documentation/mapping-apis-and-services/security/">Security and authentication</a> - Access services and content using API keys and OAuth 2.0.</li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/documentation/mapping-apis-and-services/visualization/">Visualization</a> - Style layers to visualize data in 2D and 3D.</li>
+</('ul', 0)>
+<h2>Helpers</h2>
+
+<ul>
+<li><a href="https://github.com/hhkaos/arcgis-geometry-calculations">arcgis-geometry-calculations</a> - Web application to create and grab ArcGIS geometry calculations.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pjmclaughlin1979/arcgis-js-api-camera-helper">arcgis-js-api-camera-helper</a> - Web application to get the camera position JSON object for 3D web apps in the ArcGIS API for JavaScript 4.x.</li>
+</ul>
+<ul>
+<li><a href="https://arcgis-js-api-extent-helper.gavinr.com/">arcgis-js-api-extent-helper</a> -  Web application to get the map extent JSON object for web apps in the ArcGIS API for JavaScript 4.x.</li>
+</ul>
+<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=ScottDavis.vscode-arcgis-js-api-module-butler&ssr=false#overview">ArcGIS JS API Module Butler</a> - VSCode extension for quickly adding ES import statements for the @arcgis/core package without leaving your current code context.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/maptiler/">epsg.io</a> - Website to discover and transform coordinate systems from all over the world.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Esri/esri-loader">esri-loader</a> - A tiny library to help you lazy-load the ArcGIS API for JavaScript (i.e. from the CDN) in applications built with popular JavaScript frameworks and bundlers.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tomwayson/esri-loader-hooks">esri-loader-hooks</a> - Custom React hooks for using the ArcGIS API for JavaScript with esri-loader.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/erick-otenyo/geojson-random-generator">geojson-random-generator</a> - Generate and download random GeoJSON quickly for testing.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/radical-data/reducegeojson">reducegeojson</a> - A tool to reduce the file size of GeoJSON files for web optimisation.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/hhkaos/histogrand">histogrand</a> - Random value generator according to customized histograms.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/hhkaos/mercator-geographic-converter/">mercator-geographic-converter</a> - Simple coordinate converter between Geographic units (latitude, longitude) and Mercator units (x, y).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Esri/react-sceneview">react-sceneview</a> - A simple Esri SceneView react component that builds on the ArcGIS API for JavaScript.</li>
+</ul>
+<ul>
+<li><a href="http://bboxfinder.com/">bboxfinder</a> - Simple web application to get the coordinates of a bounding box drawn on the map.</li>
+</ul>
+<ul>
+<li><a href="https://ubatsukh.github.io/arcgis-js-api-demos/clientside-rasterfunctions/index.html">snippets client side raster functions</a> - The client-side raster functions are operations that apply processing directly to the source image pixels.</li>
+</('ul', 0)>
+<h2>Map and data exploration</h2>
+
+<ul>
+<li><a href="https://www.arcgis.com/apps/mapviewer/index.html">ArcGIS Map Viewer</a> - Web application to create, explore, and share web maps for 2D applications.</li>
+</ul>
+<ul>
+<li><a href="https://arcgis.com/home/webmap/viewer.html">ArcGIS Map Viewer (classic version)</a> - Web application to create, explore, and share web maps for 2D applications.</li>
+</ul>
+<ul>
+<li><a href="https://www.arcgis.com/home/webscene/viewer.html">ArcGIS Scene Viewer</a> - Web application to create, explore, and share web maps for 3D applications.</li>
+</ul>
+<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=RandomFractalsInc.geo-data-viewer">Geo Data Viewer</a> - VSCode extension for Geo Data Analytics. Support to generate and view maps.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mapbox/geojson.io">geojson.io</a> - Web application to visualize, generate and edit geospatial vector data. Supports GeoJSON, TopoJSON, CSV, KML, WKT, and shapefile.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mbloch/mapshaper">Mapshaper</a> - Web application to simplify shapes, edit attribute data, clipp, erase, dissolve, filter, etc. Supported file formats: Shapefile, GeoJSON, TopoJSON and CSV files. </li>
+</ul>
+<ul>
+<li><a href="https://www.esri.com/en-us/smart-mapping">Smart Mapping</a> - It is built-in in the Map and Scene viewer, but some APIs like JavaScript and Python also provide utilities to help building data explorations tools.</li>
+</ul>
+<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=jumpinjackie.vscode-map-preview">VSCode Map Preview</a> - Extension for visually previewing geospatial file content (GeoJSON, KML, etc) on a map.</li>
+</('ul', 0)>
+<h2>Playgrounds</h2>
+
+<ul>
+<li><a href="https://developers.arcgis.com/arcade/playground/">arcgis-arcade-playground</a> - Try the portable scripting language for creating ArcGIS custom visualizations and labeling expressions.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Esri/cim-symbol-builder-js">cim-symbol-builder</a> - Generate CIM symbols to work with ArcGIS client APIs and feature services.</li>
+</ul>
+<ul>
+<li><a href="http://brianbunker.github.io/geometry-inspector/">geometry-inspector</a> - Quickly show EsriJSON, GeoJSON, or WKT on a map, or draw on a map to get EsriJSON, GeoJSON, or WKT.</li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/javascript/3/samples/playground/index.html">js-symbol-playground 3.x</a> - Generate symbols to work with the ArcGIS API for JavaScript 3.x.</li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/javascript/latest/sample-code/playground/live/">js-symbol-playground 4.x</a> - Generate symbols to work with the ArcGIS API for JavaScript 4.x.</li>
+</ul>
+<ul>
+<li><a href="https://www.postman.com/esridevs">Postman workspaces</a> - Postman collections to experiment with location services and authentication.</li>
+</('ul', 0)>
+<h2>Spatial Analysis</h2>
+
+<ul>
+<li><a href="https://github.com/Esri/gis-tools-for-hadoop">Esri/gis-tools-for-hadoop</a> - Collection of GIS tools for spatial analysis of big data.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Esri/spatial-framework-for-hadoop">Esri/spatial-framework-for-hadoop</a> - Allows developers and data scientists to use the Hadoop data processing system for spatial data analysis.</li>
+</ul>
+<ul>
+<li><a href="https://esri-es.github.io/arcgis-search/?search=geometry+engine&utm_source=chrome-extension#gsc.tab=0&gsc.q=geometry%20engine%20site:developers.arcgis.com&gsc.sort=">Client-side Geometry Engine</a> - Allows you to test spatial relationships, calculate new geometries, and measure lengths, areas, distances, etc.</li>
+<ul>
+<li><a href="https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-geometryEngine.html">ArcGIS API for JavaScript <code>geometryEngine</code></a> - Works for browsers and Node.js.</li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/python/api-reference/arcgis.geometry.html">ArcGIS API for Python <code>arcgis.geometry</code></a></li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/net/api-reference/api/netwin/Esri.ArcGISRuntime/Esri.ArcGISRuntime.Geometry.GeometryEngine.html">ArcGIS Maps SDK for .NET <code>GeometryEngine</code></a></li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/android/api-reference/reference/com/esri/arcgisruntime/geometry/GeometryEngine.html">ArcGIS Maps SDK for Android <code>GeometryEngine</code></a></li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/ios/api-reference/interface<em>a</em>g<em>s</em>geometry_engine.html">ArcGIS Maps SDK for iOS <code>AGSGeometryEngine</code></a></li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/qt/cpp/api-reference/esri-arcgisruntime-geometryengine.html">ArcGIS Maps SDK for Qt <code>GeometryEngine</code></a></li>
+</ul>
+</ul>
+<!--lint disable double-link-->
+<ul>
+<li><a href="https://developers.arcgis.com/rest/analysis/api-reference/getting-started.htm">Spatial analysis service</a> - Process spatial datasets to discover relationships and patterns.</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/@turf/simplify">Turf.js</a> - Geospatial analysis for browsers and Node.js.</li>
+</('ul', 0)>
+<h2>Specifications</h2>
+
+<ul>
+<li><a href="https://github.com/Esri/cim-spec">Cartographic Information Model spec</a> - Map content specification used to persist and transfer cartographic descriptions of GIS datasets represented in JSON.</li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/documentation/common-data-types/geometry-objects.htm">Common data types</a> - JSON formats of the geometry and spatial reference objects as returned by ArcGIS REST API: Point, Multipoint, Polyline, Polygon and Envelope.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/koopjs/FeatureServer">GeoServices spec</a> - Open Web Foundation REST-based API that provides a complete access to structured geospatial data used by Esri.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Esri/i3s-spec">Indexed 3D Scene Layers</a> - Service and package standard of containers for arbitrarily large amounts of geographic data.</li>
+</ul>
+<ul>
+<li><a href="https://www.esri.com/content/dam/esrisites/sitecore-archive/Files/Pdfs/library/whitepapers/pdfs/shapefile.pdf">Shapefile Format</a> - Spec for the geospatial vector data format for GIS software.</li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/documentation/spatial-references/#spatial-reference-specifications">Spatial reference specifications</a> - List of  Well-Known ID (WKID) integer value or a text string definition referred to as Well-Known Text (WKT) to define a spatial reference.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Esri/tile-package-spec">Tile Package Specification</a> - Compressed file containing a set of tiles and a tiling scheme, which can be used as a basemap in ArcGIS applications.</li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/web-map-specification/">Web Map spec</a> - Sharable 2D maps. It describes the JSON object which defines a web map.</li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/web-scene-specification/">Web Scene spec</a> - A JSON structure that defines the contents (viewpoint, camera, basemap layer, layers, styles, etc.) for a shareable 3D scene.</li>
+</('ul', 0)>
+<h2>Starter apps and CLIs</h2>
+
+<ul>
+<li><a href="https://github.com/Esri/arcgis-js-cli">@arcgis/cli</a> - Quickly scaffold various applications for the ArcGIS API for JavaScript.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Esri/generator-esri-appbuilder-js">generator-esri-appbuilder-js</a> - Yeoman generator to help customize Esri's Web AppBuilder.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/koopjs/koop-cli">koop-cli</a> - Tool to scaffold Koop applications and plugins.</li>
+<hr>
+</ul>
+<!--lint disable no-emphasis-as-heading-->
+<p><strong>Related awesome lists</strong></p>
+
+<ul>
+<li><a href="https://github.com/esri-es/awesome-arcgis/">awesome-arcgis</a> - Awesome list with a wiki flavor with resources about Esri and ArcGIS organized by: products, industries, file formats, content providers, etc.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/acgeospatial/awesome-earthobservation-code">awesome-earthobservation-code</a> - Tools, tutorials, code, helpful projects and links about Earth Observation and Geospatial stuff.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tmcw/awesome-geojson">awesome-geojson</a> - GeoJSON utilities: operations,editors & viewers, validation, services, conversion, etc.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sacridini/Awesome-Geospatial">awesome-geospatial</a> - Databases, radar, lidar, web map development, etc.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sshuair/awesome-gis">awesome-gis</a> - GIS, remote sensing, 3D apps, Web Map Servers, Geospatial libraries, Open Standards, data, etc.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jdorfman/awesome-json-datasets">awesome-json-datasets</a> - JSON datasets that don't require authentication about: climate, crime, goverment, NASA, travel, etc.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/softwareunderground/awesome-open-geoscience">awesome-open-geoscience</a> - Curated from repositories that make our lives as geoscientists, hackers, and data wranglers easier or just more awesome.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/awesomedata/awesome-public-datasets">awesome-public-datasets</a> - A topic-centric list of high-quality open datasets.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/wenhwu/awesome-remote-sensing-change-detection">awesome-remote-sensing-change-detection</a> - List of datasets, codes, and contests related to remote sensing change detection.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/chrieke/awesome-satellite-imagery-datasets">awesome-satellite-imagery-datasets</a> - List of satellite image training datasets with annotations for computer vision and deep learning.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mrgloom/awesome-semantic-segmentation">awesome-semantic-segmentation</a> - Networks by architecture (semantic segmentation, instance aware segmentation, etc.), RNN, GANS, datasets, and more.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mapbox/awesome-vector-tiles">awesome-vector-tiles</a> - Implementations of the Mapbox Vector Tile specification: parsers & generators, clients, apps and command line tools, CLI utilities, servers, etc.</li>
+</ul>
+<!--lint disable no-emphasis-as-heading-->
+<p><strong>Issues</strong></p>
+
+<p>Any open issues are fair game. Even just telling us what you want to see would be extremely helpful!</p>
+
+<p>You can <a href="https://github.com/ArcGIS/awesome-arcgis-developer/issues/new">file an issue</a> to request or suggest a specific resource.</p>
+
+<!--lint disable no-emphasis-as-heading-->
+<p><strong>Contributing</strong></p>
+
+<p>Esri welcomes contributions from anyone and everyone. You can <a href="https://github.com/ArcGIS/awesome-arcgis-developer/pulls">issue a pull request</a> to propose an update, but before doing it, please:</p>
+
+<ul>
+<li>Check the <a href="./CONTRIBUTING.md">contributing guidelines for this repo</a>.</li>
+</ul>
+<ul>
+<li>Take a look at <a href="https://github.com/ArcGIS/awesome-arcgis-developer/issues">previously logged issues</a>. </li>
+</ul>
+<p>For more information please see Esri's <a href="https://github.com/esri/contributing">guidelines for contributing</a>.</p>
+
+<!--lint disable no-emphasis-as-heading-->
+
+<p><strong>Footnotes</strong></p>
+
+<p>Copyright 2022 Esri</p>
+
+</body>
+</html>

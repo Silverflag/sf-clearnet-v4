@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>DOS</h1>
+
+<p><strong>Repository:</strong> https://github.com/balintkissdev/awesome-dos#readme</p>
+<p><strong>Source File:</strong> readme.md</p>
+
+<hr>
+
+<h1>Awesome DOS <a href="https://awesome.re/badge.svg"><img src="https://awesome.re" alt="Awesome</a>"></h1>
+
+<p>Family of operating systems for x86-based personal computers including IBM PC DOS and MS-DOS that were popular during the 1980s and early 1990s.</p>
+
+<p><a href="https://github.com/balintkissdev/awesome-dos"><img src="logo.svg" align="right" width="100"></a></p>
+
+<p>A curated list of references for development of DOS applications and learning</p>
+<p>about the system itself. This includes list of compilers, tutorials, videos,</p>
+<p>links to free and paid books and source code to DOS operating systems and DOS</p>
+<p>games. The goal of this list is to collect information and act as a starting</p>
+<p>point for someone who wants to start out retro-programming for the DOS</p>
+<p>platform.</p>
+
+<h2>Contents</h2>
+
+<ul>
+<li><a href="#development-tools">Development tools</a></li>
+</ul>
+<ul>
+<li><a href="#tutorials-and-programming-resources">Tutorials and programming resources</a></li>
+</ul>
+<ul>
+<li><a href="#books">Books</a></li>
+</ul>
+<ul>
+<li><a href="#videos">Videos</a></li>
+</ul>
+<ul>
+<li><a href="#source-code">Source code</a></li>
+<ul>
+<li><a href="#open-source-dos-operating-systems">Open source DOS operating systems</a></li>
+</ul>
+<ul>
+<li><a href="#open-source-dos-libraries">Open source DOS libraries</a></li>
+</ul>
+<ul>
+<li><a href="#open-source-dos-games">Open source DOS games</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#drivers-and-emulators">Drivers and emulators</a></li>
+</('ul', 0)>
+<h2>Development tools</h2>
+
+<ul>
+<li><a href="https://www.ibiblio.org/pub/micro/pc-stuff/freedos/files/distributions/1.2/repos/pkg-html/bcc.html">bcc - Bruce's Compiler</a> - Bruce's C compiler is a simple C compiler that produces 8086 assembler for tiny/small memory models.</li>
+</ul>
+<ul>
+<li><a href="http://www.delorie.com/djgpp/">DJGPP</a> - DJ Delorie's complete 32-bit C/C++ development environment for Intel 80386. Used for Quake.</li>
+</ul>
+<ul>
+<li><a href="https://gitlab.com/tkchia/build-ia16/-/releases">GCC IA-16 toolchain</a> - A 16-bit counterpart to DJGPP, a GCC-based toolchain for developing 16-bit (8086 to 80286, a.k.a. IA-16) DOS applications, currently maintained by TK Chia.</li>
+</ul>
+<ul>
+<li><a href="https://www.bttr-software.de/products/insight/">Insight</a> - Very small debugger for real-mode DOS programs with Borland's Turbo like UI. Features an i80486 disassembler, and i8086 assembler.</li>
+</ul>
+<ul>
+<li><a href="https://web.archive.org/web/20220627162043/http://www.openwatcom.org/">Open Watcom</a> - Formerly commercial C/C++ development environment for 16- and 32-bit DOS and</li>
+</ul>
+<p>Windows. The current official version is 1.9. A GitHub fork is also available. Used for Doom I-II, Warcraft I-II, Duke Nukem 3D, Full Throttle, Dark Forces and Retro City Rampage.</p>
+<ul>
+<li>The <a href="https://web.archive.org/web/20220630162351/http://www.openwatcom.org/doc.php">documentation</a> is very valuable in order to understand working with both version 1.9 and the V2 fork.</li>
+</ul>
+<ul>
+<li><a href="https://wiki.archlinux.org/index.php/Open_Watcom">Arch Wiki page</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/open-watcom/open-watcom-v2">Open Watcom V2</a> - GitHub fork which is actively maintained and is</li>
+</ul>
+<p>ported to 64-bit Windows and Linux.</p>
+<ul>
+<li><a href="http://www.doshaven.eu/wp-content/uploads/2014/08/tc201.zip">Turbo C 2.01</a> - C IDE and compiler from Borland first released in 1987.</li>
+</ul>
+<ul>
+<li><a href="http://www.doshaven.eu/wp-content/uploads/2014/08/tcpp101.zip">Turbo C++ 1.01</a> - C++ IDE and compiler from Borland released in 1991.</li>
+</ul>
+<ul>
+<li><a href="https://archive.org/details/tcc_20210425">Turbo C++ 3.0</a> - C++ IDE and compiler from Borland released in 1992.</li>
+<ul>
+<li><a href="https://turboc.pages.dev/">Online version.</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://archive.org/details/div2_iso">DIV Games Studio 2</a> - IDE to develop DOS games in 2d, mode 7 and 3d. Released in 1998.</li>
+<ul>
+<li><a href="http://js.mikedx.co.uk/DIV1.html">Online version.</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://t3x.org/t3x/#t3x7">T3X</a> - A small, portable, procedural, block-structured, recursive, almost typeless, and to some degree object-oriented programming language by Nils M. Holm.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/alexfru/SmallerC.git">SmallerC</a> - Portable self-hosting C compiler capable of producing executables for a number of platforms, including real and protected mode DOS programs, by Alexei A. Frounze.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/humbertocsjr/Small-C.git">Small-C Toolkit</a> - A self-hosting Small-C Compiler Toolkit for DOS(8086) with: K&R C Compiler, Make, Linker, Assembler. First released in 1982 by Jim E. Hendrix.</li>
+</('ul', 0)>
+<h3>Memory managers</h3>
+
+<ul>
+<li><a href="https://github.com/sudleyplace/386MAX">386MAX</a> - Memory manager for DOS PCs with 386 or higher CPUs, <a href="https://winworldpc.com/product/386max/6x">released by Qualitas company in 1992</a>. Source code was released in June 2022 on GitHub with GPL-3.0 license.</li>
+</('ul', 0)>
+<h3>Scripting languages and interpreters for DOS</h3>
+
+<ul>
+<li><a href="https://github.com/SuperIlu/DOjS">DOjS</a> - JavaScript programming environment for MS-DOS, FreeDOS or any DOS-based Windows (like 95, 98, ME).</li>
+</ul>
+<ul>
+<li><a href="https://archive.org/details/lua5.3.5">Lua for DOS</a> - Online demo of Lua 5.3.5, compiled for MS-DOS on the Intel 80486 processor.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pohmelie/micropython-freedos">Micropython for FreeDOS</a> - FreeDOS ad-hoc module for <a href="https://github.com/micropython/micropython">micropython</a>.</li>
+</ul>
+<ul>
+<li><a href="https://perldoc.perl.org/perldos">perldos</a> - Perl for DOS.</li>
+</ul>
+<ul>
+<li><a href="http://www.caddit.net/pythond/">PythonD</a> - Python for DOS, including multi-threading, networking and OpenGL.</li>
+</('ul', 0)>
+<h2>Tutorials and programming resources</h2>
+
+<h3>History</h3>
+
+<ul>
+<li><a href="https://b13rg.github.io/Life-of-MS-DOS/">The Life of MS-DOS by Brendan Byers</a> - History of the DOS family including CP/M, Q-DOS/86-DOS, MS-DOS and PC-DOS. Article also includes a diagram of the timeline and family tree of DOS</li>
+</ul>
+<p>operating systems.</p>
+
+<h3>Compiling</h3>
+
+<ul>
+<li><a href="http://alexfru.narod.ru/os/c16/c16.html">80x86 16-bit Compiling How-to by Alexei A. Frounze</a> - 16-bit compilation tutorial for Borland/Turbo C/C++ and Open Watcom. Goes into depth of memory addressing and memory models.</li>
+</ul>
+<ul>
+<li><a href="http://tuttlem.github.io/2015/10/04/32bit-dos-development-with-open-watcom.html">32bit DOS development with Open Watcom</a> - 32-bit compilation tutorial for Open Watcom.</li>
+</ul>
+<ul>
+<li><a href="https://nullprogram.com/blog/2014/12/09/">How to build DOS COM files with GCC by Chris Wellons</a> - Build process of Chris Wellons's DOS Defender game using DJGPP. Goal was to create a 32-bit 80386 COM executable.</li>
+</('ul', 0)>
+<h3>General</h3>
+
+<ul>
+<li><a href="https://web.archive.org/web/20240812211701/http://www.brackeen.com/vga/">David Brackeen - 256-Color VGA Programming in C</a> - Tutorial series to learn how to create graphics on DOS, written in 1996.</li>
+</ul>
+<ul>
+<li><a href="https://blog.sourcerer.io/640k-really-is-enough-for-anyone-314f393ca5b8">640k Really is Enough for Anyone by Robert W. Oliver II</a> - Short article about getting Turbo C running on FreeDOS and moving a pixel around.</li>
+</ul>
+<!--lint disable no-repeat-punctuation-->
+<ul>
+<li><a href="https://scalibq.wordpress.com/2011/11/23/just-keeping-it-real-old-skool-style/">Just keeping it real... old skool style - Scali's OpenBlog</a> - Blog post about Scali's journey of doing CGA, EGA and VGA programming.</li>
+</ul>
+<!--lint enable no-repeat-punctuation-->
+<ul>
+<li><a href="https://web.archive.org/web/20201112023702/http://www3.telus.net/alexander<em>russell/course/introduction.htm">Alex Russell's Dos Game Programming in C for Beginners</a> - DOS game programming tutorial series including a primer on C, graphics, animation, input handling and collision detection. This series contains a tutorial for making <a href="https://web.archive.org/web/20200203195410/http://www3.telus.net/alexander</em>russell/course/chapter_4.htm">buffered input handling</a>. Last chapter contains full source code of a Break Out game on DOS.</li>
+</ul>
+<ul>
+<li><a href="http://web.archive.org/web/20201031021650/http://atrevida.comprenica.com/">The Artevida Game Programming Tutorials</a> - Kevin Matz's almost book-length treatment of DOS system programming and VGA programming fundamentals using C/C++ and 80x86 assembly. Unfortunately it is incomplete and was abandoned since 2001.</li>
+</ul>
+<ul>
+<li><a href="https://web.archive.org/web/20201111164240/http://bespin.org/~qz/pc-gpe/">PC Game Programmer's Encyclopedia</a> - Collection of guides covering assembly, sound (Sound Blaster, Gravis UltraSound, PC Speaker, GameBlaster, Adlib), input, memory (EMS, XMS, DMA Transfers), PIT, VGA, SVGA, algorithms and file formats.</li>
+</ul>
+<ul>
+<li><a href="http://web.archive.org/web/20190123060222/http://www.flipcode.com/archives/The<em>Art</em>of<em>Demomaking-Issue</em>02<em>Introduction</em>To<em>Computer</em>Graphics.shtml">The Art of Demomaking by flipcode</a> - Series from 1999 that introduces to graphics programming under DOS. The home site contains other late 90s/early 2000s game programming articles as well.</li>
+</ul>
+<ul>
+<li><a href="http://web.archive.org/web/20200626182822/http://www.fysnet.net/">Programming MS-DOS with Power - DOS Programming, Undocumented DOS, and DOS Secrets</a> - System programming tutorials like disk handling, interrupts, inputs, sound, graphics.</li>
+</ul>
+<ul>
+<li><a href="http://discmaster.textfiles.com/view/4555/Programmer%27s%20Heaven%20%28InfoMagic%29%28March%201997%29.BIN%2Fmain.htm">Programmer's Heaven (InfoMagic)(March 1997) CD-ROM</a> - Source code and files for the following topics: MS-DOS, networking, C, C++, Pascal, Visual Basic, Delphi, 3D, PC speaker, Soundblaster, Gravis Ultrasound, MIDI and many more.</li>
+</('ul', 0)>
+<h3>DOS API</h3>
+
+<ul>
+<li><a href="https://digitalmars.com/rtl/bios.html">bios.h header documentation by Digital Mars</a> - API documentation for routines accessing BIOS operations directly (disk operations, BIOS keyboard, printer, time, memory, serial, interrupts).</li>
+</ul>
+<ul>
+<li>dos.h header documentation by Digital Mars <a href="https://digitalmars.com/rtl/dos.html">Part 1</a> <a href="https://digitalmars.com/rtl/dos2.html">Part 2</a> - API documentation of functions for interfacing with the DOS operating system itself.</li>
+</('ul', 0)>
+<h3>Interrupts</h3>
+
+<ul>
+<li><a href="https://web.archive.org/web/20201111162212/http://www.ctyme.com/rbrown.htm">Ralph Brown's Interrupt List - HTML version</a> - List of every documented and undocumented interrupt call known, accessible through search, categories and interrupt numbers.</li>
+<ul>
+<li>Original in downloadable .zip files from <a href="https://web.archive.org/web/20201108093425/http://www.cs.cmu.edu/~ralf/files.html">Ralph Brown's website</a></li>
+</('ul', 2)>
+</('ul', 0)>
+<h3>Memory</h3>
+
+<ul>
+<li><a href="https://devblogs.microsoft.com/oldnewthing/20200728-00/?p=104012">A look back at memory models in 16-bit MS-DOS</a> - Raymond Chen's explanation of segmented memory, including near- and far pointers.</li>
+</('ul', 0)>
+<h3>Video</h3>
+
+<ul>
+<li><a href="https://web.archive.org/web/20200214123701/http://www.columbia.edu/~em36/wpdos/videomodes.txt">Values for standard video mode</a> - List of all known video modes including BIOS interrupt numbers, text/pixel resolution, number of colors and video memory addresses.</li>
+</('ul', 0)>
+<h4>CGA</h4>
+
+<ul>
+<li><a href="https://web.archive.org/web/20201112020351/https://www.seasip.info/VintagePC/cga.html">Color Graphics Adapter: Notes</a> - Document describing the hardware, memory map, register I/O and hardware clones of the IBM's original CGA.</li>
+</('ul', 0)>
+<h4>VGA</h4>
+
+<ul>
+<li><a href="https://wiki.osdev.org/VGA_Hardware">VGA Hardware - OSDev wiki</a> - Hardware guide for VGA cards that is also relevant for modern graphics cards including NVidia and ATI.</li>
+</ul>
+<ul>
+<li><a href="http://web.archive.org/web/20201112040702/http://www.wagemakers.be/english/doc/vga">Graphical programming in Assembly (DOS)</a> - A VGA programming tutorial that also shows the list of video modes (text, CGA, EGA, VGA, SVGA) in a table at the beginning.</li>
+</ul>
+<ul>
+<li><a href="http://joco.homeserver.hu/vgalessons/">VGA programming lessons</a> - VGA programming tutorial series in Pascal and Assembly.</li>
+</('ul', 0)>
+<h4>SVGA</h4>
+
+<ul>
+<li><a href="https://web.archive.org/web/20200724153658/http://www.faqs.org/faqs/pc-hardware-faq/supervga-programming/">DOS Super VGA / VESA programming notes - by Myles</a> - VESA article with history at the beginning and short mention of the VESA VBE standard, but unfortunately the example codes aren't even available through Wayback Machine.</li>
+</ul>
+<ul>
+<li><a href="https://wiki.osdev.org/Getting<em>VBE</em>Mode_Info">VESA Video Modes - OSDev wiki</a> - Tutorial about querying VESA modes.</li>
+</ul>
+<ul>
+<li><a href="http://www.delorie.com/djgpp/doc/ug/graphics/vesa.html.en">DJGPP VESA guide</a> - Tutorial about querying VESA modes.</li>
+</ul>
+<ul>
+<li><a href="https://web.archive.org/web/20200128180543/http://www.monstersoft.com/tutorial1/">High-res high-speed VESA tutorial</a> - Series of tutorials that include drawing pixels in VESA mode (protected or real).</li>
+</ul>
+<ul>
+<li><a href="https://web.archive.org/web/20200121065447/http://www.codenet.ru/progr/video/vesa20ex.php">C code sample for drawing in VESA 2.0 mode</a> - Just code listing for drawing an ellipse in VESA mode.</li>
+</('ul', 0)>
+<h3>Sound</h3>
+
+<ul>
+<li><a href="http://discmaster.textfiles.com/browse/63/Programming%20Sound%20Cards.iso">Programming Sound Cards CD</a> - A 1995 CD-ROM containing source code for Adlib, Gravis, Pro-Audio, Roland and Sound Blaster sound cards. The description for the folders on the CD-ROM is listed <a href="https://archive.org/details/programming-sound-cards/Programming%20Sound%20Cards_back.jpg">on the back of the CD-ROM case.</a></li>
+</('ul', 0)>
+<h4>PC Speaker</h4>
+
+<ul>
+<li><a href="https://web.archive.org/web/20150302161648/http://heim.ifi.uio.no/~inf3150/grupper/1/pcspeaker.html">Making some noise with the PC speaker! - by Mark Feldman</a> - Very short tutorial on using the PIT for generating PC speaker frequency.</li>
+</ul>
+<ul>
+<li><a href="https://web.archive.org/web/20201129091353/https://pages.mtu.edu/~suits/notefreqs.html">Frequencies of Musical Notes</a> - Freqency table usable to parameterize the PC speaker.</li>
+</ul>
+<ul>
+<li><a href="https://web.archive.org/web/20171115162742/http://guideme.itgo.com/atozofc/ch23.pdf">Sound Programming with PC Speaker - Chapter 23 of A to Z of C</a> - PC speaker programming chapter of the "A to Z of C" book with source code.</li>
+</('ul', 0)>
+<h4>AdLib/OPL2</h4>
+
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Yamaha_YM3812">Yamaha YM3812 (OPL2) sound chip Wikipedia article</a> - Best starting point to learn about the OPL2 sound chip besides 8-bit guy's YouTube video.</li>
+</ul>
+<ul>
+<li><a href="https://web.archive.org/web/20200427145810/http://www.vgmpf.com/Wiki/images/4/48/AdLib<em>-</em>Programming_Guide.pdf">The Ad Lib Music Synthesizer Card Programming Guide - by Tero Töttö</a> - Reference of OPL2 operations and registers.</li>
+</('ul', 0)>
+<h4>Sound Blaster/OPL3</h4>
+
+<ul>
+<li><a href="https://web.archive.org/web/20200509082459/http://www.fit.vutbr.cz/~arnost/opl/opl3.html">Programmer's Guide to the Yamaha YMF 262/OPL3 FM Music Synthesizer</a> - Reverse-engineered reference on OPL3.</li>
+</ul>
+<ul>
+<li><a href="https://web.archive.org/web/20201130110457/http://homepages.cae.wisc.edu/~brodskye/sb16doc/sb16doc.html">Sound Blaster 16 Programming Document 3.5 by Ethan Brodsky</a> - Programming the Sound Blaster 16 DSP CT1341 chip for recording and playback of digitized audio.</li>
+<ul>
+<li>version 3.4 on <a href="https://web.archive.org/web/20180507161514/http://archive.gamedev.net/archive/reference/articles/article444.html">GameDev.net archive</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://web.archive.org/web/20191020222313/http://www.intel-assembler.it/portale/5/soundblaster-programming-information/sb-reference-for-programming-sound.asp">Soundblaster Programming Information v0.90</a> - List of Sound Blaster models and registers.</li>
+</('ul', 0)>
+<h3>Other</h3>
+
+<ul>
+<li><a href="https://web.archive.org/web/20201112012244/https://www.alternatewars.com/Games/DOSBox/DOSBox.htm">Table of DOSBox cyclecounts according to processor types</a> - A table for setting the appropriate DOSBox cycle count according to CPU types (IBM XT 88, 286, 386, 486, Pentium I, Pentium II). Comes handy when you are developing a DOS game and want to simulate the environment where you intend to execute it.</li>
+</('ul', 0)>
+<h2>Books</h2>
+
+<h3>Free</h3>
+
+<ul>
+<li><a href="https://web.archive.org/web/20221226120420/https://fabiensanglard.net/b/gebbwolf3d.pdf">Game Engine Black Book: Wolfenstein 3D - by Fabien Sanglard</a> - Fabien Sanglard's walkthrough on the game engine architecture of id Software's Wolfenstein 3D on the IBM PC's hardware. Contains forewords by John Carcmack, Tom Hall and John Romero.</li>
+</ul>
+<ul>
+<li><a href="https://web.archive.org/web/20221225164613/https://fabiensanglard.net/b/gebbdoom.pdf">Game Engine Black Book: Doom - by Fabien Sanglard</a> - Fabien Sanglard's walkthrough on the game engine architecture of id Software's original Doom on Intel 486 system and game console ports. Contains forewords by John Carcmack, Dave Taylor and John Romero.</li>
+</ul>
+<ul>
+<li><a href="https://web.archive.org/web/20201109033646/http://guideme.itgo.com/atozofc/">A to Z of C - a book on C/DOS programming by K. Joseph Wesley and R. Rajesh Jeba Anbiah</a> - Non-profit book on programming in C on DOS. DOS system programming starts from Part II.</li>
+</ul>
+<ul>
+<li><a href="https://www.drdobbs.com/parallel/graphics-programming-black-book/184404919">Michael Abrash's Graphics Programming Black Book Special Edition</a> - Collection of Michael Abrash's Dr. Dobb's Journal graphics programming articles and his work on the graphics subsystem of Quake (<a href="https://web.archive.org/web/20201112020812/http://www.phatcode.net/res/224/files/html/index.html">mirror</a>).</li>
+</('ul', 0)>
+<h3>Paid</h3>
+
+<ul>
+<li><a href="https://www.amazon.com/Tricks-Game-Programming-Gurus-Andre-Lamothe/dp/0672305070/">Tricks of the Game-Programming Gurus - by Andre Lamothe, John Ratcliff and Denise Tyler</a> - Comprehensive DOS game development book about starting out. Topics include keyboard, mouse- and joystick input handling, creating 2D and 3D VGA graphics, raycaster rendering, sound and music, game algorithms, Interrupt Service Routines (ISR), timers, artificial intelligence, networked multiplayer through serial port and null-modem cable, tooling, parallax scrolling and optimization techniques.</li>
+<ul>
+<li>Ebook available from online libraries to borrow (required due to licensing): <a href="https://openlibrary.org/books/OL1124792M/Tricks<em>of</em>the<em>game-programming</em>gurus">Open Library link</a>, <a href="https://archive.org/details/tricksofgameprog0000unse/page/n5/mode/2up">Internet Archive link</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://www.amazon.com/More-Tricks-Game-Programming-Gurus-Cd-Rom/dp/0672306972">More Tricks of the Game Programming Gurus - by Greg Anderson</a> - Companion book to <em>Tricks of the Game Programming Gurus</em>, continuing where the original left off. Topics include SVGA, Binary Space Partition (BSP), UI, voxel graphics, memory management in real and protected mode, advanced sound programming, debugging and optimization techniques.</li>
+<ul>
+<li>Ebook available from online libraries to borrow (required due to licensing): <a href="https://openlibrary.org/works/OL19501825W/More<em>tricks</em>of<em>the</em>game-programming_gurus">Open Library link</a>, <a href="https://archive.org/details/moretricksofgame0000unse/page/n7/mode/2up">Internet Archive link</a></li>
+</('ul', 2)>
+</('ul', 0)>
+<h2>Videos</h2>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=3E5Hog5OnIM">Why DOS Was (and Is) a Thing - FreeDOS</a> - Historical talk starting from Unix, going through CPM, DOS 1.x, DOS 2.x, DOS 3.x, DOS 4.x, DOS 6.x, Windows 3.1, Windows 95 and ending with FreeDOS.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=niKblgZupOc">CGA Graphics - Not as bad as you thought! - by 8-bit Guy</a> - History and technical details about IBM's CGA system. Also describes 4-color RGBI and 16-color Composite modes.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=q_3d1x2VPxk">How Oldschool Sound/Music worked - by 8-bit Guy</a> - Video about PC speaker, FM synthesizers in NES and Commodore 64, Yamaha OPL chip in AdLib and Sound Blaster sound cards, PCM samples and MOD music.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/playlist?list=PLGJnX2KGgaw2L7Uv5NThlL48G9y4rJx1X">Let's Code - MS DOS - by root42</a> - DOS programming tutorial series including VGA, SoundBlaster and VGA Mode X.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=a324ykKV-7Y">LGR - Evolution of PC Audio - As Told by Secret of Monkey Island</a> - Comparison of playing the intro theme of Secret of Monkey Island through PC speaker, IBM PCjr/Tandy, AdLib, Game Blaster, Roland LAPC-1/MT-32, Gravis Ultrasound, Roland SCC-1 MIDI, SB16 Waveblaster/AWE32 and CD quality digital audio.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=kSKeWH4TY9Y">Porting Retro City Rampage to MS-DOS: From PS4 to 1.44MB Floppy</a> - GDC talk. Brian Provinciano's presentation on porting Retro City Rampage from PlayStation 4 to DOS. Topics include optimization, using interrupts, timing, PC speaker sound, joystick, memory management and fixed-point math.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=6j947U4xl5I">DOS Executables Explained - Nostalgia Nerd</a> - Video about DOS executable formats including <code>.COM</code>, <code>.BAT</code> and <code>.EXE</code>.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=eGIyCD2_qA8">Why does DOS use 8.3 Filenames? - Nostalgia Nerd</a> - Video about the 8.3 limitation of filenames under DOS, FAT partitioning scheme, NTFS, VFAT, FatGo, and <code>LFN.EXE</code>.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=XAyQLV5bbb0">What is DOS Protected Mode? / DOS Extenders- Nostalgia Nerd</a> - Video about how PC memory looks like, conventional memory, extender memory and reasons for the need of DOS Protected Mode Interface (DPMI) and extenders like DOS/4GW.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=BR6F0EdyulA">MS-DOS has been Open-Sourced! We Build and Run it! - Dave's Garage</a> - Former Microsoft employee David Plummer tells stories about development of MS-DOS and compiles MS-DOS 4.00 source code which has been open-sourced by Microsoft.</li>
+</('ul', 0)>
+<h2>Source code</h2>
+
+<h3>Open source DOS operating systems</h3>
+
+<ul>
+<li><a href="https://github.com/microsoft/MS-DOS">MS-DOS</a> - GitHub repository of the original source code for MS-DOS v1.25, v2.0 and v4.0, open-sourced by Microsoft.</li>
+</ul>
+<ul>
+<li><a href="https://www.freedos.org/">FreeDOS</a> - FreeDOS is an open source DOS-compatible operating system that you can use to play classic DOS games, run legacy business software, or develop embedded systems. Any program that works on MS-DOS should also run on FreeDOS.</li>
+</('ul', 0)>
+<h3>Open source DOS libraries</h3>
+
+<ul>
+<li><a href="https://github.com/liballeg/allegro5/tree/v4-2-3-1">Allegro 4.2</a> - Game development library for DOS, Windows and Linux. 4.2 version supports DOS platform.</li>
+<ul>
+<li><a href="https://download.tuxfamily.org/allegro/allegro-manual/4.2.1/allegro-manual-4.2.1.en.pdf">Allegro 4.2.1 PDF documentation.</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://github.com/rxi/lovedos">LoveDOS</a> - A framework for making 2D DOS games in Lua. API based on a subset of the LÖVE API.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/marcomarrero/DOS-VGA-Game">DOS-VGA-Game</a> - Marco A. Marrero's DOS VGA/hardware library implemented in assembly and Turbo Pascal.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jratcliff63367/digpak">DIGPAK sound drivers source code</a> - Original source code for the DIGPAK sound drivers uploaded to GitHub by John W. Ratcliff.</li>
+</('ul', 0)>
+<h3>Open source DOS games</h3>
+
+<h4>Homebrew games with source code</h4>
+
+<p>List of all homebrew DOS games: http://www.doshaven.eu</p>
+
+<ul>
+<li><a href="https://github.com/skeeto/dosdefender-ld31">DOS Defender</a> - Christopher Wellons's x86 real mode DOS Asteroids clone created as an entry for Lundum Dare #31.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/TheFakeMontyOnTheRun/dungeons-of-noudar">Dungeons of Noudar</a> - First-person 2.5D dungeon-crawler on protected mode. Written in C++, includes software rendering, fixed point math, test coverage and sound (PC speaker, Adlib, OPL2LPT).</li>
+</ul>
+<ul>
+<li><a href="https://sourceforge.net/projects/empong/">Emeritus Pong</a> - Pong clone for DOS, Windows and Linux. Uses PC speaker for sound on DOS.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/icebreaker/floppybird">Floppy Bird</a> - Flappy Bird clone written in 16 bit assembly. Not a DOS program, but a PC-Booter application instead (although it's also possible to build a COM executable for DOS).</li>
+</ul>
+<ul>
+<li><a href="http://web.archive.org/web/20191225101138/http://cgi.di.uoa.gr/~geotz/dos/">George M. Tzoumas's collection of MS-DOS games and utilities</a> - Turbo Pascal with few games in C and C++. Games include Nibbles, Connect Four, Ms Pacman clone and two arcade/platform games. One of them (ra2) was written using Allegro. Utilities are all written in Turbo Pascal, these include game system routines, file and disk utilities and terminate-and-stay-resident programs (TSR).</li>
+</ul>
+<ul>
+<li><a href="https://www.usebox.net/jjm/gold-mine-run/">Gold Mine Run!</a> - Platformer written in C using DJGPP.</li>
+</ul>
+<ul>
+<li><a href="https://porta2note.itch.io/gridfighter-3d">Gridfighter 3D</a> - '80s style arcade shooter written in Quickbasic. Also the very first known DOS game that supports Oculus Rift VR headset.</li>
+<ul>
+<li><a href="https://github.com/porta2note/gridfighter3d">GitHub repository</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://sourceforge.net/projects/hangman-dos/">Hangman</a> - Hangman clone written in Basic. Runs on at least 80286 processors and uses EGA graphics.</li>
+</ul>
+<ul>
+<li><a href="https://archive.org/details/MAGSMAZE">Magenta's Maze</a> - 3D maze game using CGA graphics with algebra as theme.</li>
+<ul>
+<li><a href="http://www.doshaven.eu/downloads/537">Source code download link</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="http://www.wieringsoftware.nl/mario/index.html">Mario</a> - Super Mario Bros clone written in Turbo Pascal.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/NetHack/NetHack">NetHack</a> - Descendant of the original <a href="https://en.wikipedia.org/wiki/NetHack">NetHack</a> rougelike game first released in 1987 available on multiple platforms.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/berk76/piskworks">Piskworks</a> - Gomoku clone written in C. Works on DOS, ZX Spectrum, ZX81, ZX80, APPLE1, AS400 and Windows.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jani-nykanen/plutonium-caverns">Plutonium Caverns</a> - Overhead puzzle game written in C. Web version uses <a href="https://github.com/dreamlayers/em-dosbox">DOSBox ported to Emscripten</a> to embed DOSBox into HTML5. However, the original executable is also downloadable and buildable with Open Watcom.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/berk76/tetris">Ptakovina</a> - Tetris clone written in C. Runs on DOS, Unix/Linux, ZX Spectrum and Windows.</li>
+</ul>
+<ul>
+<li><a href="https://sourceforge.net/projects/sudoku86/">sudoku86</a> - Sudoku clone written in C. Runs on 8086/8088 CPU, uses CGA, MCGA or VGA graphics and uses a mouse.</li>
+</ul>
+<ul>
+<li><a href="http://www.doshaven.eu/game/tetris/">Tetris</a> - Tetris clone written in assembly.</li>
+<ul>
+<li><a href="http://www.doshaven.eu/downloads/373">Source code download link</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://github.com/sblendorio/hanoi-dos">Towers of Hanoi</a> - <a href="https://en.wikipedia.org/wiki/Tower<em>of</em>Hanoi">Tower of Hanoi</a> puzzle game written in Turbo Pascal. Originally released in 1996.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/spacerace/x86-pong">x86 pong</a> - Text-mode Pong clone written in C. Runs as PC-Booter game and under DOS.</li>
+</ul>
+<ul>
+<li><a href="https://sourceforge.net/projects/zmiy/">zmiy</a> - Text-mode Snake clone written in C. Runs on 8086 DOS.</li>
+</('ul', 0)>
+<h4>Freeware games with source code</h4>
+
+<ul>
+<li><a href="https://web.archive.org/web/20190222022411/https://www.classicdosgames.com/game/Cyberdogs.html">Cyberdogs</a> - Top-down 2D shooter playing as a mercenary to earn money. Written in Turbo Pascal. Supports two player mode.</li>
+<ul>
+<li><a href="https://web.archive.org/web/20180120123425/https://www.classicdosgames.com/files/source/dogs_src.zip">Source code download link</a></li>
+</ul>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/C-Dogs">C-Dogs</a> - Sequel to the original Cyberdogs. Ronny Wester, the original creator no longer maintains the website for the original C-Dogs, but multiple ports exists, including <a href="https://congusbongus.itch.io/cdogs-sdl">cdogs-sdl</a>.</li>
+</('ul', 2)>
+</('ul', 0)>
+<h4>Commercial games with published source code</h4>
+
+<ul>
+<li><a href="https://web.archive.org/web/20190801083909/https://www.classicdosgames.com/game/Abuse.html">Abuse</a> - Sci-fi side-scrolling platform game. Regarded as an innovative cult classic by most people. Supports SVGA mode up to 1280x1024 resolution. Written in C, the architecture includes a Lisp-scripting engine.</li>
+<ul>
+<li><a href="https://web.archive.org/web/20160402141350/http://www.classicdosgames.com/files/source/abuse_pd.tgz">Source code download link</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://web.archive.org/web/20200721064209/https://www.classicdosgames.com/game/Beneath<em>a</em>Steel_Sky.html">Beneath a Steel Sky</a> - Point-and-click adventure game set in a dystopian future. Written in assembly.</li>
+<ul>
+<li><a href="https://web.archive.org/web/20200721083621/https://www.classicdosgames.com/files/source/sky-source.zip">Source code download link</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://github.com/CatacombGames/Catacomb">Catacomb</a> - 2D top-down shooter developed by Softdisk (later becoming id Software). Supports EGA and CGA graphics. Written in Turbo Pascal and assembly.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/CatacombGames/Catacomb3D">Catacomb 3D</a> - First-person shooter in fantasy setting developed by Softdisk (later becoming id Software). Features pseudo-3D graphics with raycasting technique. Supports EGA graphics. Written in C and assembly. Compiled with Borland C++ 3.1.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/keendreams/keen">Commander Keen in Keen Dreams</a> - Side-scrolling platform game developed by id Software. Keen Dreams is the Commander Keen game created between Keen 3 and Keen 4 (often considered "Keen 3.5"), but was not widely released. Written in C and assembly.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/videogamepreservation/descent">Descent</a> - First sci-fi FPS/space shooter to feature entirely true 3D graphics. Written in C and assembly.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/videogamepreservation/descent2">Descent II</a> - Sequel to Descent. Written in C and assembly.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/id-Software/DOOM">Doom</a> - Sci-fi FPS developed by id Software where you fight demons from hell on Mars. The DOS-specific code for Doom could not be published because of a dependency to the licensed DMX sound library, hence why it's cleaned up and only the Linux source is there. However, the Heretic and Hexen projects contain the original DOS code in a way where DMX-related code is removed.</li>
+</ul>
+<ul>
+<li><a href="https://web.archive.org/web/20190304015745/https://www.classicdosgames.com/game/Duke<em>Nukem</em>3D.html">Duke Nukem 3D</a> - FPS developed by Apogee featuring the iconic character Duke Nukem. Written in C. Compiled with Watcom C/C++ 10.0.</li>
+<ul>
+<li><a href="https://web.archive.org/web/20160403223736/http://www.classicdosgames.com/files/source/duke3dsource.zip">Source code download link</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://github.com/OpenSourcedGames/Heretic">Heretic</a> - Dark fantasy FPS running on id Software's Doom engine.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/OpenSourcedGames/Hexen">Hexen: Beyond Heretic</a> - Indirect sequel to Heretic.</li>
+<ul>
+<li>Original <a href="https://sourceforge.net/projects/heretic/files/">SourceForge link</a> for Heretic/Hexen.</li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://github.com/FlatRockSoft/Hovertank3D">Hovertank 3D</a> - FPS developed by id Software. Features pseudo-3D graphics with raycasting technique, before Catacomb 3D and Wolfeinstein 3D. Written in C and assembly.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/id-Software/Quake">Quake</a> - FPS developed by id Software set in a fully 3D world. Written in C. Compiled with DJGPP for DOS.</li>
+<ul>
+<li><a href="https://fabiensanglard.net/quakeSource/index.php">Quake Engine Code Review series</a> - Code analysis by Fabien Sanglard.</li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://github.com/videogamepreservation/rott">Rise of the Triad: Dark War</a> - FPS developed by Apogee. It was developed as a follow-up to Wolfenstein 3D, but was altered and became a standalone game instead. Uses a heavily modified Wolfenstein 3D engine. Written in C.</li>
+</ul>
+<ul>
+<li><a href="https://web.archive.org/web/20200131222432/http://davidlclark.com/page/sopwith">Sopwith</a> - Side-scrolling shoot 'em up created by David L. Clark in 1984. The game involves piloting a Sopwith biplane, attempting to bomb enemy buildings while avoiding fire from enemy planes and various other obstacles.</li>
+<ul>
+<li><a href="https://web.archive.org/web/20201211175311/https://www.maizure.org/projects/decoded-sopwith/">MaiZure's Projects - Decoded: Sopwith</a> - Code analysis by MaiZure.</li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://github.com/id-Software/wolf3d">Wolfenstein 3D</a> - FPS developed by id Software set in the Nazi German prison Castle Wolfenstein. Features pseudo-3D graphics with raycasting technique. Written in C and assembly.</li>
+</('ul', 0)>
+<h2>Drivers and emulators</h2>
+
+<h3>Sound card emulators</h3>
+
+<ul>
+<li><a href="https://github.com/crazii/SBEMU">SBEMU</a> - A TSR that emulates Sound Blaster and OPL3 in pure DOS using modern PCI-based (onboard and add-in card) sound cards. Supports both real mode and protected mode games!</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Baron-von-Riedesel/VSBHDA">VSB</a> - A fork of SBEMU (see above), which also aims to offer Sound Blaster emulation for modern PC hardware, in both real mode and protected mode games.</li>
+</ul>
+</body>
+</html>

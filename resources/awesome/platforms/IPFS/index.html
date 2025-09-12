@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPFS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>IPFS</h1>
+
+<p><strong>Repository:</strong> https://github.com/ipfs/awesome-ipfs#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<h1>Awesome IPFS <a href="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg"><img src="https://github.com/sindresorhus/awesome" alt="Awesome</a>"></h1>
+
+<p>This is a community list of awesome projects, apps, tools, and services related to IPFS.</p>
+
+<p>To submit your project, read the <a href="https://github.com/ipfs/awesome-ipfs/blob/main/CONTRIBUTING.md#content-policy">Content Policy</a>, and <a href="https://github.com/ipfs/awesome-ipfs/edit/main/README.md"><strong>submit a PR</strong></a></p>
+
+<h2>Table of Contents</h2>
+
+<ul>
+<li><a href="#implementations">Implementations</a></li>
+</ul>
+<ul>
+<li><a href="#apps">Apps</a></li>
+</ul>
+<ul>
+<li><a href="#browsers">Browsers</a></li>
+</ul>
+<ul>
+<li><a href="#tools">Tools</a></li>
+</ul>
+<ul>
+<li><a href="#debugging-tools--learning">Debugging Tools & Learning</a></li>
+</ul>
+<ul>
+<li><a href="#services--platforms">Services & Platforms</a></li>
+</ul>
+<ul>
+<li><a href="#pinning-services">Pinning Services</a></li>
+</ul>
+<ul>
+<li><a href="#stale-projects">Stale Projects</a></li>
+</ul>
+<ul>
+<li><a href="#contribute">Contribute</a></li>
+</ul>
+<ul>
+<li><a href="#license">License</a></li>
+</('ul', 0)>
+<h2>Implementations</h2>
+<p>IPFS is an open-source project that encourages the development of multiple implementations of the protocol, each of which seeks to optimize for various use cases.</p>
+
+<p>Check out the list of <a href="https://docs.ipfs.tech/concepts/ipfs-implementations/#popular-or-actively-maintained">IPFS implementations</a> in the IPFS docs.</p>
+
+<h2>Apps</h2>
+
+<ul>
+<li><a href="https://github.com/AgregoreWeb/agregore-browser">Agregore</a> - A minimal web browser for the distributed web. Supports downloading/uploading data from IPFS using the browser's <code>fetch()</code> API</li>
+</ul>
+<ul>
+<li><a href="https://github.com/anyproto">Anytype</a> - Anytype is a no-code, modular web builder designed to give ownership back to creators. It's built on our private, local-first, p2p-synced and open Anysync protocol.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/webrecorder/archiveweb.page">archiveweb.page</a> - A High-Fidelity Web Archiving Extension for Chrome and Chromium based browsers with support for IPFS.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/IBM/ipfs-social-proof">Autonomica "IPFS Social Proof"</a> - Autonomica is a Keybase-like Dapp for creating an identity and proving this identity via published social media and web proofs.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sahib/brig">brig</a> - File synchronization with git like interface and FUSE filesystem.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/icidasset/diffuse">Diffuse</a> - Play music from your IPFS node, or any other cloud/distributed storage service you use.</li>
+</ul>
+<ul>
+<li><a href="https://durin.site/">Durin</a> - Mobile app for accessing and uploading content on the IPFS network.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jes/hardbin">Hardbin</a> - Hardbin is an encrypted pastebin, with the decryption key passed in the URL fragment</li>
+</ul>
+<ul>
+<li><a href="https://github.com/hyprspace/hyprspace">hyprspace</a> - A Lightweight VPN Built on top of IPFS + Libp2p for Truly Distributed Networks.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/oduwsdl/ipwb">InterPlanetary Wayback</a> - Web Archive (WARC) indexing and replay using IPFS.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jamescarlyle/ipfs-wiki">Interplanetary Wiki</a> - Wiki built on top of IPFS</li>
+</ul>
+<ul>
+<li><a href="https://gitlab.com/stavros/IPFessay">IPFessay</a> - A simple way to publish uncensorable essays on IPFS.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ipfs-shipyard/ipfs-desktop">IPFS Desktop</a> - IPFS Desktop gives you all the power of IPFS in a convenient desktop app: a complete IPFS node, plus handy OS menubar/taskbar shortcuts and an all-in-one file manager, peer map, and content explorer.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ipfs-shipyard/ipfs-share-files">IPFS Share</a> - Share files directly from the browser using IPFS.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/SomajitDey/ipfs-chat">ipfs-chat</a> - Terminal-based, encrypted chatrooms. Allows private messaging & secure in-chat file/directory sharing. Server/broker-less (no signaling/rendezvous server needed). Works over LAN/internet(w/ NAT-traversal).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/underscoredLabs/webgl-ipfs-fps">IPFS-FPS</a> - A completely decentralized first person shooter. Built with Unity, Fleek, Unstoppable Domans and Pinata.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/nomasters/killcord">killcord</a> - A censorship resistant deadman's switch</li>
+</ul>
+<ul>
+<li><a href="https://github.com/MintterHypermedia/mintter">Mintter</a> - Mintter Hypermedia is an open system, built on IPFS, that allows communities to collaborate on content that is structured and deeply linked. All content in the system is cryptographically signed, versioned, and made permanent with IPFS.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/cppshane/orbit-chat">orbitchat.dev</a> - Ultra simple chatrooms on the web.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Weedshaker/PeerWebSite">Peer Web Site</a> - Peer to Peer Web Site hosting at your fingertips! Send full featured HTML (incl. CSS, JS) sites from your browser and attach files eg. videos, images, etc.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Peergos/Peergos">Peergos</a> - End-to-end encrypted, peer-to-peer file storage and sharing.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Planetable/Planet">Planet</a> - Build and host decentralized blogs and websites with IPFS on your Mac</li>
+</ul>
+<ul>
+<li><a href="https://github.com/plebbit">Plebbit</a> - Plebbit is a serverless, adminless, decentralised and infinitely scalable Social Media platform that is peer-to-peer and open-source.It's built on top of IPFS, Gossipsub and Blockchain namesystems (ENS, SNS).</li>
+</ul>
+<ul>
+<li><a href="http://timothy.hobbs.cz/push-to-talk/index.html">PushToTalk</a> - Push to Talk lets you edit audio essays and publish them with IPFS.</li>
+</ul>
+<ul>
+<li><a href="https://tryquiet.org/">Quiet</a> - Privacy focused, end-to-end encrypted chat app that runs a private IPFS network over Tor connections. Desktop and mobile iOS and Android apps available.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/bjesus/teatime">TeaTime</a> - A fully static distributed library system powered by IPFS, SQLite and GitHub.</li>
+</('ul', 0)>
+<h2>Browsers</h2>
+<p>A list of web browsers with IPFS integrations</p>
+<ul>
+<li><a href="https://github.com/AgregoreWeb/agregore-browser">Agregore</a> - A minimal web browser for the distributed web. Supports downloading/uploading data from IPFS using the browser's <code>fetch()</code> API</li>
+</ul>
+<ul>
+<li><a href="https://brave.com/ipfs-support/">Brave</a> - A privacy-focused browser with many future forward features.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pinnaculum/galacteek">galacteek</a> - A multi-platform Qt5-based browser for the distributed web.</li>
+</ul>
+<ul>
+<li><a href="https://blogs.opera.com/tips-and-tricks/2021/02/opera-crypto-files-for-keeps-ipfs-unstoppable-domains/">Opera</a> - Opera browser added support for <code>ipfs://</code> in 2021</li>
+</('ul', 0)>
+<h2>Tools</h2>
+
+<ul>
+<li><a href="https://github.com/StauroDEV/blumen">Blumen</a> - Blumen is a CLI to deploy apps on the decentralized web using IPFS and Ethereum</li>
+</ul>
+<ul>
+<li><a href="https://github.com/alexbakers/create-ipfs-app">create-ipfs-app</a> - Set up a decentralized web3 app by running one command.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/p2plabsxyz/dscan">dScan</a> - A browser extension that uploads the content to Web3.Storage and generates QR codes for CIDs.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/quasarch/dump-ipfs">dump-ipfs</a> - A decentralized encrypted backup agent for popular databases supported by IPFS and Filecoin.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/moxystudio/gatsby-plugin-ipfs">gatsby-plugin-ipfs</a> - Adds support for deploying Gatsby websites to IPFS by ensuring that assets are relative.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/whyrusleeping/git-ipfs-rehost">git-ipfs-rehost</a> - A script to rehost your git repos in ipfs.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/cryptix/git-remote-ipfs">git-remote-ipfs</a> - push/pull repositories from/to IPFS.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ElettraSciComp/Git-IPFS-Remote-Bridge">Git IPFS Remote Bridge</a> - set of programs written in Python 3 which allow Git user to clone, push, fetch, self-host or release Git repositories over IPFS decentralized data storage system.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/berty/go-orbit-db">go-orbit-db</a> - This is a Golang port of OrbitDB that intends to be fully compatible with the original JavaScript version. OrbitDB is a serverless, distributed, peer-to-peer database.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ipfs-shipyard/gomobile-ipfs">gomobile-ipfs</a> - IPFS and libp2p on Mobile, with Gomobile.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jbenet/http2ipfs-web">http2ipfs</a> - This is a simple webtool to add URLs to an IPFS node.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/miguelmota/ipdr">IPDR</a> - IPFS-backed Docker Registry.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ibnesayeed/setup-ipfs">IPFS Setup Action</a> - A GitHub Action to install and initialize go-ipfs to provision a cross-platform test environment on GitHub's CI platform.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/aquiladev/ipfs-action">ipfs-action</a> - GitHub Action for delivery of static websites.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/TroyWilson1/ipfs-add-from-encrypted">ipfs-add-from-encrypted</a> - Encrypt a file or directory with AES256 then add to IPFS.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/rhodey/IPFS-boot">IPFS-boot</a> - Publish IPFS webapps which require user consent to update.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ipfs/ipfs-companion">ipfs-companion</a> - Browser extension that simplifies access to IPFS resources.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/agentofuser/ipfs-deploy">ipfs-deploy</a> - Zero-config CLI to deploy static websites: cd my-static-website && npx @agentofuser/ipfs-deploy</li>
+</ul>
+<ul>
+<li><a href="https://github.com/richardschneider/net-ipfs-mount">ipfs-mount</a> - Mount IPFS as a mapped drive on Windows.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jbenet/ipfs-paste">ipfs-paste</a> - Paste stdin and clipboard to IPFS.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/wabarc/ipfs-pinner">ipfs-pinner</a> - A toolkit help upload files to IPFS pinning services.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/auhau/ipfs-publish/">ipfs-publish</a> - Continuous Delivery tool for delivery of static websites from Git providers to IPFS.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jbenet/ipfs-screencap">ipfs-screencap</a> - Capture screenshots, publish them to IPFS, and copy the link to the clipboard.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/bneijt/ipfs-video-gateway">ipfs-video-gateway</a> - Cloud-init your own IPFS gateway on a cloud provider and easily pin content through a simple web interface.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/shlemph/ipfsecret">ipfsecret</a> - Encrypt and decrypt IPFS files with a secret passphrase.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ipfs/ipget">ipget</a> - :satellite: wget for IPFS: retrieve files over IPFS and save them locally.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ipfs-shipyard/ipld-explorer">IPLD Explorer</a> - Explore the Merkle Forest from the comfort of your browser.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/justicenode/node-ipns-pin">ipns-pin</a> - A command-line tool to pin stuff via ipns.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/JayBrown/IPRedirect">IPRedirect</a> - Browser userscript for redirecting IPFS/IPNS addresses to your local gateway. This should work on any browser that hasn't had an extension written for it yet and has support for userscripts.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/RTradeLtd/iprfc">iprfc</a> - IETF RFC downloader which stores RFCs on IPFS and indexes them with RTradeLtd/Lens.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ConsenSys/Mahuta">mahuta</a> - Mahuta is a plug and play service for your micro-service architecture allowing to collect, store and index data on IPFS and offering search functionalities (full text, query).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/multiverse-vcs/go-multiverse">Multiverse</a> - Multiverse is a decentralized version control system that enables peer-to-peer software development.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/orbitdb/orbit-db">orbit-db</a> - OrbitDB is a serverless, distributed, peer-to-peer database that uses IPFS as its data storage and IPFS Pubsub to automatically sync databases with peers.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/meandavejustice/pin-tweet-to-ipfs">Pin Tweet to IPFS</a> - Web Extension which creates a WebArchiveZip of a tweet and adds to IPFS network.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ipfs/public-gateway-checker">Public Gateway Checker</a> - Checks which public gateways are online or not.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/wabarc/rivet">rivet</a> - A toolkit makes it easier to archive webpages to IPFS.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ethereum/sourcify">sourcify</a> - Decentralized Solidity contract source code verification service</li>
+</ul>
+<ul>
+<li><a href="https://github.com/simpleaswater/twitter-pinbot">SimpleAsWater Bot</a> - A twitter bot that adds, pins, unpins your tweets to public IPFS network using IPFS Cluster.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Eximua/solid-ipfs">solid-ipfs</a> - Using Solid to store IPFS Hash privately or publicly.</li>
+</ul>
+<ul>
+<li><a href="https://gitlab.com/terceranexus6/tellit">Tellit</a> - Encrypt files before uploading them using a keypair or a passphrase.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Ideea-inc/vipfs">VIPFS</a> - Publish your Vue apps easily to IPFS.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/wabarc/wbipfs">wbipfs</a> - A command-line tool and Go package interface for wayback webpage to IPFS.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dokterbob/youtube2ipfs">youtube2ipfs</a> - Download videos from YouTube (and similar video platforms) and add them to IPFS.</li>
+</('ul', 0)>
+<h2>Debugging Tools & Learning</h2>
+
+<ul>
+<li><a href="https://check.ipfs.network/">IPFS Check</a></li>
+</ul>
+<ul>
+<li><a href="https://ipfs.fyi/identify">Helia Identify</a></li>
+</ul>
+<ul>
+<li><a href="https://cid.ipfs.tech/">CID Inspector</a></li>
+</ul>
+<ul>
+<li><a href="https://dag.ipfs.tech/">File to UnixFS DAG</a></li>
+</ul>
+<ul>
+<li><a href="https://explore.ipld.io">IPLD Explorer</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/ipfs/public-gateway-checker">Public Gateway Checker</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/ipfs/ipns-inspector">IPNS Inspector</a></li>
+</('ul', 0)>
+<h2>Services & Platforms</h2>
+
+<ul>
+<li><a href="http://apillon.io/">Apillon</a> - a Web3 development platform, offering IPFS gateways, IPFS file-pinning via Crust network and IPFS powered hosting services for websites and apps.</li>
+</ul>
+<ul>
+<li><a href="https://ceramic.network/">Ceramic</a> - Ceramic combines IPFS content addressing with advanced cryptography and blockchain timestamps to guarantee security and verifiability of data.</li>
+</ul>
+<ul>
+<li><a href="https://www.dappling.network/">dAppling</a> - Hosting platform with automated deployments from GitHub to IPFS</li>
+</ul>
+<ul>
+<li><a href="https://fileverse.io/">Fileverse</a> - Encrypted file sharing based on IPFS. Share any files with or without a wallet</li>
+</ul>
+<ul>
+<li><a href="http://fleek.co/">Fleek</a> - Open Web development platform for building, hosting, and storing sites and apps on IPFS, Filecoin, and the Internet Computer.</li>
+</ul>
+<ul>
+<li><a href="https://fission.codes">Fission</a> - Fission builds open source protocols and managed solutions that empower developers to construct scalable and secure software applications.</li>
+</ul>
+<ul>
+<li><a href="https://matters.town/">Matters.town</a> - Decentralized content publication ecosystem.</li>
+</ul>
+<ul>
+<li><a href="https://peergos.org">Peergos</a> - Your private, but social, space online. Store and edit documents and media. Share files or folders with friends.</li>
+</('ul', 0)>
+<h2>Pinning services</h2>
+<ul>
+<li><a href="https://www.4everland.org/">4EVERLAND</a> - 4EVERLAND is a pinning service that provides IPFS infrastructure and tooling making it easier and faster to host frontends, store data/NFT/file and fetch data with IPFS.</li>
+</ul>
+<ul>
+<li><a href="https://filebase.com/">Filebase</a> - Pinning data to IPFS can be hard. Filebase removes that complexity.</li>
+</ul>
+<ul>
+<li><a href="https://lighthouse.storage/">lighthouse.storage</a> - A decentralized IPFS pinning service with privacy and encryption capabilities</li>
+</ul>
+<ul>
+<li><a href="https://nft.storage/">NFT.Storage</a> - Free decentralized storage and bandwidth for NFTs on IPFS & Filecoin.</li>
+</ul>
+<ul>
+<li><a href="https://pinata.cloud">Pinata</a> - Build and manage your dapp through Pinata’s REST API and IPFS toolkit.</li>
+</ul>
+<ul>
+<li><a href="https://www.quicknode.com/ipfs">QuickNode</a> - IPFS gateways and pinning</li>
+</ul>
+<ul>
+<li><a href="https://storacha.network">Storacha</a> - Super hot decentralized data at scale.</li>
+</('ul', 0)>
+<h2>Stale Projects</h2>
+<p>We maintain a list of no longer maintained projects for reference. If you see something on this list that's no longer maintained, please submit a PR moving the entry into <a href="./stale.md">stale.md</a> and optionally add the reason why it's marked as stale with an indented comment.</p>
+
+<p><a href="./stale.md">View the list of stale projects here</a></p>
+
+<h2>Contribute</h2>
+
+<p>Contributions are welcome!</p>
+
+<p>See the <a href="./CONTRIBUTING.md"><strong>Contribution Guidelines</strong></a>.</p>
+
+<h2>License</h2>
+
+<p><a href="https://licensebuttons.net/p/zero/1.0/88x31.png"><img src="https://creativecommons.org/publicdomain/zero/1.0/" alt="CC0</a>"></p>
+
+</body>
+</html>

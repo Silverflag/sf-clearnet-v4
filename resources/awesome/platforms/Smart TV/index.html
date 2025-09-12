@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart TV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Smart TV</h1>
+
+<p><strong>Repository:</strong> https://github.com/vitalets/awesome-smart-tv#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<h1>Awesome Smart TV <a href="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg"><img src="https://github.com/sindresorhus/awesome" alt="Awesome</a>"></h1>
+
+<blockquote>
+<p>A curated list of awesome resources for building Smart TV apps</p>
+</blockquote>
+
+<a href="https://github.com/vitalets/awesome-smart-tv"><img align="right" width="150" src="https://user-images.githubusercontent.com/1473072/27913047-7c3a5e60-6267-11e7-8bd1-bef2bf3cd753.png"/></a>
+
+<p><a href="https://en.wikipedia.org/wiki/Smart_TV">Smart TV</a> is a growing platform of TVs having access to the internet and allowing to browse web-sites and install applications. It has own ecosystem with main players like Samsung, LG, Android TV and Apple TV. In this list you will find official and third-party resources for developing Smart TV apps and communicating with TV from remote devices.</p>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#platforms">Platforms</a></li>
+<ul>
+<li><a href="#samsung-tizen">Samsung Tizen</a></li>
+</ul>
+<ul>
+<li><a href="#lg-webos">LG webOS</a></li>
+</ul>
+<ul>
+<li><a href="#android-tv">Android TV</a></li>
+</ul>
+<ul>
+<li><a href="#apple-tvos">Apple tvOS</a></li>
+</ul>
+<ul>
+<li><a href="#google-chromecast">Google Chromecast</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#cross-platform-frameworks">Cross-platform frameworks</a></li>
+</ul>
+<ul>
+<li><a href="#remote-control-protocols">Remote control protocols</a></li>
+</ul>
+<ul>
+<li><a href="#navigation-libraries">Navigation libraries</a></li>
+</ul>
+<ul>
+<li><a href="#testing">Testing</a></li>
+</ul>
+<ul>
+<li><a href="#misc">Misc</a></li>
+</ul>
+<ul>
+<li><a href="#community">Community</a></li>
+</('ul', 0)>
+<h2>Platforms</h2>
+<p>Below are the most popular platforms for Smart TV. The full list is <a href="https://en.wikipedia.org/wiki/List<em>of</em>smart<em>TV</em>platforms<em>and</em>middleware_software">here</a>.</p>
+
+<h3>Samsung Tizen</h3>
+<h4>Official resources</h4>
+<ul>
+<li><a href="http://developer.samsung.com/tv">Samsung TV Developers site</a> - News, documentation and SDK downloads.</li>
+</ul>
+<ul>
+<li><a href="https://developer.tizen.org/tizen/tv">Tizen TV Developers site</a> - Full API documentation and guides for developing Tizen TV apps.</li>
+</ul>
+<ul>
+<li><a href="https://developer.tizen.org/development/tizen-studio/download">Tizen Studio</a> - IDE for TV apps development including Tizen TV Emulator.</li>
+</ul>
+<ul>
+<li><a href="http://developer.samsung.com/tv/develop/extension-libraries/smart-view-sdk/download/">Smart View SDK</a> - Official Android, IOS and JavaScript SDK for communication between remote device and Samsung Smart TV.</li>
+</ul>
+<ul>
+<li><a href="http://developer.samsung.com/forum/?topCtgy=06">Samsung TV Developers Forum</a> - Ask questions and share tips when developing apps with Samsung SDKs.</li>
+</ul>
+<ul>
+<li><a href="https://samsungtvbounty.com">Samsung Smart TV Bug Bounty</a> - If you find bug in Samsung TV, submit it here and get a reward $1000+.</li>
+</ul>
+<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=tizensdk.tizentv">vscode-extension-tizentv</a> - A Visual Studio Code extension that provides a lightweight IDE for Tizen application developers.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Samsung/Wits">Wits</a> - A tool for reloading tv app's JavaScript/CSS without reinstalling the app every time you make a change.</li>
+</('ul', 0)>
+<h4>Third-party remote control libraries</h4>
+<ul>
+<li><a href="https://github.com/Ape/samsungctl">samsungctl</a> - Library and command line tool for remote controlling Samsung televisions via a TCP/IP connection. It currently supports both pre-2016 TVs as well most of the modern Tizen-OS TVs with Ethernet or Wi-Fi connectivity (Python).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Badisi/samsung-tv-remote">samsung-tv-remote</a> - Node.js module to remotely control Samsung Smart TV starting from 2016 (JavaScript).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kyleaa/homebridge-samsungtv2016">homebridge-samsungtv2016</a> - A plugin for <a href="https://github.com/nfarina/homebridge">Homebridge</a> that allows you to control your 2016 Samsung TV with HomeKit and Siri (JavaScript).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tavicu/homebridge-samsung-tizen">homebridge-samsung-tizen</a> - A plugin for <a href="https://github.com/nfarina/homebridge">Homebridge</a> that allows you to control your Samsung Tizen TV with HomeKit and Siri (JavaScript).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tdudek/samsung-remote-models-2014-and-newer">samsung-remote-models-2014-and-newer</a> - Encrypted communication with the internal web service of Samsung TV models 2014+.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sectroyer/SmartCrypto">SmartCrypto</a> - SmartView2 encrypted handshake API implementation in C/Python.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/shantanugoel/samsung-messagebox">samsung-messagebox</a> - Python script to show notifications on Samsung TVs.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Toxblh/samsung-tv-control">samsung-tv-control</a> - Library for remote control Samsung TV in your Node.js</li>
+</('ul', 0)>
+<h4>Other</h4>
+<ul>
+<li><a href="http://en.tab-tv.com/?page_id=7123">Identification of Samsung TV models 2008-2017</a> - How to get screen size, matrix type, year of development, series and other parameters from Samsung TV model name.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/claromes/tizenstudio">Tizen Studio development references</a> - Documents focused on web apps for Smart TVs e Professional Monitors, based in personal researches.</li>
+</ul>
+<ul>
+<li>[TizenBrew] (https://github.com/reisxd/TizenBrew) - A way to experience modded websites and you can install newer apps without fighting with Tizen Studio</li>
+</ul>
+<ul>
+<li>[TizenTube] (https://github.com/reisxd/TizenTube) - A TizenBrew module that enhances your favourite streaming websites viewing experience by removing ads and adding support for Sponsorblock.</li>
+</('ul', 0)>
+<h3>LG webOS</h3>
+<h4>Official resources</h4>
+<ul>
+<li><a href="http://webostv.developer.lge.com">webOS TV Developers Site</a> - WebOS TV apps development principles, tutorials, API documentation and packaging tools.</li>
+</ul>
+<ul>
+<li><a href="http://webostv.developer.lge.com/sdk/download/download-sdk/">webOS TV IDE + SDK</a> - IDE for apps development including a Command Line Interface and emulator.</li>
+</ul>
+<ul>
+<li><a href="http://www.svlconnectsdk.com/">Connect SDK</a> - Open source framework developed by LG that connects your mobile apps with multiple media device platforms. Currently supports 8 platforms. But seems <a href="https://github.com/ConnectSDK/Connect-SDK-Android/issues/364">abandoned</a>.</li>
+</ul>
+<ul>
+<li><a href="http://developer.lge.com/community/forums/RetrieveForumList.dev?prodTypeCode=TV">webOS TV Developers Forum</a> - Ask questions, share information and learn about Smart TV app development with other developers.</li>
+</('ul', 0)>
+<h4>Third-party remote control libraries</h4>
+<ul>
+<li><a href="https://github.com/hobbyquaker/lgtv2">lgtv2</a> - Node.js module for remote control of LG webOS TV via WebSocket messages (JavaScript).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/hobbyquaker/node-red-contrib-lgtv">node-red-contrib-lgtv</a> - Module for <a href="https://nodered.org">Node-RED</a> allowing  remote control of LG webOS Smart TVs (JavaScript).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/WeeJeWel/node-webos">node-webos</a> - Node.js module to discover and control webOS TVs (JavaScript).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/hobbyquaker/lgtv2mqtt">lgtv2mqtt</a> - Interface between LG WebOS Smart TVs and MQTT (JavaScript).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/stevenvong/ares-webos-sdk">ares-webos-sdk</a> - webOS <a href="http://webostv.developer.lge.com/sdk/using-webos-tv-cli/">CLI</a> as separate NPM module (JavaScript).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/TheRealLink/pylgtv">pylgtv</a> - Library to control webOS based LG Tv devices (Python).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/klattimer/LGWebOSRemote">LGWebOSRemote</a> - Command line tool for webOS remote control of LG TVs (Python).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/merdok/homebridge-webos-tv">homebridge-webos-tv</a> - A plugin for <a href="https://github.com/nfarina/homebridge">Homebridge</a> which allows you to control your webOS TV.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/supersaiyanmode/PyWebOSTV">PyWebOSTV</a> - A generic & entensible WebOS 3.0 Client Library (Python2, Python3).</li>
+</ul>
+<ul>
+<li><a href="github.com/kaperys/go-webos">go-webos</a> - A small Go library for interaction with webOS TVs (golang).</li>
+</('ul', 0)>
+<h4>Videos</h4>
+<ul>
+<li><a href="https://youtu.be/yxu0G7jM_us">LG Magic Motion Remote - Point, Click, and Control</a> - Operate TV like a computer mouse.</li>
+</('ul', 0)>
+<h4>Other</h4>
+<ul>
+<li><a href="http://openlgtv.org.ru">openlgtv.org.ru</a> - A non-commercial project for legal reverse engineering and research on LG Television firmware. Seems a bit outdated but contains a lot of information.</li>
+</ul>
+<ul>
+<li><a href="http://en.tab-tv.com/?page_id=7111">Identification of LG TV models 2011-2017</a> - How to get screen size, matrix type, year of development, series and ohter parameters from LG TV model name.</li>
+</('ul', 0)>
+<h3>Android TV</h3>
+<h4>Official resources</h4>
+<ul>
+<li><a href="https://developer.android.com/training/tv/start/start.html">Android TV Developers site</a> - Documentation, tutorials and best practises for building Android TV apps.</li>
+</('ul', 0)>
+<h4>Articles</h4>
+<ul>
+<li><a href="https://medium.com/@halilozel1903/how-to-develop-android-tv-app-5e251f3aa56b">How to develop Android TV App?</a> - An article about developing apps for Android TV.</li>
+</('ul', 0)>
+<h3>Apple tvOS</h3>
+<h4>Official resources</h4>
+<ul>
+<li><a href="https://developer.apple.com/tvos/">tvOS Developers Site</a> - SDK, documentation and tutorials for developing tvOS apps.</li>
+</ul>
+<ul>
+<li><a href="https://developer.apple.com/documentation/tvml">TVML</a> -  Apple TV Markup Language for creating tvOS apps.</li>
+</('ul', 0)>
+<h3>Google Chromecast</h3>
+<h4>Official resources</h4>
+<ul>
+<li><a href="https://developers.google.com/cast/">Google Cast SDK</a> - Official Google Cast SDK documentation and tutorials.</li>
+</ul>
+<ul>
+<li><a href="https://www.google.com/chromecast/built-in/tv/">TVs with Chromecast built-in</a> - List of vendors supporting built-in Chromecast and advantages over traditional TV remote controller.</li>
+</('ul', 0)>
+<h2>Cross-platform frameworks</h2>
+<ul>
+<li><a href="https://github.com/raphamorim/react-tv">react-tv</a> - React development for TV: renderer for low memory applications and Packager for WebOS, Tizen, Orsay.</li>
+</ul>
+<ul>
+<li><a href="http://developer.samsung.com/tv/develop/extension-libraries/toast/">TOAST</a> - Samsung open-source framework for multi-platform TV apps developemnt.</li>
+</ul>
+<ul>
+<li><a href="http://enyojs.com">Enyo</a> - LG framework for development apps for all major platforms, from phones and tablets to PCs and TVs.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/immosmart/smartbox">Smartbox</a> - Smart TV universal library for Samsung, LG, Philips, SmartTV Aliance, STB Mag app development.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mautilus/sdk">Mautilus Smart TV SDK</a> - A platform-agnostic framework for developing TV Apps. Supports Samsung, LG, Philips, Sony, Panasonic and VESTEL Smart TVs.</li>
+</ul>
+<ul>
+<li><a href="https://bbc.github.io/tal/">BBC TAL</a> - An open source library for building applications for Smart TV developed by BBC engineers.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pureqml/qmlcore-tv">PureQML TV</a> - A declarative front-end framework for web-based SmartTV/STB platforms. Has experimental support of Android TV.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/interfaced/zombiebox">ZombieBox</a> - An open source Smart TV framework. Strongly typed JavaScript, component based, built-in D-PAD navigation management, abstract video API with DRM for all platforms. Supports many platforms like Tizen, webOS, Android TV, etc. </li>
+</('ul', 0)>
+<h2>Remote control protocols</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Digital<em>Living</em>Network_Alliance">DLNA</a> - Industry-wide standard for sharing data over a home network. Depending on the DLNA-compatible devices you own, you might be able to stream films from your laptop to your TV, play an MP3 stored on your phone over your hi-fi system, or print a photo from your tablet on your home printer.</li>
+</ul>
+<ul>
+<li><a href="http://www.dial-multiscreen.org/">DIAL</a> - Developed by Netflix and Google, this protocol alows client devices (like smartphone, tablet, or computer) to discover apps on server devices (like a smart TV or streaming box) and launch content on them.</li>
+</ul>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Wi-Fi_Direct">Wi-Fi Direct</a> - Standard enabling devices to easily connect with each other without requiring a wireless access point.</li>
+</ul>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Miracast">Miracast</a> - Standard for wireless connections from devices (such as laptops, tablets, or smartphones) to displays (such as TVs, monitors or projectors). Works over Wi-Fi Direct.</li>
+</('ul', 0)>
+<h2>Navigation libraries</h2>
+<ul>
+<li><a href="https://github.com/stuart-williams/lrud">lrud</a> - Left, Right, Up, Down. A spatial navigation library for devices with input via directional controls.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/luke-chang/js-spatial-navigation">js-spatial-navigation</a> - A javascript-based implementation of Spatial Navigation.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dead/react-js-spatial-navigation">react-js-spatial-navigation</a> - A wrapper of js-spatial-navigation to react components.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dead/react-key-navigation">react-key-navigation</a> - Spatial Navigation components for React. Similar to the <a href="http://bbc.github.io/tal/widgets/focus-management.html">"Focus Management"</a> of the <a href="https://bbc.github.io/tal/">BBC TAL</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/NoriginMedia/react-spatial-navigation">react-spatial-navigation</a> - HOC-based Spatial Navigation (key navigation) solution for React.</li>
+</('ul', 0)>
+<h2>Testing</h2>
+<ul>
+<li><a href="https://suite.st">Suitest</a> - Test automation solution for Smart TVs, gaming consoles, streaming sticks etc.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/stb-tester/stb-tester">stb-tester</a> - Automated User Interface Testing for Set-Top Boxes & Smart TVs (python).</li>
+</('ul', 0)>
+<h2>Misc</h2>
+<ul>
+<li><a href="http://lirc.org">LIRC</a> - A package that allows you to decode and send infra-red signals of many (but not all) commonly used remote controls.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/linuxenko/awesome-smarttv">awesome-smarttv</a> - Another list of Smart TV resources. Discovered after this one was already done :roll_eyes:.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/vitalets/docker-tizen-webos-sdk">docker-tizen-webos-sdk</a> - Docker image with Samsung Tizen CLI and LG webOS CLI. Allows to develop, build, launch and debug Smart TV apps without installing Tizen Studio and webOS SDK.</li>
+</('ul', 0)>
+<h2>Community</h2>
+<ul>
+<li><a href="http://stackoverflow.com/questions/tagged/smart-tv">Stack Overflow</a></li>
+</ul>
+<ul>
+<li><a href="https://www.reddit.com/r/smarttv">Reddit</a></li>
+</('ul', 0)>
+<h2>Contribute</h2>
+<p>Feel free to share your experience and contribute useful extension resources by creating <a href="https://github.com/vitalets/awesome-smart-tv/issues">new issue</a> or <a href="https://github.com/vitalets/awesome-smart-tv/pulls">pull request</a>.</p>
+<p>Please read the <a href="CONTRIBUTING.md">contribution guidelines</a> first. Thanks!</p>
+
+<h2>License</h2>
+<p><a href="http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg"><img src="https://creativecommons.org/publicdomain/zero/1.0/" alt="CC0</a>"></p>
+
+</body>
+</html>
