@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TDengine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>TDengine</h1>
+
+<p><strong>Repository:</strong> https://github.com/taosdata/awesome-tdengine#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<p align="center">
+  <br>
+  <a href="https://tdengine.com"><img width="240" src="./assets/logo.svg" alt="logo of awesome-tdengine repository"></a>
+  <br>
+  <br>
+</p>
+
+<h1>Awesome TDengine <a href="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg"><img src="https://github.com/sindresorhus/awesome" alt="Awesome</a>"></h1>
+
+<blockquote>
+<p>🎉 A curated list of awesome things related to TDengine.</p>
+</blockquote>
+
+<p>Open‑Source, High‑Performance Simplified Solution for Time Series Data</p>
+
+<p>TDengine is an open-source, cloud-native time-series database (TSDB) optimized for Internet of Things (IoT), Connected Cars, and Industrial IoT. It enables efficient, real-time ingestion, processing, and monitoring of petabytes of data per day, generated by billions of sensors and data collectors. With its built-in caching, stream processing, and data subscription capabilities, TDengine offers a simplified solution for time-series data processing.</p>
+
+<p>GitHub Repo: https://github.com/taosdata/TDengine</p>
+
+<p>Offical Website: <a href="https://tdengine.com">tdengine.com</a></p>
+
+<h2>Contents</h2>
+
+<ul>
+<li><a href="#gui">GUI</a></li>
+</ul>
+<ul>
+<li><a href="#iot">IoT</a></li>
+</ul>
+<ul>
+<li><a href="#orm">ORM</a></li>
+</ul>
+<ul>
+<li><a href="#connector">Connector</a></li>
+</ul>
+<ul>
+<li><a href="#stack">Stack</a></li>
+</ul>
+<ul>
+<li><a href="#plugin">Plugin</a></li>
+</ul>
+<ul>
+<li><a href="#data">Data</a></li>
+</ul>
+<ul>
+<li><a href="#algorithm">Algorithm</a></li>
+</ul>
+<ul>
+<li><a href="#observability">Observability</a></li>
+</ul>
+<ul>
+<li><a href="#container">Container</a></li>
+</ul>
+<ul>
+<li><a href="#distribution">Distribution</a></li>
+</ul>
+<ul>
+<li><a href="#dataset">Dataset</a></li>
+</ul>
+<ul>
+<li><a href="#others">Others</a></li>
+</('ul', 0)>
+<h2>GUI</h2>
+
+<ul>
+<li><a href="https://github.com/skye0207/TDengineGUI">TDengineGUI</a> - A simple TDengine Desktop Manager(Original).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/arielyang/TDengineGUI">TDengineGUI for 2.x & 3.x</a> - A simple TDengine Desktop Manager, adapted to TDengine 3.x.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/maikebing/Taos.Studio">Taos.Studio</a> - A GUI tool for viewing and editing data for TDengine.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/xielaoshi99/balloonfish">balloonfish</a> - Electron + Vue3 + Vite2.0 based TDengine time-series database visualized management tool.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/wurong1420/tdengine-client">tdengine-client</a> - A simple TDengine interface.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/TommyLemon/SQLAuto">SQLAuto</a> - A smart SQL testing automation tool for databases, support any CRUD, any template variables, generating argument combinations, generating lots of data rows.</li>
+</('ul', 0)>
+<h2>IoT</h2>
+
+<ul>
+<li><a href="https://github.com/zmops/zeus-iot">Zeus IoT</a> - Zeus IoT is the world's first open source Internet of Things distributed collection platform based on Zabbix, with the ability to collect, analyze, and store data from millions of IoT devices.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dgiot/dgiot-dashboard">DG-IoT</a> - DG-IoT platform industry application extension plugin.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dgiot/dgiot<em>tdengine">dgiot</em>tdengine</a> - TDengine adapter plugin.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kp45-tech/node-red-contrib-tdengine">node-red-contrib-tdengine</a> - TDengine connector plugin for Node-RED.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/IoTSharp/IoTSharp/blob/master/IoTSharp.Data.TimeSeries/TaosStorage.cs">IoTSharp</a> - IoTSharp is an open-source IoT platform for data collection,It supports storing time series data to TDengine. </li>
+</ul>
+<ul>
+<li><a href="https://github.com/kerwincui/wumei-smart">WumeiSmart</a> - WumeiSmart is an intelligent life IoT platform.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jetlinks/jetlinks-community">JetLinks</a> - JetLinks is a fully responsive, enterprise-class IoT platform.</li>
+</('ul', 0)>
+<h2>ORM</h2>
+<ul>
+<li><a href="https://github.com/x-ream/sqli">sqli</a> - ORM SQL Interface, Criteria, CriteriaBuilder, ResultMapBuilder.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/hxshun/TDengineORM">TDengine ORM Framework</a> - ORM framework of TAOS Data's time-series database TDengine.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/IoTSharp/EntityFrameworkCore.Taos">IoTSharp.EntityFrameworkCore.Taos</a> - Entity, Framework, EF, Core, Data, O/RM, entity-framework-core, TDengine.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Yurunsoft/tdengine-orm">tdengine-orm</a> - TDengine ORM based on tdengine-restful-connector & php-tdengine.<!--lint ignore awesome-list-item--></li>
+</ul>
+<ul>
+<li><a href="https://github.com/machine-w/crown">crown</a> - crown is a simple and small ORM for TDengine.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Tencent/APIJSON">APIJSON</a> - A JSON Transmission Protocol and an ORM Library for providing APIs and Docs without writing any code.</li>
+</ul>
+<ul>
+<li><a href="https://gitee.com/chunanyong/zorm">ZORM</a> - ORM support TDenging by Go.</li>
+</('ul', 0)>
+<h2>Connector</h2>
+
+<ul>
+<li><a href="https://github.com/bearlord/pdo<em>taos">PDO</em>TAOS</a> - TDengine driver for PDO.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/bearlord/yii2-tdengine">yii2-tdengine</a> - TDengine for yii2, pdo_taos needed.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Yurunsoft/php-tdengine">php-tdengine</a> - PHP extension of TDengine, supports Swoole.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Yurunsoft/tdengine-restful-connector">tdengine-restful-connector</a> - PHP extension of TDengine, support Swoole.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/imiphp/imi-tdengine">imi-tdengine</a> - Encapsulated TDengine connection pools, used in imi framework.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/horennel/pytaos">pytaos</a> - Python RESTful API of TDengine.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/wenj91/taos-driver">Go Connector for TDengine</a> - Implements internal database interface database/sql/driver of Go-lang.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/machine-w/node2tdengine">node2tdengine</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/IricBing/nestjs-tdengine">NestJS TDengine Driver</a> - NestJS TDengine Driver(RESTful based).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/yuerrd/taos-rs">taos-rs</a> - TDengine Java RESTful Client.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/songtianyi/tdengine-rust-bindings">TDengine Rust bindings</a> - It's a Rust bindings project for TDengine.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lizhaochao/TDenginex">TDenginex</a> - TDengine Connector for Elixir.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/cockroach888/GSA.MOLLE.ToolKits/tree/main/src/ToolKits.DBUtility">DBUtility.TDengine</a> - C# Connector for TDengine. (.NET 6+). </li>
+</ul>
+<ul>
+<li><a href="https://www.nuget.org/packages/IoTSharp.Data.Taos/">IoTSharp.Data.Taos</a>  - TDengine's ADO.Net provider. (.Net Framework 4.6+, .Net Standard2.0+,.Net 5.0+). </li>
+</ul>
+<ul>
+<li><a href="https://github.com/freemine/taos_odbc">taos-odbc</a> - ODBC Driver for TDengine 3.0, very much early stage.</li>
+</('ul', 0)>
+<h2>Stack</h2>
+
+<ul>
+<li><a href="https://github.com/NewLifeX/X">NewLife.Core</a> - NewLife.Core Database core.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/NewLifeX/NewLife.XCode">NewLife.XCode</a> - NewLife.XCode Database Middle-ware.</li>
+</('ul', 0)>
+<h2>Plugin</h2>
+
+<!--lint ignore awesome-list-item-->
+<ul>
+<li><a href="https://github.com/mxmkeep/rsyslog-omtaos">rsyslog plugin for tdengine</a> - rsyslog plugin for TDengine.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/huskar-t/hivemq-tdengine-extension">HiveMQ TDengine Plugin</a> - HiveMQ TDengine Plugin.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/huskar-t/hivemq-tdengine-jdsl-extension">hivemq-tdengine-jdsl-extension</a> - HiveMQ TDengine JDSL Plugin.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/john-bigz/hivemq-tdengine-extension">HiveMQ-TDengine-Extension</a> - A TDengine extension for HiveMQ.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/379547990/tdengine<em>hivemq">tdengine</em>hivemq</a> - HiveMQ to TDengine.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/JueShanCoder/pulsar-io-tdengine">pulsar-io-tdengine</a> - The TDengine connector connects Pulsar and TDengine.</li>
+</('ul', 0)>
+<h2>Data</h2>
+
+<ul>
+<li><a href="https://github.com/cenc-cea/tsarchive">tsarchive</a> - Consume data streams from a Kafka topic, archive the data packets into the TDengine time series database.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/echisan/flink-connector-tdengine">flink-connector-tdengine</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/liuyq-617/TD-Spark">TD-Spark</a> - A java project, read from TDengine and write to TDengine on Spark.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/yomorun/yomo-sink-tdengine-example">Integrate TDengine to YoMo</a> - Demonstrates how to integrate TDengine to YoMo and store data to TDengine after stream processing.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/fanweixiao/push-stream-logging">YoMo x TDengine</a> - Streaming high frequency logs to TDengine.<!--lint ignore awesome-list-item--></li>
+</ul>
+<ul>
+<li><a href="https://github.com/nzhzds/taostd">taostd</a> - taostd is a simple sql executor for TDengine.</li>
+</('ul', 0)>
+<h2>Algorithm</h2>
+
+<ul>
+<li><a href="https://github.com/datamllab/pyodds">PyODDS</a> - An End-to-end Outlier Detection System.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Shawshank-Smile/PYTSDA-TDengine">PYTSDA-TDengine</a> - An End-to-end time series data analysis system with TDengine.</li>
+</('ul', 0)>
+<h2>Observability</h2>
+
+<ul>
+<li><a href="https://github.com/xiangxud/transfer">TDengine interface for n9e transfer</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/gunnerliu/horus">Business metrics monitoring based on TDengine</a> - Highly customized business metrics monitoring with TDengine & Spring Boot</li>
+</('ul', 0)>
+<h2>Container</h2>
+
+<ul>
+<li><a href="https://github.com/wwbgo/tdengine-k8s">TDengine cluster for kubernetes</a> - TDengine cluster for kubernetes.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/arktos-venture/docker-tdengine">TDengine Containers</a> - TDengine Client, Node, Adapter and Arbitrator Rootless and smallest containers as possible.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/elihe2011/TDengine-K8S">TDengine-K8S</a></li>
+</('ul', 0)>
+<h2>Distribution</h2>
+
+<ul>
+<li><a href="https://github.com/cybartists/tdengine-client-macos-unofficial">tdengine-client-macos-unofficial</a> - Unofficial compiled TDengine client for macOS.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/GitHubForzhenjiazhao/Soft">Unofficial TDengine Windows</a> - Unofficial TDengine Windows client & server package.</li>
+</('ul', 0)>
+<h2>Dataset</h2>
+
+<ul>
+<li><a href="https://github.com/schenton/seedlink2taos<em>py">seedlink2taos</em>py</a> - A Python program that fetches seismic waveform data from IRIS and writes to TDengine database.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/233lawliet/airQuality">airQuality</a> - 3000+ District air quality metrics: CO2, CO1, PM2.5, PM10 and so on.</li>
+</('ul', 0)>
+<h2>Others</h2>
+
+<ul>
+<li><a href="https://github.com/glzhao89/auto<em>taos</em>cfg">auto<em>taos</em>cfg</a> - Auto generate TDengine log/data/cfg.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/wenhao/sentinel-dashboard-tdengine">Sentinel Console</a> - Sentinel-Dashboard with TDengine.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/edp963/davinci">Davinci</a> - Davinci is a DVsaaS (Data Visualization as a Service) Platform.</li>
+</ul>
+<ul>
+<li><a href="https://www.nuget.org/packages/IoTSharp.HealthChecks.Taos/">IoTSharp.HealthChecks.Taos</a> - TDengine's HealthChecks provider. (.Net 5.0+). </li>
+</ul>
+</body>
+</html>

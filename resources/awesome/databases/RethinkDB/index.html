@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RethinkDB</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>RethinkDB</h1>
+
+<p><strong>Repository:</strong> https://github.com/d3viant0ne/awesome-rethinkdb#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<h3 align="center">
+	<img width="120" src="https://github.com/d3viant0ne/awesome-rethinkdb/blob/master/media/rethinkdb.jpg" alt="RethinkDB">
+	<br>
+</h3>
+<h2>Awesome RethinkDB <a href="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg"><img src="https://github.com/sindresorhus/awesome" alt="Awesome</a>"></h2>
+
+<blockquote>
+<p>A curated list of awesome RethinkDB resources, libraries, tools and applications</p>
+</blockquote>
+
+<p>Inspired by the <a href="https://github.com/sindresorhus/awesome">awesome</a> list. Feel free to improve this list by <a href="CONTRIBUTING.md">contributing</a>!</p>
+
+<h3>Table of Contents</h3>
+<ul>
+<li><a href="#resources">Resources</a></li>
+<ul>
+<li><a href="#documentation">Documentation</a></li>
+</ul>
+<ul>
+<li><a href="#community">Community</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#javascript-libraries">JavaScript</a></li>
+</ul>
+<ul>
+<li><a href="#python-libraries">Python</a></li>
+</ul>
+<ul>
+<li><a href="#ruby-libraries">Ruby</a></li>
+</ul>
+<ul>
+<li><a href="#java-libraries">Java</a></li>
+</ul>
+<ul>
+<li><a href="#additional-languages">Additional Languages</a></li>
+<ul>
+<li><a href="#community-supported-drivers">Community Supported</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#research-and-training">Research and Training</a></li>
+<ul>
+<li><a href="#articles">Articles</a></li>
+</ul>
+<ul>
+<li><a href="#talks">Talks</a></li>
+</ul>
+<ul>
+<li><a href="#rethinkdb-examples">RethinkDB Examples</a></li>
+</ul>
+<ul>
+<li><a href="#community-examples">Community Examples</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#tools">Tools</a></li>
+<ul>
+<li><a href="#administrative-tools">Administration</a></li>
+</ul>
+<ul>
+<li><a href="#deployment">Deployment</a></li>
+</ul>
+</ul>
+<br>
+<blockquote>
+<p><h3>RethinkDB Ecosystem</h3></p>
+</blockquote>
+
+<h4>Documentation</h4>
+
+<ul>
+<li><a href="http://rethinkdb.com/docs/">RethinkDB</a> - RethinkDB Documentation</li>
+</ul>
+<ul>
+<li><a href="http://rethinkdb.com/api/javascript/">ReQL API</a> - JavaScript ReQL command reference</li>
+</('ul', 0)>
+<h4>Community</h4>
+
+<ul>
+<li><a href="http://slack.rethinkdb.com/">Request Slack Invite</a></li>
+</ul>
+<ul>
+<li><a href="http://stackoverflow.com/tags/rethinkdb">RethinkDB StackOverflow</a></li>
+</ul>
+<ul>
+<li><a href="https://www.rethinkdb.com/blog/">RethinkDB Blog</a></li>
+</ul>
+<ul>
+<li><a href="https://groups.google.com/forum/#!forum/rethinkdb">RethinkDB Google Group</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/channel/UC1kJkmSWt_snLDfuXgJnLnQ">RethinkDB YouTube Channel</a></li>
+</ul>
+<ul>
+<li><a href="https://www.reddit.com/r/rethinkdb/">RethinkDB Reddit</a> </li>
+</ul>
+<br>
+<blockquote>
+<p><h3>JavaScript Libraries</h3></p>
+</blockquote>
+
+<h5>Drivers</h5>
+
+<ul>
+<li><a href="https://www.rethinkdb.com/docs/install-drivers/javascript/">RethinkDB JavaScript</a> - Officially Supported JavaScript Driver.</li>
+<ul>
+<li>Maintainer: <code>RethinkDB Team</code>  <a href="https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/16/github.png"><img src=" https://github.com/rethinkdb" alt="Github</a>"> <a href="https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/16/twitter.png"><img src="https://twitter.com/rethinkdb" alt="Twitter</a>"> </li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://github.com/neumino/rethinkdbdash">RethinkDB Dash</a> - An advanced Node.js driver for RethinkDB with connection pool and Streams Support.</li>
+<ul>
+<li>Maintainer: <code>Michel</code>  <a href="https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/16/github.png"><img src="https://github.com/neumino" alt="Github</a>"> <a href="https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/16/twitter.png"><img src="https://twitter.com/neumino" alt="Twitter</a>"> </li>
+</('ul', 1)>
+</('ul', 0)>
+<h5>ORM</h5>
+
+<ul>
+<li><a href="https://github.com/neumino/thinky">Thinky</a> - JavaScript ORM for RethinkDB</li>
+<ul>
+<li>Maintainer: <code>Michel</code>  <a href="https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/16/github.png"><img src="https://github.com/neumino" alt="Github</a>"> <a href="https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/16/twitter.png"><img src="https://twitter.com/neumino" alt="Twitter</a>"> </li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://github.com/js-data/js-data-rethinkdb">JSData RethinkDB</a> - RethinkDB adapter for the js-data ORM.</li>
+<ul>
+<li>Maintainer: <code>JS Data Organization</code>  <a href="https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/16/github.png"><img src="https://github.com/js-data" alt="Github</a>"></li>
+</('ul', 1)>
+</('ul', 0)>
+<h5>Extension Libraries</h5>
+
+<ul>
+<li><a href="https://github.com/hden/rethinkdb-pool">RethinkDB Pool</a> - Connection-pool for RethinkDB.</li>
+<ul>
+<li>Maintainer: <code>Hao-kang Den</code>  <a href="https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/16/github.png"><img src="https://github.com/hden" alt="Github</a>"> </li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://github.com/armenfilipetyan/express-session-rethinkdb">Express Session RethinkDB</a> - RethinkDB session store for Express 4.x.</li>
+<ul>
+<li>Maintainer: <code>@armenfilipetyan</code>  <a href="https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/16/github.png"><img src="https://github.com/armenfilipetyan" alt="Github</a>"> </li>
+</('ul', 1)>
+</('ul', 0)>
+<h5>Technology Integrations</h5>
+
+<ul>
+<li><a href="https://github.com/athlite/hapi-rethinkdb-crud">Hapi RethinkDB CRUD</a> - CRUD handlers for Hapi interaction with Rethinkdb.</li>
+<ul>
+<li>Maintainer: <code>Thomas Eng</code>  <a href="https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/16/github.png"><img src="https://github.com/athlite" alt="Github</a>"> </li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://github.com/mwielbut/sails-hook-thinky">Sails Hook Thinky</a> - A hook to enable the Thinky ORM for RethinkDB in Sails.</li>
+<ul>
+<li>Maintainer: <code>Matt Wielbut</code>  <a href="https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/16/github.png"><img src="https://github.com/mwielbut" alt="Github</a>"> <a href="https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/16/twitter.png"><img src="https://twitter.com/mwielbut" alt="Twitter</a>"> </li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://github.com/hden/koa-rethinkdb">KOA RethinkDB</a> - Koa middleware that gets you a RethinkDB client.</li>
+<ul>
+<li>Maintainer: <code>Hao-kang Den</code>  <a href="https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/16/github.png"><img src="https://github.com/hden" alt="Github</a>"> </li>
+</ul>
+</ul>
+<ul>
+<li><a href="http://rethinkdb.com/docs/rabbitmq/javascript/">RabbitMQ</a> - Integrating RethinkDB with RabbitMQ</li>
+<ul>
+<li>Maintainer: <code>RethinkDB Team</code>  <a href="https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/16/github.png"><img src=" https://github.com/rethinkdb" alt="Github</a>"> <a href="https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/16/twitter.png"><img src="https://twitter.com/rethinkdb" alt="Twitter</a>"> </li>
+</ul>
+</ul>
+<p><strong><a href="#table-of-contents">Back to top</a></strong></p>
+
+<br>
+<blockquote>
+<p><h3>Python Libraries</h3></p>
+</blockquote>
+
+<h5>Drivers</h5>
+
+<ul>
+<li><a href="https://www.rethinkdb.com/docs/install-drivers/python/">RethinkDB Python</a> - Officially Supported JavaScript Driver.</li>
+<ul>
+<li>Maintainer: <code>RethinkDB Team</code>  <a href="https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/16/github.png"><img src=" https://github.com/rethinkdb" alt="Github</a>"> <a href="https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/16/twitter.png"><img src="https://twitter.com/rethinkdb" alt="Twitter</a>"></li>
+</('ul', 1)>
+</('ul', 0)>
+<h5>ORM</h5>
+
+<ul>
+<li><a href="https://github.com/linkyndy/remodel">Remodel</a> - Very simple yet powerful and extensible Object Document Mapper for RethinkDB, written in Python.</li>
+<ul>
+<li>Maintainer: <code>Andrei Horak</code>  <a href="https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/16/github.png"><img src="https://github.com/linkyndy" alt="Github</a>"> <a href="https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/16/twitter.png"><img src="https://twitter.com/linkyndy" alt="Twitter</a>"></li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://github.com/caoimhghin/rethink">Rethink</a> - Python RethinkDB Object Mapper Interface Inspired by Appengine NDB.</li>
+<ul>
+<li>Maintainer: <code>Kevin Amerson</code>  <a href="https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/16/github.png"><img src="https://github.com/caoimhghin" alt="Github</a>"> <a href="https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/16/twitter.png"><img src="https://twitter.com/kevinamerson" alt="Twitter</a>"></li>
+</('ul', 1)>
+</('ul', 0)>
+<h5>Technology Integrations</h5>
+
+<ul>
+<li><a href="https://github.com/linkyndy/flask-rethinkdb">flask-rethinkdb</a> - Adds RethinkDB support to Flask.</li>
+<ul>
+<li>Maintainer: <code>Andrei Horak</code>  <a href="https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/16/github.png"><img src="https://github.com/linkyndy" alt="Github</a>"> <a href="https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/16/twitter.png"><img src="https://twitter.com/linkyndy" alt="Twitter</a>"></li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://www.rethinkdb.com/docs/rabbitmq/python/">RabbitMQ</a> - Integrating RethinkDB with RabbitMQ</li>
+<ul>
+<li>Maintainer: <code>RethinkDB Team</code>  <a href="https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/16/github.png"><img src=" https://github.com/rethinkdb" alt="Github</a>"> <a href="https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/16/twitter.png"><img src="https://twitter.com/rethinkdb" alt="Twitter</a>"> </li>
+</ul>
+</ul>
+<p><strong><a href="#table-of-contents">Back to top</a></strong></p>
+
+<br>
+<blockquote>
+<p><h3>Ruby Libraries</h3></p>
+</blockquote>
+
+<h5>Drivers</h5>
+
+<ul>
+<li><a href="http://rethinkdb.com/docs/install-drivers/ruby/">RethinkDB Ruby</a> - Officially Supported Ruby Driver.</li>
+<ul>
+<li>Maintainer: <code>RethinkDB Team</code>  <a href="https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/16/github.png"><img src=" https://github.com/rethinkdb" alt="Github</a>"> <a href="https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/16/twitter.png"><img src="https://twitter.com/rethinkdb" alt="Twitter</a>"></li>
+</('ul', 1)>
+</('ul', 0)>
+<h5>ORM</h5>
+
+<ul>
+<li><a href="https://github.com/nviennot/nobrainer">NoBrainer</a> - Ruby ORM for RethinkDB.</li>
+<ul>
+<li>Maintainer: <code>Nicolas Viennot</code>  <a href="https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/16/github.png"><img src="https://github.com/nviennot" alt="Github</a>"> <a href="https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/16/twitter.png"><img src="https://twitter.com/nviennot" alt="Twitter</a>"></li>
+</('ul', 1)>
+</('ul', 0)>
+<h5>Technology Integrations</h5>
+
+<ul>
+<li><a href="https://github.com/kureikain/epiphy">Epiphy</a> - Lightweight RethinkDB ORM.</li>
+<ul>
+<li>Maintainer: <code>Vinh Quốc Nguyễn</code>  <a href="https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/16/github.png"><img src="https://github.com/kureikain" alt="Github</a>"> <a href="https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/16/twitter.png"><img src="https://twitter.com/kureikain" alt="Twitter</a>"></li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://github.com/angeloashmore/lotus-rethinkdb">lotus-rethinkdb</a> - RethinkDB adapter for Lotus::Model.</li>
+<ul>
+<li>Maintainer: <code>Angelo Ashmore</code>  <a href="https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/16/github.png"><img src="https://github.com/angeloashmore" alt="Github</a>"> <a href="https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/16/twitter.png"><img src="https://twitter.com/angeloashmore" alt="Twitter</a>"></li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://www.rethinkdb.com/docs/rabbitmq/ruby/">RabbitMQ</a> - Integrating RethinkDB with RabbitMQ</li>
+<ul>
+<li>Maintainer: <code>RethinkDB Team</code>  <a href="https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/16/github.png"><img src=" https://github.com/rethinkdb" alt="Github</a>"> <a href="https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/16/twitter.png"><img src="https://twitter.com/rethinkdb" alt="Twitter</a>"> </li>
+</ul>
+</ul>
+<p><strong><a href="#table-of-contents">Back to top</a></strong></p>
+
+<br>
+<blockquote>
+<p><h3>Java Libraries</h3></p>
+</blockquote>
+
+<h5>Drivers</h5>
+
+<ul>
+<li><a href="http://rethinkdb.com/docs/install-drivers/java/">RethinkDB Java</a> - Officially Supported Java Driver.</li>
+<ul>
+<li>Maintainer: <code>RethinkDB Team</code>  <a href="https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/16/github.png"><img src=" https://github.com/rethinkdb" alt="Github</a>"> <a href="https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/16/twitter.png"><img src="https://twitter.com/rethinkdb" alt="Twitter</a>"></li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://github.com/futurechimp/rethinker">Rethinker</a> - A simplistic serialisation library for use alongside the official RethinkDb Java driver.</li>
+<ul>
+<li>Maintainer: <code>Dave Hrycyszyn</code>  <a href="https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/16/github.png"><img src="https://github.com/futurechimp" alt="Github</a>"> <a href="https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/16/twitter.png"><img src="https://twitter.com/futurechimp" alt="Twitter</a>"></li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://github.com/tony-brewerio/rethinkdb4j">Rethinkdb4j</a> - Asynchronous Netty-based RethinkDB driver for Java.</li>
+<ul>
+<li>Maintainer: <code>Anton Ustyuzhanin</code>  <a href="https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/16/github.png"><img src="https://github.com/tony-brewerio" alt="Github</a>"></li>
+</('ul', 1)>
+</('ul', 0)>
+<h5>ORM</h5>
+
+<ul>
+<li><a href="https://github.com/PeterKnego/rethinkdb-java-orm">RethinkDB Java ORM</a> - A custom POJO converter for RethinkDB Java driver.</li>
+<ul>
+<li>Maintainer: <code>Peter Knego</code>  <a href="https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/16/github.png"><img src="https://github.com/PeterKnego" alt="Github</a>"> <a href="https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/16/twitter.png"><img src="https://twitter.com/peterknego" alt="Twitter</a>"></li>
+</('ul', 1)>
+</('ul', 0)>
+<h5>Technology Integrations</h5>
+
+<ul>
+<li><a href="https://www.rethinkdb.com/docs/rabbitmq/java/">RabbitMQ</a> - Integrating RethinkDB with RabbitMQ</li>
+<ul>
+<li>Maintainer: <code>RethinkDB Team</code>  <a href="https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/16/github.png"><img src=" https://github.com/rethinkdb" alt="Github</a>"> <a href="https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/16/twitter.png"><img src="https://twitter.com/rethinkdb" alt="Twitter</a>"> </li>
+</ul>
+</ul>
+<p><strong><a href="#table-of-contents">Back to top</a></strong></p>
+
+<br>
+<blockquote>
+<p><h3>Additional Languages</h3></p>
+</blockquote>
+
+<h4>Community Supported Drivers</h4>
+
+<ul>
+<li><a href="https://github.com/bchavez/RethinkDb.Driver">C#</a> - A C#/.NET RethinkDB driver striving for 100% ReQL API coverage.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/AtnNn/librethinkdbxx">C++</a> - RethinkDB driver for C++.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/apa512/clj-rethinkdb">Clojure</a> - A RethinkDB client for Clojure.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/billysometimes/rethinkdb">Dart</a> - A Dart driver for RethinkDB v2.0.3.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/hamiltop/rethinkdb-elixir">Elixir</a> - Multiplexed RethinkDB client in pure Elixir.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dancannon/gorethink">Go</a> - Go language driver for RethinkDB. </li>
+</ul>
+<ul>
+<li><a href="https://github.com/AtnNn/haskell-rethinkdb">Haskell</a> - RethinkDB client library for Haskell.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/orthecreedence/cl-rethinkdb">Lisp</a> - RethinkDB driver for Common Lisp.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/grandquista/Lua-ReQL">Lua</a> - Rethinkdb driver in Lua.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dparnell/rethink-db-client">Objective-C</a> - A RethinkDB client written in Objective-C. </li>
+</ul>
+<ul>
+<li><a href="https://github.com/njlg/perl-rethinkdb">Perl</a> - A Pure Perl RethinkDB Driver.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/danielmewes/php-rql">PHP</a> - A PHP client driver for the RethinkDB query language (ReQL).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kclay/rethink-scala">Scala</a> - Scala Driver for RethinkDB.</li>
+</ul>
+<p><strong><a href="#table-of-contents">Back to top</a></strong></p>
+
+<br>
+<blockquote>
+<p><h3> Research And Training</h3></p>
+</blockquote>
+
+<h4>Articles</h4>
+
+<ul>
+<li><a href="https://codeforgeek.com/2016/03/building-real-time-polling-app-rethinkdb-nodejs/">Shahid Shaikh | 08-Mar-16</a> - Building real time polling app using RethinkDB and Nodejs.</li>
+</ul>
+<ul>
+<li><a href="https://glebbahmutov.com/blog/redux-and-rethinkdb/">Dr. Gleb Bahmutov PhD | 08-Feb-16</a> - Redux and RethinkDB</li>
+</ul>
+<ul>
+<li><a href="http://www.scotthasbrouck.com/blog/2016/3/13/using-socketio-with-rethinkdb-changefeeds-to-build-a-reactive-backend">Scott Hasbrouck | 13-Mar-16</a> - Using Socket.Io With RethinkDB Changefeeds To Build A Reactive JavaScript Stack</li>
+</ul>
+<ul>
+<li><a href="http://www.khalidabuhakmeh.com/getting-started-with-rethinkdb-and-asp-net-5">Khalid Abuhakmeh | 15-Nov-15</a> - Getting Started With RethinkDB and ASP.NET 5.</li>
+</ul>
+<ul>
+<li><a href="http://www.infoworld.com/article/2975838/database/build-real-time-web-apps-with-rethinkdb.html">Slava Akhmechet | 01-Sept-15</a> - Build real-time Web apps with RethinkDB.</li>
+</ul>
+<ul>
+<li><a href="http://blog.fanout.io/2015/05/20/building-a-realtime-api-with-rethinkdb/">Justin for Fanout | 20-May-15</a> - Building a realtime API with RethinkDB.</li>
+</ul>
+<ul>
+<li><a href="https://strongloop.com/strongblog/rethinkdb-connector-loopback-node-js-framework/">Nicholas Duffy | 30-Apr-15</a> - Getting Started with the RethinkDB Connector for LoopBack.</li>
+</ul>
+<ul>
+<li><a href="http://rob.conery.io/2015/04/17/rethinkdb-2-0-is-amazing/">Rob Conery | 17-Apr-15</a> - RethinkDB 2.0 Is Amazing.</li>
+</ul>
+<ul>
+<li><a href="https://www.airpair.com/rethinkdb/posts/moving-from-sql-to-rethinkdb">Gordon Dent | 01-Apr-15</a> - A Comprehensive Guide to moving from SQL to RethinkDB.</li>
+</ul>
+<ul>
+<li><a href="http://blog.workshape.io/we-use-rethinkdb-at-workshapeio/">Gordon Dent | 11-Mar-15</a> - We use RethinkDB at Workshape.io.</li>
+</('ul', 0)>
+<h4>Talks</h4>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=28XKxLPv0Hs">Michael Glukhovsky at Clevertech | 30-Mar-16</a> - RethinkDB Presentation to Clevertech.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=xCU9RHDWXIY">Ryan Paul at ForwardJS | 21-Jan-16</a> - RethinkDB: Database for realtime apps.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=Ee1v_SuECRk">Rob Conery at DevDay 2015 | 17-Sept-15</a> - Rethinking NoSQL.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=vJtDNRsUozk">Jorge Silva at RethinkDB Meetup | 29-June-15</a> - Data Modeling in RethinkDB.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=d01rLeIjTLE">Ben Tranter | 05-Apr-15</a> - A Simple REST API with Express, RethinkDB, and Thinky.</li>
+<ul>
+<li><a href="https://github.com/bentranter/ampersand-rethink-express">Associated Source</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=dhb63boH8E8">Ryan Paul at Mattermark | 17-Feb-15</a> - Build a realtime RethinkDB cluster monitoring app with live graphs.</li>
+<ul>
+<li><a href="http://rethinkdb.com/blog/realtime-cluster-monitoring/">Associated Blog Post</a> - A realtime RethinkDB cluster monitoring app with live graphs.</li>
+</('ul', 1)>
+</('ul', 0)>
+<h4>RethinkDB Examples</h4>
+
+<ul>
+<li><a href="https://github.com/rethinkdb/rethinkdb-example-nodejs-chat">RethinkDB NodeJS Chat</a> - A node.js chat application running on rethinkdb.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/rethinkdb/rethinkdb-example-flask-backbone-todo">RethinkDB Flask Backbone ToDo</a> - A canonical backbone todo application running on flask and RethinkDB.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/rethinkdb/nodecellar-rethinkdb">RethinkDB ccoenraets/nodecellar Fork</a> - Sample app built with Backbone.js,Bootstrap, Node.js, Express, RethinkDB.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/rethinkdb/rethinkdb-pubnub-liveblog">RethinkDB PubNub Live Blog</a> - PubNub / Express Blog Example App.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/rethinkdb/rethinkdb-example-nodejs/tree/master/todo-angular-express-promise">RethinkDB Angular Express Promise</a> - Promise based Todo example with RethinkDB, ExpressJS and AngularJS .</li>
+</ul>
+<ul>
+<li><a href="https://github.com/rethinkdb/rethinkdb-example-nodejs/tree/master/todo-angular-express">RethinkDB Angular Express</a> - Todo example with RethinkDB, ExpressJS and AngularJS.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/rethinkdb/rethinkdb-example-nodejs/tree/master/todo-angular-koa">RethinkDB Angular KOA</a> - Todo example with RethinkDB, KoaJS and AngularJS. </li>
+</('ul', 0)>
+<h4>Community Examples</h4>
+
+<ul>
+<li><a href="https://github.com/thejsj/rethinkdb-chat">RethinkDB Chat</a> - A simple chat applications built with RethinkDB + Sockets.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/arkency/rethinkdb-reactjs">RethinkDB Reactjs</a> - rethinkdb + react.js + ActionController::Live (Rails) + Server Side Events.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Unrestricted-Coding/realtime-chat-RethinkDB">Realtime Chat RethinkDB</a> - A realtime chatroom built with RethinkDB</li>
+</ul>
+<ul>
+<li><a href="https://github.com/geowarin/boot-rethinkdb">Boot RethinkDB</a> - Chat example with spring boot and RethinkDB.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dancannon/GoRethink_TodoDemo">Go RethinkDB ToDo</a> - Go RethinkDB Todo List Example Application.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/bakape/meguca">Meguca</a> - High performance real-time imageboard in Go, TypeScript and RethinkDB.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/alexcheninfo/vuejs-rethinkdb-example">VueJS RethinkDB</a> - Vuejs + Express + RethinkDB example.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/GordyD/3ree">3ree</a> - An example universal JS application written with the 3REE stack, React + Redux + RethinkDB + Express.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/AdamBrodzinski/Meteor-RethinkDB-GraphQL">Meteor GraphQL</a> - A Meteor and RethinkDB Example Using GraphQL.</li>
+</ul>
+<p><strong><a href="#table-of-contents">Back to top</a></strong></p>
+
+<br>
+<blockquote>
+<p><h3>Tools</h3></p>
+</blockquote>
+
+<h4>Administrative Tools</h4>
+
+<ul>
+<li><a href="https://github.com/neumino/chateau">Chateau</a> - Another (awesome) data explorer for RethinkDB.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/athlite/rethinkdb-cli">RethinkDB CLI</a> - CLI and REPL for Rethinkdb.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/robconery/rethinkdb_nightly">RethinkDB Nightly</a> - A node module that will execute a nightly backup and push it to S3.</li>
+</('ul', 0)>
+<h4>Deployment</h4>
+
+<ul>
+<li><a href="https://github.com/RyanAmos/rethinkdb-vagrant">Vagrant</a> - Install RethinkDB using Vagrant.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tmont/puppet-rethinkdb">Puppet</a> - Puppet module for RethinkDB.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/AVVSDevelopment/chef-rethinkdb">Chef</a> - Chef RethinkDB cookbook.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mies/box-rethinkdb">Wrecker</a> - Wercker box for RethinkDB.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/crosbymichael/Dockerfiles/blob/master/rethinkdb/Dockerfile">Docker</a> - Single node Dockerfile.</li>
+</ul>
+<br>
+<blockquote>
+<p><h3>License</h3></p>
+</blockquote>
+
+<p><a href="http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg"><img src="https://creativecommons.org/publicdomain/zero/1.0/" alt="CC0</a>"></p>
+
+</body>
+</html>

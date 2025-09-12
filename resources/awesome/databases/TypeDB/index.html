@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeDB</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>TypeDB</h1>
+
+<p><strong>Repository:</strong> https://github.com/vaticle/typedb-awesome#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<p><a href="https://github.com/typedb/typedb/blob/2c5e3114cb4d19085a329b379eef590d7a3e9eda/docs/banner.png"><img src="https://typedb.com" alt="TypeDB</a>"></p>
+
+<h1>Awesome TypeDB <a href="https://awesome.re/badge.svg"><img src="https://awesome.re" alt="Awesome</a>"></h1>
+
+<p>A curated list of TypeDB resources.</p>
+
+<p>TypeDB is a <a href="https://typedb.com/features#polymorphic-queries">polymorphic</a> database with a <a href="https://typedb.com/features#conceptual-modeling">conceptual</a> data model, a strong <a href="https://typedb.com/features#strong-type-system">subtyping</a> system, a symbolic <a href="https://typedb.com/features#symbolic-reasoning">reasoning</a> engine, and a beautiful and elegant <a href="https://typedb.com/features#modern-language">type-theoretic</a> language TypeQL.</p>
+
+<h2>Contributing</h2>
+
+<p>Want to contribute to the list? Let us know on <a href="https://typedb.com/discord">Discord</a> and open a pull request!</p>
+
+<h2>Contents</h2>
+
+<ul>
+<li><a href="#open-source-projects-using-typedb">Open source projects using TypeDB</a></li>
+</ul>
+<ul>
+<li><a href="#conferences">Conferences</a></li>
+</ul>
+<ul>
+<li><a href="#documentation">Documentation</a></li>
+</ul>
+<ul>
+<li><a href="#example-projects">Example projects</a></li>
+</ul>
+<ul>
+<li><a href="#blog-posts">Blog posts</a></li>
+</ul>
+<ul>
+<li><a href="#videos">Videos</a></li>
+</ul>
+<ul>
+<li><a href="#client-drivers-official">Client Drivers (official)</a></li>
+</ul>
+<ul>
+<li><a href="#client-drivers-community">Client Drivers (community)</a></li>
+</ul>
+<ul>
+<li><a href="#ide-and-editor-support">IDE and editor support</a></li>
+</ul>
+<ul>
+<li><a href="#community">Community</a></li>
+</('ul', 0)>
+<h2>Open source projects using TypeDB</h2>
+
+<ul>
+<li><a href="https://github.com/vaticle/typedb-studio"><code>TypeDB Studio - IDE for TypeDB</code></a> - TypeDB Studio is an Integrated Development Environment for TypeDB for performing knowledge engineering.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Blitzapps/blitz-orm"><code>Blitz-ORM</code></a> - Blitz-ORM is an Object Relational Mapper written in TypeScript and compatible with TypeDB.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/vaticle/typedb-ml"><code>TypeDB-ML</code></a> - TypeDB-ML provides tools to enable graph algorithms and machine learning with TypeDB.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/typedb-osi/typedb-loader"><code>TypeDB Loader</code></a> - An open-source data migrator for loading data into TypeDB at scale.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/typedb-osi/typedb-cti"><code>TypeDB OSI - Cyber Threat Intelligence</code></a> - TypeDB CTI is an open source threat intelligence platform enabling threat intel professionals to bring together their disparate CTI information into one database </li>
+</ul>
+<p>and find new insights about cyber threats.</p>
+<ul>
+<li><a href="https://github.com/typedb-osi/typedb-bio"><code>TypeDB OSI - Biomedical Knowledge Graph</code></a> - TypeDB Bio is an open source biomedical knowledge graph providing biomedical researchers an intuitive way to query interconnected and heterogeneous biomedical </li>
+</ul>
+<p>data in one single place.</p>
+<ul>
+<li><a href="https://github.com/sourceplusplus/Assistant"><code>Source++</code></a> - Open-source automated programming assistant with runtime-aware and context-aware functionality.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/RasaHQ/rasa"><code>Rasa</code></a> - Open-source machine learning framework to automate text-and voice-based conversations.</li>
+</('ul', 0)>
+<h2>Conferences</h2>
+
+<ul>
+<li><a href="https://www.youtube.com/playlist?list=PLtEF8_xCPklY3P5NLSQb1SyIYLhQssxfY">Orbit</a></li>
+</('ul', 0)>
+<h2>Documentation</h2>
+
+<ul>
+<li><a href="https://typedb.com/docs">TypeDB Documentation Portal</a></li>
+</('ul', 0)>
+<h2>Example projects</h2>
+
+<ul>
+<li><a href="https://github.com/vaticle/typedb-driver-examples"><code>TypeDB Driver Examples</code></a> - This repository includes examples that showcase usage of TypeDB Drivers in reading from and writing to a TypeDB database.</li>
+</('ul', 0)>
+<h2>Blog posts</h2>
+
+<ul>
+<li><a href="https://typedb.com/blog/the-need-for-subtyping-and-polymorphism-in-databases">The need for subtyping and polymorphism in databases</a></li>
+</ul>
+<ul>
+<li><a href="https://typedb.com/blog/accelerating-drug-discovery-with-applied-knowledge-engineering-and-typedb">Accelerating drug discovery with applied knowledge engineering and TypeDB</a></li>
+</ul>
+<ul>
+<li><a href="https://typedb.com/blog/modeling-collections-in-databases-relational-sql-vs-typedb">Modeling collections in databases: Relational/SQL vs TypeDB</a></li>
+</ul>
+<ul>
+<li><a href="https://typedb.com/blog/the-age-of-ai-is-upon-us-where-are-the-smart-databases">The age of AI is upon us - where are the smart databases?</a></li>
+</ul>
+<ul>
+<li><a href="https://typedb.com/blog/building-a-cyber-threat-intelligence-database-with-typedb">Building a Cyber Threat Intelligence database with TypeDB</a></li>
+</ul>
+<ul>
+<li><a href="https://typedb.com/blog/inheritance-and-polymorphism-where-the-cracks-in-sql-begin-to-show">Inheritance and polymorphism: where the cracks in SQL begin to show</a></li>
+</ul>
+<ul>
+<li><a href="https://typedb.com/blog/identity-and-access-management-with-typedb-part-i-polymorphism">Identity and access management with TypeDB: Part I, polymorphism</a></li>
+</ul>
+<ul>
+<li><a href="https://typedb.com/blog/a-new-era-for-typedb">A New Era for TypeDB</a></li>
+</ul>
+<ul>
+<li><a href="https://typedb.com/blog/inference-in-typedb">Inference in TypeDB</a></li>
+</('ul', 0)>
+<h2>Videos</h2>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=e0lmTSb-rzY">Introduction to TypeDB and TypeQL</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=DbnS1feTyOs">TypeDB 2.0: A Database Evolution</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=xuiYorG8-1Q">Building an Open Source Threat Intelligence Platform with STIX</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=ESupDcw70kQ">TypeDB Community Project - NodeLab: An Advanced TypeDB GUI</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=9EaxwUG9vAg">Pandora Paper Leaks with TypeDB</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=oS42lN4qSJ4">Building a Distributed Database With the Raft Replication Algorithm</a></li>
+</('ul', 0)>
+<h2>Client Drivers (official)</h2>
+
+<ul>
+<li><a href="https://github.com/vaticle/typedb-driver"><code>Rust, Python, Java, Node.js and C</code></a></li>
+</('ul', 0)>
+<h2>Client Drivers (community)</h2>
+
+<ul>
+<li><a href="https://github.com/Humans-of-Julia/TypeDBClient.jl"><code>Julia</code></a></li>
+</('ul', 0)>
+<h2>IDE and editor support</h2>
+
+<ul>
+<li><a href="https://github.com/typedb-osi/typeql-plugin-emacs"><code>Emacs - TypeQL Plugin</code></a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/typedb-osi/typeql-plugin-vscode"><code>Visual Studio Code - TypeQL Plugin</code></a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/typedb-osi/typeql-plugin-jetbrains"><code>JetBrains / IntelliJ - TypeQL Plugin</code></a></li>
+</('ul', 0)>
+<h2>Community</h2>
+
+<ul>
+<li><a href="https://forum.typedb.com">Discussion Forum</a></li>
+</ul>
+<ul>
+<li><a href="https://typedb.com/discord">Discord</a></li>
+</ul>
+<ul>
+<li><a href="https://stackoverflow.com/questions/tagged/vaticle-typedb%20vaticle-typeql?sort=Newest&edited=true">Stack Overflow</a></li>
+</ul>
+<ul>
+<li><a href="https://www.meetup.com/pro/typedb/">Meetup</a></li>
+</ul>
+<ul>
+<li><a href="https://twitter.com/typedb_">Twitter</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/c/vaticle">YouTube</a></li>
+</ul>
+<ul>
+<li><a href="https://www.linkedin.com/groups/13657731/">LinkedIn</a></li>
+</ul>
+<ul>
+<li><a href="https://typedb.com/blog">Blog</a></li>
+</ul>
+</body>
+</html>

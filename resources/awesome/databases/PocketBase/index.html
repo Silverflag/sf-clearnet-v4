@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PocketBase</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>PocketBase</h1>
+
+<p><strong>Repository:</strong> https://github.com/benallfree/awesome-pocketbase#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<h1>Awesome PocketBase <a href="https://awesome.re/badge.svg"><img src="https://awesome.re" alt="Awesome</a>"></h1>
+
+<p>!<a href="https://img.shields.io/github/stars/benallfree/awesome-pocketbase?style=flat">GitHub forks</a> !<a href="https://img.shields.io/github/forks/benallfree/awesome-pocketbase?style=flat">GitHub forks</a> !<a href="https://img.shields.io/github/contributors/benallfree/awesome-pocketbase?style=flat">GitHub forks</a></p>
+
+<blockquote>
+<p>Curated list of awesome <a href="https://pocketbase.io">PocketBase</a> resources.</p>
+</blockquote>
+
+<p>PocketBase is an open source backend consisting of embedded database (SQLite) with realtime subscriptions, built-in auth management, convenient dashboard UI and simple REST-ish API.</p>
+
+<h2>Contents</h2>
+
+<ul>
+<li><a href="#official-packages">Official Packages</a></li>
+</ul>
+<ul>
+<li><a href="#top-pocketbase-specific-projects-100-stars">Top PocketBase-specific Projects (\>100 stars)</a></li>
+</ul>
+<ul>
+<li><a href="#major-community-projects">Major Community Projects</a></li>
+</ul>
+<ul>
+<li><a href="#jsvm-plugins">JSVM Plugins</a></li>
+</ul>
+<ul>
+<li><a href="#go-plugins">Go Plugins</a></li>
+</ul>
+<ul>
+<li><a href="#react">React</a></li>
+</ul>
+<ul>
+<li><a href="#svelte">Svelte</a></li>
+</ul>
+<ul>
+<li><a href="#vue">Vue</a></li>
+</ul>
+<ul>
+<li><a href="#solid">Solid</a></li>
+</ul>
+<ul>
+<li><a href="#dartflutter">Dart/Flutter</a></li>
+</ul>
+<ul>
+<li><a href="#c">C#</a></li>
+</ul>
+<ul>
+<li><a href="#d">D</a></li>
+</ul>
+<ul>
+<li><a href="#nodejs">Node.js</a></li>
+</ul>
+<ul>
+<li><a href="#unofficial-pocketbase-clients-sdks">Unofficial PocketBase Clients (SDKs)</a></li>
+</ul>
+<ul>
+<li><a href="#self-hosting">Self Hosting</a></li>
+</ul>
+<ul>
+<li><a href="#typescript-tools">TypeScript tools</a></li>
+</ul>
+<ul>
+<li><a href="#sqlite-tools">SQLite tools</a></li>
+</ul>
+<ul>
+<li><a href="#other-tools">Other tools</a></li>
+</ul>
+<ul>
+<li><a href="#showcases">Showcases</a></li>
+</ul>
+<ul>
+<li><a href="#pocketports-packages">PocketPorts Packages</a></li>
+</('ul', 0)>
+<h2>Official Packages</h2>
+
+<ul>
+<li><a href="https://github.com/pocketbase/pocketbase/releases/">Golang Server</a> - The main PocketBase server. !<a href="https://img.shields.io/github/stars/pocketbase/pocketbase">GitHub Repo stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/pocketbase/js-sdk">JavaScript SDK</a> - Browser and Node.js for interacting with the PocketBase API. !<a href="https://img.shields.io/github/stars/pocketbase/js-sdk">GitHub Repo stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/pocketbase/dart-sdk">Dart SDK</a> - Multi-platform SDK for interacting with the PocketBase Web API. !<a href="https://img.shields.io/github/stars/pocketbase/dart-sdk">GitHub Repo stars</a></li>
+</('ul', 0)>
+<h2>Top PocketBase-specific Projects (>100 stars)</h2>
+
+<ul>
+<li><a href="https://pockethost.io">pockethost.io</a> - Free and pro PocketBase hosting. !<a href="https://img.shields.io/github/stars/pockethost/pockethost">GitHub Repo stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/patmood/pocketbase-typegen">PocketBase Typegen</a> - Generate TypeScript types from the SQLite db file. !<a href="https://img.shields.io/github/stars/patmood/pocketbase-typegen">GitHub Repo stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/muchobien/pocketbase-docker">PocketBase Docker</a> - Docker setup supporting multiple architectures and automatically updated with PocketBase releases. !<a href="https://img.shields.io/github/stars/muchobien/pocketbase-docker">GitHub Repo stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/mrwyndham/pocketbase-stripe">PocketBase+Stripe</a> - Go extended PocketBase for Stripe subscription integration. !<a href="https://img.shields.io/github/stars/mrwyndham/pocketbase-stripe">GitHub Repo stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/mrwyndham/pocketbase-lemonsqueezy">PocketBase+Lemonsqueezy</a> - Go extended PocketBase for Lemonsqueezy subscription integration. !<a href="https://img.shields.io/github/stars/mrwyndham/pocketbase-lemonsqueezy">GitHub Repo stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/spinspire/pocketbase-sveltekit-starter">SvelteKit Starter</a> - A starter-kit showing how to use customized PocketBase as a backend to SvelteKit frontend. !<a href="https://img.shields.io/github/stars/spinspire/pocketbase-sveltekit-starter">GitHub Repo stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/danawoodman/sveltekit-auth-example">SvelteKit Auth</a> - This project is designed as a sample implementation reference for getting authentication setup using SvelteKit. !<a href="https://img.shields.io/github/stars/danawoodman/sveltekit-auth-example">GitHub Repo stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/jianyuan/pocketbase-sveltekit-auth">SvelteKit PocketBase Auth</a> - Demo login and registration pages with examples. !<a href="https://img.shields.io/github/stars/jianyuan/pocketbase-sveltekit-auth">GitHub Repo stars</a></li>
+</('ul', 0)>
+<h2>Major Community Projects</h2>
+
+<ul>
+<li><a href="https://pocketpages.dev">pocketpages.dev</a> - Server-side JS pages and hosting for PocketBase. !<a href="https://img.shields.io/github/stars/benallfree/pocketpages">GitHub Repo stars</a></li>
+</ul>
+<ul>
+<li><a href="https://pocodex.dev">pocodex.dev</a> - The unofficial PocketBase plugin repository and code exchange. !<a href="https://img.shields.io/github/stars/benallfree/pocodex">GitHub Repo stars</a></li>
+</ul>
+<ul>
+<li>PocketPorts - NPM/Node.js packages ported to PocketBase JSVM. Official listing is hosted here in awesome-pocketbase.</li>
+</('ul', 0)>
+<h2>JSVM Plugins</h2>
+
+<ul>
+<li><a href="https://github.com/benallfree/pocketbase-otp">pocketbase-otp</a> - One-Time Passwords for <=v0.22.\* !<a href="https://img.shields.io/github/stars/benallfree/pocketbase-otp">GitHub Repo stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/benallfree/pocketpages">pocketpages</a> - Server-side EJS pages for PocketBase. !<a href="https://img.shields.io/github/stars/benallfree/pocketpages">GitHub Repo stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/benallfree/pocketbase-presigned-urls">pocketbase-presigned-urls</a> - Serve file uploads from presigned S3 URLs. !<a href="https://img.shields.io/github/stars/benallfree/pocketbase-presigned-urls">GitHub Repo stars</a></li>
+</('ul', 0)>
+<h2>Go Plugins</h2>
+
+<ul>
+<li><a href="https://github.com/iamelevich/pocketbase-plugin-telegram-auth">Telegram auth</a> - Add Telegram auth (Widget button and WebApp). !<a href="https://img.shields.io/github/stars/iamelevich/pocketbase-plugin-telegram-auth">GitHub Repo stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/iamelevich/pocketbase-plugin-ngrok">Ngrok</a> - Expose local PocketBase to the internet with ngrok. !<a href="https://img.shields.io/github/stars/iamelevich/pocketbase-plugin-ngrok">GitHub Repo stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/iamelevich/pocketbase-plugin-proxy">Proxy</a> - Proxy requests to another other host. Can be useful when you want to use separate server as frontend (like Next.js), but serve everything with same port. !<a href="https://img.shields.io/github/stars/iamelevich/pocketbase-plugin-proxy">GitHub Repo stars</a></li>
+</ul>
+<ul>
+<li><a href="https://gist.github.com/cugu/9e74f75dcad3df74370c71ff3c02085a">Webhooks</a> - Add webhook support in the admin UI to send <code>create</code>, <code>update</code> and <code>delete</code> events on selected collections via POST request to other systems.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Vogeslu/pocketbase-ts-generator">Typescript Generator</a> - Typescript generator standalone / library with auto generation hook or command !<a href="https://img.shields.io/github/stars/Vogeslu/pocketbase-ts-generator">GitHub Repo stars</a></li>
+</('ul', 0)>
+<h2>React</h2>
+
+<ul>
+<li><a href="https://github.com/tobicrain/pocketbase-react">PocketBase React</a> - Unofficial React SDK (React, React Native, Expo) for interacting with the PocketBase JavaScript SDK. !<a href="https://img.shields.io/github/stars/tobicrain/pocketbase-react">GitHub Repo stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/tsensei/nextjs-pocketbase-starter-template">PocketBase Next.js App Template</a> - PocketBase Next.js Template with server & browser client using cookies. !<a href="https://img.shields.io/github/stars/tsensei/nextjs-pocketbase-starter-template">GitHub Repo stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/jianyuan/pocketbase-nextjs-auth">Next.js PocketBase Auth</a> - Sample Next.js 15 application with PocketBase integration, a typed client, server-side and client-side rendering techniques, and server actions. !<a href="https://img.shields.io/github/stars/jianyuan/pocketbase-nextjs-auth">GitHub Repo stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/g12i/next-pocketbase-auth">next-pocketbase-auth</a> - A lightweight authentication wrapper for Next.js applications, providing easy-to-use utilities for handling user session in both client and server components. !<a href="https://img.shields.io/github/stars/g12i/next-pocketbase-auth">GitHub Repo stars</a></li>
+</('ul', 0)>
+<h2>Svelte</h2>
+
+<ul>
+<li><a href="https://github.com/goknsh/svelte-query-pocketbase">svelte-query-pocketbase</a> - TanStack Query wrappers around PocketBase for Svelte and SvelteKit that updates the query cache in realtime. !<a href="https://img.shields.io/github/stars/goknsh/svelte-query-pocketbase">GitHub Repo stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/Egor-S/pocketbase-sveltekit-static">pocketbase-sveltekit-static</a> - A minimalist template with configured authorization featuring a single Docker image (from 55 MB) for deploying. !<a href="https://img.shields.io/github/stars/Egor-S/pocketbase-sveltekit-static">GitHub Repo stars</a></li>
+</('ul', 0)>
+<h2>Vue</h2>
+
+<ul>
+<li><a href="https://github.com/StefanVDWeide/pocketbase-vue">Vue 3 + Vite starter kit</a> - A starter kit for Vue 3 + Vite + PocketBase. !<a href="https://img.shields.io/github/stars/StefanVDWeide/pocketbase-vue">GitHub Repo stars</a></li>
+</ul>
+<ul>
+<li><a href="https://studioterabyte.nl/en/blog/pocketbase-vue-3">Tutorial</a> - Vue 3 tutorial.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/aaronblondeau/pocketbase<em>quasar</em>starter">Quasar starter kit</a> - Pocketbase with Quasar. !<a href="https://img.shields.io/github/stars/aaronblondeau/pocketbase<em>quasar</em>starter">GitHub Repo stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/j-wil/pocket-nuxt">PocketNuxt</a> - A Nuxt3 PocketBase starter that builds into a single binary. !<a href="https://img.shields.io/github/stars/j-wil/pocket-nuxt">GitHub Repo stars</a></li>
+</('ul', 0)>
+<h2>Solid</h2>
+
+<ul>
+<li><a href="https://github.com/kirill-dev-pro/solid-pocketbase-hooks">Solid-pocketbase-hooks</a> - Pocketbase hooks for Solid.js !<a href="https://img.shields.io/github/stars/kirill-dev-pro/solid-pocketbase-hooks">GitHub Repo stars</a></li>
+</('ul', 0)>
+<h2>Dart/Flutter</h2>
+
+<ul>
+<li><a href="https://github.com/rodydavis/pocketbase<em>drift">PocketBase Drift</a> - A PocketBase client cached with Drift. !<a href="https://img.shields.io/github/stars/rodydavis/pocketbase</em>drift">GitHub Repo stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/rodydavis/pocketbase<em>dart</em>generator">Dart Generator</a> - Generate type safe client SDKs for use in local SQLite, JSON or GraphQL resolvers. !<a href="https://img.shields.io/github/stars/rodydavis/pocketbase<em>dart</em>generator">GitHub Repo stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/rohitsangwan01/pocketbase<em>server</em>flutter">PocketBase Server Flutter</a> - A Flutter plugin to run PocketBase server directly from Android/iOS. !<a href="https://img.shields.io/github/stars/rohitsangwan01/pocketbase<em>server</em>flutter">GitHub Repo stars</a></li>
+</('ul', 0)>
+<h2>C#</h2>
+
+<ul>
+<li><a href="https://github.com/iluvadev/PocketBaseClient-csharp">ORM and code generator</a> - An ORM to manage your PocketBase Application. !<a href="https://img.shields.io/github/stars/iluvadev/PocketBaseClient-csharp">GitHub Repo stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/PSCourtney/PocketBaseSharp">C# SDK</a> - C# SDK for PocketBase and demo Blazor WASM webapp. !<a href="https://img.shields.io/github/stars/PSCourtney/PocketBaseSharp">GitHub Repo stars</a></li>
+</('ul', 0)>
+<h2>D</h2>
+
+<ul>
+<li><a href="https://github.com/Hax-io/libpb">libpb</a> - PocketBase client wrapper for D with automatic serialization and deserialization to and from JSON. !<a href="https://img.shields.io/github/stars/Hax-io/libpb">GitHub Repo stars</a></li>
+</('ul', 0)>
+<h2>Node.js</h2>
+
+<ul>
+<li><a href="https://github.com/benallfree/gobot">gobot</a> - PocketBase as an npm package. CLI and API. !<a href="https://img.shields.io/github/stars/benallfree/gobot">GitHub Repo stars</a></li>
+</('ul', 0)>
+<h2>Unofficial PocketBase Clients (SDKs)</h2>
+
+<ul>
+<li><a href="https://github.com/pluja/pocketbase">Go</a> - PocketBase Client in Golang. !<a href="https://img.shields.io/github/stars/pluja/pocketbase">GitHub Repo stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/agrevster/pocketbase-kotlin">Kotlin</a> - PocketBase Client in Kotlin. !<a href="https://img.shields.io/github/stars/agrevster/pocketbase-kotlin">GitHub Repo stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/IdanAizikNissim/pocketbase-kt">Kotlin (Multiplatform)</a> - PocketBase Client in Kotlin. !<a href="https://img.shields.io/github/stars/IdanAizikNissim/pocketbase-kt">GitHub Repo stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/vaphes/pocketbase">Python (Sync)</a> - PocketBase Client in Python. !<a href="https://img.shields.io/github/stars/vaphes/pocketbase">GitHub Repo stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/thijsmie/pocketbase">Python (Async)</a> - PocketBase Client in Python. !<a href="https://img.shields.io/github/stars/thijsmie/pocketbase">GitHub Repo stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/PRCV1/pocketbase-csharp-sdk">C#</a> - PocketBase Client in C#. !<a href="https://img.shields.io/github/stars/PRCV1/pocketbase-csharp-sdk">GitHub Repo stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/sreedevk/pocketbase-sdk-rust">Rust</a> - PocketBase Client in Rust. !<a href="https://img.shields.io/github/stars/sreedevk/pocketbase-sdk-rust">GitHub Repo stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/Sov3rain/pocketbase-unity">Unity (Multiplatform)</a> - PocketBase client for Unity 3D game engine. !<a href="https://img.shields.io/github/stars/Sov3rain/pocketbase-unity">GitHub Repo stars</a></li>
+</('ul', 0)>
+<h2>Self Hosting</h2>
+
+<ul>
+<li><a href="https://github.com/pocketbase/pocketbase/discussions/512">DigitalOcean</a> - Guide to deploy in a Droplet.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pocketbase/pocketbase/discussions/537">Fly.io</a> - Guide to deploy for free in Fly.io.</li>
+</ul>
+<ul>
+<li><a href="https://localxpose.io/docs/tutorials/expose-pocketbase-backend">LocalXpose</a> - Allow public access to a localhost instance.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kdpuvvadi/pocketbase">PocketBase Docker</a> - Docker images supporting multiple architectures and updated with latest PocketBase releases. !<a href="https://img.shields.io/github/stars/kdpuvvadi/pocketbase">GitHub Repo stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/blockshiftnetwork/dokku-pocketbase">PocketBase on Dokku</a> - Deploy PocketBase instances on Dokku effortlessly. !<a href="https://img.shields.io/github/stars/blockshiftnetwork/dokku-pocketbase">GitHub Repo stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/user0608/pb<em>launcher">PBLauncher</a> - Manage PocketBase instances — fast, lightweight, open source. !<a href="https://img.shields.io/github/stars/user0608/pb</em>launcher">GitHub Repo stars</a></li>
+</('ul', 0)>
+<h2>TypeScript tools</h2>
+
+<ul>
+<li><a href="https://github.com/benallfree/pocketbase-jsvm">pocketbase-jsvm</a> - JSVM typings. !<a href="https://img.shields.io/github/stars/benallfree/pocketbase-jsvm">GitHub Repo stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/benallfree/ts-pb-hooks-starter">pb_hooks starter kit</a> - Build PocketBase JavaScript hooks using TypeScript. !<a href="https://img.shields.io/github/stars/benallfree/ts-pb-hooks-starter">GitHub Repo stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/david-plugge/typed-pocketbase">typed-pocketbase</a> - Generate types from your PocketBase instance and enjoy fully type-safe queries. !<a href="https://img.shields.io/github/stars/david-plugge/typed-pocketbase">GitHub Repo stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/satohshi/pocketbase-ts">pocketbase-ts</a> - SDK wrapper with more readable <code>options</code> syntax and full type-safety. !<a href="https://img.shields.io/github/stars/satohshi/pocketbase-ts">GitHub Repo stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/emresandikci/pocketbase-query">pocketbase-query</a> - A TypeScript-based query builder designed to generate complex filter queries for PocketBase. It allows for easy construction of queries using various operators while maintaining a fluent and chainable API. !<a href="https://img.shields.io/github/stars/emresandikci/pocketbase-query">GitHub Repo stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/satohshi/pocketbase-schema-generator">pocketbase-schema-generator</a> - JS hook for automatically generating schema files. (Zod/TS interfaces) !<a href="https://img.shields.io/github/stars/satohshi/pocketbase-schema-generator">GitHub Repo stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/sergio9929/pb-query">pb-query</a> - A flexible, strongly-typed query builder with useful helpers to simplify the querying process, featuring examples, documentation, and full autocompletion based on your schema, directly in the IDE. !<a href="https://img.shields.io/github/stars/sergio9929/pb-query">GitHub Repo stars</a></li>
+</('ul', 0)>
+<h2>SQLite tools</h2>
+
+<ul>
+<li><a href="https://github.com/maxpert/marmot">Marmot</a> - A distributed SQLite replicator <a href="https://www.youtube.com/watch?v=Zapupe_FREc">with PocketBase tutorial</a>. !<a href="https://img.shields.io/github/stars/maxpert/marmot">GitHub Repo stars</a></li>
+</ul>
+<ul>
+<li><a href="https://litestream.io/">Litestream</a> - Streaming SQLite replication. !<a href="https://img.shields.io/github/stars/benbjohnson/litestream">GitHub Repo stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/TylerSustare/pocketbase-framework-litestream">PocketBase+Litestream example</a> - Template showing Litestream running with PocketBase. !<a href="https://img.shields.io/github/stars/TylerSustare/pocketbase-framework-litestream">GitHub Repo stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/bscott/pocketbase-litestream/">PocketBase with Litestream</a> - Docker example of PocketBase saving/restoring from Litestream. !<a href="https://img.shields.io/github/stars/bscott/pocketbase-litestream">GitHub Repo stars</a></li>
+</('ul', 0)>
+<h2>Other tools</h2>
+
+<ul>
+<li><a href="https://pocketbase-uml.github.io/">PocketBaseUML</a> - A free, open-source web application that generates UML diagrams based on PocketBase databases. !<a href="https://img.shields.io/github/stars/bscott/pocketbase-litestream">GitHub Repo stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/rohitsangwan01/pocketbase<em>mobile">PocketBaseMobile</a> - Android and iOS frameworks for running PocketBase from mobile. !<a href="https://img.shields.io/github/stars/rohitsangwan01/pocketbase</em>mobile">GitHub Repo stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/nedpals/pbf">pbf</a> - Library for serializing and deserializing PocketBase filter syntax. !<a href="https://img.shields.io/github/stars/nedpals/pbf">GitHub Repo stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/Pocket-Space/pocketbase-templates">PocketBase Templates</a> - A open-source collection of PocketBase schemas to quickly get started. !<a href="https://img.shields.io/github/stars/Pocket-Space/pocketbase-templates">GitHub Repo stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/joseferben/pocketbase-queue">pocketbase-queue</a> - A type-safe queue for background tasks using PocketBase. !<a href="https://img.shields.io/github/stars/joseferben/pocketbase-queue">GitHub Repo stars</a></li>
+</ul>
+<ul>
+<li><a href="https://chat.openai.com/g/g-Owo2FBp4K-pocketbase-gpt">PocketBase GPT</a> - A GPT that has all of PocketBase's documentation uploaded to it, to give more accurate and up-to-date answers.</li>
+</ul>
+<ul>
+<li><a href="https://pocketbase-api-rule-builder.vercel.app">PocketBase API Rule Builder</a> - A free, open-source web application that makes it easy to generate API rules for PocketBase collections visually. !<a href="https://img.shields.io/github/stars/kerimovok/pocketbase-api-rule-builder">GitHub Repo stars</a></li>
+</('ul', 0)>
+<h2>Showcases</h2>
+
+<ul>
+<li><a href="https://github.com/patmood/vim<em>snake">Vimsnake</a> - A realtime WASM game where Vim commands are used as controller inputs. !<a href="https://img.shields.io/github/stars/patmood/vim</em>snake">GitHub Repo stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/rajesh6161/pocketbaseTodo">ToDo</a> - React-based To-Do demo app. !<a href="https://img.shields.io/github/stars/rajesh6161/pocketbaseTodo">GitHub Repo stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/rajesh6161/pbRealtimeBlog">Realtime Blog</a> - A React-based realtime blog demo. !<a href="https://img.shields.io/github/stars/rajesh6161/pbRealtimeBlog">GitHub Repo stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/rajesh6161/pocketbase-oauth-demo">oAuth</a> - A React-based oAuth demo. !<a href="https://img.shields.io/github/stars/rajesh6161/pocketbase-oauth-demo">GitHub Repo stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/rohitsangwan01/flutter<em>pocketbase</em>chat">Flutter Chat App</a> - A chat app using PocketBase in Flutter. !<a href="https://img.shields.io/github/stars/rohitsangwan01/flutter<em>pocketbase</em>chat">GitHub Repo stars</a></li>
+</ul>
+<ul>
+<li><a href="https://justjot.app">JustJot</a> - A keyboard-first note-taking full-featured Progressive Web App. <a href="https://github.com/JunoNgx/justjot-frontend">frontend repo</a> / <a href="https://github.com/JunoNgx/justjot-backend">backend repo</a> !<a href="https://img.shields.io/github/stars/JunoNgx/justjot-backend">GitHub Repo stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/davidbarton/pocketbase-cookie-auth-demo">Cookie auth demo</a> - A demo of cookie based authentication flow for PocketBase. !<a href="https://img.shields.io/github/stars/davidbarton/pocketbase-cookie-auth-demo">GitHub Repo stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/tametsi/adnexos">Adnexos</a> - Self-hostable expense-splitter on the web. !<a href="https://img.shields.io/github/stars/tametsi/adnexos">GitHub Repo stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/cobeo2004/pocketbase-libsql">pocketbase-libsql</a> - Scaling Pocketbase with LibSQL and sqld - a Proof Of Concept !<a href="https://img.shields.io/github/stars/cobeo2004/pocketbase-libsql">GitHub Repo stars</a></li>
+</('ul', 0)>
+<h2>PocketPorts Packages</h2>
+
+<p>Ports of NPM/Node.js packages to the PocketBase JSVM.</p>
+
+<table>
+<thead><tr>
+<th>OG Package</th>
+<th>Ported Package</th>
+<th>Description</th>
+<th></th>
+</tr></thead>
+<tbody>
+<tr>
+<td>----------------------------------------------</td>
+<td>----------------------------------------------------------------</td>
+<td>--------------------------------------------------------------</td>
+<td>------------------------------------------------------------------------------------</td>
+</tr>
+<tr>
+<td><a href="https://nodejs.org/docs/latest/api/">Node.js</a></td>
+<td><a href="https://github.com/benallfree/pocketbase-node">pocketbase-node</a></td>
+<td>Node.js core packages (<code>fs</code>, <code>process</code>, etc)</td>
+<td>!<a href="https://img.shields.io/github/stars/benallfree/pocketbase-node">GitHub Repo stars</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/mde/ejs">ejs</a></td>
+<td><a href="https://github.com/benallfree/pocketbase-ejs">pocketbase-ejs</a></td>
+<td>Embedded JavaScript templates - <a href="http://ejs.co">http://ejs.co</a></td>
+<td>!<a href="https://img.shields.io/github/stars/benallfree/pocketbase-ejs">GitHub Repo stars</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/markedjs/marked">marked</a></td>
+<td>✅ works without changes</td>
+<td>A markdown parser and compiler. Built for speed.</td>
+<td>!<a href="https://img.shields.io/github/stars/markedjs/marked">GitHub Repo stars</a></td>
+</tr>
+</tbody>
+</table>
+
+</body>
+</html>

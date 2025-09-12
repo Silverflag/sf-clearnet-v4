@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neo4j</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Neo4j</h1>
+
+<p><strong>Repository:</strong> https://github.com/neueda/awesome-neo4j#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<p>Awesome Neo4j</p>
+<p>==============</p>
+<p><a href="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg"><img src="https://github.com/sindresorhus/awesome" alt="Awesome</a>"></p>
+<p><a href="https://api.travis-ci.org/neueda/awesome-neo4j.svg?branch=master "><img src="https://travis-ci.org/neueda/awesome-neo4j" alt="Build Status</a>"></p>
+
+<p>A curated list of awesome <a href="https://neo4j.com/">Neo4j</a> resources.</p>
+<p>Inspired by the <code>awesome-*</code> trend on GitHub.</p>
+
+<p>The goal is to build a categorized community-driven collection of very well-known resources.</p>
+<p>Sharing, suggestions and contributions are always welcome!</p>
+
+<p>Thanks to all <a href="https://github.com/Neueda/awesome-neo4j/graphs/contributors">contributors</a>.</p>
+
+<p>Maintained by <a href="http://labs.neueda.com/">Neueda R&D</a>.</p>
+
+<p>Table of Contents</p>
+<p>=================</p>
+
+<ul>
+<li><a href="#basics">Basics</a></li>
+</ul>
+<ul>
+<li><a href="#connectors">Connectors</a></li>
+<ul>
+<li><a href="#bolt">Bolt</a></li>
+</ul>
+<ul>
+<li><a href="#rest-api">REST API</a></li>
+<ul>
+<li><a href="#java">Java</a></li>
+</ul>
+<ul>
+<li><a href="#ruby">Ruby</a></li>
+</ul>
+<ul>
+<li><a href="#python">Python</a></li>
+</ul>
+<ul>
+<li><a href="#php">PHP</a></li>
+</ul>
+<ul>
+<li><a href="#other">Other</a></li>
+</ul>
+</ul>
+</ul>
+<ul>
+<li><a href="#cloud">Cloud</a></li>
+</ul>
+<ul>
+<li><a href="#packages">Packages</a></li>
+</ul>
+<ul>
+<li><a href="#docker">Docker</a></li>
+</ul>
+<ul>
+<li><a href="#full-text-search">Full\-text search</a></li>
+</ul>
+<ul>
+<li><a href="#import">Import</a></li>
+</ul>
+<ul>
+<li><a href="#benchmarking">Benchmarking</a></li>
+</ul>
+<ul>
+<li><a href="#extensions">Extensions</a></li>
+</ul>
+<ul>
+<li><a href="#stored-procedures">Stored Procedures</a></li>
+</ul>
+<ul>
+<li><a href="#development">Development</a></li>
+</ul>
+<ul>
+<li><a href="#editors">Editors</a></li>
+</ul>
+<ul>
+<li><a href="#shell">Shell</a></li>
+</ul>
+<ul>
+<li><a href="#visualization">Visualization</a></li>
+</ul>
+<ul>
+<li><a href="#tools">Tools</a></li>
+</ul>
+<ul>
+<li><a href="#resources">Resources</a></li>
+<ul>
+<li><a href="#learn">Learn</a></li>
+</ul>
+<ul>
+<li><a href="#certification">Certification</a></li>
+</ul>
+<ul>
+<li><a href="#bolt-1">Bolt</a></li>
+</ul>
+<ul>
+<li><a href="#books">Books</a></li>
+</ul>
+<ul>
+<li><a href="#miscellaneous">Miscellaneous</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#license">License</a></li>
+</ul>
+<p>Created by <a href="https://github.com/ekalinin/github-markdown-toc.go">gh-md-toc</a></p>
+
+<h1>Basics</h1>
+
+<ul>
+<li><a href="https://neo4j.com/docs/">Official documentation</a></li>
+</ul>
+<ul>
+<li><a href="https://neo4j.com/docs/cypher-refcard/current/">Cypher Refcard</a></li>
+</ul>
+<ul>
+<li><a href="https://neo4j.com/developer/get-started/">Developer resources</a></li>
+</ul>
+<ul>
+<li><a href="http://graphgist.neo4j.com/">Gists</a> - With Neo4j GraphGists you can describe and model your domain in a simple text file and render it as a rich, interactive page in any browser. Perfect to document a specific domain, use-case, question or graph problem.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/neo4j-examples">Neo4j Examples</a> - Examples for Neo4j and Library Usage.</li>
+</('ul', 0)>
+<h1>Related project</h1>
+
+<ul>
+<li><a href="http://www.opencypher.org/">openCypher</a> - openCypher is an open source project to bring a new public implementation of the industry’s most widely adopted graph query language: Cypher.</li>
+</ul>
+<ul>
+<li><a href="https://boltprotocol.org">Bolt Protocol</a> - The Bolt network protocol is a highly efficient, lightweight client-server protocol designed for database applications.</li>
+</('ul', 0)>
+<h1>Connectors</h1>
+
+<h2>Bolt</h2>
+
+<ul>
+<li><a href="https://github.com/neo4j/neo4j-java-driver">neo4j-java-driver</a> - Java driver for Neo4j binary protocol.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/neo4j/neo4j-python-driver">neo4j-python-driver</a> - Python driver for Neo4j binary protocol.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/neo4j/neo4j-javascript-driver">neo4j-javascript-driver</a> - JavaScript driver for Neo4j binary protocol.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/neo4j/neo4j-dotnet-driver">neo4j-dotnet-driver</a> - .Net driver for Neo4j (Bolt).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/graphaware/neo4j-bolt-php">neo4j-bolt-php</a> - PHP driver for Neo4j binary protocol.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/cleishm/libneo4j-client">libneo4j-client</a> - libneo4j-client is a client library written in C for Neo4j. It is not intended as a complete driver, but rather as a foundation on which basic tools and drivers for various languages may be built. libneo4j-client takes care of all the detail of establishing a session with a Neo4j server, sending statements for evaluation, and retrieving results.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/neo4j-contrib/neo4j-spark-connector">neo4j-spark-connector</a> - Neo4j-Spark-Connector based on Neo4j 3.0's Bolt protocol</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mschae/boltex">neo4j-elixir-driver</a> - Elixir driver for the neo4j bolt protocol</li>
+</ul>
+<ul>
+<li><a href="https://github.com/florinpatrascu/bolt_sips">neo4j-elixir-wrapper</a> - Neo4j driver for Elixir, wrapped around the Bolt protocol. Fork of the Boltex.</li>
+</('ul', 0)>
+<h2>REST API</h2>
+
+<h3>Java</h3>
+
+<ul>
+<li><a href="https://github.com/neo4j/neo4j-ogm">neo4j-ogm</a> - Object-Graph Mapping Library for Neo4j.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/spring-projects/spring-data-neo4j">spring-data-neo4j</a> - Provides support to increase developer productivity in Java when using the neo4j graph database.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/neo4j-contrib/neo4j-jdbc">neo4j-jdbc</a> - Neo4j JDBC driver.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Wolfgang-Schuetzelhofer/jcypher">jcypher</a> - Java access to Neo4J graph databases at multiple levels of abstraction.</li>
+</('ul', 0)>
+<h3>Ruby</h3>
+
+<ul>
+<li><a href="https://github.com/neo4jrb/neo4j">neo4jrb</a> - An active model wrapper for the Neo4j Graph Database for Ruby.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/maxdemarzi/neography">neography</a> - A thin Ruby wrapper to the Neo4j Rest API.</li>
+</('ul', 0)>
+<h3>Python</h3>
+
+<ul>
+<li><a href="https://github.com/nigelsmall/py2neo">py2neo</a> - Py2neo is a comprehensive toolkit for working with Neo4j from within Python applications or from the command line.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/neo4j-contrib/neomodel">neomodel</a> - An Object Graph Mapper (OGM) for the neo4j graph database, built on the awesome py2neo.</li>
+</('ul', 0)>
+<h3>PHP</h3>
+
+<ul>
+<li><a href="https://github.com/graphaware/neo4j-php-ogm">Neo4j-PHP-OGM</a> - Doctrine style Object Graph Mapper for Neo4j</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jadell/neo4jphp">neo4jphp</a> - PHP wrapper of the Neo4j REST interface.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Vinelab/NeoEloquent">NeoEloquent</a> - A Neo4j ORM - Based on Eloquent.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/graphaware/neo4j-php-client/tree/4.0">neo4j-php-client</a> - PHP Client for Neo4j leveraging the Http and Bolt protocols.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/spider/spider">Spider</a> - A simple, flexible, and beautiful graph-data abstraction for php.</li>
+</('ul', 0)>
+<h3>Other</h3>
+
+<ul>
+<li><a href="https://github.com/thingdom/node-neo4j">node-neo4j</a> - REST API client for Node.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Readify/Neo4jClient">Neo4jClient</a> - .NET client binding.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jmcvetta/neoism">neoism</a> - Client for Golang.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/michaelklishin/neocons">neocons</a> - A feature rich idiomatic Clojure client for the REST API.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/nicolewhite/RNeo4j">RNeo4j</a> - Driver for R.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/AnormCypher/AnormCypher">AnormCypher</a> - Scala library based on Anorm in the Play Framework.</li>
+</('ul', 0)>
+<h1>Cloud</h1>
+
+<ul>
+<li><a href="https://www.graphenedb.com/">GrapheneDB</a> - The world's first fully managed</li>
+</ul>
+<p>Neo4j graph database.</p>
+<ul>
+<li><a href="https://www.graphstory.com/">GraphStory</a> - Neo4j enterprise cloud provider</li>
+</('ul', 0)>
+<h1>Packages</h1>
+
+<ul>
+<li><a href="http://debian.neo4j.org/">Debian Packages</a></li>
+</ul>
+<ul>
+<li><a href="http://yum.neo4j.org/stable/">Yum Repo</a></li>
+</('ul', 0)>
+<h1>Docker</h1>
+
+<ul>
+<li><a href="https://github.com/neo4j/docker-neo4j">docker-neo4j</a> - Docker Images for the Neo4j Graph Database.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ekino/docker-neo4j-cluster">docker-neo4j-cluster</a> - Up & Running Neo4j cluster in no time.</li>
+</('ul', 0)>
+<h1>Full-text search</h1>
+
+<ul>
+<li><a href="https://github.com/graphaware/neo4j-to-elasticsearch">GraphAware Neo4j Elasticsearch Integration</a> - GraphAware Framework Module for Integrating Neo4j with Elasticsearch.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/graphaware/graph-aided-search">GraphAware Graph-Aided Search</a> - Elasticsearch plugin offering Neo4j integration for Personalized Search.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/neo4j-contrib/neo4j-elasticsearch">neo4j-elasticsearch</a> - Neo4j ElasticSearch Integration.</li>
+</('ul', 0)>
+<h1>Import</h1>
+
+<ul>
+<li><a href="https://github.com/graphaware/neo4j-importer">GraphAware Neo4j Importer</a> - Java importer skeleton for complicated, business-logic-heavy high-performance Neo4j imports directly from SQL databases, CSV files, etc.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sarmbruster/neo4j-csv-firehose">neo4j-csv-firehose</a> - Enables Neo4j’s <code>LOAD CSV</code> Cypher command to load from other datasources as well.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jexp/neo4j-rdbms-import">neo4j-rdbms-import</a> - An automatic importer for relational databases into Neo4j.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/neo4j-contrib/neo4j<em>doc</em>manager">Doc manager for Neo4j</a> - The Neo4j Doc Manager takes MongoDB documents and makes it easy to query them for relationships by making them available in a Neo4j graph structure, following the format specified by Mongo Connector.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/wadael/neoloadcsvskelgen">neoloadcsvskelgen</a> - Will output a skeleton of LOAD CSV Cypher code, from very little input (filename, separator, hints). Save time, avoid typos. </li>
+</('ul', 0)>
+<h1>Benchmarking</h1>
+
+<ul>
+<li><a href="https://github.com/moxious/neoprofiler">neoprofiler</a> - Neo4J database profiling utility.</li>
+</('ul', 0)>
+<h1>Extensions</h1>
+
+<ul>
+<li><a href="https://github.com/graphaware/neo4j-uuid">GraphAware Neo4j UUID</a> - GraphAware Runtime Module that assigns a UUID to all nodes in the graph transparently.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/graphaware/neo4j-changefeed">GraphAware Neo4j ChangeFeed</a> - A GraphAware Framework Runtime Module allowing users to find out what were the latest changes performed on the graph.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/graphaware/neo4j-timetree">GraphAware Neo4j TimeTree</a> - Java and REST APIs for working with time-representing tree in Neo4j.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/graphaware/neo4j-reco">GraphAware Neo4j Recommendation Engine</a> - Neo4j-based recommendation engine module with real-time and pre-computed recommendations.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/graphaware/neo4j-algorithms">GraphAware Neo4j Algorithms</a> - Custom graph algorithms for Neo4j with own Java and REST APIs.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/graphaware/neo4j-warmup">GraphAware Neo4j Warmup</a> - Simple library that warms up Neo4j caches with a single REST call.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/graphaware/neo4j-resttest">GraphAware Neo4j RestTest</a> - GraphAware RestTest is a simple library for testing code that talks to Neo4j running in standalone server mode.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/graphaware/neo4j-expire">GraphAware Neo4j Expire</a> - GraphAware Expire is a simple library that automatically deletes nodes and relationships from the database when they've reached their expiration date or time-to-live (TTL).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/neo4j-contrib/spatial">Spatial</a> - Neo4j Spatial is a library of utilities for Neo4j that faciliates the enabling of spatial operations on data.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Graphify/graphify">Graphify</a> - Graphify is a Neo4j unmanaged extension used for document and text classification using graph-based hierarchical pattern recognition.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jexp/neo4j-tx-participation">neo4j-tx-participation</a> - This is a Neo4j Server Extension to make Neo4j REST-API participate in transactions started by the transactional Cypher endpoint.</li>
+</('ul', 0)>
+<h1>Stored Procedures</h1>
+
+<ul>
+<li><a href="https://github.com/neo4j-contrib/neo4j-apoc-procedures">Apoc : Awesome Procedures on Cypher</a> - Collection of useful procedures for Neo4j 3.x</li>
+</ul>
+<ul>
+<li><a href="https://github.com/graphaware/neo4j-graphgen-procedure">Graphgen</a> - Neo4j procedure for generating test data easily with Cypher</li>
+</('ul', 0)>
+<h1>Development</h1>
+
+<ul>
+<li><a href="https://m2.neo4j.org/index.html">Maven repositories</a> - Neo4j Maven repositories (releases, snapshots).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/graphaware/neo4j-framework">GraphAware Neo4j Framework</a>- GraphAware Framework speeds up development with Neo4j by providing a platform for building useful generic as well as domain-specific functionality, analytical capabilities, (iterative) graph algorithms, etc.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/neo4j-contrib/cypher-dsl">cypher-dsl</a> - A Java DSL for the Cypher Query Language and an optional Query DSL mode.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/liquigraph/liquigraph">Liquigraph</a> - Database migrations management tool, based on how Liquibase works.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tinkerpop/blueprints">blueprints</a> - Blueprints is a collection of interfaces, implementations, ouplementations, and test suites for the property graph data model. Blueprints is analogous to the JDBC, but for graph databases.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/structr/structr">structr</a> - Graph Application Platform based on Neo4j.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/graphaware/reco4php">Reco4PHP</a> - Neo4j based Recommendation Engine Framework for PHP.</li>
+</('ul', 0)>
+<h1>Editors</h1>
+
+<ul>
+<li><a href="https://github.com/neueda/jetbrains-plugin-graph-database-support">jetbrains-plugin-graph-database-support</a> - Graph Databases support for Jetbrains family IDE's.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/neo4j-contrib/cypher-vim-syntax">cypher-vim-syntax</a> - Very basic Vim syntax for Cypher.</li>
+</('ul', 0)>
+<h1>Shell</h1>
+
+<ul>
+<li><a href="https://github.com/nicolewhite/cycli">cycli</a> - A Command Line Interface for Cypher.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jexp/neo4j-shell-tools">neo4j-shell-tools</a> - A bunch of import/export tools for the neo4j-shell.</li>
+</('ul', 0)>
+<h1>Visualization</h1>
+
+<ul>
+<li><a href="https://github.com/neo4j-contrib/neoclipse">neoclipse</a> - Neoclipse is a tool to view, edit and explore Neo4j databases.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/gephi/gephi">Gephi</a> - Gephi is an award-winning open-source platform for visualizing and manipulating large graphs.</li>
+</ul>
+<ul>
+<li><a href="https://linkurio.us/">Linkurious</a> - Linkurious helps search and visualize your graph data through a simple web-based interface.</li>
+</ul>
+<ul>
+<li><a href="https://www.yworks.com/products/yfiles-for-html">yFiles for HTML</a> - yFiles is a commercial generic graph visualization programming library that comes with <a href="http://live.yworks.com/demos/#neo4j">a demo to visualize your neo4j databases in JavaScript</a>. It's also the basis for the <a href="https://www.yworks.com/neo4j-explorer/">free neo4j Graph Explorer app</a>.</li>
+</('ul', 0)>
+<h1>Tools</h1>
+
+<ul>
+<li><a href="http://graphgen.graphaware.com">Graphgen</a> - Graph Generation engine based on the Cypher DSL.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jexp/store-utils">store-utils</a> - Utilities to compact, copy, fix, analyse Neo4j stores.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/cohesivestack/ineo">ineo</a>- A simple but useful Neo4j instance manager.</li>
+</ul>
+<ul>
+<li><a href="https://www.yworks.com/blog/neo4j-node-design">yFiles neo4j Graph Explorer</a> - A simple, free online tool to visualize your graph data and database schema.</li>
+</('ul', 0)>
+<h2>Learn</h2>
+
+<ul>
+<li><a href="https://neo4j.com/graphacademy/online-training/getting-started-graph-databases-using-neo4j/">Getting Started with Neo4j</a></li>
+</ul>
+<ul>
+<li><a href="https://neo4j.com/graphacademy/online-training/neo4j-production/">Neo4j in Production</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/jimwebber/neo4j-tutorial">Neo4j Koans</a> - A koan-style tutorial in Java for Neo4j.</li>
+</('ul', 0)>
+<h2>Certification</h2>
+
+<ul>
+<li><a href="https://neo4j.com/graphacademy/neo4j-certification/">Neo4j Certification</a> - Become a Neo4j-Certified Professional.</li>
+</('ul', 0)>
+<h2>Miscellaneous</h2>
+
+<ul>
+<li><a href="https://trello.com/b/2zFtvDnV/public-idea-board">Neo4j's Idea board</a></li>
+</ul>
+<ul>
+<li><a href="https://neo4j.com/hardware-sizing-calculator/">Hardware Sizing Calculator</a></li>
+</('ul', 0)>
+<h1>License</h1>
+
+<p><a href="https://licensebuttons.net/p/zero/1.0/88x31.png"><img src="https://creativecommons.org/publicdomain/zero/1.0/" alt="CC0</a>"></p>
+
+<p>To the extent possible under law, <a href="https://github.com/Neueda">Neueda R&D</a> has waived all copyright and related or neighboring rights to this work.</p>
+
+</body>
+</html>

@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQLAlchemy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>SQLAlchemy</h1>
+
+<p><strong>Repository:</strong> https://github.com/dahlia/awesome-sqlalchemy#readme</p>
+<p><strong>Source File:</strong> README.rst</p>
+
+<hr>
+
+<p>Awesome SQLAlchemy</p>
+<p>==================</p>
+
+<p>.. image:: https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg</p>
+<p>:target: https://github.com/sindresorhus/awesome</p>
+
+<p>A curated list of awesome extra libraries and resources for SQLAlchemy_.  Inspired by</p>
+<p>awesome-python<em>.  (See also other <code>awesome lists</code></em>_!)</p>
+
+<p>Licensed under a `Creative Commons Attribution-ShareAlike 4.0 International</p>
+<p>License`__.</p>
+
+<p>.. _SQLAlchemy: https://www.sqlalchemy.org/</p>
+<p>.. _awesome-python: https://github.com/vinta/awesome-python</p>
+<p>__ https://github.com/sindresorhus/awesome</p>
+<p>__ https://creativecommons.org/licenses/by-sa/4.0/</p>
+
+<p>.. contents:: Table of Contents</p>
+<p>:backlinks: none</p>
+<p>:depth: 3</p>
+
+<p>Data Structures</p>
+<p>---------------</p>
+
+<p>SQLAlchemy-Continuum_</p>
+<p>Versioning and auditing extension for SQLAlchemy.</p>
+
+<ul>
+<li>Creates versions for inserts, deletes and updates.</li>
+</ul>
+<ul>
+<li>Does not store updates which don't change anything.</li>
+</ul>
+<ul>
+<li>Supports alembic migrations.</li>
+</ul>
+<ul>
+<li>Can revert objects data as well as all object relations at given</li>
+</ul>
+<p>transaction even if the object was deleted.</p>
+<ul>
+<li>Transactions can be queried afterwards using SQLAlchemy query syntax.</li>
+</ul>
+<ul>
+<li>Query for changed records at given transaction.</li>
+</ul>
+<ul>
+<li>Temporal relationship reflection. Version object's relationship show</li>
+</ul>
+<p>the parent objects relationships as they where in that point in time.</p>
+<ul>
+<li>Supports native versioning for PostgreSQL database (trigger based</li>
+</ul>
+<p>versioning).</p>
+
+<p>sqlalchemy<em>mptt</em></p>
+<p>Library for implementing MPTT (modified preorder tree traversal) with</p>
+<p>SQLAlchemy models and working with trees of model instances,</p>
+<p>like django-mptt_.</p>
+
+<p>SQLAlchemy-ORM-tree_</p>
+<p>An implementation for SQLAlchemy-based applications of</p>
+<p>the nested-sets/modified-pre-order-tree-traversal technique for</p>
+<p>storing hierarchical data in a relational database.</p>
+
+<p>vdm_</p>
+<p>Versioned domain model. Python library for revisioning/versioning of databases.</p>
+
+<p>.. _django-mptt: https://github.com/django-mptt/django-mptt/</p>
+<p>.. _SQLAlchemy-Continuum: https://sqlalchemy-continuum.readthedocs.io/</p>
+<p>.. <em>sqlalchemy</em>mptt: https://sqlalchemy-mptt.readthedocs.io/</p>
+<p>.. _SQLAlchemy-ORM-tree: https://sqlalchemy-orm-tree.readthedocs.io/</p>
+<p>.. _vdm: https://github.com/okfn/vdm</p>
+
+<p>Data Types</p>
+<p>----------</p>
+
+<p>SQLAlchemy-Enum34_</p>
+<p>SQLAlchemy type to store standard `<code>enum.Enum</code>` values.</p>
+
+<p>SQLAlchemy-Utc_</p>
+<p>SQLAlchemy type to store aware `<code>datetime.datetime</code>` values.</p>
+
+<p>SQLAlchemy-Utils_</p>
+<p>Various utility functions, new data types and helpers for SQLAlchemy</p>
+
+<ul>
+<li>Listeners</li>
+</ul>
+<ul>
+<li>Data types: {..., ChoiceType, CountryType, JSONType, URLType, UUIDType, ...}</li>
+</ul>
+<ul>
+<li>Range data types</li>
+</ul>
+<ul>
+<li>Aggregated attributes</li>
+</ul>
+<ul>
+<li>Generates decorator</li>
+</ul>
+<ul>
+<li>Generic relationships</li>
+</ul>
+<ul>
+<li>Database helpers: create<em>database, drop</em>database</li>
+</ul>
+<ul>
+<li>Foreign key helpers</li>
+</ul>
+<ul>
+<li>ORM helpers</li>
+</ul>
+<ul>
+<li>Utility classes</li>
+</ul>
+<ul>
+<li>Model mixins: Timestamp (created, updated times)</li>
+</ul>
+<p>.. _SQLAlchemy-Enum34: https://github.com/spoqa/sqlalchemy-enum34</p>
+<p>.. _SQLAlchemy-Utc: https://github.com/spoqa/sqlalchemy-utc</p>
+<p>.. _SQLAlchemy-Utils: https://sqlalchemy-utils.readthedocs.io/</p>
+
+<p>Database Migration Tools</p>
+<p>------------------------</p>
+
+<p>Alembic_</p>
+<p>Alembic is a lightweight database migration tool for usage with the</p>
+<p>SQLAlchemy Database Toolkit for Python.</p>
+
+<p>sqlalchemy-migrate_</p>
+<p>Inspired by Ruby on Rails' migrations, SQLAlchemy Migrate provides</p>
+<p>a way to deal with database schema changes in SQLAlchemy projects.</p>
+
+<p>.. _Alembic: https://alembic.readthedocs.io/</p>
+<p>.. _sqlalchemy-migrate: https://sqlalchemy-migrate.readthedocs.io/</p>
+
+<p>Dialects</p>
+<p>--------</p>
+
+<p>https://docs.sqlalchemy.org/en/latest/dialects/</p>
+
+<p>redshift<em>sqlalchemy</em></p>
+<p><code>Amazon Redshift</code>_ dialect for SQLAlchemy.</p>
+
+<p>sphinxalchemy_</p>
+<p>SQLAlchemy dialect for interfacing with Sphinx_ (search engine) via</p>
+<p>SphinxQL.</p>
+
+<p>GINO_</p>
+<p>An asynchronous PostgreSQL dialect for asyncpg_, providing SQLAlchemy</p>
+<p>core support and its own asynchronous ORM interface.</p>
+
+<p>.. _Amazon Redshift: https://aws.amazon.com/redshift/</p>
+<p>.. <em>redshift</em>sqlalchemy: https://github.com/binarydud/redshift_sqlalchemy</p>
+<p>.. _Sphinx: https://sphinxsearch.com/</p>
+<p>.. _sphinxalchemy: https://sphinxalchemy.readthedocs.io/</p>
+<p>.. _GINO: https://github.com/python-gino/gino</p>
+<p>.. _asyncpg: https://github.com/MagicStack/asyncpg</p>
+
+<p>Documentation</p>
+<p>-------------</p>
+
+<ul>
+<li>https://docs.sqlalchemy.org/en/latest/</li>
+</ul>
+<ul>
+<li>https://docs.sqlalchemy.org/en/latest/intro.html</li>
+</ul>
+<ul>
+<li>https://docs.sqlalchemy.org/en/latest/core/tutorial.html</li>
+</ul>
+<ul>
+<li>https://docs.sqlalchemy.org/en/latest/orm/tutorial.html</li>
+</ul>
+<ul>
+<li>https://docs.sqlalchemy.org/en/latest/glossary.html</li>
+</ul>
+<p>File and Image Attachments</p>
+<p>--------------------------</p>
+
+<p>filedepot_</p>
+<p>DEPOT is a framework for easily storing and serving files in web</p>
+<p>applications. Depot features simple integration with SQLAlchemy by providing</p>
+<p>customized model field types for storing files attached to your ORM</p>
+<p>document.</p>
+
+<p>SQLAlchemy-ImageAttach_</p>
+<p>SQLAlchemy-ImageAttach is a SQLAlchemy extension for attaching images</p>
+<p>to entity objects.</p>
+
+<p>sqlalchemy-media_</p>
+<p>Based on <code>SQLAlchemy-ImageAttach</code> but using JSON type instead of relation,</p>
+<p>and SqlAlchemy's mutable facility, Also supports multiple stores per context.</p>
+
+<p>.. _filedepot: https://depot.readthedocs.io/</p>
+<p>.. _SQLAlchemy-ImageAttach: https://sqlalchemy-imageattach.readthedocs.io/</p>
+<p>.. _sqlalchemy-media: https://github.com/pylover/sqlalchemy-media</p>
+
+<p>Forms and Data Validations</p>
+<p>--------------------------</p>
+
+<p>ColanderAlchemy_</p>
+<p>ColanderAlchemy helps you to auto-generate Colander_ schemas that are based</p>
+<p>on SQLAlchemy mapped classes.</p>
+
+<p>Such Colander schemas can be used with libraries like Deform_ and helps</p>
+<p>remove the need for duplication of schema definitions.</p>
+
+<p>Flask-Validator_</p>
+<p>Data validator for Flask and SQL-Alchemy, working at Model component</p>
+<p>with events, preventing invalid data in the columns.</p>
+<p>The extension works with event listeners from SQLAlchemy.</p>
+
+<p>FormAlchemy_</p>
+<p>FormAlchemy eliminates boilerplate by autogenerating HTML input fields from a</p>
+<p>given model. FormAlchemy will try to figure out what kind of HTML code should</p>
+<p>be returned by introspecting the model's properties and generate ready-to-use</p>
+<p>HTML code that will fit the developer's application.</p>
+
+<p>WTForms-Alchemy_</p>
+<p>WTForms-Alchemy is a WTForms_ extension toolkit for easier creation of</p>
+<p>model based forms.  Strongly influenced by Django ModelForm.</p>
+
+<p>Sprox_</p>
+<p>Sprox provides an easy way to create forms for web content which are:</p>
+<p>automatically generated, easy to customize, and validated. Sprox also</p>
+<p>has powerful tools to help you display your content the way you want</p>
+<p>to with table and record viewers. Sprox provides a way to fill your</p>
+<p>widgets, whether they are forms or other content with customizable data.</p>
+
+<p>.. _Colander: https://docs.pylonsproject.org/projects/colander/</p>
+<p>.. _ColanderAlchemy: https://github.com/stefanofontanelli/ColanderAlchemy</p>
+<p>.. _Deform: https://docs.pylonsproject.org/projects/deform/</p>
+<p>.. _Flask-Validator: https://flask-validator.readthedocs.io/</p>
+<p>.. _FormAlchemy: https://github.com/FormAlchemy/formalchemy</p>
+<p>.. _WTForms: https://wtforms.readthedocs.io/</p>
+<p>.. _WTForms-Alchemy: https://wtforms-alchemy.readthedocs.io/</p>
+<p>.. _Sprox: https://sprox.org/</p>
+
+<p>Full-text Searching</p>
+<p>-------------------</p>
+
+<p>SQLAlchemy-Searchable_</p>
+<p>Full-text searchable models for SQLAlchemy. Only supports PostgreSQL.</p>
+
+<p>.. _SQLAlchemy-Searchable: https://sqlalchemy-searchable.readthedocs.io/</p>
+
+<p>SQLAlchemy-FullText-Search_</p>
+<p>Fulltext search support with MySQL & SQLAlchemy.</p>
+
+<p>.. _SQLAlchemy-FullText-Search: https://github.com/mengzhuo/sqlalchemy-fulltext-search</p>
+
+<p>GIS and Spatial Databases</p>
+<p>-------------------------</p>
+
+<p>GeoAlchemy_</p>
+<p>GeoAlchemy provides extensions to SQLAlchemy to work with spatial databases.</p>
+
+<p>The current supported spatial database systems are PostGIS<em>, Spatialite</em>,</p>
+<p>MySQL, Oracle, and MS SQL Server 2008.</p>
+
+<p><code>GeoAlchemy 2</code>_</p>
+<p>GeoAlchemy 2 provides extensions to SQLAlchemy for working with</p>
+<p>spatial databases.</p>
+
+<p>GeoAlchemy 2 focuses on PostGIS_.  PostGIS 1.5 and PostGIS 2 are supported.</p>
+<p>Spatialite_ is also supported, but using GeoAlchemy 2 with Spatialite</p>
+<p>requires some specific configuration on the application side.</p>
+
+<p>GeoAlchemy 2 aims to be simpler than its predecessor, GeoAlchemy_.</p>
+<p>Simpler to use, and simpler to maintain.</p>
+
+<p>.. _GeoAlchemy: https://geoalchemy.readthedocs.io/</p>
+<p>.. _GeoAlchemy 2: https://geoalchemy-2.readthedocs.io/</p>
+<p>.. _PostGIS: https://postgis.net/</p>
+<p>.. _Spatialite: https://www.gaia-gis.it/gaia-sins/</p>
+
+<p>Internationalizations</p>
+<p>---------------------</p>
+
+<p>SQLAlchemy-i18n_</p>
+<p>Internationalization extension for SQLAlchemy models.</p>
+
+<ul>
+<li>Stores translations in separate tables.</li>
+</ul>
+<ul>
+<li>Reflects translation table structures based on</li>
+</ul>
+<p>parent model table structure.</p>
+<ul>
+<li>Supports forcing of given locale.</li>
+</ul>
+<ul>
+<li>Good performance (uses proxy dicts and other advanced SQLAlchemy</li>
+</ul>
+<p>concepts for performance optimization).</p>
+
+<p>.. _SQLAlchemy-i18n: https://sqlalchemy-i18n.readthedocs.io/</p>
+
+<p>Profilers</p>
+<p>---------</p>
+
+<p>flask<em>debugtoolbar</em></p>
+<p>Debug toolbar with SQLAlchemy query information for Flask.</p>
+
+<p>pyramid<em>debugtoolbar</em></p>
+<p>Debug toolbar with SQLAlchemy query information for Pyramid.</p>
+
+<p>SQLTap_</p>
+<p>SQLTap is a library that allows you to profile and introspect the queries</p>
+<p>that your application makes using SQLAlchemy.</p>
+
+<p>SQLTap helps you understand:</p>
+
+<ul>
+<li>how many times a sql query is executed</li>
+</ul>
+<ul>
+<li>how much time your sql queries take</li>
+</ul>
+<ul>
+<li>where your application is issuing sql queries from</li>
+</ul>
+<p>nplusone_</p>
+<p>Auto-detect the n+1 queries problem in SQLAlchemy (and other Python ORMs)</p>
+
+<p>nplusone detects unnecessary queries caused by lazy loading and unused eager loading.</p>
+<p>Integrates with Flask-SQLAlchemy.</p>
+
+<p>.. <em>flask</em>debugtoolbar: https://github.com/flask-debugtoolbar/flask-debugtoolbar</p>
+<p>.. <em>pyramid</em>debugtoolbar: https://github.com/Pylons/pyramid_debugtoolbar</p>
+<p>.. _SQLTap: https://github.com/inconshreveable/sqltap</p>
+<p>.. _nplusone: https://github.com/jmcarp/nplusone</p>
+
+<p>Query helpers</p>
+<p>-------------</p>
+
+<p>sqlakeyset_</p>
+<p>This library implements keyset-based paging for SQLAlchemy (both ORM and core).</p>
+
+<p>This library has been tested with PostgreSQL and MariaDB/MySQL.</p>
+<p>It should work with other SQLAlchemy-supported databases to provided they support `<code>row(</code>` syntax.</p>
+
+<p>.. _sqlakeyset: https://github.com/djrobstep/sqlakeyset</p>
+
+<p>Recipes</p>
+<p>-------</p>
+
+<ul>
+<li>https://github.com/sqlalchemy/sqlalchemy/wiki/UsageRecipes</li>
+</ul>
+<p>Serialization and deserialization</p>
+<p>---------------------------------</p>
+
+<p>marshmallow-sqlalchemy_</p>
+<p>SQLAlchemy integration with the marshmallow_ (de)serialization library.</p>
+
+<p>pydantic_</p>
+<p>Data parsing and validation using Python type hints</p>
+
+<p>sqlalchemy-dict_</p>
+<p>SQLAlchemy extension for interacting models with python dictionary.</p>
+
+<p>.. _marshmallow: https://marshmallow.readthedocs.io/</p>
+<p>.. _marshmallow-sqlalchemy: https://marshmallow-sqlalchemy.readthedocs.io/</p>
+<p>.. _pydantic: https://github.com/samuelcolvin/pydantic</p>
+<p>.. _sqlalchemy-dict: https://github.com/meyt/sqlalchemy-dict</p>
+
+<p>Testing</p>
+<p>-------</p>
+
+<p>charlatan_</p>
+<p>Fixtures management for SQLAlchemy and other systems.</p>
+
+<p>factory<em>boy</em></p>
+<p>Generate fake data and create random fixtures for testing in SQLAlchemy</p>
+<p>and many other Python ORM systems.</p>
+
+<p>mixer_</p>
+<p>Generate fake data and create random fixtures for testing in SQLAlchemy</p>
+<p>and many other Python ORM systems.</p>
+
+<p>.. _charlatan: https://github.com/uber/charlatan</p>
+<p>.. <em>factory</em>boy: https://github.com/FactoryBoy/factory_boy</p>
+<p>.. _mixer: https://github.com/klen/mixer</p>
+
+<p>Thin Abstractions</p>
+<p>-----------------</p>
+
+<p>Dataset_</p>
+<p>Easy-to-use data handling for SQL data stores in Python with support for</p>
+<p>implicit table creation, bulk loading, and transaction. Dataset also</p>
+<p>includes support for freezing data to CSV and JSON flat files.</p>
+
+<p>rdflib-sqlalchemy_</p>
+<p>RDFLib_ store using SQLAlchemy dbapi as back-end.</p>
+
+<p>PugSQL_</p>
+<p>Loading and execution of parameterized queries stored in files.</p>
+
+<p>SQLSoup_</p>
+<p>SQLSoup provides a convenient way to map Python objects to</p>
+<p>relational database tables, with no declarative code of any kind.</p>
+<p>It's built on top of the SQLAlchemy ORM and provides a super-minimalistic</p>
+<p>interface to an existing database.</p>
+
+<p>SQLModel_</p>
+<p>SQLModel is a library for interacting with SQL databases from Python code, with Python objects.</p>
+<p>It is designed to be intuitive, easy to use, highly compatible, and robust. SQLModel is based</p>
+<p>on Python type annotations, and powered by Pydantic and SQLAlchemy.</p>
+
+<p>Zillion_</p>
+<p>Zillion is a free, open data warehousing and dimensional modeling tool that</p>
+<p>allows combining and analyzing data from multiple datasources through a</p>
+<p>simple API. It writes SQL so you don't have to, and it easily bolts onto</p>
+<p>existing database infrastructure via SQLAlchemy.</p>
+
+<p>.. _Dataset: https://dataset.readthedocs.io/</p>
+<p>.. _RDFLib: https://github.com/RDFLib/rdflib</p>
+<p>.. _rdflib-sqlalchemy: https://github.com/RDFLib/rdflib-sqlalchemy</p>
+<p>.. _PugSQL: https://pugsql.org/</p>
+<p>.. _SQLSoup: https://sqlsoup.readthedocs.io/</p>
+<p>.. _SQLModel: https://sqlmodel.tiangolo.com/</p>
+<p>.. _Zillion: https://totalhack.github.io/zillion/</p>
+
+<p>Vendor-specific Extensions</p>
+<p>--------------------------</p>
+
+<p>PostgreSQL</p>
+<p>..........</p>
+
+<p><code>Flask-SQLAlchemy-PGEvents <a href="https://github.com/shawalli/flask-sqlalchemy-pgevents">https://github.com/shawalli/flask-sqlalchemy-pgevents</a></code>_</p>
+<p>Flask extension that uses SQLAlchemy and</p>
+<p><code>psycopg2-pgevents <a href="https://github.com/shawalli/psycopg2-pgevents">https://github.com/shawalli/psycopg2-pgevents</a></code>_ to</p>
+<p>enable event listeners tied into database-layer triggers.</p>
+
+<p>sqlalchemy-crosstab-postgresql_</p>
+<p>New grammar for SQLAlchemy to make handling the `<code>crosstab()</code>` tablefunc</p>
+<p>(i.e. pivot tables) in PostgreSQL easy peasy.</p>
+
+<p>sqlalchemy-postgres-copy_</p>
+<p>Wrapper for using PostgreSQL <code>COPY</code> with SQLAlchemy for efficient bulk data</p>
+<p>imports and exports.</p>
+
+<p>.. _sqlalchemy-crosstab-postgresql: https://github.com/makmanalp/sqlalchemy-crosstab-postgresql</p>
+<p>.. _sqlalchemy-postgres-copy: https://github.com/jmcarp/sqlalchemy-postgres-copy</p>
+
+<p>Visualizations</p>
+<p>--------------</p>
+
+<p>sadisplay_</p>
+<p>Simple package for describing SQLAlchemy schema and display raw database tables by reflecting feature.</p>
+
+<p>sqlalchemy<em>schemadisplay</em></p>
+<p>This module generates images from SQLAlchemy models.</p>
+
+<p>eralchemy_</p>
+<p>ERAlchemy generates Entity Relation (ER) diagram from databases or from SQLAlchemy models.</p>
+
+<p>paracelsus_</p>
+<p>CLI and Library that generates Mermaid and DOT Diagrams from SQLAlchemy models and injects them into documentation.</p>
+
+<p>.. _sadisplay: https://bitbucket.org/estin/sadisplay</p>
+<p>.. <em>sqlalchemy</em>schemadisplay: https://github.com/fschulze/sqlalchemy_schemadisplay</p>
+<p>.. _eralchemy: https://github.com/Alexis-benoist/eralchemy</p>
+<p>.. _paracelsus: https://github.com/tedivm/paracelsus</p>
+
+<p>Web</p>
+<hr>
+
+<p>Framework Integrations</p>
+<p>......................</p>
+
+<p>bottle-sqlalchemy_</p>
+<p>A Bottle_ plugin to manage SQLAlchemy session to your application.</p>
+
+<p>filteralchemy_</p>
+<p>Declarative query builder that auto-generates filter parameters from</p>
+<p>models and parses request parameters using marshmallow-sqlalchemy_</p>
+<p>and webargs_.</p>
+
+<p>Flask-SQLAlchemy_</p>
+<p>Flask-SQLAlchemy is an extension for Flask_ that adds support for</p>
+<p>SQLAlchemy to your application.</p>
+
+<p>Flask-Admin_</p>
+<p>The admin interface framework for Flask_.</p>
+<p>With scaffolding for SQLAlchemy, MongoEngine, pymongo and Peewee.</p>
+
+<p>pyramid<em>sqlalchemy</em></p>
+<p>pyramid_sqlalchemy provides everything needed to use SQLAlchemy in</p>
+<p>Pyramid_ applications.</p>
+
+<p>pyramid<em>restler</em></p>
+<p>pyramid_restler is a somewhat-opinionated toolkit for building</p>
+<p>RESTful Web services and applications on top of the</p>
+<p>Pyramid framework (with SQLAlchemy models).</p>
+
+<p>sacrud_</p>
+<p>SACRUD will solve your problem of CRUD interface for SQLAlchemy,</p>
+<p>by providing extension for Pyramid_ (yet) or use it in pure form.</p>
+<p>Unlike classical CRUD interface, pyramid<em>sacrud</em> allows override and</p>
+<p>flexibly customize interface (that is closer to `<code>django.contrib.admin</code>`).</p>
+
+<p>SQLA-wrapper_</p>
+<p>A light and framework-independent wrapper for SQLAlchemy that makes</p>
+<p>it really easy to setup and use.</p>
+
+<ul>
+<li>Doesn't change the SQLAlchemy syntax.</li>
+</ul>
+<ul>
+<li>Can paginate the results of the queries.</li>
+</ul>
+<ul>
+<li>Support for multiple databases at the same time.</li>
+</ul>
+<p>zope.sqlalchemy_</p>
+<p>The aim of this package is to unify the plethora of existing packages</p>
+<p>integrating SQLAlchemy with Zope_'s transaction management.</p>
+<p>As such it seeks only to provide a data manager and makes no attempt</p>
+<p>to define a zopeish way to configure engines.</p>
+
+<p>.. _Bottle: https://bottlepy.org/</p>
+<p>.. _bottle-sqlalchemy: https://github.com/iurisilvio/bottle-sqlalchemy</p>
+<p>.. _filteralchemy: https://github.com/jmcarp/filteralchemy</p>
+<p>.. _Flask: https://palletsprojects.com/p/flask/</p>
+<p>.. _Flask-SQLAlchemy: https://pythonhosted.org/Flask-SQLAlchemy/</p>
+<p>.. _Flask-Admin: https://github.com/flask-admin/flask-admin</p>
+<p>.. _Pyramid: https://trypyramid.com/</p>
+<p>.. <em>pyramid</em>restler: https://github.com/wylee/pyramid_restler</p>
+<p>.. <em>pyramid</em>sacrud: https://pyramid-sacrud.readthedocs.io/</p>
+<p>.. <em>pyramid</em>sqlalchemy: https://pyramid-sqlalchemy.readthedocs.io/</p>
+<p>.. _sacrud: https://sacrud.readthedocs.io/</p>
+<p>.. _SQLA-wrapper: https://github.com/jpscaletti/sqla-wrapper</p>
+<p>.. _webargs: https://github.com/marshmallow-code/webargs</p>
+<p>.. _Zope: https://www.zope.org/</p>
+<p>.. _zope.sqlalchemy: https://pypi.org/project/zope.sqlalchemy/</p>
+
+<p>Other</p>
+<p>.....</p>
+
+<p>paginate<em>sqlalchemy</em></p>
+<p>This module helps dividing large lists of items into pages.</p>
+<p>The user is shown one page at a time and can navigate to other pages.</p>
+
+<p>sandman2_</p>
+<p>Generate a curl-able REST HTTP API with searching and filtering</p>
+<p>for all tables in a database and an admin UI with Flask-SQLAlchemy</p>
+<p>and HTTP Basic Authentication.</p>
+
+<p>sqlalchemy<em>mixins</em></p>
+<p>A set of well-tested mixins that brings Active Record, Django-like queries, nested eager load and beauty <strong>repr</strong> to your SQLAlchemy.</p>
+
+<p>.. <em>paginate</em>sqlalchemy: https://github.com/Pylons/paginate_sqlalchemy</p>
+<p>.. _sandman2: https://github.com/jeffknupp/sandman2</p>
+<p>.. <em>sqlalchemy</em>mixins: https://github.com/absent1706/sqlalchemy-mixins</p>
+
+</body>
+</html>
