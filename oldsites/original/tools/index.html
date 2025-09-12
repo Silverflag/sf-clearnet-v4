@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silverflag | Tools</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 800;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 1 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .card {
+            border: 2px solid #9f9;
+            border-radius: 2px;
+            padding: 10px;
+            width: calc(33.33% - 20px);
+            background-color: #000;
+            color: #fff;
+            box-sizing: border-box;
+            min-height: 250px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card h2 {
+            margin-top: 0;
+            font-weight: 800;
+            height: 60px;
+            overflow: hidden;
+        }
+
+        .card-button {
+            background-color: #9f9;
+            color: #000;
+            padding: 5px 15px;
+            border: none;
+            cursor: pointer;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 800;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+            align-self: center;
+        }
+
+        .card-button:hover {
+            background-color: #3f3;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Silverflag | Tools</h1>
+
+    <div id="container">
+        <div class="card">
+            <h2>Encoded Data</h2>
+            <p>Basic manipulation of encoded data.</p>
+            <button class="card-button" onclick="window.open('based.html', '_blank')">Go to Tool</button>
+        </div>
+
+        <div class="card">
+            <h2>DNS Resolver</h2>
+            <p>Get the IP behind a domain.</p>
+            <button class="card-button" onclick="window.open('dns.html', '_blank')">Go to Tool</button>
+        </div>
+
+        <div class="card">
+            <h2>IP Lookup</h2>
+            <p>Get information of your IP or an inputted IP.</p>
+            <button class="card-button" onclick="window.open('iputility.html', '_blank')">Go to Tool</button>
+        </div>
+		
+		<div class="card">
+            <h2>Password Strength Analysis</h2>
+            <p>See how secure your password is against brute force.</p>
+            <button class="card-button" onclick="window.open('passwordutil.html', '_blank')">Go to Tool</button>
+        </div>
+		
+		<div class="card">
+            <h2>JS Port Scanner</h2>
+            <p>An honestly terrible JS port scanner.</p>
+            <button class="card-button" onclick="window.open('portscanner.html', '_blank')">Go to Tool</button>
+        </div>
+		
+		<div class="card">
+            <h2>Youtube Video Downloader</h2>
+            <p>I dont think it works currently.</p>
+            <button class="card-button" onclick="window.open('youtube.html', '_blank')">Go to Tool</button>
+        </div>
+    </div>
+</body>
+
+</html>
