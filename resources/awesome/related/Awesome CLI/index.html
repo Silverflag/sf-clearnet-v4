@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome CLI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Awesome CLI</h1>
+
+<p><strong>Repository:</strong> https://github.com/umutphp/awesome-cli</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<h1>Awesome CLI</h1>
+
+<p>Awesome CLI is a simple command line tool to give you a fancy command line interface to dive into <a href="https://github.com/sindresorhus/awesome">Awesome</a> lists.</p>
+
+<p>!<a href="./assets/images/awesome-cli-banner.png">AWESOME CLI</a></p>
+
+<p>!<a href="https://github.com/umutphp/awesome-cli/workflows/Test%20&%20Build/badge.svg">Build</a> !<a href="https://github.com/umutphp/awesome-cli/workflows/WOSPM%20Checker/badge.svg">WOSPM Checker</a></p>
+
+<hr>
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+</ul>
+<ul>
+<li><a href="#how-to-use">How To Use</a></li>
+<ul>
+<li><a href="#interactive-mode">Interactive Mode</a></li>
+</ul>
+<ul>
+<li><a href="#random-mode">Random Mode</a></li>
+</ul>
+<ul>
+<li><a href="#surprise-mode">Surprise Mode</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#how-to-install">How To Install</a></li>
+<ul>
+<li><a href="#basic">Basic</a></li>
+</ul>
+<ul>
+<li><a href="#build-as-binary">Build as binary</a></li>
+</ul>
+<ul>
+<li><a href="#download-and-use-official-binary">Download and use official binary</a></li>
+</ul>
+<ul>
+<li><a href="#cli-options">CLI Options</a></li>
+</ul>
+<ul>
+<li><a href="#sample-execution">Sample Execution</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#how-to-contribute">How To Contribute</a></li>
+</ul>
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+<hr>
+
+<h2>Introduction</h2>
+
+<p>The CLI starts with the root repository <a href="https://github.com/sindresorhus/awesome">sindresorhus/awesome</a> and guides to to the final repo according to your choices. It fetches Readme files of the repositories and parses them to create the select lists. So, the CLI needs a working network :). It also uses file caches to cache the Readme file contents. You can find the cache folder with name ".awesomecache" under your home folder.</p>
+
+<p>!<a href="./assets/images/awesome-cli.gif">Avesome-cli Sample</a></p>
+
+<h2>How To Use</h2>
+
+<h3>Interactive Mode</h3>
+
+<p>In order to use awesome-cli interactively, just execute it without giving any option. You will walk through the categories and repositories by using "↓ ↑ → ←" buttons. Your choices will be saved to use them in <a href="#surprise-mode">surprise mode</a>.</p>
+
+<pre><code class="language-bash">
+&gt; $ awesome-cli
+Use the arrow keys to navigate: ↓ ↑ → ← 
+? Select from &#x27;Awesome&#x27; list: 
+  ▸ Platforms
+    Programming Languages
+    Front-End Development
+    Back-End Development
+    Computer Science
+    Big Data
+    Theory
+    Books
+    Editors
+↓   Gaming
+</code></pre>
+
+<h3>Random Mode</h3>
+
+<p>You can use "random" option to go a random awesome repository under a random category.</p>
+
+<pre><code class="language-bash">
+&gt; $ awesome-cli random
+aweome-cli Version 0.3.0
+✔ Programming Languages
+✔ Eta
+✔ Community
+✔ IRC
+https://kiwiirc.com/client/irc.freenode.net/#eta-lang
+</code></pre>
+
+<h3>Surprise Mode</h3>
+
+<p>When you use "surprise" option, awesome-cli will use your previous selections in <a href="#interactive-mode">interactive mode</a> to find a random repository for you.</p>
+
+<pre><code class="language-bash">
+&gt; $ awesome-cli surprise
+aweome-cli Version 0.3.0
+✔ Back-End Development
+✔ Docker
+✔ Videos
+✔ From Local Docker Development to Production Deployments
+https://www.youtube.com/watch?v=7CZFpHUPqXw
+</code></pre>
+
+<h2>How To Install</h2>
+
+<h3>Basic</h3>
+
+<p>Follow the steps;</p>
+
+<pre><code class="language-bash">
+&gt; $ git clone git@github.com:umutphp/awesome-cli.git
+&gt; $ cd awesome-cli
+&gt; $ go run main.go
+</code></pre>
+
+<h3>Build as binary</h3>
+
+<p>Follow the steps;</p>
+
+<pre><code class="language-bash">
+&gt; $ git clone git@github.com:umutphp/awesome-cli.git
+&gt; $ cd awesome-cli
+&gt; $ sudo go build -o /usr/local/bin/awesome-cli .
+&gt; $ awesome-cli
+</code></pre>
+
+<h3>Download and use official binary</h3>
+
+<p>Visit the <a href="https://github.com/umutphp/awesome-cli/releases/latest">latest release</a> page, download the zip correspondingly and extract the zip. You can used the binary in the zip file.</p>
+
+<pre><code class="language-bash">
+&gt; $ cp /path/to/zip/extract/awesome-cli /usr/local/bin/awesome-cli
+&gt; $ awesome-cli
+</code></pre>
+
+<h3>CLI Options</h3>
+
+<p>The CLI works in interactive mode without any given option. But, It can be also called some options described below;</p>
+
+<pre><code class="language-bash">
+&gt; $ awesome-cli help
+awesome-cli Version 0.6.0
+
+Options of awesome-cli:
+  help      To print this screen.
+  random    To go to a random awesome content.
+  surprise  To go to a surprise awesome content according to your previos choices.
+  profile   To see your previous choices.
+  reset     To clean your choices to start from the beginning.
+  update    Update awesome-cli to the latest version.
+</code></pre>
+
+<h3>Sample Execution</h3>
+
+<pre><code class="language-bash">
+&gt; $ awesome-cli random
+aweome-cli Version 0.2.0
+✔ Platforms
+✔ Linux
+✔ Applications
+✔ Gedit
+https://wiki.gnome.org/Apps/Gedit
+</code></pre>
+
+<h2>How To Contribute</h2>
+<p>Please follow the instructions in <a href="CONTRIBUTING.md">CONTRIBUTING</a> file and beware of <a href="CODE<em>OF</em>CONDUCT">CODE<em>OF</em>CONDUCT</a>.</p>
+
+</body>
+</html>
