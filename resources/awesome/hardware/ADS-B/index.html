@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADS B</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>ADS-B</h1>
+
+<p><strong>Repository:</strong> https://github.com/rickstaa/awesome-adsb#readme</p>
+<p><strong>Source File:</strong> readme.md</p>
+
+<hr>
+
+<!-- GITHUB LOGO PLACEHOLDER -->
+
+<div align="center">
+
+<!-- title -->
+
+<!--lint ignore double-link-->
+
+<h1><a style="color: inherit" href="https://github.com/rickstaa/awesome-adsb">Awesome ADS-B</a> <a href="https://awesome.re/badge.svg"><img src="https://awesome.re" alt="Awesome</a>"> <a href="https://img.shields.io/github/contributors/rickstaa/awesome-adsb?color=geen"><img src="https://github.com/rickstaa/awesome-adsb/graphs/contributors" alt="GitHub contributors</a>"> <a href="https://img.shields.io/github/stars/rickstaa/awesome-adsb"><img src="https://github.com/rickstaa/awesome-adsb/stargazers" alt="GitHub Repo stars</a>"> <!-- omit in toc --></h1>
+
+<blockquote>
+<p><strong>Note</strong></p>
+<p>Just type <code>adsb.cool</code> to go here.</p>
+</blockquote>
+
+<!-- subtitle -->
+
+<p>A curated list of awesome <a href="https://en.wikipedia.org/wiki/Automatic<em>Dependent</em>Surveillance%E2%80%93Broadcast">ASD-B</a> tools, projects, docker images, resources and other shiny things 📡.</p>
+
+<!-- image -->
+
+<a href="https://www.sportys.com/blog/ads-b-101-what-you-need-know" target="_blank" rel="noopener noreferrer">
+  <img width="600" src="https://www.sportys.com//media/wysiwyg/blog/13_-_Navigating_and_Automation_in_the_21st_Century.png" alt="ADSB.cool Logo"/>
+</a>
+
+<!-- description -->
+
+<p><strong>Automatic Dependent Surveillance–Broadcast (ADS-B)</strong> is a surveillance technology and form of Electronic <a href="https://en.wikipedia.org/wiki/Airborne<em>collision</em>avoidance<em>system#Aircraft</em>collision<em>avoidance">Conspicuity</a> in which an <a href="https://en.wikipedia.org/wiki/Aircraft">aircraft</a> determines its position via <a href="https://en.wikipedia.org/wiki/Satellite</em>navigation">satellite navigation</a> or other sensors and periodically broadcasts it, enabling it to be tracked.</p>
+
+</div>
+
+<!-- TOC -->
+
+<!-- omit in toc -->
+<h2>Contents</h2>
+
+<ul>
+<li><a href="#docs-and-quickstarts">Docs and Quickstarts</a></li>
+</ul>
+<ul>
+<li><a href="#books-and-articles">Books and Articles</a></li>
+</ul>
+<ul>
+<li><a href="#ads-b-aggregators">ADS-B Aggregators</a></li>
+<ul>
+<li><a href="#open-source-orientated">Open source orientated</a></li>
+</ul>
+<ul>
+<li><a href="#community-driven">Community driven</a></li>
+</ul>
+<ul>
+<li><a href="#non-profits">Non-profits</a></li>
+</ul>
+<ul>
+<li><a href="#commercial">Commercial</a></li>
+</ul>
+<ul>
+<li><a href="#other">Other</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#software">Software</a></li>
+<ul>
+<li><a href="#general">General</a></li>
+</ul>
+<ul>
+<li><a href="#feeding">Feeding</a></li>
+</ul>
+<ul>
+<li><a href="#visualisation">Visualisation</a></li>
+</ul>
+<ul>
+<li><a href="#browser-extensions">Browser extensions</a></li>
+</ul>
+<ul>
+<li><a href="#apps">Apps</a></li>
+</ul>
+<ul>
+<li><a href="#social">Social</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#hardware">Hardware</a></li>
+<ul>
+<li><a href="#sbc">SBC</a></li>
+</ul>
+<ul>
+<li><a href="#receivers">Receivers</a></li>
+</ul>
+<ul>
+<li><a href="#filters">Filters</a></li>
+</ul>
+<ul>
+<li><a href="#antennas">Antennas</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#follow">Follow</a></li>
+</ul>
+<!-- CONTENT -->
+
+<h2>Docs and Quickstarts</h2>
+
+<!-- List ADS-B documentation and quickstarter guides -->
+
+<ul>
+<li><a href="https://sdr-enthusiasts.gitbook.io/ads-b/">ADS-B docker guide</a> - Everything you want to know about ADS-B reception, decoding and sharing.</li>
+</ul>
+<ul>
+<li><a href="https://sdr-enthusiasts.gitbook.io/ads-b/intro/equipment-needed">ADS-B equipment guide</a> - A excellent ADS-B hardware guide written by the community.</li>
+</ul>
+<ul>
+<li><a href="https://flightaware.com/adsb/piaware/build/">PiAware ADS-B tutorial</a> - FlightAware's ADS-B setup tutorial.</li>
+</ul>
+<ul>
+<li><a href="https://www.sportys.com/blog/ads-b-out-questions-1090-978/">ADSB-B transponders guide</a> - A guide explaining the difference between 978 and 1090 MHz transponders.</li>
+</('ul', 0)>
+<h2>Books and Articles</h2>
+
+<!-- List interesting ADS-B books and articles -->
+
+<ul>
+<li><a href="https://mode-s.org/decode/index.html">The 1090 Megahertz Riddle - Junzi Sun</a> - A Guide to Decoding Mode S and ADS-B Signals.</li>
+</('ul', 0)>
+<h2>ADS-B Aggregators</h2>
+
+<!--lint ignore double-link-->
+
+<blockquote>
+<p><strong>Note</strong></p>
+<p>The aggregators below are displayed per category based on the number of feeders on <strong>27-02-2023</strong>. You can check out real-time stats about all listed aggregators by clicking the Grafana button below. If the number of feeders was unavailable, sites were compared based on the number of planes they tracked. Feel free to open a <a href="https://github.com/rickstaa/awesome-adsb/pulls">create a pull request</a> if you think the order needs to be updated.</p>
+</blockquote>
+
+<p><a href="https://img.shields.io/badge/Aggregators%20grafana%20dashboard-%23F46800.svg?style=for-the-badge&logo=grafana&logoColor=white"><img src="https://dashboards.adsb.cool/aggregators" alt="Grafana</a>"></p>
+
+<!-- List ADS-B aggregators. -->
+
+<h3>Open source orientated</h3>
+
+<!-- List open source ADS-B aggregators. -->
+
+<ul>
+<li><a href="https://adsb.fi">adsb.fi</a> - A community-driven flight tracker with hundreds of feeders worldwide that provides open and unfiltered access to worldwide air traffic data.</li>
+</ul>
+<ul>
+<li><a href="https://adsb.one">ADSB One</a> - A one-stop resource for all aero-related information and a community-driven aggregator for aero-feed data legally dedicated to the public interest.</li>
+</ul>
+<ul>
+<li><a href="https://adsb.lol">ADSB.lol</a> - A completely open-source and community-driven flight tracker that displays and provides <a href="https://opendatacommons.org/licenses/odbl/summary/">ODbL-licensed</a> data via a <a href="https://api.adsb.lol/">free API</a> as well as <a href="https://github.com/adsblol/globe_history">free historical data</a>.</li>
+</('ul', 0)>
+<h3>Community driven</h3>
+
+<!-- List community driven ADS-B aggregators. -->
+
+<ul>
+<li><a href="https://www.adsbhub.org">ADSBHub.org</a> - A service for real-time ADS-B data sharing and exchange between plane tracking enthusiasts, plane spotters, radio amateurs and professionals interested in developing ADS-B-related software.</li>
+</ul>
+<ul>
+<li><a href="https://theairtraffic.com">TheAirTraffic</a> - A community-driven ADS-B aggregator dedicated to keeping the air-tracking data on their site open and unfiltered.</li>
+</ul>
+<ul>
+<li><a href="https://www.planespotters.net">PlaneSpotters.net</a> - A civil aviation database and aggregator with a large collection of aircraft photos and information.</li>
+</ul>
+<ul>
+<li><a href="https://plane.watch">Plane.watch</a> - A community hosted flight tracker.</li>
+</ul>
+<ul>
+<li><a href="https://www.live-military-mode-s.eu">www.live-military-mode-s.eu</a> - A community driven flight tracker that is focused at tracking military aircraft.</li>
+</ul>
+<ul>
+<li><a href="https://adsb.chaos-consulting.de">adsb.chaos-consulting.de</a> - A non-commercial tracker for flights, ships, and radiosondes managed by enthusiasts. Focuses on the contributions of individual feeding stations.</li>
+</('ul', 0)>
+<h3>Non-profits</h3>
+
+<!-- List non-profit ADS-B aggregators. -->
+
+<ul>
+<li><a href="https://opensky-network.org">Opensky Network</a> - The OpenSky Network is a non-profit association based in Switzerland that provides open access to flight tracking control data. It was set up as a research project by several universities and government entities to improve the security, reliability and efficiency of the airspace.</li>
+</('ul', 0)>
+<h3>Commercial</h3>
+
+<!-- List commercial ADS-B aggregators. -->
+
+<!--TODO: Remove when awesome-lint/issues/160 is fixed. -->
+<!--lint ignore no-undefined-references awesome-list-item-->
+
+<ul>
+<li><a href="https://flightaware.com">FlightAware</a>[^1] - An American multinational technology company that provides real-time, historical, and predictive flight tracking data and products.</li>
+</ul>
+<ul>
+<li><a href="https://www.flightradar24.com">FlightRadar24</a>[^1] - A Swedish internet-based service that shows real-time aircraft flight tracking information on a map.</li>
+</ul>
+<ul>
+<li><a href="https://www.radarbox.com">RadarBox</a>[^1] - A Tampa-based global flight tracking and data services company that offers worldwide commercial and general aviation flight tracking.</li>
+</ul>
+<ul>
+<li><a href="https://www.adsbexchange.com/">ADS-B Exchange</a> - A flight tracking company that offers high fidelity, stable, and secure flight tracking service. It was started by volunteers and flight enthusiasts but was recently acquired by <a href="https://www.jetnet.com/">JETNET</a>.</li>
+</ul>
+<ul>
+<li><a href="https://planefinder.net">PlaneFinder.net</a>[^1] - A United Kingdom-based real-time flight tracking service shows global flight data like flight numbers, how fast an aircraft moves, elevation, and travel destination.</li>
+</ul>
+<ul>
+<li><a href="https://www.avdelphi.com">AvDelphi</a> - An aviation data and services company that shows airframes, registrations, types, airports and flights, radar and nav points, and owner and flight histories.</li>
+</ul>
+<ul>
+<li><a href="https://www.radarvirtuel.com">RadarVirtuel</a> - A flight data collector that offers premium features. Its primary focus is collecting information about traffic around smaller airports worldwide.</li>
+</ul>
+<!--TODO: Remove when awesome-lint/issues/160 is fixed. -->
+<!--lint ignore no-undefined-references-->
+
+<p>[^1]: Adheres to the <a href="https://www.faa.gov/">FAA</a>'s <a href="https://www.faa.gov/pilots/ladd/request">Aircraft Tail Number Blocking/Unblocking list</a> list. Therefore, the data found on this platform is filtered and may not include all data found on other aggregators.</p>
+
+<h3>Other</h3>
+
+<ul>
+<li><a href="https://app.airframes.io/">Airframes.io</a> - Airframes is an aircraft-related aggregation service that receives ACARS, VDL, HFDL, and SATCOM data from volunteers worldwide. It collaborates closely with ADS-B aggregators and works with ADS-B data internally.</li>
+</ul>
+<ul>
+<li><a href="https://gcmb.io/adsb/adsb">gcmb.io</a> - ADS-B data from ABSBHub.org published via the MQTT protocol.</li>
+</('ul', 0)>
+<h2>Software</h2>
+
+<!-- list ADS-B software, apps and docker containers. -->
+
+<h3>General</h3>
+
+<ul>
+<li><a href="https://github.com/wiedehopf/readsb">readsb</a> - ADS-B decoder swiss knife.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/MalcolmRobb/dump1090">dump1090</a> - A simple Mode S decoder for RTLSDR devices.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mik3y/flightmon">flightmon</a> - Simple command-line "GUI" for showing current dump1090/readsb data.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sdr-enthusiasts/plane-alert-db">sdr-enthusiasts/plane-alert-db</a> - A list of exciting aircraft - Governments, Dictators, Military, Historical and just plain odd.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/junzis/pyModeS">junzis/pyModeS</a> - A python decoder for Mode S and ADS-B signals.</li>
+</('ul', 0)>
+<h3>Feeding</h3>
+
+<ul>
+<li><a href="https://github.com/sdr-enthusiasts/docker-adsb-ultrafeeder">sdr-enthusiasts/docker-adsb-ultrafeeder</a> - All-in-one ADSB container with readsb, tar1090, graphs1090, autogain, multi-feeder, and mlat-hub built in.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/adsbfi/adsb-fi-scripts">adsbfi/adsb-fi-scripts</a> - Easy to use feeder install script for feeding to adsb.fi.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/adsblol/feed">adsblol/feed</a> - Easy to use, container-based MLAT/ADS-B/ACARS/VDL2 multi feed client. Powered by <a href="https://github.com/sdr-enthusiasts">SDR-Enthusiasts</a> images.</li>
+</('ul', 0)>
+<h3>Visualisation</h3>
+
+<ul>
+<li><a href="https://github.com/wiedehopf/tar1090">wiedehopf/tar1090</a> - A great way to view your ADS-B data.</li>
+</ul>
+<ul>
+<li><a href="https://grafana.com/">Grafana</a> - Open source analytics and monitoring solution for every database.</li>
+</('ul', 0)>
+<h3>Browser extensions</h3>
+
+<ul>
+<li><a href="https://chrome.google.com/webstore/detail/radaratlas/kgionpkdifedafldjflcbeojkencnaja">RadarAtlas</a> - An ADSB & tar1090 add on that makes it fun and accessible to track the most interesting aircraft in the world.</li>
+</('ul', 0)>
+<h3>Apps</h3>
+
+<ul>
+<li><a href="https://github.com/d4rken/adsb-meta-tracker">d4rken/adsb-meta-tracker</a> - An android ADS-B Meta Tracker that shows metadata about ADS-B aggregators.</li>
+</('ul', 0)>
+<h3>Social</h3>
+
+<ul>
+<li><a href="https://github.com/kx1t/docker-planefence">docker-planefence</a> - A little tool that can be used to log, display and tweet the aircraft that come within range of your receiver (i.e. the fence).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Jxck-S/plane-notify">Jxck-S/plane-notify</a> - Notify if a selected plane has taken off or landed using OpenSky or ADS-B Exchange data.</li>
+</('ul', 0)>
+<h2>Hardware</h2>
+
+<!-- List ADS-B hardware resources. -->
+
+<h3>SBC</h3>
+
+<ul>
+<li><a href="https://www.raspberrypi.org/">Rasbpberry Pi</a> - Small single-board computers developed in the United Kingdom.</li>
+</ul>
+<ul>
+<li><a href="http://www.orangepi.org/html/hardWare/computerAndMicrocontrollers/details/Orange-Pi-5.html">Orange Pi</a> - Single-board computers created using OS cost-effective hardware.</li>
+</ul>
+<ul>
+<li><a href="https://banana-pi.org/">Banana Pi</a> - Single-bard computers created by a Chinese open-source hardware community.</li>
+</('ul', 0)>
+<h3>Receivers</h3>
+
+<ul>
+<li><a href="https://flightaware.store/collections/radio-dongles">FlightAware ADS-B USB receivers</a> - ADS-B USB receivers made by FlightAware.</li>
+</ul>
+<ul>
+<li><a href="https://www.radarbox.com/store">AirNav RadarBox ADS-B USB receivers</a> - ADS-B USB receivers made by RadarBox.</li>
+</ul>
+<ul>
+<li><a href="https://www.rtl-sdr.com/buy-rtl-sdr-dvb-t-dongles/">RTL-SDR DONGLES</a> - A premium RTL-SDR dongle provider focused on maintaining fair retail pricing.</li>
+</('ul', 0)>
+<h3>Filters</h3>
+
+<blockquote>
+<p><strong>Warning</strong></p>
+<p>Some ADS-B USB receivers already contain an onboard filter.</p>
+</blockquote>
+
+<ul>
+<li><a href="https://flightaware.store/collections/signal-filters">FlightAware Signal filters</a> - Different signal filters made by FlightAware.</li>
+</('ul', 0)>
+<h3>Antennas</h3>
+
+<ul>
+<li><a href="https://vinnant.sk/">Vinnant antennas</a> - Specialized premium antennas made in Slovakia.</li>
+</ul>
+<ul>
+<li><a href="https://dpdproductions.com/">DPD antennas</a> - High-quality antennas for various radio services produced in the USA.</li>
+</('ul', 0)>
+<h2>Follow</h2>
+
+<!-- List people worth following on social sites (Twitter, LinkedIn, GitHub, YouTube etc.) -->
+
+<!--lint ignore double-link-->
+
+<blockquote>
+<p><strong>TODO:</strong></p>
+<p>Please <a href="https://github.com/rickstaa/awesome-adsb/pulls">create a pull request</a> if you know people in the ADS-B space that are worth following.</p>
+</blockquote>
+
+<p>Who else should we <a href="https://github.com/rickstaa/awesome-adsb/issues/new?assignees=&labels=&template=suggestion.yaml">be following</a>?</p>
+
+<!-- END CONTENT -->
+
+<p><strong><a href="#contents">⬆ back to top</a></strong></p>
+
+<!-- REPO INFO -->
+
+<!-- omit in toc -->
+<h2>Contributing</h2>
+
+<p>Contributions of any kind are welcome 💙! Please check out the <a href="contributing.md">contributing guidelines</a>.</p>
+
+<p><a href="https://i.creativecommons.org/p/zero/1.0/88x31.png"><img src="https://creativecommons.org/publicdomain/zero/1.0/" alt="CC0</a>"></p>
+
+<!-- omit in toc -->
+<h3>Contributors</h3>
+
+<!--lint ignore double-link-->
+
+<p>This project exists thanks to all the people <a href="https://github.com/rickstaa/awesome-adsb/graphs/contributors">that contributed</a>!</p>
+
+<!--lint ignore double-link-->
+<a href="https://github.com/rickstaa/awesome-adsb/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=rickstaa/awesome-adsb" />
+</a>
+</br>
+</br>
+
+</body>
+</html>

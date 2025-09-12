@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esports</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Esports</h1>
+
+<p><strong>Repository:</strong> https://github.com/strift/awesome-esports#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<h1>Awesome Esports <a href="https://awesome.re/badge.svg"><img src="https://awesome.re" alt="Awesome</a>"></h1>
+
+<blockquote>
+<p>A curated list of open-source projects related to esports.</p>
+</blockquote>
+
+<p><a href="https://en.wikipedia.org/wiki/Esports">Esports</a> (also known as electronic sports or e-sports) is a form of competition using video games. It often takes the form of organized, multiplayer video game competitions, particularly between professional players, individually or as teams.</p>
+
+<p>Unmaintained projects, now only relevant for educational purposes, are in the <a href="ARCHIVE.md">Archive</a>.</p>
+
+<h2>Contents</h2>
+
+<ul>
+<li><a href="#libraries">Libraries</a></li>
+<ul>
+<li><a href="#apis--web-services">APIs & Web Services</a></li>
+</ul>
+<ul>
+<li><a href="#authentication">Authentication</a></li>
+</ul>
+<ul>
+<li><a href="#data-parsing-and-analysis">Data parsing and analysis</a></li>
+</ul>
+<ul>
+<li><a href="#team-management">Team management</a></li>
+</ul>
+<ul>
+<li><a href="#tournaments-management">Tournaments management</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#developer-tools">Developer tools</a></li>
+</ul>
+<ul>
+<li><a href="#unofficial-documentation">Unofficial documentation</a></li>
+</ul>
+<ul>
+<li><a href="#applications--tools">Applications & Tools</a></li>
+</ul>
+<ul>
+<li><a href="#education">Education</a></li>
+</('ul', 0)>
+<h2>Libraries</h2>
+
+<blockquote>
+<p>Programming libraries organized per use cases.</p>
+</blockquote>
+
+<h3>APIs & Web Services</h3>
+
+<ul>
+<li><a href="https://github.com/benweier/blizzard.js">Blizzard.js</a> - A Node.js library for interacting with the Blizzard Community Platform API.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/discordjs/discord.js">Discord.js</a> - A Node.js library for interacting with the Discord API.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/gigobyte/HLTV">HLTV</a> - A Node.js library for interacting with the HLTV API.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/c00kie17/liquipediapy">liquipediapy</a> - A Python library for interacting with the Liquipedia API.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ValvePython/steam/">steam</a> - A Python library for interacting with various parts of Steam.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/DoctorMcKay/node-steamcommunity">Steam Community</a> - A Node.js library for interacting with the Steam Community website.</li>
+</ul>
+<ul>
+<li>SteamID - A library for manipulating Steam IDs.</li>
+<ul>
+<li><a href="https://github.com/DoctorMcKay/node-steamid">Node.js</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/DoctorMcKay/php-steamid">PHP</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://github.com/DoctorMcKay/node-steam-user">SteamUser</a> - A Node.js library for interacting with the Steam network via the Steam client protocol.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/DoctorMcKay/node-steam-totp">Steam TOTP</a> - A Node.js library for generating Steam-style 2FA codes.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/liamcottle/valorant.js">valorant.js</a> - A Node.js library for interacting with the VALORANT APIs used in game.</li>
+</('ul', 0)>
+<h3>Authentication</h3>
+
+<ul>
+<li><a href="https://github.com/liamcurry/passport-steam">Passport-Steam</a> - A Node.js passport authentication strategy for Steam.</li>
+</('ul', 0)>
+<h3>Data parsing and analysis</h3>
+
+<ul>
+<li><a href="https://github.com/pnxenopoulos/awpy">awpy</a> - A Python library for parsing, analyzing, and visualizing CS:GO data.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/nickbabcock/boxcars">Boxcars</a> - A Rust library for parsing Rocket League replays.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/meraki-analytics/cassiopeia">Cassiopeia</a> - A Python framework for interacting with and analyzing data from the Riot Games League of Legends API.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/skadistats/clarity">Clarity</a> - A Java library for parsing CS:GO and Dota 2 replays.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/markus-wa/demoinfocs-golang">demoinfocs-golang</a> - A Go library for parsing and analyzing CS:GO demos (ie. replays.)</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tfausak/rattletrap">Rattletrap</a> - A Haskell library for parsing and generating Rocket League replays.</li>
+</('ul', 0)>
+<h3>Team management</h3>
+
+<ul>
+<li><a href="https://github.com/mrtolkien/inhouse_bot">LoL in-house bot</a> - A Discord bot handling role queue, matchmaking, and rankings for League of Legends in-house games.</li>
+</('ul', 0)>
+<h3>Tournaments management</h3>
+
+<ul>
+<li><a href="https://github.com/Drarig29/brackets-manager.js">brackets-manager.js</a> - A JavaScript library to manage tournament brackets.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Drarig29/brackets-viewer.js">brackets-viewer.js</a> - A JavaScript library to display tournament brackets.</li>
+</('ul', 0)>
+<h2>Developer tools</h2>
+
+<blockquote>
+<p>Tooling for developers.</p>
+</blockquote>
+
+<ul>
+<li><a href="https://github.com/sdras/fortnite-vscode-theme">Fortnite VSCode Theme</a> - A Visual Studio Code theme inspired by Fortnite.</li>
+</('ul', 0)>
+<h2>Unofficial documentation</h2>
+
+<blockquote>
+<p>Community-maintained documentation of editor APIs.</p>
+</blockquote>
+
+<ul>
+<li><a href="https://github.com/BNETDocs/bnetdocs-web">BNETDocs</a> - A documentation and discussion website for Blizzard and Battle.net protocols.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Pupix/rift-explorer">Rift Explorer</a> - An automatically generated documentation of Riot Games LCU API.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/techchrism/valorant-api-docs">valorant-api-docs</a> - An automatically generated documentation of Valorant internal API.</li>
+</('ul', 0)>
+<h2>Applications & Tools</h2>
+
+<blockquote>
+<p>Applications and general-purpose tooling.</p>
+</blockquote>
+
+<ul>
+<li><a href="https://github.com/lootmarket/esport-team-logos">Esport Team Logos</a> - A database of Esports teams logos.</li>
+</ul>
+<p><strong>Counter-Strike: Global Offensive</strong></p>
+
+<ul>
+<li><a href="https://github.com/boltgolt/boltobserv">Boltobserv</a> - An external Counter-Strike: Global Offensive radar for observers.</li>
+</ul>
+<p><strong>Dota 2</strong></p>
+
+<ul>
+<li><a href="https://github.com/odota/core">Open Dota</a> - A website for Dota 2 esports stats.</li>
+</ul>
+<p><strong>League of Legends</strong></p>
+
+<ul>
+<li><a href="https://github.com/chhopsky/foldysheet">Foldy Sheet</a> - A Python script to determine whether teams can make playoffs or not.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/RiotGames/leaguedirector">LeagueDirector</a> - A desktop application for staging and recording videos from League of Legends replays.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/vkaelin/LeagueStats">LeagueStats</a> - A website for League of Legends summoners' stats.</li>
+</('ul', 0)>
+<h2>Education</h2>
+
+<ul>
+<li><a href="https://github.com/FloPrm/lol_analytics">League of Legends Analytics</a> - A collection of League of Legends data-related guides, libraries, and learning materials for Data Analysts.</li>
+</('ul', 0)>
+<h2>Contributing</h2>
+
+<p>Contributions welcome! Read the <a href="CONTRIBUTING.md">contribution guidelines</a> first.</p>
+
+</body>
+</html>

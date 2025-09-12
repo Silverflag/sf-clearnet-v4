@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlayCanvas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>PlayCanvas</h1>
+
+<p><strong>Repository:</strong> https://github.com/playcanvas/awesome-playcanvas#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<h1>Awesome PlayCanvas <a href="https://awesome.re/badge.svg"><img src="https://awesome.re" alt="Awesome</a>"></h1>
+
+<blockquote>
+<p><img src="playcanvas-logo.png" align="right" width="100"></p>
+<p>></p>
+<p>PlayCanvas is an open source platform for building interactive web content. It's written in JavaScript, HTML5, CSS3 and WebGL.</p>
+<p>></p>
+<p>This list is a curated collection of awesome resources, tools, tutorials and projects using the PlayCanvas engine to help developers make <em>awesome</em> games and visualizations.</p>
+<p>></p>
+<p>Contributions <em>very welcome</em> but first see <a href="#contributing">Contributing</a>.</p>
+</blockquote>
+
+<h2>Contents</h2>
+
+<ul>
+<li><a href="#playcanvas-products">PlayCanvas Products</a></li>
+</ul>
+<ul>
+<li><a href="#community">Community</a></li>
+</ul>
+<ul>
+<li><a href="#documentation">Documentation</a></li>
+</ul>
+<ul>
+<li><a href="#tutorials">Tutorials</a></li>
+</ul>
+<ul>
+<li><a href="#extensions-and-utilities">Extensions and Utilities</a></li>
+</ul>
+<ul>
+<li><a href="#technical-demos">Technical Demos</a></li>
+</ul>
+<ul>
+<li><a href="#interactive-experiences">Interactive Experiences</a></li>
+</ul>
+<ul>
+<li><a href="#games">Games</a></li>
+<ul>
+<li><a href="#browser-games">Browser Games</a></li>
+</ul>
+<ul>
+<li><a href="#io-games">IO Games</a></li>
+</ul>
+<ul>
+<li><a href="#messenger-games">Messenger Games</a></li>
+</ul>
+<ul>
+<li><a href="#youtube-playables">YouTube Playables</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#automotive">Automotive</a></li>
+</ul>
+<ul>
+<li><a href="#product-configurators">Product Configurators</a></li>
+</ul>
+<ul>
+<li><a href="#3d-gaussian-splatting">3D Gaussian Splatting</a></li>
+</ul>
+<ul>
+<li><a href="#arvrxr">AR/VR/XR</a></li>
+</ul>
+<ul>
+<li><a href="#generative-ai">Generative AI</a></li>
+</ul>
+<ul>
+<li><a href="#blockchaincryptonft">Blockchain/Crypto/NFT</a></li>
+</('ul', 0)>
+<h2>PlayCanvas Products</h2>
+
+<ul>
+<li><a href="https://github.com/playcanvas/engine">PlayCanvas Engine</a> - Open source JavaScript graphics application framework.</li>
+</ul>
+<ul>
+<li><a href="https://playcanvas.com/">PlayCanvas Editor</a> - Browser-based editor for creating 3D web applications.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/playcanvas/react">PlayCanvas React</a> - Open source React wrapper for the PlayCanvas Engine.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/playcanvas/web-components">PlayCanvas Web Components</a> - Open source Web Components wrapper for the PlayCanvas Engine.</li>
+</ul>
+<ul>
+<li><a href="https://superspl.at/">SuperSplat</a> - Open source platform for editing and publishing 3D Gaussian Splats.</li>
+</ul>
+<ul>
+<li><a href="https://playcanvas.com/viewer">Model Viewer</a> - Open source model viewer for viewing glTF and PLY (3D Gaussian Splats) files.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/playcanvas/texture-tool">Texture Tool</a> - Open source tool for reprojecting textures.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/playcanvas/pcui">PCUI</a> - Open source front-end framework used by the PlayCanvas toolset.</li>
+</('ul', 0)>
+<h2>Community</h2>
+
+<ul>
+<li><a href="https://discord.gg/RSaMRzg">Discord Server</a></li>
+</ul>
+<ul>
+<li><a href="https://www.facebook.com/playcanvas/">Facebook</a></li>
+</ul>
+<ul>
+<li><a href="https://forum.playcanvas.com/">Forum</a></li>
+</ul>
+<ul>
+<li><a href="https://www.linkedin.com/company/playcanvas">LinkedIn</a></li>
+</ul>
+<ul>
+<li><a href="https://www.reddit.com/r/PlayCanvas/">Reddit</a></li>
+</ul>
+<ul>
+<li><a href="https://x.com/playcanvas">X</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/@playcanvas">YouTube</a></li>
+</('ul', 0)>
+<h2>Documentation</h2>
+
+<ul>
+<li><a href="https://api.playcanvas.com/">API Reference</a> - API Reference Site.</li>
+</ul>
+<ul>
+<li><a href="https://developer.playcanvas.com/">Developer Site</a> - PlayCanvas Developer Site.</li>
+</('ul', 0)>
+<h2>Tutorials</h2>
+
+<ul>
+<li><a href="https://3dground.net/en/articles/playcanvas-webgl/1">Vehicle and Interior Tutorials</a> - Detailed write ups of 2 PlayCanvas visualization applications.</li>
+</ul>
+<ul>
+<li><a href="https://www.gamefromscratch.com/post/2017/05/25/PlayCanvas-Engine-Revisited.aspx">Create a Bowling Game</a> - Create a physics-based bowling game.</li>
+</ul>
+<ul>
+<li><a href="https://gamedevelopment.tutsplus.com/tutorials/create-a-space-shooter-with-playcanvas-part-1--cms-28066">Create a Space Shooter</a> - Recreate Asteroids in this Tutsplus tutorial.</li>
+</ul>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Games/Techniques/3D<em>on</em>the<em>web/Building</em>up<em>a</em>basic<em>demo</em>with_PlayCanvas">MDN tutorial</a> - Build up a basic demo with PlayCanvas.</li>
+</ul>
+<ul>
+<li><a href="https://developer.playcanvas.com/en/tutorials/">Official Tutorials</a> - Large collection of official PlayCanvas tutorials.</li>
+</ul>
+<ul>
+<li><a href="https://magazine.substance3d.com/high-end-renders-online-bike-configurator-substance/">PlayCanvas and Substance</a> - Creating high-end artwork for vehicle configurators with PlayCanvas and Substance.</li>
+</ul>
+<ul>
+<li><a href="https://medium.com/@omar4ur/rescue-the-lunar-lander-a-coderdojo-tutorial-5217d463e26a">Rescue the Lunar Lander</a> - Tutorial to make a simple physics based game.</li>
+</ul>
+<ul>
+<li><a href="https://solargames.io/mentorship/">Solar Games Mentorship</a> - Premium PlayCanvas training and mentorship services.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/playlist?list=PLy57qL2R3Z6NlBQBEMnjVPT0iz320i4Ko">Video Tutorials</a> - YouTube playlist for short PlayCanvas tutorials.</li>
+</('ul', 0)>
+<h2>Extensions and Utilities</h2>
+
+<ul>
+<li><a href="https://www.8thwall.com/docs/api/playcanvas/getting-started/">8th Wall</a> - Markerless AR runtime.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tatelax/playcanvas-kinematic-character-controller">Kinematic Character Controller</a> - An open-source kinematic character controller.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/playcanvas/playcanvas-ar">playcanvas-ar</a> - Marker-based AR solution built on ARTollkit.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/yushimatenjin/playcanvas-node">playcanvas-node</a> - REST API wrapper for Node.js.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/playcanvas/playcanvas-p2.js">playcanvas-p2.js</a> - An integration with the p2.js 2D physics engine.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/playcanvas/playcanvas-rest-api-tools">playcanvas-rest-api-tools</a> - CLI tools built on the PlayCanvas REST API.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/playcanvas/playcanvas-spine">playcanvas-spine</a> - Spine plugin for PlayCanvas for 2D animations.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/playcanvas/playcanvas-tween">playcanvas-tween</a> - Officially supported tween animation plugin.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/isobolewski/playcanvas-vue">playcanvas-vue</a> - A PlayCanvas integration with Vue.js.</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/@recast-navigation/playcanvas">@recast-navigation/playcanvas</a> - NavMesh and Pathfinding using <a href="https://github.com/recastnavigation/recastnavigation">Recast</a> for PlayCanvas</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tweenjs/tween.js/">tween.js</a> - Popular JavaScript tweening library that integrates easily with PlayCanvas.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/playcanvas/sublime-completions">Sublime Completions</a> - Sublime Text Autocompletion for the PlayCanvas API.</li>
+</ul>
+<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=playcanvas.playcanvas">VS Code Extension</a> - VS Code Extension that can be used instead of the built-in Code Editor.</li>
+</('ul', 0)>
+<h2>Technical Demos</h2>
+
+<ul>
+<li><a href="https://playcanv.as/p/44MRmJRU/">After the Flood</a> - Collaboration with Mozilla to promote WebGL 2.</li>
+</ul>
+<ul>
+<li><a href="https://playcanv.as/p/LpmXGUe6/">Casino</a> - Physically rendered 3D casino environment.</li>
+</ul>
+<ul>
+<li><a href="https://playcanv.as/p/ZV4PW6wr/">Global Illumination</a> - GI approximation using interpolated lightmaps.</li>
+</ul>
+<ul>
+<li><a href="https://playcanv.as/p/MflWvdTW/">Seemore</a> - Collaboration with ARM to promote mobile WebGL.</li>
+</ul>
+<ul>
+<li><a href="https://playcanv.as/p/txPePQvy/">Sponza</a> - Run-time lightmapped Sponza environment.</li>
+</ul>
+<ul>
+<li><a href="https://playcanv.as/p/SA7hVBLt/">Star-Lord</a> - First ever PBR demo from PlayCanvas.</li>
+</ul>
+<ul>
+<li><a href="https://playcanv.as/p/nL1dYbMv">Steampunk Slots</a> - Physically rendered slots machine.</li>
+</('ul', 0)>
+<h2>Interactive Experiences</h2>
+
+<ul>
+<li><a href="https://playcanv.as/p/XPWoTZ4F/">Call of Duty: Gunsmith</a> - Promotional 3D experience themed on Call of Duty.</li>
+</ul>
+<ul>
+<li><a href="https://gallery.familyforeverychild.org/Childhood-on-The-Move/">Childhood on the Move</a> - Virtual art exhibition from charity Family for Every Child.</li>
+</ul>
+<ul>
+<li><a href="https://vz777.com/cybercity/index.html">Cyber City</a> - Promotional site for Visionaries777.</li>
+</ul>
+<ul>
+<li><a href="https://metavers.davikingcode.com/">Da Viking Code's Metaverse</a> - Explorable 3D project portfolio of a digital agency.</li>
+</ul>
+<ul>
+<li><a href="https://vimeo.com/136313614">DOOH Invaders</a> - World's largest Space Invaders clone unveiled at Cannes Lions.</li>
+</ul>
+<ul>
+<li><a href="https://playcanv.as/p/A5qC9ftM/?overlay=false">Fatal System Error</a> - Interactive opera experience created by Dumbworld from the Royal Opera House.</li>
+</ul>
+<ul>
+<li><a href="https://hntsam.com/">How Not To Suck At Money</a> - Educational game from Invesco about personal finance.</li>
+</ul>
+<ul>
+<li><a href="https://gallery.familyforeverychild.org/">Life During COVID-19</a> - Virtual art exhibition from charity Family for Every Child.</li>
+</ul>
+<ul>
+<li><a href="https://playcanv.as/p/ika9sdKu/?truck=johncena">MMX Racing</a> - Interactive 3D ad for a popular mobile game.</li>
+</ul>
+<ul>
+<li><a href="https://www.party.space/">Party Space</a> - Virtual events platform.</li>
+</ul>
+<ul>
+<li><a href="https://pocketverse.net/">Pocketverse</a> - Procedurally generated star systems.</li>
+</ul>
+<ul>
+<li><a href="https://gaffen.itch.io/realise">Realise</a> - A video game to accompany the new EP from Hearse Pileup.</li>
+</ul>
+<ul>
+<li><a href="https://vimeo.com/152996271">Ride Along 2</a> - Using WebGL to promote a Hollywood movie release.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=onOJBCC8R7A">Rugby World Cup</a> - Promoting the Rugby World Cup in London's Piccadilly Circus.</li>
+</ul>
+<ul>
+<li><a href="https://playcanv.as/e/p/cLkf99ZV/">Virtual Statues</a> - A digital museum built with 3D Gaussian Splatting.</li>
+</ul>
+<ul>
+<li><a href="https://unlock.wildrift.leagueoflegends.com/">Wild Rift</a> - Solve the puzzle to unlock a League of Legends: Wild Rift character.</li>
+</('ul', 0)>
+<h2>Games</h2>
+
+<h3>Browser Games</h3>
+
+<ul>
+<li><a href="https://www.bbc.co.uk/cbbc/games/beyond-bionic-extreme-encounters">Beyond Bionic: Extreme Encounters</a> - Outdoor adventures in this game from the BBC.</li>
+</ul>
+<ul>
+<li><a href="https://play.famobi.com/bubble-tower-3d">Bubble Tower 3D</a> - Old school bubbleshooter game.</li>
+</ul>
+<ul>
+<li><a href="https://poki.com/en/g/build-land">Build Land</a> - Grow your island by collecting resources.</li>
+</ul>
+<ul>
+<li><a href="https://play.famobi.com/bus-parking-3d">Bus Parking 3D</a> - Park the bus in the designated space before the timer runs out.</li>
+</ul>
+<ul>
+<li><a href="https://play.famobi.com/cannon-balls-3d">Cannon Balls 3D</a> - Use the cannon to destroy the various structures in this physics-based game.</li>
+</ul>
+<ul>
+<li><a href="https://poki.com/en/g/car-detailing-master">Car Detailing Master</a> - Clean, paint, and polish cars in this satisfying makeover game from Gamebole.</li>
+</ul>
+<ul>
+<li><a href="https://gamesnacks.com/games/colorburst3d">Color Burst 3D</a> - Hit the colored wall matching the ball color.</li>
+</ul>
+<ul>
+<li><a href="https://portfolio.redox-interactive.com/en/projects/continental-marble-adventure">Continental Marble Adventure</a> - Marble game for Continental's 150 year anniversary.</li>
+</ul>
+<ul>
+<li><a href="https://conundrum.fun">Conundrum</a> - A word game where you solve anagrams. Fast!</li>
+</ul>
+<ul>
+<li><a href="https://play.famobi.com/curve-ball-3d">Curve Ball 3D</a> - 3D pong game.</li>
+</ul>
+<ul>
+<li><a href="http://partners.disney.com/hour-of-code">Disney's Hour of Code - Moana</a> - Learn programming fundamentals with Disney's Moana.</li>
+</ul>
+<ul>
+<li><a href="https://play.famobi.com/euro-penalty-cup-2021">Euro Penalty Cup 2021</a> - Try to hit the goal and outsmart the goalkeeper.</li>
+</ul>
+<ul>
+<li><a href="https://poki.com/en/g/fishing-league">Fishing League</a> - Climb the ranks and become the ultimate angler.</li>
+</ul>
+<ul>
+<li><a href="https://playcanv.as/p/2OlkUaxF/">Flappy Bird</a> - Guide the bird through as many pipes as possible.</li>
+</ul>
+<ul>
+<li><a href="https://gamesnacks.com/games/freekickfootball">Free Kick Football</a> - Curve the ball to score goals.</li>
+</ul>
+<ul>
+<li><a href="https://gamesnacks.com/games/fullspeedracing">Full Speed Racing</a> - Drive as far as you can before the time runs out.</li>
+</ul>
+<ul>
+<li><a href="https://playcanv.as/p/Ikq6Uk6A/">Galaxies: Combat</a> - Carefully select power ups to defeat waves of hostile ships.</li>
+</ul>
+<ul>
+<li><a href="https://play.famobi.com/garden-bloom">Garden Bloom</a> - Garden themed 2D match 3 game.</li>
+</ul>
+<ul>
+<li><a href="https://play.famobi.com/garden-match-3d">Garden Match 3D</a> - 3D match 3 game.</li>
+</ul>
+<ul>
+<li><a href="https://www.gamee.com/game/geometryrun">Geometry Run</a> - Stylized endless runner built from geometric shapes.</li>
+</ul>
+<ul>
+<li><a href="https://play.famobi.com/hoop-royale">Hoop Royale</a> - Maneuver the ring around the ball.</li>
+</ul>
+<ul>
+<li><a href="https://poki.com/en/g/jungle-friends">Jungle Friends</a> - Earn coins by helping your animal friends.</li>
+</ul>
+<ul>
+<li><a href="https://www.toggo.de/spiele/jurassic-world/jurassic-world-das-gelaenderennen-6727.htm">Lego Jurassic World: Off-road Race</a> - Dinosaurs, LEGO and vehicle stunts.</li>
+</ul>
+<ul>
+<li><a href="https://play.famobi.com/mahjong-world">Mahjong World</a> - 3D Mahjong puzzle game.</li>
+</ul>
+<ul>
+<li><a href="https://www.crazygames.com/game/mancala-classic">Mancala Classic</a> - Strategic board game.</li>
+</ul>
+<ul>
+<li><a href="https://playcanv.as/p/JERg21J8/">Master Archer</a> - Shoot the fruit from the top of Bob's head.</li>
+</ul>
+<ul>
+<li><a href="https://playmegopoly.com/">Megopoly</a> - Free to play casual strategy board game where you invest in virtual property.</li>
+</ul>
+<ul>
+<li><a href="https://benbean.tech/monopoly-io/">Monopoly</a> - The classic boardgame recreated in a 3D video game.</li>
+</ul>
+<ul>
+<li><a href="https://gamedistribution.com/games/nitro-knights">Nitro Knights</a> - Futuristic jousting game.</li>
+</ul>
+<ul>
+<li><a href="https://play.famobi.com/om-nom-run">Om Nom Run</a> - Endless runner.</li>
+</ul>
+<ul>
+<li><a href="https://playcanv.as/p/3G3RnfUz/">Orbital Survival</a> - Destroy wave after wave of enemies on a tiny world.</li>
+</ul>
+<ul>
+<li><a href="https://gamesnacks.com/games/scooterxtreme">Scooter Xtreme</a> - Casual scooter riding game.</li>
+</ul>
+<ul>
+<li><a href="https://play.famobi.com/slice-rush">Slice Rush</a> - Take the knife and chop your way through the kitchen.</li>
+</ul>
+<ul>
+<li><a href="https://play.famobi.com/stack-smash">Stack Smash</a> - Destroy all platforms to get to the ground and win.</li>
+</ul>
+<ul>
+<li><a href="https://www.starstable.com/en/register">Star Stable</a> - Character registration portal for popular horse game.</li>
+</ul>
+<ul>
+<li><a href="https://poki.com/en/g/stickman-climb">Stickman Climb</a> - Physics based puzzle game.</li>
+</ul>
+<ul>
+<li><a href="https://twd.thosebeyond.io/">The Walking Dead: Those Beyond</a> - A community survivor camp experience game.</li>
+</ul>
+<ul>
+<li><a href="https://play.famobi.com/tnt-bomb">TNT Bomb</a> - Destroy buildings and structures with explosive power ups.</li>
+</ul>
+<ul>
+<li><a href="https://playcanv.as/p/JtL2iqIH/">SWOOOP</a> - Pick up gems in a bi-plane above a magical island.</li>
+</ul>
+<ul>
+<li><a href="https://gala.games">Town Star</a> - Online farming game built by the Creative Director of Farmville 2.</li>
+</ul>
+<ul>
+<li><a href="https://playcanv.as/p/tRUfwVg1/">Virtual Voodoo</a> - Voodoo doll simulator.</li>
+</('ul', 0)>
+<h3>IO Games</h3>
+
+<ul>
+<li><a href="https://poki.com/en/g/animal-obby">Animal Obby</a> - Switch between animals with unique abilities to reach the goal.</li>
+</ul>
+<ul>
+<li><a href="https://www.bulletbonanza.io/">Bullet Bonanza</a> - Fast paced, high fidelity, 3D Multiplayer FPS game from Kiloo.</li>
+</ul>
+<ul>
+<li><a href="https://www.fieldsoffury.io/">Fields of Fury</a> - Capture the flag set during WW2.</li>
+</ul>
+<ul>
+<li><a href="https://gummyz.fitfuns.com">GUMMYZ</a> - Sword-swinging multiplayer combat game.</li>
+</ul>
+<ul>
+<li><a href="https://playcanv.as/p/YvyiZeqL/">Ink Wars</a> - Paint faster than your opponents to win the round.</li>
+</ul>
+<ul>
+<li><a href="https://miniroyale.io/">Mini Royale: Nations</a> - Battle Royale first person shooter.</li>
+</ul>
+<ul>
+<li><a href="https://robostorm.io/">Robostorm</a> - Frenetic online multiplayer mech battle game.</li>
+</ul>
+<ul>
+<li><a href="https://rollem.io/">Rollem</a> - Guide your hamster to the end of the obstacle course in the fastest time.</li>
+</ul>
+<ul>
+<li><a href="https://simplyup.io">Simply Up</a> - Climb to the top of the tower in the shortest time. </li>
+</ul>
+<ul>
+<li><a href="https://tankroyale.io/">Tank Royale</a> - Cartoony fast-paced top-down multiplayer shooter.</li>
+</ul>
+<ul>
+<li><a href="https://tanx.io">TANX</a> - Online multiplayer tank battle game.</li>
+</ul>
+<ul>
+<li><a href="https://tribals.io/">Tribals</a> - First-person multiplayer survival game.</li>
+</ul>
+<ul>
+<li><a href="https://venge.io/">Venge</a> - 3D Multiplayer FPS shooter.</li>
+</ul>
+<ul>
+<li><a href="https://poki.com/en/g/vortellis-pizza-delivery">Vortelli's Pizza</a> - Multiplayer restaurant game.</li>
+</ul>
+<ul>
+<li><a href="https://www.warbands.io/">Warbands</a> - 3D Multiplayer FPS shooter.</li>
+</ul>
+<ul>
+<li><a href="https://poki.com/en/g/wheat-farming">Wheat Farming</a> - Multiplayer farming game.</li>
+</('ul', 0)>
+<h3>Messenger Games</h3>
+
+<ul>
+<li><a href="https://apps.apple.com/us/app/gamewave-games-for-imessage/id1506797690">GameWave</a> - Multiplayer games for iMessage.</li>
+</('ul', 0)>
+<h3>YouTube Playables</h3>
+
+<ul>
+<li><a href="https://www.youtube.com/playables/UgkxtJBl0ZoeInS-4l5yzLRPqToF7zHv4dhr">Cannon Balls 3D</a> - Use the cannon to destroy the various structures in this physics-based game.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/playables/UgkxcobZM_stIxOBW-bQwKcrUiYbg11g4x55">Color Burst 3D</a> - Hit the colored wall matching the ball color.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/playables/Ugkxsk_eNi3xerLPa1SuoUIftBIWxzlTCbAN">Farm Land</a> - Grow produce to expand your land.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/playables/UgkxjX3-84ZFPZHSm99ZIsn9eqPQQSoWJPxS">Free Kick Football</a> - Curve the ball to score goals.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/playables/UgkxbgLQk7KP4zQKHctwKY-XKtpJ_OBWL4aO">Full Speed Racing</a> - Drive as far as you can before the time runs out.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/playables/UgkxiSWh_UPnG4BImBX7gI3KVDLxT2Wm1PiJ">Om Nom Run</a> - Endless runner.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/playables/UgkxeIG5erzthQsBVVs1sCMhJTrLdLAb7v5c">Scooter Xtreme</a> - Casual scooter riding game.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/playables/UgkxHHtsak1SC8mRGHMZewc4HzeAY3yhPPmJ">Stack Bounce</a> - Destroy all platforms to get to the ground and win.</li>
+</('ul', 0)>
+<h2>Automotive</h2>
+
+<ul>
+<li><a href="https://www.airstream.com/travel-trailers/airstream-basecamp-3d-experience/">Airstream Basecamp</a> - Travel trailer visualizer.</li>
+</ul>
+<ul>
+<li><a href="https://www.benningtonmarine.com/en-us/build-model/">Bennington Pontoon Boats</a> - Boat configurator.</li>
+</ul>
+<ul>
+<li><a href="https://www.bmw.com/en/design/car-design-the-keys-to-bmw-design.html">BMW Car Design</a> - Interactive exploration of BMW design.</li>
+</ul>
+<ul>
+<li><a href="https://www.bmw.com/en/performance/electric-sports-car-BMWi4-M50-driving-dynamic-test.html">BMW i4 M50 Showcase</a> - Blog article that embeds a technical overview of the new i4.</li>
+</ul>
+<ul>
+<li><a href="http://car.playcanvas.com">BMW i8</a> - Car visualizer.</li>
+</ul>
+<ul>
+<li><a href="https://dabmotors.com/configurator/">DAB Motors</a> - Motorcycle configurator.</li>
+</ul>
+<ul>
+<li><a href="https://www.honda.co.jp/CIVICTYPE-R/configurator/">Honda Civic Type R</a> - Configurator (Japanese).</li>
+</ul>
+<ul>
+<li><a href="https://www.indianmotorcycle.com/en-us/scout-bobber/build-color/">Indian Motorcycles</a> - Motorcycle configurator.</li>
+</ul>
+<ul>
+<li><a href="https://beijing.infiniti-experience.com/">Infiniti Experience</a> - Explore the 2020 Infiniti range (Chinese).</li>
+</ul>
+<ul>
+<li><a href="https://www.kia.com/kr/buy/build-your-car/build/trim?rcCode=KRSG078">Kia Niro Hybrid</a> - Kia configurator (Korean).</li>
+</ul>
+<ul>
+<li><a href="https://www.kiavirtualexperience.com/">Kia Virtual Experience</a> - Explore Kia's latest line of cars.</li>
+</ul>
+<ul>
+<li><a href="https://playcanv.as/p/4e391c28/">Mercedes AMG GT C</a> - Car visualizer.</li>
+</ul>
+<ul>
+<li><a href="https://saas.nissan.co.jp/clubariya/login/">Nissan Ariya</a> - Explore Nissan's Arriya in 3D (Japanese - requires sign in).</li>
+</ul>
+<ul>
+<li><a href="https://rzr.polaris.com/en-us/build-model/">Polaris RZR</a> - Off-road vehicle configurator.</li>
+</('ul', 0)>
+<h2>Product Configurators</h2>
+
+<ul>
+<li><a href="https://3dplans.com">3D Plans</a> - Virtual tours and interactive maps for the property market.</li>
+</ul>
+<ul>
+<li><a href="https://www.amisco.com/en_us/uprightstool">Amisco Furniture</a> - Interactive 3D furniture configurator.</li>
+</ul>
+<ul>
+<li><a href="https://www.cibeslift.com/lift-configurator/">Cibes Lifts</a> - Elevator configurator.</li>
+</ul>
+<ul>
+<li><a href="http://elfa.com/sv-se/planner">Elfa Closets</a> - Closet configurator.</li>
+</ul>
+<ul>
+<li><a href="https://www.fjallraven.com/uk/en-gb/bags-gear/kanken/kanken-bags/kanken-me">Fjällräven Kånken</a> - Backpack configurator.</li>
+</ul>
+<ul>
+<li><a href="https://www.inr.se/planera-badrum/planera-badrum-verktyg-3d/">Iconic Nordic Rooms</a> - Shower and sink configurators.</li>
+</ul>
+<ul>
+<li><a href="http://phone.playcanvas.com">iPhone 6</a> - iPhone visualizer.</li>
+</ul>
+<ul>
+<li><a href="https://www.montblanc.com/en-us/headphones_cod19971654706731691.html">Montblanc</a> - Product visualizer for Montblanc pens, watches, wallets and headphones.</li>
+</ul>
+<ul>
+<li><a href="https://norqain.com/pages/watch-configurator">Norqain</a> - Watch configurator.</li>
+</ul>
+<ul>
+<li><a href="https://www.myslidingwardrobe.co.uk/design-your-wardrobe/">My Sliding Wardrobe</a> - Closet configurator.</li>
+</ul>
+<ul>
+<li><a href="https://www.renewalbyandersen.com/windows-doors/replacement-windows/double-hung">Renewal by Andersen Windows</a> - Window configurator.</li>
+</ul>
+<ul>
+<li><a href="https://watch.vz777.com/">Watch Configurator</a> - Technical demo from Visionaries777.</li>
+</ul>
+<ul>
+<li><a href="https://configurator.wfi.se/#/?lang=en">WFI</a> - Workstation configurator.</li>
+</ul>
+<ul>
+<li><a href="http://www.vaxthusguiden.se/">Willab Gardens Greenhouses</a> - Greenhouse configurator.</li>
+</('ul', 0)>
+<h2>3D Gaussian Splatting</h2>
+
+<ul>
+<li><a href="https://www.2ndswing.com/golf-clubs/drivers/ping-g440-max-driver/g440-max-dvr">2nd Swing</a> - Golf retailer using splats for product visualization.</li>
+</ul>
+<ul>
+<li><a href="https://www.4dv.ai/">4DV</a> - Impressive implementation of animated Gaussian splats (4DGS).</li>
+</ul>
+<ul>
+<li><a href="https://arrival.space/">Arrival Space</a> - Social metaverse built on splat-based spaces.</li>
+</ul>
+<ul>
+<li><a href="https://www.braintrance.net/">Braintrance</a> - A platform to share and experience 3D memories.</li>
+</ul>
+<ul>
+<li><a href="https://diffstudio.co">DiffStudio</a> - Create digital twins of e-commerce products.</li>
+</ul>
+<ul>
+<li><a href="https://www.animl.ai/">Doly</a> - Capture high-quality 3D photos of your products and embed them on Shopify in minutes.</li>
+</ul>
+<ul>
+<li><a href="https://gsplat.org/">GSplat Share</a> – Share your splats with optional time-limited and password-protected links.</li>
+</ul>
+<ul>
+<li><a href="https://www.ryanfellers.com/oldmain/">Old Main</a> - The Public Library of Cincinnati's Grand Hall as it appeared in 1900.</li>
+</ul>
+<ul>
+<li><a href="https://www.prewatch.io/">Prewatch</a> - Smart virtual scouting for better decisions.</li>
+</ul>
+<ul>
+<li><a href="https://vincentwoo.com/3d/sutro_tower/">Sutro Tower</a> - Explore this 3D Gaussian Splat of San Francisco's communications tower.</li>
+</ul>
+<ul>
+<li><a href="https://adnfamily.com/studio/mj/the_season/immersive/index.html">The Season</a> - Real estate visualization of a modern apartment block.</li>
+</('ul', 0)>
+<h2>AR/VR/XR</h2>
+
+<ul>
+<li><a href="https://playcanv.as/p/1ha5glKf/">Orange Room</a> - A highly realistic interior environment demonstrating room-scale VR.</li>
+</ul>
+<ul>
+<li><a href="https://www.rtz23.de/">Neon Bubblegum</a> - Demo scene style WebXR-based homepage from Karsten Weil.</li>
+</ul>
+<ul>
+<li><a href="https://www.phoria.com.au/projects/paralympics-xr/">Raw: Paralympics XR</a> - Webby 2022 nominated WebXR 360 video experience.</li>
+</ul>
+<ul>
+<li><a href="https://js13kgames.com/entries/storage-space-13">Storage Space 13</a> - Fun VR game and winner of js13k WebXR category.</li>
+</ul>
+<ul>
+<li><a href="https://www.viverse.com/">Viverse</a> - Open platform for virtual worlds and environments developed by HTC.</li>
+</ul>
+<ul>
+<li><a href="https://playcanvas.com/project/446331/overview/webxr-vr-lab">WebXR Lab</a> - Sandbox for VR interaction experiments.</li>
+</('ul', 0)>
+<h2>Generative AI</h2>
+
+<ul>
+<li><a href="https://ai.snapchat.com/">Snap AI</a> - Use AI to create Snapchat Lenses (3D visualization built on PlayCanvas).</li>
+</ul>
+<ul>
+<li><a href="https://ideate.xyz/">Ideate</a> - AI-powered 3D art suite on the web.</li>
+</('ul', 0)>
+<h2>Blockchain/Crypto/NFT</h2>
+
+<ul>
+<li><a href="https://aritelia.io/">Aritelia</a> - Open world social MMO with sandbox building and collectable NFTs.</li>
+</ul>
+<ul>
+<li><a href="https://www.dogetemple.io/">Doge Temple</a> - Online microverse devoted to Dogecoin.</li>
+</ul>
+<ul>
+<li><a href="https://www.crypt.art/">The Crypt</a> - Gallery for rare art and collectibles.</li>
+</ul>
+<ul>
+<li><a href="https://www.rarerooms.io/">RareRooms</a> - 3D virtual rooms for NFT collections.</li>
+</ul>
+<ul>
+<li><a href="https://somniumspace.com/parcel/">Somnium Space</a> - Virtual Reality world built on the Ethereum blockchain.</li>
+</('ul', 0)>
+<h2>Contributing</h2>
+
+<p>Please see <a href="https://github.com/playcanvas/awesome-playcanvas/blob/master/CONTRIBUTING.md">CONTRIBUTING</a> for details.</p>
+
+</body>
+</html>

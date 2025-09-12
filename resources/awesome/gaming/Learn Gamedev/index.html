@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Gamedev</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Learn Gamedev</h1>
+
+<p><strong>Repository:</strong> https://github.com/notpresident35/awesome-learn-gamedev#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<p><a href="https://en.wikipedia.org/wiki/Easter<em>egg</em>(media"><img src="images/MainIcon.png" align="right" width="128"></a>)</p>
+
+<h1>Awesome Learn Gamedev <a href="https://awesome.re/badge.svg"><img src="https://awesome.re" alt="Awesome</a>"></h1>
+
+<blockquote>
+<p>A Mega-List of Learning Resources for Game Creators </p>
+</blockquote>
+
+<p>
+
+<h2>Contents</h2>
+
+<ul>
+<li><a href="#about">About</a></li>
+</ul>
+<ul>
+<li><a href="#key">Key</a></li>
+</ul>
+<ul>
+<li><a href="#general">General</a></li>
+</ul>
+<ul>
+<li><a href="#programming">Programming</a></li>
+<ul>
+<li><a href="#gameplay">Gameplay</a></li>
+</ul>
+<ul>
+<li><a href="#graphics">Graphics</a></li>
+</ul>
+<ul>
+<li><a href="#networking">Networking</a></li>
+</ul>
+<ul>
+<li><a href="#fun">Fun</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#technical-art">Technical Art</a></li>
+<ul>
+<li><a href="#shaders">Shaders</a></li>
+</ul>
+<ul>
+<li><a href="#rigging">Rigging</a></li>
+</ul>
+<ul>
+<li><a href="#vfx">VFX</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#art">Art</a></li>
+<ul>
+<li><a href="#2dillustration">2D/Illustration</a></li>
+</ul>
+<ul>
+<li><a href="#3d">3D</a></li>
+</ul>
+<ul>
+<li><a href="#animation">Animation</a></li>
+</ul>
+<ul>
+<li><a href="#resources-for-non-artists">Resources for Non-Artists</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#design">Design</a></li>
+<ul>
+<li><a href="#level-design">Level Design</a></li>
+</ul>
+<ul>
+<li><a href="#uiux">UI/UX</a></li>
+</ul>
+<ul>
+<li><a href="#reference">Reference</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#audio">Audio</a></li>
+</ul>
+<ul>
+<li><a href="#writing">Writing</a></li>
+</ul>
+<ul>
+<li><a href="#production">Production</a></li>
+</ul>
+<ul>
+<li><a href="#marketing-and-business">Marketing and Business</a></li>
+</ul>
+<ul>
+<li><a href="#job-hunting-and-career">Job Hunting and Career</a></li>
+</ul>
+<ul>
+<li><a href="#other">Other</a></li>
+</ul>
+<br />
+
+<p>!<a href="images/KittyIcon.png 'Check out my portfolio below!'">An illustration of a cream-and-orange calico cat that Hazel uses as her profile icon :3</a></p>
+
+<h3>💜 Curated by <ins><a href="https://linktr.ee/dawdledoodles">Hazel Kennedy</a></ins> 💜</h3>
+
+<p>Got resources? Notice a broken link? Email me, shoot me a DM, or make a pull request! I like chatting too - don't be shy! ^^</p>
+
+<br />
+
+<h2>About</h2>
+
+<p>This list is aimed at learning the craft of game development. It has been curated to offer general knowledge, resources, and hiring advice for the variety of disciplines and roles under the gamedev umbrella.</p>
+
+<p>Nearly all resources are free, and anything with a price tag will be clearly marked. Paid resources are only included if they have been personally endorsed by an industry professional working in the relevant discipline.</p>
+
+<p>Suggestions and future-proofing efforts are always welcome! See <code>Contributing.md</code> for contribution guidelines, and check out <a href="https://github.com/notpresident35/learn-awesome-gamedev/issues">open issues</a> for tasks that need completing, such as archival work.</p>
+
+<p>Generally, this lists avoids tools and assets. However, it contains courses/tutorials for specific tools wherever they are required for a role, and assets whenever they would enable a person to learn their role more effectively (for example, the animation section contains rigs). For tools, assets, communities, and more granular lists for individual tools like Unity, check out <a href="https://github.com/sindresorhus/awesome#gaming">the gaming category of awesome</a></p>
+
+<p>This list avoids including tutorials (within reason). It aims to help you develop your problem-solving skills and improve your general knowledge, rather than show you how to solve a particular problem. It also avoids design analysis videos, as they tend to be aimed at passive entertainment more than active learning. Both of these are easy to find and difficult to categorize. For curation purposes, this list errs on the side of exclusion.</p>
+
+<p>These resources made my career possible. I hope they are just as helpful for you!</p>
+
+<p>Disclaimer: I'm a technical artist and gameplay programmer, so most resources are geared towards tech and art. However, <em>most</em> disciplines are represented here in some fashion, particularly through general materials and other curated lists.</p>
+
+<h2>Key</h2>
+
+<p>💠 Starred Resources are "best for beginner" links. These include courses, classes, books, and lists aimed at people who are new to the games industry, or game development as a whole.</p>
+
+<p>🟪 Purple Resources are “most useful” links. These include highly influential courses/books, resources I've personally found invaluable, and other entire mega-lists.</p>
+
+<br />
+
+<h2>General</h2>
+
+<br />
+
+<h3><a href="https://allurious.itch.io/cheatsheets2018">New to game development? Start here</a> 💠🟪</h3>
+
+<br />
+<br />
+
+<p><a href="https://lizengland.com/blog/2014/04/the-door-problem/">"The Door Problem"</a> 💠🟪 - A one-sentence summary of most major roles in a large studio, and a bigger explanation of a game designer's job</p>
+
+<p><a href="https://www.youtube.com/playlist?list=PLLwMDKo-0Eku3TxVg2Ye9dgW0jtUgkWRn">My mega-playlist of great gamedev videos</a> 🟪 - Conference talks, tutorials, analyses, etc</p>
+
+<p><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRYveFAl_GuvBo0iuy3EvgPm0fWAGci-Z8e5CZ6hoYz9n8gcoK4dgE0RML-x0pWqRNjGqte-V7phtqB/pubhtml">GameDev Contacts</a> 🟪 - A huge list of professional game developers you can contact for advice! Be courteous - these are real people! Curated by Joe Hobbs - @JLHGameArt on Twitter.</p>
+
+<p><a href="https://ocw.mit.edu/">MIT Open Courseware</a> 💠🟪 - classes and materials from MIT (free to access)!</p>
+
+<p><a href="https://www.youtube.com/watch?v=Pb5oIIPO62g&list=PLZQDJJp3vTmB6awcmhFc9V6HG2bd9vofo&index=58">Game Design Stuff</a> - Another mega-list of game development videos (primarily aimed at game design and programming)</p>
+
+<p><a href="https://docs.google.com/document/u/0/d/1HMtvSenYvd9SN58gTmRNs-FqiHhbnnVgkMEV5mqKKaQ/mobilebasic">FOSS GameDev</a> - A list of Free and Open Source Software for every aspect of gamedev</p>
+
+<p><a href="https://docs.google.com/document/d/1yGzqp1Cq8emRasH0JHYMXE4-Z6xYxQ0GDe6ZyemctVM/edit">VGDC at UCI Resources</a> - A list of workshops and resources from the Video Game Development Club at the University of California, Irvine ()</p>
+
+<p>More huge lists of resources, with many, many more incredible things! Some of these are older, so beware broken links and the like. 🟪</p>
+<ul>
+<li><a href="https://docs.google.com/document/d/1G0YTvNM8pzqjy_paxvEyVQSfb7KAJFGxJ5fY2ui8FEI/edit">Game Industry Resources</a></li>
+</ul>
+<ul>
+<li><a href="https://www.gamedeveloper.com/audio/38-great-resources-for-game-developers">38 Great Resources for Game Developers</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/Kavex/GameDev-Resources">GameDev Resources</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/Hengle/gamedev-resources-1">Gamedev Resources</a></li>
+</ul>
+<ul>
+<li><a href="https://community.gamedev.tv/t/wiki-free-cheap-indie-gamedev-resources/1948">Free & Cheap Indie GameDev Resources</a></li>
+</ul>
+<ul>
+<li><a href="https://letsmakegames.info/game-dev-resources">Game Dev Resources</a></li>
+</ul>
+<ul>
+<li><a href="https://web.archive.org/web/20220815084025/https://www.gamesparks.com/the-ultimate-list-of-free-and-low-cost-developer-tools-and-resources/">The Ultimate List of Free and Low-Cost Developer Tools and Resources</a></li>
+</ul>
+<ul>
+<li><a href="https://www.tomlooman.com/game-development-learning-resources/">Game Development Learning Resources</a></li>
+</ul>
+<ul>
+<li><a href="https://www.procedural-worlds.com/blog/best-free-unity-assets-categorised-mega-list/">Free Unity Assets</a></li>
+</ul>
+<ul>
+<li><a href="https://www.reddit.com/r/gamedev/wiki/index/">r/GameDev Wiki Resources</a></li>
+</ul>
+<ul>
+<li><a href="https://www.reddit.com/r/gamedesign/wiki/index/">r/GameDesign Wiki Resources</a></li>
+</ul>
+<br />
+
+<h2>Programming</h2>
+
+<br />
+
+<p><a href="https://github.com/ossu/computer-science">The Open Source University</a> 🟪 - A complete study plan for a computer science education.</p>
+
+<p><a href="https://github.com/jwasham/coding-interview-university">Coding Interview University</a> 🟪 - Another complete study plan aimed at software engineers.</p>
+
+<p><a href="https://github.com/charlax/professional-programming">Professional Programming</a> 🟪 - An expansive list of resources and other lists of resources intended to make you a more proficient programmer at a professional level.</p>
+
+<p><a href="https://interestingengineering.com/innovation/how-game-engines-work">How Game Engines Work</a> 💠 - A blog and video explaining the game engine, or a tool/framework used to create games.</p>
+
+<p><a href="https://www.gamedev.tv/p/godot-complete-2d/?coupon_code=BLIMEY">Complete Godot 4 Game Deveoper by GameDev.tv</a> 💠🟪 - A fantastic way to learn Godot, a free and open source game engine. Gamedev.tv are an invaluable resource for learning game engines and tools, and I cannot recommend their courses enough. They are more than worth the $15.</p>
+
+<p><a href="https://www.udemy.com/course/unrealcourse/">Unreal Engine 5 C++ Developer</a> 💠🟪 - Same as above, but with Unreal 5, a popular and powerful game engine. This course is invaluable - I know several full-time developers who learned from gamedev.tv, they are a gem. Wait for it to go on sale, then go pick this up.</p>
+
+<p><a href="https://www.udemy.com/course/unitycourse2/">Complete Unity Game Developer by GameDev.tv</a> - Unity has been a long-standing champion in the industry, particularly in the mobile/AR/VR space. Despite this, I would be cautious recommending it over other options, in part because of technical details such as its closed source and slow development, and in part due to poor business practices on behalf of Unity Technologies, such as the now-revoked install-based pricing model and their involvement in defense contracting.</p>
+
+<p><a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/">Intro to Computer Science and Programming in Python</a> 💠 - An introductory python course taught at MIT (free to access!)</p>
+
+<p><a href="https://web.archive.org/web/20220604184602/https://www.ics.uci.edu/~thornton/ics45c/Schedule.html">Programming in C++ as a Second Language</a> 🟪 - Lecture notes, assignments, and materials from a course on C++ taught at the University of California, Irvine (free to access!)</p>
+
+<p><a href="https://web.archive.org/web/20220405031903/https://www.ics.uci.edu/~thornton/ics46/Schedule.html">Data Structure Implementation and Analysis</a> 🟪 - Lecture notes, assignments, and materials from a course on data structures and algorithms taught at the University of California, Irvine (free to access!)</p>
+
+<p><a href="https://gameprogrammingpatterns.com/">Game Programming Patterns</a> 🟪 - A free book on programming patterns for games.</p>
+
+<p><a href="https://github.com/miloyip/game-programmer">A Study Path for Game Programmers</a> 🟪 - A huge collection of game programming book titles and covers organized by specialization, with fancy flow charts between each title for a recommended reading order! Note that the books are <em>not</em> included - a quick search should help you out with that ;]</p>
+
+<p><a href="https://www.freecodecamp.org/news/software-design/">How to Learn Software Design and Architecture</a> 🟪 - A list of resources for software architecture.</p>
+
+<p><a href="https://www.redblobgames.com/">Redblob</a> - Interactive tutorials for math and algorithms.</p>
+
+<p><a href="https://mitpress.mit.edu/9780262046305/">Introduction to Algorithms</a> - A book on algorithms. Pricey, look for it in a library or "something" (wink) first.</p>
+
+<p><a href="https://github.com/rossant/awesome-math">Awesome Math</a> 🟪 - Another awesome list for mathematics, useful generally but often applicable to programming.</p>
+
+<p><a href="https://gamemath.com/book/intro.html">Math for Game Programmers</a> - A free book on math for game programmers.</p>
+
+<p><a href="https://larstofus.com/2024/10/19/a-pragmatic-approach-to-optimizing-cpu-performance/">A Pragmatic Approach to Optimizing CPU Performance</a> 🟪 - Solid introductory advice for making code run fast. See also: <a href="https://larstofus.com/2024/12/30/how-to-build-an-optimization-toolbox/">How to Build an Optimization Toolbox</a>, an introduction to profiling tools, broken down by categories of purpose.</p>
+
+<p><a href="https://carlos.bueno.org/optimization/">Mature Optimization</a> - A free book on structuring code for performance, as well as testing large systems.</p>
+
+<p><a href="https://www.dataorienteddesign.com/dodbook/dodmain.html">Data Oriented Design</a> 🟪 - A free book on data-oriented design, an alternative to object-oriented programming</p>
+
+<p><a href="https://www2.math.upenn.edu/~wilf/DownldGF.html">generatingfunctionology</a> - A free book on generating functions.</p>
+
+<p><a href="https://www.jacksondunstan.com/articles/5530">C++ for C# Developers</a> 💠 - An extensive tutorial series.</p>
+
+<p><a href="https://www.gameenginebook.com/">Game Engine Architecture</a> 🟪 - A book on game engines. About $25 for the e-book, probably worth the investment if you plan to be an engine, tools, or graphics programmer.</p>
+
+<p><a href="https://www.git-scm.com/book/en/v2">Pro Git</a> - A free book on everything git.</p>
+
+<p><a href="https://refactoring.guru/design-patterns/">Design Patterns</a> - A free book with <em>very</em> pretty illustrations.</p>
+
+<p><a href="https://blog.codinghorror.com/rethinking-design-patterns/">Rethinking Design Patterns</a> - An interesting criticism of the above book. I believe there is a response to this on the design patterns site.</p>
+
+<p><a href="https://www.youtube.com/playlist?list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT">Making a Game Engine</a> - For the engine programmers and the insane: save yourself some trouble and watch this instead of making yet another game engine ^^</p>
+
+<p><a href="https://www.robmiles.com/c-yellow-book">C# for Beginners</a> - A free book on C#</p>
+
+<p><a href="https://www.youtube.com/watch?v=pZ45O2hg_30&list=PLImQaTpSAdsBKEkUvKxw6p0tpwl7ylw0d">Tool Dev</a> 💠🟪 - An introduction to tool development (or creating tools to make game development more productive) and editor scripting in Unity by Freya Holmér.</p>
+
+<p><a href="https://diveintosystems.org">Dive Into Systems</a> - A free textbook on computer systems and C programming.</p>
+
+<p><a href="https://arewegameyet.rs/#resources">Gamedev in Rust for Beginners</a> - A collection of books, tutorials, articles, and a community to boot.</p>
+
+<p><a href="https://blog.demofox.org">DemoFox</a> - A blog with lots and lots of programming, graphics, and math tutorials and breakdowns.</p>
+
+<p><a href="http://www.bit-101.com/blog/">Bit101</a> - A blog on mathy-programmer things with some tutorials and breakdowns.</p>
+
+<p><a href="https://www.youtube.com/watch?v=MOYiVLEnhrw&list=PLImQaTpSAdsD88wprTConznD1OY1EfK_V">Math for Game Devs</a> - A primer on math geared towards game development by Freya Holmér.</p>
+
+<p><a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab">Essence of Linear Algebra</a> - A video series meant as a supplement for a class on Linear Algebra, made by 3Blue1Brown.</p>
+
+<p><a href="https://laroldsjubilantjunkyard.com/tutorials/how-to-make-a-gameboy-game/">How to make Games for Gameboy</a> - A comprehensive tutorial series on developing games for the Gameboy. Also includes links to other relevant tutorial series, such as one on C programming.</p>
+
+<p><a href="https://www.gamedev.net/articles/programming/general-and-gameplay-programming/understanding-component-entity-systems-r3013/">Understanding ECS</a> - A blog post about Entity Component System design and implementation.</p>
+
+<p><a href="https://handmadehero.org/">HandMadeHero</a> - A very extensive catalogue of live-streamed coding tutorials.</p>
+
+<p><a href="https://docs.google.com/spreadsheets/d/1VxoJGdBmRrsYLx9MnaVmZ0iFc9Vcx4xGSqOuW2bisVM/edit#gid=2006991768">VGDC at UCI Programming</a> - A (slightly outdated) list of programming tutorials from the VGDC at UCI.</p>
+
+<p><a href="https://web.archive.org/web/20220830175614/https://images.response.unity3d.com/Web/Unity/%7B5dc4de9b-9e59-4860-b933-eb6daae82ecd%7D<em>Unity</em>Games<em>Optimization</em>Best_Practices-v5.pdf">Optimization tips for Unity</a> - Some tips from Unity about optimizing their games.</p>
+
+<p><a href="https://laroldsretrogameyard.com/">Larold's Retro Gameyard</a> - A collection of retro video game programming tutorials. Learn to make <a href="https://laroldsretrogameyard.com/category/tutorials/gb/">Game Boy</a> or <a href="https://laroldsretrogameyard.com/category/tutorials/gba/">Game Boy Advance</a> games from scratch. In the future, tutorials for additional consoles will added.</p>
+
+<br />
+
+<h3>Gameplay</h3>
+
+<p><a href="https://docs.google.com/document/d/1qIkaxtSfrtmgvO_yh-h187by7EIyrl61a3EaF40xBLs/edit#heading=h.ejywv1aotlnc">Study Reference Sheet for Gameplay Engineers</a> 🟪 - Perfect for intermediate programmers looking to shore up their technical knowledge to prep for an interview. Note: this is currently being migrated. It is incomplete at time of writing, but I have also included <a href="https://www.mrventures.net/get-into-gamedev.html">the future-proof link</a>.</p>
+
+<p><a href="http://www.gameaipro.com/">Game AI Pro</a> 🟪 - Three (3) free books (or more accurately, volumes of short papers) on game AI. Notable authors include Steve Rabin, a DigiPen professor who teaches AI for games.</p>
+
+<p><a href="https://web.archive.org/web/20190107192021/http://aigamedev.com/page/free-features/page/3/">AI Game Dev.com</a> - An AI development community with lots of resources. It only exists on the internet archive, so be wary of outdated knowledge and broken links.</p>
+
+<br />
+
+<h3>Graphics</h3>
+
+<p><a href="https://github.com/luisnts/awesome-computer-graphics">The Awesome list for Computer Graphics</a> 💠🟪 - Another awesome list specifically tailored to this topic, albeit not games-focused.</p>
+
+<p><a href="https://guerilla-tactics.com/hats/graphics/">Graphics</a> 💠🟪 - A Megalist of Graphics Programming and Tech Art resources.</p>
+
+<p><a href="https://gpuopen.com/learn/how<em>do</em>you<em>become</em>a<em>graphics</em>programmer/">How do I become a graphics programmer?</a> 💠🟪 - An overview of graphics programming and a collection of resources tailored to beginners learning graphics programming.</p>
+
+<p><a href="https://webglfundamentals.org">WebGLFundamentals</a> 💠🟪 - An introduction to WebGL, a web-based rasterization engine. WebGL is a good tool to use when learning the fundamentals before diving into more complex frameworks such as Vulkan or DirectX 12.</p>
+
+<p><a href="https://developer.nvidia.com/gpugems/gpugems/contributors">GPU Gems</a> - Three (3) free books by Nvidia about GPU programming and architecture.</p>
+
+<p><a href="http://simonschreibt.de/gat/renderhell/">Render Hell</a> 🟪 - An overview of graphics and everything rendering for programmers. Covers an overview, with lots of references to books and other resources for deeper reading.</p>
+
+<p><a href="https://users.cg.tuwien.ac.at/zsolnai/gfx/rendering-course/">Rendering Course</a> - A free master's level course on ray tracing, photorealistic rendering, and global illumination taught at the Technical University of Vienna.</p>
+
+<p><a href="https://fgiesen.wordpress.com/2011/07/09/a-trip-through-the-graphics-pipeline-2011-index/">A Trip Through the Graphics Pipeline 2011</a> 🟪 - A somewhat-dated dive into a typical graphics pipeline, intended for those with some exposure to graphics APIs such as OpenGL or Direct3D 11.</p>
+
+<p><a href="https://www.youtube.com/c/InigoQuilez">"Painting with maths"</a> - A YouTube series about a <em>very</em> technical art form.</p>
+
+<p><a href="https://therealmjp.github.io/posts/gpu-memory-pool/">GPU Memory pools in D3D12</a> - How GPU memory works in Direct3D 12.</p>
+
+<p><a href="https://alain.xyz/blog/comparison-of-modern-graphics-apis">A comparison of modern graphics APIs</a> - A blog post comparing graphics APIs (namely, Vulkan, DirectX, Metal, WebGPU, and OpenGL).</p>
+
+<p><a href="http://liu.diva-portal.org/smash/get/diva2:462098/FULLTEXT01.pdf">A comparison of 3D file formats</a> - A bachelor thesis on 3D file formats.</p>
+
+<p><a href="https://jasmcole.com/2019/10/03/signed-distance-fields/">How SDFs work</a> - A blog post on signed distance fields.</p>
+
+<p><a href="https://jamie-wong.com/2016/07/15/ray-marching-signed-distance-functions/">Ray Marching and SDFs</a> - An article on SDFs and ray marching with references to further reading.</p>
+
+<p><a href="https://kosmonautblog.wordpress.com/">Kosmonaut's Blog</a> - A blog exploring various rendering implementations such as SDF rendering.</p>
+
+<p><a href="https://mamoniem.com/category/behind-the-pretty-frames/">Behind the Pretty Frames</a> - Technical explorations of the rendering pipelines behind games like Detroit: Become Human, Death Stranding, and God of War.</p>
+
+<br />
+
+<h3>Networking</h3>
+
+<p><a href="https://www.udemy.com/course/unrealmultiplayer/">Unreal Multiplayer by GameDev.tv</a> 💠🟪 - A course on multiplayer and networking in Unreal. Wait for it to go on sale, then go pick this up.</p>
+
+<p><a href="https://www.udemy.com/course/unity-multiplayer/">Unity Multiplayer by GameDev.tv</a> 💠🟪 - A course on multiplayer and networking in Unity. Wait for it to go on sale, then go pick this up.</p>
+
+<p><a href="https://gafferongames.com">GafferOnGames</a> 🟪 - A bunch of articles on netcode for games.</p>
+
+<p><a href="https://developer.valvesoftware.com/wiki/Source<em>Multiplayer</em>Networking">Source Multiplayer Networking</a> - Technical documentation from Valve about the netcode of source games.</p>
+
+<p><a href="https://developer.valvesoftware.com/wiki/Latency<em>Compensating</em>Methods<em>in</em>Client/Server<em>In-game</em>Protocol<em>Design</em>and_Optimization">Latency Compensating Methods</a> - Technical documentation from Valve about accounting for latency.</p>
+
+<p>[Replication -</p>
+<p>Part 1](https://0fps.net/2014/02/10/replication-in-networked-games-overview-part-1/)</p>
+<p>| <a href="https://0fps.net/2014/02/17/replication-in-networked-games-latency-part-2/">Part 2</a></p>
+<p>| <a href="https://0fps.net/2014/02/26/replication-in-networked-games-spacetime-consistency-part-3/">Part 3</a></p>
+<p>| <a href="https://0fps.net/2014/03/09/replication-in-network-games-bandwidth-part-4/">Part 4</a> - A four-part series on replication (that is, ensuring all players have consistent game state).</p>
+
+<p><a href="https://yal.cc/preparing-your-game-for-deterministic-netcode/">Deterministic Netcode</a> - A blog post about ensuring consistency across game clients, given the same initial state and inputs.</p>
+
+<p><a href="https://www.gamedevs.org/uploads/tribes-networking-model.pdf">The TRIBES Engine Networking Model</a> - A particularly notable paper on the networking model developed for Starsiege TRIBES.</p>
+
+<p><a href="https://www.gabrielgambetta.com/client-server-game-architecture.html">Fast-Paced Multiplayer - Part 1</a> | <a href="https://www.gabrielgambetta.com/client-side-prediction-server-reconciliation.html">Part 2</a> | <a href="https://www.gabrielgambetta.com/entity-interpolation.html">Part 3</a> | <a href="https://www.gabrielgambetta.com/lag-compensation.html">Part 4</a> | <a href="https://www.gabrielgambetta.com/client-side-prediction-live-demo.html">Live Demo</a> - A four-part series on networking for games, along with a sample implementation of some concepts described.</p>
+
+<br />
+
+<h3>Fun</h3>
+
+<p><a href="https://musicforprogramming.net/latest/">Music for Programming</a></p>
+
+<p><a href="https://www.techwell.com/techwell-insights/2013/12/why-best-programmers-are-lazy-and-act-dumb">Good</a>. <a href="http://blogoscoped.com/archive/2005-08-24-n14.html">Advice</a>. <a href="https://kilon.org/why-good-programmers-are-lazy-and-dumb/">Repeated</a>.</p>
+<p><a href="https://blog.codinghorror.com/how-to-be-lazy-dumb-and-successful/">Ad nauseum</a> - Swallow your pride, and optimize out busywork.</p>
+
+<p><a href="https://www.bungie.net/en/Explore/Detail/News/50140">The Case of the Missing Rewards</a> - A very interesting breakdown of a particularly tricky bug in Destiny and how it was found and fixed.</p>
+
+<p><a href="https://queue.acm.org/detail.cfm?id=3212479">C is not a Low-Level Language</a> - An article on why C is not a low-level language, and performance as a result of that.</p>
+
+<p><a href="http://sigbovik.org">Sigbovik</a> - Pore over this for a good laugh :P</p>
+
+<br />
+
+<h2>Technical Art</h2>
+
+<br />
+
+<p><a href="https://heartmachine.notion.site/Tech-Art-Learning-Resources-d2eb63aeca624cf59faab5a19b4a732d">Tech Art Learning Resources</a> 🟪 - A list of tech art resources, communities, and professionals, curated by Heart Machine (the studio that made Hyper Light Drifter and now Hyper Light Breaker).</p>
+
+<p><a href="https://tech-artists.org">Tech Artists</a> - A community of tech artists.</p>
+
+<p><a href="https://simonschreibt.de/gat/tech-art-course/">Tech Art Course</a> - Materials from a tech art course (many are unexplained, since the class was delivered in-person, but they're still useful).</p>
+
+<p><a href="https://all-things-andy-gavin.com/2011/02/04/making-crash-bandicoot-part-3/">Making Crash Bandicoot</a> - A blog post series from a developer of Crash Bandicoot discussing its rendering tech and the hardware limitations of the PS1.</p>
+
+<p><a href="https://heartmachinez.tumblr.com/post/690221520736387072/proc-gen-hyperdec-part-1">Proc Gen / HyperDec: Part 1</a> | <a href="https://heartmachinez.tumblr.com/post/690221567668568064/proc-gen-hyperdec-part-2">Part 2</a> - An extended breakdown of the procedural art tools of Hyper Light Breaker.</p>
+
+<p><a href="https://calebkruse.com/10-projects/seeing-blue/">Seeing Blue</a> - Slightly mind-blowing writeup on the physics of the color blue.</p>
+
+<br />
+
+<h3>Shaders</h3>
+
+<p><a href="https://www.youtube.com/watch?v=kfM-yu0iQBk&list=PLImQaTpSAdsCnJon-Eir92SZMl7tPBS4Z">Shaders for Game Devs</a> 💠🟪 - An introduction to HLSL Shaders using Unity by Freya Holmér.</p>
+
+<p><a href="https://thebookofshaders.com/00/">The Book of Shaders</a> 🟪 - A book on GLSL pixel shaders.</p>
+
+<p><a href="https://catlikecoding.com/unity/tutorials/">Catlike Coding</a> 🟪 - Unity and HLSL Shader Tutorials.</p>
+
+<p><a href="https://www.shadertoy.com/">Shadertoy</a> - An online shader editor and hosting/sharing site.</p>
+
+<p><a href="https://renderdoc.org/">Render Doc</a> 🟪 - A program that breaks down a frame rendered from a game and allows you to analyze processes that created it.</p>
+
+<p><a href="https://www.cyanilux.com/tutorials/intro-to-shader-graph/">Intro to Shader Graph</a> 💠 - A detailed introduction to shader graph in Unity.</p>
+
+<p><a href="https://www.cyanilux.com/contents/">Cyanilux</a> - Tutorials and shader breakdowns (same blog as above).</p>
+
+<p><a href="https://halisavakis.com/category/shaderquest/">Shaderquest</a> - A guide series from a blog about tech art.</p>
+
+<br />
+
+<h3>Rigging</h3>
+
+<p><a href="http://www.cultofrig.com">Cult of Rig</a> - A catalogue of live-streamed lectures coupled with rig creation. Sorry in advance for the cult theme.</p>
+
+<p><a href="https://jasonschleifer.com/afr/">Animator Friendly Rigging</a> - A course on creating rigs that behave well for animators. Fair warning: this has an up-front cost of around $105-120.</p>
+
+<p><a href="https://www.pluralsight.com/courses/procedural-rigging-python-maya-2283">Procedural Rigging Python</a> - A course on creating python tools to procedurally rig characters in Maya. Note: has a 10 day free trial, but gets quite expensive after that.</p>
+
+<p><a href="https://www.amazon.com/Stop-Staring-Facial-Modeling-Animation/dp/0470609907">Stop Staring: Facial Modeling and Animation Done Right</a> - A book on facial modeling, animation, and rigging. Fair warning: this is $80 new. I would recommend getting it used, if possible.</p>
+
+<p><a href="https://www.thegnomonworkshop.com/tutorials/master-rigging-python-scripting-in-maya">Mastering Rigging and Python Scripting in Maya</a> - A course from Gnomon, a well-known art university. Fair warning: first 2 hours of content within 7 days are free, but then a subscription costs $54 per month.</p>
+
+<br />
+
+<h3>VFX</h3>
+
+<p><a href="https://realtimevfx.com/t/getting-started-in-real-time-vfx-start-here/3415">Getting Started in Real Time VFX</a> 💠🟪 - Also check out the rest of this website (realtimevfx.com) to find a thriving community filled with useful knowledge and amazing people.</p>
+
+<p><a href="https://www.youtube.com/watch?v=YPy2hytwDLM&list=PLdiateg_U8PFnlScGDJDQeHUX9qmYvsxv">VFX Talks Playlist</a> 🟪 - A playlist of VFX talks at GDC (the linked video is about Diablo, and is very insightful).</p>
+
+<p><a href="https://chluaid.gumroad.com/l/bcafx">BiteyCastle Academy 2DFX Animation Course</a> 💠🟪 - A full 2D FX animation course (completely free!)</p>
+
+<p><a href="https://www.vfxapprentice.com">VFX Apprentice</a> - Several VFX courses geared towards developing a professional portfolio. <em>Very</em> pricey, but may be worth your while if you are serious about VFX - it is a <em>hell</em> of a lot cheaper than art school.</p>
+
+<p><a href="https://www.youtube.com/watch?v=Tsv8UGqDibc&list=PLhyeWJ40aDkUDHDOhZQ2UkCfNiQj7hS5W&index=5">Houdini Isnt Scary - Part 1: Basics</a> - A playlist of a Houdini tutorial series.</p>
+
+<br />
+
+<h2>Art</h2>
+
+<br />
+
+<p><a href="https://www.notion.so/Art-Industry-Resources-86e6733162f24c26829aa65961f461e3">Art Industry Resources</a> 💠🟪 - A Megalist of Art Resources!</p>
+
+<p><a href="https://saint11.org/blog/pixel-art-tutorials/">Saint11: Tutorials</a> 💠🟪 | <a href="https://saint11.org/pixel_articles/">Articles</a> | <a href="https://www.patreon.com/saint11">Patreon</a> - Fantastic pixel art animation tutorials and articles on pixel art. Note that most patreon posts are free.</p>
+
+<p><a href="https://www.youtube.com/watch?v=7BWr2tlK-4c&list=PLLdxW--S<em>0h4dlWUpl-TzBp-ulqK3NiM</em>">Pixel Art Class</a> - A tutorial series covering the basics of art aimed at pixel artists.</p>
+
+<p><a href="https://cubebrush.co">CubeBrush</a> - A marketplace for art resources, with tutorials, assets, brushes, tools, etc.</p>
+
+<p><a href="https://genevieverouthier.art.blog/">Genevieve Routhier</a> - A blog on art direction and leadership from a senior art director.</p>
+
+<p><a href="https://www.thegnomonworkshop.com">The Gnomon Workshop</a> - Extremely professional-looking art, animation, and VFX courses. Seems aimed at film with a large overlap in games. Beware of hefty price tag.</p>
+
+<p><a href="https://www.si.edu/openaccess">Smithsonian Open Access</a> - A massive repository of 3D and 2D digital resources from the Smithsonian Institute archives, such as photos and 3D scans of historical objects. Perfect for reference and creative commons reuse!</p>
+
+<p><a href="https://www.nadiaxel.com/post/free-ressources-for-commission-artists">Resources for Commission Artists</a> - If you want to open yourself up for commission work, this is a godsend.</p>
+
+<p><a href="https://www.cherubicsoft.com/en/projects/sagethumbs/">SageThumbs</a> - An extension that adds advanced file previews and conversion tools to Windows Explorer (including, notably, .psd). For artists who frequently use many Adobe programs or file formats, RAW files, and PDFs, this will save you time.</p>
+
+<p><a href="https://mobile.twitter.com/Marcel_Hampel/status/1559178642856484865">A whole lot of time-saving tools</a> - I personally recommend Pureref. <a href="archives/twitter/MarcelHampelThread.pdf">Archived PDF</a>.</p>
+
+<br />
+
+<h3>2D/Illustration</h3>
+
+<p><a href="https://www.webtoons.com/en/challenge/how-to-draw-/intro-/viewer?title<em>no=730330&episode</em>no=1">How To Draw</a> 💠🟪 - An webcomic on how to draw, and much more importantly, how to <em>learn</em> to draw.</p>
+
+<p><a href="https://www.brendanmeachen.com/soloartist">Radiorunner's Curriculum for the Solo Artist</a> 🟪 - A curriculum for self-teaching art. If you want to <em>really</em> hone your skills, this will undoubtedly be worth your time.</p>
+
+<p><a href="https://drawabox.com/">DrawABox</a> 💠🟪 - An exhaustive course for the art fundamentals (completely free!)</p>
+
+<p><a href="https://lospec.com/">LoSpec</a> 🟪 - A Pixel Art gold mine (Job Board, Pallette Database, Tutorials, Resources, and more).</p>
+
+<p><a href="https://www.youtube.com/playlist?list=PLR2KBLDDnZz3Ec8LZ66IDS--P9g3TdwOM">Proko Figure Drawing Fundamentals</a> 🟪 - An exhaustive series on drawing people from a reputable channel.</p>
+
+<p><a href="https://www.youtube.com/watch?v=iwRa5qTnr8o">How to Learn Digital Painting (Beginners)</a> 💠🟪 - A guide to digital painting for beginners and intermediate painters. See other tutorials by Sinix for guides aimed at more advanced artists.</p>
+
+<p><a href="https://www.vishopper.com/cut-out-people">Cut-Out People</a> - A searchable repository of extremely diverse reference images for humans, with filters for easy search (IE "1 woman age 20-40 with dog from the front" or "3 people sitting in a home")</p>
+
+<p><a href="https://ia601608.us.archive.org/8/items/andrew-loomis-drawing-the-head-hands/andrew-loomis-drawing-the-head-hands.pdf">Drawing the Head and Hands</a> - A book on figure construction by Andrew Loomis. Free in the public domain!</p>
+
+<p><a href="https://archive.org/details/loomis<em>FIGURE</em>draw">Figure Drawing for All its Worth</a> - A book on figure drawing by Andrew Loomis. Free in the public domain!</p>
+
+<p><a href="https://www.youtube.com/watch?v=NBE-RTFkXDk">Digital Inking Tips</a> - A good guide to sharpening your technical skills.</p>
+
+<p><a href="https://www.youtube.com/watch?v=2T7cDY7YDsg">Human Anatomy for the Head</a> - A lesson on human anatomy for artists, breaking down the head.</p>
+
+<p><a href="https://bryan-sturm.github.io/articles/lines-and-edges/">Lines and Edges</a> - A neat style guide for using edges and lines effectively.</p>
+
+<p><a href="https://www.youtube.com/watch?v=j38HRF17YMA">What Level Is Your Art?</a> - Need a quick confidence boost? Watch this :3</p>
+
+<br />
+
+<h3>3D</h3>
+
+<p><a href="https://www.youtube.com/watch?v=whPWKecazgM">World Building in Blender by Ian Hubert</a> 💠🟪 - The best resource for thinking about 3D art, possibly ever.</p>
+
+<p><a href="https://www.artstation.com/learning/courses/3Va/intro-to-sculpting-in-blender/chapters/8OjR/intro">Sculpting in Blender</a> 🟪 - A short, free course on sculpting in Blender.</p>
+
+<p><a href="https://www.youtube.com/watch?v=R1-Ef54uTeU">Photorealism Explained</a> 🟪 - An explanation of photorealism and how it is achieved in CG.</p>
+
+<p><a href="https://flippednormals.com/product/realtime-hair-tutorial-29017">Realtime Hair Tutorial</a> - A course delving into a hair pipeline for characters.</p>
+
+<p>Royalty-Free Textures, Models, HDRIs, and Assets!</p>
+<ul>
+<li><a href="https://www.textures.com/">Textures</a></li>
+</ul>
+<ul>
+<li><a href="https://publicdomaintextures.com/">More Textures</a></li>
+</ul>
+<ul>
+<li><a href="https://polyhaven.com/">HDRIs, Textures, and Models</a></li>
+</ul>
+<br />
+
+<h3>Animation</h3>
+
+<p><a href="http://www.theanimatorssurvivalkit.com">The Animator's Survival Kit</a> 🟪 - An essential resource for any animator. Has a price tag, but if you want to get a job in industry, it is well worth your money.</p>
+
+<p><a href="https://www.youtube.com/watch?v=haa7n3UGyDc&list=PL-bOh8btec4CXd2ya1NmSKpi92U_l6ZJd">The 12 Principles of Animation</a> 💠 - A visual tutorial series on a fundamental part of animation.</p>
+
+<p><a href="https://oninationsquad.gumroad.com/l/hybrid02">Hybrid 02 Maya Rig</a> - A humanoid rig for Maya, free for non-commercial use.</p>
+
+<p><a href="https://cjones.gumroad.com/l/JJuKG">Universal Human Body & Face Rig</a> - A generic humanoid body and face rig by Chris Jones, with many advanced features. $200 license, but would be very worth it for serious animators looking to animate for realism.</p>
+
+<br />
+
+<h3>Resources for Non-Artists</h3>
+
+<p>Note that there are many, many more resources out there - these are primarily included as a way to build a polished-looking game even while learning a different discipline.</p>
+
+<p>Royalty Free Game Art! Don't forget to check the license.</p>
+<ul>
+<li><a href="https://opengameart.org/">Open Game Art</a></li>
+</ul>
+<ul>
+<li><a href="http://www.kenney.nl/">2D and 3D assets</a></li>
+</ul>
+<ul>
+<li><a href="https://game-icons.net/">Game Icons</a></li>
+</ul>
+<ul>
+<li><a href="https://Poly.Pizza">Low-Poly Models</a></li>
+</ul>
+<p><a href="https://www.reddit.com/r/Unity2D/comments/3dfi5k/lets<em>create</em>a<em>list</em>of<em>all</em>100<em>free</em>2d<em>assets</em>with/">100% free assets</a> - A post and thread with lots of free art assets and tools.</p>
+
+<br />
+
+<h2>Design</h2>
+
+<br />
+
+<p><a href="https://www.schellgames.com/art-of-game-design/">The Art of Game Design</a> 💠🟪 - An essential book on game design, basically mandatory reading for designers. Has a price tag, but is well worth the money.</p>
+
+<p><a href="https://ia902800.us.archive.org/3/items/thedesignofeverydaythingsbydonnorman/The%20Design%20of%20Everyday%20Things%20by%20Don%20Norman.pdf">The Design of Everyday Things</a> 💠🟪 - A book on design in everything, basically mandatory reading for designers.</p>
+
+<p><a href="https://gameaccessibilityguidelines.com/">Game Accessibility Guidelines</a> 🟪 - A list of accessibility features, organized by implementation difficulty. Also includes testimonials for each feature and the impact it makes on people, as well as best practice examples and implementation resources (tools, guides, etc) where available.</p>
+
+<p><a href="https://ocw.mit.edu/courses/cms-608-game-design-fall-2010/">Game Design</a> 💠🟪 - A Game Design class taught at MIT (free to access!)</p>
+
+<p><a href="https://www.gamedesigning.org/learn/game-design-document/">How to make a Game Design Document</a> - A tutorial on writing Game Design Documents (GDDs).</p>
+
+<p><a href="https://patternlanguageforgamedesign.com/">Pattern Language for Game Design</a> 💠🟪 - A database of common design patterns presented as problem solutions, compiled from the book <em>Pattern Language for Game Design</em>. Also contains work from students and designers completing excercises from the book.</p>
+
+<p><a href="https://ncase.me/trust/">The Evolution of Trust</a> 💠🟪 - An interactive walkthrough of some game theory. Would probably be mandatory reading in a game design class.</p>
+
+<p><a href="https://www.youtube.com/watch?v=zQvWMdWhFCc">Extra Credits: So You Want To Be a Game Designer</a> 💠🟪 - A channel on game design that was far ahead of its time. Their backlog is filled with invaluable advice, though their more recent content has a controversial reputation, and they've largely pivoted away from games into history and literature. Start with their career video(s) - dig through their game design backlog if you would like, but stick to the older stuff.</p>
+
+<p><a href="https://gmtk.itch.io/platformer-toolkit">The Platformer Toolkit</a> 💠🟪 - A playable video essay/game, giving an overview on platforming mechanics, game feel, and tuning by Mark Brown from GMTK.</p>
+
+<p><a href="https://designoriented.net/wheel">Design Oriented Topic Wheel</a> 💠 - Short descriptions of many major design topics and concepts, categorized neatly in an approachable wheel interface.</p>
+
+<p><a href="https://gdkeys.com/">GDKeys</a> - A collection of articles and tools created by Nico, a senior game designer.</p>
+
+<p><a href="https://cwpat.me/misc/puzzle-level-idea-strategies/">Puzzle Ideation Strategies</a> - A list of strategies for coming up with puzzles, and links to the talks that inspired them.</p>
+
+<p><a href="https://users.cs.northwestern.edu/~hunicke/MDA.pdf">MDA</a> - Mechanics -> Design -> Aesthetics, or a formal approach to game design and research.</p>
+
+<p><a href="https://www.theguardian.com/australia-news/datablog/ng-interactive/2017/sep/28/hooked-how-pokies-are-designed-to-be-addictive">Hooked</a> - An interactive article on the psychology of gambling and addiction.</p>
+
+<p><a href="https://www.gdcvault.com/play/1012211/Design-in-Detail-Changing-the">Design in Detail: Changing the Time Between Shots for the Sniper Rifle from 0.5 to 0.7 Seconds for Halo 3</a> - A talk on why minute tuning matters.</p>
+
+<p><a href="https://etodd.io/2017/11/28/poor-mans-3d-camera/">The Poor Man's 3D Camera</a> - A breakdown of the design thinking and solutions that went into an extremely specific 3D camera</p>
+
+<br />
+
+<h3>Level Design</h3>
+
+<p><a href="https://80.lv/articles/level-design-tips-tricks-and-how-to-get-into-it/">Level Design and How To Get Into It</a> 💠 - A gentle introduction to level design.</p>
+
+<p><a href="https://www.mapeditor.org/">Tiled</a> - A free and open source map editor</p>
+
+<br />
+
+<h3>UI/UX</h3>
+
+<p><a href="https://www.notion.so/onewithmachines/WE-CAN-FIX-IT-IN-UI-9f588869324a45e2b2d0595546ce77d1">WE CAN FIX IT IN UI</a> 💠🟪 - A huge list of UI/UX resources!</p>
+
+<p><a href="https://www.gameuidatabase.com/index.php">Game UI Database</a> 💠🟪 - A searchable repository of UI designs from many different games to use as reference.</p>
+
+<p><a href="https://lawsofux.com/en/">Laws of UX</a> - Best practices of UX design.</p>
+
+<p><a href="https://www.dailyui.co/">Daily UI</a> - A 100-day daily UI design challenge.</p>
+
+<br />
+
+<h3>Reference</h3>
+
+<p><a href="https://gamedocs.org/category/design-document/">Game Docs</a> - A collection of design documents from completed games - links have been ripped and placed below.</p>
+
+<p><a href="http://www.cand.land/destiny">Destiny</a> - A collection of UI/UX documentation from Destiny (a game that won awards for its UI) by David Candland.</p>
+
+<p><a href="https://web.archive.org/web/20180219004603/https://samandmax.co.uk/wp-content/uploads/Hit%20the%20Road%20design%20document.pdf">Hit the Road GDD</a> - The design document for Sam and Max Hit the Road.</p>
+
+<p><a href="https://mega.nz/#!3aImBa6D!QUKtZYf<em>frlIgSUk2A096KNCQ9cfijr</em>38son-N4AGo">Mythos Pitch Domcument</a> - The pitch deck for Mythos.</p>
+
+<p><a href="https://drive.google.com/file/d/0BxMevjNSr2EjbDBpZ2ZMdmNnc28/view?resourcekey=0-2-ybLxFeJk2R5ROLOAB3oQ">Wasteland 2 Vision Document</a> - The original vision document for Wasteland 2.</p>
+
+<p><a href="https://www.dirtybomb.com/news/the-design-of-dirty-bomb/">The Design of Dirty Bomb</a> - The design document and art book for Dirty Bomb. Archived pdf links: <a href="https://web.archive.org/web/20220815160634/http://db-design.splashdamage.com.s3-eu-west-1.amazonaws.com/dirty<em>bomb-game</em>design<em>document.pdf">Design</a> | <a href="https://web.archive.org/web/20220815160724/http://db-design.splashdamage.com.s3-eu-west-1.amazonaws.com/the</em>art<em>of</em>dirty_bomb.pdf">Art</a></p>
+
+<p><a href="https://web.archive.org/web/20220815160819/https://www.giantsparrow.com/blog/news/wp-content/uploads/2018/04/Finch-Original-Concept-Doc.pdf">Finch Concept Doc</a> - Concept document for What Remains of Edith Finch.</p>
+
+<p><a href="https://gridpaper-maps.tumblr.com/">Grid Paper</a> - A repository of maps and top-down views of levels.</p>
+
+<br />
+
+<h2>Audio</h2>
+
+<br />
+
+<p><a href="https://docs.google.com/spreadsheets/d/1fcuhGEesLC_PWCwY3dIwLgF774sKswOwIcZECWiH7Xo/edit#gid=0">Game Audio Learning Resources</a> 💠🟪 - A megalist of game audio learning resources!</p>
+
+<p><a href="https://postproduciendoenlaeav.files.wordpress.com/2017/09/the-sound-effects-bible-ric-viers.pdf">The Sound Effects Bible</a> 🟪 - A book on everything sound effects.</p>
+
+<p><a href="https://twitter.com/chiragmachhar/status/1511446337639927811">Another list of resources!</a> 🟪 - <a href="archives/twitter/chiragmachharThread.pdf">Archived PDF</a>.</p>
+
+<p><a href="https://sfxr.me/">SFXR</a> - A great program for generating simple sound effects.</p>
+
+<p><a href="https://www.beepbox.co/">Beep Box</a> - A simple but fun web-based music program.</p>
+
+<p><a href="https://boscaceoil.net/">Bosca Ceoil</a> - A very simplistic and limited but fast, free, and fun audio program for chiptune music!</p>
+
+<p><a href="https://sonniss.com/gameaudiogdc#1605030813191-c5a1f3d0-8baf">GDC Freebies</a> - Royalty free SFX samples from GDC.</p>
+
+<p>Royalty free music! Don't forget to check the license.</p>
+<ul>
+<li><a href="https://pixabay.com/music/">Pixabay</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/c/DOVASYNDROMEYouTubeOfficial">DOVA-SYNDROME</a></li>
+</ul>
+<br />
+
+<h2>Writing</h2>
+
+<br />
+
+<p><a href="http://sashakirlee.com/game-narrative-resources">Game Narrative Resources</a> 💠🟪 - A collection of books, tools, talks, resources, job listings, and more for writing, as well as related disciplines where relevant to narrative.</p>
+
+<p><a href="https://www.inklestudios.com/ink/">Inkle</a> 🟪 - A writing tool for games (free and integrates well with Unity!)</p>
+
+<p><a href="https://github.com/etodd/dialogger">Dialogger</a> - A simple cross-platform dialogue graph editor (free with MIT license!)</p>
+
+<p><a href="https://gutefabrik.com/craft-writing-better-dialogue-a-2-day-workshop/">Writing Better Dialogue</a> - A workshop on dialogue writing from a series on game writing.</p>
+
+<p><a href="https://docs.google.com/spreadsheets/d/16WoJik9w93FHNOw8GrE4L0UAwTYJMsBQ6QSxZ1MYr9A/edit#gid=0">The Borksheet</a> - A template sheet for an exercise to write "Barks" or simple dialogue lines - good for emphasizing character variety and attention-to-detail personalization.</p>
+
+<p><a href="https://emshort.blog/">Emily Short's Interactive Storytelling</a> - Neat blog on storytelling in games and interactive media.</p>
+
+<br />
+
+<h2>Production</h2>
+
+<br />
+
+<p><a href="https://www.screenskills.com/job-profiles/browse/games/production/games-producer-games/">What is a Games Producer?</a> 💠 - An explanation of the production role, and resources on how to become a producer.</p>
+
+<p><a href="https://www.breakingthewheel.com/video-game-production-resources/">Video Game Production Resources</a> 🟪 - A collection of resources for producers, categorized by purpose. Targets soft skills such as entrepreneurship, management, and marketing.</p>
+
+<p><a href="https://www.gameproducersguide.com/Home_home.html">Game Producer's Guide</a> - A collection of books, tools, conference talks, and other resources for producers.</p>
+
+<p><a href="https://www.gameindustrycareerguide.com/how-to-become-a-video-game-associate-producer/">How to Become a Video Game Producer</a> - An interview with Merric Shank, a senior producer, on the role, with  hiring advice for entry-level producers.</p>
+
+<p><a href="https://github.com/vhladiienko/awesome-game-production">Awesome Game Production</a> 🟪 - An Awesome list, focused on project and product management in game development.</p>
+
+<br />
+
+<h2>Marketing and Business</h2>
+
+<br />
+
+<p><a href="https://ltpf.ramiismail.com">Leveling the Playing Field</a> 💠🟪 - A blog/newsletter by Rami Ismail with advice on business, marketing, skill development, and various topics needed to run an indie studio. Past newsletters are archived here. I personally recommend "Budget Viability" as a starting point.</p>
+
+<p><a href="https://howtomarketagame.com">How to Market a Game</a> 💠🟪 - A blog and a collection of resources by Chris Zukowski with advice on marketing and sales. I personally recommend his GDC talks "Empathizing with Steam: How People Shop for Your Game" and "What to Write So People Buy: Selling Your Game Without Feeling Sleazy" as starting points.</p>
+
+<p><a href="https://www.victoriatran.com">Community Dev Newsletter and Blog</a> 💠🟪 - A blog and a newsletter by Victoria Tran with advice on community management, social media, and marketing. Past newsletters are archived here. I personally recommend "Failure Marketing" and "Charm your Communities" as starting points.</p>
+
+<p><a href="https://www.derek-lieu.com/blog/">Blog by Derek Lieu</a> 🟪 - A blog by Derek Lieu with advice on game trailers. I personally recommend "Show the Dream, Not the Job" and "Video Game Trailer Specifications" as starting points.</p>
+
+<br />
+
+<h2>Job Hunting and Career</h2>
+
+<br />
+
+<p><a href="https://www.gameindustrycareerguide.com/video-game-job-hunt-guide/">Video Game Job Hunt</a> 🟪 - A huge list of job-hunting resources: multiple blogs with everything from building a portfolio/resume to searching for and applying to jobs and even salary negotiation and relocation advice.</p>
+
+<p><a href="https://docs.google.com/document/d/1pGglICnig6oZ1IABXLMuwAEN1azPP5pnZUvdrYwbyGs/edit">Career Documents from Jean Leggett</a> 🟪 - Another huge list of career documents and resources!</p>
+
+<p><a href="https://javieracordero.notion.site/cce9a8faef6e4f31bb43b7630521a4d2?v=efdf687094be499bb2d9a33f55b906bc">Game Dev LFW Resources</a> 🟪 - Yet another list of resources and communities!</p>
+
+<p><a href="https://www.linkedin.com/posts/victoriaearle_jobhunt-jobsearch-interviewing-activity-7052059362810335232-UhrI/">Interview Placemat</a> 🟪 - A template useful for interview prep. <a href="archives/InterviewPlacemat.jpg">Archived Image</a>.</p>
+
+<p><a href="https://hitmarker.net/career-advice/the-complete-list-of-gaming-esports-jobs">The Complete List of Gaming Jobs</a>  🟪 - A comprehensive list of gaming jobs and specialties (includes both game development and esports).</p>
+
+<p><a href="https://www.plusonewisdom.com/post/industry-portfolios">Industry Portfolios</a> - A big list of portfolios from industry professionals.</p>
+
+<p><a href="https://docs.google.com/document/d/1H34_z043mJrLahXw7fCgwf5w4ZWyrB2GBE9XAXufjmQ/edit">GameDev Jobs (2022)</a> - A megalist of studio career pages and job posting sites.</p>
+
+<p><a href="https://claudiasnotes.notion.site/claudiasnotes/Career-Advice-Collected-560272eab6ce4069ada95d0852dbb1c9">Career Advice Collected</a> - Advice on writing resumes and cover letters. Primarily written for producers and entry-level job seekers, but generally applicable.</p>
+
+<p><a href="https://lindenreidblog.com/2020/05/21/questions-to-ask-game-studios-youre-interviewing-with/">Questions to ask game studios you're interviewing with</a> 🟪 - A list of questions for you to ask a potential employer in an interview.</p>
+
+<p><a href="https://github.com/viraptor/reverse-interview">The Reverse Interview</a> - Another list for you to ask a potential employer (created for non-games tech, but most questions apply to games, and some apply to all disciplines).</p>
+
+<p><a href="https://www.artstation.com/blogs/kierangoodson/mY0N/guide-to-game-art-applications-portfolios-and-job-postings">Guide to Game Art Applications</a> 🟪 - A guide to game art portfolios and job hunting.</p>
+
+<p><a href="https://docs.google.com/document/d/1sAd8xOdngsdLJqKfcOnyL8xRhPi3Uitys6fEXU9O2X0/edit">The Bible of Getting a Job in Game Audio</a> 🟪 - A massive collection of career resources for game audio.</p>
+
+<p><a href="https://helpful-clover-96f.notion.site/How-to-get-an-internship-v-2-d906cdbf321c4986ae46bd43282b1a84">How to Get an Internship</a> - Tips on getting an internship for college students.</p>
+
+<p><a href="https://www.gamesindustry.biz/how-to-get-a-job-as-a-game-producer">How to Get a Job as a Game Producer</a> - Career advice for those seeking a job in production.</p>
+
+<p><a href="https://www.gamedevmap.com">GameDevMap</a> - A map of game development studios</p>
+
+<p><a href="https://twitter.com/JeanLeggett/status/1354615348071460865">A short thread of cover letter tips</a> - <a href="archives/twitter/JeanLeggettThread.pdf">Archived PDF</a>.</p>
+
+<p><a href="https://twitter.com/MemoPotato/status/1550209887401017344?s=20&t=6Kp0ZGR8XuZukP5eAz2MGA">A word of warning</a> - Why you need to clearly label personal work as personal work and not make your developer name seem like a studio name if it is not: a thread. <a href="archives/twitter/MemoPotatoThread.pdf">Archived Thread</a> and <a href="archives/twitter/JoannaHaslamThread.pdf">Sub-Thread</a></p>
+
+<br />
+
+<h2>Other</h2>
+
+<br />
+
+<p><a href="https://obsidian.md/">Obsidian</a> 🟪 - Important productivity fuel (and what I used to hoard this list :P)</p>
+
+<p><a href="https://www.youtube.com/watch?v=fW88C_w3EzE&list=PLrvwNabyAw30pIbitXIHLdSTm4t9I3iT1">A series of game jam post-mortems</a> 💠🟪 - These are more valuable than they let on, because they show you the whole game-making process, start to finish. Not only will this help you avoid common pitfalls, it will help you know how to follow that process for your own game. Watch a couple before entering your first jam or starting your first project!</p>
+
+<p><a href="https://ellaguro.blogspot.com/2023/02/the-california-problem.html">The California Problem</a> 🟪 - One of my favorite articles ever written. A philosophical analysis of the culture of games as an industry and the importance of gamedev as a hobby, not just a business.</p>
+
+<p><a href="https://thecoppercompendium.co.uk/so-you-want-to-make-a-ttrpg">So, you want to make a TTRPG?</a> 💠🟪 - A collection of resources for creating a TTRPG. Paper prototyping, anyone?</p>
+
+<p><a href="https://www.gamedeveloper.com/">Game Developer (previously known as Gamasutra)</a> - A site filled with post-mortems, gamedev news, blog posts, and other articles with a focus on game developers and their communities.</p>
+
+<p><a href="https://fguillen.github.io/PapersPleaseDevlogScrap/">Papers Please Devlog</a> - Posts from the development of Papers Please.</p>
+
+<p><a href="https://ea-spouse.livejournal.com/274.html">EA Spouse</a> - A cautionary tale on crunch. For all of our sakes, don't let the industry return to this.</p>
+
+<p><a href="https://johnnemann.medium.com/where-the-water-tastes-like-wine-postmortem-211a1f9d791a">Where the Water Tastes Like Wine Postmortem</a> - A must-read for aspiring independent game developers. Making money from the art is hard, even for industry veterans, but there are other things that are valuable.</p>
+
+<p><a href="https://ssd.eff.org/en">Surveillance Self-Defense</a> - Tips, Tools, and Tutorials for privacy and online self-defense</p>
+
+<p><a href="https://docs.google.com/spreadsheets/d/17f0dQawb-s<em>Fd7DHgmVvJoEGDMH</em>yoSd8EYigrb0zmM/edit#gid=296134756">Polyglot Gamedev</a> - A big list of localized words across many different languages that can be used to loosely translate simple phrases such as UI buttons or tooltips.</p>
+
+<p><a href="https://tinytools.directory/">Tiny Tools</a> - A collection of tiny, usually fun tools for various purposes!</p>
+
+<p><a href="http://paulgraham.com/articles.html">Paul Graham</a> - Good general advice, both for specific disciplines (particularly programming and business) and for life, from Paul Graham (founder of YCombinator).</p>
+
+<p><a href="https://opendyslexic.org/">Open Dyslexic</a> - A dyslexia-friendly, accessible font!</p>
+
+<p><a href="https://isthatarabic.com">Is This Arabic?</a> - A friendly guide to not borking Arabic script.</p>
+
+<p><a href="http://www.zen134237.zen.co.uk/Stranger<em>Things/Stranger</em>Things<em>-</em>Bible.pdf">The Stranger Things (or Montauk) pitch bible</a> - Useful as reference for what a great pitch can look like, albeit in the context of film rather than games.</p>
+
+</p>
+<br />
+<br />
+
+<p>!<a href="images/Asriel.png 'Thanks for reading!'">A cute drawing of Asriel from Undertale reaching for a heart</a></p>
+
+</body>
+</html>

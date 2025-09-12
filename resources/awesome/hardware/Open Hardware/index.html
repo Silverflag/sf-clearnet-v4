@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Hardware</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Open Hardware</h1>
+
+<p><strong>Repository:</strong> https://github.com/delftopenhardware/awesome-open-hardware#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<h1>Awesome Open Hardware <a href="https://awesome.re/badge.svg"><img src="https://awesome.re" alt="Awesome</a>"><!-- omit in toc --></h1>
+
+<p>🛠 Helpful items for making and learning about open source hardware projects.</p>
+
+<h2>Contents</h2>
+
+<ul>
+<li><a href="#projects">Projects</a></li>
+</ul>
+<ul>
+<li><a href="#talks">Talks</a></li>
+</ul>
+<ul>
+<li><a href="#papers">Papers</a></li>
+</ul>
+<ul>
+<li><a href="#conferences">Conferences</a></li>
+</ul>
+<ul>
+<li><a href="#platforms">Platforms</a></li>
+</ul>
+<ul>
+<li><a href="#podcasts">Podcasts</a></li>
+</ul>
+<ul>
+<li><a href="#books">Books</a></li>
+</ul>
+<ul>
+<li><a href="#training-programs">Training programs</a></li>
+</ul>
+<ul>
+<li><a href="#further-readings">Further Readings</a></li>
+</ul>
+<ul>
+<li><a href="#related-awesome">Related awesome</a></li>
+</('ul', 0)>
+<h2>Projects</h2>
+
+<ul>
+<li><a href="https://www.arduino.cc/">Arduino</a> - Arduino is an open-source electronics platform.</li>
+</ul>
+<ul>
+<li><a href="https://www.prusa3d.com/">Prusa3D</a> - 3D printer manufacturer who shares their work open online.</li>
+</ul>
+<ul>
+<li><a href="https://www.preciousplastic.com/">Precious Plastic</a> - Tools to make plastic recycling as simple as possible.</li>
+</ul>
+<ul>
+<li><a href="https://www.opensourceecology.org/">Open Source Ecology</a> - Industrial machines made open.</li>
+</ul>
+<ul>
+<li><a href="https://safecast.org/">SafeCast</a> - Environmental measurements for the public domain.</li>
+</ul>
+<ul>
+<li><a href="https://www.wikihouse.cc/">WikiHouse</a> - Digital designed open housing.</li>
+</ul>
+<ul>
+<li><a href="https://reprap.org/wiki/RepRap">RepRap</a> - Humanity's first general-purpose, self-replicating manufacturing machine.</li>
+</ul>
+<ul>
+<li><a href="https://openbci.com/">OpenBCI</a> - Brain computer interface.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/openmv/openmv">OpenMV</a> - Open-source, low-cost machine vision platform.</li>
+</ul>
+<ul>
+<li><a href="https://openspim.org/">OpenSPIM</a> - Open Access platform for Three-dimensional (3D) microscopy.</li>
+</ul>
+<ul>
+<li><a href="http://mesospim.org/">mesoSPIM</a> - Open-source light-sheet microscopes for imaging in cleared tissue.</li>
+</ul>
+<ul>
+<li><a href="https://mutable-instruments.net/">Mutable Instruments</a> - Open-source eurorack classics.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/openUC2/UC2-GIT">openUC2</a> - Open-source modular microscopy toolbox.</li>
+</ul>
+<ul>
+<li><a href="https://openflexure.org/">OpenFlexure</a> - Open-source, 3D-printed microscope, including a precise mechanical stage.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/nasa-jpl/open-source-rover">Open-Source-Rover</a> - A six wheeled, build-it-yourself, open-source rover.</li>
+</ul>
+<ul>
+<li><a href="http://biohackacademy.github.io/">Biohack Academy</a> - Open-source biotechnological hardware such as Incubator, Thermocycler, Centrifuge, Microscope, etc.</li>
+</ul>
+<ul>
+<li><a href="http://www.gaudi.ch/GaudiLabs/?page_id=19">GaudiLab</a> - Open-source hardware projects for biology laboratories.</li>
+</ul>
+<ul>
+<li><a href="https://winterbloom.com">Winterbloom</a> - Open-source eurorack modules, Thea has some stellar design write-ups on her blog.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Open-Gamma-Project/Open-Gamma-Detector">Open Gamma Detector</a> - Hackable, low-cost gamma-ray spectrometer.</li>
+</ul>
+<ul>
+<li><a href="https://docs.opulo.io/">Opulo</a> - Project that develops a pick and place machine.</li>
+</ul>
+<ul>
+<li><a href="https://farm.bot/pages/open-source">FarmBot</a> - automated gardening machine to grow vegetables.</li>
+</ul>
+<ul>
+<li><a href="https://pikvm.org/">PiKVM</a> - Open and inexpensive DIY IP-KVM based on Raspberry Pi.</li>
+</ul>
+<ul>
+<li><a href="https://www.mekanika.io/">Mekanika</a> - Tools & Machines for Makers</li>
+</('ul', 0)>
+<h2>Talks</h2>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=Rfu_MKgu2Ik">How Open Hardware will Take Over the World</a> - TEDx talk by Nathan Seidle.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=t56bojFAnUg">Revolution of the open hardware</a> - TEDx talk by Bram Geenen.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=UYRhupdnUcY">Why do open hardware</a> - Talk by Limor Fried (ladyada).</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=ifTaGRTPwLc">Get your open hardware manufactured</a> - Tips by Ian of Dangerous Prototypes.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=c1pwbnDAub0">Open Hardware Projects to Fight COVID-19</a> - Collection video from N-O-D-E.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=Od_9yJqc098">Designing Open Hardware for 21st century science</a> - Presentation by Andre Maia Chagas.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=7ifGu22bhd4">Why open source hardware is(n't) working</a> - Presentation by David Cuartielles.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=_EZT57dtWHM">Open source and the future of hardware</a> - Talk by Neil Gershenfeld.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=HBS8sS138GE">On behalf of mankind: thank you for sharing!</a> - TEDx talk by Jerry de Vos</li>
+</('ul', 0)>
+<h2>Papers</h2>
+
+<ul>
+<li><a href="https://doi.org/10.5334/joh.7">What is the “Source” of Open Source Hardware?</a> - Paper by Jérémy Bonvoisin, Robert Mies, Jean-François Boujut, Rainer Stark.</li>
+</ul>
+<ul>
+<li><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3331121">Emerging Business Models for Open Source Hardware</a> - Paper by Joshua M. Pearce.</li>
+</ul>
+<ul>
+<li><a href="https://doi.org/10.1016/j.techfore.2020.119986">Towards national policy for open source hardware research: The case of Finland</a> - Paper by I. T. S. Heikkinen, H. Savin, J. Partanen, J. SeppäläJ, M. Pearce.</li>
+</ul>
+<ul>
+<li><a href="http://dx.doi.org/10.1109/ACCESS.2018.2881929">Open-Source Hardware in Education: A Systematic Mapping Study</a> - Paper by Ruben Heradio, Jesus Chacon, Hector Vargas, Daniel Galan, Jacobo Saenz, Luis De La Torre, Sebastian Dormido.</li>
+</ul>
+<ul>
+<li><a href="https://doi.org/10.1371/journal.pbio.3000014">Haves and have nots must find a better way: The case for open scientific hardware</a> - Paper by Andre Maia Chagas</li>
+</ul>
+<ul>
+<li><a href="https://doi.org/10.1371/journal.pbio.1002086">Open Labware: 3-D Printing Your Own Lab Equipment</a> - Paper by Tom Baden, Andre Maia Chagas, Greg Gage, Timothy Marzullo, Lucia L. Prieto-Godino, Thomas Euler</li>
+</('ul', 0)>
+<h2>Conferences</h2>
+
+<ul>
+<li><a href="https://fosdem.org/2022/">Fosdem</a> - Open Source event online on 5 & 6 February 2022.</li>
+</ul>
+<ul>
+<li><a href="https://2022.oshwa.org/">Open Hardware Summit</a> - Annual conference on open hardware on 22 April 2022.</li>
+</ul>
+<ul>
+<li><a href="https://makerfaire.com/">Maker Faire</a> - A celebration of the Maker Movement, locally organized.</li>
+</('ul', 0)>
+<h2>Platforms</h2>
+
+<ul>
+<li><a href="https://ohwr.org/welcome">Open Hardware Repository</a> - For electronics designers at experimental physics facilities to collaborate on open hardware designs.</li>
+</ul>
+<ul>
+<li><a href="https://en.oho.wiki/wiki/Home">Open Hardware Observatory</a> - Free blueprints for sustainable open hardware.</li>
+</ul>
+<ul>
+<li><a href="http://www.instructables.com/tag/type-id/category-technology/">Instructables</a> - Instructables is a place that lets you explore, document, and share your creations.</li>
+</ul>
+<ul>
+<li><a href="https://hackaday.io/">Hackaday.io</a> - Hackaday.io is the world's largest collaborative hardware development community.</li>
+</ul>
+<ul>
+<li><a href="https://www.hackster.io/about">Hackster.io</a> - Connecting developers where exploring tomorrow starts today.</li>
+</ul>
+<ul>
+<li><a href="https://www.openhardware.io/about">Openhardware.io</a> - Tracking amazing open hardware projects.</li>
+</ul>
+<ul>
+<li><a href="https://openhardware.science/">Openhardware.science</a> - Make open science hardware ubiquitous by 2025.</li>
+</ul>
+<ul>
+<li><a href="https://openlifesci.org/">Openlifescience</a> - Program to make Open Science ambassadors in research.</li>
+</ul>
+<ul>
+<li><a href="https://www.thingiverse.com/">Thingiverse</a> - A platform for sharing and contributing to design hardware for 3D printing, laser cutting and CNC milling.</li>
+</ul>
+<ul>
+<li><a href="https://kitspace.org">Kitspace.org</a> - A place to build and share electronics projects. </li>
+</('ul', 0)>
+<h2>Podcasts</h2>
+
+<ul>
+<li><a href="https://open.spotify.com/episode/46WwrOofygFyGrp6X42NOe?si=_qxPzPXkQaGNBqB-bnKwyw">Road to Open Science</a> - Episode on open hardware in the Netherlands.</li>
+</ul>
+<ul>
+<li><a href="https://open.spotify.com/episode/4pjaUpl96YhjqBvjzV0K1H?si=ssJJH7ouSOW_ttGvF2Mtdg">Physics Worlds</a> - Episode on the global impact of open hardware.</li>
+</ul>
+<ul>
+<li><a href="https://open.spotify.com/episode/1yGuG9TKvS2lkH7wgRO8YF?si=PwAZCT0qSxW87HQlCa7AeA">Command Line Heroes</a> -  Episode Makers unite.</li>
+</ul>
+<ul>
+<li><a href="https://open.spotify.com/episode/2Zp3q6ePDCp0Yeyq9ADDny?si=8_CuBG2ESEeoxvcspVi3Xg">A-podcast</a> -  Open source hardware is the future.</li>
+</ul>
+<ul>
+<li><a href="https://podcasts.google.com/feed/aHR0cHM6Ly90aGVhbXBob3VyLmxpYnN5bi5jb20vcnNz/episode/aHR0cDovL3d3dy50aGVhbXBob3VyLmNvbS8_cD0xNTg?sa=X&ved=0CAIQuIEEahcKEwjgkZnWjPr0AhUAAAAAHQAAAAAQCA">Amp hour</a> - Open Hardware and The Creative Economy.</li>
+</ul>
+<ul>
+<li><a href="https://semiwiki.com/podcast/podcast-ep44-open-hardware-diversity-alliance/">Semiconductor Insiders</a> - Open Hardware Diversity Alliance.</li>
+</ul>
+<ul>
+<li><a href="https://podcasts.google.com/feed/aHR0cHM6Ly9wcm9ncmFtbWluZ2VsZWN0cm9uaWNzLmNvbS9jYXRlZ29yeS9yYWRpby1zaG93L2ZlZWQv">Open source hardware podcast</a> - By the Programming Electronics Academy.</li>
+</('ul', 0)>
+<h2>Books</h2>
+
+<ul>
+<li><a href="https://books.google.nl/books?id=wg27BQAAQBAJ&lpg=PP1&dq=open%20source%20hardware&pg=PP1##v=onepage&q=open%20source%20hardware&f=false">Building open source hardware</a> - Book by Alicia Gibb, on building open source hardware from 2014.</li>
+</ul>
+<ul>
+<li><a href="https://books.google.nl/books?id=0bOKAAAAQBAJ&lpg=PP1&dq=open%20source%20hardware&pg=PP1##v=onepage&q=open%20source%20hardware&f=false">Open-source Lab</a> - Book by Josua m. Pearce, how to build your own hardware and reduce costs.</li>
+</ul>
+<ul>
+<li><a href="https://books.google.nl/books?id=jz1bCwAAQBAJ&lpg=PA93&dq=open%20source%20hardware&pg=PP1##v=onepage&q=open%20source%20hardware&f=false">Free to Make</a> -  Book by Dale Dougherty, how the maker movement is changing our schools, our jobs, and our minds.</li>
+</ul>
+<ul>
+<li><a href="https://www.nae.edu/174695/Fall-Bridge-on-Open-Source-Hardware">The bridge</a> - Issue of the national academy of engineering on open source hardware.</li>
+</('ul', 0)>
+<h2>Training programs</h2>
+
+<ul>
+<li><a href="https://openhardware.space">Open Hardware Makers</a></li>
+</ul>
+<ul>
+<li><a href="https://openhardware.academy/">Open Hardware Academy</a></li>
+</('ul', 0)>
+<h2>Further Readings</h2>
+
+<ul>
+<li><a href="https://opensource.guide/">Open Source Guide</a> - A website created by GitHub to help people work on open source projects.</li>
+</ul>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Open-source_hardware">Wikipedia</a> - General information about Open Source Hardware.</li>
+</ul>
+<ul>
+<li><a href="https://opencollective.com/">Open Collective</a> - Enables groups to quickly set up a collective, raise funds and manage them transparently.</li>
+</ul>
+<ul>
+<li><a href="https://openhardware.metajnl.com/">The Journal of Open Hardware</a> - (JOH) is a peer reviewed open access publication for open hardware research and development.</li>
+</ul>
+<ul>
+<li><a href="https://certification.oshwa.org/">OSHWA Certification</a> -  Provides an easy and straightforward way for producers to indicate that their products meet a uniform and well-defined standard for open-source compliance.</li>
+</ul>
+<ul>
+<li><a href="https://www.journals.elsevier.com/hardwarex">HardwareX Journal</a> - An open access scientific hardware journal.</li>
+</('ul', 0)>
+<h2>Related awesome</h2>
+
+<ul>
+<li><a href="https://github.com/ajaymnk/open-electronics">Awesome Open Electronics</a> - List with resources for Electronics Enthusiasts.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/paulhendricks/awesome-open">Awesome Open</a> - A list of open companies and communities.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kitspace/awesome-electronics">Awesome Electronics</a> - A curated list of awesome resources for electronic engineers and hobbyists.</li>
+</('ul', 0)>
+<h2>Contributing</h2>
+
+<p>Additional suggestions are welcomed! Check out contributing.md for guidelines.</p>
+<p>If you ever want to reference us, find us at <a href="https://delftopenhardware.nl">delftopenhardware.nl</a>. But you are in no way required to do so.</p>
+<p>(NOTE: If you're a maintainer listed on here who would like to be removed, just open an issue.)</p>
+
+</body>
+</html>

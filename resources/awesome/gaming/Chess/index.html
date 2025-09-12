@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Chess</h1>
+
+<p><strong>Repository:</strong> https://github.com/hkirat/awesome-chess#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<h1>Awesome Chess <a href="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg"><img src="https://github.com/sindresorhus/awesome" alt="Awesome</a>"></h1>
+
+<p>A curated list of assets availible on the Internet related to chess.</p>
+
+<p><em>Inspired by the <a href="https://github.com/sindresorhus/awesome">awesome</a> list thing. You might want to read the complete <a href="https://github.com/sindresorhus/awesome">awesome</a> list.</em></p>
+
+<h3>Contributing</h3>
+<p>Kindly go through <a href="https://github.com/hkirat/awesome-chess/blob/master/CONTRIBUTING.md#contribution-guidelines">Contribution Guidelines</a> first.</p>
+
+<p>Content</p>
+<hr>
+<ul>
+<li><a href="#books">Books</a></li>
+</ul>
+<ul>
+<li><a href="#fen-parsers">FEN Parsers</a></li>
+</ul>
+<ul>
+<li><a href="#move-validators">Move Validators</a></li>
+</ul>
+<ul>
+<li><a href="#bots">Bots</a></li>
+</ul>
+<ul>
+<li><a href="#websites">Websites</a></li>
+</ul>
+<ul>
+<li><a href="#boards">Boards</a></li>
+</ul>
+<ul>
+<li><a href="#board-notations">Board Notations</a></li>
+</ul>
+<ul>
+<li><a href="#pieces">Pieces</a></li>
+</ul>
+<ul>
+<li><a href="#talks">Talks</a></li>
+</ul>
+<p>Books</p>
+<hr>
+<p><em>Books to read on chess.</em></p>
+
+<ul>
+<li><a href="https://kairavacademydotcom.files.wordpress.com/2013/06/john-thursby-75-chess-problems.pdf">Chess Problems</a> - Collection of chess puzzles.</li>
+</ul>
+<ul>
+<li><a href="http://www.gutenberg.org/cache/epub/5614/pg5614-images.html">Chess strategy</a> - HTML version of chess strategy by Edward Lasker.</li>
+</ul>
+<ul>
+<li><a href="http://www.chesscity.com/PDF/Sicilian<em>Dragon</em>Black<em>Attacks</em>ssd.pdf">Sicilian Dragon</a> - Attacking plans for black.</li>
+</ul>
+<p>FEN Parsers</p>
+<hr>
+<p><em>Forsyth–Edwards Notation (FEN) is a standard notation for describing a particular board position of a chess game.</em></p>
+
+<ul>
+<li><a href="https://github.com/tlehman/fenparser">fenparser by tlehman</a> - A parser for Forsyth-Edwards Notation wriitten in Python.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ucarion/fen">fen by ucarion</a> - A Rust Forsyth-Edwards notation parser with proper error handling.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/andyherbert/fen-diagram">fen-diagram by andyherbert</a> - JavaScript for generating chess diagrams using Forsyth-Edwards notation.</li>
+</ul>
+<p>Bots</p>
+<hr>
+<p><em>Bots are algorithms involving artificial intelligence to play against a user.</em></p>
+
+<ul>
+<li><a href="https://github.com/benwr/latrunculorum">latrunculorum</a> - A simple chess bot in Python.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jfabeel/Chessbot">Chessbot</a> - Bot written in Java.</li>
+</ul>
+<p>Move Validators</p>
+<hr>
+<p><em>Validators are tools for checking authenticity of a move.</em></p>
+
+<ul>
+<li><a href="https://github.com/jhlywa/chess.js">chess.js</a> - chess.js, Structured code for chess authentication.</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/chess">npm chess package</a> - An algebraic notation driven chess engine that can validate board position and produce a list of viable moves.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/cgearhart/Chessnut.git">Chessnut</a> - Chessnut is a simple chess board model written in Python. It provides functionality of parsing FEN and generating a list of legal moves for each FEN representation.</li>
+</ul>
+<p>Websites</p>
+<hr>
+<p><em>Websites include platforms for people to play chess.</em></p>
+
+<ul>
+<li><a href="http://multiplayerchess.com">multiplayerchess.com</a> - A simple single page chess playing application facilitating the play of chess.</li>
+</ul>
+<ul>
+<li><a href="http://en.lichess.org/">lichess.org</a> - One of the most mature platforms for playing chess on the internet. It is open source too. It is equipped with daily puzzles and an TV to spectate other matches.</li>
+</ul>
+<ul>
+<li><a href="https://chess24.com/en/play/chess">chess24.com</a> - Play as well as learn chess from chess24 with the best of tutorials.</li>
+</ul>
+<ul>
+<li><a href="http://play.chessbase.com/js/apps/playchess/">chessbase.com</a> - Lucrative, single page application for playing chess. </li>
+</ul>
+<ul>
+<li><a href="http://www.chess.com/">chess.com</a> - Learn and play chess with over 5 million other users.</li>
+</ul>
+<ul>
+<li><a href="https://www.chesscademy.com/">chesscademy.com</a> - Watch videos, solve puzzles, and play games. All for free. (Works similar to Khan Academy.)</li>
+</ul>
+<ul>
+<li><a href="http://chesstempo.com">chesstempo.com</a> - Online chess tactics training site.</li>
+</ul>
+<ul>
+<li><a href="https://chessprogramming.wikispaces.com/">chessprogramming.wikispaces.com</a> - Repository of information about programming computers to play chess.</li>
+</ul>
+<ul>
+<li><a href="http://freechess.org/">freechess.org</a> - The 'Free Internet Chess Server' (FICS) is one of the oldest Internet chess servers. There are lots of client applications for almost every device, operation system or webbrowser available.</li>
+</ul>
+<p>Boards</p>
+<hr>
+<p><em>Boards are tools for encapsulating the process of rendering a board.</em></p>
+
+<ul>
+<li><a href="https://github.com/oakmac/chessboardjs/">Chessboard.js</a> - chessboard.js is a standalone JavaScript chess board.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/laat/chess-board">chess-board</a> - A web component for displaying chess positions. It takes FEN string as input and renders the board as output.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/bmarini/jchess">jchess</a> - A jQuery based JavaScript library for parsing and displaying chess games. Currently takes FEN and PGN as inputs.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/caustique/chessboard-js">Chessboard-js</a> - A responsive mobile-first JavaScript chessboard library.</li>
+</ul>
+<p>Board Notations</p>
+<hr>
+<p><em>Notations are a way of expressing the properties of the board in textual format. <a href="http://chess.eusa.ed.ac.uk/Chess/Rules/notation.html">Tutorial on Chess Notations</a>.</em></p>
+
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Forsyth%E2%80%93Edwards_Notation">FEN</a> - A FEN "record" defines a particular game position, all in one text line and using only the ASCII character set.</li>
+</ul>
+<ul>
+<li><a href="http://www6.chessclub.com/help/PGN-spec">PNG</a> - PGN is structured "for easy reading and writing by human users and for easy parsing and generation by computer programs." </li>
+</ul>
+<ul>
+<li>Other Notations</li>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Algebraic<em>notation</em>(chess">Algebraic Chess Notation</a>)</li>
+</ul>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/ICCF<em>numeric</em>notation">ICCF numeric notation</a> - Official chess game notation for all International Correspondence Chess Federation games.</li>
+</ul>
+<ul>
+<li><a href="http://www6.chessclub.com/chessviewer/smith.html">Smith Chess Notation</a></li>
+</ul>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Descriptive_notation">Descriptive Notation</a></li>
+</ul>
+</ul>
+<p>Pieces</p>
+<hr>
+<p><em>This includes the tools for getting artwork for various pieces of chess.</em></p>
+
+<ul>
+<li><a href="https://www.thingiverse.com/thing:470700">Spiral Pieces in 3-D</a></li>
+</ul>
+<ul>
+<li><a href="https://commons.wikimedia.org/wiki/Category:PNG<em>chess</em>pieces/Standard_transparent">Pieces on Wikipedia</a></li>
+</ul>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Chess<em>symbols</em>in_Unicode">Chess Pieces in Unicode</a></li>
+</ul>
+<ul>
+<li><a href="http://www.flaticon.com/search/chess">Icons on flaticons</a></li>
+</ul>
+<ul>
+<li><a href="https://thenounproject.com/search/?q=chess">Icons on thenounproject</a></li>
+</ul>
+<p>Talks</p>
+<hr>
+<p><em>Talks on chess.</em></p>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=fPopQaY7Og4">Understanding Chess Mastery</a> -Talk on understanding chess mastery by Jennifer Shahade.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=A3yDvM8aplY">How Chess Can Revolutionize Learning</a> - Talk on how chess can revolutionize learning by Cody Pomeranz.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=v34NqCbAA1c">Working backward to solve problems</a> - Talk on working backward to solve problems by Maurice Ashley</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=lgCSo1Txw3c">Chess Life</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=7EuxVOgrEig">Why Chess is Boring </a> - Talk on why chess is boring by Bobby Fischer</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=p027ysBt0_M">Chess Peeps</a></li>
+</ul>
+</body>
+</html>

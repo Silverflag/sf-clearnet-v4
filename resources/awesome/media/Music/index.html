@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Music</h1>
+
+<p><strong>Repository:</strong> https://github.com/ciconia/awesome-music#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<h1>Awesome Music <a href="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg"><img src="https://github.com/sindresorhus/awesome" alt="Awesome</a>"></h1>
+
+<p>A categorized collection of awesome music libraries, tools, frameworks and software.</p>
+
+<p>Contributions and suggestions are always welcome! Please take a look at the <a href="https://github.com/ciconia/awesome-music/blob/master/CONTRIBUTING.md">contribution guidelines and quality standard</a> first.</p>
+
+<p>Thanks to all <a href="https://github.com/ciconia/awesome-music/graphs/contributors">contributors</a>, you're awesome and this project wouldn't be possible without you!</p>
+
+<ul>
+<li><a href="#awesome-music">Awesome Music</a></li>
+<ul>
+<li><a href="#audio-editing">Audio Editing</a></li>
+</ul>
+<ul>
+<li><a href="#audio-libraries">Audio Libraries</a></li>
+</ul>
+<ul>
+<li><a href="#audio-tools">Audio Tools</a></li>
+</ul>
+<ul>
+<li><a href="#free-music-scores">Free Music Scores</a></li>
+</ul>
+<ul>
+<li><a href="#midi-tools--libraries">MIDI Tools & Libraries</a></li>
+</ul>
+<ul>
+<li><a href="#music-notation">Music Notation</a></li>
+</ul>
+<ul>
+<li><a href="#music-programming">Music Programming</a></li>
+</ul>
+<ul>
+<li><a href="#music-theory-teaching">Music Theory</a></li>
+</ul>
+<ul>
+<li><a href="#standards">Standards</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#other-awesomeness">Other Awesomeness</a></li>
+<ul>
+<li><a href="#related-lists">Related lists</a></li>
+</('ul', 2)>
+</('ul', 0)>
+<h2>Audio Editing</h2>
+
+<ul>
+<li><a href="https://github.com/audacity/audacity">Audacity</a> - a free, cross-platform digital audio editor.</li>
+</ul>
+<ul>
+<li><a href="http://ardour.org/">Ardour</a> - a cross-platform digital audio workstation emphasizing audio recording.</li>
+</ul>
+<ul>
+<li><a href="https://lmms.io/">LMMS</a> - another cross-platform digital audio workstation, more oriented towards making beats.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/stakira/openutau/">OpenUtau</a> - A free, cross-platform singing voice synthesis framework.</li>
+</ul>
+<ul>
+<li><a href="https://sourceforge.net/projects/snd/">snd</a> - Snd is a sound editor modelled loosely after Emacs.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/stargatedaw/stargate/">Stargate DAW</a> - A cross-platform, all-in-one digital audio workstation and plugin suite, optimized for EDM production.</li>
+</ul>
+<ul>
+<li><a href="https://tuneflow.com/">TuneFlow</a> - a next-gen DAW that helps you generate melody, beats, or a whole song, while still being able to edit them.</li>
+</('ul', 0)>
+<h2>Audio Libraries</h2>
+
+<ul>
+<li><a href="https://github.com/kolber/audiojs">audio.js</a> - audio.js is a drop-in javascript library that allows HTML5's &lt;audio&gt; tag to be used anywhere.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/libAudioFlux/audioFlux">audioFlux</a> - A library for audio and music analysis, feature extraction.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/no-chris/chord-mark">chord-mark</a> - reference implementation of ChordMark, a text notation format for lyrics, chords and rhythm.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/goldfire/howler.js">howler.js</a> - a Javascript audio library for the modern web.</li>
+</ul>
+<ul>
+<li><a href="http://www.softsynth.com/jsyn/">JSyn</a> - an audio synthesis software API for Java.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/librosa/librosa">Librosa</a> - a python package for music and audio analysis, providing the building blocks necessary to create music information retrieval systems.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mudcube/MIDI.js">midi.js</a> - a framework for creating web-based MIDI apps.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/venturemedia/mxml">mxml</a> - MusicXML parsing and layout library.</li>
+</ul>
+<ul>
+<li><a href="http://www.portaudio.com/">PortAudio</a> - a free, cross-platform, open-source, audio I/O library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/RustAudio">RustAudio</a> - an aggregate of free and useful Audio, DSP and music libraries written in Rust.</li>
+</ul>
+<ul>
+<li><a href="https://pbat.ch/proj/soundpipe.html">Soundpipe</a> - a lightweight DSP library written in C.</li>
+</('ul', 0)>
+<h2>Audio Tools</h2>
+
+<ul>
+<li><a href="http://beets.io/">Beets</a> - a powerful command-line music organizer and manipulator.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/belangeo/cecilia5">Cecilia</a> - a Pyo-based graphical environment for music and signal processing.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/atomnuker/cyanrip">cyanrip</a> - rips and encodes standard audio CDs with the least effort required from user. Cross platform.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/enzo1982/freac">fre:ac</a> - free audio converter. It supports audio CD ripping and tag editing.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jack-cli-cd-ripper/jack">Jack</a> - command-line CD ripper.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/KDE/k3b">K3b</a> - is a full-featured CD/DVD/Blu-ray burning and ripping application.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/phanan/koel">Koel</a> - an open-source personal audio streaming server.</li>
+</ul>
+<ul>
+<li><a href="http://lame.sourceforge.net/">Lame</a> - a high quality, free and open-source MP3 encoder.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/bgoglin/lltag">lltag</a> - automatic command-line mp3/ogg/flac file tagger and renamer.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sergree/matchering">matchering</a> - сontainerized web application and library for automated reference audio mastering.</li>
+</ul>
+<ul>
+<li><a href="https://musicbrainz.org">MusicBrainz</a> - Open Encyclopedia for Music information and Metadata, providing a unique ID for everything</li>
+</ul>
+<ul>
+<li><a href="https://github.com/j3ffhubb/musikernel">Musikernel</a> - a futuristic audio production platform (hardware support, APIs, hosts, plugins and more)</li>
+</ul>
+<ul>
+<li><a href="https://github.com/bleskodev/rubyripper">Rubyripper</a> - is a secure digital audio extraction application ("cd ripper") for Unix-like operating systems.</li>
+</ul>
+<ul>
+<li><a href="http://sox.sourceforge.net/">SoX</a> - a free open-source command line utility for playing, converting and manipulating audio files.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ftrvxmtrx/split2flac">split2flac</a> - split flac/ape/wv/wav + cue sheet into separate tracks</li>
+</ul>
+<ul>
+<li><a href="https://github.com/JoeLametta/whipper">Whipper</a> - Python CD-DA ripper preferring accuracy over speed.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/giorgiofranceschi/xaudiocopy">X Audio Copy</a> - GTK and GNOME application for ripping CD-Audio and encoding in lossy and lossless audio formats.</li>
+</('ul', 0)>
+<h2>Free Music Scores</h2>
+
+<ul>
+<li><a href="https://bayanguru.org/">bayanguru</a> - engraving and publishing system that produces high quality sheet music for bayan in PDF.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/cellist/Lilypond-Sheet-Music">cellist/Lilypond-Sheet-Music</a> - a collection of music typeset with lilypond (mostly chamber music and music for cello).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ciconia/music">ciconia/music</a> - a collection of mostly baroque music, lots of sacred works by J. S. Bach, coded in lilypond/ripple.</li>
+</ul>
+<ul>
+<li><a href="http://www.cpdl.org/">CPDL</a> - the choral public domain library contains more than 20K free scores of vocal music.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/nsceaux/nenuvar">Éditions Nicolas Sceaux</a> - baroque music scores (mainly French music), typeset using lilypond.</li>
+</ul>
+<ul>
+<li><a href="http://imslp.org/">IMSLP</a> - the International Music Score Library Project is the largest collection of public domain scores and parts on the web.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/madrisan/open-scores">Lavender Blue Open-Scores</a> - open scores for piano encoded using lilypond.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/MutopiaProject/MutopiaProject">Mutopia</a> - sheet music based on editions in the public domain.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/wbsoft/lilymusic">wbsoft/lilymusic</a> - beautiful LilyPond scores under free licenses.</li>
+</('ul', 0)>
+<h2>MIDI Tools & Libraries</h2>
+
+<ul>
+<li><a href="https://github.com/jjazzboss/JJazzLab-X">JJazzLab-X</a> - a complete Midi-based framework for automatic backing tracks generation.</li>
+</ul>
+<ul>
+<li><a href="http://midifile.sapp.org/">Midifile</a> - C++ library for parsing Standard MIDI Files.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mido/mido">mido</a> - Python library for working with MIDI messages and ports.</li>
+</ul>
+<ul>
+<li><a href="http://github.com/dredozubov/polyrhythmix">Polyrhythmix</a> - MIDI drums</li>
+</ul>
+<p>generator, designed for polyrhythmic parts</p>
+<ul>
+<li><a href="http://timidity.sourceforge.net/">Timidity</a> - an open-source command line synthesizer that plays MIDI files.</li>
+</('ul', 0)>
+<h2>Music Notation</h2>
+
+<ul>
+<li><a href="http://abjad.mbrsi.org/">Abjad</a> - a Python API for Formalized Score Control, based on Lilypond.</li>
+</ul>
+<ul>
+<li><a href="https://chordmark.netlify.app/">ChordMark</a> - a text-based notation format for lyrics, chords and rhythm.</li>
+</ul>
+<ul>
+<li><a href="http://www.denemo.org/">Denemo</a> - a free music notation editor based on Lilypond.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/PatWie/digitalmusicstand">Digital Music Stand</a> - a free web app for displaying sheet music.</li>
+</ul>
+<ul>
+<li><a href="http://elbsound.studio/music_fonts.php">Jan Angermüller's music fonts page</a> - A listing and visual comparison of different music fonts.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/wbsoft/frescobaldi">Frescobaldi</a> - a free Lilypond sheet music editor.</li>
+</ul>
+<ul>
+<li><a href="http://guidolib.sourceforge.net/">Guido</a> - a generic, portable library and API for the graphical rendering of musical scores.</li>
+</ul>
+<ul>
+<li><a href="https://www.hacklily.org">Hacklily</a> - online LilyPond-based sheet music editor (with optional GitHub integration).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/MichalPaszkiewicz/inknote">Inknote</a> - free, open source, browser based music notation and composition software.</li>
+</ul>
+<ul>
+<li><a href="https://www.jotchord.com">JotChord</a> - an online, text-based editor for making PDF-formatted Nashville Number System song charts.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/DDMAL/libmei">LibMEI</a> - a C++ library for reading and writing MEI files.</li>
+</ul>
+<ul>
+<li><a href="http://lilybin.com/">Lilybin</a> - an open source web-based LilyPond editor.</li>
+</ul>
+<ul>
+<li><a href="http://lilypond.org/">Lilypond</a> - free, open-source music engraving program, devoted to producing the highest-quality sheet music possible.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/noteflakes/lilypond-cookbook/wiki/">Lilypond cook book</a> - tips & tricks for getting the most out of lilypond.</li>
+</ul>
+<ul>
+<li><a href="http://lsr.di.unimi.it/">Lilypond Snippet Repository</a> - an online database of Lilypond snippets ideas, features and hacks.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/olsonpm/lilyvm">Lilyvm</a> - Lilypond version manager.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/noteflakes/lyp">Lyp</a> - the Lilypond swiss army knife - easily install packages, manage multiple versions of Lilypond, and other tools for power users.</li>
+</ul>
+<ul>
+<li><a href="https://mei-friend.mdw.ac.at">mei-friend</a> - a friendly, browser-based editor for music encodings.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/musescore/MuseScore">MuseScore</a> - free open-source music notation and composition software.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/venturemedia/musickit">MusicKit</a> - Music sheet rendering for iOS and OSX.</li>
+</ul>
+<ul>
+<li><a href="https://neoscore.org/">neoscore</a> - python library for notating music in a graphics-first paradigm.</li>
+</ul>
+<ul>
+<li><a href="http://notat.io/">NOTATIO</a> - a forum devoted to the practice of music notation.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/openlilylib/snippets/">OpenLilyLib</a> - LilyPond tools - snippets, templates, and extensions.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/opensheetmusicdisplay/opensheetmusicdisplay">OpenSheetMusicDisplay</a> - Typescript library for rendering MusicXML in the browser.</li>
+</ul>
+<ul>
+<li><a href="https://pypi.python.org/pypi/python-ly">Python-ly</a> - a tool and library for manipulating LilyPond files.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ciconia/ripple/">Ripple</a> - DRY for Lilypond - generate scores and parts with minimal fuss.</li>
+</ul>
+<ul>
+<li><a href="http://scorelib.sapp.org/">Scorelib</a> - a C++ library for parsing SCORE data files.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Michael-F-Ellis/tbon">Tbon</a> - Typographic Beat-Oriented Notation for music.</li>
+</ul>
+<ul>
+<li><a href="https://unisonofficial.com/html/user-documentation.html?title=unison-editor">Unison</a> - Proprietary software for creating music score with words.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/rism-ch/verovio">Verovio</a> - a library and a toolkit for engraving MEI music notation into SVG.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/0xfe/vexflow">Vexflow</a> - a JavaScript library for rendering music notation and guitar tablature.</li>
+</('ul', 0)>
+<h2>Music Programming</h2>
+
+<ul>
+<li><a href="https://github.com/alda-lang/alda">Alda</a> - a music programming language for musicians.</li>
+</ul>
+<ul>
+<li><a href="http://www.bachproject.net/">Bach: Automated Composer's Helper</a> - a cross-platform set of patches and externals for Max, aimed to bring the richness of computer-aided composition into the real-time world.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Jackojc/cane">Cane</a> - A small MIDI sequencer DSL designed around vectors and euclidean rhythms.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ccrma/chuck">Chuck</a> - strongly-timed, concurrent, and on-the-fly music programming language.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mohayonao/CoffeeCollider">CoffeeCollider</a> - a language for real time audio synthesis and algorithmic composition in HTML5. "Write CoffeeScript, and be processed as SuperCollider."</li>
+</ul>
+<ul>
+<li><a href="http://commonmusic.sourceforge.net/">Common Music</a> - an open source music composition system.</li>
+</ul>
+<ul>
+<li><a href="http://csound.github.io/">Csound</a> - a user-programmable and user-extensible sound processing language and software synthesizer.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/babali42/drumbeatrepo">DrumBeatRepo</a> - A rhythm library for playing drum beats of differents music genres in the browser.</li>
+</ul>
+<ul>
+<li><a href="http://faust.grame.fr/">Faust</a> - a functional programming language specifically designed for real-time signal processing and synthesis.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Gwion/Gwion">Gwion</a> - A strongly-timed programming language aimed at music creation. Heavily inspired by ChucK.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/iannix/IanniX">IanniX</a> - a graphical open-source sequencer, based on Iannis Xenakis works, for digital art.</li>
+</ul>
+<ul>
+<li><a href="http://inscore.sourceforge.net/">Inscore</a> - an environmnent for the design of interactive, augmented music scores.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ctford/leipzig">Leipzig</a> - a composition library for Overtone.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kad1kad/leiter">Leiter</a> - TypeScript-based library designed to generate musical scales.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/truj/midica">Midica</a> - MIDI programming language with decompiler and player, supports karaoke.</li>
+</ul>
+<ul>
+<li><a href="http://web.mit.edu/music21/">music21</a> - A Toolkit for Computational Musicology.</li>
+</ul>
+<ul>
+<li><a href="http://music-suite.github.io/docs/ref/">Music Suite</a> - a language for generalized music notation and theory, based on Haskell.</li>
+</ul>
+<ul>
+<li><a href="https://mutwo-org.github.io/">mutwo</a> - a Python library for composition that outputs notation, MIDI or audio files and that provides a generalized model to describe time-based structures.</li>
+</ul>
+<ul>
+<li><a href="https://www.cs.cmu.edu/~music/nyquist/">Nyquist</a> - a sound synthesis and composition language.</li>
+</ul>
+<ul>
+<li><a href="http://repmus.ircam.fr/openmusic/home">OpenMusic</a> - a visual programming language based on Lisp.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/hundredrabbits/Orca">Orca</a> - live programming environment for music.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/overtone/overtone/">Overtone</a> - an Open Source toolkit for designing synthesizers and collaborating with music.</li>
+</ul>
+<ul>
+<li><a href="http://www.platonicmusicengine.com/">Platonic Music Engine</a> - an open-source music generation framework written in Lua.</li>
+</ul>
+<ul>
+<li><a href="http://puredata.info/">Pure Data</a> - a visual programming language for audio and other multimedia.</li>
+</ul>
+<ul>
+<li><a href="https://belangeo.github.io/pyo/">pyo</a> - a Python module to help digital signal processing script creation.</li>
+</ul>
+<ul>
+<li><a href="http://py-modular.readthedocs.io/">py-modular</a> - a modular and experimental programming environment with basic DSP routines in python.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Bubobubobubobubo/sardine">Sardine</a> - a music live coding library for Python 3.10+ (MIDI/OSC/SuperCollider).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mdedwards/slippery-chicken">slippery chicken</a> - a Common Lisp environment for composition building on CLM, CMN, CM, MusicXML and Lilypond for score, sound file, and/or MIDI file outputs.</li>
+</ul>
+<ul>
+<li><a href="http://sonic-pi.net/">Sonic Pi</a> - a live coding synth with an emphasis on educational use.</li>
+</ul>
+<ul>
+<li><a href="https://pbat.ch/proj/sporth.html">Sporth</a> - a small stack based audio language.</li>
+</ul>
+<ul>
+<li><a href="https://strudel.tidalcycles.org/">Strudel</a> - an experiment in making a language built on javascript for live coding patterns using web technologies.</li>
+</ul>
+<ul>
+<li><a href="http://supercollider.github.io/">SuperCollider</a> - a programming language for real time audio synthesis and algorithmic composition.</li>
+</ul>
+<ul>
+<li><a href="https://tidalcycles.org/">Tidal</a> - a language built on Haskell for live coding patterns.</li>
+</ul>
+<ul>
+<li><a href="https://topos.live">Topos</a> - a web based live coding environment (WebAudio / MIDI)</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tuneflow/tuneflow-py/">tuneflow-py</a> - python plugin SDK for the next-gen DAW, that allows you to program your music algorithms & AI models into all stages of music production</li>
+</ul>
+<ul>
+<li><a href="https://unisonofficial.com/html/user-documentation.html?title=unison-editor">Unilang</a> - Domain specific language used in Unison.</li>
+</('ul', 0)>
+<h2>Music Theory Teaching</h2>
+
+<ul>
+<li><a href="https://www.artusi.xyz">Artusi</a> - Interactive music theory exercises.</li>
+</ul>
+<ul>
+<li><a href="https://fourscoreandmore.org/">Four Score and More</a> - Tailored music theory exercises based on scores.</li>
+</ul>
+<ul>
+<li><a href="https://www.musictheory.net">musictheory.net</a> - Lessons and exercises</li>
+</ul>
+<ul>
+<li><a href="http://openmusictheory.com/">OpenMusicTheory</a> - a growing, online "textbook" for music theory and aural skills.</li>
+</ul>
+<ul>
+<li><a href="https://www.hooktheory.com/theorytab">Theorytab</a> - a database of songs with their chord functions.</li>
+</('ul', 0)>
+<h2>Standards</h2>
+
+<ul>
+<li><a href="http://music-encoding.org/">MEI (Music Encoding Initiative)</a> - an open-source effort to define a system for encoding musical documents in a machine-readable structure.</li>
+</ul>
+<ul>
+<li><a href="http://www.musicxml.com/">MusicXML</a> - the standard open format for exchanging digital sheet music.</li>
+</ul>
+<ul>
+<li><a href="http://www.smufl.org/">SMuFL (Standard Music Font Layout)</a> - a specification for mapping music symbols to Unicode for use in music fonts.</li>
+</('ul', 0)>
+<h1>Other Awesomeness</h1>
+
+<h2>Related lists</h2>
+
+<ul>
+<li><a href="https://github.com/BillyDM/awesome-audio-dsp">Awesome Audio DSP</a> - A curated list of audio DSP and plugin development resources.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/willianjusten/awesome-audio-visualization">Awesome Audio Visualization</a> - A curated list about Audio Visualization.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ybayle/awesome-music-listening">Awesome Music Listening</a> - Awesome list of websites dedicated to listening to music.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/adius/awesome-music-production">Awesome Music Production</a> - A curated list of software and resources to create music.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/zoejane/awesome-music-programming">Awesome Music Programming</a> - A curated collection of music programming languages, libraries, frameworks and tools.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/faroit/awesome-python-scientific-audio">Awesome Python for Scientific Audio</a> - A curated list of python software and packages related to scientific research in audio.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/adius/awesome-sheet-music">Awesome sheet music</a> - A curated list of awesome sheet music software, libraries and resources.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/notthetup/awesome-webaudio">Awesome WebAudio</a> - A curated list of awesome WebAudio packages and resources.</li>
+</ul>
+<p>Other amazingly awesome lists can be found in the <a href="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg"><img src="https://github.com/sindresorhus/awesome" alt="Awesome</a>"> list.</p>
+
+<h2>License</h2>
+
+<p><a href="https://i.creativecommons.org/p/zero/1.0/88x31.png"><img src="https://creativecommons.org/publicdomain/zero/1.0/" alt="CC0</a>"></p>
+
+<p>To the extent possible under law, <a href="http://github.com/ciconia">Sharon Rosner</a> has waived all copyright and related or neighboring rights to this work.</p>
+
+</body>
+</html>

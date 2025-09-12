@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Datasets</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Game Datasets</h1>
+
+<p><strong>Repository:</strong> https://github.com/leomaurodesenv/game-datasets#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<h1>:video_game: Awesome Game Datasets <a href="https://awesome.re/badge.svg"><img src="https://awesome.re" alt="Awesome</a>"></h1>
+
+<p><a href="https://img.shields.io/static/v1?label=Code&message=GitHub&color=blue&style=flat-square"><img src="https://github.com/leomaurodesenv/game-datasets" alt="GitHub</a>"></p>
+<p><a href="https://img.shields.io/static/v1?label=License&message=CC-BY-4.0&color=blue&style=flat-square"><img src="LICENSE" alt="CC-BY-4.0 license</a>"></p>
+<p><a href="https://img.shields.io/github/actions/workflow/status/leomaurodesenv/game-datasets/continuous-integration.yml?label=Build&style=flat-square"><img src="https://github.com/leomaurodesenv/game-datasets/actions/workflows/continuous-integration.yml" alt="GitHub Workflow Status</a>"></p>
+
+<p>In computer science, Artificial Intelligence (AI) is intelligence demonstrated by machines. Its definition, AI research as the study of "intelligent agents": any device that perceives its environment and takes actions that achieving its goals <em>Russell et. al (2016)</em>.</p>
+
+<p>Withal, Data Mining (DM) is the process of discovering patterns in data sets (or datasets) involving methods of machine learning, statistics, and database systems; DM focus on extract the information of datasets <em>Han (2011)</em>.</p>
+
+<p>This repository serves as a guide for anyone who wants to work with <strong>Artificial Intelligence</strong> or <strong>Data Mining</strong> applied in digital games! Here you will find a series of datasets, tools and materials available to build your <em>application</em> or <em>dataset</em>.</p>
+
+<p><strong>Contributing</strong></p>
+
+<p>Any suggestions or doubts, please open an "issue". If you want to contribute, read <a href="CONTRIBUTING.md">this</a> and make a "pull request".</p>
+
+<p>______________________________________________________________________</p>
+
+<p><strong>Contents</strong></p>
+
+<ul>
+<li><a href="#video<em>game-awesome-game-datasets-">:video</em>game: Awesome Game Datasets </a></li>
+<ul>
+<li><a href="#api">API</a></li>
+</ul>
+<ul>
+<li><a href="#artificial-intelligence">Artificial Intelligence</a></li>
+<ul>
+<li><a href="#mobile">Mobile</a></li>
+</ul>
+<ul>
+<li><a href="#web">Web</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#books">Books</a></li>
+</ul>
+<ul>
+<li><a href="#dataset">Dataset</a></li>
+<ul>
+<li><a href="#related">Related</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#market-research">Market Research</a></li>
+</ul>
+<ul>
+<li><a href="#miscellaneous">Miscellaneous</a></li>
+</ul>
+<ul>
+<li><a href="#license">License</a></li>
+</ul>
+</ul>
+<p>______________________________________________________________________</p>
+
+<h2>API</h2>
+
+<p>API is <em>"a set of functions and procedures allowing the creation of applications that access the features or data of an operating system, application, or other service"</em> (Google).</p>
+
+<ul>
+<li><a href="https://develop.battle.net/">Battle.net</a> - Collection of games developed by <a href="https://www.blizzard.com">Blizzard</a>.</li>
+</ul>
+<ul>
+<li><a href="http://bf4stats.com/">Battlefield 4 Stats</a> - Stats, rankings, and progression of a player.</li>
+</ul>
+<ul>
+<li><a href="https://boardgamegeek.com/wiki/page/BGG<em>XML</em>API2">BoardGameGeek</a> - Board games data.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pnxenopoulos/csgo">Counter-Strike</a> - data parsing for Counter-Strike: Global Offensive (CSGO).</li>
+</ul>
+<ul>
+<li><a href="https://www.programmableweb.com/api/eve-online-crest-carbon-restful">EVE Online</a> - Science fiction massively multiplayer online game.</li>
+</ul>
+<ul>
+<li><a href="https://www.giantbomb.com/api/">Giant Bomb</a> - Game data and players review.</li>
+</ul>
+<ul>
+<li><a href="https://www.igdb.com/api">IGDB</a> - General information of games from any platform.</li>
+</ul>
+<ul>
+<li><a href="https://developer.marvel.com/">Marvel Developer</a> - Information about Marvel's vast library of comics.</li>
+</ul>
+<ul>
+<li><a href="https://www.metacritic.com/game">metacritc</a> - Game reviews and evaluation.</li>
+</ul>
+<ul>
+<li><a href="https://www.opencritic.com">OpenCritic</a> - Game reviews aggregator.</li>
+</ul>
+<ul>
+<li><a href="https://www.opendota.com/">OpenDota</a> - Platform providing Dota 2 data.</li>
+</ul>
+<ul>
+<li><a href="https://pandascore.co/">PandaScore</a> - Realtime eSports data.</li>
+</ul>
+<ul>
+<li><a href="https://pokeapi.co/">PokéAPI</a> - Pokémon data of all generations.</li>
+</ul>
+<ul>
+<li><a href="https://developer.riotgames.com/">Riot Games</a> - Active games, match history, and ranked statistics.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/leomaurodesenv/smm-course-search">smm-course-search</a> - Search courses from Super Mario Maker game.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/leomaurodesenv/smm-course-viewer">smm-course-viewer</a> - Read courses from Super Mario Maker saves.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/leomaurodesenv/smm-maker-profile">smm-maker-profile</a> - Fetch the user profile from Super Mario Maker game.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/SteamDatabase">Steam Database</a> - Series of tools to Steam data. <a href="https://steamdb.info/">Website</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Steambase">Steambase</a> - Steam data tools and insights. <a href="https://steambase.io/">Website</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/topics/steamspy">Steam Spy</a> - Game statistical from Steam users profiles.</li>
+</ul>
+<ul>
+<li><a href="https://developer.valvesoftware.com/wiki/Steam<em>Web</em>API">Steam Web API</a> - Query tool from Steam.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/TheGamesDB/TheGamesDB/">TGDB</a> - General information of games from any platform. <a href="https://thegamesdb.net/">Website</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/GregorUT/vgchartzScrape">vgchartzScrape</a> - Crawler from <a href="http://www.vgchartz.com">VGChartz</a>.</li>
+</ul>
+<ul>
+<li><a href="https://whatoplay.com">WhatoPlay</a> - Game reviews and ratings aggregator, and a recommender for discovering games.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/xboxapi">Xbox LIVE API</a> - Games, apps, users stats and messages. <a href="https://xboxapi.com/">Website</a>, <a href="https://doi.org/10.1145/1943552.1943569">paper</a>.</li>
+</ul>
+<p>______________________________________________________________________</p>
+
+<h2>Artificial Intelligence</h2>
+
+<ul>
+<li><a href="http://aibirds.org">AI Birds</a> - Artificial intelligence competition.</li>
+</ul>
+<ul>
+<li><a href="http://www.aigameresearch.org/demo-item/pcg-angry-bots/">Angry Bots</a> - Shooting game against robots.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/microsoft/CyberBattleSim">CyberBattleSim</a> - Experimentation platform to investigate automated agents. <a href="https://www.microsoft.com/en-us/research/project/cyberbattlesim/">Website</a>.</li>
+</ul>
+<ul>
+<li><a href="https://www.daimonin.org/">Daimonin</a> - Isometric MMORPG.</li>
+</ul>
+<ul>
+<li><a href="http://www.deliantra.net/">Deliantra</a> - Adventure game in a medieval environment.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sentientdesigns/constructive">Dungeon and Cave Generation</a> - Constructive generation methods for dungeons and levels.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/crawl/crawl">Dungeon Crawl: Stone Soup</a> - Roguelike adventure.</li>
+</ul>
+<ul>
+<li><a href="http://www.ice.ci.ritsumei.ac.jp/~ftgaic/">Fighting Game AI Competition</a> - Controller for a fighting game.</li>
+</ul>
+<ul>
+<li><a href="http://home.flightgear.org/">FlightGear Flight Simulator</a> - Flight simulator.</li>
+</ul>
+<ul>
+<li><a href="https://cilab.sejong.ac.kr/gdmc2017/">Game Data Mining Competition</a> - Competition of prediction of the players' behavior. <a href="https://arxiv.org/abs/1802.02301">Paper</a>.</li>
+</ul>
+<ul>
+<li><a href="http://www.gvgai.net/">General Video Game AI</a> - Controller for general video game playing. <a href="https://arxiv.org/abs/1802.10363">Paper</a>.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/c/halite/">Halite by Two Sigma</a> - Collect the halite during a match in space.</li>
+</ul>
+<ul>
+<li><a href="http://hanabi.aiclash.com/">Hanabi Competition</a> - Board game competition.</li>
+</ul>
+<ul>
+<li><a href="https://dockhorn.antares.uberspace.de/wordpress/">Hearthstone AI</a> - Card game competition.</li>
+</ul>
+<ul>
+<li><a href="http://www.marioai.org/">Infinite Mario Bros</a> - Super Mario competition. Platformer AI antecedent. <a href="http://julian.togelius.com/mariocompetition2009/">Website</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jazztickets/irrlamb">irrlamb</a> - Puzzle game with physics effects in 3D.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Microsoft/malmo">Malmo</a> - Platform built on top of <a href="https://www.minecraft.net/en-us/">Minecraft</a> game.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/santiontanon/microrts">microRTS</a> - RTS game competition. <a href="https://github.com/rubensolv/MicroRTS">PT-BR</a>.</li>
+</ul>
+<ul>
+<li><a href="http://minidungeons.com/">MiniDungeons</a> - Procedural dungeon-like game.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mguzdial3/Morai-Maker-Engine">Morai-Maker-Engine</a> - Cooperative game level editor. <a href="http://dx.doi.org/10.1145/3290605.3300854">Paper</a>.</li>
+</ul>
+<ul>
+<li><a href="http://gameaibook.org/wp-content/uploads/2016/10/mspacman-master.zip">Ms. Pac-Man</a> - Pac-Man game competition. <a href="www.pacmanvghosts.co.uk">Website</a>.</li>
+</ul>
+<ul>
+<li><a href="http://www.openlierox.net/">OpenLieroX</a> - Liero (similar to Worms) game.</li>
+</ul>
+<ul>
+<li><a href="https://gitlab.com/OpenMW/openmw">openmw</a> - Open-world RPG game. <a href="https://openmw.org/en/">Website</a>.</li>
+</ul>
+<ul>
+<li><a href="https://sites.google.com/site/platformersai/">Platformer AI</a> - Super Mario competition.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/polyworld/polyworld">polyworld</a> - Artificial life system.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/klaussilveira/qengine">qengine</a> - Retro game engine.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/openai/retro">Retro Contest</a> - Competition on SEGA Genesis games. <a href="https://openai.com/blog/retro-contest/">Website</a>.</li>
+</ul>
+<ul>
+<li><a href="https://robocode.sourceforge.io/">Robocode</a> - Robot battle tank competition.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/scotchkorean27/showdownaiclient">Showdown AI Competition</a> - Competition of Pokemon battle. <a href="http://game.engineering.nyu.edu/showdown-ai-competition/">Website</a>, <a href="http://game.engineering.nyu.edu/wp-content/uploads/2017/02/CIG<em>2017</em>paper_87-1.pdf">paper</a>.</li>
+</ul>
+<ul>
+<li><a href="https://sites.google.com/site/starcraftaic/">StarCraft AI Competition</a> - StarCraft game competition.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Atkrye/IEEE-CIG-Text-Adventurer-Competition">Text-Based Adventure AI Competition</a> - Text-adventure game competition. <a href="http://atkrye.github.io/IEEE-CIG-Text-Adventurer-Competition/">Website</a>.</li>
+</ul>
+<ul>
+<li><a href="http://thegenius.sourceforge.net/">The Genius</a> - Chess engine.</li>
+</ul>
+<ul>
+<li><a href="http://torcs.sourceforge.net/">The Open Racing Car Simulator</a> - Car racing simulator.</li>
+</ul>
+<ul>
+<li><a href="https://gitlab.com/voadi/voadi">Vegan on a Desert Island</a> - Adventure game on island survival.</li>
+</ul>
+<ul>
+<li><a href="https://gitlab.com/veloren/veloren">veloren</a> - Sandbox game. <a href="https://veloren.net/">Website</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/leomaurodesenv/vindinium">Vindinium</a> - Multi-player turn based on roguelike competition. <a href="https://pythonhosted.org/vindinium/">Documentation</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mwydmuch/ViZDoom">Visual Doom AI Competition</a> - Doom game competition. <a href="http://vizdoom.cs.put.edu.pl/">Website</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Wargus/wargus">Wargus</a> - Real-time strategy game. <a href="https://wargus.github.io/">Website</a>.</li>
+</('ul', 0)>
+<h3>Mobile</h3>
+
+<ul>
+<li><a href="https://github.com/HabitRPG/habitica-android">Habitica</a> - Gamify your life.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/watabou/pixel-dungeon">Pixel Dungeon</a> - Roguelike game.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/00-Evan/shattered-pixel-dungeon">Shattered Pixel Dungeon</a> - Improved Pixel Dungeon.</li>
+</('ul', 0)>
+<h3>Web</h3>
+
+<ul>
+<li><a href="https://github.com/lutzroeder/digger">Digger</a> - Boulderdash game. <a href="http://games.leonardomauro.com/digger/">Play</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/MattSurabian/DuckHunt-JS">Duck Hunt</a> - Shooting game in ducks. <a href="http://duckhuntjs.com/">Play</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/robertkleffner/mariohtml5">Infinite Mario Bros</a> - Super Mario Bros. <a href="https://openhtml5games.github.io/games-mirror/dist/mariohtml5/main.html">Play</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lostdecade/onslaught_arena">Onslaught! Arena</a> - Fight off hordes of medieval monsters. <a href="http://arcade.lostdecadegames.com/onslaught-arena/">Play</a>.</li>
+</ul>
+<ul>
+<li><a href="http://maettig.com/code/canvas/starship-sorades-13k.zip">Starship</a> - Traditional starship game. <a href="http://games.leonardomauro.com/starshipsorades/">Play</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/leomaurodesenv/TapAI">TapAI</a> - User interactions with a tap on screen game. <a href="http://projects.leonardomauro.com/tapai/">Play</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pubby">WebNES</a> - Play rooms of NES in web browser. <a href="http://pubby.github.io/webnes/index_app.html">Play</a>.</li>
+</ul>
+<p>______________________________________________________________________</p>
+
+<h2>Books</h2>
+
+<ul>
+<li>Drachen, A. Mirza-Babaei, P. Nacke, L. (2018). <em>Games user research</em>. Oxford.</li>
+</ul>
+<ul>
+<li>El-Nasr, S. Drachen, A. Canossa, A. (2013). <em>Game analytics: maximizing the value of player data</em>. Sprigner.</li>
+</ul>
+<ul>
+<li>Han, J., Pei, J., Kamber, M. (2011). <em>Data mining: concepts and techniques</em>. Elsevier.</li>
+</ul>
+<ul>
+<li>Hennig-Thurau, T. Houston, M. (2018). <em>Entertainment science: data analytics and practical theory for movies, games, music and books</em>. Springer.</li>
+</ul>
+<ul>
+<li>Loh, A. Sheng, Y. Ifenthaler, D. (2015). <em>Serious games analytics: methodologies for performance measurement, assessment, and improvement</em>. Springer.</li>
+</ul>
+<ul>
+<li>Millington, Ian, Funge, John (2020). <em>AI for Games, Third Edition</em>. CRC Press.</li>
+</ul>
+<ul>
+<li>Russell, S. J., Norvig, P. (2016). <em>Artificial intelligence: a modern approach</em>. Malaysia; Pearson Education Limited.</li>
+</ul>
+<ul>
+<li>Yannakakis, G. N., Togelius, J. (2018). <em>Artificial intelligence and games</em>. Springer.</li>
+</ul>
+<p>______________________________________________________________________</p>
+
+<h2>Dataset</h2>
+
+<ul>
+<li><a href="https://www.kaggle.com/datasnaek/league-of-legends">(LoL) League of Legends Ranked Games</a> - Matches details from ranked games.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/tristan581/17k-apple-app-store-strategy-games">17K Mobile Strategy Games</a> - Strategy games from the Apple App Store.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/cclayford/2018-fifa-world-cup-squads">2018 FIFA World Cup Squads</a> - Squad details for teams participating in the World Cup.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/datasets/bwandowando/322k-roblox-app-google-store-reviews">320K Roblox App Google Store Reviews</a> - Google Store reviews of Roblox.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/sdobson46/higher-or-lower-game">380,000 Guesses Dataset - Higher or Lower?</a> - Real-world game data of guessing a number.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/datasets/nicoelbert/aoe-matchups">Age of Empires 2: Definitive Edition 225.000 Games</a> - Data about match ups, outcomes and game states over the time in 225.000 AoE2 matches.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/datasets/jessicali9530/animal-crossing-new-horizons-nookplaza-dataset">Animal Crossing New Horizons Catalog</a> - Comprehensive inventory of items, villagers, clothing, fish/bugs etc.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/mrpantherson/board-game-data">Board Game Data</a> - Data from board games.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/datasets/sujaykapadnis/board-games">Board Games Dataset</a> - Board Games Dataset from <a href="https://www.boardgamegeek.com/">BoardGameGeek</a>.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/datasets/gabrio/board-games-dataset">Board Games Dataset</a> - Attributes and the ratings from board games in <a href="https://www.boardgamegeek.com/">BoardGameGeek</a>.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/jingking/boardgaming-online-processed-game-records">Boardgaming Online Game Records</a> - Playthroughs of board games.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/cheahjs/bravefrontier<em>data">bravefrontier</em>data</a> - Mobile game data, items and missions information.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/schiller/cartolafc">CartolaFC</a> - Popular brazilian fantasy football (from 2014 to 2017).</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/datasets/datasnaek/chess">Chess Game Dataset (Lichess)</a> - Chess games, including moves, victor, rating, opening details and more.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/moradnejad/clash-of-clans-50000-user-comments">Clash of Clans app store user comments</a> - User reviews from Google Play and iTunes App Store.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/swappyk/clash-royale-dataset">Clash royale Dataset</a> - Cards data.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/artimous/complete-fifa-2017-player-dataset-global">Complete FIFA 2017 Player dataset (Global)</a> - Players data.</li>
+</ul>
+<ul>
+<li><a href="http://academictorrents.com/details/eba3b48fcdaa9e69a927051f1678251a86a546f3">Condensing Steam: Distilling the Diversity of Gamer Behavior</a> - Temporal games data.</li>
+</ul>
+<ul>
+<li><a href="https://archive.ics.uci.edu/ml/datasets/Connect-4">Connect-4 Data Set</a> - Connect-4 game matches.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/skihikingkevin/csgo-matchmaking-damage">CS:GO Competitive Matchmaking Data</a> - Damage entries on rounds played.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/datasets/noahx1/csgo-steam-reviews">CS:GO Steam Reviews</a> - Steam Reviews.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/lucianomartins/data-game-clashroyale">Data Game ClashRoyale</a> - Player data of Clash Royale game.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/raxnamosa/defense-of-the-ancients">Defense of the Ancients</a> - Monsters data from Warcraft III game.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/oganm/dnddata">dnddata</a> - Dataset of Dungeons and Dragons characters.</li>
+</ul>
+<ul>
+<li><a href="https://archive.ics.uci.edu/ml/datasets/Dota2+Games+Results">Dota 2 Games (UCI)</a> - Matches results.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/datasets/noahx1/elden-ring-steam-reviews">Elden Ring Steam Reviews</a> - Steam Reviews.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/thec03u5/fifa-18-demo-player-dataset">FIFA 18 Complete Player Dataset</a> - Players and their attributes.</li>
+</ul>
+<ul>
+<li><a href="https://data.world/kreynol3/fortnite-statistics80-games">Fortnite Statistics_80 Games</a> - End games statistics.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/jruots/fortnite-battle-royale-weapon-attributes">Fortnite: Battle Royale - Weapon Attributes</a> - Stats of the weapons.</li>
+</ul>
+<ul>
+<li><a href="https://kingston.app.box.com/v/GamingVideoSET">GamingVideoSET</a> - A Dataset for Gaming Video Streaming Applications. <a href="https://ieeexplore.ieee.org/document/8463362">Paper</a></li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/romovpa/gosuai-dota-2-game-chats">GOSU.AI Dota 2 Game Chats</a> - Chats from matches replays.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/oscarmcnulty/gta-3d-dataset">GTA-3D Dataset</a> - 2D and 3D images from Grand Theft Auto 5 game.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/jeradrose/hearthstone-cards">Hearthstone Cards</a> - Collection of cards.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/daynearthur/heroes-of-might-and-magic-3-units">Heroes of Might and Magic 3 Units</a> - Units of a game.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/romainvincent/history-of-hearthstone">History of Hearthstone</a> - Collection of decks.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/datasets/georgescutelnicu/hogwarts-legacy-reviews">Hogwarts Legacy Reviews</a> - A list of Hogwarts Legacy reviews.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/danielwatabe/lcs-2017-summer-split-fantasy-player-team-stats">LCS 2017 Summer Split Fantasy Player & Team Stats</a> - Player and team data.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/bobbyscience/league-of-legends-diamond-ranked-games-10-min">League of Legends Diamond Ranked Games (10 min)</a> - Classify ranked games.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/xenogearcap/league2016">League of Legends Summoner Ids and Data - 2016</a> - Game data.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/mylesoneill/magic-the-gathering-cards">Magic The Gathering Cards</a> - Cards data.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/datasets/faisaljanjua0555/most-played-games-of-all-time">Most Played Games of All Time</a> - Steam game stats.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/datasets/justinas/nba-players-data">NBA Players</a> - Biometric, biographic and basic box score features from 1996 to 2019 season.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/nikkynak/oldschool-runescape-polling-data">Oldschool Runescape Polling Data</a> - Historical polling data.</li>
+</ul>
+<ul>
+<li><a href="https://blog.opendota.com/2017/03/24/datadump2/">OpenDota</a> - Continuous database of Dota 2 matches.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/mylesoneill/overwatch-game-records">Overwatch Game Records</a> - Stats of one player from thousands of matches.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/simonho87/overwatch-ranked-data">Overwatch Ranked Data</a> - Player and match data.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/edopic/overwatch">Overwatch</a> - Heros characteristics.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/gagazet/path-of-exile-league-statistic">Path of exile game statistic</a> - Players data.</li>
+</ul>
+<ul>
+<li><a href="https://drive.google.com/drive/folders/0B93<em>a48</em>LnJ0VEc3NklYbWpVZXM">Platform Experience Dataset</a> - Super Mario Bros matches. <a href="https://doi.org/10.1109/ACII.2015.7344647">Paper</a>.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/datasets/alopez247/pokemon">Pokémon for Data Mining and Machine Learning</a> - Stats of 721 Pokémon of the first six generations.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Biuni/PokemonGO-Pokedex">Pokémon GO Pokédex</a> - Encyclopedia Pokemon.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/abcsds/pokemon">Pokemon with stats</a> - Pokemon data with stats and types.</li>
+</ul>
+<ul>
+<li><a href="https://data.world/notgibs/pokemon-wonder-trade-results">Pokemon Wonder Trade Results</a> - Results of wonder trades in Pokemon Moon version.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/terminus7/pokemon-challenge">Pokemon- Weedle's Cave</a> - Battle data of Pokemon.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/abcsds/pokemongo">PokemonGO</a> - Pokemon and battle stats.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/semioniy/predictemall">Predict'em All</a> - Pokemon appear in PokemonGo over time.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/skihikingkevin/pubg-match-deaths">PUBG Match Deaths and Statistics</a> - Matches data.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/onzie9/Quackle<em>Self</em>Play">Scrabble</a> - Data Quackle game matches.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/datasets/aslanahmedov/self-driving-carbehavioural-cloning">Self Driving Car</a> - Behavioural Cloning Complete Guide.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/danofer/skillcraft">SkillCraft-StarCraft</a> - StarCraft 2 league-level performance.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/leomauro/smmnet">SMMnet</a> - Network data from Super Mario Maker.</li>
+</ul>
+<ul>
+<li><a href="https://archive.ics.uci.edu/ml/datasets/SkillCraft1+Master+Table+Dataset">StarCraft 2 (UCI)</a> - Data stream of matches. <a href="https://doi.org/10.1371/journal.pone.0075129">Paper</a>.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/alimbekovkz/starcraft-ii-matches-history">StarCraft II matches history</a> - Results of matches.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/sfu-summit/starcraft-ii-replay-analysis">StarCraft II Replay Analysis</a> - Aggregation of the replays.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/kinguistics/starcraft-scouting-the-enemy">Starcraft: Scouting The Enemy</a> - Player reconnaissance in professional-level.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/TorchCraft/StarData">StarData</a> - Matches, videos, etc. <a href="http://nova.wolfwork.com/dataMining.html">Website</a>, <a href="https://arxiv.org/abs/1708.02139">paper</a>.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/kandebonfim/super-trunfo-dinossaurs-2">Super Trunfo - Dinossaurs 2</a> - Cards of this game.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/lemonkoala/terra-mystica">Terra Mystica Snellman Statistics</a> - Game logs and statistics.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/datasets/rounakbanik/pokemon">The Complete Pokemon Dataset</a> - Pokemon data from all generations.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/googlecreativelab/quickdraw-dataset">The Quick, Draw! Dataset</a> - Collection of 50 million drawings across 345 categories.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/cblesa/travian-buildings">Travian buildings</a> - Time, cost and bonus of buildings.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/mylesoneill/warcraft-avatar-history">World of Warcraft Avatar History</a> - Collection of records. <a href="http://mmnet.iis.sinica.edu.tw/dl/wowah/">Website</a>.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/cblesa/world-of-warcraft-battlegrounds">World of Warcraft Battlegrounds</a> - Details of battlegrounds.</li>
+</('ul', 0)>
+<h3>Related</h3>
+
+<ul>
+<li><a href="https://www.kaggle.com/datasets/iamsouravbanerjee/computer-games-dataset">Computer Games Dataset</a> - Gaming World: A Comprehensive Computer Games Dataset.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/datasets/psycon/game-companies-historical-stock-price-2022-04">Daily Game Companies Historical Stock Price</a> - Game Companies Historical Stock Price 08.2022.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/lava18/google-play-store-apps">Google Play Store Apps</a> - Data from Play Store apps.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/floval/jvc-game-reviews">JVC Game Reviews</a> - Video game data from <a href="http://www.jeuxvideo.com/">JeuxVideo.com</a>.</li>
+</ul>
+<ul>
+<li><a href="https://webrobots.io/kickstarter-datasets/">Kickstarter Datasets</a> - Projects details.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/destring/metacritic-reviewed-games-since-2000">Metacritic games</a> - Games data from <a href="https://www.metacritic.com">metacritc</a>.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/datasets/joebeachcapital/nintendo-games">Nintendo Games</a> - Nintendo games for all platforms scraped from <a href="https://www.metacritic.com">metacritc</a>.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/kingburrito666/over-13000-steam-games">Over 13,000 Steam Games</a> - Prices of video games from Steam.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/datasets/khaiid/most-selling-pc-games">PC Games Sales</a> - Dataset of the best selling PC games.</li>
+</ul>
+<ul>
+<li><a href="https://data.world/jshep512/pew-gaming-broadband">PEW-Gaming-Broadband</a> - Questions about video games.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/CraigKelly/steam-data">Steam Game Data</a> - Combination of Steam API and Steam Spy.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/datasets/nikatomashvili/steam-games-dataset">Steam Games Dataset</a> - Dataset scraped from Steam search system.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mulhod/steam_reviews">Steam Review Datasets</a> - Steam user reviews.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/datasets/nikdavis/steam-store-games">Steam Store Games</a> - Information about 27,000 games scraped from Steam and SteamSpy APIs.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/datasets/tamber/steam-video-games">Steam Video Games</a> - Steam user interactions.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/floval/12-000-video-game-reviews-from-vandal">Vandal Game Reviews</a> - Game data from <a href="https://vandal.elespanol.com/">Vandal.com</a>.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/juttugarakesh/video-game-data">Video Game DATA</a> - Video games released.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/rush4ratio/video-game-sales-with-ratings">Video Game Sales with Ratings</a> - Video game sales and rating from <a href="https://www.metacritic.com">metacritc</a>.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/datasets/gregorut/videogamesales">Video Game Sales</a> - Sales data from games.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/datasets/maso0dahmed/video-games-data">Video Games Data</a> - Video games synopse.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/launay10christian/video-games-review">Video Games Review</a> - Reviews on <a href="http://www.jeuxvideo.com/">JeuxVideo.com</a>.</li>
+</ul>
+<ul>
+<li><a href="https://www.kaggle.com/ashaheedq/video-games-sales-2019">Video Games Sales 2019</a> - Sales and scores for games.</li>
+</ul>
+<ul>
+<li><a href="https://knoema.com/T100GAMEREVENUES2016/world-top-100-countries-by-game-revenues">World Top 100 Countries by Game Revenues</a> - Global game revenue.</li>
+</ul>
+<p>______________________________________________________________________</p>
+
+<h2>Market Research</h2>
+
+<ul>
+<li><a href="https://www.euromonitor.com/">Euro-Monitor, Video Games</a> - Strategic Market Researcher.</li>
+</ul>
+<ul>
+<li><a href="https://www.grandviewresearch.com/industry/digital-media">Grand View Research, Digital Media</a> - Syndicated market research studies.</li>
+</ul>
+<ul>
+<li><a href="https://newzoo.com/">Newzoo</a> - View on the games market. Unparalleled insights and value.</li>
+</ul>
+<ul>
+<li><a href="https://www.statista.com/topics/868/video-games/">Statista, Video Games</a> - Market and opinion research institutes and data derived from the economic sector.</li>
+</ul>
+<p>______________________________________________________________________</p>
+
+<h2>Miscellaneous</h2>
+
+<ul>
+<li><a href="http://academictorrents.com/">Academic Torrents</a> - Sharing enormous datasets.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/soruly/awesome-acg">Awesome ACG</a> - Technologies related to anime, comic and games.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/strift/awesome-esports">Awesome Esports</a> - Competitiosn using video games.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Calinou/awesome-gamedev">Awesome Gamedev</a> - Collection of open-source games.</li>
+</ul>
+<ul>
+<li><a href="https://aws.amazon.com/datasets/">AWS Datasets</a> - Amazon public datasets.</li>
+</ul>
+<ul>
+<li><a href="https://data.world">data.world</a> - Datasets.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/cncplyr/datasets-games">datasets-games</a> - Datasets from a variety of games.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/michelpereira/awesome-gamesofcoding">Games of Coding</a> - Games to teach programming language.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/leereilly/games">Games on GitHub</a> - Popular videos games hosted in GitHub.</li>
+</ul>
+<ul>
+<li><a href="https://console.cloud.google.com/marketplace/details/github/github-repos?filter=solution-type:dataset&id=46ee22ab-2ca4-4750-81a7-3ee0f0150dcb">GitHub Activity Data</a> - Activity from open source GitHub repositories.</li>
+</ul>
+<ul>
+<li><a href="https://gym.openai.com/">Gym OpenAI</a> - Game toolkit for reinforcement learning algorithms.</li>
+</ul>
+<ul>
+<li><a href="http://kaggle.com/">Kaggle</a> - Data Science competitions, datasets and projects.</li>
+</ul>
+<ul>
+<li><a href="https://libregamewiki.org/Main_Page">Libre Game Wiki</a> - Free gaming encyclopedia.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/OpenHTML5Games">Open HTML5 Games</a> - JavaScript and HTML5 games. <a href="https://openhtml5games.com/">Play</a>.</li>
+</ul>
+<ul>
+<li><a href="https://pt.wikipedia.org/wiki/Lista<em>de</em>jogos<em>de</em>c%C3%B3digo_aberto">Open-source games</a> - Open-source games (PT-BR).</li>
+</ul>
+<ul>
+<li><a href="https://www.reddit.com/r/datasets">Reddit - Datasets</a> - Forum of datasets.</li>
+</ul>
+<ul>
+<li><a href="https://archive.ics.uci.edu/">UCI</a> - Datasets.</li>
+</ul>
+<ul>
+<li><a href="https://webscope.sandbox.yahoo.com/">Yahoo! Datasets</a> - Datasets.</li>
+</ul>
+<p>______________________________________________________________________</p>
+
+<h2>License</h2>
+
+<a rel="license" href="LICENSE"><img alt="Creative Commons License" style="border-width:0" src="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-sa.svg" /></a>
+
+<ul>
+<li>License: <a href="LICENSE">Creative Commons Attribution-ShareAlike 4.0 International License</a></li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robotics</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Robotics</h1>
+
+<p><strong>Repository:</strong> https://github.com/Kiloreux/awesome-robotics#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<p>Awesome Robotics</p>
+<p>================</p>
+
+<p><a href="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg"><img src="https://github.com/sindresorhus/awesome" alt="Awesome</a>"></p>
+
+<p>This is a list of various books, courses and other resources for robotics. It's an attempt to gather useful material in one place for everybody who wants to learn more about the field.</p>
+
+<h3>Courses ###</h3>
+<ul>
+<li><a href="https://www.udacity.com/course/artificial-intelligence-for-robotics--cs373">Artificial Intelligence for Robotics</a> <strong>Udacity</strong></li>
+</ul>
+<ul>
+<li><a href="https://www.udacity.com/course/robotics-software-engineer--nd209">Robotics Nanodegree</a> <strong>Udacity</strong> :dollar:</li>
+</ul>
+<ul>
+<li><a href="https://courses.edx.org/courses/course-v1:ETHx+AMRx+2T2019/5b151c51e8bf47c29d97f8a12369df17/">Autonomous Mobile Robots</a> <strong>edX</strong></li>
+</ul>
+<ul>
+<li><a href="http://underactuated.csail.mit.edu/underactuated.html">Underactuated Robotics</a> <strong>MIT CSAIL</strong></li>
+</ul>
+<ul>
+<li><a href="https://courses.edx.org/courses/ETHx/AMRx/1T2014/info">Autonomous Mobile Robots</a> <strong>edX</strong></li>
+</ul>
+<ul>
+<li><a href="https://www.edx.org/course/robot-mechanics-control-part-i-snux-snu446-345-1x">Robot Mechanics and Control, Part I</a> <strong>edX</strong></li>
+</ul>
+<ul>
+<li><a href="https://www.edx.org/course/robot-mechanics-control-part-ii-snux-snu446-345-2x">Robot Mechanics and Control, Part II</a> <strong>edX</strong></li>
+</ul>
+<ul>
+<li><a href="https://www.edx.org/course/autonomous-navigation-flying-robots-tumx-autonavx-0">Autonomous Navigation for Flying Robots</a> <strong>edX</strong></li>
+</ul>
+<ul>
+<li><a href="https://www.coursera.org/specializations/robotics">Robotics Specialization by GRASP Lab</a> <strong>Coursera</strong> :dollar:</li>
+</ul>
+<ul>
+<li><a href="https://www.coursera.org/course/conrob">Control of Mobile Robots</a> <strong>Coursera</strong></li>
+</ul>
+<ul>
+<li><a href="https://robotacademy.net.au/">QUT Robot Academy</a> <strong>QUT</strong></li>
+</ul>
+<ul>
+<li><a href="https://www.qut.edu.au/study/short-courses-and-professional-development/short-courses/robotic-vision">Robotic vision</a> <strong>QUT</strong></li>
+</ul>
+<ul>
+<li><a href="http://ocw.mit.edu/courses/mechanical-engineering/2-12-introduction-to-robotics-fall-2005/">Introduction to robotics</a> <strong>MIT</strong></li>
+</ul>
+<ul>
+<li><a href="https://www.edx.org/course/robotics-vision-intelligence-machine-pennx-robo2x">Robotics: Vision Intelligence and Machine Learning</a> <strong>edX</strong></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/user/StanfordCS235/videos">Applied robot design</a> <strong>Stanford University</strong></li>
+</ul>
+<ul>
+<li><a href="https://see.stanford.edu/Course/CS223A">Introduction to Robotics</a> <strong>Stanford University</strong></li>
+</ul>
+<ul>
+<li><a href="http://ais.informatik.uni-freiburg.de/teaching/ss16/robotics/index_en.php">Introduction to Mobile Robotics</a> <strong>University of Freiburg</strong></li>
+</ul>
+<ul>
+<li><a href="https://www.edx.org/micromasters/pennx-robotics">Robotics</a> <strong>edx</strong> :dollar:</li>
+</ul>
+<ul>
+<li><a href="https://www.edx.org/course/robotics-columbiax-csmm-103x-2">Columbia Robotics</a> <strong>edx</strong> </li>
+</ul>
+<ul>
+<li><a href="https://www.coursera.org/specializations/modernrobotics?">Modern Robotics: Mechanics, Planning, and Control</a> <strong>Coursera</strong></li>
+</ul>
+<ul>
+<li><a href="https://www.edx.org/course/hello-real-world-with-ros-robot-operating-system-2">Hello (Real) World with ROS – Robot Operating System</a> <strong>edx</strong></li>
+</ul>
+<ul>
+<li><a href="https://people.eecs.berkeley.edu/~pabbeel/cs287-fa19/">Advanced Robotics</a> <strong>UCBerkeley</strong></li>
+</ul>
+<ul>
+<li><a href="https://www.coursera.org/learn/arduino">Building Arduino robots and devices</a> <strong>Coursera</strong></li>
+</ul>
+<ul>
+<li><a href="https://www.coursera.org/projects/ros2-intro">Introduction to The Robot Operating System (ROS2)</a> <strong>Coursera</strong></li>
+</ul>
+<ul>
+<li><a href="https://www.coursera.org/specializations/modernrobotics">Modern Robotics: Mechanics, Planning, and Control Specialization</a> <strong>Coursera</strong></li>
+</ul>
+<ul>
+<li><a href="https://www.udacity.com/course/robotics-software-engineer--nd209">Become a Robotics Software Enginee</a> <strong>Udacity</strong></li>
+</ul>
+<ul>
+<li><a href="http://www.cs.berkeley.edu/~pabbeel/cs287-fa13/">Advanced Robotics</a> <strong>UC Berkeley</strong></li>
+</ul>
+<ul>
+<li><a href="https://www.edx.org/learn/technology/eth-zurich-self-driving-cars-with-duckietown">Self-Driving Cars with Duckietown</a> <strong>edX</strong></li>
+</('ul', 0)>
+<h3>Books ###</h3>
+<ul>
+<li><a href="http://www.amazon.com/Probabilistic-Robotics-Intelligent-Autonomous-Agents/dp/0262201623/">Probabilistic Robotics (Intelligent Robotics and Autonomous Agents series)</a>  :dollar:</li>
+</ul>
+<ul>
+<li><a href="http://www.amazon.com/Introduction-Autonomous-Mobile-Intelligent-Robotics/dp/0262015358/">Introduction to Autonomous Mobile Robots (Intelligent Robotics and Autonomous Agents series)</a>  :dollar:</li>
+</ul>
+<ul>
+<li><a href="https://www.amazon.com/Springer-Handbook-Robotics-Handbooks/dp/3319325507/">Springer Handbook of Robotics</a>  :dollar:</li>
+</ul>
+<ul>
+<li><a href="http://planning.cs.uiuc.edu/">Planning Algorithms</a></li>
+</ul>
+<ul>
+<li><a href="https://cse.sc.edu/~jokane/agitr/agitr-letter.pdf">A gentle introduction to ROS</a></li>
+</ul>
+<ul>
+<li><a href="http://www.cds.caltech.edu/~murray/mlswiki/?title=First_edition">A Mathematical Introduction to Robotic Manipulation</a></li>
+</ul>
+<ul>
+<li><a href="http://wiki.roboteducation.org/Introduction<em>to</em>Computer<em>Science</em>via_Robots">Learning Computing With Robots</a></li>
+</ul>
+<ul>
+<li><a href="http://www.amazon.com/Robotics-Vision-Control-Fundamental-Algorithms/dp/3642201431">Robotics, Vision and Control: Fundamental Algorithms in MATLAB (Springer Tracts in Advanced Robotics)</a>  :dollar:</li>
+</ul>
+<ul>
+<li><a href="http://www.intechopen.com/subjects/robotics">INTECH Books</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/correll/Introduction-to-Autonomous-Robots/releases">Introduction to Autonomous Robots</a></li>
+</ul>
+<ul>
+<li><a href="https://www.amazon.com/Principles-Robot-Motion-Implementations-Intelligent/dp/0262033275">Principles of Robot Motion: Theory, Algorithms, and Implementations </a>:dollar:</li>
+</ul>
+<ul>
+<li><a href="http://hades.mech.northwestern.edu/index.php/LynchAndPark">Introduction to Modern Robotics: Mechanics, Planning, and Control</a> <a href="http://hades.mech.northwestern.edu/images/7/7f/MR.pdf">[pdf</a>]</li>
+</ul>
+<ul>
+<li><a href="https://www.amazon.com/Programming-Robots-ROS-Practical-Introduction/dp/1449323898/">Programming Robots with ROS: A Practical Introduction to the Robot Operating System</a> :dollar:</li>
+</ul>
+<ul>
+<li><a href="https://www.amazon.com/Learning-ROS-Robotics-Programming-Second/dp/1783987588">Learning ROS for Robotics Programming</a> :dollar:</li>
+</ul>
+<ul>
+<li><a href="https://www.amazon.com/Mastering-Robotics-Programming-Lentin-Joseph/dp/1783551798">Mastering ROS for Robotics Programming</a> :dollar:</li>
+</ul>
+<ul>
+<li><a href="https://btirai.github.io/">Behavior Trees in Robotics and AI: An Introduction</a> <a href="https://arxiv.org/pdf/1709.00084">[pdf</a>]</li>
+</ul>
+<ul>
+<li><a href="http://projects.laas.fr/planning/">Automated Planning and Acting</a> <a href="http://projects.laas.fr/planning/book.pdf">[pdf</a>]</li>
+</ul>
+<ul>
+<li><a href="https://www.manning.com/books/robotics-for-software-engineers">Robotics for Software Engineers</a> :dollar:</li>
+</('ul', 0)>
+<h3>Software and Libraries ###</h3>
+<p><a href="http://gazebosim.org/"><strong>Gazebo</strong></a></p>
+<p>Robot Simulator</p>
+
+<p><a href="http://www.ros.org/"><strong>ROS</strong></a></p>
+<p>The Robot Operating System (ROS) is a flexible framework for writing robot software. It is a collection of tools, libraries, and conventions that aim to simplify the task of creating complex and robust robot behavior across a wide variety of robotic platforms.</p>
+
+<p><a href="https://index.ros.org/doc/ros2/"><strong>ROS2</strong></a></p>
+<p>ROS2 is a new version of ROS with radical design changes and improvement over older ROS version.</p>
+
+<p><a href="http://www.robwork.dk/apidoc/nightly/rw/"><strong>RobWork</strong></a></p>
+<p>RobWork is a collection of C++ libraries for simulation and control of robot systems. RobWork is used for research and education as well as for practical robot applications.</p>
+
+<p><a href="http://www.mrpt.org/"><strong>MRPT</strong></a></p>
+<p>Mobile Robot Programming Toolkit provides developers with portable and well-tested applications and libraries covering data structures and algorithms employed in common robotics research areas.</p>
+
+<p><a href="http://www.roboticslibrary.org/"><strong>Robotics Library</strong></a></p>
+<p>The Robotics Library (RL) is a self-contained C++ library for robot kinematics, motion planning and control. It covers mathematics, kinematics and dynamics, hardware abstraction, motion planning, collision detection, and visualization.</p>
+
+<p><a href="http://simbad.sourceforge.net/"><strong>Simbad</strong></a></p>
+<p>2D/3D simulator in Java and Jython.</p>
+
+<p><a href="https://www.openrobots.org/wiki/morse/"><strong>Morse</strong></a></p>
+<p>General purpose indoor/outdoor 3D simulator.</p>
+
+<p><a href="http://carmen.sourceforge.net/"><strong>Carmen</strong></a></p>
+<p>CARMEN is an open-source collection of software for mobile robot control. CARMEN is modular software designed to provide basic navigation primitives including: base and sensor control, logging, obstacle avoidance, localization, path planning, and mapping.</p>
+
+<p><a href="http://www.peekabot.org/"><strong>Peekabot</strong></a></p>
+<p>Peekabot is a real-time, networked 3D visualization tool for robotics, written in C++. Its purpose is to simplify the visualization needs faced by a roboticist daily.</p>
+
+<p><a href="http://www.yarp.it/"><strong>YARP</strong></a></p>
+<p>Yet Another Robot Platform.</p>
+
+<p><a href="http://www.coppeliarobotics.com/"><strong>V-REP</strong></a></p>
+<p>Robot simulator, 3D, source available, Lua scripting, APIs for C/C++, Python, Java, Matlab, URBI, 2 physics engines, full kinematic solver.</p>
+
+<p><a href="https://www.cyberbotics.com/overview"><strong>Webots</strong></a></p>
+<p>Webots is a development environment used to model, program and simulate mobile robots.</p>
+
+<p><a href="http://drake.mit.edu/"><strong>Drake</strong></a></p>
+<p>A planning, control and analysis toolbox for nonlinear dynamical systems.</p>
+
+<p><a href="https://neurorobotics.net/"><strong>Neurorobotics Platform (NRP)</strong></a></p>
+<p>An Internet-accessible simulation system that allows the simulation of robots controlled by spiking neural networks.</p>
+
+<p><a href="http://playerstage.sourceforge.net/"><strong>The Player Project</strong></a></p>
+<p>Free Software tools for robot and sensor applications</p>
+
+<p><a href="https://github.com/openai/roboschool"><strong>Open AI's Roboschool</strong></a></p>
+<p>Open-source software for robot simulation, integrated with OpenAI Gym.</p>
+
+<p><a href="http://visp.inria.fr/"><strong>ViSP</strong></a></p>
+<p>Open-source visual servoing platform library, is able to compute control laws that can be applied to robotic systems.</p>
+
+<p><a href="https://github.com/miccol/ROS-Behavior-Tree"><strong>ROS Behavior Trees</strong></a></p>
+<p>Open-source library to create robot's behaviors in form of Behavior Trees running in ROS (Robot Operating System).</p>
+
+<p><a href="https://github.com/synthetos/g2"><strong>g2core</strong></a></p>
+<p>Open-source motion control software for CNC and Robotics, designed to run on Arduino Due class microcontrollers.</p>
+
+<p><a href="https://github.com/roboticsleeds/ur5controller"><strong>ur5controller</strong></a></p>
+<p>Open-source OpenRAVE controller for UR5 robot integrated with ROS.</p>
+
+<p><a href="https://github.com/rbdl/rbdl"><strong>RBDL</strong></a></p>
+<p>Open-source (zlib) C++ libray for both forward and inverse dynamics and kinematics. Also supports contacts and loops.</p>
+
+<p><a href="https://github.com/Unity-Technologies/Unity-Robotics-Hub"><strong>Unity Robotics Hub</strong></a></p>
+<p>Central repository for open-source Unity packages, tutorials, and other resources demonstrating how to use Unity for robotics simulations. Includes new support for ROS integration.</p>
+
+<h3>Papers ###</h3>
+<ul>
+<li>[Optimization Based Controller Design and Implementation for the</li>
+</ul>
+<p>Atlas Robot in the DARPA Robotics Challenge Finals](https://www.cs.cmu.edu/~cga/drc/ICHR15<em>0025</em>MS.pdf)</p>
+
+<h3>Conferences ###</h3>
+<ul>
+<li><a href="http://ieeexplore.ieee.org/xpl/conhome.jsp?punumber=1040036">ACM/IEEE International Conference on Human Robot Interaction (HRI)</a></li>
+</ul>
+<ul>
+<li><a href="http://www.romansy2016.org/">CISM IFToMM Symposium on Robot Design, Dynamics and Control (RoManSy)</a></li>
+</ul>
+<ul>
+<li><a href="http://ieeexplore.ieee.org/servlet/opac?punumber=1000188">IEEE Conference on Decision and Controls (CDC)</a></li>
+</ul>
+<ul>
+<li><a href="http://www.rehabrobotics.org/">IEEE International Conference on Rehabilitation Robotics (ICORR)</a></li>
+</ul>
+<ul>
+<li><a href="http://www.ieee-ras.org/conferences-workshops/fully-sponsored/icra">IEEE International Conference on Robotics and Automation (ICRA)</a></li>
+</ul>
+<ul>
+<li><a href="http://www.iros.org/">IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)</a></li>
+</ul>
+<ul>
+<li><a href="http://ieeexplore.ieee.org/servlet/opac?punumber=1002042">IEEE-RAS International Conference on Humanoid Robots (Humanoids)</a></li>
+</ul>
+<ul>
+<li><a href="http://ifrr.org/isrr.php">International Symposium of Robotic Research (ISRR)</a></li>
+</ul>
+<ul>
+<li><a href="http://ifrr.org/iser.php">International Symposium of Experimental Robotics (ISER)</a></li>
+</ul>
+<ul>
+<li><a href="http://www.ieee-ras.org/conferences-workshops/technically-co-sponsored/robotica">Robotica</a></li>
+</ul>
+<ul>
+<li><a href="http://www.roboticsconference.org/">Robotics: Science and Systems Conference (RSS)</a></li>
+</ul>
+<ul>
+<li><a href="http://www.wafr.org/">The International Workshop on the Algorithmic Foundations of Robotics (WAFR)</a></li>
+</('ul', 0)>
+<h3>Journals ###</h3>
+<ul>
+<li><a href="http://www.springer.com/engineering/robotics/journal/10514">Autonomous Robots</a></li>
+</ul>
+<ul>
+<li><a href="http://iopscience.iop.org/journal/1748-3190">Bioinspiration & Biomimetics</a></li>
+</ul>
+<ul>
+<li><a href="http://journal.frontiersin.org/journal/robotics-and-ai">Frontiers in Robotics and AI</a></li>
+</ul>
+<ul>
+<li><a href="http://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=100">IEEE Robotics & Automation Magazine</a></li>
+</ul>
+<ul>
+<li><a href="http://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=4543165">IEEE Transactions on Haptics</a></li>
+</ul>
+<ul>
+<li><a href="http://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=8860">IEEE Transactions on Robotics</a></li>
+</ul>
+<ul>
+<li><a href="http://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=3516">IEEE/ASME Transactions on Mechatronics</a></li>
+</ul>
+<ul>
+<li><a href="http://www.springer.com/engineering/robotics/journal/12369">International Journal of Social Robotics</a></li>
+</ul>
+<ul>
+<li><a href="http://www.journalfieldrobotics.org/Home.html">Journal of Field Robotics</a></li>
+</ul>
+<ul>
+<li><a href="http://www.springer.com/engineering/robotics/journal/10846">Journal of Intelligent & Robotic Systems</a></li>
+</ul>
+<ul>
+<li><a href="http://www.journals.elsevier.com/mechatronics">Mechatronics</a></li>
+</ul>
+<ul>
+<li><a href="http://www.journals.elsevier.com/robotics-and-computer-integrated-manufacturing">Robotics and Computer-Integrated Manufacturing</a></li>
+</ul>
+<ul>
+<li><a href="http://www.journals.elsevier.com/robotics-and-autonomous-systems">Robotics and Autonomous Systems</a></li>
+</ul>
+<ul>
+<li><a href="http://www.ijrr.org/">The International Journal of Robotics Research</a></li>
+</('ul', 0)>
+<h3>Competitions ###</h3>
+<ul>
+<li><a href="http://www.icra2017.org/conference/robot-challenges">ICRA Robot Challenges</a></li>
+</ul>
+<ul>
+<li><a href="http://www.robotchallenge.org/">RobotChallenge</a></li>
+</ul>
+<ul>
+<li><a href="http://www.theroboticschallenge.org/">DARPA Robotics Challenge</a></li>
+</ul>
+<ul>
+<li><a href="http://www.euroc-project.eu/">European Robotics Challenges</a></li>
+</ul>
+<ul>
+<li><a href="http://www.firstinspires.org/robotics/frc">First Robotics Competition</a></li>
+</ul>
+<ul>
+<li><a href="https://www.vexrobotics.com/">VEX Robotics Competition</a></li>
+</ul>
+<ul>
+<li><a href="http://www.robocup.org/">RoboCup</a></li>
+</ul>
+<ul>
+<li><a href="https://junior.robocup.org/">RoboCupJunior</a></li>
+</ul>
+<ul>
+<li><a href="http://www.eurobot.org/">Eurobot</a> International Students Robotics Contest</li>
+</ul>
+<ul>
+<li><a href="https://www.robomaster.com/en-US">RoboMasters</a></li>
+</ul>
+<ul>
+<li><a href="http://www.robosoftca.eu/">RoboSoft, Grand Challenge</a></li>
+</ul>
+<ul>
+<li><a href="http://www.igvc.org/">Intelligent Ground Vehicle Competition</a></li>
+</ul>
+<ul>
+<li><a href="https://robotex.ee/en/">Robotex</a> The biggest robotics festival in Europe</li>
+</ul>
+<ul>
+<li><a href="https://www.firstlegoleague.org/">First Lego League</a></li>
+</('ul', 0)>
+<h3>Companies ###</h3>
+<ul>
+<li><a href="http://www.bostondynamics.com/">Boston Dynamics</a> robotics R&D company, creator of the state of the art <a href="https://www.youtube.com/watch?v=rVlhMGQgDkY">Atlas</a> and <a href="https://www.youtube.com/watch?v=M8YjvHYbZ9w">Spot</a> robots</li>
+</ul>
+<ul>
+<li><a href="http://www.irobot.com/">iRobot</a> manufacturer of the famous <a href="https://en.wikipedia.org/wiki/Roomba">Roomba</a> robotic vacuum cleaner</li>
+</ul>
+<ul>
+<li><a href="http://pal-robotics.com">PAL Robotics</a></li>
+</ul>
+<ul>
+<li><a href="https://www.aldebaran.com/en">Aldebaran Robotics</a> creator of the <a href="https://www.youtube.com/watch?v=nNbj2G3GmAo">NAO robot</a></li>
+</ul>
+<ul>
+<li><a href="http://new.abb.com/products/robotics">ABB Robotics</a> the largest manufacturer of industrial robots</li>
+</ul>
+<ul>
+<li><a href="http://www.kuka-robotics.com/en/">KUKA Robotics</a> major manufacturer of industrial robots targeted at factory automation</li>
+</ul>
+<ul>
+<li><a href="http://www.fanucamerica.com/">FANUC</a> industrial robots manufacturer with the biggest install base</li>
+</ul>
+<ul>
+<li><a href="http://www.rethinkrobotics.com/">Rethink Robotics</a> creator of the collaborative robot <a href="https://www.youtube.com/watch?v=fCML42boO8c">Baxter</a></li>
+</ul>
+<ul>
+<li><a href="http://www.dji.com/">DJI</a> industry leader in drones for both commerical and industrial needs.</li>
+</ul>
+<ul>
+<li><a href="http://www.theconstructsim.com/">The construct sim</a>  A cloud based tool for building modern, future-proof robot simulations.</li>
+</ul>
+<ul>
+<li><a href="http://www.fetchrobotics.com/">Fetch Robotics</a> A robotics startup in San Jose, CA building the future of e-commerce fulfillment and R&D robots.</li>
+</ul>
+<ul>
+<li><a href="https://www.festo.com/">Festo Robotics</a> Festo is known for making moving robots that move like animals such as the sea gull like SmartBird, jellyfish, butterflies and kangaroos.</li>
+</ul>
+<ul>
+<li><a href="https://www.neobotix-robots.com/homepage">Neobotix</a> manufacturer of industrial, research and as well as custom mobile robots. </li>
+</('ul', 0)>
+<h3>Misc ###</h3>
+<ul>
+<li><a href="http://spectrum.ieee.org/robotics">IEEE Spectrum Robotics</a> robotics section of the IEEE Spectrum magazine</li>
+</ul>
+<ul>
+<li><a href="https://www.technologyreview.com/c/robotics/">MIT Technology Review Robotics</a> robotics section of the MIT Technology Review magazine</li>
+</ul>
+<ul>
+<li><a href="https://www.reddit.com/r/robotics/">reddit robotics subreddit</a></li>
+</ul>
+<ul>
+<li><a href="http://roscon.ros.org/2015/">RosCON conference (video talks included)</a></li>
+</ul>
+<ul>
+<li><a href="http://education.rec.ri.cmu.edu/">Carnegie Mellon Robotics Academy</a></li>
+</ul>
+<ul>
+<li><a href="http://letsmakerobots.com/">Let's Make Robots</a></li>
+</ul>
+<ul>
+<li><a href="https://www.quora.com/How-do-I-learn-robotics">How do I learn Robotics?</a></li>
+</ul>
+<ul>
+<li><a href="http://www.drgraeme.net/DrGraeme-free-NXT-G-tutorials/ChV4.htm">Free NXT Lego MindStorms NXT-G code tutorials</a></li>
+</ul>
+<ul>
+<li><a href="https://robotics.stackexchange.com">StackExachange Robotics community</a></li>
+</ul>
+<ul>
+<li><a href="http://www.intorobotics.com/47-programmable-robotic-kits/">47 Programmable robotic kits</a></li>
+</ul>
+<ul>
+<li><a href="https://linorobot.org/">Linorobot</a> A suite of DIY ROS compatible robots</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mithi/hexapod">Hexapod Robot Simulator</a> - Solve and visualize hexapod robot inverse kinematics and gaits in the web</li>
+</ul>
+<ul>
+<li><a href="https://github.com/AtsushiSakai/PythonRobotics">PythonRobotics</a> - Implementations of various robotics algorithms in python</li>
+</('ul', 0)>
+<h3>Related awesome lists ###</h3>
+<ul>
+<li><a href="https://github.com/owainlewis/awesome-artificial-intelligence">Awesome Artificial Intelligence</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/jbhuang0604/awesome-computer-vision">Awesome Computer Vision</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/josephmisiti/awesome-machine-learning">Awesome Machine Learning</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/ChristosChristofidis/awesome-deep-learning">Awesome Deep Learning</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/kjw0612/awesome-deep-vision">Awesome Deep Vision</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/fkromer/awesome-gazebo">Awesome Gazebo</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/aikorea/awesome-rl/">Awesome Reinforcement Learning</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/ahundt/awesome-robotics">Awesome Robotics</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/jslee02/awesome-robotics-libraries">Awesome Robotics Libraries</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/fkromer/awesome-ros2">Awesome ROS2</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/RoboCupJuniorTC/awesome-rcj-soccer">Awesome RoboCupJunior Soccer</a></li>
+</ul>
+</body>
+</html>

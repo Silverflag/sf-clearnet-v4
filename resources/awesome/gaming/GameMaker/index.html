@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameMaker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>GameMaker</h1>
+
+<p><strong>Repository:</strong> https://github.com/bytecauldron/awesome-gamemaker#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<p align="center">
+    <a href="https://gamemaker.io/"><img src="https://github.com/bytecauldron/awesome-gamemaker/raw/main/images/banner.png" /></a>
+</p>
+
+<h1>Awesome GameMaker <a href="https://awesome.re/badge.svg"><img src="https://awesome.re" alt="Awesome</a>"> <a href="https://img.shields.io/badge/Made%20with-GameMaker-000000.svg?style=flat&logo=data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAMAAAAolt3jAAAAZlBMVEX%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2BrG8stAAAAIXRSTlMABg0OFBkfcn1%2Bf4CBgoOFhoeIiouWmNDa5ebp8PX2%2B%2F6o6Vq%2BAAAAY0lEQVR42k2OWQ6AIAwFn%2BIOioobrnD%2FS4o0EeanmQxNAdErRFTWtsFq6%2BiiZozz0CSnTjYBwo0RkF8DWDLf51Ni9K%2FYdq0Fy3KAfzk97M7goK1F%2F4rGH9Kk1OlboQtEDIrmC%2BU3CVxTr%2FRMAAAAAElFTkSuQmCC"><img src="https://www.yoyogames.com/gamemaker" alt="Made with GameMaker</a>"> <a href="https://github.com/bytecauldron/awesome-gamemaker/actions/workflows/links.yml/badge.svg"><img src="https://github.com/bytecauldron/awesome-gamemaker/actions/workflows/links.yml" alt="Links</a>"></h1>
+
+<blockquote>
+<p>A curated list of awesome libraries, snippets, guides, and projects for GameMaker. 😎</p>
+</blockquote>
+
+<p><a href="https://gamemaker.io/">GameMaker</a> is a user-friendly, cross-platform game engine by YoYo Games that allows both beginner and advanced game developers to create 2D and 3D games for desktop, HTML5, and console platforms.</p>
+
+<p>What kind of games can you make in GameMaker? <a href="https://steamdb.info/tech/Engine/GameMaker/">Check out this list.</a></p>
+
+<h2>Contents</h2>
+
+<ul>
+<li><a href="#getting-started">Getting Started</a></li>
+</ul>
+<ul>
+<li><a href="#utilities">Utilities</a></li>
+</ul>
+<ul>
+<li><a href="#debugging">Debugging</a></li>
+</ul>
+<ul>
+<li><a href="#input-handling">Input Handling</a></li>
+</ul>
+<ul>
+<li><a href="#user-interface">User Interface</a></li>
+</ul>
+<ul>
+<li><a href="#localization">Localization</a></li>
+</ul>
+<ul>
+<li><a href="#physics">Physics</a></li>
+</ul>
+<ul>
+<li><a href="#sprites">Sprites</a></li>
+</ul>
+<ul>
+<li><a href="#audio">Audio</a></li>
+</ul>
+<ul>
+<li><a href="#levels">Levels</a></li>
+</ul>
+<ul>
+<li><a href="#particles">Particles</a></li>
+</ul>
+<ul>
+<li><a href="#lighting">Lighting</a></li>
+</ul>
+<ul>
+<li><a href="#shaders">Shaders</a></li>
+</ul>
+<ul>
+<li><a href="#3d">3D</a></li>
+</ul>
+<ul>
+<li><a href="#sprite-stacking">Sprite Stacking</a></li>
+</ul>
+<ul>
+<li><a href="#networking">Networking</a></li>
+</ul>
+<ul>
+<li><a href="#integrations">Integrations</a></li>
+</ul>
+<ul>
+<li><a href="#camera">Camera</a></li>
+</ul>
+<ul>
+<li><a href="#sequences">Sequences</a></li>
+</ul>
+<ul>
+<li><a href="#state-machines">State Machines</a></li>
+</ul>
+<ul>
+<li><a href="#pathing">Pathing</a></li>
+</ul>
+<ul>
+<li><a href="#useful-extras">Useful Extras</a></li>
+</ul>
+<ul>
+<li><a href="#blogs">Blogs</a></li>
+</ul>
+<ul>
+<li><a href="#youtube">YouTube</a></li>
+</ul>
+<ul>
+<li><a href="#community">Community</a></li>
+</ul>
+<ul>
+<li><a href="#special-thanks">Special Thanks</a></li>
+</('ul', 0)>
+<h2>Getting Started</h2>
+
+<ul>
+<li><a href="https://manual.gamemaker.io/">GameMaker Manual</a></li>
+</ul>
+<ul>
+<li><a href="https://gms.yoyogames.com/ReleaseNotes.html">GameMaker Release Notes</a></li>
+</ul>
+<ul>
+<li><a href="https://marketplace.gamemaker.io/">GameMaker Marketplace</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=nBCDzE9MDbk&list=PLPRT_JORnIur4v19PHXCtJ5P05vaokFdP">Beginner GameMaker Tutorials</a> - Tutorials from Shaun Spalding. A comprehensive introduction to basic features of the IDE. Highly recommended to check out the full playlist if you're a complete beginner. !<a href="https://github.com/bytecauldron/awesome-gamemaker/raw/main/icons/youtube.png">YouTube</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=n8-MuIuOQFE&list=PL_hT--4HOvrfuDcYrTufdpgwoALAczPR2">Advanced GameMaker Tutorials</a> - Tutorials from DragoniteSpam that dive into more advanced topics related to the GML language. They also have comprehensive 3D and shader introduction videos. !<a href="https://github.com/bytecauldron/awesome-gamemaker/raw/main/icons/youtube.png">YouTube</a></li>
+</('ul', 0)>
+<h3>Recommendations</h3>
+
+<ul>
+<li>If you already have programming experience, learn the GameMaker Language (GML) instead of the Visual (Drag and Drop) feature.</li>
+</ul>
+<ul>
+<li>For pixel art, <a href="https://www.aseprite.org/">Aseprite</a> is a popular alternative to the native sprite editor. 💸</li>
+<ul>
+<li><a href="https://github.com/aseprite/aseprite">Aseprite's source code</a> can be compiled for free.</li>
+</ul>
+</ul>
+<ul>
+<li>Don't be afraid to use other developer libraries. A lot of them are free for a reason. Just be mindful of the license.</li>
+</ul>
+<ul>
+<li>Updates to the IDE and runtime can break your game (like syntax changes to GML). If you are working in a group, make sure you are running on the same version of GMS and only update when given a fair warning. You can reinstall previous versions of your IDE at the GMS download page.</li>
+</ul>
+<ul>
+<li>Unless your game requires complex physics interactions, it's generally advised to avoid GameMaker's built-in physics system.</li>
+</ul>
+<ul>
+<li>Schedule routine backups for projects. If you are dealing with larger media files in your repo, try <a href="https://git-lfs.github.com/">Git LFS</a>.</li>
+</('ul', 0)>
+<h2>Utilities</h2>
+
+<ul>
+<li><a href="https://github.com/gm-core">gm-core</a> - Foundational utility suite and a great starting point for new GameMaker projects. Comes with quality of life methods, networking tools, testing framework, delta timing, and more.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Hyomoto/FAST">FAST</a> - Flexible Assistant Toolkit. Similar to gm-core but comes with input and resolution handling.</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/@bscotch/stitch">Stitch</a> - Pipeline Development Kit. Includes cross-project imports, batch-creating/updating sprites and sounds, texture page management, and more. Tested on Windows only.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/DragoniteSpam/DDDEditorGMS2">DDDEditor</a> - General purpose game editor.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/JujuAdams/handytools/">handytools</a> - A collection of Juju's libraries in one convenient project.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/babaganosch/GameMakerScaffolding">GameMaker Scaffolding</a> - Another cool all-encompassing template with a focus on building low-res, tile-based games.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/JujuAdams/iota">Iota</a> - Lightweight timestep library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Lojemiru/Stopwatch">Stopwatch</a> - GameMaker alarm replacement.</li>
+</ul>
+<ul>
+<li><a href="https://mors-games.itch.io/wtimer">wTimer</a> - Robust alternative for alarms.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/colmeye/FrogAlarms">FrogAlarm</a> - Another easy alternative to GameMaker alarms.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kemonologic/fuwafuwa">fuwafuwa</a> - Easy-to-use timer system.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/nommiin/Timers">Timer</a> - Timer methods based on setTimeout and setInterval from JS.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/JulianDicken/Broadcast">Broadcast</a> - Event handling library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/VitorEstevam/polarca">Polarca</a> - Interpolation functions.</li>
+</ul>
+<ul>
+<li><a href="https://pixelatedpope.itch.io/twerp">Twerp</a> - Easing function similar to lerp().</li>
+</ul>
+<ul>
+<li><a href="https://github.com/JujuAdams/Coroutines">Coroutines</a> - Asynchronous functions for GameMaker.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Mtax-Development/GML-OOP">GML-OOP</a> - A constructor library for operating the primary functionalities of GameMaker.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Nikko-the-cat/GML-Classes">GML-Classes</a> - Another project that adds OOP functionality to GameMaker.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/GameMakerDiscord/Map.gml">Map</a> - Hash table implementations.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/JujuAdams/matrices">Matrices</a> - A collection of matrix handling scripts.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/daikon-games/gm-stream">gm-stream</a> - Data structure manipulation.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/YAL-GameMaker/Promise.gml">Promises</a> - An adaptation of JavaScript Promises.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/DatZach/Destructors">Destructors</a> - Allows you to use ds_* types such as lists and maps inside of structs.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/JujuAdams/SNAP">SNAP</a> - Easy data format saving and loading. Please note that newer versions of GameMaker contain <code>json<em>parse</code> and <code>json</em>stringify</code>. However, if you are converting csv, ini, xml, etc, you may find this very useful.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/JujuAdams/Dynamo">Dynamo</a> - Dynamic data loader.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tabularelf/lwo">LWO</a> - Lightweight objects using structs.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/JujuAdams/Gumshoe">Gumshoe</a> - Simple deep file search function.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/AlubJ/Lock-And-Key">Lock And Key</a> - String and file encryption.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/adam-rumpf/game-maker-scripts">Mathematical Scripts</a> - A collection of math scripts.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/daikon-games/gm-seedpod">Seedpod</a> - A collection of scripts to improve the GML programming experience.</li>
+</ul>
+<ul>
+<li><a href="https://trixelized.itch.io/trixscript">Trixscript</a> - Juices up your game with useful functions.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/blueburncz/CoreExtension">CoreExtension</a> - A collection of CC0 programming libraries. (archived)</li>
+</ul>
+<ul>
+<li><a href="https://github.com/vphoton/FreeGMScripts">Voxeledphoton's FreeGMScripts</a> - Additional GML helper functions. Some may be out of date with 2.3+ syntax.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/KeeVeeGames/foreach.gml">ForEach</a> - Adds a foreach implementation for arrays, ds<em>lists, ds</em>maps, ds<em>stacks, ds</em>queues, ds_priorities and structs.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/KeeVeeGames/DeepCopy.gml">DeepCopy</a> - Deep clone class instances / constructed structs, anonymous structs and arrays nested in any order!</li>
+</ul>
+<ul>
+<li><a href="https://avis.itch.io/motion-scripts">Motion Scripts</a> - Provides replacement methods for built-in motion variables.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/JujuAdams/Cottonwool">Cottonwool</a> - Safe surfaces without memory leaks.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tabularelf/Canvas">Canvas</a> - Another great solution for surface management.</li>
+</ul>
+<ul>
+<li><a href="https://yellowafterlife.itch.io/gamemaker-zlib">zlib functions</a> - Simple compression/decompression functions.</li>
+</ul>
+<ul>
+<li><a href="https://yellowafterlife.itch.io/gamemaker-window-taskbar">Window Taskbar</a> - Windows only. Flash the game window border and/or its taskbar button.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/YAL-GameMaker/GMSDLL">GMSDLL</a> - A template project for building DLLs for GameMaker.</li>
+</ul>
+<ul>
+<li><a href="https://samuel-venable.itch.io/gamemaker-extension-collection">Extension Collection</a> - A suite of various extensions.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/DatZach/GMLodash">GMLodash</a> - Functional programming in GML.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mstop4/auto-framer">Autoframer</a> - Automatically handles resizing the game view across different display and window sizes.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/YAL-GameMaker/gameframe">gameframe</a> - Custom window caption and border for Windows.</li>
+</ul>
+<ul>
+<li><a href="https://xgasoft.itch.io/gmlp">GML+</a> - A script collection with a goal to "fill the gaps" in GML. 💸</li>
+</ul>
+<ul>
+<li><a href="https://yellowafterlife.itch.io/gamemaker-live">GMLive</a> - Livecoding / interactive programming. 💸</li>
+</ul>
+<ul>
+<li><a href="https://github.com/YellowAfterlife/GMEdit">GMEdit</a> - Code editor to use in conjunction with GameMaker.</li>
+</ul>
+<ul>
+<li><a href="https://sahaun.itch.io/yyp-maker">YYP Maker</a> - Makes <code>.yyp</code> files for you.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/GameMakerDiscord/Rubber">Rubber</a> - Compile GameMaker projects via the command line. Here's a <a href="https://www.patreon.com/posts/how-to-build-36556955">great guide</a> on how to use it.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Grisgram/gml-highscorer">gml-highscorer</a> - Highscore and trophy system.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/stoozey/SSave">SSave</a> - Simple file saving system.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/blueburncz/GMD3D11">GMD3D11</a> - A DLL for interfacing with Windows Direct3D.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/TimVN/GMTimeLine">GMTimeLine</a> - A pure code alternative to GameMaker timelines.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/katsaii/catspeak-lang">Catspeak</a> - Cross-platform programming language for modding support.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/DragoniteSpam/GMBenchmark">GMBenchmark</a> - A tool to benchmark GML code.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/benal20/Agenda.gml">Agenda</a> - Schedule and delay the execution of callbacks.</li>
+</ul>
+<ul>
+<li><a href="https://manta-ray.itch.io/gmsnip">GMSnip</a> - Experimental tool to define unlimited code snippets in the IDE.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/AlubJ/Airkiver">Airkiver</a> - Game file archive tool.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/KeeVeeGames/OKColor.gml">OKColor</a> - An okay color manager for implementing OKLab/OKLCH colors.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/KeeVeeGames/Exception.gml">Exception</a> - A base class for custom exceptions.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/KeeVeeGames/ArrayList.gml">ArrayList</a> - The most complete list class. Garbage collected, fast sort function, [] accessor and referencing as an array.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/SpikeHD/gm-sysinfo">GM Sysinfo</a> - Cross-platform extension for getting system information and resource usage.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/LAGameStudio/BSONGML">BSONGML</a> - Save and load GML structured data in binary files, skirting memory and performance concerns associated with loading JSON as a string.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tinkerer-red/GML-Multiprocessing">GML-Multiprocessing</a> - A proof of concept for multiprocessing.</li>
+</('ul', 0)>
+<h2>Debugging</h2>
+
+<ul>
+<li><a href="https://github.com/daikon-games/rt-shell">rt-shell</a> - Easy to use in-game shell. Create your own commands, command meta data, command suggestions, history, etc.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/bscotch/olympus#readme">Olympus</a> - Testing Framework.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/bfrymire/crispy">Crispy</a> - Unit testing in GameMaker.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/JujuAdams/Snitch">Snitch</a> - Crash and logging system.</li>
+</ul>
+<ul>
+<li><a href="https://mulfok.itch.io/gamemaker-deerlog">DeerLog</a> - Small log writer.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pmarincak/gms2-test">gms2-test</a> - Unit testing framework.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/nommiin/meta">Meta</a> - Runtime asset inspector.</li>
+</ul>
+<ul>
+<li><a href="https://dragonite.itch.io/fps-speedometer-for-gamemaker">FPS Speedometer</a> - Pretty framerate display.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/imlazyeye/duck">Duck</a> - A fast GML analyzer to enforce code styling and detect errors.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Pizzaandy/Gobo/">Gobo</a> - An opinionated code formatter for GML.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/shdwcat/Inspectron">Inspectron</a> - A fluent API for easily creating GameMaker debug views.</li>
+</('ul', 0)>
+<h2>Input Handling</h2>
+
+<ul>
+<li><a href="https://github.com/JujuAdams/input">Input</a> - No nonsense gamepad/keyboard library.</li>
+</ul>
+<ul>
+<li><a href="https://www.reddit.com/r/gamemaker/comments/icoh6m/xeroinput<em>gms23</em>input_handler/">XeroInput</a> - Another library to handle multiple inputs for a single action.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/LAGameStudio/InputCandy">InputCandy</a> - Similar to Input as it acts as a wrapper for SDL, with actions and signalling, but also provides testing, on-screen diagnostics, and some other UI components related to peripherals, as well as pre-built end-user configuration menus that can be easily restyled.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mrdaneeyul/good-vibes">Good Vibes</a> - Device vibration.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/YAL-GameMaker/window<em>mouse</em>queue">Mouse Queue</a> - Tracks the Windows mouse pointer with high precision.</li>
+</ul>
+<ul>
+<li><a href="https://yellowafterlife.itch.io/gamemaker-native-cursors">Native Cursors</a> - System-level custom cursors. 💸</li>
+</('ul', 0)>
+<h2>User Interface</h2>
+
+<ul>
+<li><a href="https://github.com/JujuAdams/scribble">Scribble</a> - Efficient multi-effects text renderer.</li>
+</ul>
+<ul>
+<li><a href="https://pixelatedpope.itch.io/scripture">Scripture</a> - Another easy to use, highly compatible text renderer.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/JujuAdams/chatterbox">Chatterbox</a> - Narrative scripting tool.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/glitchroy/textboxy">Textboxy</a> - Simple textboxes.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/FaultyFunctions/Crochet">Crochet</a> - An interactive dialogue editor for writers and programmers.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/babaganosch/NotificationSystem">NotificationSystem</a> - Notifications in GameMaker.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/shdwcat/YUI">YUI</a> - A UI system with live reloading, template system, data binding, and a drag and drop feature.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/JujuAdams/Guido">Guido</a> - Simple immediate mode GUI framework.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/AlertStudios/GMUI-Framework">GMUI-Framework</a> - A pure GML solution to structure and control your menus, drawing parallels to .NET UI.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/nabilatsoulcade/GMS2-UI-Library">GMS2-UI-Library</a> - A Library Full of useful scripts for implementing your UI designs in GameMaker.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/DragoniteSpam/Emu">Emu UI</a> - Common UI elements (text input, checkboxes, radio buttons, dialog boxes, etc).</li>
+</ul>
+<ul>
+<li><a href="https://pkgames.itch.io/easy-and-fast-menus-for-gms-23">Easy And Fast Menu</a> - Simple implementation to have a menu up and running in seconds. Seems like a great fit if you're not looking for a bigger solution like GMUI.</li>
+</ul>
+<ul>
+<li><a href="https://jasontomlee.itch.io/pause-menu-gamemaker-1-2">Pause Menu</a> - Another smaller implementation but has a cool animation between menu options.</li>
+</ul>
+<ul>
+<li><a href="https://dragonite.itch.io/magpie">Magpie</a> - Generic Inventory System.</li>
+</ul>
+<ul>
+<li><a href="https://rousr.itch.io/imguigml">ImGuiGML</a> - DLL/GML wrapper of Dear ImGui.</li>
+</ul>
+<ul>
+<li><a href="https://niris.itch.io/gui-framework">GUI Framework</a> - GUI implementation from Niris Games.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=1ITZOrI2qkA&list=PLSFMekK0JFgx2vmcCnttxxhrNVTjUB8R1">Menu Tutorial</a> - FriendlyCosmonaut. !<a href="https://github.com/bytecauldron/awesome-gamemaker/raw/main/icons/youtube.png">YouTube</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=RbBgE3cUShc">Smart Clickable GUI</a> - Pixelated Pope. !<a href="https://github.com/bytecauldron/awesome-gamemaker/raw/main/icons/youtube.png">YouTube</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/TandyRum1024/zitk">zitk</a> - Another interesting, Dear ImGui-inspired GUI toolkit. In development, but worth keeping an eye on.</li>
+</ul>
+<ul>
+<li><a href="https://manta-ray.itch.io/gooey">gooey</a> - Sprite-based UI Library for GameMaker LTS.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/evolutionleo/SimpleUI">SimpleUI</a> - Minimalistic UI framework.</li>
+</('ul', 0)>
+<h2>Localization</h2>
+
+<ul>
+<li><a href="https://github.com/daikon-games/polyglot">polyglot</a> - Localization library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/CreativeHandOficial/gm-i18n">gm-i18n</a> - Internationalization of texts simply and quickly, using JSON files.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tabularelf/lexicon">lexicon</a> - Another localization solution focused on simplifying implementation.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/DragoniteSpam/GMLocalize2">GMLocalize</a> - Not a full localization solution. Extracts text strings for localization from a GameMaker Studio 2 project and saves it to a JSON file.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/AntonBergaker/small<em>pp</em>localization_tool">Small Pentapop Localization Tool</a> - Similar export tool to GMLocalize but exports to a csv.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pmarincak/gms2-mofile">gms2-mofile</a> - Mofile reader used for localization.</li>
+</('ul', 0)>
+<h2>Physics</h2>
+
+<ul>
+<li><a href="https://github.com/Lojemiru/Loj-Hadron-Collider">Loj Hadron Collider</a> - A robust, pixel-perfect collision engine.</li>
+</ul>
+<ul>
+<li><a href="https://forum.yoyogames.com/index.php?threads/on-slopes-and-grids-subpixel-perfect-topdown-movement-and-collision-line-without-objects.4073/">On Slopes and Grids</a> - A tutorial to implement 45° slopes.</li>
+</ul>
+<ul>
+<li><a href="https://benal.itch.io/basic-modern-platforming-system">GMS2 Platforming System</a> - GameMaker implementation by Ben Allen and an expansion on Shaun Spalding's original 1.4 platformer tutorial.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tonystr/Inverse-Kinematics-Extension-for-Gamemaker">Inverse Kinematics Extension</a> - A library for working with inverse kinematics.</li>
+</ul>
+<ul>
+<li><a href="https://jamjamteam.itch.io/verlet-integration-gamemake-studio-2">Verlet Integration Library</a> - Verlet integration by Sarek Lambert.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tabularelf/GMVerlet-Integration">GMVerlet-Integration</a> - Verlet integration example used for visuals.</li>
+</ul>
+<ul>
+<li><a href="https://pixelatedpope.itch.io/tdmc/devlog/156556/converting-tdmc-to-use-tiles">Top-Down Movement & Collision</a> - Robust object-based collision system from Pixelated Pope.</li>
+</('ul', 0)>
+<h2>Sprites</h2>
+
+<ul>
+<li><a href="https://github.com/angelwire/AESnips">AESnips</a> - A sprite playback system.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/squircledev/phgen">phgen</a> - Placeholder asset generation.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/NuxiiGit/disarm">Disarm</a> - A spriter skeletal animation at runtime.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/bscotch/stitch/tree/develop/packages/spritely">Spritely</a> - Image correction and cleanup for 2D video game sprites.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/JujuAdams/Pixel-Art-Upscaling">PixelUpscaler</a> - Pixel art upscaling shader for awkward resolutions for GameMaker.</li>
+</ul>
+<ul>
+<li><a href="https://sahaun.itch.io/asesync">ASESync</a> - Automatically syncs aesprite files in GameMaker.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/imissmyfriends/conveyorbelt">conveyorbelt</a> - Similar to ASESync. Export Aesprite files to GameMaker sprites.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tabularelf/Collage">Collage</a> - Texture page builder and image manager. Mimics GameMaker's texture page packing while offering higher flexibility.</li>
+</('ul', 0)>
+<h2>Audio</h2>
+
+<ul>
+<li><a href="https://github.com/YoYoGames/GMEXT-FMOD">GMEXT-FMOD</a> - Official support for FMOD in GameMaker.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Nikkilae/fml">FML</a> - GameMaker bindings for the FMOD Studio API.</li>
+</ul>
+<ul>
+<li><a href="https://madwolf-studios.itch.io/audio-echodelay-effect-for-gamemaker-studio-2">Echo/Delay Effect</a> - Optimized delay effect. 💸</li>
+</ul>
+<ul>
+<li><a href="https://github.com/nkrapivin/wavload">wavload</a> - Demonstrates how to externally load .wav files.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tabularelf/audioExt">audioExt</a> - Sound External Loader/Unloader Manager.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/NuxiiGit/ExternalAudio">ExternalAudio</a> - Load external .wav files at runtime.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Andre-404/Phonix/">Phonix</a> - Compact audio system. Great for dynamic music!</li>
+</ul>
+<ul>
+<li><a href="https://github.com/JujuAdams/Vinyl">Vinyl</a> - Live updating audio system.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/WangleLine/LineAudio">LineAudio</a> - Audio helper functions.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/gl326/bard-audio">Bard</a> - An engine for desiging and implementing good audio in GameMaker. Updated to make use of the more recent GameMaker audio effects.</li>
+</('ul', 0)>
+<h2>Levels</h2>
+
+<ul>
+<li><a href="https://shynif.itch.io/ldtk-to-gms">LDtk to GMS</a> - LDtk Importer.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/evolutionleo/LDtkParser">LDtkParser</a> - Advanced LDtk Importer.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/heygleeson/GM-RoomInspector">Room Data Inspector</a> - Collects room data and stores it into a JSON for later use.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/BlaXun/Random-Dungeon-Generator-GMS-2.3">Random Dungeon Generator</a> - Combines user-defined chambers to create a dungeon.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/GameMakerDiscord/random-level-gen-gms2">Random Level Generator</a> - A random level generation example (similar to Nuclear Throne) using GameMaker.</li>
+</ul>
+<ul>
+<li><a href="https://quadolorgames.itch.io/wfc-gml-demo">Wave Function Collapse</a> - Generates a random tile map but not production ready in its current state.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/niksudan/gms2-destructible-terrain">Destructible Terrain</a> - An example of collidable, destructible terrain in GameMaker Studio using surfaces and grids.</li>
+</ul>
+<ul>
+<li><a href="https://alessiogamedev.itch.io/gms-cellular-automata-algorithm">Cellular Automata Caves</a> - Generates huge caves in a few hundred milliseconds.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/glebtsereteli/GMRoomLoader">GMRoomLoader</a> - Streamlined room loading at runtime. Great for reusable room prefabs and procedural generation.</li>
+</('ul', 0)>
+<h2>Particles</h2>
+
+<ul>
+<li><a href="https://gamemakercasts.itch.io/particle-editor">Particle Editor</a> - Create particles with an easy UI and export into GML code.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/GamemakerCasts/particles">Particles Wrapper</a> - A simplistic particle system wrapper that is designed to make creating particles fun and easy.</li>
+</ul>
+<ul>
+<li><a href="https://limekys.itch.io/advanced-particle-system">Advanced Particles</a> - A particle implementation that comes with it's own delta timing methods.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Delfos1/Pulse">Pulse</a> - A library to create more complex particle emitters, systems and particles.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/FoxyOfJungle/Burrn">Burrn</a> - Built-in particle system that uses the particle asset built into the IDE.</li>
+</('ul', 0)>
+<h2>Lighting</h2>
+
+<ul>
+<li><a href="https://github.com/JujuAdams/Bulb">Bulb</a> - 2D lighting and shadows.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/borup3/Lighting-System-2D">Lighting System 2D</a> - Requires GameMaker 2.2+ according to the repo.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/bilouw/Gamemaker-Lighting-Engine">GameMaker Lighting Engine</a> - Tile-based Lighting Engine that projects shadows.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/playlist?list=PLYVea5brHS8YHECGPoEp4_gWU-k6nWzUy">Lighting Systems</a> - Very fast dynamic 2D lighting implementation from GrizzliusMaximus using shadow casting. !<a href="https://github.com/bytecauldron/awesome-gamemaker/raw/main/icons/youtube.png">YouTube</a></li>
+</ul>
+<ul>
+<li><a href="https://foxyofjungle.itch.io/crystal-2d-lighting-engine">Crystal</a> - Complete and efficient 2D lighting solution. 💸</li>
+</('ul', 0)>
+<h2>Shaders</h2>
+
+<ul>
+<li><a href="https://short-bread.itch.io/transfx">TransFX</a> - Transition Library.</li>
+</ul>
+<ul>
+<li><a href="https://foxyofjungle.itch.io/post-processing-fx">Post-Processing FX</a> - 50+ high-quality, customizable effects. 💸</li>
+</ul>
+<ul>
+<li><a href="https://zikbakguru.itch.io/bjrtfx">BJRTFX</a> - Zik's CRT Utility Shader.</li>
+</ul>
+<ul>
+<li><a href="https://odditica.itch.io/bktglitch">bktGlitch</a> - Glitch shader.</li>
+</ul>
+<ul>
+<li><a href="https://gizmo199.itch.io/horri-fi">H O R R I - F I</a> - VHS Shader.</li>
+</ul>
+<ul>
+<li><a href="https://pixelatedpope.itch.io/depth-sorted-silhouette-example">Depth Sorted Sillouettes</a> - Example project to demonstrate shader-based depth sorting sillouettes. Tested on PC, Mac, HTML5, and Android.</li>
+</ul>
+<ul>
+<li><a href="https://gmshaders.com/">GMShaders.com</a> - Shader tutorials from Xor. Originally hosted at "xorshaders.com".</li>
+</ul>
+<ul>
+<li><a href="https://github.com/XorDev/1PassBlur/wiki">1PassBlur</a> - Blur Shader with adjustable radius.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/XorDev/Bokeh/wiki">Bokeh Blur</a> - Extension of the 1PassBlur which provides a different look. Similar to a real lens blur. Although it's much slower than 1Pass or Dual-Kawase.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/XorDev/Dual-Kawase/wiki">Dual-Kawase</a> - Blur Shader that limits radius but is very efficient.</li>
+</ul>
+<ul>
+<li><a href="https://xordev.itch.io/halftone">Xor's Halftone</a> - A wonderful, versitile halftone shader. Lots of tweakable settings.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/XorDev/GMS-Voronoi-Pixels">Voronoi</a> - Sampled pixels on a Voronoi diagram.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/XorDev/Fire-Fun/wiki">Fire-Fun</a> - Some fun magic fireballs.</li>
+</ul>
+<ul>
+<li><a href="https://terohannula.itch.io/jump-flooding-algorithm">Jump Flooding</a> - Jump Flooding Algorithm for GameMaker made with shaders.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Grisgram/gml-outline-shader-drawer">Outline Shader</a> - Outline shader.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Lojemiru/Chameleon">Chameleon</a> - Palette Swapper.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/GameMakerDiscord/Xpanda">Xpanda</a> - Include code from external files in your shaders.</li>
+</ul>
+<ul>
+<li><a href="https://iarri.github.io/Shadertoy2GM/">Shadertoy to GameMaker</a> - Convert shadertoy.com GLSL shaders to run in GameMaker.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=ch4BYqkL1w8&list=PL0kTSdIvQNCNE-BDKOlYu628AalMmXy_P">Shader Tutorials</a> - Gaming Reverends. !<a href="https://github.com/bytecauldron/awesome-gamemaker/raw/main/icons/youtube.png">YouTube</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=a4S7LXx6-sQ&list=PL_hT--4HOvrdkihto8Xu7hhp1-5Gj8zsa">Shader Tutorials</a> - DragoniteSpam. !<a href="https://github.com/bytecauldron/awesome-gamemaker/raw/main/icons/youtube.png">YouTube</a></li>
+</('ul', 0)>
+<h2>3D</h2>
+
+<ul>
+<li><a href="https://github.com/YoYoGames/3D-2D">3D-2D</a> - Official tool to turn 3D models into 2D sprites.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/blueburn-cz/BBMOD">BBMOD</a> - 3D Rendering Solution. Comes with several modules to import obj, 3D camera setup, integration with ColMesh, and more.</li>
+</ul>
+<ul>
+<li><a href="https://forum.yoyogames.com/index.php?threads/colmesh-3d-collisions-made-easy.82765/">ColMesh</a> - 3D Collision Library from TheSnidr.</li>
+</ul>
+<ul>
+<li><a href="https://cdlegasse.itch.io/ozarq-bsp-4-gms">BSP 4 GMS</a> - Import BSP files into GameMaker. Currently just a demo but worth keeping an eye on.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/JujuAdams/dotobj">dotobj</a> - Lightweight .obj/.mtl 3D model loader written in native GML.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/cicadian/Bronze-Box">Bronze Box</a> - Example of how to build 3D world models from a 2D grid.</li>
+</ul>
+<ul>
+<li><a href="https://gizmo199.itch.io/camera3d">Camera3D</a> - Simple 3D camera setup.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/blender-to-gmstudio">Blender to GameMaker</a> - A collection of scripts to export and import Blender models to and from GameMaker.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Dreamer13sq/DmrVBM-blender-to-gms2">DmrVBM</a> - Import/Export tools to load vertex buffer data out of Blender and into GMS.</li>
+</ul>
+<ul>
+<li><a href="https://dragonite.itch.io/penguin">Penguin</a> - 3D model conversion tool.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/XorDev/ThreeMiceInaTrenchcoat">Three Mice In a Trench Coat</a> - Source for a GameMaker 3D game.</li>
+</ul>
+<ul>
+<li><a href="https://marketplace.yoyogames.com/assets/7299/spart-3d-particle-system">sPart</a> - 3D Particle System from TheSnidr.</li>
+</ul>
+<ul>
+<li><a href="https://dragonite.itch.io/terrain">Terrain Editor</a> - Terrain editor. Exports to gm models, obj, or vertex buffers.</li>
+</ul>
+<ul>
+<li><a href="https://dragonite.itch.io/snowy-snow">Snowy Snow</a> - 3D Snow Shader.</li>
+</ul>
+<ul>
+<li><a href="https://danieldavis.itch.io/ddg-point-light-shader-system">3D Fragment Point Lights</a> - 3D point lights using shaders. 💸</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=ojfN--tdSNM&list=PL_hT--4HOvrcML9uqHe4fwBVTm650Vy3V">3D GameMaker Playlist</a> - DragoniteSpam. !<a href="https://github.com/bytecauldron/awesome-gamemaker/raw/main/icons/youtube.png">YouTube</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=o7kjtTEMpeU&list=PL<em>hT--4HOvrf</em>VYo26LNl3zN5uwfuC3CC">3D Collisions Playlist</a> - DragoniteSpam. !<a href="https://github.com/bytecauldron/awesome-gamemaker/raw/main/icons/youtube.png">YouTube</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=knfAZbJJKNY&list=PL<em>hT--4HOvrf</em>CJSA7fVU1tkjGVv5Sq2t">3D Optimization Playlist</a> - DragoniteSpam. !<a href="https://github.com/bytecauldron/awesome-gamemaker/raw/main/icons/youtube.png">YouTube</a></li>
+</('ul', 0)>
+<h2>Sprite Stacking</h2>
+
+<ul>
+<li><a href="https://medium.com/@avsnoopy/beginners-guide-to-sprite-stacking-in-gamemaker-studio-2-and-magica-voxel-part-1-f7a1394569c0">Beginners Guide to Sprite Stacking</a> - A primer on sprite stacking from Avis. Check out part 2 from dev_dwarf as well.</li>
+</ul>
+<ul>
+<li><a href="https://gizmo199.itch.io/fauxton3d">Fauxton3D</a> - Sprite stacking engine.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=VIDN-nG3EOU&list=PL3Kbpztq9qwT9MbW<em>k4yyJU</em>_or1r8P2j">Sprite Stacking Tutorials</a> - Gizmo199. !<a href="https://github.com/bytecauldron/awesome-gamemaker/raw/main/icons/youtube.png">YouTube</a></li>
+</('ul', 0)>
+<h2>Networking</h2>
+
+<ul>
+<li><a href="https://github.com/evolutionleo/Warp">Warp</a> - A feature-rich framework for multiplayer games, written in GameMaker and Node.js.</li>
+</ul>
+<ul>
+<li><a href="https://jasontomlee.itch.io/easy-gms-networking-platformer-build">EZ Networking</a> - Host/client implementation with a chat feature.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/gm-core/patchwire-gm">Patchwire-GM</a> - The network library from gm-core if you want to use this implementation without the entire gm-core suite.</li>
+</ul>
+<ul>
+<li><a href="https://gist.github.com/nkrapivin/c73f5a962466a4ecb63187a009a300d8">GMHandshake</a> - A Gist demonstrating a network handshake.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Sidorakh/http.gml">HTTP GML</a> - Recieve GET requests and upload files in GML.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/TimVN/GMNest">GMNest</a> - Socket.IO extension for HTML5 games.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tabularelf/MultiClient">MultiClient</a> - Non-dll, multiple client launcher for network development.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=NbsXRuNijlo&list=PLxaJReoxlrY_S4MrCYjzFCSrNX1TUX626">Multiplayer Networking Tutorial</a> - Wizirdi. !<a href="https://github.com/bytecauldron/awesome-gamemaker/raw/main/icons/youtube.png">YouTube</a></li>
+</ul>
+<ul>
+<li><a href="https://springrollgames.itch.io/ggmr">Good GameMaker Rollback</a> - Rollback netcode library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/gmclan-org/gm_networking">GM Networking</a> - Very simple network code demonstration.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/gmclan-org/gm<em>boomers</em>networking">Boomers Networking</a> - Network library which mimics pre-GM:Studio favorite networking extension 39dll using GM native functions.</li>
+</ul>
+<ul>
+<li><a href="https://marketplace.gamemaker.io/assets/11424/rocket-networking-engine">Rocket Networking Engine</a> - Easy low-code multiplayer engine.</li>
+</('ul', 0)>
+<h2>Integrations</h2>
+
+<ul>
+<li><a href="https://github.com/tabularelf/DHook">DHook</a> - Discord integration.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Mtax-Development/GMS2<em>RPC">GMS2</em>RPC</a> - Another Discord integration.</li>
+</ul>
+<ul>
+<li><a href="https://marketplace.yoyogames.com/assets/9526/nekopresence">NekoPresence</a> - Oops, all Discord integration.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Kruger0/GMHook">GMHook</a> - We really like Discord integration.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/YAL-GameMaker/steamworks.gml">Steamworks.gml</a> - Various expansions to Steamworks SDK support in GameMaker: Studio.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/nkrapivin/Parworks">Parworks</a> - Additional functionality for the YYG Steamworks extension.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/GameMakerDiscord/GOG.gml">GOG.gml</a> - A native extension for GOG.com SDK support.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/GameMakerDiscord/GMTwitch">GMTwitch</a> - Twitch integration.</li>
+</('ul', 0)>
+<h2>Camera</h2>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=_g1LQ6aIJFk">GameMaker Cameras: As Simple as Possible</a> - Pixelated Pope's guide on GameMaker's camera system. !<a href="https://github.com/bytecauldron/awesome-gamemaker/raw/main/icons/youtube.png">YouTube</a></li>
+</ul>
+<ul>
+<li><a href="https://maddestudiosgames.com/gms2-meet-the-camera-system/">Camera System Guide</a> - Getting started with cameras in GameMaker.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/YAL-GameMaker/pixel-perfect-smooth-camera">Pixel Perfect Smooth Camera</a> - An example of pixel-perfect yet smooth camera.</li>
+</ul>
+<ul>
+<li><a href="https://maddestudios.itch.io/gms2-project-dynamic-splitscreen">Dynamic Splitscreen</a> - Local multiplayer split screen implementation that merges the camera when players are close.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jack27121/STANNcam">STANNcam</a> - Camera and resolution manager.</li>
+</ul>
+<ul>
+<li><a href="https://jasontomlee.itch.io/allinone-camera">Camera All-In-One</a> - Editor, screenshake, view-resizing, follow modes, screen effects, etc. 💸</li>
+</('ul', 0)>
+<h2>Sequences</h2>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=WO6gzhrx5b8">Sequences Tutorial</a> - Shaun Spalding. !<a href="https://github.com/bytecauldron/awesome-gamemaker/raw/main/icons/youtube.png">YouTube</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=hTh5UpFxx1E">Making Splash Screen Sequences</a> - Mash Arcade. !<a href="https://github.com/bytecauldron/awesome-gamemaker/raw/main/icons/youtube.png">YouTube</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/KeeVeeGames/DuplicateSequence.gml">DuplicateSequence</a> - Make a deep copy of sequence assets/structs for editing at runtime.</li>
+</('ul', 0)>
+<h2>State Machines</h2>
+
+<ul>
+<li><a href="https://github.com/sohomsahaun/SnowState">SnowState</a> - Robust finite state machine.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/JulianDicken/FastSM">FastSM</a> - Lightweight alternative to SnowState.</li>
+</ul>
+<ul>
+<li><a href="https://mors-games.itch.io/wfsm">wFSM</a> - Another Easy-to-use Finite State Machine library.</li>
+</ul>
+<ul>
+<li><a href="https://pixelatedpope.itch.io/truestate">True State</a> - Feature-rich finite state machine to handle complex objects.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/JujuAdams/Pinocchio">Pinocchio</a> - State-based animation system.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Gizmo199/BehaviorTree">BehaviorTree</a> - A simple behavior tree system.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/gmclan-org/FSM-AI-module">FSM AI</a> - Finite state machine for NPC AI.</li>
+</('ul', 0)>
+<h2>Pathing</h2>
+
+<ul>
+<li><a href="https://dragonite.itch.io/aquila">Aquila</a> - A* Pathfinding implementation.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/helloalbertdang/A-Star-Pathing">A-Star-Pathing</a> - Another A* pathfinding implementation.</li>
+</ul>
+<ul>
+<li><a href="https://proton-squid.itch.io/pathfinding">Grid-based Pathfinding Scripts</a> - Flexible pathfinding system with 3 different algorithms.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/gmclan-org/dijkstra-graph">Pathfinding in graph</a> - Shortest pathfinding system in (weighted) graph, using Dijkstra algorithm.</li>
+</('ul', 0)>
+<h2>Useful Extras</h2>
+
+<ul>
+<li><a href="https://github.com/Grisgram/gml-animated-flag">Animated Flag</a> - Vertex-animated flag.</li>
+</ul>
+<ul>
+<li><a href="https://forum.yoyogames.com/index.php?threads/video-player-for-windows-macos-and-ubuntu.77882/">Video Player Extension</a> - Play videos. However, the latest version of GMS has video support.</li>
+</ul>
+<ul>
+<li><a href="https://marketplace.yoyogames.com/assets/9529/gmescapi">GMESCAPI</a> - Webcam capture.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/OmegaX1000/DanmakuProject">Danmaku Project</a> - Bullet hell engine.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/TrianglyRU/OrbinautFramework">OrbinautFramework</a> - Accurate framework to make classic Sonic games.</li>
+</ul>
+<ul>
+<li><a href="https://all-x.itch.io/gms2-mouse-trail-effect">Mouse Trail Effect</a> - Shows how to trace a line with primitives to create a colorful trail.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/PixelProphecy/gml<em>starfield</em>generator">Starfield Generator</a> - A script to generate starfields in GameMaker's GML language.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/JujuAdams/Clean-Shapes">CleanShapes</a> - Antialiased primitives library for GameMaker.</li>
+</ul>
+<ul>
+<li><a href="https://www.gmlscripts.com/script/index">GMLScripts.com</a> - Dozens of helper scripts, organized similarly to the official documentation.</li>
+</ul>
+<ul>
+<li><a href="https://gm48.net/resources">GM48 Resources</a> - Free resources from the community to become better at GameMaker Studio, game development and game jams.</li>
+</ul>
+<ul>
+<li><a href="https://www.gamemakerkitchen.com/">GameMaker Kitchen</a> - Another great resource for open source libraries, assets, and snippets.</li>
+</ul>
+<ul>
+<li><a href="https://objpodcast.com/">obj_podcast</a> - Gamedev-centered podcast featuring members of the GameMaker community.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dracula/gamemaker-studio">Dracula Theme</a> - A dark theme for the IDE.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/heygleeson/Gruvbox-GMTheme">Gruvbox Theme</a> - A retro groove theme for the IDE.</li>
+</ul>
+<ul>
+<li><a href="https://yal.cc/gamemaker-2-3-syntax-in-details/">2.3 Syntax in Detail</a> - A full guide of the syntax features/changes in GML from Yal.</li>
+</ul>
+<ul>
+<li><a href="https://gist.github.com/DatZach/96a30d6ae4225f8ec152719e57aed26b">GameMaker Garbage Collection</a> - How garbage collection works in GML.</li>
+</ul>
+<ul>
+<li><a href="https://www.reddit.com/r/gamemaker/comments/n5m35l/a<em>simple</em>fix<em>for</em>github<em>incorrectly</em>detecting/">GitHub Yacc to GML Fix</a> - Tell GitHub your repo is all GML, not Yacc.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/matthiaszarzecki/MadeWithGameMakerStudioBadges">GameMaker Repo Badges</a> - Fancy badges to add to your README files.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/GameMakerDiscord">GameMaker Discord Community GitHub</a> - Have you made a gamemaker tool you want to share? Consider submitting it to the official Discord's GitHub.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=UZG-P68xWio&list=PLSFMekK0JFgzmyDxVxj5Cctafu5UX_vUC">Source Control with Git & GameMaker</a> - FriendlyCosmonaut. !<a href="https://github.com/bytecauldron/awesome-gamemaker/raw/main/icons/youtube.png">YouTube</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=_g1LQ6aIJFk&list=PLXkVsacazW2qvdnKNzgBLkUwlgi3FU-VO">Game Resolution & Aspect Ratio Management</a> - Pixelated Pope. !<a href="https://github.com/bytecauldron/awesome-gamemaker/raw/main/icons/youtube.png">YouTube</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=cK5k1_zN4eM">Setting up a Virtual Machine for GameMaker</a> - MicahTheManiac. !<a href="https://github.com/bytecauldron/awesome-gamemaker/raw/main/icons/youtube.png">YouTube</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=RWkMsD2WUz8">Making Attacks Feel Good</a> - Blobfish. !<a href="https://github.com/bytecauldron/awesome-gamemaker/raw/main/icons/youtube.png">YouTube</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/JafarDakhan/vim-gml">vim-GML</a> - High quality Vim syntax highlighting for GameMaker.</li>
+</ul>
+<ul>
+<li><a href="https://gitlab.com/rousr-release/">Rousr Release</a> - Unmaintained projects from the Rousr team (in case anyone asks where OutsideTheBox/Dissonance went).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/chesrowe/Tome/">Tome</a> - Automatically generate documentation sites from GameMaker projects.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/gmclan-org/piano_example">Piano example</a> - Example of playing intrument notes by changing pitch, using only one audio file.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/gmclan-org/compatibility-scripts">Compatibility scripts</a> - Scripts that are used by GM when importing GM:S 1.4 projects, taken directly from runtime files.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/gmclan-org/pause<em>no</em>surface">Pause example</a> - Simple example of a pause screen without using surfaces.</li>
+</ul>
+<ul>
+<li><a href="https://gist.github.com/shichen85/887d237cdc4338fa3f4e4749a14990db">Build Automation, CI/CD</a> - Tutorial on using GitHub Actions as a CI/CD pipeline to automate building games.</li>
+</('ul', 0)>
+<h2>Blogs</h2>
+
+<ul>
+<li><a href="https://refreshertowelgames.wordpress.com/category/tutorial/">RefresherTowel</a> - Contains several posts on level generation.</li>
+</ul>
+<ul>
+<li><a href="https://tonystr.net/">Tony Str</a> - Some great articles on working with JSON, regular expressions <em>(regex)</em>, and drawing circles in GML.</li>
+</ul>
+<ul>
+<li><a href="https://www.katsaii.com/content/blog/posts.html">Katsaii</a> - Some articles on more advanced GML topics.</li>
+</ul>
+<ul>
+<li><a href="https://meseta.dev/">Meseta on Game Dev</a> - Seasoned GameMaker dev's thoughts on GameMaker concepts and libraries.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/JujuAdams/ThoughtsOnGameMaker">Thoughts On GameMaker</a> - Not a traditional blog but has great info on different GML techniques.</li>
+</('ul', 0)>
+<h2>YouTube</h2>
+
+<ul>
+<li><a href="https://www.youtube.com/channel/UCBmOLRTaPrfOxnTqpCLrwdQ">Jordan Guillou</a> - Hobbyist indie dev with a few GameMaker-related tutorials.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/c/DragoniteSpam">DragoniteSpam</a> - Covers highly technical elements of GameMaker with a focus on 3D.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/c/ShaunSpalding">Shaun Spalding</a> - Previous community manager at YoYo Games. Has a wide variety of beginner-friendly GameMaker tutorials and helpful updates on new GameMaker features.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/c/FriendlyCosmonaut">FriendlyCosmonaut</a> - Great playlist on building a farming RPG in GameMaker with several other tutorials.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/c/PixelatedPope">Pixelated Pope</a> - Guides on GameMaker resolution management, cameras, GUI, and more.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/c/XorDev">Xor</a> - Tons of shader demonstrations with a focus on 3D.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/c/GamingEngineer">GamingEngineer</a> - A GameMaker developer that has been in the community for many years. They have a wide variety videos showcasing what GameMaker is capable of, with a focus on 3D.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/c/TheSnidr">TheSnidr</a> - A lot of awesome 3D showcases and tutorials for GameMaker.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/channel/UCfh2Q3TsvlxM1S2GvXQ4eeQ">Peyton Burnham</a> - GameMaker tutorials for top-down shooters and RPGs.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/channel/UC7fkptPD1FHQyDc9Fnm9S_A">Gaming Reverends</a> - If you want to learn foundational material regarding GameMaker shaders, the "Shaders for Hobby-Programmers" playlist is definitely worth checking out.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/c/LetsLearnThisTogether">Let's Learn This Together</a> - Small indie dev company with a focus on providing GameMaker guides.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/c/GameMakerStationMatharoo">Matharoo</a> - Tons of free GameMaker tutorials and news about GameMaker.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/c/SlasherXGAMES/">GravityShift Games</a> - A couple of genre-specific GameMaker tutorials, integrating databases into GameMaker, and more.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/c/Slyddar/">Slyddar</a> - A channel dedicated to both DnD and GML tutorials.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/@SamSpadeGameDev">SamSpadeGameDev</a> - In-depth coding tutorials for the hobbyist game maker.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/playlist?list=PLks6h7R6jAUGrofUAQB178r6K8h43Ml5-">gentoo's iceberg Playlist</a> - Series based on iceberg to display advanced programming ideas in GameMaker.</li>
+</('ul', 0)>
+<h2>Community</h2>
+
+<p><a href="https://img.shields.io/badge/Forums-6AA916?style=for-the-badge&logo=data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAMAAAAolt3jAAAAZlBMVEX%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2BrG8stAAAAIXRSTlMABg0OFBkfcn1%2Bf4CBgoOFhoeIiouWmNDa5ebp8PX2%2B%2F6o6Vq%2BAAAAY0lEQVR42k2OWQ6AIAwFn%2BIOioobrnD%2FS4o0EeanmQxNAdErRFTWtsFq6%2BiiZozz0CSnTjYBwo0RkF8DWDLf51Ni9K%2FYdq0Fy3KAfzk97M7goK1F%2F4rGH9Kk1OlboQtEDIrmC%2BU3CVxTr%2FRMAAAAAElFTkSuQmCC&&logoColor=white"><img src="https://forum.yoyogames.com/index.php" alt="GameMaker Forums</a>"></p>
+<p><a href="https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white"><img src="https://www.reddit.com/r/gamemaker/" alt="Reddit</a>"></p>
+<p><a href="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white"><img src="https://discord.gg/gamemaker" alt="Discord</a>"></p>
+
+<h2>Special Thanks</h2>
+
+<p>JujuAdams, FaultyFunctions, Gleb Tsereteli, Shaun Spalding, DragoniteSpam, Nick Ver Voort, Pixelated Pope, Tony Strømsnæs, HeartBeast, Xor, Gaming Reverends, Matharoo, YellowAfterlife, Gizmo199, Avis, Josh Wilson, Lojemiru</p>
+
+<h2>Footnotes</h2>
+
+<ul>
+<li>This is based on a list from <a href="https://github.com/FaultyFunctions/GameMakerLibraries">GameMaker Libraries</a> and from Gleb Tsereteli with additional links/details.</li>
+</ul>
+<ul>
+<li>A majority of linked resources will only work with <code>GameMaker 2.3+</code> due to GML syntax changes. However, if you are working in GameMaker 1.4, most library creators would appreciate it if someone makes a backport of their project. 🙂</li>
+</ul>
+<ul>
+<li>If you need more general game development resources, check out <a href="https://github.com/Calinou/awesome-gamedev">Awesome Gamedev</a> or <a href="https://github.com/ellisonleao/magictools#readme">MagicTools</a>.</li>
+</ul>
+<p><em>GameMaker® is the property of YoYo Games™. This list is not affiliated with YoYo Games.</em></p>
+
+<h2>Contributing</h2>
+
+<p>Have something awesome to share? Check out the <a href="https://github.com/bytecauldron/awesome-gamemaker/blob/main/CONTRIBUTING.md">Contributing Guidelines</a>.</p>
+
+<h2>GameMaker Keybindings</h2>
+
+<p>!<a href="https://github.com/bytecauldron/awesome-gamemaker/raw/main/images/keybindings.png">Keybindings</a></p>
+
+</body>
+</html>

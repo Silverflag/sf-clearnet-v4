@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haxe Game Development</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Haxe Game Development</h1>
+
+<p><strong>Repository:</strong> https://github.com/Dvergar/awesome-haxe-gamedev#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<div align="center"><a href="https://haxe.org/"><img src="images/haxe-logo.png" width="500"></a></div>
+
+<h1>Awesome Haxe Game Development <a href="https://awesome.re/badge-flat2.svg"><img src="https://awesome.re" alt="Awesome</a>"></h1>
+
+<p>A curated list of game development resources for <strong><a href="https://haxe.org/">Haxe 4</a></strong>, a high level strictly typed programming language which is used to produce cross-platform native code.</p>
+
+<p>Feel free to update it.</p>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#game-engines">Game engines</a></li>
+</ul>
+<ul>
+<li><a href="#low-level-engine">Low-level Engine</a></li>
+</ul>
+<ul>
+<li><a href="#physics">Physics</a></li>
+</ul>
+<ul>
+<li><a href="#architecture">Architecture</a></li>
+</ul>
+<ul>
+<li><a href="#networking">Networking</a></li>
+</ul>
+<ul>
+<li><a href="#serialization-and-storage">Serialization and storage</a></li>
+</ul>
+<ul>
+<li><a href="#games">Games</a></li>
+</ul>
+<ul>
+<li><a href="#miscellaneous">Miscellaneous</a></li>
+</ul>
+<ul>
+<li><a href="#articles">Articles</a></li>
+</ul>
+<ul>
+<li><a href="#other-haxe-lists">Other haxe lists</a></li>
+</('ul', 0)>
+<h2>Game engines</h2>
+
+<p>Those are Haxe 4 compatible game engines</p>
+<ul>
+<li><a href="https://github.com/armory3d/armory">Armory (Kha)</a> - An open-source 3D game engine with full Blender integration (<code>Web</code>, <code>Mobile</code>, <code>Desktop</code>, <code>Consoles</code>).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/openfl/away3d">Away3D</a> - An open source, real-time 3D engine for OpenFL (<code>Web</code>, <code>Mobile</code>, <code>Desktop</code>).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ceramic-engine/ceramic">ceramic</a> - Cross-platform 2D framework (<code>Web</code>, <code>Mobile</code>, <code>Desktop</code>, <code>Unity</code>).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/HaxeFlixel/flixel">HaxeFlixel (OpenFL)</a> - Free, cross-platform 2D game engine powered by OpenFL (<code>Web</code>, <code>Mobile</code>, <code>Desktop</code>, <code>Consoles</code>).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/haxegon/haxegon">Haxegon (OpenFL)</a> - A programming library for beginners. Powered by OpenFL and Starling (<code>Web</code>, <code>Mobile</code>, <code>Desktop</code>, <code>Consoles</code>).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/HeapsIO/heaps">Heaps</a> - High Performance Game Framework (<code>Web</code>, <code>Mobile</code>, <code>Desktop</code>, <code>Consoles</code>).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/hxdefold/hxdefold">hxdefold</a> - Haxe/Lua externs for Defold game engine (<code>Web</code>, <code>Mobile</code>, <code>Desktop</code>).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/openfl/openfl">OpenFL</a> - Interactive game and app development library (<code>Web</code>, <code>Mobile</code>, <code>Desktop</code>, <code>Consoles</code>).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/openfl/starling">Starling</a> - The "Cross-Platform Game Engine", a popular Stage3D framework (<code>Web</code>, <code>Mobile</code>, <code>Desktop</code>).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Stencyl/stencyl-engine">Stencyl (OpenFL)</a> - Create Flash, HTML5, iOS, Android, and desktop games with no code (<code>Mobile</code>, <code>Desktop</code>).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/proletariatgames/unreal.hx">unreal.hx</a> - Haxe Integration for Unreal (<code>Web</code>, <code>Mobile</code>, <code>Desktop</code>, <code>Consoles</code>).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/HxGodot/hxgodot">HxGodot (Godot 4.0)</a> - A Haxe GDExtension for Godot 4 (<code>Web</code>, <code>Mobile</code>, <code>Desktop</code>, <code>Consoles</code>).</li>
+</('ul', 0)>
+<h2>Low-level Engine</h2>
+<ul>
+<li><a href="https://github.com/Kode/Kha">Kha</a> - Ultra-portable, high performance, open source multimedia framework (<code>Web</code>, <code>Mobile</code>, <code>Desktop</code>, <code>Consoles</code>).    </li>
+</ul>
+<ul>
+<li><a href="https://github.com/openfl/lime">Lime</a> - A flexible, lightweight layer for Haxe cross-platform developers (<code>Web</code>, <code>Mobile</code>, <code>Desktop</code>).      </li>
+</ul>
+<ul>
+<li><a href="https://github.com/Sunjammer/linc<em>glfw">linc</em>glfw</a> - Desktop - GLFW binding (multi-platform library for OpenGL, OpenGL ES and Vulkan) <em>(Desktop)</em>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/haxenme/nme">NME</a> - A cross-platform native backend (<code>Web</code>, <code>Mobile</code>, <code>Desktop</code>).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Krismowo/3DSHaxe">3DSHaxe</a> - Make 3ds homebrew! (<code>3DS</code>).</li>
+</('ul', 0)>
+<h2>Physics</h2>
+<ul>
+<li><a href="https://github.com/AustinEast/echo/">echo</a> - Simple Physics Library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/armory3d/haxebullet">haxebullet</a> - Bullet 3D Physics.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/HaxeFlixel/nape-haxe4">nape-haxe4</a> - Physics Engine (the original Haxe3 version of nape can be found <a href="https://github.com/deltaluca/nape">here</a>).</li>
+</('ul', 0)>
+<h2>Architecture</h2>
+<pre><code>
+IoC == Inversion of Control  
+EC == Entity Component  
+ECS == Entity-Component-System
+FSM == Finite State Machine
+MVC == Model View Controller
+</code></pre>
+
+<ul>
+<li><a href="https://github.com/hypersurge/awe6">awe6</a> - <code>IoC</code>, <code>EC</code> - The inverted game framework, is a development tool focused on Future Proofing.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/eliasku/ecx">ecx</a> - <code>ECS</code> - An Entity Component System framework.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/DoclerLabs/hexCore">hexMachina</a> - <code>MVC</code> - A powerful multi-modular MVC framework.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Dvergar/OSIS">OSIS</a> - <code>ECS</code> - Entity Component System architecture with networking support.</li>
+</('ul', 0)>
+<h2>Networking</h2>
+<ul>
+<li><a href="https://github.com/Dvergar/Anette">Anette</a> - Simple network library (no UDP).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/colyseus/colyseus-hx">colyseus-hx</a> - Multiplayer Game Client.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/melonin/haxe-simple-peer">haxe-simple-peer (js)</a> - Haxe externs for simple-peer.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ianharrigan/hxWebSockets">hxWebSockets</a> - Websockets for all platforms.</li>
+</ul>
+<ul>
+<li>Built-in - Heaps, OpenFL (HaxeFlixel & co), Kha (Armory).</li>
+</('ul', 0)>
+<h2>Serialization and storage</h2>
+<ul>
+<li><a href="https://github.com/RealyUniqueName/Bits">Bits</a> - Binary bit flags with unlimited amount of bits.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ncannasse/castle">CastleDB</a> - A structured static database easing collaboration.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ncannasse/hxbit">hxbit</a> - A binary serialization and network synchronization library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Dvergar/PODStream">PODStream</a> - Plain Old Data serializer.</li>
+</ul>
+<!--lint disable awesome-list-item-->
+<h2>Games</h2>
+<ul>
+<li><a href="https://store.steampowered.com/app/939100/Darksburg/">Darksburg</a> - Heaps - <code>Desktop</code>.</li>
+<ul>
+<li>!<a href="https://raw.githubusercontent.com/Dvergar/awesome-haxe-gamedev/main/images/darksburg.jpg">Screenshot</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://dead-cells.com/">Dead Cells</a> - Heaps - <code>Desktop</code>, <code>Consoles</code>.</li>
+<ul>
+<li>!<a href="https://raw.githubusercontent.com/Dvergar/awesome-haxe-gamedev/main/images/dead-cells.jpg">Screenshot</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="http://www.defendersquest.com/">Defender's Quest</a> - HaxeFlixel (OpenFL) - <code>Desktop</code>, <code>Consoles</code>.</li>
+<ul>
+<li>!<a href="https://raw.githubusercontent.com/Dvergar/awesome-haxe-gamedev/main/images/defenders-quest.jpg">Screenshot</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://store.steampowered.com/app/252190/Defenders<em>Quest</em>2<em>Mists</em>of_Ruin/">Defender's Quest 2</a> - HaxeFlixel (OpenFL) - <code>Desktop</code>.</li>
+<ul>
+<li>!<a href="https://raw.githubusercontent.com/Dvergar/awesome-haxe-gamedev/main/images/defenders-quest-2.jpg">Screenshot</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="http://diceydungeons.com/">Dicey Dungeons</a> - Haxegon (OpenFL) - <code>Desktop</code>, <code>Consoles</code>.</li>
+<ul>
+<li>!<a href="https://raw.githubusercontent.com/Dvergar/awesome-haxe-gamedev/main/images/dicey-dungeons.jpg">Screenshot</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="http://evoland.shirogames.com/">Evoland</a> - Heaps - <code>Desktop</code>, <code>Mobile</code>.</li>
+<ul>
+<li>!<a href="https://raw.githubusercontent.com/Dvergar/awesome-haxe-gamedev/main/images/evoland.jpg">Screenshot</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="http://northgard.net/">Northgard</a> - Heaps - <code>Desktop</code>.</li>
+<ul>
+<li>!<a href="https://raw.githubusercontent.com/Dvergar/awesome-haxe-gamedev/main/images/northgard.jpg">Screenshot</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="http://papersplea.se/">Papers, Please</a> - OpenFL - <code>Desktop</code>, <code>iOS</code>, <code>PsVita</code>.</li>
+<ul>
+<li>!<a href="https://raw.githubusercontent.com/Dvergar/awesome-haxe-gamedev/main/images/papers-please.jpg">Screenshot</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://store.steampowered.com/app/462620/Pocket_Kingdom/">Pocket Kingdom</a> - HaxePunk (OpenFL)- <code>Desktop</code>.</li>
+<ul>
+<li>!<a href="https://raw.githubusercontent.com/Dvergar/awesome-haxe-gamedev/main/images/pocket-kingdom.jpg">Screenshot</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://rymdkapsel.com/">rymdkapsel</a> - OpenFL - <code>Desktop</code>, <code>Mobile</code>.</li>
+<ul>
+<li>!<a href="https://raw.githubusercontent.com/Dvergar/awesome-haxe-gamedev/main/images/rymdkapsel.jpg">Screenshot</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://playspellbreak.com/">Spellbreak</a> - unreal.hx -  <code>PC</code>, <code>PS</code>, <code>Xbox</code>, <code>Switch</code>.</li>
+<ul>
+<li>!<a href="https://raw.githubusercontent.com/Dvergar/awesome-haxe-gamedev/main/images/spellbreak.jpg">Screenshot</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="http://www.doublezeroonezero.com/westport.html">The Westport Independent</a> - Luxe - <code>Desktop</code>, <code>Mobile</code>.</li>
+<ul>
+<li>!<a href="https://raw.githubusercontent.com/Dvergar/awesome-haxe-gamedev/main/images/westport-independent.jpg">Screenshot</a></li>
+</ul>
+</ul>
+<!--lint enable-->
+
+<p>More showcase :</p>
+<ul>
+<li><a href="https://www.openfl.org/showcase">OpenFL showcase</a></li>
+</ul>
+<ul>
+<li><a href="https://haxeflixel.com/showcase/">HaxeFlixel showcase</a></li>
+</ul>
+<ul>
+<li><a href="https://itch.io/games/made-with-haxe">itch.io showcase</a></li>
+</ul>
+<ul>
+<li><a href="https://haxepunk.com/games/">HaxePunk showcase</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/aduros/flambe/wiki/Showcase">Flambe showcase</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/Kode/Kha/wiki/Games-Built-With-Kha">Kha showcase</a></li>
+</('ul', 0)>
+<h2>Miscellaneous</h2>
+
+<h3>3rd party API</h3>
+<ul>
+<li><a href="https://github.com/larsiusprime/SteamWrap">SteamWrap</a> - Native extension for the SteamAPI.</li>
+</ul>
+<ul>
+<li><a href="https://lib.haxe.org/p/newgrounds">newgrounds</a> - Newgrounds API.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/MAJigsaw77/hxgamejolt-api">hxgamejolt-api</a> - Haxe bindings for GameJolt API.</li>
+</('ul', 0)>
+<h3>AI</h3>
+<p><a href="https://gitlab.com/haath/goap">goap</a> - Goal-oriented action planner for AI.</p>
+
+<h3>Animation</h3>
+<ul>
+<li><a href="https://github.com/jeremyfa/spine-hx">spine-hx</a> - Spine runtime automatically converted from the official Java/libgdx runtime.</li>
+</ul>
+<ul>
+<li>HaxeFlixel - Spine parser.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Beeblerox/Heaps-Spine">Heaps-Spine</a> - Spine player for heaps.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/AustinEast/heaps-aseprite">heaps-aseprite</a> - Load and render sprites and animations in Aseprite format.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/miriti/openfl-aseprite">openfl-aseprite</a> - Load and render sprites and animations in Aseprite format.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/rainyt/openfl-spine">openfl-spine</a> - Render Spine animation in the OpenFL engine, rendering processing can be achieved throughSprite and Tilemap.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/miriti/ase">ase</a> - File format reader/writer for .ase/.aseprite without external dependencies.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/MAJigsaw77/flxgif">flxgif</a> - Yagp's Gif Player for HaxeFlixel.</li>
+</('ul', 0)>
+<h3>Audio</h3>
+<ul>
+<li><a href="https://github.com/jobf/sfxr-hx">sfxr-hx</a> - Pure haxe implementation of Sfxr.</li>
+</('ul', 0)>
+<h3>Color manipulation</h3>
+<ul>
+<li><a href="https://github.com/oscarcs/nxColor">nxColor</a> - Color manipulation library.</li>
+</('ul', 0)>
+<h3>Collision</h3>
+<ul>
+<li><a href="https://github.com/snowkit/differ">differ</a> - A separation axis theorem collision library.</li>
+</('ul', 0)>
+<h3>Computer Vision</h3>
+<ul>
+<li><a href="https://github.com/ShaharMS/Vision">Vision</a> - Cross platform computer vision library.</li>
+</('ul', 0)>
+<h3>Data structures</h3>
+<ul>
+<li><a href="https://github.com/polygonal/ds">polygonal-ds</a> - Data structures for games.</li>
+</('ul', 0)>
+<h3>Dialogues</h3>
+<ul>
+<li><a href="https://github.com/cxsquared/hxyarn">hxyarn</a> - Parser and runner for Yarn dialogue files.</li>
+</('ul', 0)>
+<h3>Editor</h3>
+<ul>
+<li><a href="https://github.com/Dovyski/flixel-studio">flixel-studio</a> - In-game editor for HaxeFlixel.</li>
+</('ul', 0)>
+<h3>Helpers</h3>
+<ul>
+<li><a href="https://github.com/deepnight/deepnightLibs">deepnightLibs</a> - General gamedev purpose libs.</li>
+</('ul', 0)>
+<h3>Localization</h3>
+<ul>
+<li><a href="https://github.com/larsiusprime/firetongue">firetongue</a> - A translation/localization framework.</li>
+</('ul', 0)>
+<h3>Map parser</h3>
+<ul>
+<li><a href="https://github.com/Dvergar/PyxelEdit-Map-Importer">PyxelEdit Map Importer</a> - Parser for maps generated by the editor PyxelEdit.</li>
+</ul>
+<ul>
+<li>Heaps - Built-in parser for Tiled.</li>
+</ul>
+<ul>
+<li>HaxeFlixel - Parser for Tiled & Ogmo.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/deepnight/led-haxe-api">LEd</a> - 2D level editor with a typed compile time loader.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/yanrishatum/tiledhx">TiledHX</a> - A comprehensive modern Tiled parser.</li>
+</('ul', 0)>
+<h3>Math helpers</h3>
+<ul>
+<li><a href="https://github.com/tbrosman/hxmath">hxmath</a> - A game-oriented math library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/hamaluik/haxe-glm">haxe-glm</a> - A toolset for using 2, 3, and 4 dimensional vectors and matrices, as well as quaternions.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/markknol/hx-vector2d">hx-vector2d</a> - Worlds most complete Vector2d / Point class. With operator overloading.</li>
+</('ul', 0)>
+<h3>Modding</h3>
+<ul>
+<li><a href="https://github.com/larsiusprime/polymod">polymod</a> - An atomic modding framework for games/apps.</li>
+</('ul', 0)>
+<h3>Particles</h3>
+<ul>
+<li><a href="https://github.com/RudenkoArts/sparkler">Sparkler</a> - Modular Particle System.</li>
+</('ul', 0)>
+<h3>Monetization</h3>
+<ul>
+<li><a href="https://github.com/charmdev/extension-iap">extension-iap</a> - Provides an access to in-app purchases (iOS) and in-app billing (Android) for OpenFL projects using a common API. Fork of <a href="https://github.com/HaxeExtension/extension-iap">this</a>.</li>
+</('ul', 0)>
+<h3>Pathfinding</h3>
+<ul>
+<li><a href="https://github.com/hypersurge/pathfinder">pathfinder</a> - Easy A* pathfinding algorithm.</li>
+</ul>
+<ul>
+<li><a href="https://gitlab.com/haath/astar">astar</a> - Versatile framework-agnostic A-star solver Library.</li>
+</('ul', 0)>
+<h3>Procedural generation</h3>
+<ul>
+<li><a href="https://github.com/julsam/dungeon-builder">Dungeon builder</a> - A set of dungeon generation algorithm (works w/ hx4 w/ minor changes).</li>
+</('ul', 0)>
+<h3>Shaders</h3>
+<ul>
+<li><a href="https://github.com/saharan/HGSL">HGSL</a> - Haxe to GL Shading Language.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/47rooks/parasol">parasol</a> - HaxeFlixel library of shaders.</li>
+</('ul', 0)>
+<h3>Sprite</h3>
+<ul>
+<li><a href="https://github.com/PongoEngine/haxe-aseprite">haxe-aseprite</a> - Parser for .ase and .aseprite files.</li>
+</('ul', 0)>
+<h3>Texture Packer</h3>
+<ul>
+<li><a href="https://github.com/bendmorris/hxpk">hxpk</a> - Port of the libGDX Texture Packer.</li>
+</('ul', 0)>
+<h3>Tweening</h3>
+<ul>
+<li><a href="https://github.com/jgranick/actuate">actuate</a> - A flexible, fast "tween" library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Yanrishatum/yatl">YATL</a> - Yet Another (Haxe) Tweening Library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/shohei909/tweenx">TweenX/TweenXCore</a> - Tween library.</li>
+</('ul', 0)>
+<h3>UI</h3>
+<ul>
+<li><a href="https://github.com/ncannasse/domkit">domkit</a> - CSS Components based strictly typed UI framework.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/HaxeFlixel/flixel-ui">flixel-ui</a> - GUI library for HaxeFlixel.</li>
+</ul>
+<ul>
+<li><a href="http://haxeui.org/">HaxeUI</a> - UI library with multiple framework backends (HTML5, Kha, OpenFL, PixiJS, WxWidgets, and a number of others as works in progress).</li>
+</ul>
+<ul>
+<li><a href="https://feathersui.com/">Feathers UI</a> - Cross-platform graphical user interface components for creative frontend projects.</li>
+</('ul', 0)>
+<h3>Video</h3>
+<ul>
+<li><a href="https://github.com/polybiusproxy/hxCodec">hxCodec</a> - Adds native video playback on HaxeFlixel and OpenFL.</li>
+</('ul', 0)>
+<h2>Articles</h2>
+<ul>
+<li><a href="http://gamasutra.com/blogs/LarsDoucet/20140318/213407/Flash<em>is</em>dead<em>long</em>live_OpenFL.php">Flash is dead, long live OpenFL!</a></li>
+</ul>
+<ul>
+<li><a href="https://www.linkedin.com/pulse/flash-gone-what-now-matan-uberstein/">Flash is gone, what now?</a></li>
+</ul>
+<ul>
+<li><a href="https://kircode.com/post/how-i-wrote-my-own-3d-game-engine-and-shipped-a-game-with-it-in-20-months">How I wrote my own 3D game engine and shipped a game with it in 20 months</a></li>
+</ul>
+<ul>
+<li><a href="https://medium.com/@mknol/building-42-games-within-a-year-insane-game-development-5340d506068f">Building 42 games within a year — Insane game development</a></li>
+</ul>
+<ul>
+<li><a href="https://do-games.com/blog/the-adventure-pals-console-tech-part1">Porting to console via Unity</a></li>
+</('ul', 0)>
+<h2>Other haxe lists</h2>
+<ul>
+<li><a href="https://github.com/nadako/awesome-haxe">awesome haxe</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/anissen/awesome-snowkit">awesome snowkit</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/MatthijsKamstra/awesome-haxe-js">awesome haxe js</a></li>
+</ul>
+</body>
+</html>

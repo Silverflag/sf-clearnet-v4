@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ComputerCraft</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>ComputerCraft</h1>
+
+<p><strong>Repository:</strong> https://github.com/tomodachi94/awesome-computercraft#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<!--lint disable double-link-->
+<p><!--</p>
+<p>SPDX-FileCopyrightText: 2024 awesome-computercraft contributors</p>
+
+<p>SPDX-License-Identifier: CC-BY-SA-4.0</p>
+<p>--></p>
+<!--lint enable double-link-->
+<!--lint ignore-->
+
+<h1>Awesome ComputerCraft <a href="https://awesome.re/badge.svg"><img src="https://awesome.re" alt="Awesome</a>"></h1>
+
+<p><a href="https://computercraft.cc"><img src="assets/cc-tweaked-logo.png" align="right" width="100"></a></p>
+
+<blockquote>
+<p>Useful programs, libraries, literature, and mods for <a href="https://computercraft.info">ComputerCraft</a> and <a href="https://computercraft.cc">its forks</a>.</p>
+</blockquote>
+
+<p><strong>ComputerCraft</strong> is a mod for Minecraft which adds computers which are programmable with the Lua programming language. <strong>ComputerCraft: Tweaked</strong> is a fork of the mod for newer Minecraft versions.</p>
+
+<p>This project lives <a href="https://github.com/tomodachi94/awesome-computercraft">on GitHub</a> and might not render correctly on third-party websites.</p>
+
+<p>If you think something should be added to the list, please <a href="https://github.com/tomodachi94/awesome-computercraft/issues/new/choose">reach out</a>.</p>
+
+<p>If you want to contribute, see <a href="./CONTRIBUTING.md">CONTRIBUTING.md</a>.</p>
+<p>If you have other questions, see the <a href="./FAQ.md">FAQ</a>.</p>
+
+<p>A note on abbreviations: <code>CC</code> is ComputerCraft, <code>CC:T</code> is ComputerCraft: Tweaked, and <code>CC:R</code> is ComputerCraft: Restitched.</p>
+
+<h2>Contents</h2>
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+<ul>
+<li><a href="#mods">Mods</a></li>
+<ul>
+<li><a href="#computercraft-mods">ComputerCraft mods</a></li>
+</ul>
+<ul>
+<li><a href="#add-on-mods">Add-on mods</a></li>
+</ul>
+<ul>
+<li><a href="#resource-packs">Resource packs</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#lua-programs">Lua programs</a></li>
+<ul>
+<li><a href="#utility">Utility</a></li>
+</ul>
+<ul>
+<li><a href="#library">Library</a></li>
+</ul>
+<ul>
+<li><a href="#fun">Fun</a></li>
+</ul>
+<ul>
+<li><a href="#operating-systems">Operating systems</a></li>
+</ul>
+<ul>
+<li><a href="#economy">Economy</a></li>
+</ul>
+<ul>
+<li><a href="#mod-specific-programs">Mod-specific programs</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#non-lua-programs">Non-Lua programs</a></li>
+<ul>
+<li><a href="#bridging">Bridging</a></li>
+</ul>
+<ul>
+<li><a href="#emulators">Emulators</a></li>
+</ul>
+<ul>
+<li><a href="#plugins">Plugins</a></li>
+</ul>
+<ul>
+<li><a href="#tools">Tools</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#literature">Literature</a></li>
+<ul>
+<li><a href="#essays">Essays</a></li>
+</ul>
+<ul>
+<li><a href="#tutorials">Tutorials</a></li>
+</ul>
+<ul>
+<li><a href="#charts-tables-and-calculators">Charts, tables, and calculators</a></li>
+</ul>
+<ul>
+<li><a href="#other-lists">Other lists</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#resources">Resources</a></li>
+</ul>
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+<h2>Mods</h2>
+<h3>ComputerCraft mods</h3>
+
+<ul>
+<li><a href="https://computercraft.cc">ComputerCraft: Tweaked</a> -  A fork of the original ComputerCraft for modern versions of Minecraft.</li>
+</ul>
+<ul>
+<li><a href="https://www.curseforge.com/minecraft/mc-mods/cc-restitched">ComputerCraft: Restitched</a> -  A set of patches for CC:T that allow running it on Fabric. </li>
+</ul>
+<ul>
+<li><a href="https://computercraft.info">ComputerCraft</a> -  A mod which adds computers to allow execution of Lua programs. </li>
+</('ul', 0)>
+<h3>Add-on mods</h3>
+
+<ul>
+<li><a href="https://www.curseforge.com/minecraft/mc-mods/advanced-peripherals">Advanced Peripherals</a> -  A mod which adds various peripherals and APIs for interacting with other mods. </li>
+</ul>
+<ul>
+<li><a href="https://wiki.vexatos.com/wiki:computronics">Computronics</a> -  A mod which adds various peripherals, notably for detecting events in the world and for manipulation of sound. </li>
+</ul>
+<ul>
+<li><a href="https://plethora.madefor.cc">Plethora</a> -  A mod which adds peripherals and allows many blocks to be accessed as such. In addition, it also allows for manipulation of the player as a peripheral.</li>
+<ul>
+<li><a href="https://github.com/SwitchCraftCC/Plethora-Fabric">Plethora Fabric</a> - A 1.19+ port of Plethora to Fabric.</li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://modrinth.com/mod/cccbridge">CC:C Bridge</a> - A mod that adds compatibility between ComputerCraft and <a href="https://modrinth.com/mod/create">Create</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/SwitchCraftCC/sc-peripherals">sc-peripherals</a> - A mod that adds 3D printers which allow creating custom blocks and posters.</li>
+</ul>
+<ul>
+<li><a href="https://www.curseforge.com/minecraft/mc-mods/turtlematic">Turtlematic</a> - A mod which expands the applications of turtles, making them extremely powerful.</li>
+</ul>
+<ul>
+<li><a href="https://www.curseforge.com/minecraft/mc-mods/unlimitedperipheralworks">UnlimitedPeripheralWorks</a> - A mod which adds various peripherals to extend CC:T capabilities. Also adds a lot of peripherals for other mods.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/znepb/Roadworks">Roadworks</a> - A mod that adds traffic lights controllable by ComputerCraft.</li>
+</('ul', 0)>
+<h3>Resource packs</h3>
+
+<ul>
+<li><a href="https://modrinth.com/resourcepack/computercreate">ComputerCreate</a> -  A resource pack which adds texture packs in the style of the <a href="https://modrinth.com/mod/create">Create mod</a>.</li>
+</('ul', 0)>
+<h2>Lua programs</h2>
+<h3>Utility</h3>
+
+<ul>
+<li><a href="https://github.com/SquidDev-CC/artist">Artist</a> -  One of the first item management systems for ComputerCraft.</li>
+</ul>
+<ul>
+<li><a href="https://cash.madefor.cc">ComputerCraft Advanced Shell (cash)</a> -  A Bourne-compatible shell for ComputerCraft. </li>
+</ul>
+<ul>
+<li><a href="https://consult.madefor.cc">Consult</a> -  A text editor emphasizing ease of use and compatibility with many systems. </li>
+<ul>
+<li><a href="https://github.com/manaphoenix/CONSULT_RECRAFTED">Consult: Recrafted</a> -  A fork of Consult for Recrafted systems.</li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://github.com/umnikos/hopper.lua"><code>hopper.lua</code></a> - A command-line program for moving items between containers.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/9551-Dev/GEMU">GEMU</a> -  CraftOS-PC graphics mode emulator based on Pixelbox.</li>
+</ul>
+<ul>
+<li><a href="https://pastebin.com/zSLPYpqs"><code>gist</code></a> -  A GitHub Gist download/upload program which aims to extend the built-in <code>pastebin</code> program, but for Gists.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/SquidDev-CC/Howl">Howl</a> -  A build system for CC and CC:T.</li>
+</ul>
+<ul>
+<li><a href="https://web.archive.org/web/20230211195528/http://www.computercraft.info/forums2/index.php?/topic/12347-luaide-10-you-might-actually-like-editing-in-game/">LuaIDE</a> -  A full-fledged IDE for editing Lua files in-game.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ShreksHellraiser/CC-MISC">MISC</a> -  Modular Inventory Storage and Crafting.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/SquidDev-CC/mbs">Mildly Better Shell (MBS)</a> -  An improved shell that includes scrollback and improved resolution of completions.</li>
+</ul>
+<ul>
+<li><a href="https://gist.github.com/MCJack123/56ca71555d9c0f78d4c985f1e9ad28e8">ModemShark</a> -  Modem packet sniffer with a simple UI.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lyqyd/cc-netshell">netshell</a> -  Access a computer's shell from another computer.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/walksanatora/orangebox">OrangeBox</a> - Virtualization support for ComputerCraft computers.</li>
+</ul>
+<ul>
+<li><a href="https://gist.github.com/MCJack123/8c8861e5e3082d2bed18d07641b5b2cc">rawshell</a> -  A modern alternative to netshell supporting CraftOS-PC's "raw mode" format, with file transfers, encryption, passwords, WebSockets, and more.</li>
+</ul>
+<ul>
+<li><a href="https://pinestore.cc/projects/115/shrekprint">ShrekPrint</a> - Printing software with full color and book support.</li>
+</ul>
+<ul>
+<li><a href="https://pinestore.cc/projects/114/shrekword">ShrekWord</a> - Word-like document editor.</li>
+</ul>
+<ul>
+<li><a href="https://unicornpkg.madefor.cc">unicornpkg</a> -  Modern package management that doesn't suck.</li>
+</ul>
+<ul>
+<li><a href="https://gist.github.com/MCJack123/32c56917dc61da336ec0e8ca6aae39f8">FSEncrypt</a> -  Transparent filesystem encryption.</li>
+</('ul', 0)>
+<h3>Library</h3>
+
+<ul>
+<li><a href="https://github.com/9551-Dev/acidity">Acidity</a> -  A simple procedual world generation-oriented noise generation library.</li>
+</ul>
+<ul>
+<li><a href="https://web.archive.org/web/20200924232302/http://www.computercraft.info/forums2/index.php?/topic/25474-chacha20-encryption-in-computercraft/">Anavrins' ChaCha20</a> -  Implementation of <a href="https://en.wikipedia.org/wiki/ChaCha20-Poly1305">ChaCha20</a>. <!-- FIXME: Broken link --></li>
+</ul>
+<ul>
+<li>Anavrins' hashing libraries:</li>
+<ul>
+<li><a href="https://pastebin.com/6PVSRckQ">MD5</a> -  Implementation of <a href="https://en.wikipedia.org/wiki/MD5">MD5</a>.</li>
+</ul>
+<ul>
+<li><a href="https://pastebin.com/SfL7vxP3">SHA-1</a> -  Implementation of <a href="https://en.wikipedia.org/wiki/SHA-1">SHA-1</a> with <a href="https://en.wikipedia.org/wiki/HMAC">HMAC</a> support.</li>
+</ul>
+<ul>
+<li><a href="https://web.archive.org/web/20230211193054/http://www.computercraft.info/forums2/index.php?/topic/8169-sha-256-in-pure-lua/">SHA-256</a> -  Implementation of <a href="https://en.wikipedia.org/wiki/SHA-2">SHA-256</a> with support for <a href="https://en.wikipedia.org/wiki/HMAC">HMAC</a> and <a href="https://en.wikipedia.org/wiki/PBKDF2">PBKDF2</a>.</li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://mcjack123.github.io/AUKit/">AUKit</a> -  The quintessential audio processing and conversion library for ComputerCraft. </li>
+</ul>
+<ul>
+<li><a href="https://basalt.madefor.cc/">Basalt</a> -  A GUI library emphasizing the user experience.</li>
+</ul>
+<ul>
+<li><a href="https://pastebin.com/3LfWxRWh">Bigfont</a> -  A library that makes writing something in different font sizes easy.</li>
+</ul>
+<ul>
+<li><a href="https://c3d.madefor.cc/">C3D</a> -  An advanced 3D rendering API.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/MCJack123/CC-Archive">CC-Archive</a> -  Various libraries for archiving and unarchiving files.</li>
+</ul>
+<ul>
+<li><a href="https://gist.github.com/MCJack123/4cf6fc941a2d412b4195caafb9636363">dbprotect</a> -  A protection wrapper over the <code>debug</code> API, allowing restricting access to upvalues in protected functions.</li>
+</ul>
+<ul>
+<li><a href="https://web.archive.org/web/20190808224502/http://www.computercraft.info/forums2/index.php?/topic/29803-elliptic-curve-cryptography/"><code>ecc.lua</code></a> -  Implements <a href="https://en.wikipedia.org/wiki/Elliptic-curve_cryptography">elliptic-curve cryptography</a>. <!-- FIXME: Broken link --></li>
+</ul>
+<ul>
+<li><a href="https://github.com/migeyel/ecnet">ecnet</a> -  Secure network communications in ComputerCraft.</li>
+</ul>
+<ul>
+<li><a href="https://guih.madefor.cc">GuiH</a> -  A powerful GUI and graphics library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/9551-Dev/IsometriH">IsometriH</a> -  An <a href="https://en.wikipedia.org/wiki/Isometric<em>video</em>game_graphics">isometric rendering</a> engine.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/MCJack123/Luz">Luz</a> - An extremely light compression algorithm for Lua files.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kepler155c/opus-apps/wiki/Milo-(crafting---storage-system">Milo</a>) -  A crafting and inventory management system. Note that this depends on OpusOS and Plethora.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Xella37/Pine3D">Pine3D</a> - A 3D rendering engine designed to be fast.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/9551-Dev/pngLua">PngLua</a> -  PNG parsing library designed for ComputerCraft.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/9551-Dev/pixelbox_lite"><code>Pixelbox Lite</code></a> - A very fast and flexible teletext 2D rendering library for ComputerCraft.</li>
+</ul>
+<ul>
+<li><a href="https://gist.github.com/MCJack123/473475f07b980d57dd2bd818026c97e8">RedRun</a> -  A small library for running processes in the background of CraftOS after exiting the program, similar to DOS TSRs.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Fatboychummy-CC/Tamperer">Tamperer</a> -  A library allowing easy creation of settings menus.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/9551-Dev/tampl">Tampl</a> - A Lua tokenization and parsing library designed for dynamic code generation and injecting code into existing programs.</li>
+</ul>
+<ul>
+<li><a href="https://telem.cyberbit.dev">Telem</a> - A telemetry library for peripherals, facilitating in-game and cloud-based monitoring dashboards for storage, energy, and machinery.</li>
+</ul>
+<ul>
+<li><a href="https://gist.github.com/MCJack123/7752c85918bcf23ada028abd615e8750">VeriCode</a> -  Provides simple code signing functions for safely transferring code over modems.</li>
+</('ul', 0)>
+<h3>Fun</h3>
+
+<ul>
+<li><a href="https://github.com/MCJack123/AUKit/blob/master/austream.lua">AUKit austream</a> -  Based on AUKit, a simple audio player supporting WAV, DFPWM, AIFF, AU, and FLAC.</li>
+</ul>
+<ul>
+<li><a href="https://gist.github.com/MCJack123/7082da1d2ac725c33ff77389877ad7f4">battleship</a> -  An implementation of the popular two-player game <em><a href="https://en.wikipedia.org/wiki/Battleship_(game">Battleship</a>)</em>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Xella37/CCDoom">CCDoom</a> - The <a href="https://en.wikipedia.org/wiki/Doom<em>(1993</em>video_game"><em>Doom</em> shooter</a>) ported to ComputerCraft using Pine3D.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Xella37/CC-Minecraft">CC-Minecraft</a> - <em>Minecraft</em> ported to ComputerCraft using Pine3D.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/MCJack123/LuaGB">LuaGB</a> -  A port of a Game Boy (Color) emulator for ComputerCraft. Works best in CraftOS-PC.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/MCJack123/lunatic86">lunatic86</a> -  A port of an 8086 PC emulator for ComputerCraft.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/knijn/musicify">Musicify</a> -  A lightweight client for playing music on ComputerCraft: Tweaked.</li>
+<ul>
+<li><a href="https://github.com/MCJack123/tracc/tree/playAudio">tracc</a> -  An XM module tracker/player for ComputerCraft, supporting 8 channel polyphony in-game.</li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://gist.github.com/MCJack123/4f7f1635998f44630c8440e81213d32e">YahtCC</a> -  An implementation of the <em><a href="https://en.wikipedia.org/wiki/Yahtzee">Yahtzee</a></em> dice game.</li>
+</ul>
+<ul>
+<li><a href="https://youcube.madefor.cc">YouCube</a> -  Access YouTube and other services in ComputerCraft.</li>
+</ul>
+<ul>
+<li><a href="https://pastebin.com/nxEMWHY3">YTP2CCP</a> -  Convert commented YouTube piano notes and play them in CC:T.</li>
+</('ul', 0)>
+<h3>Operating systems</h3>
+
+<ul>
+<li><a href="https://install.leveloper.cc">LevelOS</a> -  A modern GUI operating system intended to mimic Windows.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kepler155c/opus">Opus</a> -  An OS which includes a GUI, an app store, and many system-related APIs.</li>
+</ul>
+<ul>
+<li><a href="https://phoenix.madefor.cc">Phoenix</a> -  An OS which emphasizes modularity. It implements its own kernel.</li>
+<ul>
+<li>Phoenix is currently in alpha.</li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://github.com/ocawesome101/recrafted">Recrafted</a> -  A rewrite of CraftOS aiming for full feature parity while maintaining "saner API design."</li>
+</ul>
+<ul>
+<li><a href="https://gist.github.com/MCJack123/42bc69d3757226c966da752df80437dc">UnBIOS</a> -  A program to "undo" CraftOS, returning the system to the same state it was in before running the BIOS. Useful for OS development.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/knijn/cos">cOS</a> - The NixOS inspired configurable ComputerCraft OS.</li>
+</('ul', 0)>
+<h3>Economy</h3>
+
+<ul>
+<li><a href="https://github.com/znepb/colorful"><code>colorful.kst</code></a> - A Krist store which sells colorful blocks, coloring them on demand.</li>
+</ul>
+<ul>
+<li><a href="https://kristify.madefor.cc/">Kristify</a> - Software for highly customizable Krist shops in modern versions of ComputerCraft, powered by <a href="https://basalt.madefor.cc">Basalt</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/migeyel/lp">LP</a> - A Krist shop which dynamically adjusts buy and sell prices based on supply and demand.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/MasonGulu/msks">msks</a> -  A modern, simple shop for the Krist virtual currency.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/znepb/printshop">printshop</a> - A Krist shop which sells 3D prints and posters, also allowing players to print their own designs.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Allymonies/Radon">Radon</a> - A highly configurable Krist shop, supporting categories, nameless shops, and support for multiple currencies.</li>
+</('ul', 0)>
+<h3>Mod-specific programs</h3>
+
+<blockquote>
+<p>Note: This section contains programs which are exclusive to a mod and would not make sense in the Utilities section.</p>
+</blockquote>
+
+<ul>
+<li><a href="https://pastebin.com/UqVHTht5">DraconicControl</a> -  Allows controlling Draconic Evolution's Draconic Reactor from a computer.</li>
+</ul>
+<ul>
+<li><a href="https://pastebin.com/p4zeq7Ma">ReactorControl and TurbineControl</a> -  Automatic management of reactors and turbines in Big Reactors.</li>
+<ul>
+<li><a href="https://pastebin.com/2ZrbnH5w">ReactorControl patched</a> -  The preceeding program uses the <code>parallel</code> API recursively, which could cause it to break. A patch has been developed to fix this.</li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://github.com/MikaylaFischler/cc-mek-scada"><code>cc-mek-scada</code></a> - Configurable control system for Mekanism fission reactors.</li>
+</ul>
+<ul>
+<li><a href="https://p.sc3.io/t6ZRrJutrN"><code>shrekflight</code></a> - A program which provides Creative Mode-like flight and automatic flight to specified coordinates.</li>
+</('ul', 0)>
+<h2>Non-Lua programs</h2>
+
+<blockquote>
+<p>Note: This section is for programs that are not mods or Lua programs and <strong>directly</strong> relate to the subject of this list.</p>
+</blockquote>
+
+<h3>Bridging</h3>
+
+<blockquote>
+<p>Note: This subsection is for programs which allow ComputerCraft things to be accessed out of the game, primarily through the Internet.</p>
+</blockquote>
+
+<!-- vale Google.WordList = NO -->
+<ul>
+<li><a href="https://github.com/SquidDev-CC/cloud-catcher">Cloud Catcher</a> -  A program which enables interaction with computers outside of the game.</li>
+</ul>
+<!-- vale Google.WordList = YES -->
+<ul>
+<li><a href="https://github.com/tmpim/Krist">Krist Server</a> -  A server for the Krist virtual currency, intended for use with CC and CC:T.</li>
+<ul>
+<li><a href="https://github.com/tmpim/kristforge">KristForge</a> -  A miner for the Krist virtual currency.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tmpim/KristWeb2">KristWeb2</a> -  A web wallet for Krist, written in React.</li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://github.com/tmpim/netmountcc">Netmount</a> - Configurable WebSocket and WebDAV remote storage solution.</li>
+</ul>
+<ul>
+<li><a href="https://gitlab.com/Merith-TK/ultron-control">Ultron Control</a> -  A program which exposes a web API for controlling turtles.</li>
+</('ul', 0)>
+<h3>Emulators</h3>
+
+<ul>
+<li><a href="https://emux.cc">CCEmuX</a> -  A CC and CC:T emulator which executes the mods directly.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/SquidDev-CC/copy-cat">Copy Cat</a> -  A CC:T emulator that runs in a web browser.</li>
+</ul>
+<ul>
+<li><a href="https://www.craftos-pc.cc">CraftOS-PC</a> -  A CC:T emulator written in C++ with the intention of speed.</li>
+</('ul', 0)>
+<h3>Plugins</h3>
+
+<ul>
+<li><a href="https://www.craftos-pc.cc/docs/extension">CraftOS-PC for VS Code</a> -  Extension for manipulating and running programs via CraftOS-PC in VSCode.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/MCJack123/craftos2-plugins"><code>craftos2-plugins</code></a> -  A collection of small plugins for CraftOS-PC, maintained by the creator.</li>
+</ul>
+<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=lemmmy.computercraft-extension-pack">VSCode Extensions for ComputerCraft</a> -  Self-explanatory. Contains autocomplete for CC and CC:T functions, as well as a Lua language server.</li>
+</('ul', 0)>
+<h3>Tools</h3>
+
+<ul>
+<li><a href="https://music.madefor.cc">ComputerCraft Music Converter</a> - A web app to convert various sound formats to DFPWM (ComputerCraft's sound format).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/MasonGulu/BIMG-Generator">BIMG-Generator</a> - A Java program to convert images to the BIMG format.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/MCJack123/cc-tstl-template"><code>cc-tstl-template</code></a> -  A template for the TypeScriptToLua compiler that allows writing ComputerCraft programs in TypeScript.</li>
+</ul>
+<ul>
+<li><a href="https://cc.alexdevs.me/index.html">Quartz Encoder</a> - An API to convert links to audio files into DFPWM and MDFPWM.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/MCJack123/sanjuuni">sanjuuni</a> -  A program to quickly convert image and video files into various formats for playback and streaming in ComputerCraft.</li>
+</('ul', 0)>
+<h2>Literature</h2>
+<h3>Essays</h3>
+
+<ul>
+<li><a href="https://gist.github.com/MCJack123/4b2bca21bdc0cf5c67ce7177326c2154">JackMacWindows's essay on ComputerCraft OSes</a> -  Contains suggestions, discouragement, and encouragement for building a proper operating system.</li>
+</ul>
+<ul>
+<li><a href="https://gist.github.com/MCJack123/39ac0847579b3676cc098aca5860c758">JackMacWindows's essay on sane APIs</a> -  Has suggestions for making your APIs easy to use.</li>
+</('ul', 0)>
+<h3>Tutorials</h3>
+<h4>Basics</h4>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=wrUHUhfCY5A">Direwolf20's tutorials</a> -  A series of videos explaining the basics of ComputerCraft programming. </li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=DSsx4VSe-Uk">Sethbling's tutorials</a> -  Another series of videos explaining ComputerCraft programming.</li>
+</ul>
+<ul>
+<li>Lyqyd's <em>Computer Basics</em> series (<a href="https://web.archive.org/web/20170617144334/http://www.computercraft.info/forums2/index.php?/topic/15033-computer-basics-i/">1</a>, <a href="https://web.archive.org/web/20230719181359/https://www.computercraft.info/forums2/index.php?/topic/15041-computer-basics-ii/">2</a>, <a href="https://web.archive.org/web/20230719181437/https://www.computercraft.info/forums2/index.php?/topic/20905-computer-basics-iii/">3</a>) -  Though a bit dated, they are excellent for the beginnings of your journey.</li>
+</ul>
+<ul>
+<li><a href="https://ftb.fandom.com/wiki/Getting<em>Started</em>(ComputerCraft">The FTB Wiki's Getting Started guide for ComputerCraft</a>) -  A useful all-around resource for getting started.</li>
+</('ul', 0)>
+<h4>Moderate or advanced</h4>
+<ul>
+<li><a href="https://web.archive.org/web/20230210142049/https://www.computercraft.info/forums2/index.php?/topic/25670-bbs-guide-to-coroutines/">Bomb Bloke's <em>Guide to Coroutines</em></a> -  Explains why you should not use coroutines, and includes tutorials on using them.</li>
+</('ul', 0)>
+<h3>Charts, tables, and calculators</h3>
+
+<ul>
+<li><a href="https://web.archive.org/web/20231212184953/https://cdn.discordapp.com/attachments/477911902152949771/959769473437560862/Blank<em>Diagram</em>1<em>Page</em>1.png">JackMacWindows's coroutine flow chart</a> -  Demonstrates how coroutines work. Each column represents one coroutine's code flow.</li>
+</ul>
+<ul>
+<li><a href="https://forums.computercraft.cc/index.php?topic=26.0">KingOfGamesYami's event flow chart</a> -  Demonstrates the flow of events when a program runs.</li>
+</ul>
+<!--lint ignore-->
+<ul>
+<li><a href="https://web.archive.org/web/20231212200503/https://cdn.discordapp.com/attachments/477911902152949771/933498000385400862/1642633650325141456271.png">Wojbie's decimal font chart</a> and <a href="https://web.archive.org/web/20231118175928/https://thox.madefor.cc/_images/encodings-cc-chars.png">Cake's hex font chart</a> -  Contains decimal and hex mappings to ComputerCraft font characters.</li>
+</ul>
+<ul>
+<li><a href="https://docs.google.com/spreadsheets/d/1s4d21cL3QrUyegEzYaVXvqDr1zNorgyZ-fDWeopIC1k/edit?usp=sharing">Emma's ComputerCraft compatibility chart</a> -  Shows compatibility across emulators and in-game mods.</li>
+</ul>
+<ul>
+<li><a href="https://monitorsize.madefor.cc/">MasonGulu's monitor size calculator</a> - An online gadget which calculates how many characters and pixels will fit onto a monitor.</li>
+</('ul', 0)>
+<h3>Other lists</h3>
+
+<ul>
+<li><a href="https://github.com/LewisJEllis/awesome-lua">Awesome Lua</a> - An Awesome list specific to the Lua programming language.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/aspen-reeves/awesome-switchcraft">Awesome SwitchCraft</a> - An Awesome list specific to the SwitchCraft server.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/hengestone/lua-languages/blob/master/README.md">Hengestone's list of languages which compile to Lua</a> -  A list of languages which compile to Lua.</li>
+</('ul', 0)>
+<h2>Resources</h2>
+
+<ul>
+<li><a href="https://tweaked.cc"><code>tweaked.cc</code> documentation</a> -  Contains documentation for most methods in CC and CC:T.</li>
+</ul>
+<ul>
+<li><a href="https://computercraft.info/forums2">CC's forums</a> -  An extremely valuable resource, filled with tutorials and programs. <!-- FIXME: Broken link --></li>
+</ul>
+<ul>
+<li><a href="https://forums.computercraft.cc">CC:T's forums</a> -  Also extremely valuable, but is newer.</li>
+</ul>
+<ul>
+<li><a href="https://discord.gg/H2UyJXe">Minecraft Computer Mods Discord</a> -  A Discord server for getting help with programming in CC and CC:T.</li>
+</ul>
+<ul>
+<li><a href="https://reddit.com/r/computercraft">ComputerCraft's subreddit</a> - A subreddit for showing off your ComputerCraft creations, as well as getting help.</li>
+</ul>
+<!-- vale Vale.Terms = NO -->
+<ul>
+<li><a href="https://www.lua.org/manual/">Lua's manual</a> -  Contains documentation on methods not covered in <code>Tweaked.cc</code>. Sections 5 (Auxillary Library) and 6 (Standard Library) are of particular interest.</li>
+</ul>
+<!-- vale Vale.Terms = YES -->
+
+</body>
+</html>

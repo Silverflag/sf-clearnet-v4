@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIF</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>GIF</h1>
+
+<p><strong>Repository:</strong> https://github.com/davisonio/awesome-gif#readme</p>
+<p><strong>Source File:</strong> readme.md</p>
+
+<hr>
+
+<h1>Awesome GIF <a href="https://awesome.re/badge-flat.svg"><img src="https://awesome.re" alt="Awesome</a>"></h1>
+
+<blockquote>
+<p>A curated list of awesome <a href="https://en.wikipedia.org/wiki/GIF">GIF</a> resources.</p>
+</blockquote>
+
+<p>A list of tools, scripts, libraries, examples & other resources related to the Graphics Interchange Format (GIF).</p>
+
+<h2>Contents</h2>
+
+<!--lint disable awesome-toc-->
+<ul>
+<li><a href="#general-tools">General Tools</a></li>
+</ul>
+<ul>
+<li><a href="#utilities">Utilities</a></li>
+</ul>
+<ul>
+<li><a href="#libraries">Libraries</a></li>
+<ul>
+<li><a href="#actionscript">ActionScript</a></li>
+</ul>
+<ul>
+<li><a href="#c">C++</a></li>
+</ul>
+<ul>
+<li><a href="#c-sharp">C#</a></li>
+</ul>
+<ul>
+<li><a href="#haxe">Haxe</a></li>
+</ul>
+<ul>
+<li><a href="#java">Java</a></li>
+</ul>
+<ul>
+<li><a href="#javascript">JavaScript</a></li>
+</ul>
+<ul>
+<li><a href="#php">PHP</a></li>
+</ul>
+<ul>
+<li><a href="#objective-c">Objective-C</a></li>
+</ul>
+<ul>
+<li><a href="#swift">Swift</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#gui">GUI</a></li>
+</ul>
+<ul>
+<li><a href="#hosting">Hosting</a></li>
+</ul>
+<ul>
+<li><a href="#online-tools">Online Tools</a></li>
+</ul>
+<ul>
+<li><a href="#community">Community</a></li>
+</ul>
+<ul>
+<li><a href="#scripts">Scripts</a></li>
+<ul>
+<li><a href="#frames-to-gif">Frames to GIF</a></li>
+</ul>
+<ul>
+<li><a href="#gif-to-frames">GIF to frames</a></li>
+</ul>
+<ul>
+<li><a href="#high-quality-gif">High quality GIF</a></li>
+</ul>
+<ul>
+<li><a href="#optimize-gif">Optimize GIF</a></li>
+</ul>
+<ul>
+<li><a href="#lossy-gif-compressor">Lossy GIF Compressor</a></li>
+</ul>
+<ul>
+<li><a href="#making-gif-from-video">Making GIF from video</a></li>
+</ul>
+<ul>
+<li><a href="#cinemagraphs">Cinemagraphs</a></li>
+</ul>
+<ul>
+<li><a href="#perfect-loop">Perfect loop</a></li>
+</ul>
+<ul>
+<li><a href="#youtube-video-to-gif">YouTube video to GIF</a></li>
+</ul>
+<ul>
+<li><a href="#grabbing-each-frame-of-an-html5-canvas">Grabbing each frame of an HTML5 canvas</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#miscellaneous">Miscellaneous</a></li>
+</('ul', 0)>
+<h2>General Tools</h2>
+
+<ul>
+<li><a href="https://www.ffmpeg.org">FFmpeg</a></li>
+</ul>
+<ul>
+<li><a href="http://www.imagemagick.org/script/index.php">ImageMagick</a></li>
+</ul>
+<ul>
+<li><a href="http://www.graphicsmagick.org/">GraphicsMagick</a> - GraphicsMagick is usually faster than ImageMagick.</li>
+</ul>
+<ul>
+<li><a href="https://zulko.github.io/moviepy/">MoviePy</a> - Python module for video editing.</li>
+</('ul', 0)>
+<h2>Utilities</h2>
+
+<ul>
+<li><a href="https://github.com/lukechilds/gifgen">Gifgen</a> - Simple high quality GIF encoding.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jclem/gifify">Gifify</a> - Convert screen recording into GIF.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jglovier/gifs">Gifs</a> - Storage place for GIFs.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/yahoo/gifshot">Gifshot</a> - Create animated GIFs from media by Yahoo. (<a href="http://yahoo.github.io/gifshot/">demo</a>)</li>
+</ul>
+<ul>
+<li><a href="https://github.com/videlalvaro/gifsockets">Gifsockets</a> - Real Time communication library using Animated GIFs as a transport.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/geelen/x-gif">X-gif</a> - A web component for flexible GIF playback.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/yaronn/GifW00t">GifW00t</a> - JavaScript web recorder.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lelandbatey/gif-machine">gif-machine</a> - GIF creation from YouTube videos.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jbochi/gifstreaming">gifstreaming</a> - Live video streaming server.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dergachev/screengif">Screengif</a> - Create animated GIF screencasts.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sidorares/vnc-over-gif">vnc-over-gif</a> - Serves screen updates as animated GIF over http.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jaipandya/gifdeck">gifdeck</a> - Convert your SlideShares into animated GIFs.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/schuyler/gifbot">Gifbot</a> - GIF search for Slack.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/FuzzyWobble/GIF-Camera">Gif-camera</a> - Create animated GIFs using webcam.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/zehfernandes/gifline">Gifline</a> - Chrome extension to put GIFs in your emails.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/markjaquith/gifdrop">Gifdrop</a> - Create a repository for your collection of GIF images.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/node-gh/gh-gif">Gh-gif</a> - NodeGH plugin for commenting on pull requests/issues using GIF reactions.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/z24/tty2gif">Tty2gif</a> - Record scripts and their outputs into both binary and GIF formats.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/desktoppr/giftoppr">Giftoppr</a> - Sync your favourite GIFs with Dropbox.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Fauntleroy/GIFit">Gifit</a> - Chrome extension to make a GIF from a YouTube video.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/spite/ccapture.js">Ccapture.js</a> - Capture animations created with HTML5 canvas.</li>
+</ul>
+<ul>
+<li><a href="https://getkap.co/">Kap</a> - Beautiful open-source app to capture your screen and export to GIF.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/rotblauer/gifit">Gifit (the other one)</a> - Get a search resulting giphy GIF in markdown in stdout, ala <code>$ gifit kittens</code>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ImageOptim/gifski">gifski</a> - High-quality GIF encoder based on libimagequant.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lettier/gifcurry">Gifcurry</a> - Open-source, Haskell-built editor for GIF makers.</li>
+</('ul', 0)>
+<h2>Libraries</h2>
+
+<h3>ActionScript</h3>
+
+<ul>
+<li><a href="https://github.com/theturtle32/Flash-Animated-GIF-Library">Flash Animated GIF Library</a> - AS3 library for playing Animated GIFs in Flash.</li>
+</('ul', 0)>
+<h3>C++</h3>
+
+<ul>
+<li><a href="https://github.com/pkrumins/node-gif">Node-gif</a> - C++ library to make GIF.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/charlietangora/gif-h">Gif-h</a> - C++ one-header library for the creation of animated GIFs.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/notnullnotvoid/msf<em>gif">msf</em>gif</a> - C/C++ single-header library for creating animated GIFs.</li>
+</ul>
+<h3 id="c-sharp">C#</h2>
+
+<ul>
+<li><a href="https://github.com/Speiser/dot-screencap">dot-screencap</a> - A simple libary to record your screen and save it as animated GIF.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/XamlAnimatedGif/WpfAnimatedGif">WpfAnimatedGif</a> - A simple library to display animated GIF images in WPF.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/XamlAnimatedGif/XamlAnimatedGif">XamlAnimatedGif</a> - A simple library to display animated GIF images in XAML apps (WPF, WinRT, Windows Phone).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mrousavy/AnimatedGif">AnimatedGif</a> - A high performance .NET library for reading and creating animated GIFs.</li>
+</('ul', 0)>
+<h3>Haxe</h3>
+
+<ul>
+<li><a href="https://github.com/snowkit/gif">Gif</a> - Haxe GIF encoder.</li>
+</('ul', 0)>
+<h3>Java</h3>
+
+<ul>
+<li><a href="https://github.com/koral--/android-gif-drawable">Android-gif-drawable</a> - Views and Drawable for displaying animated GIFs on Android.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Hipmob/gifanimateddrawable">gifanimateddrawable</a> - Use an animated GIF as an Android Drawable.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/RoiSoleil/GifView">GifView</a> - Android library to deal with GIF.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sbakhtiarov/gif-movie-view">Gif Movie View</a> - Android View widget for displaying GIF animations.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/felipecsl/GifImageView">GifImageView</a> - Android ImageView that handles animated GIF images.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/extrapixel/gif-animation">Gif-animation</a> - Processing library to play and export GIF.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/nbadal/android-gif-encoder">Android-gif-encoder</a> - Animated GIF encoder for Android.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/curtislarson/GIFDroid">GIFDroid</a> - Android video to GIF converter.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/CaptPhunkosis/Android-GifStitch">Android-GifStitch</a> - Create and share animated GIFs.</li>
+</('ul', 0)>
+<h3>JavaScript</h3>
+
+<ul>
+<li><a href="https://github.com/jnordberg/gif.js">Gif.js</a> - Create GIF from the DOM.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/deanm/omggif">Omggif</a> - GIF 89a encoder and decoder.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sole/Animated<em>GIF">Animated</em>GIF</a> - JavaScript library for creating animated GIFs.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/krasimir/gifffer">Gifffer</a> - JavaScript library that prevents the autoplaying of the animated GIFs.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/rubentd/gifplayer">Gifplayer</a> - JQuery plugin to play and stop animated GIFs.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/shachaf/jsgif">Jsgif</a> - JavaScript GIF parser and player.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tj/node-gify">node-gify</a> - JavaScript convert videos to GIFs using ffmpeg and gifsicle.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/eugeneware/gifencoder">Gifencoder</a> - Server side animated GIF generation for Node.js.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/hughsk/gif-video">Gif-video</a> - JavaScript Convert a GIF image into an HTML5-ready video.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/apankrat/gif-player">Gif-player</a> - On-demand GIF loader/player in JavaScript.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Viral-MediaLab/gifgifLab-face">GifgifLab-face</a> - Facial-emotion detectors.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/javascipt/node-youtube">node-youtube</a> - YouTube to snapshots and GIFs.</li>
+</('ul', 0)>
+<h3>PHP</h3>
+
+<ul>
+<li><a href="https://github.com/Sybio/GifCreator">GifCreator</a> - PHP class that creates animated GIF from multiple images.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/msng/spacer.gif">Spacer.gif</a> - PHP script offering spacer.gif 1x1.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Sybio/GifFrameExtractor">GifFrameExtractor</a> - PHP class that separates all the frames of an animated GIF.</li>
+</('ul', 0)>
+<h3>Objective-C</h3>
+
+<ul>
+<li><a href="https://github.com/mayoff/uiimage-from-animated-gif">UIimage from GIF</a> - UIImage category that loads animated GIFs.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/cyndibaby905/GIFRefreshControl">GIFRefreshControl</a> - "Twitter music" and "Yahoo! Weather" like pull-to-refresh control.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/yfme/UIImageView-PlayGIF">UIImageView-PlayGIF</a> - UIImageView category/subclass for playing GIF.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Flipboard/FLAnimatedImage">FLAnimatedImage</a> - GIF engine for iOS by FlipBoard.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/arturogutierrez/Animated-GIF-iPhone">Animated-GIF-iPhone</a> - Support for Animated GIF on iOS.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/uzysjung/UzysAnimatedGifPullToRefresh">UzysAnimatedGifPullToRefresh</a> - PullToRefresh using animated GIF to any scrollView.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/smileEvday/SvGifView">SvGifView</a> - iOS load and display GIF.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/cemolcay/GiFHUD">GifHUD</a> - iOS progress hud for displaying only animated GIF images.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ElvinJin/Video-Background-GIF">Video-Background GIF</a> - iOS Video Background GIF.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kasatani/AnimatedGifExample">AnimatedGifExample</a> - iOS animated and transparent GIFs.</li>
+</('ul', 0)>
+<h3>Swift</h3>
+
+<ul>
+<li><a href="https://github.com/kirualex/SwiftyGif">SwiftyGif</a> - High performance & easy to use Gif engine.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kaishin/gifu">Gifu</a> - Animated GIF support for iOS in Swift.</li>
+</('ul', 0)>
+<h2>GUI</h2>
+
+<ul>
+<li><a href="http://www.glyph.video/">Glyph</a> - Tool for generating seamlessly looping GIFs and cinemagraphs from videos.</li>
+</ul>
+<ul>
+<li><a href="https://sourceforge.net/projects/qgifer/">Qgifer</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/unixpickle/GifPro">GifPro</a> - GIF encoder for Mac.</li>
+</('ul', 0)>
+<h2>Hosting</h2>
+
+<ul>
+<li><a href="https://gfycat.com">Gfycat</a> - Maximum GIF/video length: 15 seconds.  Maximum file upload is 300Mb.</li>
+</ul>
+<ul>
+<li><a href="https://imgur.com">Imgur</a> - Maximum file upload is 50MB.</li>
+</('ul', 0)>
+<h2>Online Tools</h2>
+
+<ul>
+<li><a href="https://imgur.com/vidgif">Vid2gif</a> - Video to GIF by imgur.</li>
+</ul>
+<ul>
+<li><a href="https://ezgif.com/">EzGif</a> - Online GIF maker and image editor.</li>
+</ul>
+<ul>
+<li><a href="https://giflr.com/">Giflr</a> - A web app for making or remixing animated GIFs.</li>
+</('ul', 0)>
+<h2>Community</h2>
+
+<ul>
+<li><a href="https://giphy.com">Giphy.com</a></li>
+</ul>
+<ul>
+<li><a href="https://www.reddit.com/r/educationalgifs/">/r/educationalgifs</a></li>
+</('ul', 0)>
+<h2>Scripts</h2>
+
+<h3>Frames to GIF</h3>
+
+<p>FFmpeg</p>
+<pre><code class="language-bash">
+ffmpeg -f image2 -i image%d.jpg animated.gif
+</code></pre>
+
+<p>Imagemagick</p>
+<pre><code class="language-bash">
+convert   -delay 20   -loop 0   frames*.png   animated.gif
+</code></pre>
+<p>Bash script (``<code>frames2gif.sh</code>``) for GraphicsMagick, ImageMagick, FFmpeg</p>
+<pre><code class="language-bash">
+#!/bin/bash
+if [ $# -ne 5 ]; then
+    echo &quot;please provide the moviename and directory where to store the frames&quot;
+    echo &quot;./frames2gif.sh [directory] [movie.mp4] [filename.gif] [gm|im|ffmpeg] [png|jpg]&quot;
+    exit 1
+fi
+    if [ &quot;png&quot; == &quot;$5&quot; ]; then
+        suffix=&quot;png&quot;
+    else
+        suffix=&quot;jpg&quot;
+    fi
+
+    CONVERT=$(which convert)
+    GM=$(which gm)
+    FFMPEG=$(which ffmpeg)
+    FFPROBE=$(which ffprobe)
+    FPS=$($FFPROBE -show_streams -select_streams v -i &quot;$2&quot;  2&gt;/dev/null | grep &quot;r_frame_rate&quot; | cut -d&#x27;=&#x27; -f2 | cut -d&#x27;/&#x27; -f1)
+    echo &quot;FPS: ${FPS}&quot;
+if [ &quot;im&quot; == &quot;$4&quot; ]; then # use imagemagick
+    FPS=$(echo &quot;1 / ${FPS} * 100&quot; |bc -l)
+    $CONVERT &quot;$1/*.${suffix}&quot;  -delay ${FPS} -loop 0 &quot;$3&quot;
+elif [ &quot;gm&quot; == &quot;$4&quot; ]; then # use graphicsmagick
+    FPS=$(echo &quot;1 / ${FPS} * 100&quot; |bc -l)
+    $GM convert &quot;$1/*.${suffix}&quot;  -delay ${FPS} -loop 0 &quot;$3&quot;
+else # use crappy gif-algorithm from ffmpeg
+    $FFMPEG -f image2 -framerate ${FPS} -i &quot;$1/%08d.${suffix}&quot; &quot;$3&quot;
+fi
+</code></pre>
+<p>From <a href="https://github.com/graphific/DeepDreamVideo">DeepDreamVideo</a>, <a href="https://github.com/graphific/DeepDreamVideo/blob/master/frames2gif.sh">source</a></p>
+
+<h3>GIF to frames</h3>
+
+<pre><code class="language-bash">
+ffmpeg -i video.mpg image%d.jpg
+</code></pre>
+<pre><code class="language-bash">
+convert -coalesce animated.gif image%05d.png
+</code></pre>
+
+<h3>High quality GIF</h3>
+
+<p>with ffmpeg / based on this <a href="http://blog.pkh.me/p/21-high-quality-gif-with-ffmpeg.html">article</a></p>
+
+<ul>
+<li>Generate a palette :</li>
+<pre><code class="language-bash">
+#!/bin/sh
+start_time=30
+duration=3
+ffmpeg -y -ss $start_time -t $duration -i input.avi \
+-vf fps=10,scale=320:-1:flags=lanczos,palettegen palette.png
+</code></pre>
+</ul>
+<ul>
+<li>Output the GIF using the palette :</li>
+<pre><code class="language-bash">
+#!/bin/sh
+start_time=30
+duration=3
+ffmpeg -ss $start_time -t $duration -i input.avi -i palette.png -filter_complex \
+&quot;fps=10,scale=320:-1:flags=lanczos[x];[x][1:v]paletteuse&quot; output.gif
+</code></pre>
+</('ul', 0)>
+<h3>Optimize GIF</h3>
+
+<pre><code>
+convert -layers Optimize output.gif output_optimized.gif
+</code></pre>
+
+<h3>Lossy GIF Compressor</h3>
+
+<pre><code class="language-bash">
+./gifsicle -O3 --lossy=80 -o lossy-compressed.gif input.gif
+
+</code></pre>
+<p><a href="https://kornel.ski/lossygif">Lossy Gif</a></p>
+
+<h3>Making GIF from video</h3>
+
+<pre><code class="language-python">
+from moviepy.editor import *
+
+clip = (VideoFileClip(&quot;input.avi&quot;)
+        .subclip((4,00.00),(5,00.00))
+        .resize(0.3))
+clip.write_gif(&quot;output.gif&quot;)
+
+</code></pre>
+<!--lint ignore double-link-->
+<p><a href="http://zulko.github.io/blog/2014/01/23/making-animated-gifs-from-video-files-with-python/#converting-a-video-excerpt-into-a-gif">article</a></p>
+
+<h3>Cinemagraphs</h3>
+
+<p>Freezing a region</p>
+
+<pre><code class="language-python">
+from moviepy.editor import *
+
+clip = (VideoFileClip(&quot;input.avi&quot;)
+        .subclip((4,00.00),(5,00.00))
+        .resize(0.3)
+        .fx(vfx.freeze_region, outside_region=(170, 230, 380, 320)))
+clip.write_gif(&quot;output.gif&quot;, fps=15)
+</code></pre>
+<!--lint ignore double-link-->
+<p><a href="http://zulko.github.io/blog/2014/01/23/making-animated-gifs-from-video-files-with-python/#freezing-a-region">article</a></p>
+
+<pre><code class="language-bash">
+ffmpeg \
+-ss ${starttime} -t ${duration} -i ${vidfile}                         `# body of loop` \
+-ss TODO ${starttime} MINUS ${duration} -t ${fadetime} -i ${vidfile}  `# lead-in for crossfade` \
+-loop 1 -i ${stillfile}                                               `# masked still image` \
+-filter_complex &quot;
+  [0:v]setpts=PTS-STARTPTS[vid];                                      `# speed adjustment - not needed here, so noop`
+  color=white,scale=3840x2160,fade=in:st=0:d=${fadetime}[alpha];      `# crossfade alpha, double length ahead of speed change`
+  [1:v][alpha]alphamerge[am];                                         `# apply alpha to lead-in`
+  [am]setpts=PTS+(${duration}-${fadetime})/TB[layer2];                  `# speed adjustment and offset for lead-in`
+  [vid][layer2]overlay[oo];                                           `# overlay for crossfade`
+  [oo][2:v]overlay=shortest=1[out1];                                  `# overlay still image`
+  [out1]crop=w=${cropfactor}*iw:h=${cropfactor}*ih:y=${yoffset}*ih,scale=${outputwidth}:-1, `# crop and scale`
+  eq=gamma=${gamma}:contrast=${contrast}:saturation=${saturation},unsharp                   `# final adjustments`
+&quot; -an output.mp4
+</code></pre>
+
+<h3>Perfect Loop</h3>
+
+<pre><code class="language-python">
+import moviepy.editor as mp
+from moviepy.video.tools.cuts import FramesMatches
+
+clip = mp.VideoFileClip(&quot;input.avi&quot;).resize(0.3)
+scenes = FramesMatches.from_clip(clip, 10, 3)
+
+selected_scenes = scenes.select_scenes(2, 1, 4, 0.5)
+selected_scenes.write_gifs(clip.resize(width=450), &quot;./outputs_directory&quot;)
+
+</code></pre>
+<p><a href="http://zulko.github.io/blog/2015/02/01/extracting-perfectly-looping-gifs-from-videos-with-python-and-moviepy/">article</a></p>
+
+<h3>YouTube video to GIF</h3>
+
+<ul>
+<li>Download it via youtube-dl and then convert it.</li>
+<pre><code>
+youtube-dl https://www.youtube.com/watch?v=V2XpsaLqXc8
+</code></pre>
+</ul>
+<p><a href="https://rg3.github.io/youtube-dl/">Youtube-dl</a></p>
+
+<h3>Grabbing each frame of an HTML5 Canvas</h3>
+
+<p>Using <a href="https://phantomjs.org">PhantomJS</a>.</p>
+
+<p>Example with this <a href="http://www.effectgames.com/demos/canvascycle/?sound=0">canvas</a>.</p>
+
+<pre><code class="language-javascript">
+var webPage = require(&#x27;webpage&#x27;);
+var fs = require(&#x27;fs&#x27;);
+var page = webPage.create();
+
+var NB_FRAME = 100;
+var current = 0;
+
+page.open(&#x27;http://www.effectgames.com/demos/canvascycle/?sound=0&#x27;,
+function(status) {
+  if (status === &quot;success&quot;) {
+      var current = 0;
+      var grabber = setInterval(function () {
+          var frame = page.evaluate(function() {
+           return document.getElementById(&#x27;mycanvas&#x27;).toDataURL(&quot;image/png&quot;).split(&quot;,&quot;)[1];
+          });
+          fs.write(&quot;./frame-&quot; + current + &quot;.png&quot;,atob(frame), &#x27;wb&#x27;);
+      if (++current === NB_FRAME) {
+         window.clearInterval(grabber);
+         phantom.exit(0);
+      }
+    }, 1000);
+  }
+});
+</code></pre>
+
+<h2>Miscellaneous</h2>
+
+<ul>
+<li><a href="https://superuser.com/questions/569924/why-is-the-gif-i-created-so-slow/569967">Why is the GIF I created so slow?</a> - Using ImageMagick to solve problems concerning GIF speed.</li>
+</('ul', 0)>
+<h2>Use</h2>
+
+<p>The best ways to use this list are:</p>
+
+<ul>
+<li>By browing the <a href="#contents">contents</a>.</li>
+</ul>
+<ul>
+<li>By using <kbd>command</kbd> + <kbd>F</kbd> to search the contents</li>
+</('ul', 0)>
+<h2>Credits</h2>
+
+<p>By <a href="https://davison.io">Craig Davison</a> and contributors.</p>
+
+<p>Based on a <a href="https://github.com/sindresorhus/awesome/issues/872">recovered list</a> by <a href="https://ismailbaaj.fr">Ismail Baaj</a>.</p>
+
+</body>
+</html>

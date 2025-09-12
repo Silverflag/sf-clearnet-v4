@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VLC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>VLC</h1>
+
+<p><strong>Repository:</strong> https://github.com/mfkl/awesome-vlc#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<h1>Awesome VLC <a href="https://awesome.re/badge.svg"><img src="https://awesome.re" alt="Awesome</a>"> <a href="https://github.com/mfkl/awesome-vlc"><img src="https://cdn.worldvectorlogo.com/logos/vlc.svg" align="right" alt="VLC" width="128"></a></h1>
+
+<blockquote>
+<p><a href="https://www.videolan.org/vlc/">VLC</a> is a free and open source cross-platform multimedia player and framework that plays most multimedia files as well as DVDs, Audio CDs, VCDs, and various streaming protocols.</p>
+</blockquote>
+
+<p>This is a list of awesome resources about VLC and LibVLC.</p>
+
+<h2>Contents</h2>
+
+<ul>
+<li><a href="#docs">Docs</a></li>
+</ul>
+<ul>
+<li><a href="#vlc-native-plugins">VLC native plugins</a></li>
+</ul>
+<ul>
+<li><a href="#vlc-lua-extensions">VLC lua extensions</a></li>
+</ul>
+<ul>
+<li><a href="#apps">Apps</a></li>
+</ul>
+<ul>
+<li><a href="#bindings">Bindings</a></li>
+</ul>
+<ul>
+<li><a href="#tutorials">Tutorials</a></li>
+</ul>
+<ul>
+<li><a href="#ebook">Ebook</a></li>
+</ul>
+<ul>
+<li><a href="#community">Community</a></li>
+</('ul', 0)>
+<h2>Docs</h2>
+
+<ul>
+<li><a href="https://www.videolan.org/">videolan.org</a> - Where it all starts.</li>
+</ul>
+<ul>
+<li><a href="https://videolan.videolan.me/vlc/group__libvlc.html">LibVLC API docs</a> - Docs for LibVLC's engine. C APIs.</li>
+</ul>
+<ul>
+<li><a href="https://wiki.videolan.org/">Wiki</a> - Lots of great info on here.</li>
+</ul>
+<ul>
+<li><a href="https://code.videolan.org/videolan/vlc/-/issues">Code & Bug tracker</a> - Recently moved from Trac, contains a lot of valuable info on bugs and feature requests.</li>
+</ul>
+<ul>
+<li><a href="https://wiki.videolan.org/VLC<em>command-line</em>help">CLI flags</a> - A comprehensive list of all VLC commandline flags. Really useful for searching random flags that you come across in the wild.</li>
+</('ul', 0)>
+<h2>VLC native plugins</h2>
+
+<ul>
+<li><a href="https://github.com/nurupo/vlc-pause-click-plugin">vlc-pause-click-plugin</a> - Plugin for VLC that pauses/plays video on mouse click.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/aklexel/vlc-tip-plugin">vlc-tip-plugin</a> - TIP (translate it, please) is a plugin for VLC media player that helps you to study languages by watching videos.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/johang/vlc-bittorrent">vlc-bittorrent</a> - A bittorrent plugin for VLC.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/nemosharma6/vlc-plugin-marker">vlc-plugin-marker</a> - The marker plugin provides you the ability to mark important sections of a video. These sections can be viewed later without the need to search for it in the entire video.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/spmn/vlc-win10smtc">vlc-win10smtc</a> - Plugin that integrates VLC Media Player with Windows 10 System Media Transport Controls (SMTC).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lachie/vlc-mixer">vlc-mixer</a> - Audio mixer VLC plugin written in Zig.</li>
+</('ul', 0)>
+<h2>VLC web & lua extensions</h2>
+
+<ul>
+<li><a href="https://addons.videolan.org/browse/">VideoLAN addons website</a> - VideoLAN addons website.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/surrim/vlc-delete">vlc-delete</a> - VLC extension to remove videos from the hard disk.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/XaF/TraktForVLC">TraktForVLC</a> - Automatically trakt.tv what you're watching on VLC.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Abstraxt-AA/playlist-youtube-vlc">playlist-youtube-vlc</a> - Lua plugin to parse Youtube playlists.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Trevelopment/vlc-super-skipper">vlc-super-skipper</a> - Automatically Skip Opening and Ending Sequences.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/piebro/vlc-mcp-server">vlc-mcp-server</a> -  An MCP (Model Context Protocol) Server to play and control movies using the VLC HTTP API and natural language using an LLM.</li>
+</('ul', 0)>
+<h2>Apps</h2>
+
+<ul>
+<li><a href="https://code.videolan.org/videolan/vlc">VLC desktop</a> - The original Desktop app running on Linux/Windows (Qt) and macOS (Cocoa).</li>
+</ul>
+<ul>
+<li><a href="https://code.videolan.org/videolan/vlc-ios">VLC iOS</a> - VLC for iOS is the official port of VLC on the iOS/tvOS platforms.</li>
+</ul>
+<ul>
+<li><a href="https://code.videolan.org/videolan/vlc-android">VLC Android</a> - VLC for Android, Android TV and ChromeOS.</li>
+</ul>
+<ul>
+<li><a href="https://code.videolan.org/videolan/vlc-bench">VLC Benchmark (Beta)</a> - Video decoding and rendering benchmark tool, based on VLC.</li>
+</('ul', 0)>
+<h2>Bindings</h2>
+
+<ul>
+<li><a href="https://code.videolan.org/videolan/VLCKit">VLCKit</a> - The libvlc bindings for macOS, iOS, iPadOS and tvOS in Objective-C.</li>
+</ul>
+<ul>
+<li><a href="https://code.videolan.org/videolan/vlc-android/-/tree/master/libvlc">libvlcjni</a> - The libvlc bindings for the Android platform.</li>
+</ul>
+<ul>
+<li><a href="https://code.videolan.org/videolan/vlc-unity">vlc-unity</a> - Unity3D integration for VLC.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/oaubert/python-vlc">python-vlc</a> - Python vlc bindings.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/caprica/vlcj">vlcj</a> -  Java framework for the vlc media player (desktop).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/videolan/libvlcsharp">LibVLCSharp</a> - Cross-platform .NET/Mono bindings for LibVLC.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/adrg/libvlc-go">libvlc-go</a> - Go bindings for libVLC and high-level media player interface.</li>
+</ul>
+<ul>
+<li><a href="https://code.videolan.org/videolan/libvlcpp/">libvlcpp</a> - C++ bindings for libvlc.</li>
+</ul>
+<ul>
+<li><a href="https://code.videolan.org/jbk/vlc.js">vlc.js (beta)</a> - WebAssembly support for LibVLC. </li>
+</ul>
+<ul>
+<li><a href="https://github.com/solid-software/flutter<em>vlc</em>player">flutter<em>vlc</em>player</a> - Flutter bindings to LibVLC.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/alexmercerind/dart<em>vlc">dart</em>vlc</a> - Dart bindings for libvlc.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/RSATom/WebChimera.js">WebChimera.js</a> - Electron bindings for libvlc.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kassane/libvlc-zig">libvlc-zig</a> - Zig bindings for libVLC.</li>
+</('ul', 0)>
+<h2>Tutorials</h2>
+
+<ul>
+<li><a href="https://mfkl.github.io/hls/2018/10/10/How-to-record-HLS-stream-with-LibVLCSharp-and-.NET-Core.html">HLS Record tutorial</a> - How to record an HLS stream with LibVLCSharp and .NET Core.</li>
+</ul>
+<ul>
+<li><a href="https://mfkl.github.io/libvlc/rtsp/xamarin/forms/2018/12/05/crossplatform-RTSP-mosaic-views-with-libvlcsharp.html">RTSP mosaic tutorial</a> - Cross-platform RTSP Mosaic views with LibVLCSharp.</li>
+</ul>
+<ul>
+<li><a href="https://doumer.me/vlc-media-player-in-xamarinforms-alternative-avplayer-andmediaplayer">MediaElement tutorial</a> - VLC Media Player control in Xamarin Forms.</li>
+</('ul', 0)>
+<h2>Ebook</h2>
+
+<ul>
+<li><a href="https://mfkl.gumroad.com/l/libvlc-good-parts">The Good Parts of LibVLC</a> - The first ebook about the VideoLAN non-profit organization and the opensource LibVLC developer SDK.</li>
+</('ul', 0)>
+<h2>Community</h2>
+
+<ul>
+<li><a href="https://stackoverflow.com/questions/tagged/libvlc">Stack Overflow - LibVLC</a> - LibVLC on Stack Overflow.</li>
+</ul>
+<ul>
+<li><a href="https://stackoverflow.com/questions/tagged/vlc">Stack Overflow - VLC</a> - VLC on Stack Overflow.</li>
+</ul>
+<ul>
+<li><a href="https://www.videolan.org/support/lists.html">Mailing Lists</a> - VideoLAN developer mailing lists.</li>
+</ul>
+<ul>
+<li><a href="https://wiki.videolan.org/Contact_VideoLAN/#IRC">IRC</a> - The VideoLAN IRC information.</li>
+</ul>
+<ul>
+<li><a href="https://forum.videolan.org/">Forum</a> - The official VideoLAN forum.</li>
+</ul>
+<ul>
+<li><a href="https://discord.gg/3h3K3JF">LibVLC Discord</a> - The official LibVLC Community Discord Server.</li>
+</ul>
+<ul>
+<li><a href="https://twitter.com/videolan">Twitter</a> - The official VideoLAN Twitter account.</li>
+</ul>
+<ul>
+<li><a href="https://www.reddit.com/r/vlc">Reddit</a> - Unofficial VLC community on Reddit.</li>
+</('ul', 0)>
+<h2>Contributing</h2>
+
+<p><a href="contributing.md">Contributions</a> are welcome!</p>
+
+</body>
+</html>

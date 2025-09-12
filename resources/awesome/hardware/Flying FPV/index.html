@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flying FPV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flying FPV</h1>
+
+<p><strong>Repository:</strong> https://github.com/Matthias84/awesome-flying-fpv#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<h1>Awesome Flying FPV <a href="https://awesome.re/badge.svg"><img src="https://awesome.re" alt="Awesome</a>"></h1>
+
+<!--lint disable awesome-toc no-repeat-punctuation match-punctuation -->
+
+<p>This is a list of Free Software and Open Hardware dedicated for multicopters as well as airplanes or flying wings. We list esp. established projects with a active community and also some classics that might be legacy but important projects with a lot of mods.</p>
+
+<p>We hope to give you some orientation where to start and present you the full spectrum of open source development on the world of UAVs.</p>
+
+<blockquote>
+<p><strong>Warning</strong></p>
+<p>You as creator, mechanic, spotter and pilot <strong>are responsible</strong> for your drone and doing. It is on you to avoid damages and not to hurt any person or animal.</p>
+<p>You are also responsible to match the local regulations of your country and to know where and how to fly with a minimum risk to others and yourself.</p>
+<p>Please respect <a href="https://en.wikipedia.org/wiki/Airmanship">good airmanship</a>.</p>
+</blockquote>
+
+<blockquote>
+<p><strong>Warning</strong></p>
+<p>In past and recent wars and <strong>military conflicts</strong>, parties make use of UAVs and sometimes DIY aircraft to spot and attack opponents.</p>
+<p>My intention on this technology is in opposite a peaceful research and learning on tech and nature, not on killing people! <a href="https://www.stopkillerrobots.org">stopkillerrobots.org</a></p>
+</blockquote>
+
+<h2>Contents</h2>
+
+<ul>
+<li><a href="#airframes">Airframes</a></li>
+<ul>
+<li><a href="#multicopters-">Multicopters 🚁</a></li>
+</ul>
+<ul>
+<li><a href="#fixed-wing--planes-%EF%B8%8F">Fixed Wing / Planes 🛩️</a></li>
+</ul>
+<ul>
+<li><a href="#vtols-">VTOLs 🚀</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#batteries--power-control-">Batteries & Power Control 🔋</a></li>
+</ul>
+<ul>
+<li><a href="#motor-control-%EF%B8%8F">Motor Control ⚙️</a></li>
+</ul>
+<ul>
+<li><a href="#flight-control-%EF%B8%8F">Flight Control 👨‍✈️</a></li>
+</ul>
+<ul>
+<li><a href="#rc-transmitters--handcontroller-">RC Transmitters & Handcontroller 🎮</a></li>
+<ul>
+<li><a href="#modules-">Modules 🧩</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#vtx-">VTX 📺</a></li>
+</ul>
+<ul>
+<li><a href="#camera--gimbals-">Camera & Gimbals 🎥</a></li>
+</ul>
+<ul>
+<li><a href="#gps-%EF%B8%8F">GPS 🛰️</a></li>
+</ul>
+<ul>
+<li><a href="#sensors-%EF%B8%8F">Sensors 🌡️</a></li>
+</ul>
+<ul>
+<li><a href="#video-receivers-">Video Receivers 📶</a></li>
+</ul>
+<ul>
+<li><a href="#antennas-and-trackers-">Antennas and Trackers 📡</a></li>
+</ul>
+<ul>
+<li><a href="#telemetry--logs-">Telemetry & Logs 📊</a></li>
+</ul>
+<ul>
+<li><a href="#mission-control--basestation-%EF%B8%8F">Mission Control & Basestation 🗺️</a></li>
+</ul>
+<ul>
+<li><a href="#companion-computers--integration-">Companion Computers & Integration 💻</a></li>
+</ul>
+<ul>
+<li><a href="#computer-vision-">Computer Vision 🤖</a></li>
+</ul>
+<ul>
+<li><a href="#complete-systems-">Complete Systems 🎁</a></li>
+</ul>
+<ul>
+<li><a href="#security--safety-">Security & Safety 🪂</a></li>
+<ul>
+<li><a href="#simulators-">Simulators 🌐</a></li>
+</ul>
+<ul>
+<li><a href="#checklists-">Checklists 📋</a></li>
+</ul>
+<ul>
+<li><a href="#id-systems-">ID Systems 🛂</a></li>
+</ul>
+<ul>
+<li><a href="#hacking--hijacking-">Hacking & Hijacking 🔓</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#accesoirs-">Accesoirs 🪠</a></li>
+<ul>
+<li><a href="#mobile-apps-">Mobile Apps 📱</a></li>
+</ul>
+<ul>
+<li><a href="#workbench-">Workbench 🧰</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#legal-information-%EF%B8%8F">Legal Information 🏛️</a></li>
+</ul>
+<ul>
+<li><a href="#communities-%EF%B8%8F">Communities 🗣️</a></li>
+<ul>
+<li><a href="#forums-social-media">Forums & Social Media</a></li>
+</ul>
+<ul>
+<li><a href="#video-channels">Video Channels</a></li>
+</('ul', 2)>
+</('ul', 0)>
+<h2>Airframes</h2>
+
+<p>The body of a UAV depends on the kind of aircraft and is optimized for it's usecase. Is it high speed for racing, improved agility for acrobatic freestyle, a heavy lifter for filming , long distance observations, ... . This requirements result in different mechanics and materials and take DIY aspect into account.</p>
+
+<p>You will find also a lot of spare parts or mods / extensions to commercial vehicles, which we don't list up here!</p>
+
+<blockquote>
+<p><strong>Note</strong></p>
+<p>Building a UAV from scratch is a <strong>pretty challenging task</strong> for a beginner, esp. if you have limited amount of time.</p>
+<p>So it might be wise, to try existing solutions or kits before, so you don't get stuck to early and have a handy manual. Later on, you can try different mods or start with custom builds, if you have gained more experience and know how to avoid common pitfalls.</p>
+<p>See also: <a href="https://www.youtube.com/watch?v=ZCOlT_sz6Gs">My Raspberry Pi drone: the story so far by Matchstic</a>.</p>
+</blockquote>
+
+<h3>Multicopters 🚁</h3>
+
+<p>Copters are built using different materials from alu / carbon profiles to CNC cuts to full 3D printed cases and have different configurations for different number of rotors (bi... octo):</p>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=u_ArriXbrR0">Sub 250g autonomous drone</a> - 3D printed bare minimum frame with Liion and GPS</li>
+</ul>
+<ul>
+<li><a href="https://github.com/WE-are-FPV/JeNo-5.1">JeNo 5.1"</a> - Modern carbon wide X-frame with accessoirs</li>
+</ul>
+<ul>
+<li><a href="https://www.printables.com/de/model/396395-goblin-fpv-drone">Goblin v3</a> - 3D printed frame, 4S power, 16x16 AIO stack, 2023.</li>
+</ul>
+<ul>
+<li><a href="https://www.thingiverse.com/thing:4769576">NanoLongRange</a> - 3D printed frame with mostly a 18650 Liion cell and a all-in-one board for whoops, 2021.</li>
+<ul>
+<li><a href="https://www.thingiverse.com/thing:5428365">Discovery Edition</a> - Optimized frame with integrated battery holder, 2022.</li>
+</ul>
+<ul>
+<li><a href="https://www.thingiverse.com/thing:4818009">NanoLongRange 2</a> - With GPS and slightly lighter in 3 variants also for 21700 cells, 2021.</li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://www.thingiverse.com/thing:5428923">NLR35</a> - Lighter and similar to NLR, but 21700 cell, 2022.</li>
+</ul>
+<ul>
+<li><a href="https://hackaday.com/2023/09/01/hefty-3d-printed-quadcopter-meets-nasty-end/">hefty</a> - Full 3d printed heavy quadcopter with custom made motors, 2023</li>
+</ul>
+<ul>
+<li><a href="https://www.thingiverse.com/thing:4502805">Ultimate 3D printable Cinewhoop</a> - 2020.</li>
+</ul>
+<ul>
+<li><a href="https://blog.prusaprinters.org/how-to-build-a-3d-printed-micro-drone_29310/">TinyTina</a> - 3D printed whoop, 2018.</li>
+</ul>
+<ul>
+<li><a href="https://www.thingiverse.com/thing:4089842">Heavy Lift Quadcopter Frame</a> - CNC cut by carbon, 2020.</li>
+</ul>
+<ul>
+<li><a href="https://thecognifly.github.io">The CogniFly</a> - Robust frame for research, swarms and indoor with RPI companion computer, 2021.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tbs-trappy/source_one">TBS Source One</a> - Carbon racing frame in 5 revisions, 2021.</li>
+</ul>
+<ul>
+<li><a href="https://www.team-blacksheep.com/products/prod:source<em>two</em>5in">TBS Source Two</a> - Carbon racing frame, 2019.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ps915/source_podracer">TBS Source Podracer</a> - 3D carbon racing frame, 2020.</li>
+</ul>
+<ul>
+<li><a href="https://www.team-blacksheep.com/products/prod:source_v">TBS Source V</a> - 5" carbon racing frame, 2021.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ps915/source_x">TBS Source X</a> - Carbon racing frame, 2019.</li>
+</ul>
+<ul>
+<li><a href="https://www.thingiverse.com/thing:4868250">AESIR II</a> - Modular and customized 3D and carbon frame, 2021.</li>
+</ul>
+<ul>
+<li><a href="https://www.thingiverse.com/thing:2004357">Foldable Drone Frame</a> - 3D printed with gimbal option 2017.</li>
+</ul>
+<ul>
+<li><a href="https://www.thingiverse.com/thing:793425">OpenRC Quadcopter</a> - 3D printed with closed case , 2015.</li>
+</ul>
+<ul>
+<li><a href="https://www.thingiverse.com/thing:511668">Hovership MHQ2</a> - 3D printed foldable, 2014.</li>
+</ul>
+<ul>
+<li><a href="https://www.thingiverse.com/thing:234867">Crossfire 2</a> - Huge quad 3D printed, 2014.</li>
+</ul>
+<ul>
+<li><a href="https://www.thingiverse.com/thing:160607">Spyda 500</a> - Huge quad 3D printed, 2013.</li>
+</('ul', 0)>
+<h3>Fixed Wing / Planes 🛩️</h3>
+
+<p>Traditional RC airplanes are created using balsa wood and foil covered rips for the wings. Commercial models make often use of foam, that you can also cut by CNC and lasers to create wing profiles.  Also fully 3D printed planes are possible, that you glue and strength with carbon roods. There is also a growing community for (commercial) 3D printed models like <a href="https://craycle.com/">Craycle Hobby</a>, <a href="https://www.eclipson-airplanes.com/">Eclipson airplanes</a>,<a href="https://3dlabprint.com/product-category/printable-airplanes/">3D lab print</a>, <a href="https://www.planeprint.com/">Plane Print</a> , <a href="https://owlplane.com/">OWLplane</a> or <a href="https://rc-jetprint.de/en/">rc-jetprint.de</a> using lightweight PLA to save weight.</p>
+
+<ul>
+<li><a href="https://www.printables.com/de/model/422806-hawk-modular-rc-wing-airplane">HAWk Modular RC Wing Airplane v1</a> - 3D printed LW-PLA 1m++ pusher / puller wing, full BOM + manual docs, 2023.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=sTjXVeo_lpQ">V-Tail Aircraft for Long Range FPV & Autonomous Missions - by AeroStuff FPV</a> - Use folded depron panels for body and wings for a V-Tail pusher.</li>
+</ul>
+<ul>
+<li><a href="https://forum.flitetest.com/index.php?threads/large-modular-uav-design.69987/">Highly Modular Design -1 (HMD1)</a> - 3D printed ABS V-tail plane for research, 2022.</li>
+</ul>
+<ul>
+<li><a href="https://craycle.com/product/ranger-v2-800-mm-3ch-trainer-stl-file/">Ranger V2</a> - Sub 1m pusher trainer plane, 2022.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=ZA8fGOzJB10">Berkik 3 wing</a> - 1.3m depron wing ,2021.</li>
+</ul>
+<ul>
+<li><a href="https://www.printables.com/de/model/76098-lukisegler-electric-rc-glider">LukiSegler</a> - Glider, 2021.</li>
+</ul>
+<ul>
+<li><a href="https://www.thingiverse.com/thing:4547317">SakhWing</a> - Drak like fixed wing printed with PETG, 2020.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=PcScS4Cj<em>Iw&list=PLEH</em>vTrFddgP8bRQFMK_z8rwmRth60Fen">GemINIce</a> - 2 props dpron airplane, 2016.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?app=desktop&v=X6hJCQNxVzs">Joywing</a> - Simple race wing, 2019.</li>
+</ul>
+<ul>
+<li><a href="https://www.thingiverse.com/thing:4011218">Eclipson Model V</a> - Mostly 3D printed commercial airplane with wheels, 2019.</li>
+</ul>
+<ul>
+<li><a href="https://www.thingiverse.com/thing:2752892">Eclipson Model Y</a> - Mostly 3D printed commercial airplane with wheels, 2018.</li>
+</ul>
+<ul>
+<li><a href="https://www.thingiverse.com/thing:3040294">Northern Pike</a> - 36" fixed wing 3D printed, 2018.</li>
+</ul>
+<ul>
+<li><a href="https://www.thingiverse.com/thing:3023606">Moose</a> - 1m puller plane made of PLA, 2018</li>
+</ul>
+<ul>
+<li><a href="https://www.thingiverse.com/thing:2187747">Supernove</a> - Jet like pusher RC plane.</li>
+</ul>
+<ul>
+<li><a href="https://www.thingiverse.com/thing:2044074">RC Flying Wing</a> - Sub 1m 3D printed pusher plane 2017.</li>
+</ul>
+<ul>
+<li><a href="https://www.thingiverse.com/thing:3605665">GASB Three</a> - Fixed wing 3D printed, 2019.</li>
+</ul>
+<ul>
+<li><a href="https://www.thingiverse.com/thing:1831295">GASB Two</a> - Fixed wing jet 3D printed with electric ducted fan (EDF) instead of classic propeller, 2016.</li>
+</ul>
+<ul>
+<li><a href="https://www.thingiverse.com/thing:1659724">GASB One</a> - 80cm fixed wing 3D printed, developed in 6 revisions, 2016.</li>
+</ul>
+<ul>
+<li><a href="https://www.thingiverse.com/thing:453090">Red swan</a> - 1950mm printed plane with wing ribs, sucessor of Red Duck modell, 2014.</li>
+</ul>
+<ul>
+<li><a href="https://lefish.fandom.com/wiki/Building<em>Le</em>Fish#Plans">Le Fish glider</a> - Open Source aerobatics glider with a lot of remixes, 2005.</li>
+</('ul', 0)>
+<h3>VTOLs 🚀</h3>
+
+<p>Vertical take-off and landing are air vehicles that transform from copter to a gliding wing, making it very easy to start/land but require a more complex mechanic and become a tip heavier than fixed wings.</p>
+
+<ul>
+<li><a href="https://github.com/StephenCarlson/MiniHawk-VTOL">MiniHawk-VTOL v2.0</a> - 3d printed with 3 props</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=gPEeCjVrTBw">VTOL in 5 revisions</a> - 3D printed and foam, 2018.</li>
+<ul>
+<li><a href="https://www.printables.com/de/model/261434-vase-mode-wing">wing profile</a> - Resulting wing profile 3D printing with LW-PLA.</li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://hackaday.com/2018/08/27/the-best-new-quad-is-a-bicopter/">bicopter kit</a> - CNC carbon, 2018.</li>
+</('ul', 0)>
+<h2>Batteries & Power Control 🔋</h2>
+
+<p>Commercial LiPo battery packs are common in RC, but can be replaced with custom 18650 based Liion packs. The onboard power bus drives the ESC and FC directly, which offer 5V outputs to supply onboard units.</p>
+
+<ul>
+<li>18650 LiIon packs</li>
+<ul>
+<li><a href="https://oscarliang.com/li-ion-battery-long-range/">Using Li-Ion Battery Pack for Long Range FPV Flying</a> - 4S and background infos, 2023.</li>
+</ul>
+<ul>
+<li><a href="https://blog.seidel-philipp.de/diy-build-a-longrange-lithium-ion-battery/">build a „LongRange“ Lithium Ion Battery</a> - 4S 3000mAh, 2020.</li>
+</ul>
+<ul>
+<li><a href="https://nuxnik.com/diy-fpv-goggle-battery-pack/">DIY FPV Goggle Battery Pack</a> - For googles, with charge meter and 3D case, 2021.</li>
+</ul>
+<ul>
+<li><a href="https://www.printables.com/de/model/1181-18650-improved-spacerholder">18650 spaceholder</a> - 3D print for easier packaging, 2023.</li>
+</ul>
+</ul>
+<ul>
+<li>Solar plane</li>
+<ul>
+<li><a href="https://hackaday.com/2022/08/06/solar-plane-might-be-able-to-last-through-the-night/">Solar Dragon - Solar Plane Might Be Able To Last Through The Night</a> - Plane with PV beplanned ribs, 2022.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=1OGrDvInUAY">rctestflight series</a> - 8hrs30 fixed wing full of solar cells with great measurements and background infos (<a href="https://hackaday.com/2022/09/27/24-hours-of-le-airplanes/">might last 24hrs</a>), 2022.</li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://github.com/stuartpittaway/diyBMSv4">diyBMS v4</a> - Battery management PCB and firmware for LiIon packs.</li>
+</('ul', 0)>
+<h2>Motor Control ⚙️</h2>
+
+<p>Usually brushless DC motors (BLDC) are used for their power and precision. They require Electronic Speed Controller (ESC) per motor.</p>
+
+<ul>
+<li><a href="https://github.com/bitdump/BLHeli">BLheli_S</a> - Popular Firmware for ESCs with fine-grained control.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mathiasvr/bluejay">BlueJay</a> - BLheli fork, Digital ESC firmware for controlling brushless motors. More features like custom melodies. Since 2020.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/am32-firmware/AM32">AM32-MultiRotor-ESC-FW</a> - DSHOT, telemetry, 2024</li>
+</ul>
+<ul>
+<li><a href="https://github.com/davidmolony/MESC<em>FOC</em>ESC">MESC FOC ESC</a> - Open Hardware and Firmware for STM32 basrd ESC.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/stylesuxx/esc-configurator">ESC Configurator</a> - Web app to setup your BLHeli / Bluejay ESC.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/bw1129/PIDtoolbox">PIDtoolbox</a> - tuning your PID settings for max. performance of your specific modell.</li>
+</('ul', 0)>
+<h2>Flight Control 👨‍✈️</h2>
+
+<p>Modern autopilot software require STM32 based boards with F4/F7 chip generation and usually no longer support legacy boards like NAZE32, CC3D, ArduPilot, etc. Most projects are base on Baseflight / Cleanflight firmware and Desktop Configurator.</p>
+
+<ul>
+<li><a href="https://github.com/light/inav">INAV</a> - Focus on GPS based flight planning / autonomous flights for wings and copters.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/betaflight/betaflight">betaflight</a> - Focus on racing and agility for wings and copters.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/emuflight/EmuFlight">EmuFlight</a> - Focus on modern algorithms.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/d-ronin/dronin/">dRonin</a> - Supporting Openpilot and other target boards.</li>
+</ul>
+<ul>
+<li><a href="https://ardupilot.org">Ardupilot</a> - Full ecosystem including professional / research use for wings and copters and even land or water vehicles. A lot of information, experiences and possibilities, but also more complex than INAV.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/nickrehm/dRehmFlight">dRehmflight</a> - Dedicated to VTOLs and it's transformation during flight process, Teensy Boards only.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/rotorflight/rotorflight">Rotorflight</a> - Firmware for traditional single-rotor helicopters.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/SparkyVT/HPR-Rocket-Flight-Computer">HPR-Rocket-Flight-Computer</a> - High speed rockets firmware</li>
+</ul>
+<ul>
+<li><a href="https://github.com/cleanflight/cleanflight">CleanFlight</a> - Legacy fork of baseflight , stall.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/multiwii/baseflight">BaseFlight</a> - Legacy and oldest FW of the days of Wii gyro hacks and 8bit, stall.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/BossHobby/QUICKSILVER">QUICKSILVER firmware</a> - ?.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/paparazzi/paparazzi">Paparazzi UAV</a> - ?.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/librepilot/LibrePilot">LibrePilot</a> - Stall since 2018.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/qqqlab/madflight">madflight</a> - For Arduino based target boards, different sensors supported, 2024</li>
+</ul>
+<ul>
+<li><a href="https://github.com/proficnc/The-Cube">The Cube Autopilot</a> - FC hardware like the Pixhawk 2, </li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=TJCeLOiP7lU">Risc V Powering a 3D Printed Drone</a> - RISCV cpu experiments on DIY quadcopter.</li>
+</('ul', 0)>
+<h2>RC Transmitters & Handcontroller 🎮</h2>
+
+<p>Radio control transmitters (RC TX, your side) support extension bays with the <a href="https://github.com/pascallanger/DIY-Multiprotocol-TX-Module/blob/master/docs/Module<em>BG</em>4-in-1.md">JR / JR lite formfactor</a> and serial interfaces to adapt to different radio protocols. See also Ground station.</p>
+<p>Most receivers (RX, drone side) support standard serial protocols like Crossfire (CSRF) to talk with the FC.</p>
+
+<ul>
+<li><a href="https://github.com/EdgeTX/edgetx">EdgeTX</a> - Successor of OpenTX under active development.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tbs-fpv/freedomtx">freedomTX</a> - OpenTX fork, stall since 2020.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/opentx/opentx">OpenTX</a> - Firmware for popular handtransmitters including Desktop manager and sound packs.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/JyeSmith/inav-opentx-sounds">inav-opentx-sounds</a> - Addon sounds for modes.</li>
+</ul>
+<ul>
+<li><a href="https://inavfixedwinggroup.com/guides/transmitter-models/transmitter-sound-pack/">transmitter-sound-pack</a> - INAV sounds and complete configs for wings.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/teckel12/VTx">VTx</a> - Stripped down betaflight Lua script to control only your VTX.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Matze-Jung/betaflight-tx-lua-scripts">betaflight-tx-lua-scripts</a> - Extended BF lua script.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Matze-Jung/opentx-lua-widgets">opentx-lua-widgets</a> - More UI widgets to present telemetry.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Matze-Jung/opentx-lua-running-graphs">opentx-lua-running-graphs</a> - More visual graphs as widgets.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/SpechtD/OpenTX-Pong">OpenTX-Pong</a> - Simple game for your TX.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kkbin505/Arduino-Transmitter-for-ELRS">Ardino Transmitter for ELRS</a> - Simple gamepad like hand transmitter based on Arduino</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Ingwie/OpenAVRc_Hw">OpenAVRc</a> - Custom TX based on Arduino Mega2560 boards.</li>
+</ul>
+<ul>
+<li><a href="http://www.er9x.com">ER9X</a> - Alternative Firmware for 9XR handtransmitter.</li>
+</('ul', 0)>
+<h3>Modules 🧩</h3>
+
+<p>Hardware and firmware to establish custom radio links. Nowadays usually a bidirectional link, so pure TX / RX side.</p>
+
+<ul>
+<li><a href="https://github.com/pascallanger/DIY-Multiprotocol-TX-Module">Multi Module</a> - Supports different protocols like FrSky, FlySky, Walkera, Futaba, ... .</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ExpressLRS/ExpressLRS">ExpressLRS</a> - ELRS for long range or better latency. support. flashing some existing hardware, but also provide commercial modules for 868/915 MHz or 2.4 / 5.8 GHz.</li>
+<ul>
+<li><a href="https://github.com/ExpressLRS/ExpressLRS/pull/1904">ELRS Airport Firmware</a> - 2 way link for more complex telemetry downlink.</li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://github.com/olliw42/mLRS">mLRS</a> - Mavlink compatible LRS.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/openLRSng/openLRSng">openLRSng</a> - Next generation of OpenLRS, stall since 2018.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/RavenLRS/raven">Raven LRS</a> - Lora based, 2019.</li>
+</ul>
+<ul>
+<li><a href="https://fishpepper.de/projects/opensky/">OpenSky</a> - Alternative firmware for FrSky modules, 2016.</li>
+</ul>
+<ul>
+<li><a href="https://deviationtx.com/">DeviationTX</a> - Alternative firmware for Walkera, 2016.</li>
+</('ul', 0)>
+<h2>VTX 📺</h2>
+
+<p>Videotransmitter (VTX) are analog or digital radio transmitter on your drone, which send usually a videostream of your front camera (first person view - FPV) but can also transmit arbitrary information or establish a somewhat regular bidirectional link between the drone and a groundstation which also offers control uplink etc. See also Ground station.</p>
+
+<ul>
+<li><a href="https://github.com/OpenHD/Open.HD">OpenHD</a> - Use 2.4 / 5.8 GHz wifi hardware and SBCs on air and groundside to provide a video and telemetry downlink and an optional control uplink. Try to develop a more efficient dedicated hardware board. <a href="https://openhd.gitbook.io/open-hd/general/openhd-vs-alternatives">Compare different open digital links</a>.</li>
+</ul>
+<ul>
+<li><a href="https://rubyfpv.com">RubyFPV</a> - Use 2.4 / 5.8 GHz wifi hardware and RPIs to provide a video and telemetry downlink and an optional control uplink. No source provided but plugin system.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/svpcom/wifibroadcast">Wifibroadcast NG</a> - Use 2.4 / 5.8 GHz wifi hardware and RPIs to provide a video and telemetry downlink.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/OpenIPC/sandbox-fpv">wfb-ng on OpenIPC</a> - Wifibroadcast NG on OpenIPC compatible CCTV modules, capable of 120fps or 4k video feeds with telemetry</li>
+</ul>
+<ul>
+<li><a href="https://github.com/DroneBridge/DroneBridge">DroneBridge</a> - Use 2.4 GHz wifi hardware and RPIs, ESP32 and Android App for bidirectional link, <a href="https://dronebridge.gitbook.io/docs/comparison">Comparison</a> to the other protocols here.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/rodizio1/EZ-WifiBroadcast">EZ Wifibroadcast</a> - Oldest and first wifi based VTX setup.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/fpv-wtf/wtfos">wtfos</a> - Rooting and mod DJI FPV sender and receiver.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/fpvout/DigiView-SBC">DigiView-SBC</a> - Receive DJI HD signal, alpha 2021.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/OpenVTx/OpenVTx">OpenVTx</a> - Free firmware for open hardware anlog VTX.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mrRobot62/vtx<em>power</em>measure">VTX Power Measure</a> - Python scripting the Immersion RF-Meter V2.</li>
+</('ul', 0)>
+<h2>Camera & Gimbals 🎥</h2>
+
+<p>Cameras feed the onboard videotransmitter for downlink or record as DVR with higher quality. See also VTX for custom systems which allow you different camera setups.</p>
+
+<ul>
+<li><a href="https://github.com/gyroflow/gyroflow">Gyroflow</a> - Use IMU sensor data to smooth HD video recordings.</li>
+</ul>
+<ul>
+<li><a href="https://openhd.gitbook.io/open-hd/hardware/cameras">OpenHD on thermal cameras</a> - How to user RPI to read this sensors.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dlktdr/HeadTracker">RC Headtracker</a> - Turn camera gimbal when you turn your googles. Based on Arduino and Bluetooth.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/olliw42/storm32bgc">STORM32BGC</a> - Firmware and brushless gimbal controller.</li>
+</ul>
+<ul>
+<li><a href="https://www.thingiverse.com/thing:110731">Open Brushless Gimbal</a> - 2013.</li>
+</('ul', 0)>
+<h2>GPS 🛰️</h2>
+
+<p>Global Navigation Systems like GPS allow to determine the current position of your drone. Consumer GPS modules are cheap, but some can be tweaked to gain better accuracy on postprcessing or live.</p>
+
+<ul>
+<li><a href="https://gnss-sdr.org">GNSS SDR</a> - Software toolchain to process radio signals of GPS, Baidu, GLONASS that are received by SDR hardware radio backends.</li>
+</ul>
+<ul>
+<li><a href="https://www.rtklib.com">rtklib</a> - Software toolchain to increase precision of GNSS signals by applying realtime or post-processing to eliminate interferences. Signals recorded by SDR or some commercial GPS modules.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/bo-rc/ViconMAVLink">Vicon MavLink</a> - Get indoor positioning via commercial optical systems for a whole drone swarm.</li>
+</('ul', 0)>
+<h2>Sensors 🌡️</h2>
+
+<p>A drone uses more sensors like compass, barometer, airspeed or current to increase position estimation, or to show the system performance</p>
+
+<ul>
+<li><a href="https://github.com/Qrome/QLiteOSD">QLiteOSD</a> - ESP32 based OSD to read sensors without FC.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=HNR1mqUDpoE">3D Printed Drone Build - How to Wire OpenHD and Ultrasonic Abstacle Avoidance</a> - ultrasonic obstacle avoidance for quadcopter and OpenHD teamplay.</li>
+</ul>
+<p>See <a href="https://ardupilot.org/copter/docs/common-optional-hardware.html">Ardupilot - Optional hardware</a> for more ideas.</p>
+
+<h2>Video Receivers 📶</h2>
+
+<p>Googles have modul bays to support different radio protocols or HDMI input. See also VTX for custom systems which allow you different camera setups.</p>
+
+<ul>
+<li><a href="https://hackaday.io/project/160893-diy-homemade-fpv-monitor">DIY Homemade FPV Monitor</a> - 5,8GHz analog display with diversity.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/JyeSmith/FENIX-rx5808-pro-diversity">FENIX-rx5808-pro-diversity</a> - Open Hardware 5,8GHz analog module with diversity for googles.</li>
+<ul>
+<li><a href="https://github.com/sheaivey/rx5808-pro-diversity">rx5808 pro divesity</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://github.com/xythobuz/rpi-rx5808-stream">rpi-rx5808-stream</a> - RPI based 5,8GHz analog with diversity streaming server.</li>
+</('ul', 0)>
+<h2>Antennas and Trackers 📡</h2>
+
+<p>Transceiver as well as receivers can be tweaked with custom antenna configurations and tracker can support directional antennas. They use multiple receivers and diversity, or telemetry to point to your drone.</p>
+<p>This is more professional equipment to do beyond VLOS flights and not needed for novice pilots. There are also approaches to use 4G for video and control link for extra extend.</p>
+
+<ul>
+<li><a href="https://github.com/raul-ortega/u360gts/">u360gts</a> - 360° motor tracker using F2/F3 controllers that control, firmware + hardware + case, 2020.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/zs6buj/AntTracker">AntTracker</a> - Servo based using F1 / ESP8266 / ESP32 controllers, 2019.</li>
+</ul>
+<ul>
+<li><a href="https://www.thingiverse.com/thing:2568906">open360tracker v2</a> - Simplified design, all components in moving head.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/SamuelBrucksch/open360tracker">open360tracker</a> - 360° servo tracker 2016.</li>
+<ul>
+<li><a href="https://github.com/raul-ortega/amv-open360tracker">Amv-open360tracker</a> - Fork 2016.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ericyao2013/amv-open360tracker-32bits">Amv-open360tracker 36bit</a> - Fork 2016.</li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://www.thingiverse.com/thing:547358">Ghettostation Antenna Tracker</a> - Different forks 2014.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=aH0cW9XJ4D4">DIY Helical Antenna For Long Range FPV</a> - 5,8GHz helical directional antenna for analog googles with 3D printed skeleton.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=JGm9ESx4yzE">Cloverleaf Antenna - Build Instructions</a>- 5.8GHz omnidirectional antenna for analog video transmission.</li>
+</('ul', 0)>
+<h2>Telemetry & Logs 📊</h2>
+
+<p>Sensor values and control information are shared via common serial protocols which can be recorded onboard (blackbox) on internal SD cards at FC, or transferred to your TX handset or Groundstation. Useful to find lost drones, as well as debug and tune PID and flight behavior</p>
+
+<ul>
+<li><a href="https://github.com/mavlink/mavlink">MAVlink</a> - Modern extensible protocol from hobbiests ... commercial UAV.</li>
+</ul>
+<ul>
+<li><a href="https://opencyphal.org">Cyphal</a> - Fka. UAVCAN industrial only drone bus system.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/thecognifly/YAMSPy">YAMSPy</a> - Read MSP serial protocol with Python.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/teckel12/LuaTelemetry">LuaTelemetry</a> - OpenTX / EdgeTX script that renders live cockpit and map from telemetry datastream.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/betaflight/betaflight-tx-lua-scripts">betaflight-tx-lua-scripts</a> - Script to show telemetry and control e.g. CAM, VTX settings.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/olliw42/otxtelemetry">otxtelemetry</a> - OpenTX / EdgeTX script to add Mavlink support.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/iNavFlight/blackbox-log-viewer">INAV blackbox viewer</a> - Render sensor / motor values as video overlay OSD.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/iNavFlight/blackbox-tools">INAV blackbox tools</a> - Convert to CSV timeseries files or as visual OSD overlay.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/stronnag/bbl2kml">flightlog2x</a> - Convert blackbox logs of INAV, OpenTX, ... to CSV, GPX, KML and render tracks and trajectory with different performance styles, separate <a href="https://github.com/stronnag/fl2xui">GUI</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ardupilot/uavlogviewer">UAVLogViewer</a> - Web application for Ardupilot logs.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kristjanbjarni/osd-subtitles">OSD-subtitles</a> - Render Blackbox logs to OSD as subtitle for synconous plaback with video file.</li>
+</ul>
+<ul>
+<li><a href="http://www.dashware.net/dashware-download/">Dashware</a> - Closed Source OSD rendering for blackbox logs.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Plasmatree/PID-Analyzer">PID-Analyzer</a> - Read blackbox and tune PID control variables. </li>
+</ul>
+<ul>
+<li><a href="https://github.com/openXsensor/openXsensor">openXsensor</a> - Convert and alter telemetry protocols.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sparkfun/OpenLog">OpenLog</a> - With <a href="https://github.com/thenickdude/blackbox/">blackbox</a> firmware for blackbox data recorder (today usually part of main FC).</li>
+</('ul', 0)>
+<h2>Mission Control & Basestation 🗺️</h2>
+
+<p>Ground Control Stations (GCS) on laptops / tablets allow better overview of flight parameters and position for mission control during long range / time flights. Also see <a href="https://ardupilot.org/copter/docs/common-choosing-a-ground-station.html">Ardupilot.org - Choosing GCS</a>.</p>
+
+<ul>
+<li><a href="https://github.com/stronnag/mwptools">mwptools</a> - Waypoint mission planner esp. for INAV including INAV Radar and ADS-B sources.</li>
+</ul>
+<ul>
+<li><a href="https://ardupilot.org/planner2/">APM Planner 2.0</a> - Mavlink compatible, with experience from MP and Q Groundcontrol.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mavlink/qgroundcontrol">QGroundControl</a> - Mavlink, Desktop and mobile.</li>
+</ul>
+<ul>
+<li><a href="https://ardupilot.org/planner/index.html">MissionPlanner</a> - Waypoint Mission planning esp. for Ardupilot.</li>
+</ul>
+<ul>
+<li><a href="https://ardupilot.org/mavproxy/">MAVProxy</a> - Commandline and GUI mission planer and telemetry viewer and processor.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/danarrib/BulletGCSS">BulletGCSS</a> - Uses GSM and MQTT for extra long range links.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Midgrad/Dreka">Dreka GCS</a> - A new GCS (currently limited but more modern look & feel).</li>
+</('ul', 0)>
+<h2>Companion Computers & Integration 💻</h2>
+
+<p>Your FC is focused on realtime control for maneuvers, while additional computers add ressources for more complex data processing, see also <a href="https://ardupilot.org/dev/docs/companion-computers.html">Arudpilot.org - Companion Computers</a> and digital VTX systems above.</p>
+
+<ul>
+<li><a href="https://github.com/ochin-space/ochin-CM4">öchìn CM4</a> - RPI Compute Module carrier board dedicated for FC</li>
+</ul>
+<ul>
+<li><a href="https://ardupilot.org/dev/docs/apsync-intro.html">APsync</a> - Mavlink focused OS for different SBCs.</li>
+</ul>
+<ul>
+<li><a href="https://www.docs.rpanion.com/software/rpanion-server">RPanion</a> - Mavlink focused RPI image.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ros/ros">ROS</a> - Robot Operating System, to handle more complex and interactive flights.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dronekit/dronekit-python">DroneKit</a> - Multi platform integration ecosystem including Mavlink radio link.</li>
+</('ul', 0)>
+<h2>Computer Vision 🤖</h2>
+
+<p>CV is on the processing of what you see at the UAV live image or recordings. This is about aerial mapping, or machine learning powered flight planning. See also <a href="https://uav-guidelines.openaerialmap.org/">UAV Mapping Guidelines</a>.</p>
+
+<ul>
+<li><a href="https://www.opendronemap.org/">OpenDroneMap</a> - Stitch photos to aerial imagery, calc 3D models, ... .</li>
+</ul>
+<ul>
+<li><a href="https://github.com/hotosm/OpenAerialMap/">OpenAerialMap</a> - Share Drone shots for disaster response etc.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/DroneDB/DroneDB">DroneDB</a> - Store and archive drone shots and aerial imagery.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mkrupczak3/OpenAthena">OpenAthena</a> - Auto GCP detection using markers</li>
+</ul>
+<ul>
+<li><a href="https://www.openmms.org/">OpenMMS</a> - Mobile mapping system that carries a laser scanner.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lironui/BANet">BANet</a> - ML segmentation of areas for aerial imagery.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lironui/ABCNet">AVCBet</a> - ML segmentation of areas for aerial imagery.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mit-acl/faster">Faster</a> - ML let drones learn to avoid obstacles.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/HKUST-Aerial-Robotics/Fast-Planner">Fast-Planner</a> - Learn drones to avoid obstacles on the course.</li>
+</ul>
+<ul>
+<li><a href="https://hackaday.com/2021/11/03/autonomous-drone-dodges-obstacles-without-gps/">Autonomous Drone Dodges Obstacles Without GPS</a> - RPI based CV and route planning and obstacle avoidance.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/chuanenlin/drone-net">Drone-net</a> - ML detect quadcopters within photos / videos using YOLO v4.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/AlirezaShamsoshoara/Fire-Detection-UAV-Aerial-Image-Classification-Segmentation-UnmannedAerialVehicle">Fire Detection UAV</a> - ML learn drones to spot fire.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Call-for-Code/DroneAid">DroneAid</a> - ML find persons in disaster response by emergency markers.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/robot-perception-group/AirPose">AirPose</a> - ML human pose estimation from drone perspective.</li>
+</('ul', 0)>
+<h2>Complete Systems 🎁</h2>
+
+<p>Dedicated drones and toolchains to help on a dedicated topic</p>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=RoSSaSkOTTc">Guiness World record drone build</a> - How a 300mph / 480 km/h quadcopter rocket needs to be designed and build. Similar is the <a href="https://www.youtube.com/watch?v=oG2GaSMlfdo">AOSHS5 build</a> (but only 200mph).</li>
+</ul>
+<ul>
+<li><a href="https://www.instructables.com/Make-a-Tiny-Arduino-Drone-With-FPV-Camera/">Arduino FPV Mini Drone</a> - Woodframed mini quad without BLDC and custom RF link around MultiWII</li>
+</ul>
+<ul>
+<li><a href="https://www.hs-augsburg.de/searchwing/de/willkommen/">SearchWing</a> - A Search and Rescue RC airplane for visual inspection of huge areas on sea to rescue people from refugee boats at the EU sea border. Waterproof to land beside the SAR mothership.</li>
+</ul>
+<ul>
+<li><a href="https://dronecoria.org">Dronecoria</a> - Octocopter made from wood as heavy lift to drop seeds.</li>
+</ul>
+<ul>
+<li><a href="https://agilicious.dev">Agilicious</a> - 3D printed OSHW drone and ecosystem esp. for CV autonomous agile flight research, 2023</li>
+</ul>
+<ul>
+<li><a href="https://www.bitcraze.io/documentation/system/platform/">Crazyflie</a> - A not so FPV drone that uses custom modules and different technology for swarm control.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Circuit-Digest/ESP-Drone">ESP-Drone</a> - ESP32 and PCB only based quadcopter without FPV but custom wifi on brushed</li>
+</ul>
+<ul>
+<li><a href="https://hackaday.io/project/188578-esp32-drone">ESP32 Drone</a> - no traditional FPV, but low cost quad using ESP32 board, 2022.</li>
+</ul>
+<ul>
+<li><a href="https://open-diy-projects.com/wifree-copter/">Wifree-copter</a> - Easy 3D printed copter that uses RPI as WIFI remote control with App, 2016.</li>
+</('ul', 0)>
+<h2>Security & Safety 🪂</h2>
+
+<h3>Simulators 🌐</h3>
+
+<p>Before you damage any hardware you can learn to avoid common pitfalls and train by virtual flights using your handhelt TX. Other allow to test / benchmark autopilots to work in controlled environments.</p>
+
+<p>The most consumer friendly trainer simulators are commercial, but available for Linux, macOS as well (<a href="https://fpv-freerider.itch.io/fpv-freerider-recharged">Freerider Recarged</a>, <a href="https://store.steampowered.com/app/410340/Liftoff<em>FPV</em>Drone_Racing/">Liftoff</a>, <a href="https://thedroneracingleague.com/drlsim/">DRL Sim</a>, <a href="https://www.velocidrone.com/">Velocidrone</a>.</p>
+
+<ul>
+<li><a href="https://sourceforge.net/projects/crrcsim/">crrcsim</a> - For rc airplanes, 2018.</li>
+</ul>
+<ul>
+<li><a href="http://www.rowlhouse.co.uk/PicaSim/download.html">Picasim</a> - For rc planes, closed source, sucessor of SSS, stall since 2019.</li>
+</ul>
+<ul>
+<li>FlightGear - Usually for big airplanes, but can be paired with FC good description <a href="https://wiki.paparazziuav.org/wiki/FlightGear">from PaparazziUAV</a> or <a href="https://ardupilot.org/dev/docs/simulation-2.html">by Arduplane</a> for simulation.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/microsoft/AirSim">AirSim</a> - By Microsoft for algorithm testing.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/PX4/jMAVSim">jMAVSim</a> - For Mavlink.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/JSBSim-Team/jsbsim">JSBsim</a> - With bindings to Python, Matlab.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/gazebosim/gz-sim">GAZEBOsim</a> - Multi robot.</li>
+</ul>
+<ul>
+<li>ROS supports simulations like described <a href="https://docs.px4.io/master/en/ros/ros2_comm.html">by PX4</a>.</li>
+</('ul', 0)>
+<h3>Checklists 📋</h3>
+
+<p>Malfunction can have dramatic consequences, as well as your drone can cause massive damages. To avoid unnecessary risks, a step by step protocol and documentation is mandatory for every flight in case you might use your insurance.</p>
+
+<h4>build power check</h4>
+
+<h4>maiden flight check</h4>
+
+<ul>
+<li><a href="https://www.mrd-rc.com/tutorials-tools-and-testing/flight-controller-therapy/inav-pre-maiden-checklist-a-helpful-reminder-and-saver-of-foam/">iNav Pre-maiden Checklist</a> by Mr.D for fixed wing</li>
+</('ul', 0)>
+<h4>regular flight check</h4>
+
+<ul>
+<li><a href="https://ardupilot.org/copter/docs/checklist.html">Ardupilot Copter Checklist</a>.</li>
+</('ul', 0)>
+<h3>ID Systems 🛂</h3>
+
+<p>We share the airspace with other pilots. RC copters and planes are hard to spot, so it is recommend to share your position via transponder systems. This allows also tracking of illegal maneuvers.</p>
+
+<ul>
+<li>ADS-B transmitters of airplanes can be received using software defined radios can be realized using cheap USB DVB-T receivers. Can be integrated via radar extensions like <a href="https://github.com/stronnag/mwptools/wiki/mwp-Radar-View">mwp-radar-view</a>, <a href="https://ardupilot.org/copter/docs/common-ads-b-receiver.html">Ardupilot ADS-B receiver</a> or in OpenHD. Is part of Mavlink protocol and shows up on most GCS.  Can also be viewed online like <a href="https://globe.adsbexchange.com/">adsb-exchange.com</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/OlivierC-FR/ESP32-INAV-Radar">INAV Radar</a> - LORA radio and ESP32 broadcast positions and show it at your OSD.</li>
+</ul>
+<ul>
+<li><a href="https://formationflight.org/getting-started/">FormationFlight</a> - Wifi radio of ESP32 to broadcast position and telemetry and show it at your OSD.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lyusupov/SoftRF">SoftRF</a> - UAV edition, supports also FLARM and more.</li>
+</ul>
+<ul>
+<li><a href="https://www.glidernet.org">Glidernet</a> - Share FLARM / ADS-B positions online.</li>
+</ul>
+<ul>
+<li><a href="https://opensky-network.org">Opensky Network</a> - Share ADS-B positions online.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ArduPilot/ArduRemoteID">ArduPilot RemoteID Transmitter</a> - FCC RemoteID with Mavlink and DroneCAN integration.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sxjack/unix<em>rid</em>capture">WiFi RID capture</a> - Capture remote identification signals  with sniffer.</li>
+</ul>
+<ul>
+<li><a href="https://www.mdpi.com/1424-8220/23/17/7650">Drone Detection and Tracking Using RF Identification Signals </a> - Track DJI drones using wifi and KISMET sniffer.</li>
+</('ul', 0)>
+<h3>Hacking & Hijacking 🔓</h3>
+
+<p>Radio links per se are unsafe and can easily be jammed.</p>
+
+<ul>
+<li><a href="https://ftp.fau.de/cdn.media.ccc.de/events/camp2023/h264-hd/camp2023-57063-eng-WTF<em>DJI</em>UAV<em>CTF</em>hd.mp4">WTF WJI, UAV CTF?</a> - Talk on DJI mini 2 reverse engeniering to bypass manufacturers limitations. Mem dump analysis and crypto keys decryption and radio analysis. About DJI ecosystem and used <a href="https://www.dji.com/de/opensource">open source components</a> (cccamp23 by Felix Domke).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/RUB-SysSec/DroneSecurity">Drone-ID Receiver for DJI OcuSync 2.0</a> - Decoding DJI radio transmissions including DroneID and pilot location with SDR in python</li>
+</ul>
+<ul>
+<li><a href="https://media.ccc.de/v/camp2023-57321-debugging_microcontrollers">Debugging Microcontrollers </a> - Talk on difficult debugging the PX4 hardware micocontrollers with RTOS NuttX  (cccamp23 by Niklas Hauser).</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?app=desktop&v=rl8ACNnjPFA">5.8GHz video demodulation</a> - Using hack-rf SDR.</li>
+</ul>
+<ul>
+<li><a href="https://www.researchgate.net/publication/339824302<em>Effective</em>GPS<em>Jamming</em>Techniques<em>for</em>UAVs<em>Using</em>Low-Cost<em>SDR</em>Platforms">GPS jamming</a> - Use BladeRF SDR with GNUradio to block satellites.</li>
+</ul>
+<ul>
+<li><a href="https://rnl.ae.utexas.edu/images/stories/files/papers/unmannedCapture.pdf">GPS spoofing</a> - Controll others UAVs by faking satellite transmissions from ground.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jjshoots/RemoteIDSpoofer">RemoteID Spammer/Spoofer</a> - An ESP8266/NodeMCU Drone RemoteID Spoofer</li>
+</ul>
+<ul>
+<li><a href="https://github.com/aliasrobotics/RVD">Robot Vulnerability Database</a> - CVEs for semi-autonomous machines.</li>
+</('ul', 0)>
+<h2>Accesoirs 🪠</h2>
+
+<p>With 3D printing it is easy to get useful addons for your equipment and models</p>
+
+<ul>
+<li><a href="https://github.com/scottgchin/delta5<em>race</em>timer">Delta 5 race timer</a> - Use 5.8GHz video signals to trigger lap counter.</li>
+<ul>
+<li><a href="https://github.com/RotorHazard/RotorHazard">RotorHazard</a> - Sucessor with multinode and central RPI server</li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://github.com/SeekND/CaptureTheFlag">Capture The Flag for drones</a> - Optical system to emulate a flag for close team-fights.</li>
+</ul>
+<ul>
+<li>Gimbal protection</li>
+</ul>
+<ul>
+<li>holder & stands</li>
+</ul>
+<ul>
+<li>actioncam mounts</li>
+</ul>
+<ul>
+<li>rotor guards</li>
+</ul>
+<ul>
+<li>...</li>
+</('ul', 0)>
+<h3>Mobile Apps 📱</h3>
+
+<p>Free and useful applications to use on your mobile device. Might be not nessesarry open source</p>
+
+<ul>
+<li><a href="https://www.speedybee.com/speedy-bee-app/">SpeedyBee</a> - Is an Appllication for Flight controller parameters settings and blackbox log reader for betaflight, iNAV, emuflight  <a href="https://play.google.com/store/apps/details?id=com.runcam.android.runcambf">Android</a>, <a href="https://apps.apple.com/us/app/speedybee-app/id1150315028">iOS</a>.</li>
+</ul>
+<ul>
+<li><a href="https://play.google.com/store/apps/details?id=org.blheli.BLHeli<em>32">BLHeli</em>32</a> - App is for configuring BLHeli_32 ESCs.</li>
+</ul>
+<ul>
+<li><a href="https://play.google.com/store/apps/details?id=florian.felix.flesch.fpvvideochannelsorter">FPV Video Channelsorter 5.8GHz</a> - Sorts the channels for each pilot over the available frequencies.</li>
+</ul>
+<ul>
+<li><a href="https://www.uavforecast.com">UAV Forecast</a> - See the weather forecast, GPS satellites, solar activity (Kp), No-Fly Zones and flight restrictions <a href="https://play.google.com/store/apps/details?id=com.uavforecast">Android</a>, <a href="https://apps.apple.com/us/app/uav-forecast/id1050023752">iOS</a>.</li>
+</ul>
+<ul>
+<li><a href="https://play.google.com/store/apps/details?id=com.vertile.fpv3d">Go FPV</a> - A UVC Video Camera display and capture app, built for my DIY First Person View goggles.</li>
+</('ul', 0)>
+<h3>Workbench 🧰</h3>
+
+<ul>
+<li><a href="https://oscarliang.com/smoke-stopper/">smoke stopper</a> - Avoid damaging your expensive components during build up.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/rahulsarchive/4AxisFoamCutter">4AxisFoamCutter</a> - Create aerodynamic wings from foam.</li>
+</('ul', 0)>
+<h2>Legal Information 🏛️</h2>
+
+<p>Depending on the country you live in, the laws and legal rules of airspace may vary.</p>
+
+<ul>
+<li><a href="https://www.lba.de/DE/Drohnen/Drohnen_node.html">Luftfahrt Bundesamt</a> - 🇩🇪 Rechtlicher Rahmen.</li>
+</ul>
+<ul>
+<li><a href="https://www.dfs.de/homepage/de/drohnenflug/">Deutsche Flugsicherung GmbH</a> - 🇩🇪 Durchführung von Prüfungen und Zulassungen.</li>
+</ul>
+<ul>
+<li><a href="https://www.dipul.de/homepage/de/">Digitale Plattform Unbemannte Luftfahrt</a> - 🇩🇪 Kartenplattform, mit alternativ <a href="https://play.google.com/store/apps/details?id=de.droniq.droniqapp&hl=de&gl=US">Droniq App</a>.</li>
+</ul>
+<ul>
+<li><a href="https://www.bundesnetzagentur.de/DE/Sachgebiete/Telekommunikation/Unternehmen_Institutionen/Frequenzen/Grundlagen/Frequenzplan/frequenzplan-node.html">Bundesnetzagentur</a> - 🇩🇪 Zulässige Sendefrequenzen und -Leistungen.</li>
+</ul>
+<ul>
+<li><a href="https://drony.ulc.gov.pl">Urząd Lotnictwa Cywilnego</a> - 🇵🇱 Urząd Lotnictwa Cywilnego - allows to apply for license in Poland and EU</li>
+</ul>
+<ul>
+<li><a href="https://ulc.gov.pl/pl/drony">Bezzałogowe Statki Powietrzne</a> - 🇵🇱 List of regulations regarding operations of UAV in Poland</li>
+</('ul', 0)>
+<h2>Communities 🗣️</h2>
+
+<p>Every hobby makes more fun and progress if you share your ideas and questions to others. Beside the UAV pilot communities there are plenty of modder and hackers out there.</p>
+
+<ul>
+<li><a href="https://www.dronecode.org">Dronecode foundation</a> - Home for MavLink, QGroundcontrol and PX4, part of Linux foundation.</li>
+</ul>
+<ul>
+<li><a href="https://fpvfc.org/">FPV Freedom Coalation</a> - Keep drones hackabel and safe.</li>
+</ul>
+<ul>
+<li><a href="https://www.dmfv.aero">Deutscher Modellflieger Verband e.V.</a> - 🇩🇪 Events, local communities, assurance, ... .</li>
+</ul>
+<ul>
+<li><a href="https://www.daec.de">Deutscher Aero Club e.V.</a> - 🇩🇪.</li>
+</('ul', 0)>
+<h3>Forums & Social Media</h3>
+
+<ul>
+<li><a href="https://rcroups.com">rcroups.com</a> - Most projects offer here support.</li>
+</ul>
+<ul>
+<li><a href="https://diydrones.com">diydrones.com</a> - Group to most projects, hardware and countries.</li>
+</ul>
+<ul>
+<li><a href="https://rotorbuilds.com">rotorbuilds.com</a> - Recipes to custom builds.</li>
+</ul>
+<ul>
+<li><a href="https://openrcforums.com">openrcforums.com</a> - From the old days till the present working on open modells.</li>
+</ul>
+<ul>
+<li><a href="https://drones.stackexchange.com/">Stackexchange Drones</a> - Is Stack Overflow Q&A for drone building.</li>
+</ul>
+<ul>
+<li><a href="https://www.reddit.com/r/Multicopter/">reddit \\motorcopter</a> - Everything from flights, crashes, repairs, custom mods, ... .</li>
+</ul>
+<ul>
+<li><a href="https://www.reddit.com/r/RCPlanes/">reddit \\RCPlanes</a> - Everything but for RC planes.</li>
+</ul>
+<ul>
+<li><a href="https://OscarLiang.com">OscarLiang.com</a> - Important blog with builds and configurations and knowledge.</li>
+</ul>
+<ul>
+<li><a href="https://intofpv.com">intofpv.com</a> - Forum with helpful information about anything FPV related.</li>
+</ul>
+<ul>
+<li><a href="https://inavfixedwinggroup.com/">INAV fixed wing group</a> - Forum, Blog, Builds on fixed wing esp. with INAV compatible autopilot.</li>
+</ul>
+<ul>
+<li><a href="https://fpv-community.de">fpv-community.de</a> - 🇩🇪 Auch Selbstbau.</li>
+</ul>
+<ul>
+<li><a href="https://RC-Network.de">RC-Network.de</a> - 🇩🇪 Über Selbstbau auch von Schiffen und Autos. Sehr umfangreiches <a href="https://wiki.rc-network.de/wiki/Hauptseite">Wiki</a>.</li>
+</ul>
+<ul>
+<li><a href="https://kopterforum.de">kopterforum.de</a> - 🇩🇪 Auch Selbstbau.</li>
+</('ul', 0)>
+<h3>Video Channels</h3>
+
+<ul>
+<li><a href="https://www.youtube.com/c/Painless360">Painless 360</a> - UK builds, mods and configuration basics.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/c/ArxangelRC">ArxangelRC</a> - BG builds and configurations as well as (a bit) mapping.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/c/JoshuaBardwell">Joshua Bardwell</a> - US, build and general tips on copters, slogan 'You gonna learn something today'.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/c/Pawe%C5%82Spychalski">PawelSpechalski</a> - INAV core team, mostly copters, slogan 'Happy Flying'.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/c/AndrewNewtonAustralia">Andrew Netwon</a> - AU, mostly airplane reviews and build tipps.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/c/MrDFallingwithstyle">Mr. D - Falling with style</a> - UK, Darren, INAV.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/c/CurryKitten/">CurryKitten</a> - Reviews, but also OpenHD and ExpressLRS.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/channel/UCX2UiZjg485tDoq_Yl4Pysw">MarioFPV</a> - OpenHD, RubyFPV, WFG-NG experiments.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/user/montreetormee">TreeOrbit</a> - OpenHD, RubyFPV experiments.</li>
+</ul>
+<ul>
+<li><a href="https://flitetest.com">flitetest.com</a> - TV show, unusual DIY builds.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/c/LivyuFPV/videos">Livyu FPV</a> - Flight footage and repair videos for DIY drone electronics.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/c/AdamGdoesFPV">Adam G does FPV</a> - Builds, mods and basics.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/channel/UCmULLc8W-knTqiFqJgw3-FA">BLuefish</a> - Builds, INAV, longrange.</li>
+</ul>
+</body>
+</html>
