@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asyncio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Asyncio</h1>
+
+<p><strong>Repository:</strong> https://github.com/timofurrer/awesome-asyncio#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<blockquote>
+<p>[!WARNING]</p>
+<p>This project is looking for a new home. I'm no longer maintaining it.</p>
+<p>Please let me know if you want to take over maintainance for it.</p>
+<p>Write me an email to timo@furrer.life</p>
+</blockquote>
+
+<h1>Awesome asyncio <a href="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg"><img src="https://github.com/sindresorhus/awesome" alt="Awesome</a>"></h1>
+
+<blockquote>
+<p>A carefully curated list of awesome Python asyncio frameworks, libraries, software and resources.</p>
+</blockquote>
+
+<p>The Python <a href="https://docs.python.org/3/library/asyncio.html">asyncio</a> module introduced to the standard library with Python 3.4 provides infrastructure for writing single-threaded concurrent code using coroutines, multiplexing I/O access over sockets and other resources, running network clients and servers, and other related primitives.</p>
+
+<p>Asyncio is not really a brand-new technology however it appears to be very trending since a few years - especially in the Python community and with the release of Python 3.4 in March 2014.</p>
+<p>Thus, it's pretty hard to keep yourself up-to-date with the most awesome packages out there.</p>
+<p>Find some of those <em>awesome</em> packages here and if you are missing one we count on you to <a href="https://github.com/timofurrer/awesome-asyncio/blob/master/CONTRIBUTING.md">create an Issue or a Pull Request</a> with your suggestion.</p>
+
+<h2>Contents</h2>
+
+<ul>
+<li><a href="#web-frameworks">Web Frameworks</a></li>
+</ul>
+<ul>
+<li><a href="#message-queues">Message Queues</a></li>
+</ul>
+<ul>
+<li><a href="#database-drivers">Database Drivers</a></li>
+</ul>
+<ul>
+<li><a href="#networking">Networking</a></li>
+</ul>
+<ul>
+<li><a href="#graphql">GraphQL</a></li>
+</ul>
+<ul>
+<li><a href="#testing">Testing</a></li>
+</ul>
+<ul>
+<li><a href="#alternative-loops">Alternative Loops</a></li>
+</ul>
+<ul>
+<li><a href="#misc">Misc</a></li>
+</ul>
+<ul>
+<li><a href="#writings">Writings</a></li>
+</ul>
+<ul>
+<li><a href="#talks">Talks</a></li>
+</ul>
+<ul>
+<li><a href="#alternatives-to-asyncio">Alternatives to asyncio</a></li>
+<hr>
+</('ul', 0)>
+<h2>Web Frameworks</h2>
+
+<p><em>Libraries to build web applications.</em></p>
+
+<ul>
+<li><a href="https://github.com/tiangolo/fastapi">FastAPI</a> - A very high performance Python 3.6+ API framework based on type hints. Powered by Starlette and Pydantic.</li>
+</ul>
+<ul>
+<li><a href="https://www.djangoproject.com/">Django</a> - An established, high-level Python web framework with a huge community and ecosystem.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/encode/starlette">Starlette</a> - A lightweight ASGI framework/toolkit for building high performance services.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/KeepSafe/aiohttp">aiohttp</a> - Http client/server for asyncio (PEP-3156).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/channelcat/sanic">sanic</a> - Python 3.5+ web server that's written to go fast.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pallets/quart">Quart</a> - An asyncio web microframework with the same API as Flask.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/crossbario/autobahn-python">autobahn</a> - WebSocket and WAMP supporting asyncio and Twisted, for clients and servers.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/aaugustin/websockets/">websockets</a> - A library for building WebSocket servers and clients in Python with a focus on correctness and simplicity.</li>
+</ul>
+<ul>
+<li><a href="http://www.tornadoweb.org/en/stable/">Tornado</a> - Performant web framework and asynchronous networking library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/encode/uvicorn">uvicorn</a> - The lightning-fast ASGI server.</li>
+</('ul', 0)>
+<h2>Message Queues</h2>
+
+<p><em>Libraries to implement applications using message queues.</em></p>
+
+<ul>
+<li><a href="https://github.com/Polyconseil/aioamqp">aioamqp</a> - AMQP implementation using asyncio.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/zeromq/pyzmq">pyzmq</a> - Python bindings for ZeroMQ.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/aio-libs/aiozmq">aiozmq</a> - Alternative Asyncio integration with ZeroMQ.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/crossbario/crossbar">crossbar</a> - Crossbar.io is a networking platform for distributed and microservice applications.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/nats-io/asyncio-nats">asyncio-nats</a> - Client for the NATS messaging system.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/aio-libs/aiokafka">aiokafka</a> - Client for Apache Kafka.</li>
+</('ul', 0)>
+<h2>Database Drivers</h2>
+
+<p><em>Libraries to connect to databases.</em></p>
+
+<ul>
+<li><a href="https://github.com/MagicStack/asyncpg">asyncpg</a> - Fast PostgreSQL Database Client Library for Python/asyncio.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/CanopyTax/asyncpgsa">asyncpgsa</a> - Asyncpg with sqlalchemy core support.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/aio-libs/aiopg/">aiopg</a> - Library for accessing a PostgreSQL database.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/aio-libs/aiomysql">aiomysql</a> - Library for accessing a MySQL database</li>
+</ul>
+<ul>
+<li><a href="https://github.com/aio-libs/aioodbc">aioodbc</a> - Library for accessing a ODBC databases.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mongodb/motor">motor</a> - The async Python driver for MongoDB.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/redis/redis-py">redis-py</a> - Redis Python Client (which includes <a href="https://github.com/aio-libs/aioredis">aioreadis</a> now).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/aio-libs/aiocouchdb">aiocouchdb</a> - CouchDB client built on top of aiohttp (asyncio).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/plugaai/aioinflux">aioinflux</a> - InfluxDB client built on top of aiohttp.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/aio-libs/aioes">aioes</a> - Asyncio compatible driver for elasticsearch.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/05bit/peewee-async">peewee-async</a> - ORM implementation based on <a href="https://github.com/coleifer/peewee">peewee</a> and aiopg.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/fantix/gino">GINO</a> - is a lightweight asynchronous Python ORM based on <a href="https://www.sqlalchemy.org/">SQLAlchemy</a> core, with <a href="https://github.com/MagicStack/asyncpg">asyncpg</a> dialect.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tortoise/tortoise-orm">Tortoise ORM</a> - native multi-backend ORM with Django-like API and easy relations management.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/encode/databases">Databases</a> - Async database access for SQLAlchemy core, with support for PostgreSQL, MySQL, and SQLite.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/RobertCraigie/prisma-client-py">Prisma Client Python</a> - An auto-generated, fully type safe ORM powered by Pydantic and tailored specifically for your schema - supports SQLite, PostgreSQL, MySQL, MongoDB, MariaDB and more.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/piccolo-orm/piccolo">Piccolo</a> - An ORM / query builder which can work in async and sync modes, with a nice admin GUI, and ASGI middleware.</li>
+</ul>
+<ul>
+<li><a href="https://beanie-odm.dev">Beanie</a> - An async MongoDB ODM built on <a href="https://github.com/mongodb/motor">motor</a> and <a href="https://pydantic-docs.helpmanual.io">Pydantic</a>.</li>
+</('ul', 0)>
+<h2>Networking</h2>
+
+<p><em>Libraries to communicate in your network.</em></p>
+
+<ul>
+<li><a href="https://github.com/ronf/asyncssh">AsyncSSH</a> - Provides an asynchronous client and server implementation of the SSHv2 protocol.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/saghul/aiodns">aiodns</a> - Simple DNS resolver for asyncio.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/stellarbit/aioping">aioping</a> - Fast asyncio implementation of ICMP (ping) protocol.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/encode/httpx">httpx</a> - asynchronous HTTP client for Python 3 with <a href="https://github.com/psf/requests">requests</a> compatible API.</li>
+</('ul', 0)>
+<h2>GraphQL</h2>
+
+<p><em>Libraries to build GraphQL servers.</em></p>
+
+<ul>
+<li><a href="https://ariadnegraphql.org">Ariadne</a> - Schema-first Python library for implementing GraphQL servers.</li>
+</ul>
+<ul>
+<li><a href="https://tartiflette.io/">Tartiflette</a> - Schema-first Python 3.6+ GraphQL engine built on top of <code>libgraphqlparser</code>.</li>
+</ul>
+<ul>
+<li><a href="https://strawberry.rocks">Strawberry</a> - Code-first Python 3 GraphQL server with Django, Flask and FastAPI/Starlette support.</li>
+</('ul', 0)>
+<h2>Testing</h2>
+
+<p><em>Libraries to test asyncio based applications.</em></p>
+
+<ul>
+<li><a href="https://github.com/nhumrich/aiomock/">aiomock</a> - A python mock library that supports async methods.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Martiusweb/asynctest/">asynctest</a> - Enhance the standard unittest package with features for testing. asyncio libraries</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pytest-dev/pytest-asyncio">pytest-asyncio</a> - Pytest support for asyncio.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/CircleUp/aresponses">aresponses</a> - Asyncio http mocking. Similar to the <a href="https://github.com/getsentry/responses">responses</a> library used for <a href="https://github.com/requests/requests">requests</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pnuckowski/aioresponses">aioresponses</a> - Helper for mock/fake web requests in Python aiohttp package.</li>
+</('ul', 0)>
+<h2>Alternative Loops</h2>
+
+<p><em>Alternative asyncio loop implementations.</em></p>
+
+<ul>
+<li><a href="https://github.com/MagicStack/uvloop">uvloop</a> - Ultra fast implementation of asyncio event loop on top of libuv.</li>
+</('ul', 0)>
+<h2>Misc</h2>
+
+<p><em>Other awesome asyncio libraries.</em></p>
+
+<ul>
+<li><a href="https://github.com/zh217/aiochan">aiochan</a> - CSP-style concurrency with channels, select and multiprocessing on top of asyncio.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/argaen/aiocache">aiocache</a> - Cache manager for different backends.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Tinche/aiofiles/">aiofiles</a> - File support for asyncio.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/alexdelorenzo/aiopath">aiopath</a> - Asynchronous <code>pathlib</code> for asyncio.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/qntln/aiodebug">aiodebug</a> - A tiny library for monitoring and testing asyncio programs.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/cjrh/aiorun">aiorun</a> - A <code>run()</code> function that handles all the usual boilerplate for startup and graceful shutdown.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/artfwo/aiosc">aiosc</a> -  Lightweight Open Sound Control implementation.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/changyuheng/aioserial">aioserial</a> - A drop-in replacement of <a href="https://github.com/pyserial/pyserial">pySerial</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/aio-libs/aiozipkin">aiozipkin</a> - Distributed tracing instrumentation for asyncio with zipkin</li>
+</ul>
+<ul>
+<li><a href="https://github.com/django/asgiref">asgiref</a> - Backend utils for ASGI to WSGI integration, includes sync<em>to</em>async and async<em>to</em>sync function wrappers.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ryananguiano/async<em>property">async</em>property</a> - Python decorator for async properties.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/howie6879/ruia">ruia</a> - An async web scraping micro-framework based on asyncio.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tomplus/kubernetes<em>asyncio">kubernetes</em>asyncio</a> - Asynchronous client library for Kubernetes.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/aiokitchen/aiomisc">aiomisc</a> - Miscellaneous utils for <code>asyncio</code>.</li>
+</ul>
+<ul>
+<li><a href="https://taskiq-python.github.io/">taskiq</a> - Asynchronous distributed task manager (like celery, but async). </li>
+</('ul', 0)>
+<h2>Writings</h2>
+
+<p><em>Documentation, blog posts, and other awesome writing about asyncio.</em></p>
+
+<ul>
+<li><a href="https://docs.python.org/3/library/asyncio.html">Official asyncio documentation</a> - Asynchronous I/O, event loop, coroutines and tasks.</li>
+</ul>
+<ul>
+<li><a href="http://masnun.com/2015/11/13/python-generators-coroutines-native-coroutines-and-async-await.html">Short well-written intro to asyncio</a> - Generators, Coroutines, Native Coroutines and async/await.</li>
+</ul>
+<ul>
+<li><a href="https://hackernoon.com/asyncio-for-the-working-python-developer-5c468e6e2e8e">AsyncIO for the Working Python Developer</a> - A gentle introduction to asynchronous programming from basic examples working up to URL fetching.</li>
+</ul>
+<ul>
+<li><a href="https://pawelmhm.github.io/asyncio/python/aiohttp/2016/04/22/asyncio-aiohttp.html">Test limits of Python aiohttp</a> - Making 1 million requests with python-aiohttp.</li>
+</ul>
+<ul>
+<li><a href="https://asgi.readthedocs.io/en/latest/">ASGI (Asynchronous Server Gateway Interface)</a> - A spiritual successor to WSGI, intended to provide a standard interface between async-capable Python web servers, frameworks, and applications.</li>
+</ul>
+<ul>
+<li><a href="https://hackernoon.com/a-simple-introduction-to-pythons-asyncio-595d9c9ecf8c">First Principles Introduction to Asyncio</a> - A no-buzzword first principles introduction to the internal workings of asyncio.</li>
+</ul>
+<ul>
+<li><a href="https://testdriven.io/blog/fastapi-crud/">Developing and Testing an Asynchronous API with FastAPI and Pytest</a> - This tutorial looks at how to develop and test an asynchronous API with FastAPI using Test-Driven Development (TDD).</li>
+</ul>
+<ul>
+<li><a href="https://www.manning.com/books/python-concurrency-with-asyncio">Python Concurrency with asyncio</a> - Learn how to speed up slow Python code with concurrent programming and the cutting-edge asyncio library.</li>
+</('ul', 0)>
+<h2>Talks</h2>
+
+<p><em>Recordings of awesome talks about asyncio.</em></p>
+
+<ul>
+<li><a href="https://youtu.be/ZzfHjytDceU">Topics of Interest (Python Asyncio)</a> | <a href="https://youtu.be/lYe8W04ERnY">screencast</a> | <a href="https://speakerdeck.com/dabeaz/topics-of-interest-async">slides</a> - PyCon Brasil 2015 keynote (David Beazley).</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/playlist?list=PLpEcQSRWP2IjVRlTUptdD05kG-UkJynQT">Python Asynchronous I/O Walkthrough</a> - 8-part code walkthrough (Philip Guo).</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=m28fiN9y_r8&t=132s">Async/await in Python 3.5 and why it is awesome</a> - EuroPython 2016 (Yury Selivanov).</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=E-1Y4kSsAFc">Fear and Awaiting in Async: A Savage Journey to the Heart of the Coroutine Dream</a> | <a href="https://www.youtube.com/watch?v=Bm96RqNGbGo">screencast</a> - PyOhio 2016 keynote (David Beazley).</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=iG6fr81xHKA">Asynchronous Python for the Complete Beginner</a> | <a href="https://speakerdeck.com/pycon2017/miguel-grinberg-asynchronous-python-for-the-complete-beginner">slides</a> - PyCon 2017 (Miguel Grinberg).</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=F19R_M4Nay4">Demystifying Python's Async and Await Keywords</a> - JetBrains TV 2020 (Michael Kennedy)</li>
+</('ul', 0)>
+<h2>Alternatives to asyncio</h2>
+
+<p><em>Alternative approaches to async programming in Python, some of which attempt to support some compatibility with <code>asyncio</code>, others are not compatible at all.</em></p>
+
+<ul>
+<li><a href="https://github.com/dabeaz/curio">curio</a> - The coroutine concurrency library.</li>
+<ul>
+<li><a href="https://github.com/dabeaz/curio/issues/190">Curio-Asyncio Bridge</a> - basic curio -> asyncio coroutine bridge.</li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://github.com/python-trio/trio">trio</a> - Pythonic async I/O for humans and snake people.</li>
+<ul>
+<li><a href="https://github.com/python-trio/trio-asyncio">trio-asyncio</a> - re-implementation of the asyncio mainloop on top of Trio.</li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://github.com/agronholm/anyio">AnyIO</a> - High level asynchronous concurrency and networking framework that works on top of either trio or asyncio.</li>
+</ul>
+</body>
+</html>

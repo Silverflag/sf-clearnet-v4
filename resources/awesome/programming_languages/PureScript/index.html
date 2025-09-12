@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PureScript</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>PureScript</h1>
+
+<p><strong>Repository:</strong> https://github.com/passy/awesome-purescript#readme</p>
+<p><strong>Source File:</strong> readme.md</p>
+
+<hr>
+
+<h1>awesome-purescript <a href="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg"><img src="https://github.com/sindresorhus/awesome" alt="Awesome</a>"></h1>
+
+<blockquote>
+<p>A curated list of delightful libraries, tools and other shiny things for PureScript.</p>
+</blockquote>
+
+<h2>Build Tooling</h2>
+
+<ul>
+<li><a href="https://github.com/bodil/pulp">pulp</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/ThomasCrvsr/psvm-js">psvm-js</a> - PureScript Version Manager</li>
+</ul>
+<ul>
+<li><a href="https://github.com/natefaubion/purescript-psa">purescript-psa</a> - A pretty, flexible error/warning reporting frontend for <code>psc</code></li>
+</ul>
+<ul>
+<li><a href="https://github.com/purescript-contrib/grunt-purescript">grunt-purescript</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/purescript-contrib/gulp-purescript">gulp-purescript</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/ethul/purs-loader">purs-loader</a> for webpack</li>
+</ul>
+<ul>
+<li><a href="https://github.com/purescript/psc-package">psc-package</a> - A package manager for PureScript based on package sets</li>
+</ul>
+<ul>
+<li><a href="https://github.com/spacchetti/spago">spago</a> - PureScript package manager and build tool powered by Dhall and package-sets</li>
+</('ul', 0)>
+<h2>Preludes</h2>
+
+<ul>
+<li><a href="https://github.com/purescript/purescript-prelude">purescript-prelude</a> - The standard Prelude.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tfausak/purescript-batteries">purescript-batteries</a> - A PureScript prelude with more features.</li>
+</('ul', 0)>
+<h2>UI Libraries</h2>
+
+<p>CSS:</p>
+
+<ul>
+<li><a href="https://github.com/slamdata/purescript-css">purescript-css</a> - A clean, type-safe library for describing, manipulating and rendering CSS.</li>
+</ul>
+<p>React-based:</p>
+
+<ul>
+<li><a href="https://github.com/paf31/purescript-thermite">purescript-thermite</a> - A simple wrapper for ReactJS inspired by <code>react-blaze</code>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/purescript-contrib/purescript-react">purescript-react</a> - React bindings for PureScript</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lumihq/purescript-react-basic">purescript-react-basic</a> - An opinionated set of bindings to the React library, optimizing for the most basic use cases.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/spicydonuts/purescript-react-basic-hooks">purescript-react-basic-hooks</a> - An alternative way to define React components using React's "hooks" APIs. Compatible with <code>purescript-react-basic</code>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/alexmingoia/purescript-pux">purescript-pux</a> - Build type-safe web apps with PureScript.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/natefaubion/purescript-spork">purescript-spork</a> - Elm-like for PureScript.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ajnsit/purescript-concur">purescript-concur</a> - Concur UI framework. React backend, but can use others.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/juspay/purescript-presto">purescript-presto</a> - Write Apps like Mathematical Equations!</li>
+</ul>
+<ul>
+<li><a href="https://github.com/zrho/purescript-optic-ui">purescript-optic-ui</a> - Write single page web user interfaces declaratively and concisely with the help of lenses and traversals.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/paf31/purescript-react-explore">purescript-react-explor</a> - Experiments with comonads for modelling React UIs.</li>
+</ul>
+<p>Virtual-DOM based:</p>
+
+<ul>
+<li><a href="https://github.com/slamdata/purescript-halogen">purescript-halogen</a> - A declarative, type-safe UI library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/utkarshkukreti/purescript-hedwig">purescript-hedwig</a> - Hedwig is a fast, type safe, declarative PureScript library for building web applications.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/easafe/purescript-flame">purescript-flame</a> - Flame is a fast & simple framework for building web applications in PureScript inspired by purescript-hedwig and Elm</li>
+</ul>
+<p>Signals/Behaviors/FRP:</p>
+
+<ul>
+<li><a href="https://github.com/sharkdp/purescript-flare">purescript-flare</a> - Applicative-style reactive user interfaces built on top of purescript-signal.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/funkia/purescript-turbine">purescript-turbine</a> - Purely functional frontend framework powered by FRP.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/OutWatch/purescript-outwatch">purescript-outwatch</a> - A functional and reactive UI framework based on Rx and VirtualDom.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/i-am-tom/purescript-panda">purescript-panda</a> - What would TEA look like if we had no VDOM?</li>
+</ul>
+<ul>
+<li><a href="https://github.com/restaumatic/purescript-specular">purescript-specular</a> - A Reflex-Dom inspired UI library for PureScript.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/paf31/purescript-sdom">purescript-sdom</a> - An experiment in replacing the virtual DOM and avoiding diffing.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/paf31/purescript-purview">purescript-purview</a> - A UI library based on the incremental lambda calculus.</li>
+</('ul', 0)>
+<h2>URL Routers</h2>
+
+<ul>
+<li><a href="https://github.com/slamdata/purescript-routing">purescript-routing</a> - A clean, type-safe routing library for PureScript.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/coot/purescript-cofree-react-router">purescript-cofree-react-router</a> - React-Router implemented in PureScript as Cofree Comonad for the Array functor.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/owickstrom/purescript-trout">purescript-trout</a> - Type-level routing for PureScript.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/paluh/purescript-boomboom">purescript-boomboom</a> - Never hard code your urls again. Boomboom them all!</li>
+</ul>
+<ul>
+<li><a href="https://github.com/natefaubion/purescript-routing-duplex">purescript-routing-duplex</a> - Simple bidirectional parser/printers for your routing data types.</li>
+</('ul', 0)>
+<h2>Components</h2>
+
+<ul>
+<li><a href="https://github.com/thomashoneyman/purescript-halogen-formless">purescript-halogen-formless</a> - A renderless component for building painless forms in Halogen</li>
+</ul>
+<ul>
+<li><a href="https://github.com/citizennet/purescript-halogen-select">purescript-halogen-select</a> - Building blocks for common selection user interfaces like dropdowns, typeaheads, image pickers, and calendars.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/slamdata/purescript-halogen-echarts">purescript-halogen-echarts</a> - A Halogen integration for the popular ECharts charting library</li>
+</ul>
+<ul>
+<li><a href="https://github.com/rnons/purescript-halogen-day-picker">purescript-halogen-day-picker</a> - A day picker for Halogen</li>
+</ul>
+<ul>
+<li><a href="https://github.com/slamdata/purescript-halogen-menu">purescript-halogen-menu</a> - Interactive menus in Halogen</li>
+</('ul', 0)>
+<h2>Asynchronicity and Parallelism</h2>
+
+<ul>
+<li><a href="https://github.com/slamdata/purescript-aff">purescript-aff</a> - An asynchronous effect monad for PureScript.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/slamdata/purescript-aff">purescript-affjax</a> - An asynchronous AJAX library built using Aff.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/athanclark/purescript-queue">purescript-queue</a> - An asynchronous queue library for PureScript.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/bodil/purescript-signal">purescript-signal</a> - An asynchronous signal library for PureScript, similar to Elm.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/athanclark/purescript-zeta">purescript-zeta</a> - An alternative signal implementation in PureScript.</li>
+</('ul', 0)>
+<h2>Effect Management</h2>
+
+<ul>
+<li><a href="https://github.com/purescript/purescript-eff">purescript-eff</a> - The Eff monad, for handling native side effects.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/purescript/purescript-effect">purescript-effect</a> - The Effect monad, for handling native side effects in PureScript v0.12.x.</li>
+</('ul', 0)>
+<h2>Json Serialization</h2>
+
+<ul>
+<li><a href="https://github.com/purescript-contrib/purescript-argonaut">purescript-argonaut</a> - Json encoding and decoding typeclasses.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/justinwoo/purescript-simple-json">purescript-simple-json</a> - Json encoding and decoding through Generics.</li>
+</('ul', 0)>
+<h2>Binary Serialization</h2>
+
+<ul>
+<li><a href="https://github.com/jacereda/purescript-arraybuffer">purescript-arraybuffer</a> - Bindings to the ArrayBuffer JavaScript type.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/athanclark/purescript-arraybuffer-class">purescript-arraybuffer-class</a> - Typeclasses for ArrayBuffer encoding and decoding.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jamesdbrock/purescript-arraybuffer-builder">purescript-arraybuffer-builder</a> - Builder for serializing ArrayBuffer</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jamesdbrock/purescript-parsing-dataview">purescript-parsing-dataview</a> - Parser for deserializing ArrayBuffer</li>
+</ul>
+<ul>
+<li><a href="https://github.com/xc-jp/purescript-protobuf">purescript-protobuf</a> - Google Protocol Buffers</li>
+</('ul', 0)>
+<h2>Testing</h2>
+
+<ul>
+<li><a href="https://github.com/bodil/purescript-test-unit">purescript-test-unit</a> - An asynchronous unit test runner for PureScript.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/purescript/purescript-quickcheck">purescript-quickcheck</a> - An implementation of QuickCheck in PureScript.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/garyb/purescript-quickcheck-laws">purescript-quickcheck-laws</a> - Law tests for core classes.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/hdgarrood/purescript-benchotron">purescript-benchotron</a> - Straightforward benchmarking for PureScript/JavaScript.</li>
+</('ul', 0)>
+<h2>Learning Resources</h2>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=yIlDBPiMb0o">Video - "PureScript (Maybe This Time We Get JavaScript Right)" by Bodil Stokke</a></li>
+</ul>
+<ul>
+<li><a href="https://leanpub.com/purescript/read">Book - "PureScript by Example" by Phil Freeman</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/JordanMartinez/purescript-jordans-reference">Book (ish) - Jordan's Purescript Reference</a></li>
+</ul>
+<ul>
+<li><a href="http://www.arow.info/blog/posts/2015-12-17-purescript-intro.html">PureScript for Haskellers by Dennis Gosnell</a></li>
+</ul>
+<ul>
+<li><a href="https://www.functionalgeekery.com/episode-22-lambdaconf-2015-part-1/">Podcast - Functional Geekery Episode 22</a></li>
+</ul>
+<ul>
+<li><a href="https://devchat.tv/js-jabber/189-jsj-purescript-with-john-a-de-goes-and-phil-freeman">Podcast - JSJ 189</a></li>
+</ul>
+<ul>
+<li><a href="https://egghead.io/courses/functional-programming-concepts-in-purescript">Course (egghead.io) - Functional Programming Concepts in Purescript</a></li>
+</ul>
+<ul>
+<li><a href="https://thomashoneyman.com/guides/real-world-halogen">Guide - Real World Halogen</a></li>
+</('ul', 0)>
+<h2>Discovery</h2>
+
+<ul>
+<li><a href="https://fiatjaf.alhur.es/module-linker/#/purescript">Module Linker</a> - Extension that lets you browse docs by just clicking on <code>import</code> declarations on GitHub.</li>
+</ul>
+<ul>
+<li><a href="https://pursuit.purescript.org/">Pursuit</a></li>
+</('ul', 0)>
+<h2>Editor and IDE Plugins</h2>
+
+<p>See <a href="https://github.com/purescript/purescript/wiki/Editor-and-tool-support">Editor and tool support</a></p>
+
+<h2>Community</h2>
+
+<ul>
+<li><a href="http://www.reddit.com/r/purescript"><code>/r/purescript</code> subreddit</a></li>
+</ul>
+<ul>
+<li><a href="http://webchat.freenode.net/?channels=purescript"><code>#purescript</code> on Freenode</a></li>
+</ul>
+<ul>
+<li><a href="http://stackoverflow.com/questions/tagged/purescript">Stack Overflow <code>purescript</code> tag</a></li>
+</ul>
+<ul>
+<li><a href="https://groups.google.com/forum/#!forum/purescript">Google Group</a></li>
+</('ul', 0)>
+<h2>More Resources</h2>
+
+<ul>
+<li><a href="https://github.com/xgrommx/purescript-ecosystem">Purescript Ecosystem</a> - Ranked list of popular libraries.</li>
+</('ul', 0)>
+<h2>Contribute</h2>
+
+<p>Contributions welcome! Read the <a href="contributing.md">contribution guidelines</a> first.</p>
+
+<h2>License</h2>
+
+<p><a href="http://i.creativecommons.org/p/zero/1.0/88x31.png"><img src="http://creativecommons.org/publicdomain/zero/1.0/" alt="CC0</a>"></p>
+
+<p>To the extent possible under law, <a href="https://passy.me/">Pascal Hartig</a> has waived all copyright and related or neighboring rights to this work.</p>
+
+</body>
+</html>

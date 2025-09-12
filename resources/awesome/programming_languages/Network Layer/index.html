@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Layer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Network Layer</h1>
+
+<p><strong>Repository:</strong> https://github.com/Kikobeats/awesome-network-js#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<h1>Awesome JavaScript Network <a href="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg"><img src="https://github.com/Kikobeats/awesome-network-js" alt="Awesome</a>"> <a href="https://img.shields.io/travis/Kikobeats/awesome-network-js/master.svg?style=flat-square"><img src="https://travis-ci.org/Kikobeats/awesome-network-js" alt="Build Status</a>"> <a href="https://img.shields.io/badge/donate-paypal-blue.svg?style=flat-square"><img src="https://paypal.me/kikobeats" alt="Donate</a>"></h1>
+
+<blockquote>
+<p>A 🎩 list of network layer resources written pure JS.</p>
+</blockquote>
+
+<h2>High level</h2>
+
+<blockquote>
+<p>Based, at least, in a CLI interface.</p>
+</blockquote>
+
+<ul>
+<li><a href="https://github.com/mafintosh/airpaste">airpaste</a> – 1-1 network pipe that auto discovers other peers using mdns.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mafintosh/blecat">blecat</a> – 1-1 pipe over bluetooth low energy.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mafintosh/deejay">deejay</a> – Music player that broadcasts to everyone on the same network.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/maxogden/dhtkv">dhtkv</a> – CLI for storing arbitrary key/value data in the bittorrent mainline DHT.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/amark/gun">gun</a> – A realtime, decentralized, offline-first, graph database engine.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mafintosh/hyperpipe">hyperpipe</a> – Distributed input/output pipe.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mafintosh/hypervision">hypervision</a> – P2P Television.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/webtorrent/instant.io">instant.io</a> – Streaming file transfer over WebTorrent.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/watson/ipp-printer">ipp-printer</a> – Create a printer on your network.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mafintosh/peercast">peercast</a> – Like peerflix but for Chromecast.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mafintosh/peerflix">peerflix</a> – Streaming torrent client.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mafintosh/peervisionary">peervisionary</a> – Stream p2p content over your local network.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mafintosh/peerwiki">peerwiki</a> – browse all of wikipedia using bittorrent.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/maxogden/screencat">screencat</a> – WebRTC screensharing app.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mafintosh/signalhub">signalhub</a> – Simple signalling server that can be used to coordinate handshaking with webrtc or other fun stuff.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mafintosh/torrent-mount">torrent-mount</a> – Mount a torrent (or magnet link) as a filesystem in real time using torrent-stream and fuse.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mafintosh/webcat">webcat</a> – pipe across the web using WebRTC.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/joewalnes/websocketd">websocketd</a> – Turn any program that uses stdin/stdout into a WebSocket server.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/webtorrent/webtorrent">webtorrent</a> – BitTorrent over WebRTC.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/watson/wifi-triangulate">wifi-triangulate</a> – Finds your current position on planet earth using the wifi access point.</li>
+</('ul', 0)>
+<h2>Modules</h2>
+
+<blockquote>
+<p>Do one thing well.</p>
+</blockquote>
+
+<ul>
+<li><a href="https://github.com/watson/airplay-server">airplay-server</a> – A low level AirPlay server.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/xat/chromecast-player">castnow</a> – simple chromecast player.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mafintosh/discovery-swarm">discovery-swarm</a> – A network swarm that uses <a href="https://github.com/maxogden/discovery-channel">discovery-channel</a> to find peers. Also check <a href="https://github.com/mafintosh/webrtc-swarm">webrtc-swarm</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mafintosh/dns-packet">dns-packet</a> – Abstract-encoding compliant module for encoding / decoding DNS packets. Also see <a href="https://github.com/mafintosh/dns-socket">dns-socket</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mafintosh/etcdjs">etcdjs</a> – Low level etcd v2 client written in Javascript with failover support.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/watson/geocode-wifi">geocode-wifi</a> – Get yours latitude/longitude based on your wifi access point.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mafintosh/hash-to-port">hash-to-port</a> – Hash a value to a valid port.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mafintosh/hyperdb">hyperdb</a> – Distributed scalable database.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mafintosh/ip-packet">ip-packet</a> – Encode/decode raw ip packets.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/webtorrent/magnet-uri">magnet-uri</a> – Parse a magnet URI and return an object of keys/values.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/samchon/mutex-server">mutex-server</a> - Critical section controllers, like mutex and semaphore, in the network level.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mafintosh/network-address">network-address</a> – Get the local network address of your machine.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/substack/network-simulator">network-simulator</a> – Simulate a low-level computer network.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/watson/rtsp-stream">rtsp-stream</a> - A transport agnostic RTSP serial multiplexer module for Node.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/feross/simple-peer">simple-peer</a> – Simple WebRTC video/voice and data channels.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/feross/simple-websocket">simple-websocket</a> – Simple, EventEmitter API for WebSockets.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/webtorrent/torrent-discovery">torrent-discovery</a> – Discover BitTorrent and WebTorrent peers.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mafintosh/torrent-stream">torrent-stream</a> – The low level streaming torrent engine that peerflix uses.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/substack/udp-packet">udp-packet</a> – Encode/decode raw udp packets.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/elpheria/rpc-websockets">rpc-websockets</a> - JSON-RPC 2.0 implementation over WebSockets for Node.js and JavaScript.</li>
+</('ul', 0)>
+<h2>Protocols</h2>
+
+<blockquote>
+<p>Implementation of protocols specs in pure javascript.</p>
+</blockquote>
+
+<ul>
+<li><a href="https://github.com/mafintosh/airswarm">airswarm</a> – Network swarm that automagically discovers other peers on the network using multicast dns.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/webtorrent/bittorrent-dht">bittorrent-dht</a> – BitTorrent DHT protocol implementation.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/webtorrent/bittorrent-protocol">bittorrent-protocol</a> – BitTorrent peer wire protocol implementation.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/webtorrent/bittorrent-tracker">bittorrent-tracker</a> – BitTorrent tracker (client & server) implementation</li>
+</ul>
+<ul>
+<li><a href="https://github.com/watson/bonjour">bonjour</a> – A Bonjour/Zeroconf protocol implementation.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/thibauts/node-castv2">castv2</a> – An implementation of the Chromecast CASTV2 protocol.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mafintosh/dht-rpc">dht-rpc</a> – Make RPC calls over a <a href="https://pdos.csail.mit.edu/~petar/papers/maymounkov-kademlia-lncs.pdf">Kademlia</a> based DHT.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mafintosh/dns-discovery">dns-discovery</a> – Discovery peers in a distributed system using regular dns and multicast dns.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mafintosh/hypercore">hypercore</a> – A p2p network for distributing and replicating static feeds of binary data.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ipfs/js-ipfs-api">ipfs</a> – The InterPlanetary File System, a new peer-to-peer hypermedia protocol.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tristanls/k-bucket">k-bucket</a> – Kademlia DHT K-bucket implementation as a binary tree.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mafintosh/k-rpc">k-rpc</a> – Implementation of the k-rpc protocol used the BitTorrent DHT. Also see <a href="https://github.com/mafintosh/k-rpc-socket">k-rpc-socket</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/agnat/node_mdns">mdns</a> – mdns/zeroconf/bonjour service discovery.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mafintosh/multicast-dns">multicast-dns</a> – Low level multicast-dns implementation.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mafintosh/peervision">peervision</a> – Live p2p streaming protocol.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mafintosh/polo">polo</a> – A zero configuration service discovery module.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/watson/rtsp-server">rtsp-server</a> – A low level module for creating RTSP servers.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mafintosh/utp-native">utp-native</a> – micro transport protocol, a network protocol similar to tcp that runs on top of udp.</li>
+</ul>
+</body>
+</html>

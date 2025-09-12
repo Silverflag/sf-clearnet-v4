@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Micro npm Packages</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Micro npm Packages</h1>
+
+<p><strong>Repository:</strong> https://github.com/parro-it/awesome-micro-npm-packages#readme</p>
+<p><strong>Source File:</strong> readme.md</p>
+
+<hr>
+
+<h1>Awesome Micro npm Packages <a href="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg"><img src="https://github.com/sindresorhus/awesome" alt="Awesome</a>"></h1>
+
+<blockquote>
+<p>A curated list of small, focused Node.js modules.</p>
+</blockquote>
+
+<p><em>Inspired by the <a href="https://github.com/sindresorhus/awesome">awesome</a> list thing.</em></p>
+
+<h2>Articles</h2>
+
+<ul>
+<li><a href="https://github.com/sindresorhus/ama/issues/10">One-line node modules</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/mattdesl/module-best-practices">Module best practices</a></li>
+</ul>
+<ul>
+<li><a href="http://bytearcher.com/articles/evaluating-packages-1-check-community/">Evaluating Packages Part 1 - Turn to community</a> </li>
+</ul>
+<ul>
+<li><a href="http://bytearcher.com/articles/evaluating-packages-2-review-repository/">Evaluating Packages Part 2 - Review repository</a></li>
+</ul>
+<ul>
+<li><a href="https://medium.com/@Rich_Harris/small-modules-it-s-not-quite-that-simple-3ca532d65de4">Small modules: it’s not quite that simple</a></li>
+</ul>
+<ul>
+<li><a href="https://medium.freecodecamp.com/in-defense-of-hyper-modular-javascript-33934c79e113">In Defense of Hyper Modular JavaScript</a></li>
+</ul>
+<ul>
+<li><a href="http://g14n.info/2015/12/tiny-npm-package/">Tiny npm package: Guidelines to create a Node.js module following the small package philosophy</a></li>
+</ul>
+<ul>
+<li><a href="https://nolanlawson.com/2016/08/15/the-cost-of-small-modules/">The cost of small modules</a></li>
+</('ul', 0)>
+<h2>Modules</h2>
+
+<h3>Array</h3>
+
+<ul>
+<li><a href="https://github.com/dcousens/is-sorted">is-sorted</a> - A small module to check if an Array is sorted.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jonschlinkert/array-first">array-first</a> - Get the first element or first n elements of an array.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jonschlinkert/array-last">array-last</a> - Return the last element in an array.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jonschlinkert/arr-flatten">arr-flatten</a> - Recursively flatten an array or arrays.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/seriousManual/dedupe">dedupe</a> - Remove duplicates from an array.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mattdesl/array-range">array-range</a> - Creates a new array with given range.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jonschlinkert/arr-diff">arr-diff</a> - Returns an array with only the unique values from the first array, by excluding all values from additional arrays using strict equality for comparisons.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/filled-array">filled-array</a> - Returns an array filled with the specified input</li>
+</ul>
+<ul>
+<li><a href="https://github.com/parro-it/map-array">map-array</a> - Map object keys and values into an array.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jonschlinkert/in-array">in-array</a> - Return true if any of passed values exists in array - faster than using indexOf.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mafintosh/unordered-array-remove">unordered-array-remove</a> - Efficiently remove an element from an unordered array without doing a splice.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/michaelzoidl/swap-array">array-swap</a> - Swap position of two items in an array.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/johnwquarles/mirrarray">mirrarray</a> - Creates a keymirror object from an array of valid keys.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/doowb/group-array">group-array</a> - Group array of objects into lists.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/zhiyelee/array.chunk">array.chunk</a> - Split array/TypedArray to chunks of given size.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ehmicky/fast-cartesian">fast-cartesian</a> - Fast cartesian product.</li>
+</('ul', 0)>
+<h3>String</h3>
+
+<ul>
+<li><a href="https://github.com/sindresorhus/decamelize">decamelize</a> - Convert a camelized string into a lowercased one with a custom separator: unicornRainbow → unicorn_rainbow.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jonschlinkert/pad-left">pad-left</a> - Left pad a string with zeros or a specified string.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ianstormtaylor/to-camel-case">to-camel-case</a> - Convert a string to a camel case.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ianstormtaylor/to-capital-case">to-capital-case</a> - Convert a string to a capital case.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ianstormtaylor/to-constant-case">to-constant-case</a> - Convert a string to a constant case.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ianstormtaylor/to-dot-case">to-dot-case</a> - Convert a string to a dot case.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ianstormtaylor/to-no-case">to-no-case</a> - Remove an existing case from a string.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ianstormtaylor/to-pascal-case">to-pascal-case</a> - Convert a string to a pascal case.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ianstormtaylor/to-sentence-case">to-sentence-case</a> - Convert a string to a sentence case.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ianstormtaylor/to-snake-case">to-snake-case</a> - Convert a string to a snake case.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ianstormtaylor/to-space-case">to-space-case</a> - Convert a string to a space case.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ianstormtaylor/to-title-case">to-title-case</a> - Convert a string to a title case.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dodo/node-slug">node-slug</a> - slugifies even utf-8 chars.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sergejmueller/rtrim">rtrim</a> - Strip whitespace - or other characters - from the end of a string.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/hustcc/slice.js">slice.js</a> - Javascript library to enhance String.substring / Array.slice with python slice style.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/chalk/strip-ansi">strip-ansi</a> - Strip ANSI escape codes.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ericnorris/striptags">striptags</a> - An implementation of PHP's strip_tags in Node.js.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ErikOnBike/parse-next-json-value">parse-next-json-value</a> - Parse next JSON value from string allowing extraneous characters after value.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/DaniAkash/pluralizer">pluralize</a> - A very tiny library to pluralize words</li>
+</('ul', 0)>
+<h3>Date & Time</h3>
+
+<ul>
+<li><a href="https://github.com/sindresorhus/pretty-ms">pretty-ms</a> - Convert milliseconds to a human readable string: 1337000000 → 15d 11h 23m 20s.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/seriousManual/hirestime">hirestime</a> - A wrapper around the built-in high resolution timer which simplifies the calculation of timestamps.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/timruffles/periods">periods</a> - Defined time-periods constants for Javascript, in milliseconds.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/taylorhakes/fecha">fecha</a> - Javascript Date formatting and parsing.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jucrouzet/akamai-time-reference">akamai-time-reference</a> - Get reference time using Akamai's time reference service.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/hustcc/timeago.js">timeago.js</a> - A tiny(~1.7kb) library used to format date with <code>*** time ago</code> statement.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/shinnn/count-days-in-month">count-days-in-month</a> - Get the number of days in a given month.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jonschlinkert/time-stamp">time-stamp</a> - Get a formatted timestamp.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/vutran/twas">twas</a> - Generate a relative time string (Example: "3 seconds ago")</li>
+</('ul', 0)>
+<h3>Object</h3>
+
+<ul>
+<li><a href="https://github.com/sindresorhus/map-obj">map-obj</a> - Map object keys and values into a new object.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/filter-obj">filter-obj</a> - Filter object keys and values into a new object.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/object-values">object-values</a> - Get the values of an object.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/eush77/object-pairs">object-pairs</a> - Turn an object into list of [key, value] pairs for mapping, iterating or other purposes.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/landau/zipmap">zipmap</a> - Returns a map with the keys mapped to the corresponding vals. zipmap also accepts a single value of objects or pairs.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jarofghosts/just-pluck">just-pluck</a> - Pluck without the madness.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/substack/node-deep-equal">deep-equal</a> - Node's assert.deepEqual() algorithm as a standalone module.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/deep-assign">deep-assign</a> - Recursive Object.assign().</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jonschlinkert/set-value">set-value</a> - Create nested values and any intermediaries dot notation (<code>'a.b.c'</code>) paths.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jonschlinkert/get-value">get-value</a> - Use property paths (a.b.c) to get a nested value from an object.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jonschlinkert/has-value">has-value</a> - Returns true if a value exists, false if empty. Works with deeply nested values using dot notation (<code>'a.b.c'</code>) paths.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ryanaghdam/has-key-deep">has-key-deep</a> - Deep-search objects for keys. Keys can be searched by providing an array of keys, or using a dot-notiation.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ricardobeat/flatkeys">flatkeys</a> - Flatten object key hierarchies into a list of strings using a custom separator.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/watson/flatten-obj">flatten-obj</a> - Converts an object literal with deeply nested nodes to a simple key/value object.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/gummesson/is-empty-object">is-empty-object</a> - Check if an object is empty.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/yeoman/stringify-object">stringify-object</a> - Stringify an object/array like JSON.stringify just without all the double-quotes.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/domenic/sorted-object">sorted-object</a> - Returns a copy of an object with its keys sorted.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/fibo/static-props">static-props</a> - Defines static object attributes using <code>Object.defineProperties</code></li>
+</ul>
+<ul>
+<li><a href="https://github.com/vladgolubev/missing-deep-keys">missing-deep-keys</a> - Returns an array of keys from first object that are missing in second.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/LinusU/has-own-property">has-own-property</a> - Check if an object has a local property. </li>
+</ul>
+<ul>
+<li><a href="https://github.com/shevaroller/node-merge-objects">merge-objects</a> - Deep-merge two objects. Arrays that are values of the same object key get concatenated.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mattphillips/deep-object-diff">deep-object-diff</a> - Deep diff two JavaScript Objects while preserving the data structure. Including nested structures of Arrays and Objects.</li>
+</('ul', 0)>
+<h3>Function</h3>
+
+<ul>
+<li><a href="https://github.com/stoeffel/compose-function">compose-function</a> - Compose a new function from smaller functions <code>f(g(x))</code>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dominictarr/curry">curry</a> - A curry function without anything too clever.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/isaacs/once">once</a> - Run a function exactly one time.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jonschlinkert/deep-bind">deep-bind</a> - Bind a context to all functions in an object, including deeply nested functions.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/substack/identity-function">identity-function</a> - Always return the input argument. </li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/mem">mem</a> - An optimization technique used to speed up consecutive function calls by caching the result of calls with identical input.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/niksy/throttle-debounce">throttle-debounce</a> - Throttle/debounce your functions.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/hipstersmoothie/compose-tiny">compose-tiny</a> - A very tiny and fast compose function.</li>
+</('ul', 0)>
+<h3>Math</h3>
+
+<ul>
+<li><a href="https://github.com/jonschlinkert/is-even">is-even</a> - A good way to tell if a number is even or not (avoids type issues). Uses <code>is-odd</code> and <code>is-number</code> under the hood.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jonschlinkert/is-number">is-number</a> - Returns <code>true</code> if the value is a number.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jonschlinkert/is-odd">is-odd</a> - A good way to tell if a number is odd or not (avoids type issues). Uses <code>is-number</code> under the hood.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kingzez/easy-math.js">easy-math.js</a> - A tiny easy math library including addition, multiplication, subtraction, and division.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jinnatul/my-prime">my-prime</a> - A good way to tell if a number is prime or not.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/zubayerhimel/fun-gcd">fun-gcd</a> - A tiny math library to get gcd of two numbers using Euclidean algorithm</li>
+</('ul', 0)>
+<h3>Stream</h3>
+<ul>
+<li><a href="https://github.com/rvagg/through2">through2</a> - Tiny wrapper around Node streams2 Transform to avoid explicit subclassing noise.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/brycebaril/through2-filter">through2-filter</a> - A through2 to create an Array.prototype.filter analog for streams.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/brycebaril/through2-map">through2-map</a> - A through2 to create an Array.prototype.map analog for streams.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/brycebaril/node-stream-spigot">stream-spigot</a> - A readable stream generator, useful for testing or converting simple functions into Readable streams.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/maxogden/concat-stream">concat-stream</a> - writable stream that concatenates strings or data and calls a callback with the result.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dominictarr/JSONStream">JSONStream</a> - streaming JSON.parse and stringify</li>
+</ul>
+<ul>
+<li><a href="https://github.com/RangerMauve/through2-map-promise">through2-map-promise</a> - A small promise-based wrapper for through2.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mafintosh/pump">pump</a> - pipe streams together and close all of them if one of them closes.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dominictarr/split">split</a> - Break up a stream and reassemble it so that each line is a chunk.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/is-stream">is-stream</a> - Check if something is a Node.js stream.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mcollina/syncthrough">syncthrough</a> - Transform your data as it pass by, synchronously.</li>
+</('ul', 0)>
+<h3>Promise</h3>
+
+<ul>
+<li><a href="https://github.com/sindresorhus/pify">pify</a> - Promisify a callback-style function.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Siilwyn/promise-all-props">promise-all-props</a> - Like <code>Promise.all</code> but for object properties.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/brummelte/sleep-promise">sleep-promise</a> - Resolves a promise after a specified delay.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/then/is-promise">is-promise</a> - Test whether an object looks like a promises-a+ promise.</li>
+</('ul', 0)>
+<h3>Data Structure</h3>
+
+<ul>
+<li><a href="https://github.com/TomerAberbach/quetie">quetie</a> - Just the cutest and tiniest queue/deque implementation!</li>
+</('ul', 0)>
+<h3>File System</h3>
+
+<ul>
+<li><a href="https://github.com/isaacs/rimraf">rimraf</a> - A deep deletion module for node (like rm -rf).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/substack/node-mkdirp">mkdirp</a> - Recursively mkdir, like mkdir -p.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/rvagg/node-du">du</a> - A simple JavaScript implementation of du -sb.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Nijikokun/file-size">file-size</a> - Lightweight filesize to human-readable / proportions w/o dependencies.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/raszi/node-tmp">tmp</a> - Temporary file and directory creator for node.js.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kevinbeaty/fs-promise">fs-promise</a> - Node fs methods as Promise/A+ (optional fs-extra, graceful-fs).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/RocktimSaikia/read-git-user">read-git-user</a> - Reads the username and email from <code>.gitconfig</code> :wrench: and returns it as json object.</li>
+</('ul', 0)>
+<h3>Browser</h3>
+
+<ul>
+<li><a href="https://github.com/zenorocha/delegate">delegate</a> - Lightweight event delegation.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/substack/insert-css">insert-css</a> - Insert a string of css into the head</li>
+</ul>
+<ul>
+<li><a href="https://github.com/crysalead-js/dom-element-value">dom-element-value</a> - DOM element value getter/setter.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/bfred-it/image-promise">image-promise</a> - Load one or more <code><img></code>s in a Promise.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/bfred-it/get-media-size">get-media-size</a> - Get the original size of any <code>img</code>/<code>video</code>/<code>svg</code>/<code>canvas</code> tags or canvas context.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/bendrucker/document-ready">document-ready</a> - Document ready listener for modern browsers.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/styfle/copee">copee</a> - Copy text from browser to clipboard...natively!</li>
+</('ul', 0)>
+<h3>Semver</h3>
+
+<ul>
+<li><a href="https://github.com/npm/node-semver">semver</a> - The semantic version parser used by npm.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/eush77/semver-max">semver-max</a> - Find maximum (or minimum) version according to semver.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/parro-it/semver-first-satisfied">semver-first-satisfied</a> - Find minimum in an array of version that satisfies a semver range.</li>
+</('ul', 0)>
+<h3>CLI</h3>
+
+<ul>
+<li><a href="https://github.com/isaacs/abbrev-js">abbrev</a> - Calculate the set of unique abbreviations for a given set of strings.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/isaacs/node-glob">glob</a> - Glob functionality for node.js.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/username">username</a> - Get the username of the current user.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/substack/minimist">minimist</a> - Parse argument options.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/steambap/png-to-ico">png-to-ico</a> - Convert png to windows ico format.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/eush77/help-version">help-version</a> - Easily handle --help and --version arguments in your CLI application</li>
+</('ul', 0)>
+<h3>Module management</h3>
+
+<ul>
+<li><a href="https://github.com/sindresorhus/pkg-conf">pkg-conf</a> - Get namespaced config from the closest package.json.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jonschlinkert/normalize-pkg">normalize-pkg</a> - Normalize values in package.json to improve compatibility, programmatic readability and usefulness with third party libs.</li>
+</('ul', 0)>
+<h3>Generators</h3>
+
+<ul>
+<li><a href="https://github.com/blakeembrey/is-generator">is-generator</a> - Check whether a given value is a generator function.</li>
+</('ul', 0)>
+<h3>Other</h3>
+
+<ul>
+<li><a href="https://github.com/kelektiv/node-uuid">uuid</a> - Generate RFC-compliant UUIDs in JavaScript.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/broofa/node-mime">node-mime</a> - Comprehensive MIME type mapping API based on mime-db module.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/fibo/not-defined">not-defined</a> - Checks if foo is not defined, i.e. undefined, null, an empty string, array or object.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/parro-it/is-fqdn">is-fqdn</a> - Check if a string represent a fully qualified domain name.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/BrunoBernardino/shurley">shurley</a> - Parses URLs from user input (with potential typos in protocols, bad copy+paste, etc.) and returns a proper URL.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/RocktimSaikia/mime-type-check">mime-type-check</a> - Get the MIME type of a file by its extension.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ai/nanoid">nanoid</a> - A tiny (130 bytes), secure, URL-friendly, unique string ID generator for JavaScript</li>
+</('ul', 0)>
+<h3>Tools</h3>
+
+<ul>
+<li><a href="https://github.com/KID-joker/npm-deprecated-check">npm-deprecated-check</a> - Check for deprecated packages and recommend alternative packages.</li>
+</('ul', 0)>
+<h2>Related lists</h2>
+
+<p>This section contains awesome lists that you may find useful if you use or write small NPM modules.</p>
+
+<ul>
+<li><a href="https://github.com/sindresorhus/awesome-nodejs">awesome-nodejs</a> - A curated list of delightful Node.js packages and resources.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/awesome-npm">awesome-npm</a> - Awesome npm resources and tips.</li>
+</('ul', 0)>
+<h2>Small modules rockstars to follow</h2>
+
+<p>These people are used to develop awesome NPM modules that follows the single responsibility philosophy.</p>
+<p>Follow them to discover new great modules:</p>
+
+<p><a href="https://avatars.githubusercontent.com/u/170270?s=130"><img src="https://github.com/sindresorhus" alt="Sindre Sorhus</a>"> | <a href="https://avatars1.githubusercontent.com/u/12631?s=130"><img src="https://github.com/substack" alt="James Halliday</a>"> | <a href="https://avatars3.githubusercontent.com/u/4472489?s=130"><img src="https://github.com/eush77" alt="Eugene Sharygin</a>"> | <a href="https://avatars3.githubusercontent.com/u/9287?s=130"><img src="https://github.com/isaacs" alt="Isaac Z. Schlueter</a>"> | <a href="https://avatars1.githubusercontent.com/u/383994?s=130"><img src="https://github.com/jonschlinkert" alt="Jon Schlinkert</a>"> | <a href="https://avatars3.githubusercontent.com/u/259374?s=130"><img src="https://github.com/dominictarr" alt="Dominic Tarr</a>"></p>
+<p>---|---|---|---|---|---</p>
+<p><a href="https://github.com/sindresorhus">Sindre Sorhus</a> | <a href="https://github.com/substack">James Halliday</a> | <a href="https://github.com/eush77">Eugene Sharygin</a> | <a href="https://github.com/isaacs">Isaac Z. Schlueter</a> | <a href="https://github.com/jonschlinkert">Jon Schlinkert</a> | <a href="https://github.com/dominictarr">Dominic Tarr</a></p>
+
+<p><a href="https://avatars0.githubusercontent.com/u/495647?s=130"><img src="https://github.com/rvagg" alt="Rod Vagg</a>"> | <a href="https://avatars3.githubusercontent.com/u/39759?s=130"><img src="https://github.com/maxogden" alt="Max Ogden</a>"> | <a href="https://avatars1.githubusercontent.com/u/995160?s=130"><img src="https://github.com/doowb" alt="Brian Woodward</a>"></p>
+<p>---|---|---</p>
+<p><a href="https://github.com/rvagg">Rod Vagg</a> | <a href="https://github.com/maxogden">Max Ogden</a> | <a href="https://github.com/doowb">Brian Woodward</a></p>
+
+<h2>Contribute</h2>
+
+<p>Contributions welcome! Read the <a href="contributing.md">contribution guidelines</a> first.</p>
+
+<h2>License</h2>
+
+<p><a href="http://i.creativecommons.org/p/zero/1.0/88x31.png"><img src="http://creativecommons.org/publicdomain/zero/1.0/" alt="CC0</a>"></p>
+
+<p>To the extent possible under law, <a href="https://github.com/parro-it">Andrea Parodi</a> has waived all copyright and related or neighboring rights to this work.</p>
+
+</body>
+</html>

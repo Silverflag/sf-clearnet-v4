@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groovy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Groovy</h1>
+
+<p><strong>Repository:</strong> https://github.com/kdabir/awesome-groovy#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<p>Awesome Groovy <a href="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg"><img src="https://github.com/sindresorhus/awesome" alt="Awesome</a>"></p>
+<p>==============</p>
+
+<p>Curated list of awesome groovy libraries, frameworks and resources. Inspired by many other awesome-* repositories.</p>
+
+<ul>
+<li><a href="#awesome-groovy">Awesome Groovy</a></li>
+<ul>
+<li><a href="#build-tools-setup-and-ci">Build Tools, Setup and CI</a></li>
+</ul>
+<ul>
+<li><a href="#concurrency">Concurrency</a></li>
+</ul>
+<ul>
+<li><a href="#database">Database</a></li>
+</ul>
+<ul>
+<li><a href="#rich-applications">Desktop App Frameworks</a></li>
+</ul>
+<ul>
+<li><a href="#http">HTTP</a></li>
+</ul>
+<ul>
+<li><a href="#ide-and-editor-support">IDE and Editor Support</a></li>
+</ul>
+<ul>
+<li><a href="#testing">Testing</a></li>
+</ul>
+<ul>
+<li><a href="#code-analysis">Code analysis</a></li>
+</ul>
+<ul>
+<li><a href="#web-frameworks">Web Frameworks</a></li>
+</ul>
+<ul>
+<li><a href="#transpilers">Transpilers</a></li>
+</ul>
+<ul>
+<li><a href="#static-web">Static Web</a></li>
+</ul>
+<ul>
+<li><a href="#language-utilities">Language Utilities</a></li>
+</ul>
+<ul>
+<li><a href="#file-system-utilities">File System Utilities</a></li>
+</ul>
+<ul>
+<li><a href="#file-format-dsl">File Format DSL</a></li>
+</ul>
+<ul>
+<li><a href="#scripting-tools">Scripting Tools</a></li>
+</ul>
+<ul>
+<li><a href="#rule-engines">Rule Engines</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#resources">Resources</a></li>
+</ul>
+<ul>
+<li><a href="#contributing">Contributing</a></li>
+</ul>
+<ul>
+<li><a href="#credits">Credits</a></li>
+</('ul', 0)>
+<h2>Build tools, setup and CI</h2>
+<ul>
+<li><a href="https://www.gradle.org/">Gradle</a> - A powerful build system for the JVM</li>
+</ul>
+<ul>
+<li><a href="https://github.com/groovy/GMavenPlus">GMavenPlus</a> - A rewrite of GMaven, a Maven plugin for Groovy</li>
+</ul>
+<ul>
+<li><a href="https://sdkman.io">SDKMAN</a> - The Software Development Kit Manager (Previously known as GVM)</li>
+</ul>
+<ul>
+<li><a href="https://github.com/cbmarcum/skeletal">skeletal</a> - A simple project creation tool that uses packaged templates (successor of Lazybones)</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pledbrook/lazybones">Lazybones</a> - A simple project creation tool that uses packaged project templates.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jenkinsci/job-dsl-plugin">Jenkins job-dsl-plugin</a> - A Groovy DSL for Jenkins Jobs</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kdabir/travis-groovy">travis-groovy</a> - execute groovy scripts on travis-ci</li>
+</ul>
+<ul>
+<li><a href="https://play.google.com/store/apps/details?id=com.tambapps.android.grooidshell">Android Groovy Shell</a> - code and execute groovy scripts directly on your smartphone</li>
+</('ul', 0)>
+<h2>IDE and Editor Support</h2>
+<ul>
+<li><a href="http://www.jetbrains.com/idea/">IntelliJ IDEA</a> - The Most Intelligent IDE for the Java Platform</li>
+</ul>
+<ul>
+<li><a href="https://marketplace.eclipse.org/content/groovygrails-tool-suite-ggts-eclipse">Groovy Grails Tool Suite</a> -  Eclipse-based IDE optimized for developing, debugging and executing Groovy and Grails applications</li>
+</ul>
+<ul>
+<li><a href="http://groovyconsole.appspot.com">Groovy Web Console</a> - The online Groovy console</li>
+</ul>
+<ul>
+<li><a href="https://github.com/rundis/LightTable-Groovy">LightTable Plugin</a> - LightTable Support</li>
+</ul>
+<ul>
+<li><a href="https://spacevim.org/layers/lang/groovy/">SpaceVim</a> - SpaceVim <code>lang#groovy</code> layer</li>
+</ul>
+<ul>
+<li><a href="https://gist.github.com/kdabir/2203530">Sublime Text 2/3</a> - Run groovy scripts from Sublime Text</li>
+</('ul', 0)>
+<h2>Web Frameworks</h2>
+
+<ul>
+<li><a href="https://github.com/grails/grails">Grails</a> - A powerful web application framework based on the Groovy language</li>
+</ul>
+<ul>
+<li><a href="http://micronaut.io/">Micronaut</a> - A brand new microservices framework created by the Grails team</li>
+</ul>
+<ul>
+<li><a href="https://projects.spring.io/spring-boot">Spring-Boot</a> - Spring Boot makes it easy to create stand-alone, production-grade Spring based Applications that can you can "just run". Use Groovy as your coding language.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/gaelyk/gaelyk">Gaelyk</a> - A lightweight Groovy toolkit for Google App Engine Java</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kdabir/glide">Glide</a> - Create awesome apps on Google App Engine in a snap</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ratpack/ratpack">Ratpack</a> - A toolkit for JVM web applications</li>
+</ul>
+<ul>
+<li><a href="https://github.com/javaConductor/gserv">gServ</a> - A Groovy toolkit for creating SPAs and REST based micro-services without the need for a container (Tomcat, JBoss, etc.).</li>
+</('ul', 0)>
+<h2>Database</h2>
+<ul>
+<li><a href="https://gorm.grails.org">GORM</a> - Grails ORM, but can be used stand-alone without Grails</li>
+</ul>
+<ul>
+<li><a href="https://github.com/poiati/gmongo">Gmongo</a> - A Groovy wrapper to the mongodb Java driver</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kdabir/gstorm">Gstorm</a> - A simple ORM for simple databases and CSV files to be used in groovy scripts</li>
+</ul>
+<ul>
+<li><a href="https://github.com/EqualExperts/Tayra">Tayra</a> - Incremental backup tool for MongoDB</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tlberglund/groovy-liquibase">Groovy-liquibase</a> - Yet Another Groovy DSL for Liquibase</li>
+</ul>
+<ul>
+<li><a href="https://github.com/cjstehno/effigy">Effigy</a> - Groovy annotation-driven JDBC row mapping framework (abandoned)</li>
+</ul>
+<ul>
+<li><a href="https://github.com/elastic/elasticsearch-groovy">elasticsearch-groovy</a> - Elasticsearch Groovy client</li>
+</('ul', 0)>
+<h2>Rich Application</h2>
+
+<ul>
+<li><a href="http://griffon-framework.org/">Griffon</a> - Griffon is an application framework for developing desktop applications in the JVM</li>
+</ul>
+<ul>
+<li><a href="http://groovyfx.org/">GroovyFx</a> - GroovyFX provides a Groovy binding for JavaFX 2.0.</li>
+</('ul', 0)>
+<h2>HTTP</h2>
+<ul>
+<li><a href="https://github.com/jgritman/httpbuilder">Http-Builder</a> - HTTPBuilder is the easiest way to manipulate HTTP-based resources from the JVM</li>
+</ul>
+<ul>
+<li><a href="https://github.com/http-builder-ng/http-builder-ng">HTTP Builder NG</a> - HTTP Builder NG is a modern Groovy DSL for making http requests.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/http-builder-ng/gradle-http-plugin">HTTP Builder NG Gradle Plugin</a> - Gradle plugin providing HTTP Builder NG support in a Gradle build configuration.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/eginez/AsyncRestClient">AsyncRestClient</a> - Combine the power of RESTClient with RxGroovy for async http calls</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jwagenleitner/groovy-wslite">Groovy-wslite</a> - Lightweight SOAP and REST webservice clients for Groovy</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tambapps/hyperpoet">Hyperpoet</a> - Easy-to-use and customizable HTTP client for Groovy</li>
+</('ul', 0)>
+<h2>Testing</h2>
+<ul>
+<li><a href="https://github.com/spockframework/spock">Spock</a> - The Enterprise-ready testing and specification framework.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/geb/geb">Geb</a> - Very Groovy Browser Automation</li>
+</ul>
+<ul>
+<li><a href="https://github.com/betamaxteam/betamax">Betamax</a> - Betamax is a tool for mocking external HTTP resources such as web services and REST APIs in your tests.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/TouK/http-mock-server">HTTP Mock Server</a> - HTTP Mock Server allows to mock HTTP request using groovy closures.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/cjstehno/ersatz">Ersatz Mock Server</a> - A simple and expressive simulated HTTP server for testing client code with configurable responses.</li>
+</ul>
+<ul>
+<li><a href="https://agorapulse.github.io/dru/">Dru</a> - Data Reconstruction Utility loads data from external sources JSON, YML for easy testing GORM, DynamoDB or just plain POJOs.</li>
+</ul>
+<ul>
+<li><a href="https://agorapulse.github.io/gru/">Gru</a> - Groovy HTTP Testing Framework for running integration and semi-ingetration tests for any HTTP backend with native unit test support for Grails and Spring MVC.</li>
+</('ul', 0)>
+<h2>Concurrency</h2>
+<ul>
+<li><a href="https://github.com/GPars/GPars">GPars</a> - The GPars concurrency and parallelism framework for the JVM</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ReactiveX/RxGroovy">RxGroovy</a> - RxJava bindings for Groovy</li>
+</ul>
+<ul>
+<li><a href="https://vertx.io/">Vertx</a> - Vert.x is a lightweight, high performance application platform for the JVM</li>
+</('ul', 0)>
+<h2>Code Analysis</h2>
+<ul>
+<li><a href="http://codenarc.sourceforge.net/">CodeNarc</a> - Static analysis tool for Groovy</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pmayweg/sonar-groovy">Sonar-Groovy</a> - SonarQube Groovy plugin</li>
+</('ul', 0)>
+<h2>Transpilers</h2>
+<ul>
+<li><a href="https://github.com/chiquitinxx/grooscript">Grooscript</a> - Converts your Groovy code to Javascript</li>
+</('ul', 0)>
+<h2>Static Web</h2>
+<ul>
+<li><a href="https://github.com/sysgears/grain">Grain</a> - Static Web Site Building Framework For Groovy</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kobo/gaiden">Gaiden</a> - Gaiden is a tool that makes it easy to create documentation with Markdown.</li>
+</('ul', 0)>
+<h2>Language Utilities</h2>
+<ul>
+<li><a href="https://github.com/mperry/functionalgroovy">Functionalgroovy</a> - Functional programming in Groovy</li>
+</ul>
+<ul>
+<li><a href="https://github.com/timyates/groovy-stream">Groovy-stream</a> - A collection of classes to give a fluent builder for Streams (Lazy Groovy Generators)</li>
+</ul>
+<ul>
+<li><a href="https://github.com/johnnywey/flipside">Flipside</a> - Simple Groovy options library</li>
+</ul>
+<ul>
+<li><a href="https://github.com/timyates/groovy-common-extensions">groovy-common-extensions</a> - Lets you add things commonly useful to the Groovy language via the extension system</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dnahodil/groovy-extra-list-behaviour">groovy-extra-list-behaviour</a> - Adds extra methods to Lists via the extension system</li>
+</ul>
+<ul>
+<li><a href="https://github.com/gperfutils">GPerfUtils</a> - Groovy-based tools verifying performance of your code</li>
+<ul>
+<li><a href="https://github.com/gperfutils/gprof">gprof</a> - The profiling module for Groovy</li>
+</ul>
+<ul>
+<li><a href="https://github.com/gperfutils/gbench">gbench</a> - The benchmarking module for Groovy</li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://github.com/kayr/fuzzy-csv">Fuzzy-CSV</a> - Simple lightweight data processing library, useful for shaping/processing your tabular data before its consumed by another service or library.</li>
+</('ul', 0)>
+<h2>Data Processing</h2>
+<ul>
+<li><a href="https://www.nextflow.io/">Nextflow</a> - Groovy DSL for Data-driven computational pipelines</li>
+</('ul', 0)>
+<h2>File System Utilities</h2>
+<ul>
+<li><a href="https://github.com/ysb33r/groovy-vfs">Groovy-Vfs</a> - A DSL for Groovy on top of Apache VFS2</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kdabir/directree">Directree</a> - A Simple DSL to create Directory Tree with Text Files</li>
+</('ul', 0)>
+<h2>DSLs</h2>
+<ul>
+<li><a href="https://github.com/craigburke/document-builder">document-builder</a> - A document builder for Groovy for PDF or Word documents.</li>
+</ul>
+<ul>
+<li><a href="http://spreadsheet.dsl.builders/">spreadsheet-builder</a> - Spreadsheet builder provides convenient way how to create MS Excel OfficeOpenXML Documents (XSLX)</li>
+</ul>
+<ul>
+<li><a href="http://xlson.com/groovycsv/">GroovyCSV</a> - A simple CSV parsing library for groovy</li>
+</ul>
+<ul>
+<li><a href="https://groogle.gitlab.io/groogle/latest/index.html">Groogle</a> - A Groovy DSL written to use Google services APIs.</li>
+</('ul', 0)>
+<h2>Scripting Tools</h2>
+<ul>
+<li><a href="https://github.com/Vorlonsoft/EasyDokkaPlugin">EasyDokkaPlugin</a> - Gradle script plugin to generate documentation by Dokka documentation engine for Java and Kotlin</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Vorlonsoft/GradleMavenPush">GradleMavenPush</a> - Gradle script plugin to upload Gradle Artifacts to Maven repositories</li>
+</ul>
+<ul>
+<li><a href="https://github.com/remkop/picocli">picocli</a> - Parser library and framework for CLI. Usage help with ANSI colors. Autocomplete. Nested subcommands and more.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/aestasit/sshoogr">sshoogr</a> - DSL library for working with remote servers through SSH.</li>
+</('ul', 0)>
+<h2>Rule Engines</h2>
+<ul>
+<li><a href="https://github.com/zhaber/grules">grules</a> - rule engine for data preprocessing</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jdereg/n-cube">n-cube</a> - a Rules Engine, Decision Table, Decision Tree, Templating Engine, and Enterprise Spreadsheet, built as a hyper-space.</li>
+</('ul', 0)>
+<h1>Resources</h1>
+
+<h2>Official Resources</h2>
+<ul>
+<li><a href="http://www.groovy-lang.org/">The official groovy home</a> - Groovy's new home</li>
+</ul>
+<ul>
+<li><a href="https://github.com/apache/groovy">Groovy's source</a> - Groovy's source code mirrored on Github</li>
+</ul>
+<ul>
+<li><a href="http://www.groovy-lang.org/mailing-lists.html">Groovy mailing lists</a> - Note the new mailing list</li>
+</ul>
+<ul>
+<li><a href="http://www.groovy-lang.org/documentation.html">Official Documentation</a> - the definitive source of groovy documentation</li>
+</('ul', 0)>
+<h2>Try Groovy in Browser</h2>
+<ul>
+<li><a href="https://gwc-experiment.appspot.com/">Groovy Web Console</a></li>
+</ul>
+<ul>
+<li><a href="https://groovy-playground.appspot.com/">Groovy Playground</a></li>
+</('ul', 0)>
+<h2>Groovy Code Examples</h2>
+<ul>
+<li><a href="http://mrhaki.blogspot.com/">MrHaKi's Goodness</a> - Look out for entries titled "Groovy Goodness" , "Grails Goodness", Gradle Goodness"</li>
+</ul>
+<ul>
+<li><a href="http://pleac.sourceforge.net/pleac_groovy/">PLEAC Groovy</a> - Groovy is one of the 3 languages out of 32, having completed 100% of PLEAC examples.</li>
+</('ul', 0)>
+<h2>Staying up to date</h2>
+<ul>
+<li><a href="http://groovycalamari.com/">Groovy Calamari</a> - Weekly curated publication about the Groovy Ecosystem</li>
+</ul>
+<ul>
+<li><a href="http://glaforge.appspot.com/category/Groovy%20Weekly">Groovy Weekly</a> - Groovy weekly newsletter</li>
+</ul>
+<ul>
+<li><a href="https://grydeske.dk/news/index">Grails Diary</a> - Particulary useful for Grails developers</li>
+</ul>
+<ul>
+<li><a href="https://nofluffjuststuff.com/groovypodcast">Groovy Podcast</a> - Ken Kousen and Baruch Sadogursky discuss news and insight from the Groovy ecosystem.</li>
+</('ul', 0)>
+<h2>Interactive Learning</h2>
+<ul>
+<li><a href="http://nadavc.github.io/groovykoans/">Groovy-Koans</a> - Collection of small exercises in the form of unit tests</li>
+</('ul', 0)>
+<h2>Blogs of core committer</h2>
+<ul>
+<li><a href="http://glaforge.appspot.com/">Guillaume Laforge's blog</a></li>
+</ul>
+<ul>
+<li><a href="http://melix.github.io/blog/">Cédric Champeau's blog</a></li>
+</ul>
+<ul>
+<li><a href="http://blackdragsview.blogspot.com/">Jochen Theodorou's blog</a></li>
+</ul>
+<ul>
+<li><a href="http://grailsblog.objectcomputing.com/">Grails Team blog</a></li>
+</('ul', 0)>
+<h2>Conferences</h2>
+<ul>
+<li><a href="https://communityovercode.org/">Community Over Code</a> - have a Groovy Track</li>
+</ul>
+<ul>
+<li><a href="http://greachconf.com">Greachconf</a> (discontinued)</li>
+</ul>
+<ul>
+<li><a href="https://gr8conf.eu">GR8Conf Europe</a> (discontinued)</li>
+</ul>
+<ul>
+<li><a href="http://gr8conf.us">GR8Conf USA</a> (discontinued)</li>
+</('ul', 0)>
+<h1>Contributing</h1>
+
+<p>Fork this repository, edit this file and send a pull request.</p>
+
+<h2>Using awesome.groovy script</h2>
+
+<p>You can use the <code>awesome.groovy</code> script to search awesome projects on github and generate the entry prepoulated with project name, repo url and description in markdown format. All you need to do is place it under right group in the markdown list in <code>README.md</code>.</p>
+
+<h3>Examples</h3>
+
+<p>to find out repos where language is groovy and whose name contain gpars and</p>
+
+<p>./awesome.groovy -l groovy gpars</p>
+
+<p>to find out repos by user 'kdabir' and name contains glide</p>
+
+<p>./awesome.groovy -u kdabir glide</p>
+
+<p>to find out repos whose name contains glide</p>
+
+<p>./awesome.groovy glide</p>
+
+<p>If you are lazy to download the repo, an easy way is:</p>
+
+<p>groovy "https://git.io/awesome" -l groovy glide</p>
+
+<h1>Credits</h1>
+
+<p>To all the awesome-* repos out there and their aggreators like <a href="https://github.com/erichs/awesome-awesome">this</a> and <a href="https://github.com/bayandin/awesome-awesomeness">this</a>.</p>
+
+</body>
+</html>

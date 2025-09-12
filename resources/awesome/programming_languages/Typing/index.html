@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Typing</h1>
+
+<p><strong>Repository:</strong> https://github.com/typeddjango/awesome-python-typing#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<h1>Awesome Python Typing <a href="https://awesome.re/badge-flat2.svg"><img src="https://awesome.re" alt="Awesome</a>"> <a href="https://img.shields.io/gitter/room/mypy-django/Lobby?color=9cf&style=flat-square"><img src="https://gitter.im/mypy-django/Lobby?source=title" alt="Gitter</a>"></h1>
+
+<p>Collection of awesome Python types, stubs, plugins, and tools to work with them.</p>
+
+<h2>Contents</h2>
+
+<ul>
+<li><a href="#static-type-checkers">Static type checkers</a></li>
+</ul>
+<ul>
+<li><a href="#dynamic-type-checkers">Dynamic type checkers</a></li>
+</ul>
+<ul>
+<li><a href="#stub-packages">Stub packages</a></li>
+</ul>
+<ul>
+<li><a href="#additional-types">Additional types</a></li>
+</ul>
+<ul>
+<li><a href="#backports-and-improvements">Backports and improvements</a></li>
+</ul>
+<ul>
+<li><a href="#tools">Tools</a></li>
+</ul>
+<ul>
+<li><a href="#integrations">Integrations</a></li>
+</ul>
+<ul>
+<li><a href="#articles">Articles</a></li>
+</ul>
+<ul>
+<li><a href="#communities">Communities</a></li>
+</ul>
+<ul>
+<li><a href="#related">Related</a></li>
+</ul>
+<p><a href="https://pypi.org/search/?q=&o=&c=Typing+%3A%3A+Typed">Full list of typed projects on PyPi</a> is here.</p>
+
+<h2>Static type checkers</h2>
+
+<ul>
+<li><a href="https://github.com/KotlinIsland/basedmypy">basedmypy</a> - Based static typing with baseline functionality.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/detachhead/basedpyright">basedpyright</a> - Pyright fork with improvements to VSCode support and various other fixes.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/python/mypy">mypy</a> - Optional static typing (PEP 484).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/quora/pyanalyze">pyanalyze</a> - Extensible static analyzer and type checker.</li>
+</ul>
+<ul>
+<li><a href="https://www.jetbrains.com/pycharm/">pycharm</a> - IDE for Professional Developers.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mtshiba/pylyzer/">pylyzer</a> - A fast static code analyzer & language server for Python, written in Rust.</li>
+</ul>
+<ul>
+<li><a href="https://pyre-check.org/">pyre</a> - Performant type-checker.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Microsoft/pyright">pyright</a> - Fast type checker meant for large Python source bases. It can run in a “watch” mode and performs fast incremental updates when files are modified.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/google/pytype">pytype</a> - Tool to check and infer types - without requiring type annotations.</li>
+</('ul', 0)>
+<h2>Dynamic type checkers</h2>
+
+<ul>
+<li><a href="https://github.com/beartype/beartype">beartype</a> - Unbearably fast <code>O(1)</code> runtime type-checking in pure Python.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/samuelcolvin/pydantic">pydantic</a> - Data parsing using Python type hinting. Supports dataclasses.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Stewori/pytypes">pytypes</a> - Provides a rich set of utilities for runtime typechecking.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/FelixTheC/strongtyping">strongtyping</a> - Decorator which checks whether the function is called with the correct type of parameters.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/loyada/typedpy">typedpy</a> - Type-safe, strict Python. Works well with standard Python.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/agronholm/typeguard">typeguard</a> - Another one runtime type checker.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/seandstewart/typical/">typical</a> - Data parsing and automatic type-coercion using type hinting. Supports dataclasses, standard classes, function signatures, and more.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/davidfstr/trycast">trycast</a> - Parse JSON-like values whose shape is defined by typed dictionaries (TypedDicts) and other standard Python type hints.</li>
+</('ul', 0)>
+<h2>Stub packages</h2>
+
+<ul>
+<li><a href="https://github.com/django/asgiref">asgiref</a> - ASGI specification, provides <a href="https://github.com/django/asgiref/blob/main/asgiref/typing.py">asgiref.typing</a> module with type annotations for ASGI servers.</li>
+</ul>
+<ul>
+<li><a href="https://vemel.github.io/boto3<em>stubs</em>docs/">boto3-stubs</a> - Stubs for <a href="https://github.com/boto/boto3">boto3</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jeshan/botostubs">botostubs</a> - Gives you code assistance for any boto3 API in any IDE.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sbdchd/celery-types">celery-types</a> - Type stubs for <a href="https://github.com/celery/celery">Celery</a> and its related packages <a href="https://github.com/celery/django-celery-results">django-celery-results</a>, <a href="https://github.com/celery/py-amqp">ampq</a>, <a href="https://github.com/celery/kombu">kombu</a>, <a href="https://github.com/celery/billiard">billiard</a>, <a href="https://github.com/celery/vine">vine</a> and <a href="https://github.com/brandon-rhodes/pyephem">ephem</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/typeddjango/django-stubs">django-stubs</a> - Stubs for <a href="https://github.com/django/django">Django</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/typeddjango/djangorestframework-stubs">djangorestframework-stubs</a> - Stubs for <a href="https://github.com/encode/django-rest-framework">DRF</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/shabbyrobe/grpc-stubs">grpc-stubs</a> - Stubs for <a href="https://github.com/grpc/grpc">grpc</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lxml/lxml-stubs">lxml-stubs</a> - Stubs for <a href="https://lxml.de">lxml</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/stlehmann/PyQt5-stubs">PyQt5-stubs</a> - Stubs for <a href="https://www.riverbankcomputing.com/software/pyqt/intro">PyQt5</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/AA-Turner/python-phonenumbers-stubs">python-phonenumbers-stubs</a> - Stubs for <a href="https://github.com/daviddrysdale/python-phonenumbers">phonenumbers</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/hbmartin/pythonista-stubs">pythonista-stubs</a> - Stubs for <a href="http://omz-software.com/pythonista/docs/ios/">Pythonista</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jorenham/scipy-stubs">scipy-stubs</a> - Stubs for <a href="https://github.com/scipy/scipy">SciPy</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dropbox/sqlalchemy-stubs">sqlalchemy-stubs</a> - Stubs for <a href="https://github.com/sqlalchemy/sqlalchemy">SQLAlchemy</a>.</li>
+</ul>
+<ul>
+<li><a href="https://docs.sqlalchemy.org/en/14/orm/extensions/mypy.html">sqlalchemy2-stubs</a> - Official stubs and mypy plugin for <a href="https://www.sqlalchemy.org">SQLAlchemy</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/patrick-kidger/torchtyping">torchtyping</a> - Enhanced type annotations for <a href="https://pytorch.org/">pytorch</a>.</li>
+</ul>
+<ul>
+<li><a href="https://vemel.github.io/types<em>aiobotocore</em>docs/">types-aiobotocore</a> - Stubs for <a href="https://github.com/aio-libs/aiobotocore">aiobotocore</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/python/typeshed">typeshed</a> - Collection of library stubs, with static types.</li>
+</('ul', 0)>
+<h2>Additional types</h2>
+
+<ul>
+<li><a href="https://github.com/alice-biometrics/meiga">meiga</a> - Simple, typed and monad-based Result type.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/MaT1g3R/option">option</a> - Rust like Option and Result types.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jorenham/optype">optype</a> - Opinionated <code>collections.abc</code> and <code>operators</code> alternative: Flexible single-method protocols and typed operators with predictable names.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/antonagestam/phantom-types">phantom-types</a> - Phantom types.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dry-python/returns">returns</a> - Make your functions return something meaningful, typed, and safe.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mplanchard/safetywrap">safetywrap</a> - Fully typesafe, Rust-like Result and Option types.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/contains-io/typet">typet</a> - Length-bounded types, dynamic object validation.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/hauntsaninja/useful_types">useful-types</a> - Collection of useful protocols and type aliases.</li>
+</('ul', 0)>
+<h2>Backports and improvements</h2>
+
+<ul>
+<li><a href="https://github.com/PrettyWood/future-typing">future-typing</a> - Backport for type hinting generics in standard collections and union types as <code>X | Y</code>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/python/typing_extensions">typing-extensions</a> - Backported and experimental type hints.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/bojiang/typing<em>utils">typing-utils</a> - Backport 3.8+ runtime typing utils(for eg: get</em>origin) & add issubtype & more.</li>
+</('ul', 0)>
+<h2>Tools</h2>
+
+<h3>Linters</h3>
+
+<ul>
+<li><a href="https://github.com/best-doctor/flake8-annotations-complexity">flake8-annotations-complexity</a> - Plugin for flake8 to validate annotations complexity.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sco1/flake8-annotations">flake8-annotations</a> - Plugin for flake8 to check for presence of type annotations in function definitions.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ambv/flake8-pyi">flake8-pyi</a> - Plugin for Flake8 that provides specializations for type hinting stub files.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/snok/flake8-type-checking">flake8-type-checking</a> - Plugin to help you guard any type-annotation-only import correctly.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/asottile/flake8-typing-imports">flake8-typing-imports</a> - Plugin which checks that typing imports are properly guarded.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sondrelg/flake8-typing-only-imports">flake8-typing-only-imports</a> - flake8 plugin that helps identify which imports to put into type-checking blocks, and how to adjust your type annotations once imports are moved.</li>
+</ul>
+<ul>
+<li><a href="https://gitlab.com/jonafato/flake8-type-ignore/">flake8-type-ignore</a> - flake8 plugin to disallow type: ignore comments in your typed Python code.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/wemake-services/wemake-python-styleguide">wemake-python-styleguide</a> - The strictest and most opinionated Python linter ever.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/astral-sh/ruff/">Ruff</a> - Extremely fast linter which supports lint rules from many other lint tools, such as flake8.</li>
+</('ul', 0)>
+<h3>Testing</h3>
+
+<ul>
+<li><a href="https://github.com/orsinium-labs/mypy-test">mypy-test</a> - Test mypy plugins, stubs, custom types.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/typeddjango/pytest-mypy-plugins">pytest-mypy-plugins</a> - Pytest plugin for testing mypy types, stubs, and plugins.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/davidfritzsche/pytest-mypy-testing">pytest-mypy-testing</a> - Pytest plugin to test mypy static type analysis.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dbader/pytest-mypy">pytest-mypy</a> - Mypy static type checker plugin for Pytest.</li>
+</('ul', 0)>
+<h3>Working with types</h3>
+
+<ul>
+<li><a href="https://github.com/ilevkivskyi/com2ann">com2ann</a> - Tool for translation of type comments to type annotations.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/google/pytype/tree/master/pytype/tools/merge_pyi">merge-pyi</a> - Part of pytype toolchain, applies stub files onto source code.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/orsinium-labs/mypy-baseline">mypy-baseline</a> - Integrate mypy with existing codebase. A CLI tool that filters out existing type errors and reports only new ones.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dropbox/mypy-protobuf">mypy-protobuf</a> - Tool to generate mypy stubs from protobufs.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/whtsky/mypy-silent/">mypy-silent</a> - Silence mypy by adding or removing code comments.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/python/mypy/tree/master/mypyc">mypyc</a> - Compiles mypy-annotated, statically typed Python modules into CPython C extensions.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ambv/retype">retype</a> - Another tool to apply stubs to code.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/orsinium-labs/typeforce">typeforce</a> - CLI tool that enriches your Python environment with type annotations, empowering mypy.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/wasi-master/typesplainer">typesplainer</a> - A Python type explainer.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ilevkivskyi/typing<em>inspect">typing-inspect</a> - The typing</em>inspect module defines experimental API for runtime inspection of types defined in the <code>typing</code> module.</li>
+</ul>
+<ul>
+<li><a href="https://pypi.org/project/typing-json/">typing-json</a> - Lib for working with typed objects and JSON.</li>
+</('ul', 0)>
+<h3>Helper tools to add annotations to existing code</h3>
+
+<ul>
+<li><a href="https://github.com/JelleZijlstra/autotyping">autotyping</a> - Automatically add simple return type annotations for functions (bool, None, Optional).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/orsinium-labs/infer-types">infer-types</a> - CLI tool to automatically infer and add type annotations into Python code.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/camptocamp/jsonschema-gentypes">jsonschema-gentypes</a> - Generate Python types based on TypedDict from a JSON Schema.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/instagram/MonkeyType">monkeytype</a> - Collects runtime types of function arguments and return values, and can automatically generate stub files or even add draft type annotations directly to your code based on the types collected at runtime.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/hauntsaninja/no<em>implicit</em>optional">no<em>implicit</em>optional</a> - A codemod to make your implicit optional type hints <a href="https://peps.python.org/pep-0484/#union-types">PEP 484</a> compliant.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dropbox/pyannotate">pyannotate</a> - Insert annotations into your source code based on call arguments and return types observed at runtime.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pvs-hd-tea/PyTypes">PyTypes</a> - Infer Types by Python Tracing.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/facebook/pyre-check">pyre infer</a> - Pyre has a powerful feature for migrating codebases to a typed format. The <a href="https://pyre-check.org/docs/pysa-coverage/">infer</a> command-line option ingests a file or directory, makes educated guesses about the types used, and applies the annotations to the files.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kensho-technologies/pytest-annotate">pytest-annotate</a> - Pyannotate plugin for pytest.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mariusvniekerk/pytest-monkeytype">pytest-monkeytype</a> - MonkeyType plugin for pytest.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/google/pytype/tree/master/pytype/tools/annotate_ast">pytype annotate-ast</a> - A work-in-progress tool to annotate the nodes of an AST with their Python types.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/RightTyper/RightTyper">RightTyper</a> - A tool that generates types for your function arguments and return values. RightTyper lets your code run at nearly full speed with almost no memory overhead.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/saltudelft/type4py">type4py</a> - Deep Similarity Learning-Based Type Inference.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/typilus/typilus">typilus</a> - A deep learning algorithm for predicting types in Python. Also available as a <a href="https://github.com/typilus/typilus-action">GitHub action</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/Luttik/auto-optional">auto-optional</a> - Makes typed arguments Optional when the default argument is <code>None</code>.</li>
+</('ul', 0)>
+<h3>Mypy plugins</h3>
+
+<ul>
+<li><a href="https://github.com/gordonbondon/kubernetes-typed">kubernetes-typed</a> - Plugin for kubernetes <a href="https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/">CRD</a> type checking.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kornicameister/loguru-mypy">loguru-mypy</a> - Plugin for <a href="https://github.com/Delgan/loguru">loguru</a> support.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Shoobx/mypy-zope">mypy-zope</a> - Plugin for <a href="https://zopeinterface.readthedocs.io/en/latest/">zope.interface</a> support.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/python/mypy/tree/master/mypy/plugins">mypy/plugins</a> - Plugins already integrated into mypy.</li>
+</ul>
+<ul>
+<li><a href="https://numpy.org/devdocs/reference/typing.html">numpy</a> - Plugin for <a href="https://numpy.org">NumPy</a> support.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pynamodb/pynamodb-mypy">pynamodb-mypy</a> - Plugin for <a href="https://github.com/pynamodb/PynamoDB">PynamoDB</a> support.</li>
+</ul>
+<ul>
+<li><a href="https://docs.pydantic.dev/latest/integrations/mypy/">pydantic</a> - Plugin for additional <a href="https://docs.pydantic.dev/latest/">Pydantic</a> support.</li>
+</('ul', 0)>
+<h2>Integrations</h2>
+
+<ul>
+<li><a href="https://github.com/lbolla/emacs-flycheck-mypy">emacs-flycheck-mypy</a> - Mypy integration for Emacs.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ymyzk/mypy-playground">mypy-playground</a> - Online playground for mypy.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dropbox/mypy-PyCharm-plugin">mypy-pycharm-plugin</a> - Mypy integration for PyCharm.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/microsoft/pylance-release">pylance</a> - PyRight integration for VSCode.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Integralist/vim-mypy">vim-mypy</a> - Mypy integration for Vim.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/nbQA-dev/nbQA">nbQA</a> - Run type checkers (e.g. Mypy) on Jupyter Notebooks.</li>
+</('ul', 0)>
+<h2>Articles</h2>
+
+<h3>PEPs</h3>
+
+<ul>
+<li><a href="https://www.python.org/dev/peps/pep-3107">PEP-3107</a> - Function Annotations.</li>
+</ul>
+<ul>
+<li><a href="https://www.python.org/dev/peps/pep-0482/">PEP-482</a> - Literature Overview for Type Hints.</li>
+</ul>
+<ul>
+<li><a href="https://www.python.org/dev/peps/pep-0483/">PEP-483</a> - The Theory of Type Hints.</li>
+</ul>
+<ul>
+<li><a href="https://www.python.org/dev/peps/pep-0484/">PEP-484</a> - Type Hints.</li>
+</ul>
+<ul>
+<li><a href="https://www.python.org/dev/peps/pep-0526/">PEP-526</a> - Syntax for Variable Annotations.</li>
+</ul>
+<ul>
+<li><a href="https://www.python.org/dev/peps/pep-0544/">PEP-544</a> - Protocols: Structural subtyping (static duck typing).</li>
+</ul>
+<ul>
+<li><a href="https://www.python.org/dev/peps/pep-0557/">PEP-557</a> - Data Classes.</li>
+</ul>
+<ul>
+<li><a href="https://www.python.org/dev/peps/pep-0560/">PEP-560</a> - Core support for typing module and generic types.</li>
+</ul>
+<ul>
+<li><a href="https://www.python.org/dev/peps/pep-0561/">PEP-561</a> - Distributing and Packaging Type Information.</li>
+</ul>
+<ul>
+<li><a href="https://www.python.org/dev/peps/pep-0563/">PEP-563</a> - Postponed Evaluation of Annotations.</li>
+</ul>
+<ul>
+<li><a href="https://www.python.org/dev/peps/pep-0585/">PEP-585</a> - Type Hinting Generics In Standard Collections.</li>
+</ul>
+<ul>
+<li><a href="https://www.python.org/dev/peps/pep-0586/">PEP-586</a> - Literal Types.</li>
+</ul>
+<ul>
+<li><a href="https://www.python.org/dev/peps/pep-0589/">PEP-589</a> - TypedDict: Type Hints for Dictionaries with a Fixed Set of Keys.</li>
+</ul>
+<ul>
+<li><a href="https://www.python.org/dev/peps/pep-0591/">PEP-591</a> - Adding a final qualifier to typing.</li>
+</ul>
+<ul>
+<li><a href="https://www.python.org/dev/peps/pep-0593/">PEP-593</a> - Flexible function and variable annotations.</li>
+</ul>
+<ul>
+<li><a href="https://www.python.org/dev/peps/pep-0604/">PEP-604</a> - Complementary syntax for Union[].</li>
+</ul>
+<ul>
+<li><a href="https://www.python.org/dev/peps/pep-0612/">PEP-612</a> - Parameter Specification Variables.</li>
+</ul>
+<ul>
+<li><a href="https://www.python.org/dev/peps/pep-0613/">PEP-613</a> - Explicit Type Aliases.</li>
+</('ul', 0)>
+<h3>Third-party articles</h3>
+
+<ul>
+<li><a href="https://sobolevn.me/2018/07/real-python-contants">1-minute guide to real constants in Python</a> - Full tutorial about <code>Final</code> constants and inheritance.</li>
+</ul>
+<ul>
+<li><a href="https://sobolevn.me/2019/01/simple-dependent-types-in-python">Simple dependent types in Python</a> - Full tutorial about <code>Literal</code> types.</li>
+</ul>
+<ul>
+<li><a href="https://sobolevn.me/2019/08/testing-mypy-types">Testing mypy stubs, plugins, and types</a> - Full tutorial about testing mypy types.</li>
+</ul>
+<ul>
+<li><a href="https://dropbox.tech/application/our-journey-to-type-checking-4-million-lines-of-python">Our journey to type checking 4 million lines of Python</a> - Dropbox has been one of the first companies to adopt Python static type checking at this scale.</li>
+</ul>
+<ul>
+<li><a href="https://dev.to/ldrscke/type-annotate-an-existing-python-django-codebase-with-monkeytype-254i">PyTest MonkeyType Introduction</a> - Type Annotate an existing Python Django Codebase with MonkeyType.</li>
+</ul>
+<ul>
+<li><a href="https://bernat.tech/posts/the-state-of-type-hints-in-python/">The state of type hints in Python</a> - As of May 2018.</li>
+</ul>
+<ul>
+<li><a href="https://mypy.readthedocs.io/en/latest/cheat<em>sheet</em>py3.html">Type hints cheat sheet</a> - Cheat sheet on writing type annotations by MyPy team.</li>
+</ul>
+<ul>
+<li><a href="https://sobolevn.me/2019/08/typechecking-django-and-drf">Typechecking Django and DRF</a> - Full tutorial about type-checking django.</li>
+</ul>
+<ul>
+<li><a href="https://kracekumar.com/post/type<em>check</em>your<em>django</em>app/">Type Check Your Django Application</a> - An article based on two recent talks on adding type checks to Django.</li>
+</ul>
+<ul>
+<li><a href="https://docs.python.org/3/library/typing.html">typing</a> - Official Python documentation for <code>typing</code> module.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kracekumar/python-typing-koans/">Python-typing-koans</a> - A set of examples to learn optional static typing in Python.</li>
+</ul>
+<ul>
+<li><a href="https://realpython.com/python-type-checking/">Python Type Checking (Guide)</a> - In this guide, you will get a look into Python type checking.</li>
+</ul>
+<ul>
+<li><a href="https://sethmlarson.dev/blog/2021-10-18/tests-arent-enough-case-study-after-adding-types-to-urllib3">Adding type hints to urllib3</a> - Tests are not enough: Case study adding type hints to urllib3.</li>
+</ul>
+<ul>
+<li><a href="https://adamj.eu/tech/tag/mypy/">Adam Johnsons Blog</a> - Adam Johnson blogs about typing practices.</li>
+</ul>
+<ul>
+<li><a href="https://sobolevn.me/2021/12/paramspec-guide">ParamSpec Guide</a> - Newly released feature in <code>PEP612</code> allows you do a lot of advanced typing things with functions and their signatures.</li>
+</ul>
+<ul>
+<li><a href="https://rednafi.github.io/reflections/static-typing-python-decorators.html">Static Typing Python Decorators</a> - Accurately static typing decorators in Python is an icky business. The wrapper function obfuscates type information required to statically determine the types of the parameters and the return values of the wrapped function.</li>
+</('ul', 0)>
+<h2>Communities</h2>
+
+<ul>
+<li><a href="https://gitter.im/python/typing">python/typing</a> - Official typing gitter chat.</li>
+</ul>
+<ul>
+<li><a href="https://gitter.im/mypy-django/Lobby">TypedDjango</a> - Official organisation gitter chat.</li>
+</ul>
+<ul>
+<li><a href="https://python-ru.slack.com">PythonRu#typing</a> - Russian slack chat (invites are <a href="https://slack.python.ru/">here</a>) about types.</li>
+</('ul', 0)>
+<h2>Related</h2>
+
+<ul>
+<li><a href="https://github.com/vinta/awesome-python">awesome-python</a> - Curated list of awesome Python frameworks, libraries, software and resources.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ethanhs/python-typecheckers">python-typecheckers</a> - List of Python type checkers: static and runtime.</li>
+</ul>
+</body>
+</html>

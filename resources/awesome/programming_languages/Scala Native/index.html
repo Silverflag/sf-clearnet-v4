@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scala Native</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Scala Native</h1>
+
+<p><strong>Repository:</strong> https://github.com/tindzk/awesome-scala-native#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<h1>Awesome Scala Native <a href="https://awesome.re/badge.svg"><img src="https://awesome.re" alt="Awesome</a>"></h1>
+<a href="http://www.scala-native.org/"><img alt="Scala Native" align="right" width="250" height="250" src="logo.png"></a>
+
+<p><a href="http://www.scala-native.org/">Scala Native</a> is an optimising ahead-of-time compiler for the <a href="https://www.scala-lang.org/">Scala programming language</a>. Traditionally, a virtual machine, the <a href="https://en.wikipedia.org/wiki/Java<em>virtual</em>machine">JVM</a>, was required to run Scala programs. Scala Native taps into the compiler to emit <a href="http://llvm.org/docs/LangRef.html">LLVM intermediate representation</a> rather than JVM bytecode. Then, the <a href="http://llvm.org/">LLVM</a> compiler infrastructure is used to produce native libraries and executables. Given that Scala Native executables are stand-alone programs, they generally have a shorter start-up time and low memory consumption. This opens up new avenues to deploy Scala programs where previously the virtual machine would be the limiting factor. For example, developers could write programs for the command line or embedded devices.</p>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#awesome-scala-native-">Awesome Scala Native </a></li>
+<ul>
+<li><a href="#contents">Contents</a></li>
+</ul>
+<ul>
+<li><a href="#tutorials-and-examples">Tutorials and Examples</a></li>
+</ul>
+<ul>
+<li><a href="#build-tools">Build Tools</a></li>
+</ul>
+<ul>
+<li><a href="#functional-programming">Functional Programming</a></li>
+</ul>
+<ul>
+<li><a href="#unit-tests">Unit Tests</a></li>
+</ul>
+<ul>
+<li><a href="#bindings">Bindings</a></li>
+</ul>
+<ul>
+<li><a href="#file-formats-and-parsers">File Formats and Parsers</a></li>
+</ul>
+<ul>
+<li><a href="#databases">Databases</a></li>
+</ul>
+<ul>
+<li><a href="#web-development">Web Development</a></li>
+</ul>
+<ul>
+<li><a href="#concurrency">Concurrency</a></li>
+</ul>
+<ul>
+<li><a href="#logging">Logging</a></li>
+</ul>
+<ul>
+<li><a href="#console">Console</a></li>
+</ul>
+<ul>
+<li><a href="#robotics">Robotics</a></li>
+</ul>
+<ul>
+<li><a href="#programs">Programs</a></li>
+</ul>
+<ul>
+<li><a href="#infrastructure">Infrastructure</a></li>
+</ul>
+<ul>
+<li><a href="#licence">Licence</a></li>
+</('ul', 2)>
+</('ul', 0)>
+<h2>Tutorials and Examples</h2>
+<ul>
+<li><a href="https://github.com/scala-native/scala-native.g8">Giter8 template for a minimal Scala Native project</a> - Official <a href="http://www.foundweekends.org/giter8/">Giter8</a> template for a minimal Scala Native project.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/MasseGuillaume/hands-on-scala-native">Hands on Scala Native</a> - Tutorial for implementing a bandwidth monitor with Ncurses.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/GnaneshKunal/scala-native-starter">Starter for Scala Native</a> - Scala Native project that links to a custom C library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/nadavwr/scala-native-sbt-jni-example">Building C code using sbt-jni</a> - Example for compiling C code in a Scala Native project using <a href="https://github.com/jodersky/sbt-jni">sbt-jni</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lihaoyi/scala-native-example-app">Example project with external dependencies</a> - Example project that uses external dependencies to generate HTML and run a test suite.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jokade/scalanative-gtk-seed.g8">Starter for Gtk+ Projects</a> - <a href="http://www.foundweekends.org/giter8/">Giter8</a> template for Scala Native GUI projects using <a href="https://developer.gnome.org/gtk3/stable/index.html">Gtk+</a>.</li>
+</ul>
+<ul>
+<li><a href="https://pragprog.com/titles/rwscala/modern-systems-programming-with-scala-native/">Modern systems programming with scala native</a> book.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ItoYo16u/prettytable-native">Write a simple CLI application in Scala Native</a></li>
+</('ul', 0)>
+<h2>Build Tools</h2>
+<ul>
+<li><a href="https://www.scala-sbt.org/">sbt</a> - Scala's standard build tool.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/com-lihaoyi/mill">Mill</a> - Build tool striving for simplicity, inspired by <a href="https://www.bazel.build/">Bazel</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/scalacenter/bloop">Bloop</a> - Scala build server and command-line tool for fast developer workflows.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tindzk/seed">Seed</a> - Build tool based on Bloop. Focuses on user experience and cross-platform builds, inspired by <a href="https://github.com/rust-lang/cargo">Cargo</a>.</li>
+</('ul', 0)>
+<h2>Functional Programming</h2>
+<ul>
+<li><a href="https://github.com/milessabin/shapeless">Shapeless</a> - Library for generic programming.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/typelevel/squants">Squants</a> - DSL for quantities, units of measure and dimensional analysis.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/scalaz/scalaz">scalaz</a> - Type classes and instances for data structures.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/xuwei-k/nobox">nobox</a> - Immutable primitive array wrapper without boxing.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lihaoyi/PPrint">PPrint</a> - Pretty-print values and types.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lihaoyi/sourcecode">SourceCode</a> - Implicits providing meta data similar to <code><strong>LINE</strong></code> in C.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/outr/reactify">reactify</a> - Functional Reactive Programming framework for Scala.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/scalalandio/chimney">chimney</a> - Boilerplate-free data transformations.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/softwaremill/quicklens">Quicklens</a> - Modify deeply nested case class fields.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/typelevel/cats">Cats</a> - Abstractions for functional programming in Scala.</li>
+</('ul', 0)>
+<h2>Unit Tests</h2>
+<ul>
+<li><a href="https://github.com/lihaoyi/utest">µTest</a> - Library for unit tests.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/monix/minitest">minitest</a> - Lightweight testing library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/scalaprops/scalaprops">scalaprops</a> - Library for property-based testing.</li>
+<ul>
+<li><a href="https://github.com/scalaprops/scalaprops-shapeless">scalaprops-shapeless</a> - Generation of arbitrary ADT instances.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/scalaprops/scalaprops-cross-example">scalaprops-cross-example</a> - Cross-platform example.</li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://github.com/typelevel/scalacheck">ScalaCheck</a> - Property-based testing for Scala.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/scalatest/scalatest">ScalaTest</a> - Testing library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/etorreborre/specs2">specs2</a> - Software Specifications for Scala.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/nadavwr/makeshift">Makeshift</a> - Library for unit tests.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/scalameta/munit">MUnit</a> - Scala testing library with actionable errors and extensible APIs.</li>
+</('ul', 0)>
+<h2>Bindings</h2>
+<ul>
+<li><a href="https://github.com/sparsetech/cmark-scala">cmark</a> - Bindings for the <a href="https://github.com/commonmark/cmark">cmark</a> CommonMark parser library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/TimothyKlim/scala-native-libuv">libuv</a> - Bindings for <a href="https://github.com/libuv/libuv">libuv</a>, a library for asynchronous I/O.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/regb/scalanative-graphics-bindings">SDL2 and OpenGL</a> - Bindings for the graphical frameworks <a href="https://www.libsdl.org/">SDL2</a> and <a href="https://www.opengl.org">OpenGL</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jokade/scalanative-cocoa">Cocoa</a> - Bindings for the macOS graphical framework <a href="https://en.wikipedia.org/wiki/Cocoa_(API">Cocoa</a>).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ruivieira/scala-gsl">GNU Scientific Library</a> - Bindings for <a href="https://www.gnu.org/software/gsl">GNU Scientific Library (GSL)</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ekrich/sblas">BLAS</a> - Bindings for <a href="http://www.netlib.org/blas/">BLAS</a>, a library for Linear Algebra.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jokade/scalanative-gtk">Gtk+</a> - Bindings for the <a href="https://www.gtk.org/">GTK+</a> graphical toolkit.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jokade/scalanative-libsoup">libsoup</a> - Bindings for the <a href="https://wiki.gnome.org/Projects/libsoup">libsoup</a> HTTP client/server library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lolgab/scalaui">libui</a> - GUI framework based on <a href="https://github.com/andlabs/libui">libui</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jokade/scalanative-gstreamer">GStreamer</a> - Bindings for the <a href="https://gstreamer.freedesktop.org">GStreamer</a> multimedia framework.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jokade/scalanative-qt5">Qt</a> - Bindings for <a href="https://www.qt.io">Qt</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/edadma/ncurses">ncurses</a> - Bindings for the <a href="https://www.gnu.org/software/ncurses/">GNU Ncurses Library</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/edadma/readline">readline</a> - Bindings for the <a href="https://www.gnu.org/software/readline/">GNU Readline Library</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/edadma/libsndfile">libsndfile</a> - Bindings for the <a href="https://tiswww.cwru.edu/php/chet/libsndfile/rltop.html">Libsndfile</a> C library for sampled sound manipulation.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/edadma/libpng">libpng</a> - Bindings for the <a href="http://www.libpng.org/">libpng</a> C reference library for reading and writing PNGs.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/edadma/libcairo">libcairo</a> - Bindings for the <a href="https://www.cairographics.org/">Cairo</a> 2D graphics C library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/edadma/cairo-xlib">cairo-xlib</a> - Bindings for the <a href="https://www.cairographics.org/">Cairo</a> 2D graphics <a href="https://www.cairographics.org/manual/cairo-XLib-Surfaces.html">XLib Surfaces</a> with bindings for <a href="https://www.x.org/releases/current/doc/libX11/libX11/libX11.html">XLib</a> as well.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/edadma/libyaml">libyaml</a> - Bindings for the <a href="https://pyyaml.org/wiki/LibYAML">LibYAML</a> C library for parsing <a href="https://yaml.org/">YAML</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/edadma/iup">iup</a> - Bindings for the <a href="https://www.tecgraf.puc-rio.br/iup/">IUP</a> multi-platform toolkit for building graphical user interfaces.</li>
+</('ul', 0)>
+<h2>File Formats and Parsers</h2>
+<ul>
+<li><a href="https://github.com/msgpack4z/msgpack4z-native">msgpack4z</a> - Implementation of <a href="https://msgpack.org/">MessagePack</a>, a binary serialisation format.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/com-lihaoyi/fastparse">FastParse</a> - Library for defining and running parsers.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/com-lihaoyi/scalatags">scalatags</a> - HTML/XML construction and rendering.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sparsetech/pine">Pine</a> - HTML/XML parsing, manipulation and rendering.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/MediaMath/scala-json">scala-json</a> - JSON parser.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/com-lihaoyi/upickle">uPickle</a> - uPickle: a simple, fast, dependency-free JSON & Binary (MessagePack) serialization library for Scala</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sparsetech/toml-scala">toml-scala</a> - <a href="https://github.com/toml-lang/toml">TOML</a> parser with codec derivation.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/argonaut-io/argonaut">argonaut</a> - Purely functional JSON parser and library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/scalapb/ScalaPB">ScalaPB</a> - <a href="https://developers.google.com/protocol-buffers/">Protocol Buffer</a> compiler for Scala.</li>
+<ul>
+<li><a href="https://github.com/scalapb-json/scalapb-argonaut">scalapb-argonaut</a> - JSON and Protocol Buffer converters for ScalaPB based on <a href="http://argonaut.io">Argonaut</a>.</li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://github.com/ekrich/sconfig">sconfig</a> - <a href="https://github.com/ekrich/sconfig/blob/master/docs/original/HOCON.md">HOCON</a> parser.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/edadma/squiggly">squiggly</a> - Cross-platform template language for Scala, inspired by Liquid and Hugo templates.</li>
+</('ul', 0)>
+<h2>Databases</h2>
+<ul>
+<li><a href="https://github.com/lolgab/scala-native-jdbc">scala-native-jdbc</a> - Port of the database access layer <a href="https://en.wikipedia.org/wiki/Java<em>Database</em>Connectivity">JDBC</a> to Scala Native.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/david-bouyssie/sqlite4s">SQLite4S</a> - Port of the Java library <a href="https://bitbucket.org/almworks/sqlite4java">Sqlite4java</a>. Includes bindings for the SQLite native library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/david-bouyssie/libpq4s">libpq4s</a> - Scala wrapper around the async PostgreSQL C library libpq.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/typelevel/skunk">skunk</a> -  A data access library for Scala + Postgres.</li>
+</('ul', 0)>
+<h2>Web Development</h2>
+<ul>
+<li><a href="https://github.com/sparsetech/trail">Trail</a> - Routing library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/softwaremill/sttp">sttp</a> - HTTP Client library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lolgab/snunit">snunit</a> - Scala Native HTTP server based on NGINX Unit.</li>
+</('ul', 0)>
+<h2>Concurrency</h2>
+<ul>
+<li><a href="https://github.com/scala-native/scala-native-loop">scala-native-loop</a> - Event loop and async-oriented IO for Scala Native</li>
+</ul>
+<ul>
+<li><a href="https://github.com/com-lihaoyi/castor">castor</a> - Lightweight, typed Actor library for Scala.</li>
+</('ul', 0)>
+<h2>Logging</h2>
+<ul>
+<li><a href="https://github.com/outr/scribe">scribe</a> - Fast and simple logging library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jokade/slogging">slogging</a> - <a href="https://github.com/lightbend/scala-logging">Typesafe-logging</a> and <a href="https://www.slf4j.org/">SLF4J</a>-compatible logging library based on macros.</li>
+</('ul', 0)>
+<h2>Console</h2>
+<ul>
+<li><a href="https://github.com/com-lihaoyi/fansi">fansi</a> - Library for creating <a href="https://en.wikipedia.org/wiki/ANSI<em>escape</em>code">ANSI-coloured strings</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/scopt/scopt">scopt</a> - Command-line argument parser.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/xuwei-k/optparse-applicative">scala-optparse-applicative</a> - Port of Haskell's CLI argument parsing library <a href="https://hackage.haskell.org/package/optparse-applicative">optparse-applicative</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/scallop/scallop">scallop</a> - A simple Scala CLI parsing library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/com-lihaoyi/mainargs">mainargs</a> - Small, dependency-free library for command line argument parsing in Scala.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/bkirwi/decline">decline</a> - A composable command-line parser for Scala.</li>
+</('ul', 0)>
+<h2>Robotics</h2>
+<ul>
+<li><a href="https://github.com/Team846/potassium">Potassium</a> - Framework for writing robot software.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Team846/scala-native-wpilib">WPILib</a> - Reimplementation of the <a href="http://first.wpi.edu/FRC/roborio/release/docs/java/">FIRST Robotics WPILib libraries</a>.</li>
+</('ul', 0)>
+<h2>Programs</h2>
+<ul>
+<li><a href="https://github.com/Milyardo/sglgears">sglgears</a> - Port of GL <a href="https://github.com/JoakimSoderberg/mesademos/blob/master/src/xdemos/glxgears.c">gears.c</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/fsat/k8s-cli">k8s-cli</a> - CLI tools to generate <a href="https://kubernetes.io/">Kubernetes</a> resources for <a href="https://akka.io/">Akka</a>, <a href="https://www.playframework.com/">Play Framework</a> and <a href="https://www.lagomframework.com/">Lagom</a>-based applications.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/coursier/coursier">Coursier</a> - Coursier's <a href="https://get-coursier.io/docs/cli-native-bootstrap"><code>bootstrap</code> command</a> generates native launchers.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Rusty-Bike/fractals">fractals</a> - A self-similar fractal generator with basic animation support.</li>
+</('ul', 0)>
+<h2>Infrastructure</h2>
+<ul>
+<li><a href="https://hub.docker.com/r/tindzk/seed/tags">Seed Docker image</a> - Docker image for cross-platform builds with <a href="https://github.com/tindzk/seed">Seed</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ScalaWilliam/scala-native-sbt-docker">scala-native-sbt-docker</a> - Docker image for Scala Native and sbt.</li>
+</('ul', 0)>
+<h2>Licence</h2>
+<p><a rel="licence" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg" /></a><br />This work is licenced under a <a rel="licence" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International Licence</a>.</p>
+
+</body>
+</html>

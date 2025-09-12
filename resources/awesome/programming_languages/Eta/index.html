@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eta</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Eta</h1>
+
+<p><strong>Repository:</strong> https://github.com/sfischer13/awesome-eta#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<!--lint disable double-link-->
+
+<h1>Awesome Eta <a href="https://awesome.re/badge.svg"><img src="https://awesome.re" alt="Awesome</a>"></h1>
+
+<blockquote>
+<p>Useful resources for the <a href="https://eta-lang.org/">Eta</a> programming language</p>
+</blockquote>
+
+<p>You might also like <a href="https://github.com/krispo/awesome-haskell">awesome-haskell</a>.</p>
+
+<p><em>Please read the <a href="contributing.md">contribution guidelines</a> before contributing.</em></p>
+
+<h2>Contents</h2>
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<ul>
+<li><a href="#overview">Overview</a></li>
+</ul>
+<ul>
+<li><a href="#first-steps">First Steps</a></li>
+</ul>
+<ul>
+<li><a href="#comparisons">Comparisons</a></li>
+</ul>
+<ul>
+<li><a href="#compatibility">Compatibility</a></li>
+</ul>
+<ul>
+<li><a href="#official-resources">Official Resources</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#community">Community</a></li>
+</ul>
+<ul>
+<li><a href="#twitter">Twitter</a></li>
+</ul>
+<ul>
+<li><a href="#information">Information</a></li>
+<ul>
+<li><a href="#articles">Articles</a></li>
+</ul>
+<ul>
+<li><a href="#blogs">Blogs</a></li>
+</ul>
+<ul>
+<li><a href="#conferences">Conferences</a></li>
+</ul>
+<ul>
+<li><a href="#courses">Courses</a></li>
+</ul>
+<ul>
+<li><a href="#talks">Talks</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#tools">Tools</a></li>
+</ul>
+<ul>
+<li><a href="#sample-applications">Sample Applications</a></li>
+<ul>
+<li><a href="#android">Android</a></li>
+</ul>
+<ul>
+<li><a href="#web">Web</a></li>
+</ul>
+<ul>
+<li><a href="#miscellaneous">Miscellaneous</a></li>
+</ul>
+</ul>
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+<h2>Introduction</h2>
+
+<h3>Overview</h3>
+
+<ul>
+<li><a href="https://eta-lang.org/">Eta</a> - Official website.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/typelead/eta">GitHub</a> - Eta on GitHub.</li>
+</ul>
+<ul>
+<li><a href="http://blog.ezyang.com/2018/09/hiw18-lets-go-mainstream-with-eta/">Philosophy</a> - Interview about the philosophy behind Eta's development.</li>
+</('ul', 0)>
+<h3>First Steps</h3>
+
+<ul>
+<li><a href="https://eta-lang.org/docs/user-guides/eta-user-guide/introduction/what-is-eta">Getting Started</a> - First steps with Eta.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/eta-lang/eta-prelude">Prelude</a> - Default modules for an easier start.</li>
+</('ul', 0)>
+<h3>Comparisons</h3>
+
+<ul>
+<li><a href="https://eta-lang.org/docs/faq#eta-not-haskell">Eta vs. Haskell</a> - Differences between Eta and Haskell.</li>
+</ul>
+<ul>
+<li><a href="https://eta-lang.org/docs/faq#eta-vs-frege">Eta vs. Frege</a> - Differences between Eta and Frege.</li>
+</('ul', 0)>
+<h3>Compatibility</h3>
+
+<ul>
+<li><a href="https://github.com/typelead/eta-hackage#supported-packages">Etlas Packages</a> - Hackage packages that work with Eta.</li>
+</ul>
+<ul>
+<li><a href="https://eta-lang.org/docs/faq#eta-repl-support">Template Haskell</a> - Status of Template Haskell.</li>
+</ul>
+<ul>
+<li><a href="https://eta-lang.org/docs/faq#is-eta-compatible-ghc8">GHC 8</a> - Compatibility with GHC 8.</li>
+</('ul', 0)>
+<h3>Official Resources</h3>
+
+<ul>
+<li><a href="https://eta-lang.org/docs/tutorials">Tutorials</a> - Eta tutorials.</li>
+</ul>
+<ul>
+<li><a href="https://eta-lang.org/docs/faq">FAQ</a> - Frequently asked questions.</li>
+</ul>
+<ul>
+<li><a href="https://eta-lang.org/docs/cheatsheets">Eta Cheatsheets</a> - Eta reference.</li>
+</ul>
+<ul>
+<li><a href="https://blog.eta-lang.org/https-medium-com-jyothsnasrinivas-the-best-of-both-the-worlds-eta-and-java-part-1-336d181de89d">Eta Blog: Java I</a> - Using Eta with Java, part I.</li>
+</ul>
+<ul>
+<li><a href="https://blog.eta-lang.org/the-best-of-both-the-worlds-eta-and-java-part-2-d7cf27acdef7">Eta Blog: Java II</a> - Using Eta with Java, part II.</li>
+</ul>
+<ul>
+<li><a href="https://blog.eta-lang.org/eta-in-practice-working-with-haskell-packages-5dfa3dc0c98a">Eta Blog: Haskell</a> - Using Haskell packages in Eta code.</li>
+</ul>
+<ul>
+<li><a href="https://blog.eta-lang.org/integrating-eta-into-your-scala-projects-a8d494a2c5b0">Eta Blog: Scala</a> - Using Eta code in Scala projects.</li>
+</ul>
+<ul>
+<li><a href="https://hub.docker.com/r/typelead/eta/">Docker Hub</a> - Docker repo for Eta.</li>
+</('ul', 0)>
+<h2>Community</h2>
+
+<ul>
+<li><a href="https://groups.google.com/forum/#!forum/eta-discuss">Google Group</a> - Eta Google Group.</li>
+</ul>
+<ul>
+<li><a href="https://gitter.im/typelead/eta">Gitter</a> - Gitter channel.</li>
+</ul>
+<ul>
+<li><a href="https://kiwiirc.com/client/irc.freenode.net/#eta-lang">IRC</a> - IRC channel.</li>
+</('ul', 0)>
+<h2>Twitter</h2>
+
+<ul>
+<li><a href="https://twitter.com/eta_lang">Eta</a> - Official Twitter account.</li>
+</ul>
+<ul>
+<li><a href="https://twitter.com/typelead">TypeLead</a> - Company behind Eta.</li>
+</ul>
+<ul>
+<li><a href="https://twitter.com/rahulmutt">Rahul Muttineni</a> - Creator of Eta and CTO of TypeLead.</li>
+</('ul', 0)>
+<h2>Information</h2>
+
+<h3>Articles</h3>
+
+<ul>
+<li><a href="https://www.infoworld.com/article/3157373/java/new-jvm-language-stands-apart-from-scala-clojure.html">InfoWorld</a> - Short article about Eta.</li>
+</ul>
+<ul>
+<li><a href="https://jaxenter.com/eta-pirates-of-the-jvm-133518.html">Jaxenter</a> - Functional programming made easy: Here comes Eta.</li>
+</('ul', 0)>
+<h3>Blogs</h3>
+
+<ul>
+<li><a href="https://blog.eta-lang.org/">Eta programming language</a> - Official blog.</li>
+</ul>
+<ul>
+<li><a href="https://brianmckenna.org/blog/eta_android">Eta on Android</a> - Post about using Eta on Android.</li>
+</('ul', 0)>
+<h3>Conferences</h3>
+
+<ul>
+<li><a href="http://www.icfpconference.org/">ICFP</a> - International Conference on Functional Programming.</li>
+</('ul', 0)>
+<h3>Courses</h3>
+
+<ul>
+<li><a href="https://www.edx.org/course/introduction-functional-programming-delftx-fp101x-0">FP101x</a> - Introduction to Functional Programming on edX.</li>
+</('ul', 0)>
+<h3>Talks</h3>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=hmDLNO7Gkxs">Introduction to Eta</a> - Introduction by the creator of Eta.</li>
+</ul>
+<ul>
+<li><a href="https://brianmckenna.org/files/presentations/lambdajam-2017-eta.pdf">Introduction to Eta</a> - Introduction to the language and its origin.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=P1dmHKJ2vak">Haskell for JVM</a> - Talk at LambdaConf about porting a language to the JVM.</li>
+</ul>
+<ul>
+<li><a href="https://speakerdeck.com/filippovitale/using-eta-for-what-you-dont-like-writing-in-scala">Using Eta</a> - Comparison of Eta and Scala.</li>
+</ul>
+<ul>
+<li><a href="https://rahulmutt.github.io/slides/fuconf17-eta-fibers/slides.html#1">Eta Fibers</a> - Concurrency on the JVM.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/channel/UCwRL68qZFfub1Ep1EScfmBw">ICFP Videos</a> - Videos about functional programming.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=CscBSNF6qnE">Functional Conf - 2016</a> - Bringing the Power of Haskell to the JVM.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=ZuJg2cfmSmw">Functional Conf - 2017</a> - Eta Fibers: Towards Better Concurrency on the JVM.</li>
+</('ul', 0)>
+<h2>Tools</h2>
+
+<ul>
+<li><a href="https://github.com/typelead/intellij-eta">IntelliJ Eta</a> - Plugin for IntelliJ.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/typelead/sbt-eta">sbt</a> - Plugin for integrating Eta into Scala.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/typelead/gradle-eta">gradle</a> - Gradle plugin for Eta projects.</li>
+</('ul', 0)>
+<h2>Sample Applications</h2>
+
+<h3>Android</h3>
+
+<ul>
+<li><a href="https://github.com/puffnfresh/eta-android">eta-android</a> - Example of Eta on Android.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Jyothsnasrinivas/eta-android-2048">eta-android-2048</a> - The 2048 game for Android.</li>
+</('ul', 0)>
+<h3>Web</h3>
+
+<ul>
+<li><a href="https://github.com/Jyothsnasrinivas/eta-todo">eta-todo</a> - Example of a Spock web application written in Eta.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Jyothsnasrinivas/eta-yesod-minimal">eta-yesod-minimal</a> - Example of a Yesod web application in Eta.</li>
+</('ul', 0)>
+<h3>Miscellaneous</h3>
+
+<ul>
+<li><a href="https://github.com/typelead/eta-examples">eta-examples</a> - Examples of Eta code.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/rahulmutt/eta-2048">eta-2048</a> - The 2048 game written in Eta.</li>
+</ul>
+</body>
+</html>

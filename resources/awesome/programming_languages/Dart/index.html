@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dart</h1>
+
+<p><strong>Repository:</strong> https://github.com/yissachar/awesome-dart#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<p>Awesome Dart <a href="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg"><img src="https://github.com/sindresorhus/awesome" alt="Awesome</a>"></p>
+<p>============</p>
+
+<p>A curated list of awesome Dart frameworks, libraries, and software. Items on the list are actively maintained, well documented, and popular in the Dart community. Inspired by the <a href="https://github.com/sindresorhus/awesome">awesome</a> lists.</p>
+
+<h3>Contributing</h3>
+
+<p>Please take a quick look at the <a href="/CONTRIBUTING.md">contribution guidelines</a> first. If you see a package or project here that is no longer maintained or is not a good fit, please submit a pull request to improve this file. Thank you to all <a href="https://github.com/yissachar/awesome-dart/graphs/contributors">contributors</a>; you rock!</p>
+
+<h3>Contents</h3>
+
+<ul>
+<li>Libraries</li>
+<ul>
+<li><a href="#client-web-app-frameworks">Client Web App Frameworks</a></li>
+</ul>
+<ul>
+<li><a href="#server-frameworks">Server Frameworks</a></li>
+</ul>
+<ul>
+<li><a href="#game-development">Game Development</a></li>
+</ul>
+<ul>
+<li><a href="#animation">Animation</a></li>
+</ul>
+<ul>
+<li><a href="#template">Template</a></li>
+</ul>
+<ul>
+<li><a href="#database">Database</a></li>
+</ul>
+<ul>
+<li><a href="#package-managers">Package Managers</a></li>
+</ul>
+<ul>
+<li><a href="#utilities">Utilities</a></li>
+</ul>
+<ul>
+<li><a href="#dependency-injection">Dependency Injection</a></li>
+</ul>
+<ul>
+<li><a href="#parsers">Parsers</a></li>
+</ul>
+<ul>
+<li><a href="#validation">Validation</a></li>
+</ul>
+<ul>
+<li><a href="#orm">ORM</a></li>
+</ul>
+<ul>
+<li><a href="#image">Image</a></li>
+</ul>
+<ul>
+<li><a href="#algorithms">Algorithms</a></li>
+</ul>
+<ul>
+<li><a href="#testing">Testing</a></li>
+</ul>
+<ul>
+<li><a href="#unions">Unions</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#tools">Tools</a></li>
+</ul>
+<ul>
+<li><a href="#ides-editors-and-plugins">IDEs, Editors, and Plugins</a></li>
+</ul>
+<ul>
+<li><a href="#tutorials">Tutorials</a></li>
+</ul>
+<ul>
+<li><a href="#community">Community</a></li>
+</ul>
+<ul>
+<li><a href="#everything-else">Everything Else</a></li>
+</ul>
+<p>----</p>
+
+<h2>Client Web App Frameworks</h2>
+
+<ul>
+<li><a href="https://github.com/angulardart-community">AngularDart Community</a> - Community-maintained AngularDart websites, packages, tools, and more!</li>
+</ul>
+<ul>
+<li><a href="https://flutter.dev/">Flutter</a> - Flutter is a framework to build high-performance,  cross-platform mobile apps, allowing applications to be written for Android, iOS and Web Apps.</li>
+</ul>
+<ul>
+<li><a href="http://mdl.mikemitterer.at//">MDL/Dart</a> - Material Design Lite for Dart is a framework of components for web developers based on Google's Material Design philosophy.</li>
+</ul>
+<ul>
+<li><a href="https://workiva.github.io/over_react/">OverReact</a> - A library for building statically-typed React UI components.</li>
+</('ul', 0)>
+<h2>Server Frameworks</h2>
+
+<ul>
+<li><a href="https://github.com/Jaguar-dart/jaguar">Jaguar</a> - A server framework built for speed, simplicity and extensibility.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lvivski/start">Start</a> - Sinatra inspired web framework to serve static files, handle dynamic requests, websockets and create JSON responses.</li>
+</ul>
+<ul>
+<li><a href="https://pub.dartlang.org/packages/shelf">Shelf</a> - Shelf makes it easy to create and compose web servers and parts of web servers.</li>
+<ul>
+<li>There are many packages written for Shelf. By convention they start with <a href="https://pub.dartlang.org/search?q=shelf<em>">shelf</em></a>.</li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://github.com/Scorpiion/Vane">Vane</a> - Framework with built-in server runtime environment and middleware system.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/rikulo/stream">Rikulo Stream</a> - Lightweight web server with request routing, filtering, template engine, WebSocket, MVC design pattern, and file-based static resources.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/rknell/alfred">Alfred</a> - Minimal ExpressJS-inspired server with routing and middlware.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/VeryGoodOpenSource/dart_frog">Dart Frog</a> -  A fast, minimalistic backend framework for Dart.</li>
+</('ul', 0)>
+<h2>Web Frameworks</h2>
+
+<ul>
+<li><a href="https://docs.page/schultek/jaspr">Jaspr</a> - Jaspr is an modern web framework for building websites in Dart with support for both client-side and server-side rendering.</li>
+</('ul', 0)>
+<h2>Other Frameworks</h2>
+<ul>
+<li><a href="https://github.com/intel/rohd">Rapid Open Hardware Development (ROHD) Framework</a> - A framework for describing and verifying hardware.</li>
+</('ul', 0)>
+<h2>Cross-platform development</h2>
+<ul>
+<li><a href="https://github.com/terrier989/universal<em>io">universal</em>io</a> - <em>dart:io</em> that also works in the browser.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/terrier989/universal<em>html">universal</em>html</a> - <em>dart:html</em> that also works in the VM/Flutter.</li>
+</('ul', 0)>
+<h2>Game Development</h2>
+
+<ul>
+<li><a href="https://github.com/luanpotter/flame#readme">Flame</a> - A minimalist Flutter game engine.</li>
+</ul>
+<ul>
+<li><a href="http://www.stagexl.org/">StageXL</a> - StageXL offers an easy to use and complete API (based on the Flash API) for impressive 2D content like games and other rich applications.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/StrykerKKD/dartrocket">DartRocket</a> - DartRocket is a HTML5 game framework written in Dart and which uses the StageXL rendering engine.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/FedeOmoto/pixi">Pixi Dart</a> - A port of the pixi.js rendering engine.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/wdevore/Ranger-Dart">Ranger</a> - A game engine centered around HTML5 Canvas and a scene graph.</li>
+</('ul', 0)>
+<h2>Animation</h2>
+
+<ul>
+<li><a href="https://github.com/xaguzman/tween-engine-dart">Universal Tween Engine</a> - A port of the original java Universal Tween Engine created by Aurelien Ribbon.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/FedeOmoto/spine">Spine Dart</a> - An implementation of the Esoteric Software Spine runtime.</li>
+</('ul', 0)>
+<h2>Template</h2>
+
+<ul>
+<li><a href="https://pub.dev/packages/mustache<em>template">mustache</em>template</a> - A mustache template library that supports dart2js and dart2native.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dartist/jaded">jaded</a> - Port of the excellent Jade view engine.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/felangel/mason">mason</a> - Tools which allow developers to create and consume reusable templates called bricks.</li>
+</('ul', 0)>
+<h2>Database</h2>
+
+<ul>
+<li><a href="https://github.com/stablekernel/postgresql-dart">Postgres</a> - A PostgreSQL database driver that uses the extended, binary protocol for more efficient and secure queries.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jamesots/sqljocky">SQLJockey</a> - MySQL connector.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/xxgreg/dart_postgresql">PostgreSQL</a> - PostgreSQL database driver.</li>
+</('ul', 0)>
+<h2>Package Managers</h2>
+
+<ul>
+<li><a href="https://pub.dartlang.org/">Pub</a> - Pub is used to manage packages.</li>
+</ul>
+<ul>
+<li><a href="https://cloudsmith.io/l/dart-repository/">Cloudsmith</a> - A fully managed package management SaaS, with support for Dart, Flutter, and much more. <strong>[Free for Public/OSS]</strong> <strong>[$]</strong></li>
+</('ul', 0)>
+<h2>Utilities</h2>
+
+<ul>
+<li><a href="https://pub.dartlang.org/packages/archive">Archive</a> - A library to encode and decode various archive and compression formats.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/google/built<em>collection.dart">built</em>collection</a> - Immutable collections via the builder pattern. </li>
+</ul>
+<ul>
+<li><a href="https://github.com/google/built<em>value.dart">built</em>value</a> - Immutable value types, enum classes, and serialization.</li>
+</ul>
+<ul>
+<li><a href="https://pub.dartlang.org/packages/frappe">Frappe</a> - A functional reactive programming library for Dart. Frappé extends the functionality of Dart's streams, and introduces new concepts like properties/signals.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/google/quiver-dart">Quiver</a> - A set of utility libraries that makes using many libraries easier and more convenient, or adds additional functionality.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/angular/route.dart">route_hierarchical</a> - Route is a client routing library for Dart that helps make building single-page web apps.</li>
+</ul>
+<ul>
+<li><a href="https://pub.dev/packages/darq">Darq</a> - A port of functional LINQ from the .NET library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/google/dart-basics">Basics</a> -  A Dart library containing convenient extension methods on basic Dart objects.</li>
+</('ul', 0)>
+<h2>Dependency Injection</h2>
+
+<ul>
+<li><a href="https://webdev.dartlang.org/angular/guide/dependency-injection">Angular DI</a> - Dependency Injection framework by Angular.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/marcguilera/dependencies.dart">Dependencies</a> - A simple and modular dependency injection system which doesn't use mirrors.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/google/inject.dart">package: inject</a> - Compile-time dependency injection for Dart and Flutter</li>
+</('ul', 0)>
+<h2>Parsers</h2>
+
+<ul>
+<li><a href="https://pub.dartlang.org/packages/html">html</a> - A library for working with HTML documents. Previously known as html5lib.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dart-lang/markdown">markdown</a> - Parse markdown into HTML on both the client and server.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/petitparser/dart-petitparser">PetitParser</a> - PetitParser combines ideas from scannerless parsing, parser combinators, parsing expression grammars and packrat parsers to model grammars and parsers as objects that can be reconfigured dynamically.</li>
+</ul>
+<ul>
+<li><a href="https://pub.dartlang.org/packages/xml">XML</a> - A lightweight library for parsing, traversing, querying and building XML documents.</li>
+</ul>
+<ul>
+<li><a href="https://pub.dartlang.org/packages/xml">xmlstream</a> - A streaming event-based XML Parser.</li>
+</ul>
+<ul>
+<li><a href="https://pub.dartlang.org/packages/yaml">YAML</a> - A parser for YAML.</li>
+</ul>
+<ul>
+<li><a href="https://pub.dartlang.org/packages/dart_tags">Dart Tags</a> - The library for parsing ID3 tags, written in pure Dart.</li>
+</('ul', 0)>
+<h2>Validation</h2>
+
+<ul>
+<li><a href="https://pub.dartlang.org/packages/constrain">Constrain</a> - Provides a constraint based Validation library inspired by Java Bean Validation but leveraging the superior language capabilities of Dart.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/karan/validator.dart">validator.dart</a> - String validation and sanitization for Dart.</li>
+</('ul', 0)>
+<h2>ORM</h2>
+
+<ul>
+<li><a href="https://github.com/vadimtsushko/objectory">Objectory</a> - Objectory provides typed, checked environment to model, save and query data persisted on MongoDb.</li>
+</('ul', 0)>
+<h2>Image</h2>
+
+<ul>
+<li><a href="https://github.com/brendan-duncan/image">image</a> - Provides server and web apps the ability to load, manipulate, and save images with various image file formats including PNG, JPEG, GIF, WebP, TIFF, TGA, PSD, PVR, and OpenEXR.</li>
+</('ul', 0)>
+<h2>Testing</h2>
+
+<ul>
+<li><a href="https://github.com/vsavkin/guinness">Guinness</a> - A port of the Jasmine library.</li>
+</ul>
+<ul>
+<li><a href="https://pub.dartlang.org/packages/test">test</a> - Provides a standard way of writing and running tests in Dart.</li>
+</ul>
+<ul>
+<li><a href="https://pub.dev/packages/spec">spec</a> - A streamlined testing framework for Dart & Flutter.</li>
+</('ul', 0)>
+<h2>Unions</h2>
+
+<ul>
+<li><a href="https://github.com/rrousselGit/freezed">Freezed</a> - Code generation for immutable classes that has a simple syntax/API without compromising on the features.</li>
+</('ul', 0)>
+<h2>Crash monitoring</h2>
+
+<ul>
+<li><a href="https://github.com/getsentry/sentry-dart">Sentry</a> - Sentry provides self-hosted and cloud-based error monitoring that helps all software teams discover, triage, and prioritize errors in real-time.</li>
+</('ul', 0)>
+<h2>Tools</h2>
+
+<ul>
+<li><a href="https://dart.dev/tools/dart-devtools">DevTools</a> - a suite of debugging and performance tools for Dart and Flutter.</li>
+</ul>
+<ul>
+<li><a href="https://www.dartlang.org/tools/dart2js/">dart2js</a> - compiles Dart code to JavaScript.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/vojtajina/js2dart">js2dart</a> - compiles Javascript code to Dart.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dart-lang/stagehand">Stagehand</a> - A project scaffolding generator, inspired by tools like Web Starter Kit and Yeoman.</li>
+</ul>
+<ul>
+<li><a href="https://crossdart.info">Crossdart</a> - Cross-referenced source code of the packages from Pub.</li>
+</ul>
+<ul>
+<li><a href="https://chrome.google.com/webstore/detail/crossdart-chrome-extensio/jmdjoliiaibifkklhipgmnciiealomhd">Crossdart Github Chrome Extension</a> - Adds "Go to declaration" and "Find Usages" functionality to your Dart projects on Github (both in tree views and pull requests).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/agudulin/gulp-dart">gulp-dart</a> - A gulp plugin for compiling Dart code to JavaScript using dart2js.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dart-lang/dev<em>compiler">dev</em>compiler</a> - Dart to JavaScript compiler designed to create idiomatic, readable JavaScript output.</li>
+</ul>
+<ul>
+<li><a href="https://javiercbk.github.io/json<em>to</em>dart">json2dart</a> - Given a json, it generates the dart classes to parse and generate json with given structure.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Workiva/webdev<em>proxy">webdev</em>proxy</a> - A proxy wrapper around <a href="https://github.com/dart-lang/webdev">webdev</a> which adds support for rerouting 404s to the index, allowing for HTML push-based routing while running locally.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dart-code-checker/dart-code-metrics">Dart Code Metrics</a> - Additional linter which reports code metrics, checks for anti-patterns and provides additional rules for Analyzer.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/BayesWitnesses/m2cgen">m2cgen</a> - A CLI tool to transpile trained classic ML models into a native Dart code with zero dependencies.</li>
+</ul>
+<ul>
+<li><a href="https://pub.dev/packages/lakos">Lakos</a> - Visualize internal library dependencies in Graphviz and detect dependency cycles.</li>
+</('ul', 0)>
+<h2>Multithreading</h2>
+
+<ul>
+<li><a href="https://pub.dev/packages/isolator">isolator</a> - Isolator offer to you a simple way for creating two-component states with isolated part and frontend part of any kind - BLoC, MobX, ChangeNotifier and others</li>
+</('ul', 0)>
+<h2>Tutorials</h2>
+
+<ul>
+<li><a href="http://code.makery.ch/library/hello-dart/">Hello Dart</a> - A playful introduction to Dart.</li>
+</ul>
+<ul>
+<li><a href="https://www.leejamesrobinson.com/blog/getting-started-with-dart-and-react/">Getting Started with Dart & React</a></li>
+</ul>
+<ul>
+<li><a href="https://webdev.dartlang.org/angular/tutorial">Tour of Heroes</a> - An app which covers the core fundamentals of AngularDart. </li>
+</ul>
+<ul>
+<li><a href="https://www.myfreax.com/tag/dart/">Dart for beginner</a> - Dart Chinese tutorial for beginner.</li>
+</ul>
+<ul>
+<li><a href="https://iiro.dev/2018/08/28/resolving-dart-package-version-conflicts/">Resolving Dart package version conflicts, faster than ever</a> - How to use any package version in pub to resolve package version conflicts.</li>
+</('ul', 0)>
+<h2>Community</h2>
+
+<ul>
+<li><a href="https://www.reddit.com/r/dartlang/">Dartlang SubReddit</a></li>
+</ul>
+<ul>
+<li><a href="https://gitter.im/dart-lang/home">Gitter Chat Channel</a></li>
+</ul>
+<ul>
+<li><a href="https://groups.google.com/a/dartlang.org/d/forum/misc">Google Group</a></li>
+</ul>
+<ul>
+<li><a href="https://stackoverflow.com/tags/dart">Stack Overflow</a></li>
+</ul>
+<ul>
+<li><a href="https://www.facebook.com/groups/dartlangbr">Facebook Group (pt-BR)</a></li>
+</ul>
+<ul>
+<li><a href="https://t.me/rudart">Telegram chat (ru-RU)</a></li>
+</ul>
+<ul>
+<li><a href="https://t.me/dart_web">Telegram chat (id-ID)</a></li>
+</('ul', 0)>
+<h2>IDEs, Editors, and Plugins</h2>
+
+<ul>
+<li><a href="https://www.dartlang.org/tools/webstorm/">IntelliJ Plugin</a> - Dart plugin from JetBrains for WebStorm, IntelliJ IDEA, PhpStorm, PyCharm, and RubyMine.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/guillermooo/dart-sublime-bundle">Sublime Text Package</a> - Sublime Text 3 Dart Package.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/nex3/dart-mode">Emacs Plugin</a> - An Emacs mode for the Dart language.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dart-lang/dart-vim-plugin">Vim Plugin</a> - Syntax highlighting for Dart in Vim.</li>
+</ul>
+<ul>
+<li><a href="https://atom.io/packages/atom-dart">Atom Plugin</a> - Dart support for Atom.</li>
+</ul>
+<ul>
+<li><a href="https://dartcode.org/">VSCode Plugin</a> - Dart support for Visual Studio Code.</li>
+</ul>
+<ul>
+<li><a href="https://dartpad.dartlang.org/">DartPad</a> - Online lightweight editor.</li>
+</ul>
+<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=Dart-Code.dart-code">Dart Code</a> - Dart support for Visual Studio Code.</li>
+</ul>
+<ul>
+<li><a href="http://fiatjaf.alhur.es/module-linker/#/dart">Module Linker</a> - Chrome Extension that adds direct links to module import statements on GitHub.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mikededo/dartBarrelFileGenerator">Dart Barrel File Generator</a> - VSCode extension that generates barrel files for Dart projects.</li>
+</('ul', 0)>
+<h2>Everything Else</h2>
+
+<p>There are lots of awesome libraries being added to <a href="https://pub.dartlang.org/">Pub</a> all the time. If you can't find a library on this list that meets your needs, go ahead and search for it on Pub. And if you end up finding an awesome library, we would love a pull request with the info so that everyone else can discover it as well. Just make sure to read the <a href="https://github.com/yissachar/awesome-dart/blob/master/CONTRIBUTING.md">contributing guidelines</a> first.</p>
+
+<h2>License</h2>
+
+<p><a href="https://i.creativecommons.org/p/zero/1.0/88x31.png"><img src="https://creativecommons.org/publicdomain/zero/1.0/" alt="CC0</a>"></p>
+
+</body>
+</html>

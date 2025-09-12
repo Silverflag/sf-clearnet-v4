@@ -1,0 +1,1385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>D</h1>
+
+<p><strong>Repository:</strong> https://github.com/dlang-community/awesome-d#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<h1>Awesome D <a href="https://cdn.jsdelivr.net/gh/sindresorhus/awesome@d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg"><img src="https://github.com/sindresorhus/awesome" alt="Awesome</a>"></h1>
+
+<p>A curated list of awesome D frameworks, libraries and software. Inspired by <a href="https://github.com/vinta/awesome-python">awesome-python</a>.</p>
+
+<p>Most documents and links are collected from the <a href="https://forum.dlang.org">D forum</a>, the <a href="https://wiki.dlang.org">D wiki</a>, and the <a href="https://code.dlang.org">D package repository</a>. Exploring GitHub is also helpful, as many libraries are hosted there. If you know of an interesting D project, please let us know via <a href="https://github.com/dlang-community/awesome-d/issues">GitHub issues</a> or by <a href="https://github.com/dlang-community/awesome-d/edit/master/README.md">editing this file</a>.</p>
+
+<h2>Contents</h2>
+
+<ul>
+<li>Basic Information</li>
+<ul>
+<li><a href="#official-website">Official Website</a></li>
+</ul>
+<ul>
+<li><a href="#getting-help">Getting Help</a></li>
+</ul>
+<ul>
+<li><a href="#people">People</a></li>
+</ul>
+<ul>
+<li><a href="#events">Events</a></li>
+</ul>
+<ul>
+<li><a href="#organizations">Organizations</a></li>
+</ul>
+</ul>
+<ul>
+<li>Documents</li>
+<ul>
+<li><a href="#books">Books</a></li>
+</ul>
+<ul>
+<li><a href="#tutorials">Tutorials</a></li>
+</ul>
+<ul>
+<li><a href="#blogs">Blogs</a></li>
+</ul>
+<ul>
+<li><a href="#articles">Articles</a></li>
+</ul>
+</ul>
+<ul>
+<li>Language Related</li>
+<ul>
+<li><a href="#package-management">Package Management</a></li>
+</ul>
+<ul>
+<li><a href="#compilers">Compilers</a></li>
+</ul>
+<ul>
+<li><a href="#alternative--wip-compilers">Alternative / WIP Compilers</a></li>
+</ul>
+<ul>
+<li><a href="#dev-tools">Dev Tools</a></li>
+</ul>
+<ul>
+<li><a href="#build-tools">Build Tools</a></li>
+</ul>
+<ul>
+<li><a href="#ides--editors">IDEs & Editors</a></li>
+</ul>
+<ul>
+<li><a href="#lexers-parsers--generators">Lexers, Parsers & Generators</a></li>
+</ul>
+<ul>
+<li><a href="#preprocessors">Preprocessors</a></li>
+</ul>
+<ul>
+<li><a href="#version-managers">Version Managers</a></li>
+</ul>
+</ul>
+<ul>
+<li>Continuous Integration</li>
+<ul>
+<li><a href="#github-actions">GitHub Actions</a></li>
+</ul>
+<ul>
+<li><a href="#testing-frameworks">Testing Frameworks</a></li>
+</ul>
+</ul>
+<ul>
+<li>Compiler for Other Languages</li>
+<ul>
+<li><a href="#javascript">Javascript</a></li>
+</ul>
+</ul>
+<ul>
+<li>OS</li>
+<ul>
+<li><a href="#operating-systems">Operating Systems</a></li>
+</ul>
+<ul>
+<li><a href="#bare-metal--kernel-development">Bare Metal / Kernel Development</a></li>
+</ul>
+</ul>
+<ul>
+<li>Common</li>
+<ul>
+<li><a href="#general-containers">General Containers</a></li>
+</ul>
+<ul>
+<li><a href="#core-utilities">Core Utilities</a></li>
+</ul>
+</ul>
+<ul>
+<li>Networking / Web</li>
+<ul>
+<li><a href="#web-frameworks">Web Frameworks</a></li>
+</ul>
+<ul>
+<li><a href="#data-serialization">Data Serialization</a></li>
+</ul>
+</ul>
+<ul>
+<li>Database</li>
+<ul>
+<li><a href="#database-clients">Database Clients</a></li>
+</ul>
+</ul>
+<ul>
+<li>CLI</li>
+<ul>
+<li><a href="#cli-libraries">CLI Libraries</a></li>
+</ul>
+<ul>
+<li><a href="#cli-applications">CLI Applications</a></li>
+</ul>
+</ul>
+<ul>
+<li>GUI</li>
+<ul>
+<li><a href="#gui-libraries">GUI Libraries</a></li>
+</ul>
+<ul>
+<li><a href="#gui-applications">GUI Applications</a></li>
+</ul>
+</ul>
+<ul>
+<li>Game Development</li>
+<ul>
+<li><a href="#game-bindings">Game Bindings</a></li>
+</ul>
+<ul>
+<li><a href="#game-libraries">Game Libraries</a></li>
+</ul>
+<ul>
+<li><a href="#games">Games</a></li>
+</ul>
+</ul>
+<ul>
+<li>Internationalization (i18n) / Globalization</li>
+<ul>
+<li><a href="#internationalization">Internationalization</a></li>
+</ul>
+</ul>
+<ul>
+<li>Image Processing</li>
+<ul>
+<li><a href="#image-processing">Image Processing</a></li>
+</ul>
+</ul>
+<ul>
+<li>Machine Learning</li>
+<ul>
+<li><a href="#machine-learning">Machine Learning</a></li>
+</ul>
+<ul>
+<li><a href="#parallel-computing">Parallel Computing</a></li>
+</ul>
+</ul>
+<ul>
+<li>Scientific</li>
+<ul>
+<li><a href="#scientific">Scientific</a></li>
+</ul>
+<ul>
+<li><a href="#language-processing">Language Processing</a></li>
+</ul>
+</ul>
+<ul>
+<li>Others</li>
+<ul>
+<li><a href="#text-processing">Text Processing</a></li>
+</ul>
+<ul>
+<li><a href="#logging">Logging</a></li>
+</ul>
+<ul>
+<li><a href="#configuration">Configuration</a></li>
+</ul>
+<ul>
+<li><a href="#blog-engine">BlogEngine</a></li>
+</ul>
+<ul>
+<li><a href="#dependency-injection">Dependency Injection</a></li>
+</ul>
+<ul>
+<li><a href="#cryptography">Cryptography</a></li>
+</ul>
+<ul>
+<li><a href="#unmaintained">Unmaintained</a></li>
+</('ul', 1)>
+</('ul', 0)>
+<h2>Official Websites</h2>
+
+<p><em>Official website URLs for D.</em></p>
+
+<ul>
+<li><a href="https://dlang.org">dlang.org</a> - Official website for D.</li>
+</ul>
+<ul>
+<li><a href="https://wiki.dlang.org">wiki.dlang.org</a> - Official wiki for D.</li>
+</ul>
+<ul>
+<li><a href="https://dlang.org/blog/">blog.dlang.org</a> - Official blog for D.</li>
+</ul>
+<ul>
+<li><a href="https://forum.dlang.org/">forum.dlang.org</a> - Official forum for D. Many interesting discussions occurring on a daily basis.</li>
+</ul>
+<ul>
+<li><a href="https://code.dlang.org">code.dlang.org</a> - Official library registry for D.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dlang">GitHub organization</a> - Official GitHub organization for D. Repository for all official D tools & code.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dlang">Issue tracker</a> – Official issue tracker for D. Older reports can be found in the <a href="https://issues.dlang.org/">archived tracker</a>.</li>
+</ul>
+<ul>
+<li><a href="https://dlang.org/spec/spec.html">Language specification</a> - The D programming language specification.</li>
+</('ul', 0)>
+<h2>Getting Help</h2>
+
+<p><em>For when you're stuck.</em></p>
+
+<ul>
+<li><a href="https://forum.dlang.org/group/learn">Official D Forum Learn Group</a> - Highest-traffic site for getting D questions answered.</li>
+</ul>
+<ul>
+<li><a href="https://stackoverflow.com/questions/tagged/d">D on Stack Overflow</a> - Less traffic than the forums but possibly easier to search.</li>
+</ul>
+<ul>
+<li><a href="https://rosettacode.org/wiki/Category:D">D on Rosetta Code</a> - Examples of how to do many basic things in D.</li>
+</ul>
+<ul>
+<li><a href="https://discord.gg/invite/bMZk9Q4">D on Discord</a> - Another very active community for D discussions and questions.</li>
+</('ul', 0)>
+<h2>People</h2>
+
+<p><em>The people that made D the language it is.</em></p>
+
+<ul>
+<li><a href="https://www.walterbright.com/">Walter Bright</a> - Father of D. Walter Bright is the creator and first implementer of the D programming language and has implemented compilers for several other languages.</li>
+</ul>
+<ul>
+<li><a href="http://erdani.com/">Andrei Alexandrescu, PhD</a> - C++ guru. Author of <em>The D Programming Language</em> and <em>Modern C++ Design</em>. With Walter Bright, Andrei co-designed many important features of D and authored a large part of D's standard library. Andrei works as a trainer in advanced C++ programming and algorithms and is now actively evangelizing D in the organization.</li>
+</ul>
+<ul>
+<li><a href="https://atilaoncode.blog/">Átila Neves</a> - <a href="https://dlang.org/blog/2019/10/15/my-vision-of-ds-future/">Deputy Leader of D</a>.</li>
+</ul>
+<ul>
+<li><strong>YOU</strong> - Please add your information if you've done something interesting in D. It is you, the awesome people that make D awesome.</li>
+</('ul', 0)>
+<h2>Events</h2>
+
+<ul>
+<li><a href="https://dconf.org/">DConf</a> - The premier event where D luminaries exchange knowledge, insight, and inspiration on everything related to the D language and its ecosystem.</li>
+</ul>
+<ul>
+<li><a href="https://wiki.dlang.org/Beerconf">Beerconf</a> - A casual, monthly virtual meetup for D community members.</li>
+</('ul', 0)>
+<h2>Organizations</h2>
+
+<p><em>Organizations that contribute to D projects.</em></p>
+
+<ul>
+<li><a href="https://github.com/dlang">D Programming Language</a> - Official Organization, hosts DMD, Phobos and other official tools and libs.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ldc-developers">LDC Developers</a> - LDC releated projects.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/DerelictOrg">DerelictOrg</a> - A GitHub organization hosting all Derelict bindings including OpenGL and other multimedia/game related library bindings. (OpenGL 3, Bgfx, ENet, SDL 2, GLFW 3，OpenGLES, Free Image, Assimp3, libtheora, libogg, libvorbis, SFML 2, libpq, PhysicsFS, Open Dynamics Engine, Lua, DevIL, OpenAL, ALURE).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/DlangScience">DlangScience</a> - A focal point and first port of call for scientific libraries and tooling for D.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Circular-Studios">Circular Studios</a> - We are a group of game developers at Rochester Institute of Technology building games and game tech. Hosts <a href="https://github.com/Circular-Studios/Dash">Dash</a>, a 3D game engine written in D, and other related libs.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/economicmodeling">EMSI</a> - A Career building company that uses D as their main language. Hosts their opensource projects.</li>
+</ul>
+<ul>
+<li><a href="http://www.infognition.com/company.html">infognition</a> - Infognition is a self-funded and self-sustained company specializing in video processing and compression technologies for end-users and developers. They provide several opensource video related applications & tools written in D, hosted on <a href="https://bitbucket.org/infognition/">bitbucket</a>. They are also porting their main product--<a href="http://www.infognition.com/VideoEnhancer/">Video Enchanser</a> from C/C++ to D.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/libmir">libmir</a> - D's numeric library development team</li>
+</ul>
+<ul>
+<li><a href="https://www.sociomantic.com">sociomantic labs</a> - Berlin based company specializing in real-time bidding for online advertising. Main sponsor of the <a href="http://dconf.org">annual D language conference</a>. Has open-sourced large parts of their codebase as part of the <a href="https://github.com/sociomantic-tsunami">tsunami</a> organization.</li>
+</ul>
+<ul>
+<li><a href="https://symmetryinvestments.com/">Symmetry Investments</a> - Symmetry Investments LP is an investment management company with approximately US$4.7 billion in assets under management as of 31 December 2018. Main sponsor of the <a href="https://dlang.org/blog/symmetry-autumn-of-code/">Symmetry Autumn of Code</a>. Have sponsored the development of <a href="https://dlang.org/blog/2017/05/31/project-highlight-excel-d/">excel-d</a>, <a href="https://github.com/atilaneves/dpp">dpp</a>, <a href="https://github.com/symmetryinvestments/autowrap">autowrap</a>, <a href="https://github.com/libmir/mir-algorithm">mir-algorithm</a>, and various other projects.</li>
+</ul>
+<ul>
+<li><a href="https://www.huntlabs.net">HuntLabs</a> - A technology group using DLang. Have pure D language implementation of quickly develop server-side applications and build distributed system services.</li>
+</('ul', 0)>
+<h2>Books</h2>
+
+<p><em>D related books.</em> You can find another list of books on the <a href="https://wiki.dlang.org/Books">Books</a> D wiki page.</p>
+
+<ul>
+<li><a href="https://www.amazon.com/The-Programming-Language-Andrei-Alexandrescu/dp/0321635361/">TDPL</a> - <em>The D Programming Language</em> by Andrei Alexandrescu.</li>
+</ul>
+<ul>
+<li><a href="https://ddili.org/ders/d.en/index.html">Programming in D</a> - A very detailed book about programming in D by Ali Çehreli covering many areas of the language. Has a free online version and is suitable for beginners.</li>
+</ul>
+<ul>
+<li><a href="https://www.packtpub.com/product/d-cookbook/9781783287215">D Cookbook</a> - A recipe-packed reference guide filled with practical tasks that are concisely explained to develop and broaden the user's abilities with the D programming language. by Adam D. Ruppe. Here is an interesting <a href="https://www.cppstories.com/2014/08/review-of-d-cookbook/">review of the book</a>.</li>
+</ul>
+<ul>
+<li><a href="https://www.packtpub.com/product/learning-d/9781783552481">Learning D</a> - This book is intended for those with some background in a C-family language who want to learn how to apply their knowledge and experience to D. (...) This book will help you get up to speed with the language and avoid common pitfalls that arise when translating C-family experience to D.</li>
+</ul>
+<ul>
+<li><a href="https://www.packtpub.com/product/d-web-development/9781785288890">D Web Development</a> - Whether you are new to the world of D, or already have developed applications in D, or if you want to leverage the power of D for web development, then this book is ideal for you.</li>
+</('ul', 0)>
+<h2>Tutorials</h2>
+
+<p><em>D related tutorials.</em></p>
+
+<ul>
+<li><a href="https://tour.dlang.org/">The Dlang Tour</a> - An interactive tutorial for D, inspired by Golang Tour.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=HS7X9ERdjM4&list=PLvv0ScY6vfd9Fso-3cB4CGnSlW0E4btJV&ab_channel=MikeShah">Programming in Dlang</a> - An introductory video series about programming in D.</li>
+</ul>
+<ul>
+<li><a href="https://qznc.github.io/d-tut/index.html">Pragmatic D tutorial</a> - This is a pragmatic introduction to the D Programming Language. by Andreas Zwinkau.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/PhilippeSigaud/D-templates-tutorial">D Template Tutorial</a> - A tutorial dedicated to D Templates. Very good explanation about templates. Has pdf version. by Philippe Sigaud.</li>
+</ul>
+<ul>
+<li><a href="https://www.drdobbs.com/architecture-and-design/component-programming-in-d/240008321">Component programming in D</a> - An article written by Walter Bright that details how D's functional support leads to a flexible and beautiful component programming style.</li>
+</ul>
+<ul>
+<li><a href="https://wiki.dlang.org/Component<em>programming</em>with_ranges">Component programming with ranges</a> - A detailed blog post about how to do component programming in a idiomatic D way with ranges, with a full working example.</li>
+</ul>
+<ul>
+<li><a href="https://blog.cy.md/2014/03/21/functional-image-processing-in-d/">Functional image processing in D</a> - A very interesting tutorial about writing an image processing lib in D. Shows the power of D's templates/CTFE/Ranges/UFCS for functional style programming.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/d-gamedev-team/opengl-tutorials">OpenGL tutorials</a> - OpenGL tutorials in D.</li>
+</ul>
+<ul>
+<li><a href="https://bradley.chatha.dev/BlogPost/JsonSerialiser/0">Creating a simple JSON serialiser in D</a> - D metaprogramming tutorial series</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=j-Zm1zgSxMQ&list=PLgM-lc<em>kSqFQPF0UXgmFZpZalqcrSofe-&ab</em>channel=KiRill">Let's learn D programming Game Dev!</a> - A video series on learning game development with D from Ki Rill. <a href="https://www.youtube.com/@rillki-dev/">His channel</a> also posts other videos related to D programming.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/playlist?list=PLvv0ScY6vfd9Fso-3cB4CGnSlW0E4btJV">DLang YouTube Tutorials from Mike Shah</a> - Series of tutorials covering basic to advanced features of the D programming language and standard library.</li>
+</('ul', 0)>
+<h2>Blogs</h2>
+
+<p><em>D related blogs.</em></p>
+
+<ul>
+<li><a href="https://dlang.org/blog/">blog.dlang.org</a> - Official blog.</li>
+</ul>
+<ul>
+<li><a href="https://www.reddit.com/r/d<em>language/">/r/d</em>language on Reddit</a> - A feed of news and blog posts about D.</li>
+</ul>
+<ul>
+<li><a href="https://dpldocs.info/this-week-in-d/Blog.html">This week in D</a> - A weekly overview of activity in the D community and brief advice columns to help you get the most out of the D Programming Language.</li>
+</ul>
+<ul>
+<li><a href="http://planet.dsource.org">Planet D</a> - A repository of co-authored D-specific blogs maintained by Vladimir Panteleev.</li>
+</ul>
+<ul>
+<li><a href="https://p0nce.github.io/d-idioms/">D Idioms</a> - A great blog for many useful idioms with D programming.</li>
+</ul>
+<ul>
+<li><a href="https://web.archive.org/web/20241201013031/https://gtkdcoding.com/">GTK-D coding</a> - Simple examples of how to use GtkD to build GUI applications.</li>
+</ul>
+<ul>
+<li><a href="https://tastyminerals.github.io/tasty-blog/">Tasty D</a> - A blog about learning the D programming language and various D language trivia.</li>
+</('ul', 0)>
+<h2>Articles</h2>
+
+<p><em>D related Articles.</em></p>
+
+<ul>
+<li><a href="https://dl.acm.org/doi/pdf/10.1145/3386323">Origins of the D programming language</a> - By Walter Bright, Andrei Alexandrescu, Michael Parker. The history and development of D language.</li>
+</ul>
+<ul>
+<li><a href="https://klickverbot.at/blog/2012/05/purity-in-d/">Purity in D</a> - An article that explains the design principles behind D's purity feature.</li>
+</ul>
+<ul>
+<li><a href="https://web.archive.org/web/20171119072212/http://nomad.so/2014/08/hidden-treasure-in-the-d-standard-library/">Hidden treasures in the D standard library</a> - An article talking about several useful functions and templates in Phobos.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/JinShil/D<em>Runtime</em>ARM<em>Cortex-M</em>study">Porting D Runtime to ARM</a> - A study about porting a minimal D runtime to ARM Cortex-M preprocessors.</li>
+</ul>
+<ul>
+<li><a href="https://tech.nextroll.com/blog/data/2014/11/17/d-is-for-data-science.html">D is for Data Science</a> - A great post about how D is suitable for data science, particularly, replacing the role of python scripts for fast prototyping.</li>
+</ul>
+<ul>
+<li><a href="https://garden.dlang.io/">D Functional Garden</a></li>
+</('ul', 0)>
+<h2>Package Management</h2>
+
+<p><em>Libraries for package and dependency management.</em></p>
+
+<ul>
+<li><a href="https://code.dlang.org/">code.dlang.org</a> - Official D library repository. Backed by dub.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dlang/dub">dub</a> - Official package and build management system for D.</li>
+</('ul', 0)>
+<h2>Compilers</h2>
+
+<p><em>Official compilers for the D language.</em></p>
+
+<ul>
+<li><a href="https://github.com/dlang/dmd">DMD</a> - The reference compiler for the D programming language. Stable, builds insanely fast, very good for learning and rapid prototyping/development. Currently the frontend is implemented in D, and shared between dmd, ldc and gdc, the backend is implemented in C++.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ldc-developers/ldc">LDC</a> - The LLVM-based D compiler. Uses the DMD frontend and LLVM backend. Builds slower than dmd, but generates more optimized code than DMD. It supports all the target platforms of LLVM.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/D-Programming-GDC/GDC">GDC</a> - GNU D Compiler. Use DMD frontend and GCC backend. Currently targets the most platforms due to the use of GCC. Generated code runs faster than DMD in most cases, on par with LDC. In the process of integration with the official GCC toolchain.</li>
+</('ul', 0)>
+<h2>Alternative / WIP Compilers</h2>
+
+<p><em>These compilers may differ from or be incompatible with the official set of tools.</em></p>
+
+<ul>
+<li><a href="https://github.com/snazzy-d/SDC">SDC</a> - The Snazzy D Compiler. Written in D. Grows Smarter every day.</li>
+</ul>
+<ul>
+<li><a href="https://opendlang.org/index.html">OpenD</a> - A fork of the D language with built-in libraries.</li>
+</('ul', 0)>
+<h2>Dev Tools</h2>
+
+<p><em>Tools for more productive D development.</em></p>
+
+<ul>
+<li><a href="https://github.com/dlang-community/D-Scanner">D-Scanner</a> - Swiss-army knife for D source code (linting, static analysis, D code parsing, etc.)</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dlang-community/dfmt">dfmt</a> - formatter for D source code</li>
+</('ul', 0)>
+<h2>Build Tools</h2>
+
+<p><em>Manage projects and compile software from source code.</em></p>
+
+<ul>
+<li><a href="https://github.com/dlang/dub">dub</a> - De facto official package and build management system for D. Will be included officially soon.</li>
+</ul>
+<ul>
+<li><a href="https://scons.org/">scons-d</a> - Scons has built-in support for building D projects, thanks to Russel Winder.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/premake/premake-dlang">premake</a> - Premake has built-in support for D projects</li>
+</ul>
+<ul>
+<li><a href="https://github.com/atilaneves/reggae">reggae</a> - meta build system in D</li>
+</ul>
+<ul>
+<li><a href="https://github.com/bioinfornatics/MakefileForD">Makefile</a> - Makefile template for D projects</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dcarp/cmake-d">cmake-d</a> - CMake D Projects</li>
+</ul>
+<ul>
+<li><a href="https://github.com/gecko0307/Cook2">cook2</a> - Fast incremental build tool intended for projects in D</li>
+</ul>
+<ul>
+<li><a href="https://jasonwhite.io/button/">button</a> - A universal build system to build your software at the push of a button.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Vild/Wild">wild</a> - Wild build system, used to build the <a href="https://github.com/PowerNex/PowerNex">PowerNex</a> kernel</li>
+</ul>
+<ul>
+<li><a href="https://xmake.io">XMake</a> - XMake is a crossplatform build system, that incorporated the D language and also has support for DUB repositories.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/redthing1/wox">wox</a> - A highly flexible recipe build system inspired by Make</li>
+</('ul', 0)>
+<h2>IDEs & Editors</h2>
+
+<p><em>Integrated Development Environment.</em></p>
+
+<ul>
+<li><a href="https://github.com/dlang/visuald">Visual D</a> - Visual Studio extension for the D programming language.</li>
+</ul>
+<ul>
+<li><a href="https://intellij-dlanguage.github.io/">IntelliJ D Language</a> - Support for the D programming language within IntelliJ IDEA.</li>
+</ul>
+<ul>
+<li><a href="https://gitlab.com/basile.b/dexed">Dexed</a> - IDE for the D programming language, its compilers, tools and libraries.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/idanarye/vim-dutyl">Dutyl</a> - Vim plugin that integrates various D development tools</li>
+</ul>
+<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=webfreak.code-d">code-d</a> <sup>\<a href="https://open-vsx.org/extension/webfreak/code-d">[open-vsx</a>\]</sup> - Visual Studio Code extension using serve-d</li>
+</ul>
+<ul>
+<li><a href="https://atom.io/packages/ide-d">ide-d</a> - Atom extension for D using serve-d</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dlang-community/DCD">DCD</a> - Independent auto-complete program for the D programming language. Could be used with editors like vim, emacs, sublime text, textadept, and zeus. See <a href="https://github.com/dlang-community/DCD/wiki/IDEs-and-Editors-with-DCD-support">editors support</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Pure-D/serve-d">serve-d</a> - Language Server Protocol (LSP) implementation for D. Adds modern IDE features to any editor with LSP support (VSCode, Atom, Vim/Neovim and others)</li>
+</('ul', 0)>
+<h2>Lexers, Parsers & Generators</h2>
+
+<ul>
+<li><a href="https://github.com/dlang-community/libdparse">libdparse</a> - A D language lexer and parser, (possibly) future standard D parser/lexer.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/MartinNowak/lexer">Martin Nowak's Lexer</a> - A lexer generator.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/aBothe/D_Parser">Mono-D's DParser</a> - A D parser written in C# and used in Mono-D.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/PhilippeSigaud/Pegged">Pegged</a> - A Parsing Expression Grammar (PEG) module written in D.</li>
+</ul>
+<ul>
+<li><a href="https://bitbucket.org/Abscissa/goldie/wiki/Home">Goldie</a> - Goldie Parsing System.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/youxkei/ctpg">ctpg</a> - Compile-Time Parser (with converter) Generator written in D.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pwil3058/dunnart">dunnart</a> - LALR(1) Parser Generator written in D.</li>
+</('ul', 0)>
+<h2>Preprocesors</h2>
+
+<ul>
+<li><a href="https://github.com/facebookarchive/warp">warp</a> - A fast preprocessor for C and C++ used in Facebook infrastructure. Written by Walter Bright.</li>
+</('ul', 0)>
+<h2>Version Managers</h2>
+
+<ul>
+<li><a href="https://github.com/jacob-carlborg/dvm">dvm</a> - A small tool to install and manage DMD (self-hosting) compiler.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kassane/ldcup">ldcup</a> - A small tool to install and manage LDC2 (LLVM backend) compiler.</li>
+</('ul', 0)>
+<h2>GitHub Actions</h2>
+
+<ul>
+<li><a href="https://github.com/dlang-community/setup-dlang">setup-dlang</a> - Install D compilers & DUB inside GitHub Actions</li>
+</ul>
+<ul>
+<li><a href="https://github.com/WebFreak001/dub-upgrade">dub-upgrade</a> - Run <code>dub upgrade</code> trying to repeat on network failure and using package cache on GitHub Actions</li>
+</('ul', 0)>
+<h2>Testing Frameworks</h2>
+
+<ul>
+<li><a href="https://github.com/atilaneves/unit-threaded">unit-threaded</a> - Multi-threaded unit test framework</li>
+</ul>
+<ul>
+<li><a href="https://gitlab.com/AntonMeep/silly">silly</a> - Better test runner for the D programming language. No nonsense.</li>
+</('ul', 0)>
+<h2>Javascript</h2>
+
+<ul>
+<li><a href="https://github.com/higgsjs/Higgs">higgs</a> - Higgs JavaScript Virtual Machine, implemented in D.</li>
+</('ul', 0)>
+<h2>Operating Systems</h2>
+
+<p><em>Operating Systems written in D.</em></p>
+
+<ul>
+<li><a href="https://github.com/PowerNex/PowerNex">PowerNex</a> - A kernel written in D</li>
+</ul>
+<ul>
+<li><a href="https://serpentos.com/">SerpentOS</a> - Snek factory (<a href="https://gitlab.com/serpent-os">source code</a>)</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Rikarin/Trinix">Trinix</a> - Hybrid operating system for x64 PC written in D</li>
+</ul>
+<ul>
+<li><a href="https://github.com/xomboverlord/xomb">XOmB</a> - An exokernel operating system written in D</li>
+</('ul', 0)>
+<h2>Bare Metal / Kernel Development</h2>
+
+<ul>
+<li><a href="https://wiki.osdev.org/D<em>Bare</em>Bones">D Bare bones</a> - kernel hello world in D (using GDC compiler)</li>
+</ul>
+<ul>
+<li><a href="https://wiki.osdev.org/D<em>barebone</em>with_ldc2">D barebone with ldc2</a> - another kernel hello world in D (using LDC compiler)</li>
+</ul>
+<ul>
+<li><a href="https://web.archive.org/web/20161214232759/http://wiki.xomb.org/index.php?title=XOmB<em>Bare</em>Bones">XOmB bare bones</a> - an exokernel operating system written in D. <a href="https://web.archive.org/web/20161201061242/http://wiki.xomb.org/index.php?title=Main_Page">Main page</a>, <a href="https://github.com/xomboverlord/xomb/tree/unborn">github</a>.</li>
+</ul>
+<ul>
+<li><a href="https://wiki.dlang.org/Bare<em>Metal</em>ARM<em>Cortex-M</em>GDC<em>Cross</em>Compiler">Bare Metal ARM Cortex-M GDC Cross Compiler</a> - building a bare metal ARM Cortex-M (arm-none-eabi) GDC cross compiler for a Linux host.</li>
+</('ul', 0)>
+<h2>General Containers</h2>
+
+<p><em>Data structures and container libraries.</em></p>
+
+<ul>
+<li><a href="https://github.com/dlang-community/containers">EMSI containers</a> - Containers that do not use the GC</li>
+</ul>
+<ul>
+<li><a href="https://github.com/etcimon/memutils">memutils</a> - Overhead allocators, allocator-aware containers and lifetime management for D objects</li>
+</ul>
+<ul>
+<li><a href="https://github.com/gecko0307/dlib">dlib.container</a> - generic data structures (GC-free dynamic and associative arrays and more)</li>
+</ul>
+<ul>
+<li><a href="https://github.com/burner/std.rcstring">std.rcstring</a> - A reference counted string implementation for D's build in string construct</li>
+</('ul', 0)>
+<h2>Core Utilities</h2>
+
+<p><em>General-purpose utility libraries.</em></p>
+
+<ul>
+<li><a href="https://github.com/Inochi2D/numem">NuMem</a> - No-GC memory management utilities for DLang.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Inochi2D/nulib">NuLib</a> - D "standard" library built ontop of numem.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Kapendev/joka">Joka</a> - A nogc utility library.</li>
+</('ul', 0)>
+<h2>Web Frameworks</h2>
+
+<p><em>Networking libraries.</em></p>
+
+<ul>
+<li><a href="https://github.com/ikod/dlang-requests">dlang-requests</a> - HTTP client library inspired by python-requests</li>
+</ul>
+<ul>
+<li><a href="https://github.com/andrewlalis/handy-httpd">Handy-Httpd</a> - A simple, lightweight, and well-documented HTTP server that lets you bootstrap ideas and have something up and running in minutes.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/trikko/serverino">serverino</a> - Small and ready-to-go http server, in D</li>
+</ul>
+<ul>
+<li><a href="https://github.com/etcimon/libasync">libasync</a> - Cross-platform event loop library of asynchronous objects</li>
+</ul>
+<ul>
+<li><a href="https://github.com/etcimon/libhttp2">libhttp2</a> - HTTP/2 library in D, translated from nghttp2</li>
+</ul>
+<p><em>Full stack web frameworks.</em></p>
+
+<ul>
+<li><a href="https://vibed.org/">vibe.d</a> - Asynchronous I/O Web Framework that doesn’t get in your way, written in D.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/adamdruppe/arsd">arsd</a> - Adam D. Ruppe's web framework.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/rikkimax/Cmsed">cmsed</a> - A component library for Vibe that functions as a CMS.</li>
+</ul>
+<p><em>RPC libraries.</em></p>
+
+<ul>
+<li><a href="https://code.dlang.org/packages/apache-thrift">Apache Thrift</a> - A lightweight, language-independent, featureful RPC framework. Thrift provides clean abstractions for data transport, data serialization, code generation, and application level processing. <a href="https://thrift.apache.org/">Apache Thrift Page</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/hprose/hprose-d">Hprose</a> - A very newbility RPC Library for D, and it support 25+ languages now.</li>
+</ul>
+<p><em>Static Site Generator.</em></p>
+
+<ul>
+<li><a href="https://github.com/kambrium/dssg">DSSG</a> - A static site generator with a different approach.</li>
+</('ul', 0)>
+<h2>Data Serialization</h2>
+
+<p><em>JSON, XML, protobuf and other data serialization libraries.</em></p>
+
+<ul>
+<li><a href="https://github.com/atilaneves/cerealed">cerealed</a> - Serialisation library for D</li>
+</ul>
+<ul>
+<li><a href="https://github.com/msoucy/dproto">dproto</a> - Google Protocol Buffer support in D.</li>
+</ul>
+<p><em>JSON libraries.</em></p>
+
+<ul>
+<li><a href="https://vibed.org/api/vibe.data.json/">vibe.data.json</a> - JSON functions in Vibe.d. Currently the best implementation I used.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/etcimon/fast">fast.json</a> - A library for D that aims to provide the fastest possible implementation of some every day routines.</li>
+</ul>
+<ul>
+<li><a href="https://dlang.org/phobos/std_json.html">std.json</a> - D's standard library JSON module. Needs refinement.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/BlackEdder/painlessjson">painlessjson</a> - Convert between D types and std.json.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dlang-community/std<em>data</em>json">std.data.json</a> - Phobos candidate for JSON serialization (based on Vibed)</li>
+</ul>
+<ul>
+<li><a href="https://github.com/libmir/asdf">asdf</a> - Cache oriented string based JSON representation for fast read & writes and serialisation.</li>
+</ul>
+<p><em>XML libraries.</em></p>
+
+<ul>
+<li><a href="https://github.com/jacob-carlborg/orange">orange</a> - General purpose serializer (currently only supports XML)</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lodo1995/experimental.xml">std.experimental.xml</a> - Phobos candidate for a XML serialization</li>
+</ul>
+<ul>
+<li>arsd <a href="https://github.com/adamdruppe/arsd/blob/master/dom.d">dom.d</a> - an xml/html DOM based on what Javascript provides in browsers</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ZILtoid1991/newxml">newxml</a> - Successor of std.experimental.xml. DOM compatible, and also has a SAX parser.</li>
+</('ul', 0)>
+<h2>Database Clients</h2>
+
+<p><em>Clients and bindings to C clients for relational and nosql databases.</em></p>
+
+<ul>
+<li><a href="https://github.com/vibe-d/vibe.d">vibe.d</a> - Vibe.d has internal support for Redis and MongoDB, which are very stable. Soon, the database drivers will be separated into independent projects.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/adamdruppe/arsd">arsd</a> - Adam D. Ruppe's library; in addition to a Web backend, it also has support for database access with database.d, sqlite.d, mysql.d and postgres.d.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/buggins/hibernated">hibernated</a> - HibernateD is an ORM for D (similar to <a href="https://hibernate.org/">Hibernate</a>).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mysql-d/mysql-native">mysql-native</a> - A MySQL client implemented in native D.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pszturmaj/ddb">ddb</a> - Database access for D2. Currently only supports PostgreSQL.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/buggins/ddbc">ddbc</a> - DDBC is a DB Connector for D language (similar to JDBC). HibernateD (see below) uses ddbc for database abstraction.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/rikkimax/Dvorm">dvorm</a> - An ORM for D with Vibe support. Works with vibe.d and mysql-d, giving it the ability to access MongoDB and MySQL.</li>
+</ul>
+<ul>
+<li><a href="http://adilbaig.github.io/Tiny-Redis/">Tiny Redis</a> - Redis driver for D. Fast, Simple, Stable. Has no dependencies.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Hax-io/libpb">libpb</a> - Interact with a PocketBase database</li>
+</('ul', 0)>
+<h2>CLI Libraries</h2>
+
+<ul>
+<li><a href="https://github.com/adamdruppe/arsd/blob/master/terminal.d">terminal.d</a> - Part of Adam Ruppe's <a href="https://github.com/adamdruppe/arsd">arsd</a> library supporting cursor and color manipulation on the console.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/robik/commandr">commandr</a> - A modern, powerful command line argument parser.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/burner/argsd">argsd</a> - A command line and config file parser for DLang</li>
+</ul>
+<ul>
+<li><a href="https://github.com/fbeline/luneta">luneta</a> - A command-line fuzzy finder.</li>
+</ul>
+<ul>
+<li><a href="https://code.dlang.org/packages/argparse">argparse</a> - Flexible parser of command line arguments.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/deavmi/gogga">gogga</a> - simple easy-to-use colorful logger for command-line applications</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Abscissa/scriptlike">scriptlike</a> - Utility library to aid writing script-like programs in D.</li>
+</ul>
+<ul>
+<li><a href="https://code.dlang.org/packages/colorize">d-colorize</a> - A port of the ruby library <a href="https://github.com/fazibear/colorize">colorize</a>. It add some methods to set color, background color and text effect on console easier using ANSI escape sequences.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/grogancolin/dexpect/">dexpect</a> - A D implementation of the expect framework. Handy for bash emulation.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/markuslaker/Argon">Argon</a> - A processor for command-line arguments, an alternative to Getopt, written in D.</li>
+</('ul', 0)>
+<h2>CLI Applications</h2>
+
+<ul>
+<li><a href="https://github.com/zyedidia/Literate">Literate</a> - A literate programming tool for any language.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/abraunegg/onedrive">onedrive</a> - #1 Free OneDrive Client for Linux.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/trikko/tshare">tshare</a> - Fast file sharing from cli, using transfer.sh.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/BlackEdder/todod">todod</a> - Todod is a command line based todo list manager. It also has support for shell interaction based on <a href="https://github.com/antirez/linenoise">linenoise</a>.</li>
+</('ul', 0)>
+<h2>GUI Libraries</h2>
+
+<p><em>Libraries for working with graphical user interface applications.</em></p>
+
+<ul>
+<li><a href="https://github.com/Kymorphia/gid">giD</a> - GObject Introspection D Package Repository.</li>
+</ul>
+<ul>
+<li><a href="https://git.samerion.com/Samerion/Fluid">Fluid</a> - A declarative cross-platform user interface library for D.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/buggins/dlangui">DLangUI</a> - Cross Platform GUI for D programming language. My personal favorite, because it is written in D(not a binding), and is cross platform. DLangUI also has a good showcase in the IDE <a href="https://github.com/buggins/dlangide">DLangIDE</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Kapendev/microui-d">microui-D</a> - A tiny immediate-mode UI library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/gtkd-developers/GtkD">GtkD</a> - GtkD is a D binding and OO wrapper of GTK+. GtkD is actively maintained and is currently the most stable GUI lib for D.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/nomad-software/tkd">tkD</a> - GUI toolkit for the D programming language based on Tcl/Tk.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/filcuc/dqml">dqml</a> - Qt Qml bindings for the D programming language.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sciter-sdk/Sciter-Dport">Sciter-Dport</a> - D bindings for the <a href="https://sciter.com">Sciter</a> - crossplatform HTML/CSS/script desktop UI toolkit.</li>
+</ul>
+<p><em>Note</em>: You can also find a list of GUI libs on <a href="https://wiki.dlang.org/Libraries<em>and</em>Frameworks#GUI_Libraries">wiki.dlang.org</a>, but not all of the libraries are actively maintained now.</p>
+
+<h2>GUI Applications</h2>
+
+<ul>
+<li><a href="https://github.com/gnunn1/tilix">tilix</a> - A tiling terminal emulator for Linux using GTK+ 3.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Inochi2D/inochi-creator">Inochi Creator</a> - Inochi2D Rigging Application.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Inochi2D/inochi-session">Inochi Session</a> - Application that allows streaming with Inochi2D puppets.</li>
+</('ul', 0)>
+<h2>Game Bindings</h2>
+
+<p><em>Bindings to game development related libraries in C, C++, and other languages.</em></p>
+
+<ul>
+<li><a href="https://github.com/schveiguy/raylib-d">raylib-d</a> - D bindings for raylib.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kassane/sokol-d">sokol-d</a> - D bindings for the sokol headers.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/SiegeLord/DAllegro5">DAllegro5</a> - D binding/wrapper to Allegro 5, a modern game programming library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Jebbs/DSFML">DSFML</a> - A static binding of SFML in a way that makes sense for D. See <a href="http://dsfml.com/">http://dsfml.com/</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/godot-d/godot-d">Godot-D</a> - D language bindings for the Godot Engine's GDNative API.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/BindBC">BindBC</a> - Bindings compatible with <code>-betterC</code> and <code>@nogc</code>, using <a href="https://github.com/BindBC/bindbc-loader">bindbc-loader</a>.</li>
+<ul>
+<li><a href="https://github.com/BindBC/bindbc-opengl">OpenGL</a> - Graphics API</li>
+</ul>
+<ul>
+<li><a href="https://github.com/BindBC/bindbc-glfw">GLFW 3</a> - Window/Input library</li>
+</ul>
+<ul>
+<li><a href="https://github.com/BindBC/bindbc-sdl">SDL 2</a> - Multimedia library</li>
+</ul>
+<ul>
+<li><a href="https://github.com/aferust/bindbc-sdlgfx">SDL2_gfx</a> - Drawing primitives for SDL2</li>
+</ul>
+<ul>
+<li><a href="https://github.com/BindBC/bindbc-sfml">SFML 2</a> - Multimedia library</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Inochi2D/bindbc-imgui">Imgui</a> - Immediate mode GUI</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Timu5/bindbc-nuklear">Nuklear</a> - Immediate mode GUI</li>
+</ul>
+<ul>
+<li><a href="https://github.com/o3o/bindbc-raylib3">raylib3</a> - Game library</li>
+</ul>
+<ul>
+<li><a href="https://github.com/GoaLitiuM/bindbc-bgfx">bgfx</a> - Cross-Platform renderer</li>
+</ul>
+<ul>
+<li><a href="https://github.com/gecko0307/bindbc-wgpu">WebGPU</a> - Modern GPU API</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ZILtoid1991/bindbc-zstandard">Zstandard</a> - Fast compression</li>
+</ul>
+<ul>
+<li><a href="https://github.com/darkridder/bindbc-nng">nanomsg-next-gen</a> - Messaging library</li>
+</ul>
+<ul>
+<li><a href="https://github.com/BindBC/bindbc-openal">OpenAL</a> - Audio library</li>
+</ul>
+<ul>
+<li><a href="https://github.com/gecko0307/bindbc-soloud">SoLoud</a> - Audio library</li>
+</ul>
+<ul>
+<li><a href="https://github.com/aferust/bindbc-kiwi">KiWi</a> - UI widget toolkit</li>
+</ul>
+<ul>
+<li><a href="https://github.com/aferust/bindbc-nanovg">NanoVG</a> - Vector graphics</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kdmult/bindbc-blend2d">Blend2D</a> - Vector graphics</li>
+</ul>
+<ul>
+<li><a href="https://github.com/BindBC/bindbc-lua">Lua</a> - Scripting language</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ZILtoid1991/bindbc-JSL">JoyShockLibrary</a> - Gamepad/Gyro input</li>
+</ul>
+<ul>
+<li><a href="https://github.com/gecko0307/bindbc-newton">Newton Dynamics</a> - Physics library</li>
+</ul>
+<ul>
+<li><a href="https://github.com/BindBC/bindbc-freeimage">FreeImage</a> - Image loading</li>
+</ul>
+<ul>
+<li><a href="https://github.com/BindBC/bindbc-freetype">FreeType</a> - Font rendering</li>
+</ul>
+<ul>
+<li><a href="https://github.com/DlangGraphicsWG/bindbc-harfbuzz">HarfBuzz</a> - Text shaping</li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://github.com/DerelictOrg">DerelictOrg</a> - Bindings, now largely outdated. BindBC is its modern successor.</li>
+<ul>
+<li><a href="https://github.com/DerelictOrg/DerelictGLES">OpenGLES</a> - Graphics API</li>
+</ul>
+<ul>
+<li><a href="https://github.com/DerelictOrg/DerelictENet">ENet</a> - Networking library</li>
+</ul>
+<ul>
+<li><a href="https://github.com/DerelictOrg/DerelictTheora">libtheora</a> - Video codec</li>
+</ul>
+<ul>
+<li><a href="https://github.com/DerelictOrg/DerelictOgg">libogg</a> - Audio codec</li>
+</ul>
+<ul>
+<li><a href="https://github.com/DerelictOrg/DerelictVorbis">libvorbis</a> - Audio codec</li>
+</ul>
+<ul>
+<li><a href="https://github.com/DerelictOrg/DerelictPQ">libpq</a> - PostgreSQL library</li>
+</ul>
+<ul>
+<li><a href="https://github.com/DerelictOrg/DerelictPHYSFS">PhysicsFS</a> - Virtual file system</li>
+</ul>
+<ul>
+<li><a href="https://github.com/DerelictOrg/DerelictODE">Open Dynamics Engine (ODE)</a> - Physics library</li>
+</ul>
+<ul>
+<li><a href="https://github.com/DerelictOrg/DerelictALURE">ALURE</a> - Audio library</li>
+</ul>
+<ul>
+<li><a href="https://github.com/DerelictOrg/DerelictIL">DevIL</a> - Image library</li>
+</('ul', 1)>
+</('ul', 0)>
+<h2>Game Libraries</h2>
+
+<p><em>D libraries for game development.</em></p>
+
+<ul>
+<li><a href="https://github.com/Inochi2D/inmath">InMath</a> - Games math library for D.</li>
+</ul>
+<p><em>Libraries for 2D-related projects.</em></p>
+
+<ul>
+<li><a href="https://github.com/drug007/gfm7">gfm</a> - D gamedev toolkit.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Kapendev/parin">Parin</a> - A delightfully simple 2D game engine.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ZILtoid1991/pixelperfectengine">PixelPerfectEngine</a> - 2D graphics engine written in D.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/MrcSnm/HipremeEngine">HipremeEngine</a> - Cross Platform D-Lang Game Engine with scripting support.</li>
+</ul>
+<p><em>Libraries for 2D/3D-related projects.</em></p>
+
+<ul>
+<li><a href="https://github.com/bmchtech/rengfx">rengfx</a> - lightweight, expressive, extensible 2D/3D game engine.</li>
+</ul>
+<p><em>Libraries for 3D-related projects.</em></p>
+
+<ul>
+<li><a href="https://github.com/gecko0307/dagon">Dagon</a> - 3D game engine for D. See: <a href="https://gecko0307.github.io/dagon/">https://gecko0307.github.io/dagon/</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/MrSmith33/voxelman">Voxelman</a> - Plugin-based client-server voxel game engine written in D language.</li>
+</('ul', 0)>
+<h2>Games</h2>
+
+<p><em>Games made with D.</em></p>
+
+<ul>
+<li><a href="https://github.com/Ingrater/Spacecraft">Spacecraft</a> - A 3d multiplayer deathmatch space game written in D 2.0.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kingsleyh/dtanks">Dtanks</a> - Robot Tank Battle Game.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/gecko0307/electronvolt">Electronvolt (formerly Atrium)</a> - FPS game with physics based puzzles using OpenGL.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jonathanballs/backgammony">Backgammony</a> - A Backgammon GUI for Linux built with Gtk.</li>
+</ul>
+<ul>
+<li><a href="https://kapendev.itch.io/worms-within">Worms Within</a> - A bite-sized escape room game.</li>
+</ul>
+<ul>
+<li><a href="https://kapendev.itch.io/clean-haunted">Clean & Haunted</a> - Clean a spooky haunted house.</li>
+</ul>
+<ul>
+<li><a href="https://kapendev.itch.io/runani">Runani</a> - An endless runner game where you help cute animals.</li>
+</ul>
+<ul>
+<li><a href="https://kapendev.itch.io/a-short-metamorphosis">A Short Metamorphosis</a> - A cute visual novel about looking at an egg.</li>
+</('ul', 0)>
+<h2>Internationalization</h2>
+
+<ul>
+<li><a href="https://github.com/shoo/bindbc-icu">bindbc-icu</a> - bindbc bindings for the unicode ICU library.</li>
+</('ul', 0)>
+<h2>Image Processing</h2>
+
+<ul>
+<li><a href="https://github.com/CyberShadow/ae/tree/master/utils/graphics">ArmageddonEngine</a> - Vladimir Panteleev's ae library has a package for image processing in functional style, which is described in the article <a href="http://blog.thecybershadow.net/2014/03/21/functional-image-processing-in-d/">Functional Image Processing in D</a>.</li>
+</ul>
+<ul>
+<li><a href="https://bitbucket.org/infognition/bsort/">Blogsort</a> - A simple Windows app for viewing photos and preparing them for a blog.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/gecko0307/dlib">dlib.image</a> - image processing (8 and 16 bits per channel, floating point operations, filtering, FFT, HDRI, graphics formats support including JPEG and PNG)</li>
+</ul>
+<ul>
+<li><a href="https://github.com/adamdruppe/arsd/blob/master/color.d">color.d</a> + <a href="https://github.com/adamdruppe/arsd/blob/master/bmp.d">bmp.d</a>, <a href="https://github.com/adamdruppe/arsd/blob/master/jpg.d">jpg.d</a>, <a href="https://github.com/adamdruppe/arsd/blob/master/png.d">png.d</a> - basic color struct, HSL functions and reading and writing image files</li>
+</ul>
+<ul>
+<li><a href="https://github.com/aferust/opencvd">opencvd</a> - Unofficial OpenCV binding for D</li>
+</('ul', 0)>
+<h2>Machine Learning</h2>
+
+<ul>
+<li><a href="https://github.com/Netflix/vectorflow">vectorflow</a> - Nexflix's opensource deep learning framework.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lempiji/bindbc-onnxruntime">bindbc-onnxruntime</a> - bindbc bindings to Microsoft's cross-platform, high performance ML inferencing and training accelerator</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ShigekiKarita/grain2">grain2</a> - Autograd and GPGPU library for dynamic neural networks in D</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ShigekiKarita/tfd">tfd</a> - Tensorflow wrapper for D</li>
+</('ul', 0)>
+<h2>Parallel Computing</h2>
+
+<ul>
+<li><a href="https://github.com/libmir/dcompute">DCompute</a> - <a href="https://dlang.org/blog/2017/07/17/dcompute-gpgpu-with-native-d-for-opencl-and-cuda/">GPGPU with Native D for OpenCL and CUDA</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/DerelictOrg/DerelictCUDA">DerelictCUDA</a> - Dynamic bindings to the CUDA library for the D Programming Language.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/DerelictOrg/DerelictCL">DerelictCL</a> - Dynamic bindings to the OpenCL library for the D Programming Language.</li>
+</('ul', 0)>
+<h2>Scientific</h2>
+
+<p><em>Scientific programming.</em></p>
+
+<ul>
+<li><a href="https://github.com/DlangScience/scid">scid</a> - Scientific library for the D programming language</li>
+</ul>
+<ul>
+<li><a href="https://github.com/DlangScience/dstats">dstats</a> - A statistics library for D.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/libmir/mir">mir</a> - Sandbox for some mir packages: sparse tensors, Hoffman and others.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/libmir/mir">mir-algorithm</a> - N-dimensional arrays (matrixes, tensors), algorithms, general purpose library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/libmir/mir-random">mir-random</a> - Advanced Random Number Generators.</li>
+</('ul', 0)>
+<h3>Language Processing</h3>
+
+<ul>
+<li><a href="https://github.com/lempiji/bindbc-mecab">bindbc-mecab</a> - bindbc MeCab binding (Part-of-Speech and Morphological Analyzer for Japanese)</li>
+</('ul', 0)>
+<h2>Text Processing</h2>
+
+<ul>
+<li><a href="https://github.com/huntlabs/hunt-markdown">hunt-markdown</a> - A markdown parsing and rendering library for D programming language. Support commonMark.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/eBay/tsv-utils/">eBay's TSV utilities</a> - Filtering, statistics, sampling, joins and other operations on TSV files. Very fast, especially good for large datasets.</li>
+</('ul', 0)>
+<h2>Logging</h2>
+
+<p><em>Print with care.</em></p>
+
+<ul>
+<li><a href="https://github.com/deavmi/dlog">dlog</a> - extensible logging framework with message transformation support and custom loggers and contexts</li>
+</ul>
+<ul>
+<li><a href="https://dlang.org/phobos/std<em>experimental</em>logger.html">std.experimenatal.logger</a> - Phobos's upcoming standard logging facility.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/NCrashed/dlogg">dlogg</a> - Logging for concurrent applications and daemons with lazy and delayed logging, <a href="https://linux.die.net/man/8/logrotate">logrotate</a> support.</li>
+</('ul', 0)>
+<h2>Configuration</h2>
+
+<p><em>Parsing configuration files.</em></p>
+
+<ul>
+<li><a href="https://github.com/Abscissa/SDLang-D">sdlang</a> - An SDL (Simple Declarative Language) library for D.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dlang-community/D-YAML">D:YAML</a> - YAML parser and emitter for the D programming language.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/burner/inifiled">inifile-D</a> - A compile time ini file parser and writter generator for D</li>
+</('ul', 0)>
+<h2>Blog Engine</h2>
+
+<p><em>Hosting blogs yourself.</em></p>
+
+<ul>
+<li><a href="https://github.com/mihails-strasuns/mood">mood</a> - simple vibe.d based blog engine</li>
+</('ul', 0)>
+<h2>Dependency Injection</h2>
+
+<p><em>Apply inversion of control.</em></p>
+
+<ul>
+<li><a href="https://github.com/mbierlee/poodinis">Poodinis</a> - A dependency injection framework for D with support for autowiring.</li>
+</('ul', 0)>
+<h2>Cryptography</h2>
+
+<ul>
+<li><a href="https://github.com/etcimon/botan">Botan</a> - Block & stream ciphers, public key crypto, hashing, KDF, MAC, PKCS, TLS, ASN.1, BER/DER, etc.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/D-Programming-Deimos/openssl">OpenSSL</a> - D version of the C headers for OpenSSL.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/shove70/crypto">Crypto</a> - A D Library of encryption, decryption, encode, hash, and message digital signatures.</li>
+</('ul', 0)>
+<h2>Unmaintained</h2>
+
+<p><em>Old or archived projects saved for reference.</em></p>
+
+<ul>
+<li><a href="https://github.com/nomad-software/dunit">dunit</a> - Advanced unit testing & mocking toolkit</li>
+</ul>
+<ul>
+<li><a href="https://github.com/huntlabs/hunt">hunt</a> - A refined core library for D programming language. The module has concurrency / collection / event / io / logging / text / serialize and more.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/huntlabs/hunt-time">hunt-time</a> - A time library and similar to Joda-time and Java.time api.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/huntlabs/hunt-validation">hunt-validation</a> - A data validation library for DLang based on hunt library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/huntlabs/collie">collie</a> - An asynchronous event-driven network framework written in dlang, like netty framework in D.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/huntlabs/hunt-net">hunt-net</a> - High-performance network library for D programming language, event-driven asynchonous implemention(IOCP / kqueue / epoll).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/huntlabs/hunt-http">hunt-http</a> - HTTP/1 and HTTP/2 protocol library for D.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/huntlabs/hunt-framework/">Hunt Framework</a> - Hunt is a high-level D Programming Language Web framework that encourages rapid development and clean, pragmatic design. It lets you build high-performance Web applications quickly and easily.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/huntlabs/grpc-dlang">grpc</a> - Grpc for D programming language, hunt-http library based.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/huntlabs/kissrpc">kissrpc</a> - Fast and light, flatbuffers based rpc framework.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/huntlabs/hunt-gossip">hunt-gossip</a> - A Apache V2 gossip protocol implementation for D programming language.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/huntlabs/hunt-cache">hunt-cache</a> - D language universal cache library, using radix, redis and memcached.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/huntlabs/flatbuffers">flatbuffers</a> - D Programming Language implementation of the google flatbuffers library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/huntlabs/hunt-entity">hunt-entity</a> - Hunt entity is an object-relational mapping tool for the D programming language. Referring to the design idea of JPA, support PostgreSQL / MySQL / SQLite.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/huntlabs/hunt-database">hunt-database</a> - Hunt database abstraction layer for D programing language, support PostgreSQL / MySQL / SQLite.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/huntlabs/hunt-console">hunt-console</a> - Hunt console creation easier to create powerful command-line applications.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/d-widget-toolkit/dwt">DWT</a> - A library for creating cross-platform GUI applications. GWT is a port of the Java SWT library to D. DWT was promoted as a semi-standard GUI library for D, but unfortunately didn't catch up popularity yet.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Extrawurst/DerelictLibui">LibUI</a> - Dynamic Binding for <a href="https://github.com/andlabs/libui">libui</a></li>
+</ul>
+</body>
+</html>

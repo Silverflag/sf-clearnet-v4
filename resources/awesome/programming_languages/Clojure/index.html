@@ -1,0 +1,1485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clojure</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Clojure</h1>
+
+<p><strong>Repository:</strong> https://github.com/razum2um/awesome-clojure#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<h1>Awesome Clojure <a href="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg"><img src="https://github.com/sindresorhus/awesome" alt="Awesome</a>"></h1>
+
+<ul>
+<li><a href="#awesome-products-in-clojure">Awesome products in Clojure</a></li>
+<ul>
+<li><a href="https://github.com/OneKeePass/desktop">OneKeePass</a>: A secure password manager and <a href="https://github.com/OneKeePass/mobile">mobile app in ClojureScript</a></li>
+</ul>
+<ul>
+<li><a href="https://penpot.app/">Penpot</a>: design and prototyping platform</li>
+</ul>
+<ul>
+<li><a href="http://lighttable.com/">LightTable (IDE)</a> (archived)</li>
+</ul>
+<ul>
+<li><a href="https://www.maria.cloud/">Maria.cloud (Online IDE for beginners)</a></li>
+</ul>
+<ul>
+<li><a href="http://riemann.io/">Riemann (Monitoring)</a></li>
+</ul>
+<ul>
+<li><a href="https://precursorapp.com/">Precursor (Online prototyping tool)</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/puppetlabs/puppet-server">Puppet Server</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/puppetlabs/puppetdb">PuppetDB</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/metabase/metabase">Metabase</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/lambdaisland/metabase-datomic">Metabase Datomic</a></li>
+</ul>
+<ul>
+<li><a href="https://circleci.com/">CircleCI</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/maitria/avi">Avi (vim rewrite)</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/mogenslund/liquid">Liquid (Text Editor)</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/clojupyter/clojupyter">Clojupyter</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/matthiasn/meins">meins</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/jepsen-io/jepsen">Jepsen</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/braidchat/braid">Braid</a>: a team-chat app with a novel UI that leads to better conversations</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tokenmill/accelerated-text">Accelerated Text</a>: a natural language generation environment (backend: Clojure, frontend: JS)</li>
+</ul>
+<ul>
+<li><a href="https://github.com/gojek/ziggurat">Ziggurat</a>: a framework built to simplify Stream processing on Kafka</li>
+</ul>
+<ul>
+<li><a href="https://github.com/oakes/Nightcode">Nightcode</a>: An IDE for Clojure (archived)</li>
+</ul>
+<ul>
+<li><a href="https://github.com/oakes/Nightlight">Nightlight</a>: text editor (archived)</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pkamenarsky/atea">Atea</a>: a minimalistic menu bar time tracker for MacOS (legacy, requires jvm 1.6)</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ertugrulcetin/herfi">herfi</a> - 3D multiplayer game prototype written in Clojure and ClojureScript</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ertugrulcetin/racing-game-cljs">racing-game-cljs</a> - A 3D racing game built with ClojureScript, React and ThreeJS</li>
+</ul>
+</ul>
+<ul>
+<li><a href="#awesome-saas-in-clojure">Awesome SaaS (partially OSS) in Clojure</a></li>
+<ul>
+<li><a href="https://github.com/logseq/logseq">Logseq</a>: knowledge management and collaboration (open frontend)</li>
+</ul>
+</ul>
+<ul>
+<li><a href="#languages-written-with-clojure">Languages written with Clojure</a></li>
+<ul>
+<li><a href="https://github.com/jeaye/jank">jank</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/LuxLang/lux">lux</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/kanaka/mal/tree/master/impls/clojure">mal</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/turbopape/scheje">scheje</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/benzap/eden">eden</a></li>
+</ul>
+<ul>
+<li><a href="https://ferret-lang.org">ferret</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#awesome-tools-in-clojure">Awesome tools in Clojure</a></li>
+<ul>
+<li><a href="#awesome-macros-usage">Awesome macros usage</a></li>
+</ul>
+<ul>
+<li><a href="#advanced-datastructures">Advanced datastructures</a></li>
+</ul>
+<ul>
+<li><a href="#web-framework">Web Framework</a></li>
+</ul>
+<ul>
+<li><a href="#dependency-injection">Dependency injection</a></li>
+</ul>
+<ul>
+<li><a href="#build-automation-and-package-management">Build Automation and Package management</a></li>
+</ul>
+<ul>
+<li><a href="#version-control-management">Version Control Management</a></li>
+</ul>
+<ul>
+<li><a href="#date-and-time">Date and Time</a></li>
+</ul>
+<ul>
+<li><a href="#gui">GUI</a></li>
+</ul>
+<ul>
+<li><a href="#audio">Audio</a></li>
+</ul>
+<ul>
+<li><a href="#http">HTTP</a></li>
+</ul>
+<ul>
+<li><a href="#database">Database</a></li>
+</ul>
+<ul>
+<li><a href="#connection-pools">Connection pools</a></li>
+</ul>
+<ul>
+<li><a href="#structural-migrations">Structural Migrations</a></li>
+</ul>
+<ul>
+<li><a href="#redis">Redis</a></li>
+</ul>
+<ul>
+<li><a href="#json">JSON</a></li>
+</ul>
+<ul>
+<li><a href="#protocol-buffers-and-grpc">Protocol Buffers and gRPC</a></li>
+</ul>
+<ul>
+<li><a href="#orm-and-sql-generation">ORM and SQL generation</a></li>
+</ul>
+<ul>
+<li><a href="#security">Security</a></li>
+</ul>
+<ul>
+<li><a href="#restful-api">RESTful API</a></li>
+</ul>
+<ul>
+<li><a href="#graphql-api">GraphQL API</a></li>
+</ul>
+<ul>
+<li><a href="#emails">Emails</a></li>
+</ul>
+<ul>
+<li><a href="#html-manipulation">HTML Manipulation</a></li>
+</ul>
+<ul>
+<li><a href="#data-validation">Data Validation</a></li>
+</ul>
+<ul>
+<li><a href="#type-system">Type System</a></li>
+</ul>
+<ul>
+<li><a href="#pattern-matching">Pattern Matching</a></li>
+</ul>
+<ul>
+<li><a href="#async-processing">Async processing</a></li>
+</ul>
+<ul>
+<li><a href="#monads">Monads</a></li>
+</ul>
+<ul>
+<li><a href="#websocket">WebSocket</a></li>
+</ul>
+<ul>
+<li><a href="#testing">Testing</a></li>
+</ul>
+<ul>
+<li><a href="#webdriver-automation">Webdriver automation</a></li>
+</ul>
+<ul>
+<li><a href="#code-analysis-and-linter">Code Analysis and Linter</a></li>
+</ul>
+<ul>
+<li><a href="#science-and-data-analysis">Science and Data Analysis</a></li>
+</ul>
+<ul>
+<li><a href="#machine-learning">Machine Learning</a></li>
+</ul>
+<ul>
+<li><a href="#computer-vision">Computer Vision</a></li>
+</ul>
+<ul>
+<li><a href="#text-processing">Text Processing</a></li>
+</ul>
+<ul>
+<li><a href="#parsing">Parsing</a></li>
+</ul>
+<ul>
+<li><a href="#editor-plugins">Editor Plugins</a></li>
+</ul>
+<ul>
+<li><a href="#documentation">Documentation</a></li>
+</ul>
+<ul>
+<li><a href="#literate-programming">Literate Programming</a></li>
+</ul>
+<ul>
+<li><a href="#archives-and-compression">Archives and Compression</a></li>
+</ul>
+<ul>
+<li><a href="#miscellaneous">Miscellaneous</a></li>
+</ul>
+<ul>
+<li><a href="#debugging">Debugging tools</a></li>
+</ul>
+<ul>
+<li><a href="#ci">CI</a></li>
+</ul>
+<ul>
+<li><a href="#project-management">Project Management</a></li>
+</ul>
+<ul>
+<li><a href="#terminal-ui">Terminal UI</a></li>
+</ul>
+<ul>
+<li><a href="#graphviz">Graphviz</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#resources">Resources</a></li>
+<ul>
+<li><a href="#guides">Guides</a></li>
+</ul>
+<ul>
+<li><a href="#video-tutorials">Video tutorials</a></li>
+</ul>
+<ul>
+<li><a href="#websites">Websites</a></li>
+</ul>
+<ul>
+<li><a href="#twitter">Twitter</a></li>
+</ul>
+<ul>
+<li><a href="#exercises">Exercises</a></li>
+</('ul', 2)>
+</('ul', 0)>
+<h2>Awesome macros usage</h2>
+
+<p><em>Answers why the lisp shines, killer features in action</em></p>
+
+<ul>
+<li><a href="https://github.com/clojure/core.async">core.async</a> - transforms AST into CSP programs</li>
+</ul>
+<ul>
+<li><a href="https://github.com/leonoel/cloroutine">cloroutine</a> - suspends and continuations (coroutines)</li>
+</ul>
+<ul>
+<li><a href="https://github.com/leonoel/missionary">missionary</a> - a reactive dataflow programming toolkit</li>
+</ul>
+<ul>
+<li><a href="https://github.com/venantius/photon">photon</a> - realtime web, like Meteor, but for Clojure(Script)</li>
+</ul>
+<ul>
+<li><a href="https://github.com/brandonbloom/metaclj">metaclj</a> - staged compilation</li>
+</ul>
+<ul>
+<li><a href="https://github.com/noprompt/meander">meander</a> - transparent data transformation using datastructure pattermatching</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ztellman/proteus">proteus</a> - introduce mutable variables (don't use, just learn how to map your mind into immutable world)</li>
+</('ul', 2)>
+<h2>Advanced datastructures</h2>
+
+<ul>
+<li><a href="https://github.com/redplanetlabs/specter">specter</a>: an elegant API for querying and transforming nested and recursive data</li>
+</ul>
+<ul>
+<li><a href="https://github.com/noprompt/meander">meander</a>: transparent data transformation (defined as pattern-matching)</li>
+</ul>
+<ul>
+<li><a href="https://github.com/clojure/data.avl">Persistent AVL trees</a>: persistent sorted maps and sets with log-time rank queries</li>
+</ul>
+<ul>
+<li><a href="https://github.com/clojure/data.finger-tree">Finger Tree</a>: double-list, counted-double-list, counted-sorted-set</li>
+</ul>
+<ul>
+<li><a href="https://github.com/datacrypt-project/hitchhiker-tree">Hitchhiker Tree</a>: create fast, snapshottable, massively scalable databases</li>
+</ul>
+<ul>
+<li><a href="https://github.com/llasram/hier-set">Hierarchical set</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/amalloy/ordered">Ordered</a>: ordered sets and maps</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Malabarba/lazy-map-clojure">Lazy Map</a>: whose values are only calculated when accessed</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jimpil/duratom">Duratom</a>: persisted atoms</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Factual/durable-queue">Durable Queue</a>: queue persisted on disk</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lacuna/bifurcan">bifurcan</a>: linear map/set/list (stores entries contiguously in memory), ;writtern in java, but test suite (read: usage examples) <a href="https://github.com/lacuna/bifurcan/blob/master/test/bifurcan">in clojure</a></li>
+</('ul', 2)>
+<h2>Web Framework</h2>
+
+<p><em>Actually don't search rails/django here, but compose them by yourself</em></p>
+<ul>
+<li><a href="https://github.com/weavejester/compojure">Compojure</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/metosin/compojure-api">Compojure-api</a></li>
+</ul>
+<ul>
+<li><a href="http://www.luminusweb.net/">Luminus</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/weavejester/duct">Duct</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/pedestal/pedestal">Pedestal</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/metasoarous/datsys">Datsys</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/juxt/yada">yada</a></li>
+</ul>
+<ul>
+<li><a href="http://hoplon.io/">Hoplon</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/fulcrologic/fulcro">Fulcro</a></li>
+</ul>
+<ul>
+<li><a href="http://coastonclojure.com/">Coast</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/metosin/reitit">Reitit</a></li>
+</ul>
+<ul>
+<li><a href="https://www.tadam-framework.dev/">Tadam</a></li>
+</ul>
+<ul>
+<li><a href="https://gitlab.com/demonshreder/column">Column</a></li>
+</ul>
+<ul>
+<li><a href="https://biffweb.com/">Biff</a></li>
+</('ul', 2)>
+<h2>Dependency injection</h2>
+
+<p><em>Managed lifecycle of stateful objects</em></p>
+
+<ul>
+<li><a href="https://github.com/stuartsierra/component">Component</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/danielsz/system">System</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/tolitius/mount">mount</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/weavejester/integrant">Integrant</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/juxt/clip">clip</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/piotr-yuxuan/closeable-map">piotr-yuxuan/closeable-map</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/darkleaf/di">darkleaf/di</a></li>
+</('ul', 2)>
+<h2>Build Automation and Package management</h2>
+
+<p><em>Libraries for project build automation and package/dependency management.</em></p>
+
+<ul>
+<li><a href="https://github.com/technomancy/leiningen">Leiningen</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/boot-clj/boot">Boot</a></li>
+</ul>
+<ul>
+<li><a href="https://www.clojure.org/guides/tools_build">tools.build</a></li>
+<ul>
+<li><a href="https://github.com/gnl/build.simple">build.simple</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://github.com/clojurephant/clojurephant">clojurephant</a> (Gradle plugin)</li>
+</ul>
+<ul>
+<li><a href="https://github.com/thheller/shadow-cljs">shadow-cljs</a> (Clojurescript)</li>
+</('ul', 2)>
+<h2>Version Control Management</h2>
+
+<p><em>Code utilities for interacting with VCS software</em></p>
+
+<ul>
+<li><a href="https://github.com/clj-jgit/clj-jgit">clj-jgit</a></li>
+</('ul', 2)>
+<h2>Date and Time</h2>
+
+<p><em>Libraries for working with dates and times.</em></p>
+
+<ul>
+<li><a href="https://github.com/clj-time/clj-time">clj-time</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/dm3/clojure.java-time">clojure.java-time</a> - Java 8 Date-Time API</li>
+</ul>
+<ul>
+<li><a href="https://github.com/luciolucio/holi">holi</a> - Calendar operations that are aware of weekends and holidays</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tokenmill/timewords">timewords</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/juxt/tick">tick</a>: Clojure(Script) library, intended as replacement for clj-time</li>
+</('ul', 2)>
+<h2>GUI</h2>
+
+<ul>
+<li><a href="https://github.com/daveray/seesaw">seesaw</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/lambdaisland/trikl">trikl</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/aaronc/fx-clj">fx-clj</a></li>
+</('ul', 2)>
+<h2>Audio</h2>
+
+<ul>
+<li><a href="http://overtone.github.io/">Overtone</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/alda-lang/alda">Alda</a></li>
+</('ul', 2)>
+<h2>HTTP</h2>
+
+<p><em>Libraries for working with HTTP.</em></p>
+
+<ul>
+<li><a href="https://github.com/dakrone/clj-http">clj-http</a> :  Apache HttpComponents client wrapper</li>
+</ul>
+<ul>
+<li><a href="https://github.com/http-kit/http-kit">http-kit</a> : Simple, high-performance event-driven HTTP client and server</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ring-clojure/ring">ring</a> : HTTP server abstraction</li>
+</ul>
+<ul>
+<li><a href="https://github.com/nervous-systems/kvlt">kvlt</a> : Uniform, asychronous client interface for HTTP across JVM / Node / browsers</li>
+</ul>
+<ul>
+<li><a href="https://github.com/clj-commons/aleph">aleph</a> : Async client/server based on Netty, with defaults for HTTP, TCP and UDP</li>
+</ul>
+<ul>
+<li><a href="https://github.com/gnarroway/hato">hato</a> : An HTTP client for Clojure, wrapping JDK 11's HttpClient</li>
+</('ul', 2)>
+<h2>Database</h2>
+
+<p><em>Databases and database client libraries</em></p>
+
+<ul>
+<li><a href="http://www.datomic.com/">Datomic</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/xtdb/xtdb">xtdb</a>: bitemporal database for SQL, Datalog & graph queries</li>
+</ul>
+<ul>
+<li><a href="https://github.com/replikativ/datahike">Datahike</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/tonsky/datascript">Datascript</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/juji-io/datalevin">Datalevin</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/seancorfield/next-jdbc">next.jdbc</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/clojure/java.jdbc">clojure.java.jdbc</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/funcool/clojure.jdbc">clojure.jdbc</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/robashton/cravendb">cravendb</a></li>
+</ul>
+<ul>
+<li><a href="http://clojuremongodb.info/">Monger</a>: for MongoDB</li>
+</ul>
+<ul>
+<li><a href="https://baumandm.github.io/monglorious/">Monglorious</a>: for MongoDB</li>
+</ul>
+<ul>
+<li><a href="https://github.com/apa512/clj-rethinkdb">clj-rethinkdb</a>: for RethinkDB</li>
+</ul>
+<ul>
+<li><a href="https://github.com/bitemyapp/revise">Revise</a>: for RethinkDB</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mpenet/spandex">Spandex</a>: for ElasticSearch</li>
+</ul>
+<ul>
+<li><a href="http://clojureelasticsearch.info/">Elastisch</a>: for ElasticSearch</li>
+</ul>
+<ul>
+<li><a href="http://clojureneo4j.info/">neocons</a>: for Neo4j</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mpenet/alia">Alia</a>: for Cassandra</li>
+</ul>
+<ul>
+<li><a href="https://github.com/AppsFlyer/aerospike-clj">aerospike-clj</a>: for Aerospike</li>
+</('ul', 2)>
+<h2>Connection pools</h2>
+
+<p><em>Database connection pools</em></p>
+
+<ul>
+<li><a href="https://github.com/tomekw/hikari-cp">hikari-cp</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/metabase/connection-pool">metabase/connection-pool</a></li>
+</('ul', 2)>
+<h2>Structural Migrations</h2>
+
+<p><em>Keeps database and others in sync</em></p>
+
+<ul>
+<li><a href="https://github.com/budu/lobos">Lobos</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/weavejester/ragtime">Ragtime</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/juxt/joplin">Joplin</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/yogthos/migratus">Migratus</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/macourtney/drift">Drift</a></li>
+</('ul', 2)>
+<h2>Redis</h2>
+
+<ul>
+<li><a href="https://github.com/ptaoussanis/carmine">carmine</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/lerouxrgd/celtuce">celtuce</a></li>
+</('ul', 2)>
+<h2>JSON</h2>
+
+<ul>
+<li><a href="https://github.com/dakrone/cheshire">cheshire</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/metosin/jsonista">jsonista</a></li>
+</('ul', 2)>
+<h2>Protocol Buffers and gRPC</h2>
+
+<ul>
+<li><a href="https://github.com/AppsFlyer/pronto">pronto</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/AppsFlyer/lein-protodeps">lein-protodeps</a></li>
+</('ul', 2)>
+<h2>Database Cli</h2>
+
+<h2>ORM and SQL generation</h2>
+
+<p><em>DSL for SQL generation.</em></p>
+<ul>
+<li><a href="https://github.com/walkable-server/walkable">Walkable</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/korma/Korma">Korma</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/tatut/specql/">Specql</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/stch-library/sql">stch-library/sql</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/r0man/sqlingvo">sqlingvo</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/TheLadders/sqlium/">sqlium</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/jkk/honeysql">honeysql</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/metabase/toucan">Toucan</a></li>
+</('ul', 2)>
+<h2>Security</h2>
+
+<p><em>Authentication, authorization and other security related libraries.</em></p>
+
+<ul>
+<li><a href="https://github.com/funcool/buddy">Buddy</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/lvh/caesium">caesium</a> (libsodium bindings)</li>
+</ul>
+<ul>
+<li><a href="https://github.com/cemerick/friend">Friend</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/lk-geimfari/secrets.clj">secrets.clj</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/juxt/bolt">bolt</a></li>
+</('ul', 2)>
+<h2>RESTful API</h2>
+
+<p><em>Libraries for developing RESTful APIs.</em></p>
+
+<ul>
+<li><a href="http://clojure-liberator.github.io/liberator/">Liberator</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/metosin/compojure-api">Compojure-api</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/zalando/friboo">Friboo</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/juxt/yada">yada</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/darkleaf/router">router</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/metosin/reitit">reitit</a></li>
+</('ul', 2)>
+<h2>GraphQL API</h2>
+
+<p><em>Libraries for developing GraphQL APIs.</em></p>
+
+<ul>
+<li><a href="https://lacinia.readthedocs.io/en/latest/">Lacinia</a></li>
+</('ul', 2)>
+<h2>Emails</h2>
+
+<ul>
+<li><a href="https://github.com/drewr/postal">postal</a></li>
+</('ul', 2)>
+<h2>HTML Manipulation</h2>
+
+<p><em>Libraries for working with HTML.</em></p>
+
+<ul>
+<li><a href="https://github.com/cgrand/enlive/wiki">Enlive</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/weavejester/hiccup">hiccup</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/fhd/clostache">clostache</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/yogthos/Selmer">selmer</a></li>
+</('ul', 2)>
+<h2>Data Validation</h2>
+
+<p><em>Libraries for validating data.</em></p>
+
+<ul>
+<li><a href="https://github.com/fulcrologic/guardrails">Guardrails</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/metosin/malli">Malli</a></li>
+</ul>
+<ul>
+<li><a href="http://clojurevalidations.info/">Validateur</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/plumatic/schema">Prismatic's schema</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/leonardoborges/bouncer">Bouncer</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/markwoodhall/clova">clova</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/jeaye/orchestra">Orchestra</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/funcool/struct">struct</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/friemen/domaintypes">domaintypes</a></li>
+</('ul', 2)>
+<h2>Type System</h2>
+<p><em>Optional type system for Clojure</em></p>
+
+<ul>
+<li><a href="https://github.com/clojure/core.typed">core.typed</a></li>
+</('ul', 2)>
+<h2>Pattern Matching</h2>
+
+<ul>
+<li><a href="https://github.com/clojure/core.match">core.match</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/killme2008/defun">defun</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/zalando/cats.match">cats.match</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/missingfaktor/akar">Akar</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/noprompt/meander">Meander</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/WeshGuillaume/Verbal-Exprejon">Verbal-Exprejon</a></li>
+</('ul', 2)>
+<h2>Async processing</h2>
+
+<ul>
+<li><a href="https://github.com/clojure/core.async/">core.async</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/puniverse/pulsar">pulsar</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/ztellman/manifold">manifold</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/nilenso/goose">goose</a></li>
+</('ul', 2)>
+<h2>Monads</h2>
+
+<ul>
+<li><a href="https://github.com/funcool/cats">cats</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/clojure/algo.monads">algo.monads</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/uncomplicate/fluokitten">Fluokitten</a></li>
+</('ul', 2)>
+<h2>WebSocket</h2>
+
+<ul>
+<li><a href="https://github.com/jarohen/chord">Chord</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/ptaoussanis/sente">Sente</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/ztellman/aleph">aleph</a></li>
+</('ul', 2)>
+<h2>Testing</h2>
+
+<ul>
+<li><a href="https://github.com/clojure-expectations/expectations">Expectations</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/marick/Midje">Midje</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/GreenPowerMonitor/test-doubles">test-doubles</a> </li>
+</ul>
+<ul>
+<li><a href="https://github.com/lambdaisland/kaocha">kaocha</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/nubank/state-flow">StateFlow</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/amokfa/datest">Datest</a></li>
+</('ul', 2)>
+<h2>Webdriver automation</h2>
+
+<ul>
+<li><a href="https://github.com/igrishaev/etaoin">Etaoin</a></li>
+</('ul', 2)>
+<h2>Code Analysis and Linter</h2>
+
+<ul>
+<li><a href="https://github.com/technomancy/slamhound">Slamhound</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/jonase/eastwood">eastwood</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/jonase/kibit">kibit</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/venantius/yagni">yagni</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/dakrone/lein-bikeshed">lein-bikeshed</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/arohner/spectrum">spectrum</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/cloverage/cloverage">cloverage</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/borkdude/clj-kondo">clj-kondo</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/NoahTheDuke/splint">splint</a></li>
+</('ul', 2)>
+<h2>Science and Data Analysis</h2>
+
+<p>*Libraries, extended REPLs, and other tools for scientific and statistical data</p>
+<p>anylysis and visualization.*</p>
+
+<ul>
+<li><a href="https://github.com/incanter/incanter">Incanter</a></li>
+</ul>
+<ul>
+<li><a href="http://cascalog.org/">Cascalog</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/onyx-platform/onyx">Onyx</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/gorillalabs/sparkling">sparklling</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/yieldbot/flambo">flambo</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/uncomplicate/neanderthal">Neanderthal</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/bigmlcom/histogram">Streaming Histograms</a></li>
+</ul>
+<ul>
+<li><a href="http://gorilla-repl.org/">Gorilla REPL</a>  </li>
+</ul>
+<ul>
+<li><a href="https://github.com/uncomplicate/bayadera">Bayadera - Bayesian Data Analysis on the GPU</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/uncomplicate/clojurecuda">ClojureCUDA</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/uncomplicate/neanderthal">Neanderthal - fast matrix and linear algebra</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/uncomplicate/clojurecl">ClojureCL - parallel computations with OpenCL</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/aysylu/loom">Loom - graph library for Clojure</a></li>
+</('ul', 2)>
+<h2>Machine Learning</h2>
+
+<ul>
+<li><a href="https://github.com/uncomplicate/neanderthal">neanderthal</a>: fast matrix library</li>
+</ul>
+<ul>
+<li><a href="https://github.com/uncomplicate/clojurecuda">clojurecuda</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/uncomplicate/clojurecl">clojurecl</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/uncomplicate/bayadera">bayadera</a>: bayesian data analysis on the GPU</li>
+</ul>
+<ul>
+<li><a href="https://github.com/originrose/cortex">cortex</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/aria42/flare">Flare</a></li>
+</ul>
+<ul>
+<li><a href="https://mxnet.apache.org/versions/1.7.0/api/clojure">MXNet - Clojure API</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/bigmlcom/clj-bigml">clj-bigml</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/deeplearning4j/deeplearning4j">Deeplearning4j</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/jimpil/enclog">Enclog</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/cloudkj/lambda-ml">lambda-ml</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/kieranbrowne/clojure-tensorflow">clojure-tensorflow</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/yetanalytics/dl4clj">dl4clj (deeplearning4j to clojure)</a></li>
+</ul>
+<ul>
+<li><a href="https://probprog.github.io/anglican/">Anglican</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/antoniogarrote/clj-ml">clj-ml</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/rinuboney/clatern">Clatern</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/gigasquid/k9">k9</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/clojurewerkz/statistiker">Statistiker</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/japonophile/synaptic">Synaptic</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/aria42/infer">Infer</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/mrdimosthenis/clj-synapses">clj-synapses</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/scicloj/scicloj.ml">scicloj.ml</a></li>
+</('ul', 2)>
+<h2>Computer Vision</h2>
+
+<ul>
+<li><a href="https://github.com/hellonico/origami">origami</a>: OpenCV 4 wrapper</li>
+</ul>
+<ul>
+<li><a href="https://github.com/antoniogarrote/clj-tesseract">clj-tesseract</a></li>
+</ul>
+<ul>
+<li><a href="http://nakkaya.com/vision.html">vision</a></li>
+</('ul', 2)>
+<h2>Text Processing</h2>
+
+<ul>
+<li><a href="https://github.com/dakrone/clojure-opennlp">clojure-opennlp</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/turbopape/postagga">postagga</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/tokenmill/beagle">beagle</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/dainiusjocas/lucene-grep">lmgrep</a></li>
+</('ul', 2)>
+<h2>Parsing</h2>
+
+<ul>
+<li><a href="https://github.com/Engelberg/instaparse">Instaparse</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/blancas/kern">kern</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/wit-ai/duckling">duckling</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/alekseysotnikov/buran">buran</a> - RSS/Atom feed consumer and producer</li>
+</('ul', 2)>
+<h2>Exceptions and Error Handling</h2>
+<ul>
+<li><a href="https://github.com/mpenet/ex">Ex</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/grammarly/perseverance">Perseverance</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/MichaelDrogalis/dire">Dire</a></li>
+</('ul', 2)>
+<h2>Rule-based Programming</h2>
+<ul>
+<li><a href="https://github.com/oakes/odoyle-rules">O'Doyle Rules</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/cerner/clara-rules">Clara Rules</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/yipeeio/arete">Arete</a></li>
+</('ul', 2)>
+<h2>Editor Plugins</h2>
+
+<ul>
+<li><a href="https://github.com/BetterThanTomorrow/calva">Calva (VSCode)</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/clojure-lsp/clojure-lsp">clojure-lsp (multiple editors)</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/clojure-emacs/cider">CIDER (Emacs)</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/Fuco1/smartparens">smartparens (Emacs)</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/Fanael/rainbow-delimiters">rainbow-delimiters (Emacs)</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/Malabarba/aggressive-indent-mode">aggressive-indent (Emacs)</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/Olical/conjure">Conjure (Neovim)</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/venantius/vim-cljfmt">vim-cljfmt (Vim)</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/venantius/vim-eastwood">vim-eastwood (Vim)</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/tpope/vim-fireplace">vim-fireplace (Vim)</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/dgrnbrg/vim-redl">vim-redl (Vim)</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/tpope/vim-salve">vim-leiningen (Vim)</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/junegunn/rainbow<em>parentheses.vim">rainbow</em>parentheses.vim (Vim)</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/liquidz/vim-iced">vim-iced (Vim)</a></li>
+</ul>
+<ul>
+<li><a href="https://cursive-ide.com/">Cursive (IntelliJ)</a></li>
+</ul>
+<ul>
+<li><a href="https://atom.io/packages/proto-repl">proto-repl (Atom)</a></li>
+</ul>
+<ul>
+<li><a href="http://shaunlebron.github.io/parinfer/">Parinfer (multiple editors)</a></li>
+</ul>
+<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer">Bracket Pair Colorizer (VSCode)</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/avli/clojureVSCode">clojureVSCode (VSCode)</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/linpengcheng/ClojureBoxNpp">Notepad++</a>: modified config files of Lisp</li>
+</('ul', 2)>
+<h2>Documentation</h2>
+
+<p><em>Utilities and libraries for (non-LP) code and project documentation</em></p>
+
+<ul>
+<li><a href="https://github.com/weavejester/codox">codox</a></li>
+</('ul', 1)>
+<h2>Literate Programming</h2>
+
+<ul>
+<li><a href="https://github.com/gdeer81/marginalia">marginalia</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/viebel/klipse">klipse</a></li>
+</('ul', 2)>
+<h2>Archives and Compression</h2>
+
+<ul>
+<li><a href="https://github.com/AeroNotix/swindon">swindon (java.util.zip wrapper)</a></li>
+</('ul', 2)>
+<h2>Miscellaneous</h2>
+
+<ul>
+<li><a href="https://github.com/ztellman/potemkin">potemkin</a> - reexport vars in another ns / act like a clojure map</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ztellman/clj-tuple">clj-tuple</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/scgilardi/slingshot">slingshot</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/ztellman/virgil">virgil</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/tailrecursion/javastar">javastar</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/ztellman/riddley">riddley</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/ertugrulcetin/kezban">kezban</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/otwieracz/clj-grpc">clj-grpc</a></li>
+</('ul', 1)>
+<h2>Debugging</h2>
+
+<ul>
+<li><a href="https://github.com/flow-storm/flow-storm-debugger">flow-storm-debugger</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/gnl/playback">playback</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/clojure/tools.trace">tools.trace</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/razum2um/clj-debugger">debugger</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/GeorgeJahad/debug-repl">debug-repl</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/pallet/ritz">ritz</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/dgrnbrg/redl">redl</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/technomancy/limit-break">limit-break</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/dgrnbrg/spyscope">spyscope</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/razum2um/aprint">aprint</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/cgrand/packed-printer">packed-printer</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/AvisoNovate/pretty">pretty</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/magnars/prone">prone</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/bhauman/lein-figwheel">figwheel</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/venantius/ultra">ultra</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/AppsFlyer/mate-clj">mate-clj</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/vvvvalvalval/scope-capture">scope-capture</a></li>
+</('ul', 2)>
+<h2>CI</h2>
+
+<ul>
+<li><a href="https://github.com/flosell/lambdacd">lambdacd</a></li>
+</('ul', 2)>
+<h2>Project Management</h2>
+
+<ul>
+<li><a href="https://github.com/turbopape/milestones">milestones</a></li>
+</('ul', 2)>
+<h2>Terminal UI</h2>
+
+<ul>
+<li><a href="https://github.com/MultiMUD/clojure-lanterna">clojure-lanterna</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/lambdaisland/trikl">triki</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/aaron-santos/zaffre">zaffre</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/dundalek/closh">closh</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/piotr-yuxuan/malli-cli">piotr-yuxuan/malli-cli</a></li>
+</('ul', 2)>
+<h2>Graphviz</h2>
+
+<ul>
+<li><a href="https://github.com/lambdaisland/zipper-viz">zipper-viz</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/daveray/dorothy">dorothy</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/jebberjeb/viz.cljc">viz.cljc</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/jebberjeb/fsmviz">fsmviz</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/ztellman/rhizome">rhizome</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/ertugrulcetin/re-frame-flow">re-frame-flow</a> - Graph based visualization tool for re-frame event chains (ClojureScript)</li>
+</('ul', 2)>
+<h2>Game Development</h2>
+<ul>
+<li><a href="https://github.com/ertugrulcetin/jme-clj">jme-clj</a> - A Clojure 3D Game Engine (Wrapper), Powered by jMonkeyEngine</li>
+</ul>
+<ul>
+<li><a href="https://github.com/oakes/play-cljc">play-cljc</a> - A Clojure and ClojureScript game library</li>
+</('ul', 2)>
+<h2>Guides</h2>
+
+<ul>
+<li><a href="https://github.com/bbatsov/clojure-style-guide">The Clojure Style Guide</a></li>
+</ul>
+<ul>
+<li><a href="http://yogthos.github.io/ClojureDistilled.html">Clojure Distilled</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/clojure-cookbook/clojure-cookbook">clojure-cookbook</a></li>
+</ul>
+<ul>
+<li><a href="http://www.unexpected-vortices.com/clojure/brief-beginners-guide/index.html">A Brief Beginner's Guide To Clojure</a></li>
+</ul>
+<ul>
+<li><a href="http://www.braveclojure.com/">Clojure for the Brave and True</a></li>
+</ul>
+<ul>
+<li><a href="https://aphyr.com/tags/Clojure-from-the-ground-up">Clojure from the ground up</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/yogthos/clojure-error-message-catalog">Error message catalog</a></li>
+</ul>
+<ul>
+<li><a href="https://kimh.github.io/clojure-by-example/">Clojure by Example</a></li>
+</('ul', 2)>
+<h2>Video tutorials</h2>
+
+<h3>YouTube</h3>
+
+<ul>
+<li><a href="https://www.youtube.com/user/Misophistful/videos">Misophistful's channel</a>: Understand concepts such as list comprehension, threading macros, generative testing, destructuring, core.match and introductions to Light Table, Datomic and Game development with Clojure</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/channel/UC9m7D4XKPJqTPCLSBym3BCg/search?query=Clojure">Fred Overflow's channel</a>: Introductions to Functional programming and TDD with Clojure</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/channel/UCH0CkLvbv6yEyrUnw9qujpQ/videos">Clojure Pills screencast</a>: Introduction to Clojure one function at a time</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/c/onthecodeagain/videos">Clojure Pills screencast</a>: Fun and beginner friendly content related to the overall clojure ecosystem</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/channel/UCrwwOZ4h2FQhAdTMfjyQfQA/playlists">Data persistance with Postgres, Clojure and JDBC</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/channel/UC6yONKYeoE2P3bsahDtsimg/videos">Clojure Tutorials by Timothy Baldridge</a>: More advanced videos on core.async, transducers, transients, logic programming and a "Function of the day" series.</li>
+</('ul', 2)>
+<h2>Websites</h2>
+
+<ul>
+<li><a href="http://clojure.org/">Clojure</a></li>
+</ul>
+<ul>
+<li><a href="http://clojurians.net/">Clojure Slack</a></li>
+</ul>
+<ul>
+<li><a href="http://clojuredocs.org">clojuredocs</a></li>
+</ul>
+<ul>
+<li><a href="http://clojure-doc.org/">clojure-doc</a></li>
+</ul>
+<ul>
+<li><a href="http://www.clojure-toolbox.com/">The Clojure Toolbox</a></li>
+</ul>
+<ul>
+<li><a href="https://clojure.zeef.com/vlad.bokov">ZEEF/Clojure</a></li>
+</('ul', 2)>
+<h2>Twitter</h2>
+
+<ul>
+<li><a href="https://twitter.com/oss<em>clj">oss</em>clj</a></li>
+</('ul', 2)>
+<h2>Exercises</h2>
+
+<ul>
+<li><a href="https://github.com/PEZ/rich4clojure">rich4clojure</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/gigasquid/wonderland-clojure-katas">Wonderland Clojure Katas</a></li>
+</ul>
+<ul>
+<li><a href="http://clojurekoans.com">Clojure Koans</a></li>
+</ul>
+<ul>
+<li><a href="http://exercism.io/languages/clojure">exercism.io</a></li>
+</ul>
+<ul>
+<li><a href="https://www.codewars.com/kata/search/clojure">Codewars</a></li>
+</ul>
+</body>
+</html>

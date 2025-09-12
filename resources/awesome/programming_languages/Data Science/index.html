@@ -1,0 +1,1531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Science</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Data Science</h1>
+
+<p><strong>Repository:</strong> https://github.com/krzjoa/awesome-python-data-science#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<div align="center">
+    <a href="https://krzjoa.github.io/awesome-python-data-science/"><img width="250" height="250" src="img/py-datascience.png" alt="pyds"></a>
+    <br>
+    <br>
+    <br>
+</div>
+
+<h1 align="center">
+<p>Awesome Python Data Science</p>
+</h1>
+<div align="center"><a href="https://github.com/sindresorhus/awesome">
+<img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" alt="Awesome" border="0">
+</a>
+</div>
+</br>
+
+<blockquote>
+<p>Probably the best curated list of data science software in Python</p>
+</blockquote>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#contents">Contents</a></li>
+</ul>
+<ul>
+<li><a href="#machine-learning">Machine Learning</a></li>
+<ul>
+<li><a href="#general-purpose-machine-learning">General Purpose Machine Learning</a></li>
+<ul>
+<li><a href="#gradient-boosting">Gradient Boosting</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#ensemble-methods">Ensemble Methods</a></li>
+</ul>
+<ul>
+<li><a href="#imbalanced-datasets">Imbalanced Datasets</a></li>
+</ul>
+<ul>
+<li><a href="#random-forests">Random Forests</a></li>
+</ul>
+<ul>
+<li><a href="#kernel-methods">Kernel Methods</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#deep-learning">Deep Learning</a></li>
+<ul>
+<li><a href="#pytorch">PyTorch</a></li>
+</ul>
+<ul>
+<li><a href="#tensorflow">TensorFlow</a></li>
+<ul>
+<li><a href="#jax">JAX</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#others">Others</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#automated-machine-learning">Automated Machine Learning</a></li>
+</ul>
+<ul>
+<li><a href="#natural-language-processing">Natural Language Processing</a></li>
+</ul>
+<ul>
+<li><a href="#computer-audition">Computer Audition</a></li>
+</ul>
+<ul>
+<li><a href="#computer-vision">Computer Vision</a></li>
+</ul>
+<ul>
+<li><a href="#time-series">Time Series</a></li>
+</ul>
+<ul>
+<li><a href="#reinforcement-learning">Reinforcement Learning</a></li>
+</ul>
+<ul>
+<li><a href="#graph-machine-learning">Graph Machine Learning</a></li>
+</ul>
+<ul>
+<li><a href="#learning-to-rank-&-recommender-systems">Learning-to-Rank & Recommender Systems</a></li>
+</ul>
+<ul>
+<li><a href="#probabilistic-graphical-models">Probabilistic Graphical Models</a></li>
+</ul>
+<ul>
+<li><a href="#probabilistic-methods">Probabilistic Methods</a></li>
+</ul>
+<ul>
+<li><a href="#model-explanation">Model Explanation</a></li>
+</ul>
+<ul>
+<li><a href="#optimization">Optimization</a></li>
+</ul>
+<ul>
+<li><a href="#genetic-programming">Genetic Programming</a></li>
+</ul>
+<ul>
+<li><a href="#feature-engineering">Feature Engineering</a></li>
+<ul>
+<li><a href="#general">General</a></li>
+</ul>
+<ul>
+<li><a href="#feature-selection">Feature Selection</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#visualization">Visualization</a></li>
+<ul>
+<li><a href="#general-purposes">General Purposes</a></li>
+</ul>
+<ul>
+<li><a href="#interactive-plots">Interactive plots</a></li>
+</ul>
+<ul>
+<li><a href="#map">Map</a></li>
+</ul>
+<ul>
+<li><a href="#automatic-plotting">Automatic Plotting</a></li>
+</ul>
+<ul>
+<li><a href="#nlp">NLP</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#data-manipulation">Data Manipulation</a></li>
+<ul>
+<li><a href="#data-frames">Data Frames</a></li>
+</ul>
+<ul>
+<li><a href="#pipelines">Pipelines</a></li>
+</ul>
+<ul>
+<li><a href="#data-centric-ai">Data-centric AI</a></li>
+</ul>
+<ul>
+<li><a href="#synthetic-data">Synthetic Data</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#deployment">Deployment</a></li>
+</ul>
+<ul>
+<li><a href="#statistics">Statistics</a></li>
+</ul>
+<ul>
+<li><a href="#distributed-computing">Distributed Computing</a></li>
+</ul>
+<ul>
+<li><a href="#experimentation">Experimentation</a></li>
+</ul>
+<ul>
+<li><a href="#data-validation">Data Validation</a></li>
+</ul>
+<ul>
+<li><a href="#evaluation">Evaluation</a></li>
+</ul>
+<ul>
+<li><a href="#computations">Computations</a></li>
+</ul>
+<ul>
+<li><a href="#web-scraping">Web Scraping</a></li>
+</ul>
+<ul>
+<li><a href="#spatial-analysis">Spatial Analysis</a></li>
+</ul>
+<ul>
+<li><a href="#quantum-computing">Quantum Computing</a></li>
+</ul>
+<ul>
+<li><a href="#conversion">Conversion</a></li>
+</ul>
+<ul>
+<li><a href="#contributing">Contributing</a></li>
+</ul>
+<ul>
+<li><a href="#license">License</a></li>
+</('ul', 0)>
+<h2>Machine Learning</h2>
+
+<h3>General Purpose Machine Learning</h3>
+<ul>
+<li><a href="http://scikit-learn.org/stable/">scikit-learn</a> - Machine learning in Python. <img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/pycaret/pycaret">PyCaret</a> - An open-source, low-code machine learning library in Python.  <img height="20" src="img/R_big.png" alt="R inspired lib"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/shogun-toolbox/shogun">Shogun</a> - Machine learning toolbox.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/aksnzhy/xlearn">xLearn</a> - High Performance, Easy-to-use, and Scalable Machine Learning Package.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/rapidsai/cuml">cuML</a> - RAPIDS Machine Learning Library. <img height="20" src="img/sklearn<em>big.png" alt="sklearn"> <img height="20" src="img/gpu</em>big.png" alt="GPU accelerated"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/cosmic-cortex/modAL">modAL</a> - Modular active learning framework for Python3. <img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/lensacom/sparkit-learn">Sparkit-learn</a> - PySpark + scikit-learn = Sparkit-learn. <img height="20" src="img/sklearn<em>big.png" alt="sklearn"> <img height="20" src="img/spark</em>big.png" alt="Apache Spark based"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/mlpack/mlpack">mlpack</a> - A scalable C++ machine learning library (Python bindings).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/davisking/dlib">dlib</a> - Toolkit for making real-world machine learning and data analysis applications in C++ (Python bindings).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/rasbt/mlxtend">MLxtend</a> - Extension and helper modules for Python's data analysis and machine learning libraries. <img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/danielhanchen/hyperlearn">hyperlearn</a> - 50%+ Faster, 50%+ less RAM usage, GPU support re-written Sklearn, Statsmodels. <img height="20" src="img/sklearn<em>big.png" alt="sklearn"> <img height="20" src="img/pytorch</em>big2.png" alt="PyTorch based/compatible"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/yandex/rep">Reproducible Experiment Platform (REP)</a> - Machine Learning toolbox for Humans. <img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/scikit-multilearn/scikit-multilearn">scikit-multilearn</a> - Multi-label classification for python. <img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/larsmans/seqlearn">seqlearn</a> - Sequence classification toolkit for Python. <img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/pystruct/pystruct">pystruct</a> - Simple structured learning framework for Python. <img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/tmadl/sklearn-expertsys">sklearn-expertsys</a> - Highly interpretable classifiers for scikit learn. <img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/christophM/rulefit">RuleFit</a> - Implementation of the rulefit. <img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/all-umass/metric-learn">metric-learn</a> - Metric learning algorithms in Python. <img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/dswah/pyGAM">pyGAM</a> - Generalized Additive Models in Python.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/uber/causalml">causalml</a> - Uplift modeling and causal inference with machine learning algorithms. <img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</('ul', 0)>
+<h3>Gradient Boosting</h3>
+<ul>
+<li><a href="https://github.com/dmlc/xgboost">XGBoost</a> - Scalable, Portable, and Distributed Gradient Boosting. <img height="20" src="img/sklearn<em>big.png" alt="sklearn"> <img height="20" src="img/gpu</em>big.png" alt="GPU accelerated"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/Microsoft/LightGBM">LightGBM</a> - A fast, distributed, high-performance gradient boosting. <img height="20" src="img/sklearn<em>big.png" alt="sklearn"> <img height="20" src="img/gpu</em>big.png" alt="GPU accelerated"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/catboost/catboost">CatBoost</a> - An open-source gradient boosting on decision trees library. <img height="20" src="img/sklearn<em>big.png" alt="sklearn"> <img height="20" src="img/gpu</em>big.png" alt="GPU accelerated"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/Xtra-Computing/thundergbm">ThunderGBM</a> - Fast GBDTs and Random Forests on GPUs. <img height="20" src="img/sklearn<em>big.png" alt="sklearn"> <img height="20" src="img/gpu</em>big.png" alt="GPU accelerated"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/stanfordmlgroup/ngboost">NGBoost</a> - Natural Gradient Boosting for Probabilistic Prediction.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tensorflow/decision-forests">TensorFlow Decision Forests</a> - A collection of state-of-the-art algorithms for the training, serving and interpretation of Decision Forest models in Keras. <img height="20" src="img/keras<em>big.png" alt="keras"> <img height="20" src="img/tf</em>big2.png" alt="TensorFlow"></li>
+</('ul', 0)>
+<h3>Ensemble Methods</h3>
+<ul>
+<li><a href="http://ml-ensemble.com/">ML-Ensemble</a> - High performance ensemble learning. <img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/ikki407/stacking">Stacking</a> - Simple and useful stacking library written in Python. <img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/fukatani/stacked<em>generalization">stacked</em>generalization</a> - Library for machine learning stacking generalization. <img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/vecxoz/vecstack">vecstack</a> - Python package for stacking (machine learning technique). <img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</('ul', 0)>
+<h3>Imbalanced Datasets</h3>
+<ul>
+<li><a href="https://github.com/scikit-learn-contrib/imbalanced-learn">imbalanced-learn</a> - Module to perform under-sampling and over-sampling with various techniques. <img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/dialnd/imbalanced-algorithms">imbalanced-algorithms</a> - Python-based implementations of algorithms for learning on imbalanced data. <img height="20" src="img/sklearn<em>big.png" alt="sklearn"> <img height="20" src="img/tf</em>big2.png" alt="sklearn"></li>
+</('ul', 0)>
+<h3>Random Forests</h3>
+<ul>
+<li><a href="https://github.com/lyst/rpforest">rpforest</a> - A forest of random projection trees. <img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/tmadl/sklearn-random-bits-forest">sklearn-random-bits-forest</a> - Wrapper of the Random Bits Forest program written by (Wang et al., 2016).<img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/fukatani/rgf<em>python">rgf</em>python</a> - Python Wrapper of Regularized Greedy Forest. <img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</('ul', 0)>
+<h3>Kernel Methods</h3>
+<ul>
+<li><a href="https://github.com/coreylynch/pyFM">pyFM</a> - Factorization machines in python. <img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/ibayer/fastFM">fastFM</a> - A library for Factorization Machines. <img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/geffy/tffm">tffm</a> - TensorFlow implementation of an arbitrary order Factorization Machine. <img height="20" src="img/sklearn<em>big.png" alt="sklearn"> <img height="20" src="img/tf</em>big2.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/liquidSVM/liquidSVM">liquidSVM</a> - An implementation of SVMs.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/JamesRitchie/scikit-rvm">scikit-rvm</a> - Relevance Vector Machine implementation using the scikit-learn API. <img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/Xtra-Computing/thundersvm">ThunderSVM</a> - A fast SVM Library on GPUs and CPUs. <img height="20" src="img/sklearn<em>big.png" alt="sklearn"> <img height="20" src="img/gpu</em>big.png" alt="GPU accelerated"></li>
+</('ul', 0)>
+<h2>Deep Learning</h2>
+
+<h3>PyTorch</h3>
+<ul>
+<li><a href="https://github.com/pytorch/pytorch">PyTorch</a> - Tensors and Dynamic neural networks in Python with strong GPU acceleration. <img height="20" src="img/pytorch_big2.png" alt="PyTorch based/compatible"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/Lightning-AI/lightning">pytorch-lightning</a> - PyTorch Lightning is just organized PyTorch. <img height="20" src="img/pytorch_big2.png" alt="PyTorch based/compatible"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/pytorch/ignite">ignite</a> - High-level library to help with training neural networks in PyTorch. <img height="20" src="img/pytorch_big2.png" alt="PyTorch based/compatible"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/dnouri/skorch">skorch</a> - A scikit-learn compatible neural network library that wraps PyTorch. <img height="20" src="img/sklearn<em>big.png" alt="sklearn"> <img height="20" src="img/pytorch</em>big2.png" alt="PyTorch based/compatible"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/catalyst-team/catalyst">Catalyst</a> - High-level utils for PyTorch DL & RL research. <img height="20" src="img/pytorch_big2.png" alt="PyTorch based/compatible"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/AstraZeneca/chemicalx">ChemicalX</a> - A PyTorch-based deep learning library for drug pair scoring. <img height="20" src="img/pytorch_big2.png" alt="PyTorch based/compatible"></li>
+</('ul', 0)>
+<h3>TensorFlow</h3>
+<ul>
+<li><a href="https://github.com/tensorflow/tensorflow">TensorFlow</a> - Computation using data flow graphs for scalable machine learning by Google. <img height="20" src="img/tf_big2.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/zsdonghao/tensorlayer">TensorLayer</a> - Deep Learning and Reinforcement Learning Library for Researcher and Engineer. <img height="20" src="img/tf_big2.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/tflearn/tflearn">TFLearn</a> - Deep learning library featuring a higher-level API for TensorFlow. <img height="20" src="img/tf_big2.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/deepmind/sonnet">Sonnet</a> - TensorFlow-based neural network library. <img height="20" src="img/tf_big2.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/ppwwyyxx/tensorpack">tensorpack</a> - A Neural Net Training Interface on TensorFlow. <img height="20" src="img/tf_big2.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/polyaxon/polyaxon">Polyaxon</a> - A platform that helps you build, manage and monitor deep learning models. <img height="20" src="img/tf_big2.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/riga/tfdeploy">tfdeploy</a> - Deploy TensorFlow graphs for fast evaluation and export to TensorFlow-less environments running numpy. <img height="20" src="img/tf_big2.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/ROCmSoftwarePlatform/tensorflow-upstream">tensorflow-upstream</a> - TensorFlow ROCm port. <img height="20" src="img/tf<em>big2.png" alt="sklearn"> <img height="20" src="img/amd</em>big.png" alt="Possible to run on AMD GPU"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/tensorflow/fold">TensorFlow Fold</a> - Deep learning with dynamic computation graphs in TensorFlow. <img height="20" src="img/tf_big2.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/bsautermeister/tensorlight">TensorLight</a> - A high-level framework for TensorFlow. <img height="20" src="img/tf_big2.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/tensorflow/mesh">Mesh TensorFlow</a> - Model Parallelism Made Easier. <img height="20" src="img/tf_big2.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/uber/ludwig">Ludwig</a> - A toolbox that allows one to train and test deep learning models without the need to write code. <img height="20" src="img/tf_big2.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://keras.io">Keras</a> - A high-level neural networks API running on top of TensorFlow.  <img height="20" src="img/keras_big.png" alt="Keras compatible"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/keras-team/keras-contrib">keras-contrib</a> - Keras community contributions. <img height="20" src="img/keras_big.png" alt="Keras compatible"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/maxpumperla/hyperas">Hyperas</a> - Keras + Hyperopt: A straightforward wrapper for a convenient hyperparameter. <img height="20" src="img/keras_big.png" alt="Keras compatible"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/maxpumperla/elephas">Elephas</a> - Distributed Deep learning with Keras & Spark. <img height="20" src="img/keras_big.png" alt="Keras compatible"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/google/qkeras">qkeras</a> - A quantization deep learning library. <img height="20" src="img/keras_big.png" alt="Keras compatible"></li>
+</('ul', 0)>
+<h3>JAX</h3>
+<ul>
+<li><a href="https://github.com/google/jax">JAX</a> - Composable transformations of Python+NumPy programs: differentiate, vectorize, JIT to GPU/TPU, and more.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/google/flax">FLAX</a> - A neural network library for JAX that is designed for flexibility.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/google-deepmind/optax">Optax</a> - A gradient processing and optimization library for JAX.</li>
+</('ul', 0)>
+<h3>Others</h3>
+<ul>
+<li><a href="https://github.com/huggingface/transformers">transformers</a> - State-of-the-art Machine Learning for Pytorch, TensorFlow, and JAX. <img height="20" src="img/pytorch<em>big2.png" alt="PyTorch based/compatible"> <img height="20" src="img/tf</em>big2.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/google/tangent">Tangent</a> - Source-to-Source Debuggable Derivatives in Pure Python.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/HIPS/autograd">autograd</a> - Efficiently computes derivatives of numpy code.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/BVLC/caffe">Caffe</a> - A fast open framework for deep learning.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sony/nnabla">nnabla</a> - Neural Network Libraries by Sony.</li>
+</('ul', 0)>
+<h2>Automated Machine Learning</h2>
+<ul>
+<li><a href="https://github.com/automl/auto-sklearn">auto-sklearn</a> - An AutoML toolkit and a drop-in replacement for a scikit-learn estimator. <img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/automl/Auto-PyTorch">Auto-PyTorch</a> - Automatic architecture search and hyperparameter optimization for PyTorch. <img height="20" src="img/pytorch_big2.png" alt="PyTorch based/compatible"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/keras-team/autokeras">AutoKeras</a> - AutoML library for deep learning. <img height="20" src="img/keras_big.png" alt="Keras compatible"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/awslabs/autogluon">AutoGluon</a> - AutoML for Image, Text, Tabular, Time-Series, and MultiModal Data.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/rhiever/tpot">TPOT</a> - AutoML tool that optimizes machine learning pipelines using genetic programming. <img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/AxeldeRomblay/MLBox">MLBox</a> - A powerful Automated Machine Learning python library.</li>
+</('ul', 0)>
+<h2>Natural Language Processing</h2>
+<ul>
+<li><a href="https://github.com/pytorch/text">torchtext</a> - Data loaders and abstractions for text and NLP. <img height="20" src="img/pytorch_big2.png" alt="PyTorch based/compatible"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/keras-team/keras-nlp">KerasNLP</a> - Modular Natural Language Processing workflows with Keras. <img height="20" src="img/keras_big.png" alt="Keras based/compatible"></li>
+</ul>
+<ul>
+<li><a href="https://spacy.io/">spaCy</a> - Industrial-Strength Natural Language Processing.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/nltk/nltk">NLTK</a> -  Modules, data sets, and tutorials supporting research and development in Natural Language Processing.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/cltk/cltk">CLTK</a> - The Classical Language Toolkik.</li>
+</ul>
+<ul>
+<li><a href="https://radimrehurek.com/gensim/">gensim</a> - Topic Modelling for Humans.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dmirecki/pyMorfologik">pyMorfologik</a> - Python binding for <a href="https://github.com/morfologik/morfologik-stemming">Morfologik</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/shaypal5/skift">skift</a> - Scikit-learn wrappers for Python fastText. <img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/bootphon/phonemizer">Phonemizer</a> - Simple text-to-phonemes converter for multiple languages.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/zalandoresearch/flair">flair</a> - Very simple framework for state-of-the-art NLP.</li>
+</('ul', 0)>
+<h2>Computer Audition</h2>
+<ul>
+<li><a href="https://github.com/pytorch/audio">torchaudio</a> - An audio library for PyTorch. <img height="20" src="img/pytorch_big2.png" alt="PyTorch based/compatible"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/librosa/librosa">librosa</a> - Python library for audio and music analysis.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Yaafe/Yaafe">Yaafe</a> - Audio features extraction.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/aubio/aubio">aubio</a> - A library for audio and music analysis.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/MTG/essentia">Essentia</a> - Library for audio and music analysis, description, and synthesis.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jamiebullock/LibXtract">LibXtract</a> - A simple, portable, lightweight library of audio feature extraction functions.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/marsyas/marsyas">Marsyas</a> - Music Analysis, Retrieval, and Synthesis for Audio Signals.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/bmcfee/muda">muda</a> - A library for augmenting annotated audio data.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/CPJKU/madmom">madmom</a> - Python audio and music signal processing library.</li>
+</('ul', 0)>
+<h2>Computer Vision</h2>
+<ul>
+<li><a href="https://github.com/pytorch/vision">torchvision</a> - Datasets, Transforms, and Models specific to Computer Vision. <img height="20" src="img/pytorch_big2.png" alt="PyTorch based/compatible"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/facebookresearch/pytorch3d">PyTorch3D</a> - PyTorch3D is FAIR's library of reusable components for deep learning with 3D data. <img height="20" src="img/pytorch_big2.png" alt="PyTorch based/compatible"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/keras-team/keras-cv">KerasCV</a> - Industry-strength Computer Vision workflows with Keras. <img height="20" src="img/keras_big.png" alt="MXNet based"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/opencv/opencv">OpenCV</a> - Open Source Computer Vision Library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dmlc/decord">Decord</a> - An efficient video loader for deep learning with smart shuffling that's super easy to digest.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/open-mmlab/mmengine">MMEngine</a> - OpenMMLab Foundational Library for Training Deep Learning Models. <img height="20" src="img/pytorch_big2.png" alt="PyTorch based/compatible"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/scikit-image/scikit-image">scikit-image</a> - Image Processing SciKit (Toolbox for SciPy).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/aleju/imgaug">imgaug</a> - Image augmentation for machine learning experiments.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/cadenai/imgaug<em>extension">imgaug</em>extension</a> - Additional augmentations for imgaug.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mdbloice/Augmentor">Augmentor</a> - Image augmentation library in Python for machine learning.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/albu/albumentations">albumentations</a> - Fast image augmentation library and easy-to-use wrapper around other libraries.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/salesforce/LAVIS">LAVIS</a> - A One-stop Library for Language-Vision Intelligence.</li>
+</('ul', 0)>
+<h2>Time Series</h2>
+<ul>
+<li><a href="https://github.com/alan-turing-institute/sktime">sktime</a> - A unified framework for machine learning with time series. <img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/JoaquinAmatRodrigo/skforecast">skforecast</a> - Time series forecasting with machine learning models</li>
+</ul>
+<ul>
+<li><a href="https://github.com/unit8co/darts">darts</a> - A python library for easy manipulation and forecasting of time series.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Nixtla/statsforecast">statsforecast</a> - Lightning fast forecasting with statistical and econometric models.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Nixtla/mlforecast">mlforecast</a> - Scalable machine learning-based time series forecasting.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Nixtla/neuralforecast">neuralforecast</a> - Scalable machine learning-based time series forecasting.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/rtavenar/tslearn">tslearn</a> - Machine learning toolkit dedicated to time-series data. <img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/X-DataInitiative/tick">tick</a> - Module for statistical learning, with a particular emphasis on time-dependent modeling.  <img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/linkedin/greykite">greykite</a> - A flexible, intuitive, and fast forecasting library next.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/facebook/prophet">Prophet</a> - Automatic Forecasting Procedure.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/RJT1990/pyflux">PyFlux</a> - Open source time series library for Python.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/christophmark/bayesloop">bayesloop</a> - Probabilistic programming framework that facilitates objective model selection for time-varying parameter models.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/linkedin/luminol">luminol</a> - Anomaly Detection and Correlation library.</li>
+</ul>
+<ul>
+<li><a href="https://dateutil.readthedocs.io/en/stable/">dateutil</a> - Powerful extensions to the standard datetime module</li>
+</ul>
+<ul>
+<li><a href="https://github.com/timofurrer/maya">maya</a> - makes it very easy to parse a string and for changing timezones</li>
+</ul>
+<ul>
+<li><a href="https://github.com/chaos-genius/chaos_genius">Chaos Genius</a> - ML powered analytics engine for outlier/anomaly detection and root cause analysis</li>
+</('ul', 0)>
+<h2>Reinforcement Learning</h2>
+<ul>
+<li><a href="https://github.com/Farama-Foundation/Gymnasium">Gymnasium</a> - An API standard for single-agent reinforcement learning environments, with popular reference environments and related utilities (formerly <a href="https://github.com/openai/gym">Gym</a>).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Farama-Foundation/PettingZoo">PettingZoo</a> - An API standard for multi-agent reinforcement learning environments, with popular reference environments and related utilities.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Farama-Foundation/MAgent2">MAgent2</a> - An engine for high performance multi-agent environments with very large numbers of agents, along with a set of reference environments.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/DLR-RM/stable-baselines3">Stable Baselines3</a> - A set of improved implementations of reinforcement learning algorithms based on OpenAI Baselines.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Farama-Foundation/Shimmy">Shimmy</a> - An API conversion tool for popular external reinforcement learning environments.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sail-sg/envpool">EnvPool</a> - C++-based high-performance parallel environment execution engine (vectorized env) for general RL environments.</li>
+</ul>
+<ul>
+<li><a href="https://ray.readthedocs.io/en/latest/rllib.html">RLlib</a> - Scalable Reinforcement Learning.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/thu-ml/tianshou/#comprehensive-functionality">Tianshou</a> - An elegant PyTorch deep reinforcement learning library. <img height="20" src="img/pytorch_big2.png" alt="PyTorch based/compatible"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/google-deepmind/acme">Acme</a> - A library of reinforcement learning components and agents.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/catalyst-team/catalyst-rl">Catalyst-RL</a> - PyTorch framework for RL research. <img height="20" src="img/pytorch_big2.png" alt="PyTorch based/compatible"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/takuseno/d3rlpy">d3rlpy</a> - An offline deep reinforcement learning library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/opendilab/DI-engine">DI-engine</a> - OpenDILab Decision AI Engine. <img height="20" src="img/pytorch_big2.png" alt="PyTorch based/compatible"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/tensorflow/agents">TF-Agents</a> - A library for Reinforcement Learning in TensorFlow. <img height="20" src="img/tf_big2.png" alt="TensorFlow"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/reinforceio/tensorforce">TensorForce</a> - A TensorFlow library for applied reinforcement learning. <img height="20" src="img/tf_big2.png" alt="TensorFlow"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/deepmind/trfl">TRFL</a> - TensorFlow Reinforcement Learning. <img height="20" src="img/tf_big2.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/google/dopamine">Dopamine</a> - A research framework for fast prototyping of reinforcement learning algorithms.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/keras-rl/keras-rl">keras-rl</a> - Deep Reinforcement Learning for Keras. <img height="20" src="img/keras_big.png" alt="Keras compatible"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/rlworkgroup/garage">garage</a> - A toolkit for reproducible reinforcement learning research.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/facebookresearch/Horizon">Horizon</a> - A platform for Applied Reinforcement Learning.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/astooke/rlpyt">rlpyt</a> - Reinforcement Learning in PyTorch. <img height="20" src="img/pytorch_big2.png" alt="PyTorch based/compatible"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/vwxyzjn/cleanrl">cleanrl</a> - High-quality single file implementation of Deep Reinforcement Learning algorithms with research-friendly features (PPO, DQN, C51, DDPG, TD3, SAC, PPG).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/iffiX/machin">Machin</a> -  A reinforcement library designed for pytorch. <img height="20" src="img/pytorch_big2.png" alt="PyTorch based/compatible"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/Toni-SM/skrl">SKRL</a> - Modular reinforcement learning library (on PyTorch and JAX) with support for NVIDIA Isaac Gym, Isaac Orbit and Omniverse Isaac Gym. <img height="20" src="img/pytorch_big2.png" alt="PyTorch based/compatible"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/HumanCompatibleAI/imitation">Imitation</a> - Clean PyTorch implementations of imitation and reward learning algorithms. <img height="20" src="img/pytorch_big2.png" alt="PyTorch based/compatible"></li>
+</('ul', 0)>
+<h2>Graph Machine Learning</h2>
+<ul>
+<li><a href="https://github.com/rusty1s/pytorch<em>geometric">pytorch</em>geometric</a> - Geometric Deep Learning Extension Library for PyTorch. <img height="20" src="img/pytorch_big2.png" alt="PyTorch based/compatible"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/benedekrozemberczki/pytorch<em>geometric</em>temporal">pytorch<em>geometric</em>temporal</a> - Temporal Extension Library for PyTorch Geometric. <img height="20" src="img/pytorch_big2.png" alt="PyTorch based/compatible"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/SherylHYX/pytorch<em>geometric</em>signed<em>directed">PyTorch Geometric Signed Directed</a> -  A signed/directed graph neural network extension library for PyTorch Geometric. <img height="20" src="img/pytorch</em>big2.png" alt="PyTorch based/compatible"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/dmlc/dgl">dgl</a> - Python package built to ease deep learning on graph, on top of existing DL frameworks. <img height="20" src="img/pytorch<em>big2.png" alt="PyTorch based/compatible"> <img height="20" src="img/tf</em>big2.png" alt="TensorFlow"> <img height="20" src="img/mxnet_big.png" alt="MXNet based"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/danielegrattarola/spektral">Spektral</a> - Deep learning on graphs. <img height="20" src="img/keras_big.png" alt="Keras compatible"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/stellargraph/stellargraph">StellarGraph</a> - Machine Learning on Graphs. <img height="20" src="img/tf<em>big2.png" alt="TensorFlow">  <img height="20" src="img/keras</em>big.png" alt="Keras compatible"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/google-deepmind/graph<em>nets">Graph Nets</a> - Build Graph Nets in Tensorflow. <img height="20" src="img/tf</em>big2.png" alt="TensorFlow"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/tensorflow/gnn">TensorFlow GNN</a> - A library to build Graph Neural Networks on the TensorFlow platform. <img height="20" src="img/tf_big2.png" alt="TensorFlow"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/THUMNLab/AutoGL">Auto Graph Learning</a> -An autoML framework & toolkit for machine learning on graphs.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/facebookresearch/PyTorch-BigGraph">PyTorch-BigGraph</a> - Generate embeddings from large-scale graph-structured data. <img height="20" src="img/pytorch_big2.png" alt="PyTorch based/compatible"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/THUMNLab/AutoGL">Auto Graph Learning</a> - An autoML framework & toolkit for machine learning on graphs.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/benedekrozemberczki/karateclub">Karate Club</a> - An unsupervised machine learning library for graph-structured data.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/benedekrozemberczki/littleballoffur">Little Ball of Fur</a> - A library for sampling graph structured data.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/EdisonLeeeee/GreatX">GreatX</a> - A graph reliability toolbox based on PyTorch and PyTorch Geometric (PyG). <img height="20" src="img/pytorch_big2.png" alt="PyTorch based/compatible"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/google-deepmind/jraph">Jraph</a> - A Graph Neural Network Library in Jax.</li>
+</('ul', 0)>
+<h2>Learning-to-Rank & Recommender Systems</h2>
+<ul>
+<li><a href="https://github.com/lyst/lightfm">LightFM</a> - A Python implementation of LightFM, a hybrid recommendation algorithm.</li>
+</ul>
+<ul>
+<li><a href="https://maciejkula.github.io/spotlight/">Spotlight</a> - Deep recommender models using PyTorch.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/NicolasHug/Surprise">Surprise</a> - A Python scikit for building and analyzing recommender systems.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/RUCAIBox/RecBole">RecBole</a> - A unified, comprehensive and efficient recommendation library. <img height="20" src="img/pytorch_big2.png" alt="PyTorch based/compatible"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/allegro/allRank">allRank</a> - allRank is a framework for training learning-to-rank neural models based on PyTorch. <img height="20" src="img/pytorch_big2.png" alt="PyTorch based/compatible"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/tensorflow/recommenders">TensorFlow Recommenders</a> - A library for building recommender system models using TensorFlow. <img height="20" src="img/tf<em>big2.png" alt="TensorFlow"> <img height="20" src="img/keras</em>big.png" alt="Keras compatible"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/tensorflow/ranking">TensorFlow Ranking</a> - Learning to Rank in TensorFlow. <img height="20" src="img/tf_big2.png" alt="TensorFlow"> </li>
+</('ul', 0)>
+<h2>Probabilistic Graphical Models</h2>
+<ul>
+<li><a href="https://github.com/jmschrei/pomegranate">pomegranate</a> - Probabilistic and graphical models for Python. <img height="20" src="img/pytorch_big2.png" alt="PyTorch based/compatible"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/pgmpy/pgmpy">pgmpy</a> - A python library for working with Probabilistic Graphical Models.</li>
+</ul>
+<ul>
+<li><a href="https://agrum.gitlab.io/">pyAgrum</a> - A GRaphical Universal Modeler.</li>
+</('ul', 0)>
+<h2>Probabilistic Methods</h2>
+<ul>
+<li><a href="https://github.com/uber/pyro">pyro</a> - A flexible, scalable deep probabilistic programming library built on PyTorch. <img height="20" src="img/pytorch_big2.png" alt="PyTorch based/compatible"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/pymc-devs/pymc">PyMC</a> - Bayesian Stochastic Modelling in Python.</li>
+</ul>
+<ul>
+<li><a href="http://zhusuan.readthedocs.io/en/latest/">ZhuSuan</a> - Bayesian Deep Learning. <img height="20" src="img/tf_big2.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="http://gpflow.readthedocs.io/en/latest/?badge=latest">GPflow</a> - Gaussian processes in TensorFlow. <img height="20" src="img/tf_big2.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/PGM-Lab/InferPy">InferPy</a> - Deep Probabilistic Modelling Made Easy.  <img height="20" src="img/tf_big2.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/stan-dev/pystan">PyStan</a> - Bayesian inference using the No-U-Turn sampler (Python interface).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/AmazaspShumik/sklearn-bayes">sklearn-bayes</a> - Python package for Bayesian Machine Learning with scikit-learn API. <img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/alan-turing-institute/skpro">skpro</a> - Supervised domain-agnostic prediction framework for probabilistic modelling by <a href="https://www.turing.ac.uk/">The Alan Turing Institute</a>. <img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/ctallec/pyvarinf">PyVarInf</a> - Bayesian Deep Learning methods with Variational Inference for PyTorch. <img height="20" src="img/pytorch_big2.png" alt="PyTorch based/compatible"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/dfm/emcee">emcee</a> - The Python ensemble sampling toolkit for affine-invariant MCMC.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jvkersch/hsmmlearn">hsmmlearn</a> - A library for hidden semi-Markov models with explicit durations.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mattjj/pyhsmm">pyhsmm</a> - Bayesian inference in HSMMs and HMMs.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/cornellius-gp/gpytorch">GPyTorch</a> - A highly efficient and modular implementation of Gaussian Processes in PyTorch. <img height="20" src="img/pytorch_big2.png" alt="PyTorch based/compatible"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/TeamHG-Memex/sklearn-crfsuite">sklearn-crfsuite</a> - A scikit-learn-inspired API for CRFsuite. <img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</('ul', 0)>
+<h2>Model Explanation</h2>
+
+<ul>
+<li><a href="https://github.com/ModelOriented/DALEX">dalex</a> - moDel Agnostic Language for Exploration and explanation. <img height="20" src="img/sklearn<em>big.png" alt="sklearn"><img height="20" src="img/R</em>big.png" alt="R inspired/ported lib"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/benedekrozemberczki/shapley">Shapley</a> - A data-driven framework to quantify the value of classifiers in a machine learning ensemble.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/SeldonIO/alibi">Alibi</a> - Algorithms for monitoring and explaining machine learning models.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/marcotcr/anchor">anchor</a> - Code for "High-Precision Model-Agnostic Explanations" paper.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dssg/aequitas">aequitas</a> - Bias and Fairness Audit Toolkit.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/MarcelRobeer/ContrastiveExplanation">Contrastive Explanation</a> - Contrastive Explanation (Foil Trees). <img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/DistrictDataLabs/yellowbrick">yellowbrick</a> - Visual analysis and diagnostic tools to facilitate machine learning model selection. <img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/reiinakano/scikit-plot">scikit-plot</a> - An intuitive library to add plotting functionality to scikit-learn objects. <img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/slundberg/shap">shap</a> - A unified approach to explain the output of any machine learning model. <img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/TeamHG-Memex/eli5">ELI5</a> - A library for debugging/inspecting machine learning classifiers and explaining their predictions.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/marcotcr/lime">Lime</a> - Explaining the predictions of any machine learning classifier. <img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/adebayoj/fairml">FairML</a> - FairML is a python toolbox auditing the machine learning models for bias. <img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/Jianbo-Lab/L2X">L2X</a> - Code for replicating the experiments in the paper <em>Learning to Explain: An Information-Theoretic Perspective on Model Interpretation</em>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/SauceCat/PDPbox">PDPbox</a> - Partial dependence plot toolbox.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/AustinRochford/PyCEbox">PyCEbox</a> - Python Individual Conditional Expectation Plot Toolbox.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/datascienceinc/Skater">Skater</a> - Python Library for Model Interpretation.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tensorflow/model-analysis">model-analysis</a> - Model analysis tools for TensorFlow. <img height="20" src="img/tf_big2.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/cosmicBboy/themis-ml">themis-ml</a> - A library that implements fairness-aware machine learning algorithms. <img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/andosa/treeinterpreter">treeinterpreter</a> - Interpreting scikit-learn's decision tree and random forest predictions. <img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/IBM/AIX360">AI Explainability 360</a> - Interpretability and explainability of data and machine learning models.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/keunwoochoi/Auralisation">Auralisation</a> - Auralisation of learned features in CNN (for audio).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/bourdakos1/CapsNet-Visualization">CapsNet-Visualization</a> - A visualization of the CapsNet layers to better understand how it works.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tensorflow/lucid">lucid</a> - A collection of infrastructure and tools for research in neural network interpretability.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lutzroeder/Netron">Netron</a> - Visualizer for deep learning and machine learning models (no Python code, but visualizes models from most Python Deep Learning frameworks).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dlguys/flashlight">FlashLight</a> - Visualization Tool for your NeuralNetwork.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lanpa/tensorboard-pytorch">tensorboard-pytorch</a> - Tensorboard for PyTorch (and chainer, mxnet, numpy, ...).</li>
+</('ul', 0)>
+<h2>Genetic Programming</h2>
+<ul>
+<li><a href="https://github.com/trevorstephens/gplearn">gplearn</a> - Genetic Programming in Python. <img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/ahmedfgad/GeneticAlgorithmPython">PyGAD</a> - Genetic Algorithm in Python. <img height="20" src="img/pytorch<em>big2.png" alt="PyTorch based/compatible"> <img height="20" src="img/keras</em>big.png" alt="keras"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/DEAP/deap">DEAP</a> - Distributed Evolutionary Algorithms in Python.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kstaats/karoo<em>gp">karoo</em>gp</a> - A Genetic Programming platform for Python with GPU support. <img height="20" src="img/tf_big2.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/hchasestevens/monkeys">monkeys</a> - A strongly-typed genetic programming framework for Python.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/manuel-calzolari/sklearn-genetic">sklearn-genetic</a> - Genetic feature selection module for scikit-learn. <img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</ul>
+<a name="opt"></a>
+<h2>Optimization</h2>
+<ul>
+<li><a href="https://github.com/optuna/optuna">Optuna</a> - A hyperparameter optimization framework.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/anyoptimization/pymoo">pymoo</a> - Multi-objective Optimization in Python.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/CMA-ES/pycma?tab=readme-ov-file">pycma</a> - Python implementation of CMA-ES.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/HIPS/Spearmint">Spearmint</a> - Bayesian optimization.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pytorch/botorch">BoTorch</a> - Bayesian optimization in PyTorch. <img height="20" src="img/pytorch_big2.png" alt="PyTorch based/compatible"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/guofei9987/scikit-opt">scikit-opt</a> - Heuristic Algorithms for optimization.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/rodrigo-arenas/Sklearn-genetic-opt">sklearn-genetic-opt</a> - Hyperparameters tuning and feature selection using evolutionary algorithms. <img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/automl/SMAC3">SMAC3</a> - Sequential Model-based Algorithm Configuration.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/claesenm/optunity">Optunity</a> - Is a library containing various optimizers for hyperparameter tuning.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/hyperopt/hyperopt">hyperopt</a> - Distributed Asynchronous Hyperparameter Optimization in Python.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/hyperopt/hyperopt-sklearn">hyperopt-sklearn</a> - Hyper-parameter optimization for sklearn. <img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/rsteca/sklearn-deap">sklearn-deap</a> - Use evolutionary algorithms instead of gridsearch in scikit-learn. <img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/sigopt/sigopt<em>sklearn">sigopt</em>sklearn</a> - SigOpt wrappers for scikit-learn methods. <img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/fmfn/BayesianOptimization">Bayesian Optimization</a> - A Python implementation of global optimization with gaussian processes.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/befelix/SafeOpt">SafeOpt</a> - Safe Bayesian Optimization.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/scikit-optimize/scikit-optimize">scikit-optimize</a> - Sequential model-based optimization with a <code>scipy.optimize</code> interface.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/100/Solid">Solid</a> - A comprehensive gradient-free optimization framework written in Python.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ljvmiranda921/pyswarms">PySwarms</a> - A research toolkit for particle swarm optimization in Python.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Project-Platypus/Platypus">Platypus</a> - A Free and Open Source Python Library for Multiobjective Optimization.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/GPflow/GPflowOpt">GPflowOpt</a> - Bayesian Optimization using GPflow. <img height="20" src="img/tf_big2.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/rflamary/POT">POT</a> - Python Optimal Transport library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/autonomio/talos">Talos</a> - Hyperparameter Optimization for Keras Models.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/stevengj/nlopt">nlopt</a> - Library for nonlinear optimization (global and local, constrained or unconstrained).</li>
+</ul>
+<ul>
+<li><a href="https://developers.google.com/optimization">OR-Tools</a> - An open-source software suite for optimization by Google; provides a unified programming interface to a half dozen solvers: SCIP, GLPK, GLOP, CP-SAT, CPLEX, and Gurobi.</li>
+</('ul', 0)>
+<h2>Feature Engineering</h2>
+
+<h3>General</h3>
+<ul>
+<li><a href="https://github.com/Featuretools/featuretools">Featuretools</a> - Automated feature engineering.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/feature-engine/feature<em>engine">Feature Engine</a> - Feature engineering package with sklearn-like functionality. <img height="20" src="img/sklearn</em>big.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/IIIS-Li-Group/OpenFE">OpenFE</a> - Automated feature generation with expert-level performance.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dougalsutherland/skl-groups">skl-groups</a> - A scikit-learn addon to operate on set/"group"-based features. <img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/machinalis/featureforge">Feature Forge</a> - A set of tools for creating and testing machine learning features. <img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/lacava/few">few</a> - A feature engineering wrapper for sklearn. <img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/EpistasisLab/scikit-mdr">scikit-mdr</a> - A sklearn-compatible Python implementation of Multifactor Dimensionality Reduction (MDR) for feature construction. <img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/blue-yonder/tsfresh">tsfresh</a> - Automatic extraction of relevant features from time series. <img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/dirty-cat/dirty<em>cat">dirty</em>cat</a> - Machine learning on dirty tabular data (especially: string-based variables for classifcation and regression). <img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/NITRO-AI/NitroFE">NitroFE</a> - Moving window features. <img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/chrislemke/sk-transformers">sk-transformer</a> - A collection of various pandas & scikit-learn compatible transformers for all kinds of preprocessing and feature engineering steps <img height="20" src="img/pandas_big.png" alt="pandas compatible"></li>
+</('ul', 0)>
+<h3>Feature Selection</h3>
+<ul>
+<li><a href="https://github.com/jundongl/scikit-feature">scikit-feature</a> - Feature selection repository in Python.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/scikit-learn-contrib/boruta<em>py">boruta</em>py</a> - Implementations of the Boruta all-relevant feature selection method. <img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/chasedehan/BoostARoota">BoostARoota</a> - A fast xgboost feature selection algorithm. <img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/EpistasisLab/scikit-rebate">scikit-rebate</a> - A scikit-learn-compatible Python implementation of ReBATE, a suite of Relief-based feature selection algorithms for Machine Learning. <img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/jaswinder9051998/zoofs">zoofs</a> - A feature selection library based on evolutionary algorithms.</li>
+</('ul', 0)>
+<h2>Visualization</h2>
+<h3>General Purposes</h3>
+<ul>
+<li><a href="https://github.com/matplotlib/matplotlib">Matplotlib</a> - Plotting with Python.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mwaskom/seaborn">seaborn</a> - Statistical data visualization using matplotlib.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/olgabot/prettyplotlib">prettyplotlib</a> - Painlessly create beautiful matplotlib plots.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/marcharper/python-ternary">python-ternary</a> - Ternary plotting library for Python with matplotlib.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ResidentMario/missingno">missingno</a> - Missing data visualization module for Python.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/spotify/chartify/">chartify</a> - Python library that makes it easy for data scientists to create charts.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/janpipek/physt">physt</a> - Improved histograms.</li>
+</('ul', 0)>
+<h3>Interactive plots</h3>
+<ul>
+<li><a href="https://github.com/t-makaro/animatplot">animatplot</a> - A python package for animating plots built on matplotlib.</li>
+</ul>
+<ul>
+<li><a href="https://plot.ly/python/">plotly</a> - A Python library that makes interactive and publication-quality graphs.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/bokeh/bokeh">Bokeh</a> - Interactive Web Plotting for Python.</li>
+</ul>
+<ul>
+<li><a href="https://altair-viz.github.io/">Altair</a> - Declarative statistical visualization library for Python. Can easily do many data transformation within the code to create graph</li>
+</ul>
+<ul>
+<li><a href="https://github.com/bqplot/bqplot">bqplot</a> - Plotting library for IPython/Jupyter notebooks</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pyecharts/pyecharts">pyecharts</a> - Migrated from <a href="https://github.com/apache/echarts">Echarts</a>, a charting and visualization library, to Python's interactive visual drawing library.<img height="20" src="img/pyecharts.png" alt="pyecharts"> <img height="20" src="img/echarts.png" alt="echarts"></li>
+</('ul', 0)>
+<h3>Map</h3>
+<ul>
+<li><a href="https://python-visualization.github.io/folium/quickstart.html#Getting-Started">folium</a> - Makes it easy to visualize data on an interactive open street map</li>
+</ul>
+<ul>
+<li><a href="https://github.com/giswqs/geemap">geemap</a> - Python package for interactive mapping with Google Earth Engine (GEE)</li>
+</('ul', 0)>
+<h3>Automatic Plotting</h3>
+<ul>
+<li><a href="https://github.com/ioam/holoviews">HoloViews</a> - Stop plotting your data - annotate your data and let it visualize itself.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/AutoViML/AutoViz">AutoViz</a>: Visualize data automatically with 1 line of code (ideal for machine learning)</li>
+</ul>
+<ul>
+<li><a href="https://github.com/fbdesignpro/sweetviz">SweetViz</a>: Visualize and compare datasets, target values and associations, with one line of code.</li>
+</('ul', 0)>
+<h3>NLP</h3>
+<ul>
+<li><a href="https://github.com/bmabey/pyLDAvis">pyLDAvis</a>: Visualize interactive topic model</li>
+</('ul', 0)>
+<h2>Deployment</h2>
+<ul>
+<li><a href="https://fastapi.tiangolo.com/">fastapi</a> - Modern, fast (high-performance), a web framework for building APIs with Python</li>
+</ul>
+<ul>
+<li><a href="https://www.streamlit.io/">streamlit</a> - Make it easy to deploy the machine learning model</li>
+</ul>
+<ul>
+<li><a href="https://github.com/streamsync-cloud/streamsync">streamsync</a> - No-code in the front, Python in the back. An open-source framework for creating data apps.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/gradio-app/gradio">gradio</a> - Create UIs for your machine learning model in Python in 3 minutes.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mckinsey/vizro">Vizro</a> - A toolkit for creating modular data visualization applications.</li>
+</ul>
+<ul>
+<li><a href="https://datapane.com/">datapane</a> - A collection of APIs to turn scripts and notebooks into interactive reports.</li>
+</ul>
+<ul>
+<li><a href="https://mybinder.org/">binder</a> - Enable sharing and execute Jupyter Notebooks</li>
+</('ul', 0)>
+<h2>Statistics</h2>
+<ul>
+<li><a href="https://github.com/mouradmourafiq/pandas-summary">pandas<em>summary</a> - Extension to pandas dataframes describe function. <img height="20" src="img/pandas</em>big.png" alt="pandas compatible"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/pandas-profiling/pandas-profiling">Pandas Profiling</a> - Create HTML profiling reports from pandas DataFrame objects. <img height="20" src="img/pandas_big.png" alt="pandas compatible"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/statsmodels/statsmodels">statsmodels</a> - Statistical modeling and econometrics in Python.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jealous/stockstats">stockstats</a> - Supply a wrapper `<code>StockDataFrame</code><code> based on the </code><code>pandas.DataFrame</code>` with inline stock statistics/indicators support.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jsvine/weightedcalcs">weightedcalcs</a> - A pandas-based utility to calculate weighted means, medians, distributions, standard deviations, and more.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/maximtrp/scikit-posthocs">scikit-posthocs</a> - Pairwise Multiple Comparisons Post-hoc Tests.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/quantopian/alphalens">Alphalens</a> - Performance analysis of predictive (alpha) stock factors.</li>
+</('ul', 0)>
+<h2>Data Manipulation</h2>
+
+<h3>Data Frames</h3>
+<ul>
+<li><a href="https://pandas.pydata.org/pandas-docs/stable/">pandas</a> - Powerful Python data analysis toolkit.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pola-rs/polars">polars</a> - A fast multi-threaded, hybrid-out-of-core DataFrame library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/manahl/arctic">Arctic</a> - High-performance datastore for time series and tick data.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/h2oai/datatable">datatable</a> - Data.table for Python. <img height="20" src="img/R_big.png" alt="R inspired/ported lib"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/pandas-profiling/pandas-profiling">pandas_profiling</a> - Create HTML profiling reports from pandas DataFrame objects</li>
+</ul>
+<ul>
+<li><a href="https://github.com/rapidsai/cudf">cuDF</a> - GPU DataFrame Library. <img height="20" src="img/pandas<em>big.png" alt="pandas compatible"> <img height="20" src="img/gpu</em>big.png" alt="GPU accelerated"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/blaze/blaze">blaze</a> - NumPy and pandas interface to Big Data. <img height="20" src="img/pandas_big.png" alt="pandas compatible"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/yhat/pandasql">pandasql</a> -  Allows you to query pandas DataFrames using SQL syntax. <img height="20" src="img/pandas_big.png" alt="pandas compatible"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/pydata/pandas-gbq">pandas-gbq</a> - pandas Google Big Query. <img height="20" src="img/pandas_big.png" alt="pandas compatible"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/alan-turing-institute/xpandas">xpandas</a> - Universal 1d/2d data containers with Transformers .functionality for data analysis by <a href="https://www.turing.ac.uk/">The Alan Turing Institute</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/svenkreiss/pysparkling">pysparkling</a> - A pure Python implementation of Apache Spark's RDD and DStream interfaces. <img height="20" src="img/spark_big.png" alt="Apache Spark based"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/modin-project/modin">modin</a> - Speed up your pandas workflows by changing a single line of code. <img height="20" src="img/pandas_big.png" alt="pandas compatible"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/jmcarpenter2/swifter">swifter</a> - A package that efficiently applies any function to a pandas dataframe or series in the fastest available manner.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/eyaltrabelsi/pandas-log">pandas-log</a> - A package that allows providing feedback about basic pandas operations and finds both business logic and performance issues.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/vaexio/vaex">vaex</a> - Out-of-Core DataFrames for Python, ML, visualize and explore big tabular data at a billion rows per second.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pydata/xarray">xarray</a> - Xarray combines the best features of NumPy and pandas for multidimensional data selection by supplementing numerical axis labels with named dimensions for more intuitive, concise, and less error-prone indexing routines.</li>
+</('ul', 0)>
+<h3>Pipelines</h3>
+<ul>
+<li><a href="https://github.com/shaypal5/pdpipe">pdpipe</a> - Sasy pipelines for pandas DataFrames.</li>
+</ul>
+<ul>
+<li><a href="https://sspipe.github.io/">SSPipe</a> - Python pipe (|) operator with support for DataFrames and Numpy, and Pytorch.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/coursera/pandas-ply">pandas-ply</a> - Functional data manipulation for pandas. <img height="20" src="img/pandas_big.png" alt="pandas compatible"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/dodger487/dplython">Dplython</a> - Dplyr for Python. <img height="20" src="img/R_big.png" alt="R inspired/ported lib"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/scikit-learn-contrib/sklearn-pandas">sklearn-pandas</a> - pandas integration with sklearn. <img height="20" src="img/sklearn<em>big.png" alt="sklearn"> <img height="20" src="img/pandas</em>big.png" alt="pandas compatible"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/analysiscenter/dataset">Dataset</a> - Helps you conveniently work with random or sequential batches of your data and define data processing.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ericmjl/pyjanitor">pyjanitor</a> - Clean APIs for data cleaning. <img height="20" src="img/pandas_big.png" alt="pandas compatible"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/reubano/meza">meza</a> - A Python toolkit for processing tabular data.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/prodmodel/prodmodel">Prodmodel</a> - Build system for data science pipelines.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dovpanda-dev/dovpanda">dopanda</a> -  Hints and tips for using pandas in an analysis environment. <img height="20" src="img/pandas_big.png" alt="pandas compatible"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/DAGWorks-Inc/hamilton">Hamilton</a> - A microframework for dataframe generation that applies Directed Acyclic Graphs specified by a flow of lazily evaluated Python functions.</li>
+</('ul', 0)>
+<h3>Data-centric AI</h3>
+<ul>
+<li><a href="https://github.com/cleanlab/cleanlab">cleanlab</a> - The standard data-centric AI package for data quality and machine learning with messy, real-world data and labels.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/snorkel-team/snorkel">snorkel</a> - A system for quickly generating training data with weak supervision.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sfu-db/dataprep">dataprep</a> - Collect, clean, and visualize your data in Python with a few lines of code.</li>
+</('ul', 0)>
+<h3>Synthetic Data</h3>
+
+<ul>
+<li><a href="https://github.com/ydataai/ydata-synthetic">ydata-synthetic</a> - A package to generate synthetic tabular and time-series data leveraging the state-of-the-art generative models. <img height="20" src="img/pandas_big.png" alt="pandas compatible"></li>
+</('ul', 0)>
+<h2>Distributed Computing</h2>
+<ul>
+<li><a href="https://github.com/uber/horovod">Horovod</a> - Distributed training framework for TensorFlow, Keras, PyTorch, and Apache MXNet. <img height="20" src="img/tf_big2.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://spark.apache.org/docs/0.9.0/python-programming-guide.html">PySpark</a> - Exposes the Spark programming model to Python. <img height="20" src="img/spark_big.png" alt="Apache Spark based"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/Samsung/veles">Veles</a> - Distributed machine learning platform.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jubatus/jubatus">Jubatus</a> - Framework and Library for Distributed Online Machine Learning.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Microsoft/DMTK">DMTK</a> - Microsoft Distributed Machine Learning Toolkit.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/PaddlePaddle/Paddle">PaddlePaddle</a> - PArallel Distributed Deep LEarning.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dask/dask-ml">dask-ml</a> - Distributed and parallel machine learning. <img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/dask/distributed">Distributed</a> - Distributed computation in Python.</li>
+</('ul', 0)>
+<h2>Experimentation</h2>
+<ul>
+<li><a href="https://github.com/mlflow/mlflow">mlflow</a> - Open source platform for the machine learning lifecycle.</li>
+</ul>
+<ul>
+<li><a href="https://neptune.ai">Neptune</a> - A lightweight ML experiment tracking, results visualization, and management tool.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/iterative/dvc">dvc</a> - Data Version Control | Git for Data & Models | ML Experiments Management.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tensorchord/envd">envd</a> - 🏕️ machine learning development environment for data science and AI/ML engineering teams.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/IDSIA/sacred">Sacred</a> - A tool to help you configure, organize, log, and reproduce experiments.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/facebook/Ax">Ax</a> - Adaptive Experimentation Platform. <img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</('ul', 0)>
+<h2>Data Validation</h2>
+<ul>
+<li><a href="https://github.com/great-expectations/great<em>expectations">great</em>expectations</a> - Always know what to expect from your data.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/unionai-oss/pandera">pandera</a> - A lightweight, flexible, and expressive statistical data testing library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/deepchecks/deepchecks">deepchecks</a> - Validation & testing of ML models and data during model development, deployment, and production. <img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/evidentlyai/evidently">evidently</a> - Evaluate and monitor ML models from validation to production.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tensorflow/data-validation">TensorFlow Data Validation</a> - Library for exploring and validating machine learning data.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/capitalone/datacompy">DataComPy</a>- A library to compare Pandas, Polars, and Spark data frames. It provides stats and lets users adjust for match accuracy.</li>
+</('ul', 0)>
+<h2>Evaluation</h2>
+<ul>
+<li><a href="https://github.com/statisticianinstilettos/recmetrics">recmetrics</a> - Library of useful metrics and plots for evaluating recommender systems.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/benhamner/Metrics">Metrics</a> - Machine learning evaluation metric.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/edublancas/sklearn-evaluation">sklearn-evaluation</a> - Model evaluation made easy: plots, tables, and markdown reports. <img height="20" src="img/sklearn_big.png" alt="sklearn"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/IBM/AIF360">AI Fairness 360</a> - Fairness metrics for datasets and ML models, explanations, and algorithms to mitigate bias in datasets and models.</li>
+</('ul', 0)>
+<h2>Computations</h2>
+<ul>
+<li><a href="http://www.numpy.org/">numpy</a> - The fundamental package needed for scientific computing with Python.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dask/dask">Dask</a> - Parallel computing with task scheduling. <img height="20" src="img/pandas_big.png" alt="pandas compatible"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/kwgoodman/bottleneck">bottleneck</a> - Fast NumPy array functions written in C.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/cupy/cupy">CuPy</a> - NumPy-like API accelerated with CUDA.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mnick/scikit-tensor">scikit-tensor</a> - Python library for multilinear algebra and tensor factorizations.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pbrod/numdifftools">numdifftools</a> - Solve automatic numerical differentiation problems in one or more variables.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/moble/quaternion">quaternion</a> - Add built-in support for quaternions to numpy.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/python-adaptive/adaptive">adaptive</a> - Tools for adaptive and parallel samping of mathematical functions.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pydata/numexpr">NumExpr</a> - A fast numerical expression evaluator for NumPy that comes with an integrated computing virtual machine to speed calculations up by avoiding memory allocation for intermediate results.</li>
+</('ul', 0)>
+<h2>Web Scraping</h2>
+<ul>
+<li><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">BeautifulSoup</a>: The easiest library to scrape static websites for beginners</li>
+</ul>
+<ul>
+<li><a href="https://scrapy.org/">Scrapy</a>: Fast and extensible scraping library. Can write rules and create customized scraper without touching the core</li>
+</ul>
+<ul>
+<li><a href="https://selenium-python.readthedocs.io/installation.html#introduction">Selenium</a>: Use Selenium Python API to access all functionalities of Selenium WebDriver in an intuitive way like a real user.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/clips/pattern">Pattern</a>: High level scraping for well-establish websites such as Google, Twitter, and Wikipedia. Also has NLP, machine learning algorithms, and visualization</li>
+</ul>
+<ul>
+<li><a href="https://github.com/taspinar/twitterscraper">twitterscraper</a>: Efficient library to scrape Twitter</li>
+</('ul', 0)>
+<h2>Spatial Analysis</h2>
+<ul>
+<li><a href="https://github.com/geopandas/geopandas">GeoPandas</a> - Python tools for geographic data. <img height="20" src="img/pandas_big.png" alt="pandas compatible"></li>
+</ul>
+<ul>
+<li><a href="https://github.com/pysal/pysal">PySal</a> - Python Spatial Analysis Library.</li>
+</('ul', 0)>
+<h2>Quantum Computing</h2>
+<ul>
+<li><a href="https://github.com/Qiskit/qiskit">qiskit</a> - Qiskit is an open-source SDK for working with quantum computers at the level of circuits, algorithms, and application modules.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/quantumlib/Cirq">cirq</a> - A python framework for creating, editing, and invoking Noisy Intermediate Scale Quantum (NISQ) circuits.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/XanaduAI/pennylane">PennyLane</a> - Quantum machine learning, automatic differentiation, and optimization of hybrid quantum-classical computations.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/qmlcode/qml">QML</a> - A Python Toolkit for Quantum Machine Learning.</li>
+</('ul', 0)>
+<h2>Conversion</h2>
+<ul>
+<li><a href="https://github.com/nok/sklearn-porter">sklearn-porter</a> - Transpile trained scikit-learn estimators to C, Java, JavaScript, and others.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/onnx/onnx">ONNX</a> - Open Neural Network Exchange.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Microsoft/MMdnn">MMdnn</a> -  A set of tools to help users inter-operate among different deep learning frameworks.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dmlc/treelite">treelite</a> - Universal model exchange and serialization format for decision tree forests.</li>
+</('ul', 0)>
+<h2>Contributing</h2>
+<p>Contributions are welcome! :sunglasses: </br></p>
+<p>Read the <a href=https://github.com/krzjoa/awesome-python-datascience/blob/master/CONTRIBUTING.md>contribution guideline</a>.</p>
+
+<h2>License</h2>
+<p>This work is licensed under the Creative Commons Attribution 4.0 International License - <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></p>
+
+</body>
+</html>

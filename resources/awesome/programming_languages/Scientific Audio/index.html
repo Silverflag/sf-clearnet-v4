@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Audio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Scientific Audio</h1>
+
+<p><strong>Repository:</strong> https://github.com/faroit/awesome-python-scientific-audio#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<h1>Python for Scientific Audio</h1>
+<p><a href="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg"><img src="https://github.com/sindresorhus/awesome" alt="Awesome</a>"> <a href="https://github.com/faroit/awesome-python-scientific-audio/workflows/CI/badge.svg"><img src="https://github.com/faroit/awesome-python-scientific-audio/actions?query=workflow%3ACI+branch%3Amaster+event%3Apush" alt="Build Status</a>"></p>
+
+<p>The aim of this repository is to create a comprehensive, curated list of python software/tools related and used for scientific research in audio/music applications.</p>
+
+<h2>Contents</h2>
+
+<ul>
+<li><a href="#audio-related-packages">Audio Related Packages</a></li>
+<ul>
+<li><a href="#read-write">Read/Write</a></li>
+</ul>
+<ul>
+<li><a href="#transformations---general-dsp">Transformations - General DSP</a></li>
+</ul>
+<ul>
+<li><a href="#feature-extraction">Feature extraction</a></li>
+</ul>
+<ul>
+<li><a href="#data-augmentation">Data augmentation</a></li>
+</ul>
+<ul>
+<li><a href="#speech-processing">Speech Processing</a></li>
+</ul>
+<ul>
+<li><a href="#environmenta">Environmental Sounds</a></li>
+</ul>
+<ul>
+<li><a href="#perceptial-models---auditory-models">Perceptial Models - Auditory Models</a></li>
+</ul>
+<ul>
+<li><a href="#source-separation">Source Separation</a></li>
+</ul>
+<ul>
+<li><a href="#music-information-retrieval">Music Information Retrieval</a></li>
+</ul>
+<ul>
+<li><a href="#deep-learning">Deep Learning</a></li>
+</ul>
+<ul>
+<li><a href="#symbolic-music---midi---musicology">Symbolic Music - MIDI - Musicology</a></li>
+</ul>
+<ul>
+<li><a href="#realtime-applications">Realtime applications</a></li>
+</ul>
+<ul>
+<li><a href="#web-audio">Web - Audio</a></li>
+</ul>
+<ul>
+<li><a href="#audio-related-apis-and-datasets">Audio related APIs and Datasets</a></li>
+</ul>
+<ul>
+<li><a href="#wrappers-for-audio-plugins">Wrappers for Audio Plugins</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#tutorials">Tutorials</a></li>
+</ul>
+<ul>
+<li><a href="#books">Books</a></li>
+</ul>
+<ul>
+<li><a href="#scientific-papers">Scientific Paper</a></li>
+</ul>
+<ul>
+<li><a href="#other-resources">Other Resources</a></li>
+</ul>
+<ul>
+<li><a href="#related-lists">Related lists</a></li>
+</ul>
+<ul>
+<li><a href="#contributing">Contributing</a></li>
+</ul>
+<ul>
+<li><a href="#license">License</a></li>
+</('ul', 0)>
+<h2>Audio Related Packages</h2>
+
+<ul>
+<li>Total number of packages: 66</li>
+</('ul', 0)>
+<h4>Read-Write</h4>
+
+<ul>
+<li><a href="https://github.com/danilobellini/audiolazy">audiolazy</a> <a href="https://github.com/danilobellini/audiolazy">:octocat:</a> <a href="https://pypi.python.org/pypi/audiolazy/">:package:</a> - Expressive Digital Signal Processing (DSP) package for Python.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/beetbox/audioread">audioread</a> <a href="https://github.com/beetbox/audioread">:octocat:</a> <a href="https://pypi.python.org/pypi/audioread/">:package:</a> - Cross-library (GStreamer + Core Audio + MAD + FFmpeg) audio decoding.</li>
+</ul>
+<ul>
+<li><a href="https://mutagen.readthedocs.io/">mutagen</a> <a href="https://github.com/quodlibet/mutagen">:octocat:</a> <a href="https://pypi.python.org/pypi/mutagen">:package:</a> - Reads and writes all kind of audio metadata for various formats.</li>
+</ul>
+<ul>
+<li><a href="http://docs.mikeboers.com/pyav/">pyAV</a> <a href="https://github.com/mikeboers/PyAV">:octocat:</a> - PyAV is a Pythonic binding for FFmpeg or Libav.</li>
+</ul>
+<ul>
+<li><a href="http://pysoundfile.readthedocs.io/">(Py)Soundfile</a> <a href="https://github.com/bastibe/PySoundFile">:octocat:</a> <a href="https://pypi.python.org/pypi/SoundFile">:package:</a> - Library based on libsndfile, CFFI, and NumPy.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/rabitt/pysox">pySox</a> <a href="https://github.com/rabitt/pysox">:octocat:</a> <a href="https://pypi.python.org/pypi/pysox/">:package:</a> - Wrapper for sox.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/faroit/stempeg">stempeg</a> <a href="https://github.com/faroit/stempeg">:octocat:</a> <a href="https://pypi.python.org/pypi/stempeg/">:package:</a> - read/write of STEMS multistream audio.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/devsnd/tinytag">tinytag</a> <a href="https://github.com/devsnd/tinytag">:octocat:</a> <a href="https://pypi.python.org/pypi/tinytag/">:package:</a> - reading music meta data of MP3, OGG, FLAC and Wave files.</li>
+</('ul', 0)>
+<h4>Transformations - General DSP</h4>
+
+<ul>
+<li><a href="http://python-acoustics.github.io/python-acoustics/">acoustics</a> <a href="https://github.com/python-acoustics/python-acoustics/">:octocat:</a> <a href="https://pypi.python.org/pypi/acoustics">:package:</a> - useful tools for acousticians.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mbrucher/AudioTK">AudioTK</a> <a href="https://github.com/mbrucher/AudioTK">:octocat:</a> - DSP filter toolbox (lots of filters).</li>
+</ul>
+<ul>
+<li><a href="https://audiotsm.readthedocs.io/">AudioTSM</a> <a href="https://github.com/Muges/audiotsm">:octocat:</a> <a href="https://pypi.python.org/pypi/audiotsm/">:package:</a> - real-time audio time-scale modification procedures.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/detly/gammatone">Gammatone</a> <a href="https://github.com/detly/gammatone">:octocat:</a> - Gammatone filterbank implementation.</li>
+</ul>
+<ul>
+<li><a href="http://pyfftw.github.io/pyFFTW/">pyFFTW</a> <a href="https://github.com/pyFFTW/pyFFTW">:octocat:</a> <a href="https://pypi.python.org/pypi/pyFFTW/">:package:</a> - Wrapper for FFTW(3).</li>
+</ul>
+<ul>
+<li><a href="https://grrrr.org/research/software/nsgt/">NSGT</a> <a href="https://github.com/grrrr/nsgt">:octocat:</a> <a href="https://pypi.python.org/pypi/nsgt">:package:</a> - Non-stationary gabor transform, constant-q.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sergree/matchering">matchering</a> <a href="https://github.com/sergree/matchering">:octocat:</a> <a href="https://pypi.org/project/matchering/">:package:</a> - Automated reference audio mastering.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/nils-werner/mdct">MDCT</a> <a href="https://github.com/nils-werner/mdct">:octocat:</a> <a href="https://pypi.python.org/pypi/mdct">:package:</a> - MDCT transform.</li>
+</ul>
+<ul>
+<li><a href="http://pydub.com">pydub</a> <a href="https://github.com/jiaaro/pydub">:octocat:</a> <a href="https://pypi.python.org/pypi/mdct">:package:</a> - Manipulate audio with a simple and easy high level interface.</li>
+</ul>
+<ul>
+<li><a href="http://tftb.nongnu.org">pytftb</a> <a href="https://github.com/scikit-signal/pytftb">:octocat:</a> - Implementation of the MATLAB Time-Frequency Toolbox.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/LCAV/pyroomacoustics">pyroomacoustics</a> <a href="https://github.com/LCAV/pyroomacoustics">:octocat:</a> <a href="https://pypi.python.org/pypi/pyroomacoustics">:package:</a> - Room Acoustics Simulation (RIR generator)</li>
+</ul>
+<ul>
+<li><a href="https://github.com/bmcfee/pyrubberband">PyRubberband</a> <a href="https://github.com/bmcfee/pyrubberband">:octocat:</a> <a href="https://pypi.python.org/pypi/pyrubberband/">:package:</a> - Wrapper for <a href="http://breakfastquay.com/rubberband/">rubberband</a> to do pitch-shifting and time-stretching.</li>
+</ul>
+<ul>
+<li><a href="http://pywavelets.readthedocs.io">PyWavelets</a> <a href="https://github.com/PyWavelets/pywt">:octocat:</a> <a href="https://pypi.python.org/pypi/PyWavelets">:package:</a> - Discrete Wavelet Transform in Python.</li>
+</ul>
+<ul>
+<li><a href="http://resampy.readthedocs.io">Resampy</a> <a href="https://github.com/bmcfee/resampy">:octocat:</a> <a href="https://pypi.python.org/pypi/resampy">:package:</a> - Sample rate conversion.</li>
+</ul>
+<ul>
+<li><a href="http://www.sfstoolbox.org">SFS-Python</a> <a href="https://github.com/sfstoolbox/sfs-python">:octocat:</a> <a href="https://pypi.python.org/pypi/sfs/">:package:</a> - Sound Field Synthesis Toolbox.</li>
+</ul>
+<ul>
+<li><a href="https://appliedacousticschalmers.github.io/sound<em>field</em>analysis-py/">sound<em>field</em>analysis</a> <a href="https://github.com/AppliedAcousticsChalmers/sound<em>field</em>analysis-py">:octocat:</a> <a href="https://pypi.org/project/sound-field-analysis/">:package:</a> - Analyze, visualize and process sound field data recorded by spherical microphone arrays.</li>
+</ul>
+<ul>
+<li><a href="http://stft.readthedocs.io">STFT</a> <a href="https://github.com/nils-werner/stft">:octocat:</a> <a href="https://pypi.python.org/pypi/stft">:package:</a> - Standalone package for Short-Time Fourier Transform.</li>
+</('ul', 0)>
+<h4>Feature extraction</h4>
+
+<ul>
+<li><a href="http://aubio.org/">aubio</a> <a href="https://github.com/aubio/aubio">:octocat:</a> <a href="https://pypi.python.org/pypi/aubio">:package:</a> - Feature extractor, written in C, Python interface.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/libAudioFlux/audioFlux">audioFlux</a> <a href="https://github.com/libAudioFlux/audioFlux">:octocat:</a> <a href="https://pypi.python.org/pypi/audioflux">:package:</a> - A library for audio and music analysis, feature extraction.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/danilobellini/audiolazy">audiolazy</a> <a href="https://github.com/danilobellini/audiolazy">:octocat:</a> <a href="https://pypi.python.org/pypi/audiolazy/">:package:</a> - Realtime Audio Processing lib, general purpose.</li>
+</ul>
+<ul>
+<li><a href="http://essentia.upf.edu">essentia</a> <a href="https://github.com/MTG/essentia">:octocat:</a> - Music related low level and high level feature extractor, C++ based, includes Python bindings.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jameslyons/python<em>speech</em>features">python<em>speech</em>features</a> <a href="https://github.com/jameslyons/python<em>speech</em>features">:octocat:</a> <a href="https://pypi.python.org/pypi/python<em>speech</em>features">:package:</a> - Common speech features for ASR.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Yaafe/Yaafe">pyYAAFE</a> <a href="https://github.com/Yaafe/Yaafe">:octocat:</a> - Python bindings for YAAFE feature extractor.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/astorfi/speechpy">speechpy</a> <a href="https://github.com/astorfi/speechpy">:octocat:</a> <a href="https://pypi.python.org/pypi/speechpy">:package:</a> - Library for Speech Processing and Recognition, mostly feature extraction for now.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/SuperKogito/spafe">spafe</a> <a href="https://github.com/SuperKogito/spafe">:octocat:</a> <a href="https://pypi.org/project/spafe/">:package:</a> - Python library for features extraction from audio files.</li>
+</('ul', 0)>
+<h4>Data augmentation</h4>
+
+<ul>
+<li><a href="https://github.com/iver56/audiomentations">audiomentations</a> <a href="https://github.com/iver56/audiomentations">:octocat:</a> <a href="https://pypi.org/project/audiomentations/">:package:</a> -  Audio Data Augmentation.</li>
+</ul>
+<ul>
+<li><a href="https://muda.readthedocs.io/en/latest/">muda</a> <a href="https://github.com/bmcfee/muda">:octocat:</a> <a href="https://pypi.python.org/pypi/muda">:package:</a> -  Musical Data Augmentation.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/SuperKogito/pydiogment">pydiogment</a> <a href="https://github.com/SuperKogito/pydiogment">:octocat:</a> <a href="https://pypi.org/project/pydiogment/">:package:</a> -  Audio Data Augmentation.</li>
+</('ul', 0)>
+<h4>Speech Processing</h4>
+
+<ul>
+<li><a href="https://www.readbeyond.it/aeneas/">aeneas</a> <a href="https://github.com/readbeyond/aeneas/">:octocat:</a> <a href="https://pypi.python.org/pypi/aeneas/">:package:</a> - Forced aligner, based on MFCC+DTW, 35+ languages.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mozilla/DeepSpeech">deepspeech</a> <a href="https://github.com/mozilla/DeepSpeech">:octocat:</a> <a href="https://pypi.org/project/deepspeech/">:package:</a> - Pretrained automatic speech recognition.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lowerquality/gentle">gentle</a> <a href="https://github.com/lowerquality/gentle">:octocat:</a> - Forced-aligner built on Kaldi.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/YannickJadoul/Parselmouth">Parselmouth</a> <a href="https://github.com/YannickJadoul/Parselmouth">:octocat:</a> <a href="https://pypi.org/project/praat-parselmouth/">:package:</a> - Python interface to the <a href="http://www.praat.org">Praat</a> phonetics and speech analysis, synthesis, and manipulation software.</li>
+</ul>
+<ul>
+<li><a href="https://persephone.readthedocs.io/en/latest/">persephone</a> <a href="https://github.com/persephone-tools/persephone">:octocat:</a> <a href="https://pypi.org/project/persephone/">:package:</a> - Automatic phoneme transcription tool.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pyannote/pyannote-audio">pyannote.audio</a> <a href="https://github.com/pyannote/pyannote-audio">:octocat:</a> <a href="https://pypi.org/project/pyannote-audio/">:package:</a> - Neural building blocks for speaker diarization.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tyiannak/pyAudioAnalysis">pyAudioAnalysis</a>² <a href="https://github.com/tyiannak/pyAudioAnalysis">:octocat:</a> <a href="https://pypi.python.org/pypi/pyAudioAnalysis/">:package:</a> - Feature Extraction, Classification, Diarization.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/wiseman/py-webrtcvad">py-webrtcvad</a> <a href="https://github.com/wiseman/py-webrtcvad">:octocat:</a> <a href="https://pypi.python.org/pypi/webrtcvad/">:package:</a> -  Interface to the WebRTC Voice Activity Detector.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/vBaiCai/python-pesq">pypesq</a> <a href="https://github.com/vBaiCai/python-pesq">:octocat:</a> - Wrapper for the PESQ score calculation.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mpariente/pystoi">pystoi</a> <a href="https://github.com/mpariente/pystoi">:octocat:</a> <a href="https://pypi.org/project/pystoi">:package:</a> - Short Term Objective Intelligibility measure (STOI).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/JeremyCCHsu/Python-Wrapper-for-World-Vocoder">PyWorldVocoder</a> <a href="https://github.com/JeremyCCHsu/Python-Wrapper-for-World-Vocoder">:octocat:</a> - Wrapper for Morise's World Vocoder.</li>
+</ul>
+<ul>
+<li><a href="https://montrealcorpustools.github.io/Montreal-Forced-Aligner/">Montreal Forced Aligner</a> <a href="https://github.com/MontrealCorpusTools/Montreal-Forced-Aligner">:octocat:</a> - Forced aligner, based on Kaldi (HMM), English (others can be trained).</li>
+</ul>
+<ul>
+<li><a href="http://lium.univ-lemans.fr/sidekit/">SIDEKIT</a> <a href="https://pypi.python.org/pypi/SIDEKIT/">:package:</a> - Speaker and Language recognition.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Uberi/speech<em>recognition">SpeechRecognition</a> <a href="https://github.com/Uberi/speech</em>recognition">:octocat:</a> <a href="https://pypi.python.org/pypi/SpeechRecognition/">:package:</a> -  Wrapper for several ASR engines and APIs, online and offline.</li>
+</('ul', 0)>
+<h4>Environmental Sounds</h4>
+
+<ul>
+<li><a href="http://tut-arg.github.io/sed<em>eval">sed</em>eval</a> <a href="https://github.com/TUT-ARG/sed<em>eval">:octocat:</a> <a href="https://pypi.org/project/sed</em>eval/">:package:</a> - Evaluation toolbox for Sound Event Detection</li>
+</('ul', 0)>
+<h4>Perceptial Models - Auditory Models</h4>
+
+<ul>
+<li><a href="https://github.com/mrkrd/cochlea">cochlea</a> <a href="https://github.com/mrkrd/cochlea">:octocat:</a> <a href="https://pypi.python.org/pypi/cochlea/">:package:</a> - Inner ear models.</li>
+</ul>
+<ul>
+<li><a href="http://briansimulator.org/">Brian2</a> <a href="https://github.com/brian-team/brian2">:octocat:</a> <a href="https://pypi.python.org/pypi/Brian2">:package:</a> - Spiking neural networks simulator, includes cochlea model.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/deeuu/loudness">Loudness</a> <a href="https://github.com/deeuu/loudness">:octocat:</a> - Perceived loudness, includes Zwicker, Moore/Glasberg model.</li>
+</ul>
+<ul>
+<li><a href="https://www.christiansteinmetz.com/projects-blog/pyloudnorm">pyloudnorm</a> <a href="https://github.com/csteinmetz1/pyloudnorm">:octocat:</a> - Audio loudness meter and normalization, implements ITU-R BS.1770-4.</li>
+</ul>
+<ul>
+<li><a href="http://www.sfstoolbox.org">Sound Field Synthesis Toolbox</a> <a href="https://github.com/sfstoolbox/sfs-python">:octocat:</a> <a href="https://pypi.python.org/pypi/sfs/">:package:</a> - Sound Field Synthesis Toolbox.</li>
+</('ul', 0)>
+<h4>Source Separation</h4>
+
+<ul>
+<li><a href="https://github.com/aliutkus/commonfate">commonfate</a> <a href="https://github.com/aliutkus/commonfate">:octocat:</a> <a href="https://pypi.python.org/pypi/commonfate">:package:</a> - Common Fate Model and Transform.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/stitchfix/NTFLib">NTFLib</a> <a href="https://github.com/stitchfix/NTFLib">:octocat:</a> - Sparse Beta-Divergence Tensor Factorization.</li>
+</ul>
+<ul>
+<li><a href="https://interactiveaudiolab.github.io/project/nussl.html">NUSSL</a> <a href="https://github.com/interactiveaudiolab/nussl">:octocat:</a> <a href="https://pypi.python.org/pypi/nussl">:package:</a> - Holistic source separation framework including DSP methods and deep learning methods.</li>
+</ul>
+<ul>
+<li><a href="http://nimfa.biolab.si">NIMFA</a> <a href="https://github.com/marinkaz/nimfa">:octocat:</a> <a href="https://pypi.python.org/pypi/nimfa">:package:</a> - Several flavors of non-negative-matrix factorization.</li>
+</('ul', 0)>
+<h4>Music Information Retrieval</h4>
+
+<ul>
+<li><a href="https://github.com/jvbalen/catchy">Catchy</a> <a href="https://github.com/jvbalen/catchy">:octocat:</a> - Corpus Analysis Tools for Computational Hook Discovery.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sevagh/chord-detection">chord-detection</a> <a href="https://github.com/sevagh/chord-detection">:octocat:</a> - Algorithms for chord detection and key estimation.</li>
+</ul>
+<ul>
+<li><a href="https://madmom.readthedocs.io/en/latest/">Madmom</a> <a href="https://github.com/CPJKU/madmom">:octocat:</a> <a href="https://pypi.python.org/pypi/madmom">:package:</a> - MIR packages with strong focus on beat detection, onset detection and chord recognition.</li>
+</ul>
+<ul>
+<li><a href="http://craffel.github.io/mir<em>eval/">mir</em>eval</a> <a href="https://github.com/craffel/mir<em>eval">:octocat:</a> <a href="https://pypi.python.org/pypi/mir</em>eval">:package:</a> - Common scores for various MIR tasks. Also includes bss_eval implementation.</li>
+</ul>
+<ul>
+<li><a href="http://pythonhosted.org/msaf/">msaf</a> <a href="https://github.com/urinieto/msaf">:octocat:</a> <a href="https://pypi.python.org/pypi/msaf">:package:</a> - Music Structure Analysis Framework.</li>
+</ul>
+<ul>
+<li><a href="http://librosa.github.io/librosa/">librosa</a> <a href="https://github.com/librosa/librosa">:octocat:</a> <a href="https://pypi.python.org/pypi/librosa">:package:</a> - General audio and music analysis.</li>
+</('ul', 0)>
+<h4>Deep Learning</h4>
+
+<ul>
+<li><a href="https://github.com/keunwoochoi/kapre">Kapre</a> <a href="https://github.com/keunwoochoi/kapre">:octocat:</a> <a href="https://pypi.python.org/pypi/kapre">:package:</a> - Keras Audio Preprocessors</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pytorch/audio">TorchAudio</a> <a href="https://github.com/pytorch/audio">:octocat:</a> - PyTorch Audio Loaders</li>
+</ul>
+<ul>
+<li><a href="https://github.com/KinWaiCheuk/nnAudio">nnAudio</a> <a href="https://github.com/KinWaiCheuk/nnAudio">:octocat:</a> <a href="https://pypi.org/project/nnAudio/">:package:</a> - Accelerated audio processing using 1D convolution networks in PyTorch.</li>
+</('ul', 0)>
+<h4>Symbolic Music - MIDI - Musicology</h4>
+
+<ul>
+<li><a href="http://web.mit.edu/music21/">Music21</a> <a href="https://github.com/cuthbertLab/music21">:octocat:</a> <a href="https://pypi.python.org/pypi/music21">:package:</a> - Toolkit for Computer-Aided Musicology.</li>
+</ul>
+<ul>
+<li><a href="https://mido.readthedocs.io/en/latest/">Mido</a> <a href="https://github.com/olemb/mido">:octocat:</a> <a href="https://pypi.python.org/pypi/mido">:package:</a> - Realtime MIDI wrapper.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/bspaans/python-mingus">mingus</a> <a href="https://github.com/bspaans/python-mingus">:octocat:</a> <a href="https://pypi.org/project/mingus">:package:</a> - Advanced music theory and notation package with MIDI file and playback support.</li>
+</ul>
+<ul>
+<li><a href="http://craffel.github.io/pretty-midi/">Pretty-MIDI</a> <a href="https://github.com/craffel/pretty-midi">:octocat:</a> <a href="https://pypi.python.org/pypi/pretty-midi">:package:</a> - Utility functions for handling MIDI data in a nice/intuitive way.</li>
+</('ul', 0)>
+<h4>Realtime applications</h4>
+
+<ul>
+<li><a href="https://github.com/nir/jupylet">Jupylet</a> <a href="https://github.com/nir/jupylet">:octocat:</a> - Subtractive, additive, FM, and sample-based sound synthesis.</li>
+</ul>
+<ul>
+<li><a href="http://ajaxsoundstudio.com/software/pyo/">PYO</a> <a href="https://github.com/belangeo/pyo">:octocat:</a> - Realtime audio dsp engine.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/spatialaudio/python-sounddevice">python-sounddevice</a> <a href="http://python-sounddevice.readthedocs.io">:octocat:</a> <a href="https://pypi.python.org/pypi/sounddevice">:package:</a> - PortAudio wrapper providing realtime audio I/O with NumPy.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/AppliedAcousticsChalmers/ReTiSAR">ReTiSAR</a> <a href="https://github.com/AppliedAcousticsChalmers/ReTiSAR">:octocat:</a> - Binarual rendering of streamed or IR-based high-order spherical microphone array signals.</li>
+</('ul', 0)>
+<h4>Web Audio</h4>
+
+<ul>
+<li><a href="https://github.com/Parisson/TimeSide/tree/dev">TimeSide (Beta)</a> <a href="https://github.com/Parisson/TimeSide/tree/dev">:octocat:</a> - high level audio analysis, imaging, transcoding, streaming and labelling.</li>
+</('ul', 0)>
+<h4>Audio Dataset and Dataloaders</h4>
+
+<ul>
+<li><a href="http://beets.io/">beets</a> <a href="https://github.com/beetbox/beets">:octocat:</a> <a href="https://pypi.python.org/pypi/beets">:package:</a> - Music library manager and <a href="https://musicbrainz.org/">MusicBrainz</a> tagger.</li>
+</ul>
+<ul>
+<li><a href="http://dsdtools.readthedocs.io">musdb</a> <a href="https://github.com/sigsep/sigsep-mus-db">:octocat:</a> <a href="https://pypi.python.org/pypi/musdb">:package:</a> - Parse and process the MUSDB18 dataset.</li>
+</ul>
+<ul>
+<li><a href="http://medleydb.readthedocs.io">medleydb</a> <a href="https://github.com/marl/medleydb">:octocat:</a> - Parse <a href="http://medleydb.weebly.com/">medleydb</a> audio + annotations.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/soundcloud/soundcloud-python">Soundcloud API</a> <a href="https://github.com/soundcloud/soundcloud-python">:octocat:</a> <a href="https://pypi.python.org/pypi/soundcloud">:package:</a> - Wrapper for <a href="https://developers.soundcloud.com/">Soundcloud API</a>.</li>
+</ul>
+<ul>
+<li><a href="http://rg3.github.io/youtube-dl/">Youtube-Downloader</a> <a href="https://github.com/rg3/youtube-dl">:octocat:</a> <a href="https://pypi.python.org/pypi/youtube_dl">:package:</a> - Download youtube videos (and the audio).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ynop/audiomate">audiomate</a> <a href="https://github.com/ynop/audiomate">:octocat:</a> <a href="https://pypi.python.org/pypi/audiomate/">:package:</a> - Loading different types of audio datasets.</li>
+</ul>
+<ul>
+<li><a href="https://mirdata.readthedocs.io/en/latest/">mirdata</a> <a href="https://github.com/mir-dataset-loaders/mirdata">:octocat:</a> <a href="https://pypi.python.org/pypi/mirdata">:package:</a> - Common loaders for Music Information Retrieval (MIR) datasets.</li>
+</('ul', 0)>
+<h4>Wrappers for Audio Plugins</h4>
+
+<ul>
+<li><a href="https://code.soundsoftware.ac.uk/projects/vampy-host">VamPy Host</a> <a href="https://pypi.python.org/pypi/vamp">:package:</a> - Interface compiled vamp plugins.</li>
+</('ul', 0)>
+<h2>Tutorials</h2>
+
+<ul>
+<li><a href="https://jakevdp.github.io/WhirlwindTourOfPython/">Whirlwind Tour Of Python</a> [:octocat:](https://github.com/jakevdp/WhirlwindTourOfPython</li>
+</ul>
+<p>) - fast-paced introduction to Python essentials, aimed at researchers and developers.</p>
+<ul>
+<li><a href="http://www.scipy-lectures.org/index.html">Introduction to Numpy and Scipy</a> <a href="https://github.com/scipy-lectures/scipy-lecture-notes">:octocat:</a> - Highly recommended tutorial, covers large parts of the scientific Python ecosystem.</li>
+</ul>
+<ul>
+<li><a href="https://docs.scipy.org/doc/numpy/user/numpy-for-matlab-users.html">Numpy for MATLAB® Users</a> - Short overview of equivalent python functions for switchers.</li>
+</ul>
+<ul>
+<li><a href="http://musicinformationretrieval.com/">MIR Notebooks</a> <a href="https://github.com/stevetjoa/stanford-mir">:octocat:</a> - collection of instructional iPython Notebooks for music information retrieval (MIR).</li>
+</ul>
+<ul>
+<li><a href=" https://github.com/spatialaudio/selected-topics-in-audio-signal-processing-exercises">Selected Topics in Audio Signal Processing</a> - Exercises as iPython notebooks.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=SSyQ0kRHzis">Live-coding a music synthesizer</a> Live-coding video showing how to use the SoundDevice library to reproduce realistic sounds. <a href="https://github.com/cool-RR/python_synthesizer">Code</a>.</li>
+</('ul', 0)>
+<h2>Books</h2>
+
+<ul>
+<li><a href="https://github.com/jakevdp/PythonDataScienceHandbook">Python Data Science Handbook</a> - Jake Vanderplas, Excellent Book and accompanying tutorial notebooks.</li>
+</ul>
+<ul>
+<li><a href="https://www.audiolabs-erlangen.de/fau/professor/mueller/bookFMP">Fundamentals of Music Processing</a> - Meinard Müller, comes with Python exercises.</li>
+</('ul', 0)>
+<h2>Scientific Papers</h2>
+
+<ul>
+<li><a href="http://eprints.maynoothuniversity.ie/4115/1/40.pdf">Python for audio signal processing</a> - John C. Glover, Victor Lazzarini and Joseph Timoney, Linux Audio Conference 2011.</li>
+</ul>
+<ul>
+<li><a href="http://conference.scipy.org/proceedings/scipy2015/pdfs/brian_mcfee.pdf">librosa: Audio and Music Signal Analysis in Python</a>, <a href="https://www.youtube.com/watch?v=MhOdbtPhbLU">Video</a> - Brian McFee, Colin Raffel, Dawen Liang, Daniel P.W. Ellis, Matt McVicar, Eric Battenberg, Oriol Nieto, Scipy 2015.</li>
+</ul>
+<ul>
+<li><a href="https://arxiv.org/abs/1911.01255">pyannote.audio: neural building blocks for speaker diarization</a>, <a href="https://www.youtube.com/watch?v=37R_R82lfwA">Video</a> - Hervé Bredin, Ruiqing Yin, Juan Manuel Coria, Gregory Gelly, Pavel Korshunov, Marvin Lavechin, Diego Fustes, Hadrien Titeux, Wassim Bouaziz, Marie-Philippe Gill, ICASSP 2020.</li>
+</('ul', 0)>
+<h2>Other Resources</h2>
+
+<ul>
+<li><a href="https://www.coursera.org/learn/audio-signal-processing">Coursera Course</a> -  Audio Signal Processing, Python based course from UPF of Barcelona and Stanford University.</li>
+</ul>
+<ul>
+<li><a href="http://dsp-nbsphinx.readthedocs.io/en/nbsphinx-experiment/index.html">Digital Signal Processing Course</a> - Masters Course Material (University of Rostock) with many Python examples.</li>
+</ul>
+<ul>
+<li><a href="https://mircommunity.slack.com">Slack Channel</a> - Music Information Retrieval Community.</li>
+</('ul', 0)>
+<h2>Related lists</h2>
+
+<p>There is already <a href="https://wiki.python.org/moin/PythonInMusic">PythonInMusic</a> but it is not up to date and includes too many packages of special interest that are mostly not relevant for scientific applications. <a href="https://github.com/vinta/awesome-python">Awesome-Python</a> is large curated list of python packages. However, the audio section is very small.</p>
+
+<h2>Contributing</h2>
+
+<p>Your contributions are always welcome! Please take a look at the <a href="CONTRIBUTING.md">contribution guidelines</a> first.</p>
+
+<p>I will keep some pull requests open if I'm not sure whether those libraries are awesome, you could vote for them by adding 👍 to them.</p>
+
+<h2>License</h2>
+
+<p><a href="https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg"><img src="https://creativecommons.org/licenses/by/4.0/" alt="License: CC BY 4.0</a>"></p>
+
+</body>
+</html>

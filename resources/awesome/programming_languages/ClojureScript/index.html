@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClojureScript</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>ClojureScript</h1>
+
+<p><strong>Repository:</strong> https://github.com/hantuzun/awesome-clojurescript#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<p><img src="https://avatars2.githubusercontent.com/u/12118456?v=3&s=75"</p>
+<p>align="right"/></p>
+
+<h1>Awesome ClojureScript</h1>
+
+<h5>A community driven list of ClojureScript books, frameworks, libraries and wrappers.</h5>
+
+<ul>
+<li><em> </em></li>
+<ul>
+<li><a href="#resources">Resources</a></li>
+<ul>
+<li><a href="#books">Books</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#awesome-clojurescript-1">Awesome ClojureScript</a></li>
+<ul>
+<li><a href="#canvas">Canvas</a></li>
+</ul>
+<ul>
+<li><a href="#clientserver-communication">Client/Server Communication</a></li>
+</ul>
+<ul>
+<li><a href="#code-analysis">Code Analysis</a></li>
+</ul>
+<ul>
+<li><a href="#data-serialization">Data Serialization</a></li>
+</ul>
+<ul>
+<li><a href="#data-visualization">Data Visualization</a></li>
+</ul>
+<ul>
+<li><a href="#database">Database</a></li>
+</ul>
+<ul>
+<li><a href="#development">Development</a></li>
+</ul>
+<ul>
+<li><a href="#document-object-model">Document Object Model</a></li>
+</ul>
+<ul>
+<li><a href="#documentation">Documentation</a></li>
+</ul>
+<ul>
+<li><a href="#graphics">Graphics</a></li>
+</ul>
+<ul>
+<li><a href="#http-handler">HTTP Handler</a></li>
+</ul>
+<ul>
+<li><a href="#internationalization">Internationalization</a></li>
+</ul>
+<ul>
+<li><a href="#javascript-interoperability">JavaScript Interoperability</a></li>
+</ul>
+<ul>
+<li><a href="#miscellaneous">Miscellaneous</a></li>
+</ul>
+<ul>
+<li><a href="#reactjs-interface">React.js Interface</a></li>
+</ul>
+<ul>
+<li><a href="#reactive-programming">Reactive Programming</a></li>
+</ul>
+<ul>
+<li><a href="#routing">Routing</a></li>
+</ul>
+<ul>
+<li><a href="#state-management">State Management</a></li>
+</ul>
+<ul>
+<li><a href="#testing">Testing</a></li>
+</ul>
+<ul>
+<li><a href="#validation">Validation</a></li>
+</ul>
+<ul>
+<li><a href="#web-framework--template">Web Framework & Template</a></li>
+</ul>
+<ul>
+<li><a href="#websockets">WebSockets</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#contributing">Contributing</a></li>
+</ul>
+<ul>
+<li><a href="#license">License</a></li>
+</ul>
+</ul>
+<ul>
+<li><em> </em></li>
+</('ul', 0)>
+<h2>Resources</h2>
+
+<h3>Books</h3>
+<ul>
+<li><a href="https://leanpub.com/clojurescript-unraveled">ClojureScript Unraveled</a> – An open source book about the ClojureScript language that covers all the language features, how to use the compiler and the tooling for building applications and libraries.</li>
+</ul>
+<ul>
+<li><a href="https://funcool.github.io/clojurescript-unraveled/">ClojureScript Unraveled (2nd edition)</a> – An open source book about the ClojureScript language that covers all the language features, how to use the compiler and the tooling for building applications and libraries.</li>
+</ul>
+<ul>
+<li><a href="https://shop.oreilly.com/product/0636920025139.do">ClojureScript: Up and Running</a> – An introduction to ClojureScript written by big guns of Clojure Stuart Sierra and Luke VanderHart.</li>
+</ul>
+<ul>
+<li><a href="https://www.manning.com/books/clojure-the-essential-reference">Clojure, The Essential Reference</a> – A reference book on the Clojure language and standard library.</li>
+</ul>
+<ul>
+<li><a href="https://shop.oreilly.com/product/0636920043584.do">Etudes for ClojureScript</a> – A hands-on-book of 30 companion exercises or études for introducing ClojureScript.</li>
+</ul>
+<ul>
+<li><a href="https://www.packtpub.com/web-development/learning-clojurescript">Learning ClojureScript</a> – Master the art of agile single page web application development with ClojureScript.</li>
+</ul>
+<ul>
+<li><a href="https://langintro.com/cljsbook">Transforming Data with ClojureScript</a> – A beginner's guide to ClojureScript with interactive examples and exercises, "focusing on the main task that programming does—transforming data".</li>
+</('ul', 0)>
+<h3>Courses</h3>
+<ul>
+<li><a href="http://clojurescriptkoans.com/">ClojureScript Koans</a> – A great way to start learning Clojure and ClojureScript on the web with interactive challanges.</li>
+</ul>
+<ul>
+<li><a href="https://lambdaisland.com/">Lambda Island</a> – A full-stack web development course including front-end with ClojureScript, back-end with Clojure, language essentials, security, internet standards and system administration.</li>
+</ul>
+<ul>
+<li><a href="https://www.learnreagent.com/">Learn Reagent</a> – An introduction to ClojureScript with Reagent for developers. 1 hour free content is available. <a href="https://www.learnreframe.com/">learn re-frame</a> is its follow up.</li>
+</ul>
+<ul>
+<li><a href="https://purelyfunctional.tv/">Learning ClojureScript</a> – A 2h 11m long introduction to Clojurescript by O'Really Online Learning. Also available on <a href="https://www.udemy.com/course/learning-clojurescript/">Udemy</a>.</li>
+</('ul', 0)>
+<h3>Videos</h3>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=gsffg5xxFQI">ClojureScript for Skeptics</a> – Derek Slager's talk for Clojure Conj 2015 where he is Discussing the many reasons why ClojureScript is in fact a very pragmatic language to consider for web development.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=KZjFVdU8VLI">Interactive programming Flappy Bird in ClojureScript</a> – A 5 minutes video from 2014 demostrating the power of ClojureScript's developer experience.</li>
+</('ul', 0)>
+<h2>Awesome ClojureScript</h2>
+
+<h3>Canvas</h3>
+<ul>
+<li><a href="https://github.com/rm-hull/monet">Monet</a> – A small ClojureScript library to make it easier to work with canvas and visuals.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Quamolit/quamolit">Quamolit</a> – A tiny declarative animation library , inspired by React.</li>
+</('ul', 0)>
+<h3>Client/Server Communication</h3>
+<ul>
+<li><a href="https://github.com/JulianBirch/cljs-ajax">cljs-ajax</a> – A simple Ajax client for ClojureScript and Clojure.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/LightTable/fetch">Fetch</a> – A ClojureScript library that makes client/server interaction painless.</li>
+</('ul', 0)>
+<h3>Code Analysis</h3>
+<ul>
+<li><a href="https://github.com/jonase/kibit">kibit</a> – Static code analyzer to find patterns of code that could be rewritten with a more idiomatic function or macro.</li>
+</('ul', 0)>
+<h3>Data Serialization</h3>
+<ul>
+<li><a href="https://github.com/tailrecursion/cljson">Cljson</a> – Clojure/ClojureScript library for accelerated browser data deserialization.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/cognitect/transit-cljs">Transit</a> – A data interchange format and set of libraries for conveying values between applications written in different programming languages.</li>
+</('ul', 0)>
+<h3>Data Visualization</h3>
+<ul>
+<li><a href="https://keminglabs.com/c2">C2</a> – It lets you declaratively create HTML and SVG markup based on data.</li>
+</('ul', 0)>
+<h3>Database</h3>
+<ul>
+<li><a href="https://github.com/tonsky/datascript">Datascript</a> – An immutable in-memory database and Datalog query engine in ClojureScript.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pandeiro/jaki">Jaki</a> – A simple ClojureScript CouchDB client.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/replikativ/konserve">Konserve</a> – A clojuresque key-value/document store protocol with core.async.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tatut/specql">specql</a> – Library for simple PostgreSQL queries with namespaced keys.</li>
+</('ul', 0)>
+<h3>Development</h3>
+<ul>
+<li><a href="https://github.com/omcljs/ambly">Ambly</a> – A ClojureScript REPL into iOS JavaScriptCore.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/binaryage/cljs-devtools">cljs-devtools</a> – Better presentation of ClojureScript values in Chrome Devtools.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/bhauman/devcards">Devcards</a> – Devcards aims to provide a visual REPL experience for ClojureScript.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lbradstreet/instaparse-cljs">Instaparse</a> – It aims to be the simplest way to build parsers in ClojureScript.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/emezeske/lein-cljsbuild">lein-cljsbuild</a> – A Leiningen plugin to make ClojureScript development easy.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/bhauman/lein-figwheel">lein-figwheel</a> – Leiningen plugin that pushes ClojureScript code changes to the client.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/anmonteiro/lumo">Lumo</a> – Fast, cross-platform, standalone ClojureScript environment.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mfikes/planck">Planck</a> – A stand-alone ClojureScript REPL for macOS and Linux based on JavaScriptCore.</li>
+</ul>
+<ul>
+<li><a href="http://docs.caudate.me/ribol/">Ribol</a> – Conditional restarts for clojure/clojurescript.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/thheller/shadow-cljs">shadow-cljs</a> – ClojureScript compilation made easy</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ptaoussanis/truss">Truss</a> – An opinionated assertions API for Clojure/ClojureScript.</li>
+</('ul', 0)>
+<h3>Document Object Model</h3>
+<ul>
+<li><a href="https://github.com/fluentsoftware/cljs-binding">cljs-binding</a> – It binds html elements to ClojureScript functions.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ibdknox/crate">Crate</a> – A ClojureScript implementation of Hiccup.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dubiousdavid/dominator">Dominator</a> – Virtual-Dom in ClojureScript.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/plumatic/dommy">Dommy</a> – A no-nonsense ClojureScript templating and DOM manipulation library.</li>
+</ul>
+<ul>
+<li><a href="http://ckirkendall.github.io/enfocus-site/">Enfocus</a> – A DOM manipulation and templating library for ClojureScript inspired by Enlive.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/aaronc/freactive">Freactive</a> – A high-performance, pure Clojurescript, declarative DOM library inspired by reagent, om, reflex and hiccup.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/teropa/hiccups">Hiccups</a> – A ClojureScript port of the Hiccup.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/davidsantiago/hickory">Hickory</a> – It parses HTML into Clojure data structures, so you can analyze, transform, and output back to HTML.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/yogthos/json-html">json-html</a> – Provide JSON and get a DOM node with a human representation of that JSON.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ckirkendall/kioo">Kioo</a> – DOM manipulation and templating library for Facebook's React and Om in ClojureScript.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mvc-works/respo">Respo</a> – A responsive DOM library, inspired by React.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/r0man/sablono">Sablono</a> – Lisp/Hiccup style templating for Facebook's React in ClojureScript.</li>
+</('ul', 0)>
+<h3>Documentation</h3>
+<ul>
+<li><a href="https://github.com/weavejester/codox">codox</a> – A tool for generating API documentation from Clojure or ClojureScript source code.</li>
+</('ul', 0)>
+<h3>Graphics</h3>
+<ul>
+<li><a href="https://github.com/thi-ng/geom">geom</a> – A 2D/3D geometry toolkit for Clojure/Clojurescript.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/quil/quil">Quil</a> – A processing and graphics programming library.</li>
+</('ul', 0)>
+<h3>HTTP Handler</h3>
+<ul>
+<li><a href="https://github.com/hoplon/castra">Castra</a> – An HTTP remote procedure call handler for Clojure.</li>
+</('ul', 0)>
+<h3>Internationalization</h3>
+<ul>
+<li><a href="https://github.com/ptaoussanis/tempura">Tempura</a> – A Clojure(Script) i18n library, succeeding Tower</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ptaoussanis/tower">Tower</a> – A Clojure(Script) i18n & L10n library.</li>
+</('ul', 0)>
+<h3>JavaScript Interoperability</h3>
+<ul>
+<li><a href="http://cljsjs.github.io/">CLJSJS</a> – An easy way for Clojurescript developers to depend on Javascript libraries.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ibdknox/jayq">Jayq</a> – A ClojureScript wrapper for jQuery.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/zcaudate/purnam">Purnam</a> – A ClojureScript library designed to provide better clojurescript/javascript interop, testing and documentation tools.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/bodil/pylon">Pylon</a> – A Javascript class system in 100% Clojurescript.</li>
+</('ul', 0)>
+<h3>CSS tools</h3>
+<ul>
+<li><a href="https://github.com/noprompt/garden">Garden</a> – A library for rendering CSS in Clojure and ClojureScript.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jarzka/stylefy">stylefy</a> – stylefy makes it possible to define UI component styles as Clojure data and attach them into components easily without writing CSS selectors</li>
+</('ul', 0)>
+<h3>Miscellaneous</h3>
+<ul>
+<li><a href="https://github.com/ztellman/automat">Automat</a> – A Clojure(Script) library for defining and using finite-state automata, inspired by Ragel.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pleasetrythisathome/bardo">Bardo</a> – A Clojure(Script) library for functional interpolation and transitions.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/clojure/core.async/">core.async</a> – A Clojure(Script) library designed to provide facilities for async programming and communication.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Frozenlock/entanglement">Entanglement</a> – It creates atoms from other atoms and links the data together.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/r0man/inflections-clj">inflections-clj</a> – Rails-like inflection library for Clojure and ClojureScript.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/piranha/keybind">Keybind</a> – Library for handling key bindings (shortcuts) in browser.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/yogthos/markdown-clj">markdown-clj</a> – Markdown parser in Clojure/ClojureScript.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Jarzka/namespacefy">namespacefy</a> – A simple Clojure(Script) library which aims to make it easy to keep map keys namespaced, no matter where your data comes from.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/plumatic/om-tools">om-tools</a> – It aims to provide higher-order abstractions and utilities frequently useful when building components with Om's API.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/bilus/reforms">reforms</a> – Beautiful Bootstrap 3 forms for Om and Reagent.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/reagent-project/reagent-forms/">reagent-forms</a> – Bootstrap form components for Reagent.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Cirru/sepal.clj">Sepal.clj</a> – A library to generate Clojure code from a vector of strings and vectors with macro system.</li>
+</('ul', 0)>
+<h3><a href="https://facebook.github.io/react/">React.js</a> Interface</h3>
+<ul>
+<li><a href="https://github.com/weavejester/brutha">Brutha</a> – A simple and functional ClojureScript interface to React.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/peterhudec/cljsx">cljsx</a> – <a href="https://reactjs.org/docs/introducing-jsx.html">JSX</a> for Clojure and ClojureScript, also works with <a href="https://infernojs.org">Inferno</a>, <a href="https://nerv.aotu.io/">Nerv</a>, <a href="https://preactjs.com/">Preact</a>, <a href="https://github.com/snabbdom/snabbdom">Snabbdome</a> and others.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lilactown/helix">Helix</a> – A simple, easy to use library for React development in ClojureScript with very few semantics on top of React. </li>
+</ul>
+<ul>
+<li><a href="https://github.com/Lokeh/hx">hx</a> – Another simple, easy to use library for React development in ClojureScript. </li>
+</ul>
+<ul>
+<li><a href="https://github.com/omcljs/om">Om</a> – A powerful interface to React, makes use of its object oriented structures.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/levand/quiescent">Quiescent</a> – It favors functional style, fully stateless.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Day8/re-com">re-com</a> – A ClojureScript library of reusable components for Reagent.</li>
+</ul>
+<ul>
+<li><a href="http://reagent-project.github.io/">Reagent</a> – Minimalistic, feature complete.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tonsky/rum">Rum</a> – Decomplected, extensible, simple.</li>
+</('ul', 0)>
+<h3>Reactive Programming</h3>
+<ul>
+<li><a href="https://github.com/hoplon/javelin">Javelin</a> – A Functional Reactive Programming library for ClojureScript.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dm3/manifold-cljs">Manifold-cljs</a> – A port of <a href="https://github.com/ztellman/manifold">Manifold</a> to ClojureScript.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/weavejester/reagi">Reagi</a> – An FRP library for Clojure and ClojureScript, built on top of core.async.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/leonardoborges/rx-cljs">rx-cljs</a> – A ClojureScript wrapper for Reactive Extensions (Rx) for Javascript.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Cicayda/yolk">Yolk</a> – A thin ClojureScript wrapper around bacon.js.</li>
+</('ul', 0)>
+<h3>Routing</h3>
+<ul>
+<li><a href="https://github.com/juxt/bidi">Bidi</a> – A Clojure(script) data driven routing library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/darkleaf/router">Router</a> – Bidirectional Ring router for Clojure/Script. REST oriented.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/gf3/secretary">Secretary</a> – A client-side router for ClojureScript.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/DomKM/silk">Silk</a> – An isomorphic routing library for Clojure & ClojureScript.</li>
+</('ul', 0)>
+<h3>State Management</h3>
+<ul>
+<li><a href="https://github.com/stuartsierra/component">component</a> – Managed lifecycle of stateful objects in Clojure(Script).</li>
+</ul>
+<ul>
+<li><a href="http://funcool.github.io/hodgepodge/">hodgepodge</a> – A idiomatic ClojureScript interface to HTML5 Storage.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tolitius/mount">mount</a> – A beautifl idiomatic state management library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/eneroth/plato">plato</a> – Incrementally persists atom state to Local Storage in ClojureScript.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/alandipert/storage-atom">storage-atom</a> – ClojureScript atoms backed by HTML5 web storage.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tatut/tuck">Tuck</a> – A micro framework for building Reagent apps that have a clean separation of view code and event processing code. </li>
+</ul>
+<ul>
+<li><a href="https://github.com/ibdknox/waltz">Waltz</a> – A ClojureScript library that helps manage state in client-side applications using non-deterministic finite state machines.</li>
+</('ul', 0)>
+<h3>Testing</h3>
+<ul>
+<li><a href="https://github.com/clojure/clojurescript/wiki/Testing">cljs.test</a> – Integrated test framework for ClojureScript (merged from <a href="https://github.com/cemerick/clojurescript.test">clojurescript.test</a>)</li>
+</ul>
+<ul>
+<li><a href="http://jayfields.com/expectations/">Expectations</a> – A minimalist's unit testing framework.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/slagyr/speclj">Speclj</a> – A TDD/BDD framework for Clojure and ClojureScript.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/clojure/test.check">test.check</a> – A generative property-based testing tool inspired by QuickCheck.</li>
+</('ul', 0)>
+<h3>Validation</h3>
+<ul>
+<li><a href="https://github.com/leonardoborges/bouncer">Bouncer</a> – A validation DSL for Clojure & Clojurescript applications.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kwladyka/form-validator-cljs">form-validator-cljs</a> – Validate forms with spec and fn.</li>
+</ul>
+<ul>
+<li><a href="http://clojurevalidations.info/">Validateur</a> – A Clojure validation library inspired by Ruby's ActiveModel.</li>
+</('ul', 0)>
+<h3>Web Framework & Template</h3>
+<ul>
+<li><a href="https://github.com/zaiste/atw-om">atw-om</a> – A web application template with Clojure/Compojure, ClojureScript/Om & core.async.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/plexus/chestnut">Chestnut</a> – An Application template for ClojureScript/Om with live reloading.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sveri/closp">Clops</a> – An opinionated, full stack and easy to use web framework.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/karad/lein<em>template</em>descjop">descjop</a> – A template for Web based desktop application with Electron.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ducky427/electron-template">electron-template</a> – A template for creating web based desktop applications with Electron, ClojureScript and Reagent.</li>
+</ul>
+<ul>
+<li><a href="http://fulcrologic.github.io/fulcro">Fulcro</a> – A library for development of single-page full-stack web applications in clj/cljs.</li>
+</ul>
+<ul>
+<li><a href="http://hoplon.io">Hoplon</a> – Write everything in Clojure and ClojureScript, clientside and serverside.</li>
+</ul>
+<ul>
+<li><a href="http://keechma.com">Keechma</a> – Micro frontend framework for ClojureScript and Reagent.</li>
+</ul>
+<ul>
+<li><a href="http://www.luminusweb.net/">Luminus</a> – It aims to provide a robust, scalable, and easy to use platform.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/macchiato-framework/macchiato-core">Macchiato</a> – It aims to provide an easy to use platform for Node.js.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/swannodette/mies">Mies</a> – A minimal ClojureScript project template.</li>
+</ul>
+<ul>
+<li><a href="https://bitbucket.org/sonwh98/mr-clean">Mr-Clean</a> – A reagent compatible library without react.js dependency.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/CoNarrative/precept">Precept</a> – A declarative programming framework.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Day8/re-frame">re-frame</a> – A Reagent Framework For Writing SPAs, in Clojurescript.</li>
+</ul>
+<ul>
+<li><a href="http://martinklepsch.github.io/tenzing/">Tenzing</a> – A ClojureScript template with no backend that uses Boot.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/drcode/webfui">WebFUI</a> – Client-Side Web Framework for ClojureScript.</li>
+</('ul', 0)>
+<h3>WebSockets</h3>
+<ul>
+<li><a href="https://github.com/jarohen/chord">Chord</a> – Designed to bridge the gap between the triad of CLJ/CLJS, web-sockets and core.async.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ptaoussanis/sente">Sente</a> – Clojure(Script) + core.async + WebSockets/Ajax.</li>
+</ul>
+<ul>
+<li><em> </em></li>
+</('ul', 0)>
+<h2>Contributing</h2>
+<p>All contributions are welcome. Please read <a href="CONTRIBUTING.md">Contributing</a> before opening a pull request. tl;dr <code>-</code> is for bullets, <code>–</code> is for seperators between the link and the description and lists should be alphabetically ordered.</p>
+
+<h2>License</h2>
+<p><a href="http://i.creativecommons.org/p/zero/1.0/88x31.png"><img src="http://creativecommons.org/publicdomain/zero/1.0/" alt="CC0</a>"></p>
+
+<p><a href="http://hantuzun.com">Han Tuzun</a> has dedicated the work to the public domain by waiving all of his rights to the work worldwide under copyright law, including all related and neighboring rights, to the extent allowed by law.</p>
+
+<p>You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission.</p>
+
+</body>
+</html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RxJava</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>RxJava</h1>
+
+<p><strong>Repository:</strong> https://github.com/eleventigers/awesome-rxjava#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<h1>Awesome RxJava <a href="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg"><img src="https://github.com/sindresorhus/awesome" alt="Awesome</a>"></h1>
+
+<p><a href="http://reactivex.io/"><img src="http://reactivex.io/assets/Rx<em>Logo</em>S.png" align="right" width="100"></a></p>
+
+<blockquote>
+<p>Useful resources for working with <a href="https://github.com/ReactiveX/RxJava">RxJava</a></p>
+</blockquote>
+
+<p><em>Inspired by the <a href="https://github.com/sindresorhus/awesome">awesome</a> list thing.</em></p>
+
+<h2>Bindings</h2>
+
+<ul>
+<li><a href="https://github.com/ReactiveX/RxAndroid">RxAndroid</a> - Android specific bindings for RxJava.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/JakeWharton/RxBinding">RxBinding</a> - RxJava binding APIs for Android UI widgets from the platform and support libraries.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/f2prateek/rx-preferences">rx-preferences</a> - Reactive <code>SharedPreferences</code> for Android.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tbruyelle/RxPermissions">RxPermissions</a> - Android M runtime permissions powered by RxJava.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/square/sqlbrite">SQLBrite</a> - A lightweight wrapper around SQLiteOpenHelper and ContentResolver which introduces reactive stream semantics to queries.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mcharmas/Android-ReactiveLocation">Android-ReactiveLocation</a> - Small library that wraps Google Play Service API in brilliant RxJava Observables reducing boilerplate to minimum.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pwittchen/ReactiveNetwork">ReactiveNetwork</a> - Android library listening network connection state and change of the WiFi signal strength with RxJava Observables.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pwittchen/ReactiveSensors">ReactiveSensors</a> - Android library monitoring hardware sensors with RxJava Observables.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/hzsweers/RxPalette">RxPalette</a> - RxJava bindings for the Palette library on Android.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/davidmoten/rxjava-jdbc">rxjava-jdbc</a> - Efficient execution and functional composition of database calls using jdbc and RxJava Observables.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/davidmoten/rxjava-file">rxjava-file</a> - RxJava observables for files including NIO events.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pakoito/RxTuples">RxTuples</a> - Simple tuples to use with RxJava.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/blipinsk/RxAnimationBinding">RxAnimationBinding</a> - RxJava binding APIs for Android's animations.</li>
+</('ul', 0)>
+<h2>Utilities</h2>
+<ul>
+<li><a href="https://github.com/ReactiveX/RxJavaAsyncUtil">RxJavaAsyncUtil</a> - Async utilities for RxJava.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ReactiveX/RxJavaJoins">RxJavaJoins</a> - Joins operators for RxJava.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ReactiveX/RxJavaMath">RxJavaMath</a> - Math operators for RxJava.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ReactiveX/RxJavaString">RxJavaString</a> - </li>
+</ul>
+<p>String and Byte operators for RxJava.</p>
+<ul>
+<li><a href="https://github.com/ReactiveX/RxJavaComputationExpressions">RxJavaComputationExpressions</a> - Computation expressions for RxJava.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/davidmoten/rxjava-extras">rxjava-extras</a> - Utilities for use with RxJava.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pakoito/RxActions">RxActions</a> - Simple ActionN composition to use with RxJava.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/JakeWharton/RxRelay">RxRelay</a> - RxJava types that are both an Observable and an Action1.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/android10/frodo">Frodo</a> - Android Library for Logging RxJava Observables and Subscribers.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pakoito/RxPartialApplication">RxPartialApplication</a> - Simple partial application for FuncN and ActionN on RxJava.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pakoito/RxCurrying">RxCurrying</a> - Simple currying for FuncN and ActionN on RxJava.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/eleventigers/rxeither">RxEither</a> - Either type for RxJava.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/JakeWharton/RxReplayingShare">RxReplayingShare</a> - An RxJava transformer which combines replay(1), publish(), and refCount() operators.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pakoito/RxFunctions">RxFunctions</a> - Advanced Function composition to use with RxJava.</li>
+</ul>
+<ul>
+<li><a href="https://bitbucket.org/littlerobots/rxlint">rxlint</a> - An Android lint rule for RxJava code.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pakoito/RxComprehensions">RxComprehensions</a> - Reduce boilerplate in RxJava by abstracting chained flatMaps, concatMaps and switchMaps.</li>
+</('ul', 0)>
+<h2>Testing</h2>
+<ul>
+<li><a href="https://github.com/ribot/assertj-rx">assertj-rx</a> - AssertJ assertions for RxJava Observables.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/novoda/rxpresso">rxpresso</a> - Easy Espresso UI testing for Android applications using RxJava.</li>
+</('ul', 0)>
+<h2>Guides</h2>
+
+<ul>
+<li><a href="https://github.com/kaushikgopal/RxJava-Android-Samples">RxJava-Android-Samples</a> - Learning RxJava for Android by example.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Froussios/Intro-To-RxJava">Intro-To-RxJava</a> - An extensive tutorial on RxJava.</li>
+</('ul', 0)>
+<h2>Articles</h2>
+
+<ul>
+<li><a href="http://staltz.com/rx-glitches-arent-actually-a-problem.html">Rx glitches aren't actually a problem</a> - Glitches are temporary inconsistencies emitted by Observables. André Staltz looks at why it's not really a problem.</li>
+</ul>
+<ul>
+<li><a href="http://blog.danlew.net/2016/01/25/rxjavas-repeatwhen-and-retrywhen-explained/">RxJava's repeatWhen and retryWhen, explained</a> - <code>repeatWhen</code> and <code>retryWhen</code> are fairly baffling at first glance. Dan Lew explains the operators in depth.</li>
+</ul>
+<ul>
+<li><a href="http://tomstechnicalblog.blogspot.co.uk/2016/03/rxjava-problem-with-subjects.html">RxJava - The Problem with Subjects</a> - Thomas Nield explains why <code>Subject</code> is not a panacea.</li>
+</('ul', 0)>
+<h2>Tools</h2>
+
+<ul>
+<li><a href="http://rxmarbles.com/">RxMarbles</a> - Interactive diagrams of Rx Observables.</li>
+</('ul', 0)>
+<h2>Community</h2>
+
+<ul>
+<li><a href="http://groups.google.com/d/forum/rxjava">Google Group</a></li>
+</ul>
+<ul>
+<li><a href="http://stackoverflow.com/search?q=rx-java">StackOverflow</a></li>
+</ul>
+<ul>
+<li><a href="http://twitter.com/RxJava"><code>@RxJava</code> on Twitter</a></li>
+</ul>
+<ul>
+<li><a href="https://gitter.im/ReactiveX/RxJava"><code>ReactiveX/RxJava</code> on Gitter</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/ReactiveX/RxJava/issues">GitHub Issues</a></li>
+</('ul', 0)>
+<h2>License</h2>
+
+<p><a href="https://i.creativecommons.org/p/zero/1.0/88x31.png"><img src="https://creativecommons.org/publicdomain/zero/1.0/" alt="CC0</a>"></p>
+
+<p>To the extent possible under law, <a href="http://jokubasdargis.net/">Jokubas Dargis</a> has waived all copyright and related or neighboring rights to this work.</p>
+
+</body>
+</html>

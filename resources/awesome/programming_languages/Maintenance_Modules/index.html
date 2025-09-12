@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maintenance Modules</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>maintenance-modules <a href="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg"><img src="https://github.com/sindresorhus/awesome" alt="Awesome</a>"></h1>
+
+<p><a href="https://nodei.co/npm/maintenance-modules.png"><img src="https://www.npmjs.com/package/maintenance-modules" alt="NPM</a>"></p>
+
+<p>There is no code in this module, the only thing is this README file.</p>
+
+<p>This is a list of modules that are useful for maintaining or developing modules (in no particular order).</p>
+
+<h3><a href="https://github.com/henrikjoreteg/fixpack">fixpack</a> by <a href="https://www.npmjs.com/~henrikjoreteg">henrikjoreteg</a></h3>
+
+<p>A package.json file scrubber for the truly insane. Cleans up your package.json in a deterministic way to ensure high quality, handcrafted, artisinal JSON.</p>
+
+<pre><code>
+npm i fixpack --save-dev
+</code></pre>
+
+<h3><a href="https://github.com/feross/standard">standard</a> by <a href="https://www.npmjs.com/~feross">feross</a></h3>
+
+<p>JavaScript standard style checker/linter. No options allowed! Uses non-configurable opinionated settings to minimize bikeshedding. Never give style feedback on a pull request again!</p>
+
+<pre><code>
+npm i standard --save-dev
+</code></pre>
+
+<h3><a href="https://github.com/maxogden/dependency-check">dependency-check</a> by <a href="https://www.npmjs.com/~maxogden">maxogden</a></h3>
+
+<p>Checks which modules you have used in your code and then makes sure they are listed as dependencies in your package.json (or vice versa).</p>
+
+<pre><code>
+npm i dependency-check --save-dev
+</code></pre>
+
+<h3><a href="https://github.com/finnp/create-module">create-module</a> by <a href="https://www.npmjs.com/~finnpauls">finnp</a></h3>
+
+<p>Helper tool for the usual steps to create a module. Creates empty github repo, generates module boilerplate, runs npm init, does first commit + push, etc.</p>
+
+<pre><code>
+npm i create-module --save-dev
+</code></pre>
+
+<h3><a href="https://github.com/finnp/node-travisjs">travisjs</a> by <a href="https://www.npmjs.com/~finnpauls">finnp</a></h3>
+
+<p>A command line module for travis, especially targeted for managing tests for node modules. Helps you quickly add a travis hook + generate a travis badge for your readme.</p>
+
+<pre><code>
+npm i travisjs --save-dev
+</code></pre>
+
+<h3><a href="https://github.com/meandavejustice/gh-pages-deploy">gh-pages-deploy</a> by <a href="https://www.npmjs.com/~meandave">meandave</a></h3>
+
+<p>Deploy to gh-pages with one command. Lets you add static build settings into your package.json and then automatically build, deploy and push to gh-pages from master using this module.</p>
+
+<pre><code>
+npm i gh-pages-deploy --save-dev
+</code></pre>
+
+<h3><a href="https://github.com/phuu/npm-release">npm-release</a> by <a href="https://www.npmjs.com/~phuu">phuu</a></h3>
+
+<p>Tiny tool for releasing npm modules. Bumps, commits, tags, pushes and publishes.</p>
+
+<pre><code>
+npm i npm-release --save-dev
+</code></pre>
+
+<h3><a href="https://github.com/tjunnone/npm-check-updates">npm-check-updates</a> by <a href="https://www.npmjs.com/~tjunnone">tjunnone</a></h3>
+
+<p>Find newer versions of dependencies than what your package.json allows.</p>
+
+<pre><code>
+npm i npm-check-updates --save-dev
+</code></pre>
+
+<h3><a href="https://github.com/zeke/npe">npe</a> by <a href="https://www.npmjs.com/~zeke">zeke</a></h3>
+
+<p>Node Package Editor: a CLI for one-off inspection and editing of properties in package.json files. Lets you avoid having to hand-edit JSON.</p>
+
+<pre><code>
+npm i npe -g
+</code></pre>
+
+<h3><a href="https://github.com/zeke/package-json-to-readme">package-json-to-readme</a> by <a href="https://npmjs.org/~zeke">zeke</a></h3>
+
+<p>Generate a README.md from package.json contents. With npm modules, lots of info can be gleaned from properties in the package.json file: name, description, scripts.test, preferGlobal, etc. That's why package-json-to-readme exists. Use it to generate a decent boilerplate README, then iterate from there.</p>
+
+<pre><code>
+npm i package-json-to-readme -g
+</code></pre>
+
+<h3><a href="https://github.com/zeke/npmwd">npmwd</a> by <a href="https://npmjs.org/~zeke">zeke</a></h3>
+
+<p>Open the npm package URL in your browser that matches your shell's current working directory.</p>
+
+<pre><code>
+npm i npmwd -g
+</code></pre>
+
+<h3><a href="https://github.com/twolfson/foundry">foundry</a> by <a href="https://www.npmjs.com/~twolfson">twolfson</a></h3>
+
+<p>Release manager for npm, bower, component, PyPI, git tags, and any plugin you can write. Publish to multiple package repositories at once.</p>
+
+<pre><code>
+npm i foundry --save-dev
+</code></pre>
+
+<h3><a href="https://github.com/semantic-release/semantic-release">semantic-release</a> by <a href="https://www.npmjs.com/~boennemann">boennemann</a></h3>
+
+<p>Fully automate your package's releases. This will determine not only which version to release, but also when – all without you having to care about it ever again. The goal of this package is to remove humans from version numbers and releases. Check out the readme for more info!</p>
+
+<pre><code>
+npm i semantic-release --save-dev
+</code></pre>
+
+<h3><a href="https://github.com/maxogden/collaborator">collaborator</a> by <a href="https://www.npmjs.com/~maxogden">maxogden</a></h3>
+
+<p>Easily add new collaborators to your github repos + npm packages from the CLI, and then generate a <code>collaborators.md</code> file with the newly updated list of collaborators. Use this to add new maintainers to your projects.</p>
+
+<pre><code>
+npm i collaborator -g
+</code></pre>
+
+<h3><a href="https://www.npmjs.com/package/gasket">gasket</a> by <a href="https://www.npmjs.com/~mafintosh">mafintosh</a></h3>
+
+<p>Preconfigured pipelines for node.js. A more powerful version of npm scripts, but less frameworky than gulp or grunt. Useful for when you might use Makefiles or bash scripts but want your pipelines to be cross platform.</p>
+
+<pre><code>
+npm i gasket --save-dev
+</code></pre>
+
+<h3><a href="https://github.com/ngoldman/module-init">module-init</a> by <a href="https://www.npmjs.com/~ngoldman">ngoldman</a></h3>
+
+<p>Command-line tool to quickly create a new node module with readme, license, contributing guidelines, and other goodies.</p>
+
+<pre><code>
+npm i module-init -g
+</code></pre>
+
+<h3><a href="https://github.com/ngoldman/gh-release">gh-release</a> by <a href="https://www.npmjs.com/~ngoldman">ngoldman</a></h3>
+
+<p>Create a release for a node package on GitHub. Uses the Github Releases API to create a new release. Defaults to using information from package.json and CHANGELOG.md.</p>
+
+<pre><code>
+npm i gh-release -g
+</code></pre>
+
+<h3><a href="https://github.com/sindresorhus/xo">XO</a> by <a href="https://www.npmjs.com/~sindresorhus">sindresorhus</a></h3>
+
+<p>JavaScript happiness style linter. Enforce strict code style. No decision-making. No config. It just works!</p>
+
+<pre><code>
+npm i xo -g
+</code></pre>
+
+<h3><a href="https://github.com/sindresorhus/np">np</a> by <a href="https://www.npmjs.com/~sindresorhus">sindresorhus</a></h3>
+
+<p>A better <code>npm publish</code>. Runs your tests before publishing, bumps version, pushes git commits/tags, and more.</p>
+
+<pre><code>
+npm i np -g
+</code></pre>
+
+<h2>maintenance bash scripts</h2>
+
+<pre><code>
+alias patch=&#x27;pre-version &amp;&amp; npm version patch &amp;&amp; post-version&#x27;
+alias minor=&#x27;pre-version &amp;&amp; npm version minor &amp;&amp; post-version&#x27;
+alias major=&#x27;pre-version &amp;&amp; npm version major &amp;&amp; post-version&#x27;
+alias pre-version=&#x27;git diff --exit-code &amp;&amp; npm prune &amp;&amp; npm install -q &amp;&amp; npm test&#x27;
+alias post-version=&#x27;npm run --if-present build &amp;&amp; git diff --exit-code &amp;&amp; git push &amp;&amp; git push --tags &amp;&amp; npm publish&#x27;
+</code></pre>
+
+</body>
+</html>

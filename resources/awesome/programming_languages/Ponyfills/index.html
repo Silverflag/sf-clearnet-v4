@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ponyfills</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ponyfills</h1>
+
+<p><strong>Repository:</strong> https://github.com/Richienb/awesome-ponyfills#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<div align="center">
+  <img src="media/Title.svg"/>
+  <br>
+  <a href="https://awesome.re">
+	  <img src="https://awesome.re/badge-flat.svg" alt="Awesome">
+  </a>
+    <p><a href="https://ponyfill.com">Ponyfills</a> are like polyfills but without overriding native APIs. Polyfills patch a piece of functionality so that older environments can support newer features whilst Ponyfills, on the other hand, provide functionality as standalone modules.</p>
+</div>
+
+<h2>Contents</h2>
+
+<ul>
+<li><a href="#articles">Articles</a></li>
+</ul>
+<ul>
+<li><a href="#main">Main</a></li>
+</ul>
+<ul>
+<li><a href="#uncategorised">Uncategorised</a></li>
+</ul>
+<ul>
+<li><a href="#numbers">Numbers</a></li>
+</ul>
+<ul>
+<li><a href="#strings">Strings</a></li>
+</ul>
+<ul>
+<li><a href="#objects">Objects</a></li>
+</ul>
+<ul>
+<li><a href="#arrays">Arrays</a></li>
+</ul>
+<ul>
+<li><a href="#browser-features">Browser Features</a></li>
+</ul>
+<ul>
+<li><a href="#nodejs-features">Node.js Features</a></li>
+</('ul', 0)>
+<h2>Articles</h2>
+
+<ul>
+<li><a href="https://ponyfoo.com/articles/polyfills-or-ponyfills">Polyfills or Ponyfills?</a></li>
+</('ul', 0)>
+<h2>Main</h2>
+
+<ul>
+<li>⭐️ <a href="https://github.com/zloirock/core-js">core-js-pure</a> - The entire standard library.</li>
+</('ul', 0)>
+<h2>Uncategorised</h2>
+
+<ul>
+<li><a href="https://github.com/stefanpenner/es6-promise">es6-promise</a> - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/medikoo/es6-map">es6-map</a> - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map"><code>Map</code></a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/medikoo/es6-weak-map">es6-weak-map</a> - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap"><code>WeakMap</code></a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/medikoo/es6-set">es6-set</a> - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set"><code>Set</code></a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/medikoo/es6-symbol">es6-symbol</a> - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol"><code>Symbol</code></a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/commenthol/named-regexp-groups">named-regexp-groups</a> - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp"><code>RegExp</code></a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/ljharb/System.global">globalthis</a> - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis"><code>globalThis</code></a></li>
+</('ul', 0)>
+<h2>Numbers</h2>
+
+<ul>
+<li><a href="https://github.com/MikeMcl/bignumber.js">bignumber.js</a> - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt"><code>BigInt</code></a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/number-is-nan">number-is-nan</a> - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isNaN"><code>Number.isNaN</code></a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/is-finite">is-finite</a> - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isFinite"><code>Number.isFinite</code></a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/parshap/js-is-integer">is-integer</a> - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isInteger"><code>Number.isInteger</code></a></li>
+</('ul', 0)>
+<h2>Strings</h2>
+
+<ul>
+<li><a href="https://github.com/component/indexof">indexof</a> - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf"><code>String.prototype.indexOf</code></a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/es-shims/String.prototype.trim">string.prototype.trim</a> - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim"><code>String.prototype.trim</code></a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/es-shims/String.prototype.trimleft">string.prototype.trimleft</a> - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/TrimStart"><code>String.prototype.trimStart</code></a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/es-shims/String.prototype.trimright">string.prototype.trimright</a> - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/TrimEnd"><code>String.prototype.trimEnd</code></a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/es-shims/String.prototype.replaceAll">string.prototype.replaceall</a> - <a href="https://github.com/tc39/proposal-string-replaceall"><code>String.prototype.replaceAll</code></a></li>
+</('ul', 0)>
+<h2>Objects</h2>
+
+<ul>
+<li><a href="https://github.com/es-shims/Object.fromEntries">object.fromentries</a> - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries"><code>Object.fromEntries</code></a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/es-shims/Object.entries">object.entries</a> - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries"><code>Object.entries</code></a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/ljharb/object-keys">object-keys</a> - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys"><code>Object.keys</code></a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/es-shims/Object.values">object.values</a> - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/values"><code>Object.values</code></a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/object-assign">object-assign</a> - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign"><code>Object.assign</code></a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/es-shims/object-is">object-is</a> - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is"><code>Object.is</code></a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/bestiejs/json3">json3</a> - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON"><code>JSON</code></a></li>
+</('ul', 0)>
+<h2>Arrays</h2>
+
+<ul>
+<li><a href="https://github.com/studio-b12/array-from">array-from</a> - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from"><code>Array.from</code></a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/es-shims/Array.prototype.every">array.prototype.every</a> - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every"><code>Array.prototype.every</code></a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/paulmillr/Array.prototype.find">array.prototype.find</a> - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find"><code>Array.prototype.find</code></a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/es-shims/Array.prototype.some">array.prototype.some</a> - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some"><code>Array.prototype.some</code></a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/es-shims/Array.prototype.flatMap">array.prototype.flatmap</a> - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap"><code>Array.prototype.flatMap</code></a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/substack/array-map">array-map</a> - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map"><code>Array.prototype.map</code></a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/twada/array-foreach">array-foreach</a> - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach"><code>Array.prototype.forEach</code></a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/es-shims/array-includes">array-includes</a> - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes"><code>Array.prototype.includes</code></a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/component/indexof">indexof</a> - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf"><code>Array.prototype.indexOf</code></a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/juliangruber/isarray">isarray</a> - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray"><code>Array.isArray</code></a></li>
+</('ul', 0)>
+<h2>Browser Features</h2>
+
+<ul>
+<li><a href="https://github.com/lquixada/cross-fetch">cross-fetch</a> - <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API"><code>fetch</code></a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/Richienb/cross-blob">cross-blob</a> - <a href="https://developer.mozilla.org/en-US/docs/Web/API/Blob"><code>Blob</code></a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/Richienb/cross-formdata">cross-formdata</a> - <a href="https://developer.mozilla.org/en-US/docs/Web/API/FormData"><code>FormData</code></a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/mo/abortcontroller-polyfill">abortcontroller-polyfill</a> - <a href="https://developer.mozilla.org/en-US/docs/Web/API/AbortController"><code>AbortController</code></a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/fastly/performance-observer-polyfill">@fastly/performance-observer-polyfill</a> - <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceObserver"><code>PerformanceObserver</code></a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/braveg1rl/performance-now">performance-now</a> - <a href="https://developer.mozilla.org/en-US/docs/Web/API/Performance/now"><code>performance.now</code></a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/bahmutov/console.table">console.table</a> - <a href="https://developer.mozilla.org/en-US/docs/Web/API/Console/table"><code>console.table</code></a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/thegecko/webbluetooth">webbluetooth</a> - <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web<em>Bluetooth</em>API"><code>Bluetooth</code></a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/que-etc/resize-observer-polyfill">resize-observer-polyfill</a> - <a href="https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver"><code>ResizeObserver</code></a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/vibornoff/webcrypto-shim">webcrypto-shim</a> - <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web<em>Crypto</em>API"><code>crypto</code></a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/jhildenbiddle/css-vars-ponyfill/">css-vars-ponyfill</a> - <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using<em>CSS</em>custom_properties">CSS variables/custom properties</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/chrisdickinson/raf">raf</a> - <a href="https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame"><code>requestAnimationFrame</code></a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/pwnall/node-xhr2">xhr2</a> - <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest"><code>XMLHttpRequest</code></a></li>
+</('ul', 0)>
+<h2>Node.js Features</h2>
+
+<ul>
+<li><a href="https://github.com/Gozala/events">events</a> - <a href="https://nodejs.org/api/events.html#events<em>class</em>eventemitter"><code>EventEmitter</code></a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/jamiebuilds/tickedoff">tickedoff</a> - <a href="https://nodejs.org/api/timers.html#timers<em>setimmediate</em>callback_args"><code>setImmediate</code></a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/LinusU/buffer-from">buffer-from</a> - <a href="https://nodejs.org/api/buffer.html#buffer<em>class</em>method<em>buffer</em>from_array"><code>Buffer.from</code></a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/Richienb/cross-exit">cross-exit</a> - <a href="https://nodejs.org/api/process.html#process<em>process</em>exit_code"><code>process.exit</code></a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/medikoo/next-tick">next-tick</a> - <a href="https://nodejs.org/api/process.html#process<em>process</em>nexttick<em>callback</em>args"><code>process.nextTick</code></a></li>
+</ul>
+</body>
+</html>

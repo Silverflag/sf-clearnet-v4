@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mad Science npm Packages</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mad Science npm Packages</h1>
+
+<p><strong>Repository:</strong> https://github.com/feross/awesome-mad-science#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<h1>Awesome Mad Science <a href="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg"><img src="https://github.com/sindresorhus/awesome" alt="Awesome</a>"></h1>
+
+<p>Delightful npm packages that make you say "wow, didn't know that was possible!" PRs welcome!</p>
+
+<h2>peer-to-peer</h2>
+<ul>
+<li><a href="https://www.npmjs.com/package/peerwiki">peerwiki</a> - all of wikipedia on bittorrent</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/simple-peer">simple-peer</a> - send video/voice/data p2p in the browser (with webrtc)</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/torrent-docker">torrent-docker</a> - realtime boot of remote docker images over bittorrent</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/torrent-mount">torrent-mount</a> - mount a torrent as a filesystem</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/webtorrent">webtorrent</a> - streaming torrent client for node & the browser</li>
+</('ul', 0)>
+<h2>browserify</h2>
+<ul>
+<li><a href="https://www.npmjs.com/package/brfs">brfs</a> - turn <code>fs.readFileSync()</code> calls into inlined static assets</li>
+</ul>
+<ul>
+<li><a href="https://gist.github.com/defunctzombie/4339901">browser field spec</a> - replace certain files/modules when a module is bundled for the browser</li>
+</ul>
+<ul>
+<li><a href="https://npmjs.org/package/browserify">browserify</a> - use <code>require()</code> in the browser</li>
+</ul>
+<ul>
+<li><a href="https://github.com/stackgl/glslify">glslify</a> - npm modules compiled into WebGL shaders</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/webworkify">webworkify</a> - composable web workers for browserify</li>
+</('ul', 0)>
+<h2>files</h2>
+<ul>
+<li><a href="https://www.npmjs.com/package/file-type">file-type</a> - detect file content types by checking their magic numbers</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/fuse4js">fuse4js</a> - write filesystem driver in js</li>
+</('ul', 0)>
+<h2>geometry</h2>
+<ul>
+<li><a href="https://www.npmjs.com/package/alpha-shape">alpha-shape</a> - any dimensional alpha shapes (think "concave" hull)</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/box-intersect">box-intersect</a> - fast any dimensional box intersection detection</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/convex-hull">convex-hull</a> - robust any dimensional convex hull</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/delaunay-triangulate">delaunay-triangulate</a> - robust any dimensional delaunay triangulation</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/surface-nets">surface-nets</a> - extracts level sets in any dimension</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/voronoi-diagram">voronoi-diagram</a> - any dimensional voronoi diagrams</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/voxelize">voxelize</a> - voxelize a mesh</li>
+</('ul', 0)>
+<h2>hardware</h2>
+<ul>
+<li><a href="https://www.npmjs.com/package/cylon">cylon</a> - command robots, devices, and more from node</li>
+</('ul', 0)>
+<h2>images</h2>
+<ul>
+<li><a href="https://www.npmjs.com/package/indico.io">indico.io</a> - facial emotion recognition and facial feature extraction</li>
+</ul>
+<ul>
+<li><a href="https://trackingjs.com/">trackingjs</a> - computer vision on the web</li>
+</('ul', 0)>
+<h2>sound</h2>
+<ul>
+<li><a href="https://github.com/DanielRapp/doppler">doppler</a> - detect motion with the doppler effect using only the microphone and speakers</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mattytemple/speak-js">speak.js</a> - text-to-speech on the web</li>
+</('ul', 0)>
+<h2>streams</h2>
+<ul>
+<li><a href="https://www.npmjs.com/package/strip-html">strip-html</a> - strip html from a stream</li>
+</('ul', 0)>
+<h2>text</h2>
+<ul>
+<li><a href="https://www.npmjs.com/package/diff">diff</a> - show text differences</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/franc">franc</a> - detect the language of text</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/indico.io">indico.io</a> - political sentiment analysis</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/node-tesseract">node-tesseract</a> - A simple wrapper for the Tesseract OCR package</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/normit">normit</a> - Google translate text & speak it</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/ocrad.js">ocrad.js</a> - OCR in Javascript via Emscripten</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/pullquoter">pullquoter</a> - pull interesting quotes out of an article</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/sbd">sbd</a> - split text into sentences</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/sentiment">sentiment</a> - basic sentiment analysis</li>
+</('ul', 0)>
+<h2>terminal</h2>
+<ul>
+<li><a href="https://www.npmjs.com/package/minimist">minimist</a> - simple argument parser</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/progress">progress</a> - create a simple terminal progress bar</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/terminal-menu">terminal-menu</a> - create retro terminal menus</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dthree/vantage">vantage.js</a> - CLI + SSH + REPL for Node</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dthree/cash">cash</a> - Cross-platform Linux commands in pure ES6</li>
+</('ul', 0)>
+<h2>virtual machines</h2>
+<ul>
+<li><a href="https://github.com/fcambus/jsemu">jsemu</a> - A list of emulators written in the JavaScript</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/jslinux">jslinux</a> - x86 emulator for running Linux, written in JavaScript</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/node-jvm">jvm</a> - java virtual machine in pure node.js</li>
+</ul>
+<ul>
+<li><a href="https://github.com/plasma-umass/doppio">doppio</a> - actively updated jvm in node.js, written in TypeScript</li>
+</('ul', 0)>
+<h2>misc</h2>
+<ul>
+<li><a href="https://www.npmjs.com/package/bell.js">bell.js</a> - real-time anomalies detection for periodic time series.</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/bitcoinjs-lib">bitcoinjs-lib</a> - bitcoin client for node & the browser</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/fastparallel">fastparallel</a> - zero overhead parallel function calls</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/google-distance">google-distance</a> - calculate travel distance between two locations on earth using Google Maps' API</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/qr-image">qr-image</a> - generate QR codes</li>
+</('ul', 0)>
+<h2>meta-programming</h2>
+
+<ul>
+<li><a href="https://www.npmjs.com/package/notevil">notevil</a> - javascript javascript interpreter, useful for running untrusted code safely.</li>
+</('ul', 0)>
+<h2>mad scientists (people)</h2>
+<ul>
+<li><a href="https://www.npmjs.com/~mikolalysenko">Mikola Lysenko</a> - linear algebra, computational geometry, WebGL</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/~dominictarr">Dominic Tarr</a> - streams, distributed systems</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/~tmpvar">Elijah Insua</a> - NC machines, CAD/CAM</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mafintosh">Mathias Buus</a> - torrents in node, fuse bindings, data replication</li>
+</ul>
+<ul>
+<li><a href="https://github.com/feross">Feross Aboukhadijeh</a> - webtorrent, bittorrent, p2p hacks</li>
+</ul>
+<ul>
+<li><a href="https://github.com/maxogden">Max Ogden</a> - streams, voxels, data replication</li>
+</('ul', 0)>
+<h2>License</h2>
+
+<p><a href="http://i.creativecommons.org/p/zero/1.0/88x31.png"><img src="http://creativecommons.org/publicdomain/zero/1.0/" alt="CC0</a>"></p>
+
+<p>To the extent possible under law, <a href="http://feross.org">Feross Aboukhadijeh</a> has waived all copyright and related or neighboring rights to this work.</p>
+
+</body>
+</html>

@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning 1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Learning</h1>
+
+<p><strong>Repository:</strong> https://github.com/GustavBertram/awesome-common-lisp-learning#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<h1>Awesome Common Lisp Learning <a href="https://awesome.re/badge.svg"><img src="https://awesome.re" alt="Awesome</a>"></h1>
+
+<div align="center">
+  <img src="LISP_logo_mid.png">
+</div>
+
+<p>This list focuses on resources for learning Common Lisp, especially resources that I've found useful.</p>
+
+<p>There are other Awesome Common Lisp lists that focus on other topics:</p>
+<ul>
+<li><a href="https://github.com/CodyReichert/awesome-cl">Libraries</a></li>
+<ul>
+<li><a href="https://github.com/vindarel/curated-awesome-cl">Curated Libraries</a> - Forked and updated from the above list.</li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://github.com/azzamsa/awesome-cl-software">Software</a></li>
+</ul>
+<p>Contributions are welcome. Please read the <a href="contributing.md">contribution guidelines</a> for details.</p>
+
+<h2>Contents</h2>
+
+<ul>
+<li><a href="#how-to-use">How To Use</a></li>
+</ul>
+<ul>
+<li><a href="#lisp-environments">Lisp Environments</a></li>
+</ul>
+<ul>
+<li><a href="#online-references">Online References</a></li>
+</ul>
+<ul>
+<li><a href="#online-books">Online Books</a></li>
+</ul>
+<ul>
+<li><a href="#offline-books">Offline Books</a></li>
+</ul>
+<ul>
+<li><a href="#online-community">Online Community</a></li>
+</ul>
+<ul>
+<li><a href="#library-management">Library Management</a></li>
+</ul>
+<ul>
+<li><a href="#common-lisp-implementations">Common Lisp Implementations</a></li>
+</ul>
+<ul>
+<li><a href="#credit">Credit</a></li>
+</('ul', 0)>
+<h2>How To Use</h2>
+<ol>
+<li>Get a Lisp environment.</li>
+</ol>
+<ol>
+<li>Bookmark the <a href="http://www.lispworks.com/documentation/common-lisp.html">The Common Lisp Hyperspec</a>.</li>
+</ol>
+<ol>
+<li>Download and work through a Lisp book of an appropriate level. Type the examples and play with the code. Feel free to switch books and try a different one.</li>
+</ol>
+<ol>
+<li>Try out <a href="https://exercism.org/tracks/common-lisp">Exercism</a>.</li>
+</ol>
+<ol>
+<li>If you get stuck, find an online community and <a href="http://www.catb.org/esr/faqs/smart-questions.html">ask smart questions</a>.</li>
+</ol>
+<ol>
+<li>Learn about <a href="https://www.quicklisp.org/beta/">Quicklisp</a>.</li>
+</ol>
+<ol>
+<li>At some point, read your Lisp implementation's manual.</li>
+</('ol', 0)>
+<h2>Lisp Environments</h2>
+<p>You can run a Lisp implementation directly, but an editing environment makes the experience easier.</p>
+<ul>
+<li>Prepackaged environments</li>
+<ul>
+<li><a href="https://shinmera.github.io/portacle/">Portacle</a> - A portable and multiplatform Common Lisp environment. It ships a slightly customized Emacs with SLIME, SBCL (a popular Common Lisp implementation), Quicklisp and Git. No installation needed, so it's a very quick and easy way to get going.</li>
+</ul>
+<ul>
+<li><a href="https://common-lisp.net/project/lispbox/">Lispbox</a> - An IDE (Emacs + SLIME), Common Lisp implementation (Clozure Common Lisp) and library manager (Quicklisp), pre-packaged as archives for Windows, macOS and Linux. Descendant of "Lisp in a Box" <a href="http://www.gigamonkeys.com/book/lather-rinse-repeat-a-tour-of-the-repl.html">mentioned</a> in Practical Common Lisp.</li>
+</ul>
+<ul>
+<li><a href="http://www.lispworks.com/downloads/">Lispworks Personal Edition</a> - A non-Emacs based IDE for LispWorks Lisp, with some restrictions.</li>
+</ul>
+<ul>
+<li><a href="https://franz.com/products/allegrocl/">Allegro Common Lisp</a> - Has a free <a href="https://franz.com/downloads/clp/survey">Express Edition</a> IDE, and <a href="https://www.youtube.com/channel/UCN36UrxtyNBJPaG0kmBJNRw">training videos on YouTube</a>.</li>
+</ul>
+</ul>
+<ul>
+<li>For advanced users</li>
+<ul>
+<li><a href="http://articulate-lisp.com">Articulate Common Lisp</a> - A HOWTO for putting together a Lisp environment, and has information on <a href="http://articulate-lisp.com/project/abcs.html">useful libraries</a> and how to <a href="http://articulate-lisp.com/project/new-project.html">structure projects</a>.</li>
+</ul>
+<ul>
+<li>If you're an experienced <a href="https://www.gnu.org/software/emacs/">Emacs</a> user, you can just install <a href="https://common-lisp.net/project/slime/">SLIME</a> and a <a href="https://common-lisp.net/project/slime/doc/html/Platforms.html#Platforms">supported Common Lisp implementation</a>. See the <a href="https://common-lisp.net/project/slime/doc/html/">SLIME manual</a> for more details.</li>
+</ul>
+<ul>
+<li>The Common Lisp Cookbook has more information about <a href="https://lispcookbook.github.io/cl-cookbook/getting-started.html">installing an implementation</a> using an implementation manager like <a href="https://github.com/roswell/roswell/wiki">Roswell</a>, or on Docker.</li>
+</('ul', 2)>
+</('ul', 0)>
+<h2>Online References</h2>
+<ul>
+<li><a href="http://www.lispworks.com/documentation/common-lisp.html">The Common Lisp Hyperspec (CLHS)</a> - <em>The</em> language reference document for Common Lisp. Bookmark it now.</li>
+<ul>
+<li><a href="http://www.lispworks.com/documentation/HyperSpec/Body/07_.htm">Chapter 7</a> - Covers the Common Lisp Object System (CLOS).</li>
+</ul>
+</ul>
+<ul>
+<li><a href="http://cberr.us/tech<em>writings/notes/common</em>lisp<em>standard</em>draft.html">The ANSI Common Lisp Standard Draft</a> - The last draft version of the ANSI INCITS 226-1994 (previously ANSI X3.226-1994) standard.</li>
+<ul>
+<li>The draft is free, the standard isn't.</li>
+</ul>
+<ul>
+<li>It's pretty much the same as the official standard, and some people prefer it to the CLHS.</li>
+</ul>
+</ul>
+<ul>
+<li><a href="http://lispcookbook.github.io/cl-cookbook/">The Common Lisp Cookbook</a> - A list of useful Lisp recipes. Also contains a list of other online sources of CL information.</li>
+</ul>
+<ul>
+<li><a href="https://www.cs.cmu.edu/Groups/AI/html/cltl/cltl2.html">Common Lisp the Language (2nd Edition) by Guy L. Steele</a> - A description of the Common Lisp language from just before it was standardized by ANSI. Don't use it as a reference.</li>
+<ul>
+<li><a href="https://cliki.net/Getting+Started">Cliki on CLtL2</a> - Claims it has more useful descriptions of <a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/project/ai-repository/ai/html/cltl/clm/node235.html#SECTION003000000000000000000">LOOP</a> and <a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/project/ai-repository/ai/html/cltl/clm/node200.html">FORMAT</a> than the CLHS does.</li>
+</ul>
+<ul>
+<li><a href="https://stackoverflow.com/questions/108537/what-are-the-main-differences-between-cltl2-and-ansi-cl">Stack Overflow on CLtL2</a> - Some recommend using CLtL2 for insight and inspiration, but to use the CLHS when programming.</li>
+</ul>
+<ul>
+<li><a href="http://linuxfinances.info/info/commonlisp.html#AEN9679">A list of differences between CLtL2 and the ANSI Common Lisp specification.</a></li>
+</ul>
+<ul>
+<li><a href="https://www.cs.cmu.edu/Groups/AI/html/cltl/clm/node260.html#SECTION003200000000000000000">Chapter 28</a> - Covers the Common Lisp Object System.</li>
+</('ul', 2)>
+</('ul', 0)>
+<h2>Online Books</h2>
+<p>These books that are freely accessible online, arranged roughly in order from basic to advanced:</p>
+<ul>
+<li><a href="http://www.cs.cmu.edu/~dst/LispBook/">Common Lisp: A Gentle Introduction to Symbolic Computation by David S. Touretzky</a> - a good introduction for people new to programming. Contains code for really useful utilities like <a href="http://www.cs.cmu.edu/~dst/Lisp/dtrace/">DTRACE</a> and <a href="http://www.cs.cmu.edu/~dst/Lisp/sdraw/">SDRAW</a>.</li>
+</ul>
+<ul>
+<li><a href="https://www.cse.buffalo.edu/~shapiro/Commonlisp/">Common Lisp: An interactive approach by Stuart C. Shapiro</a> - A textbook that teaches mainly through the use of exercises.</li>
+</ul>
+<ul>
+<li><a href="http://www.gigamonkeys.com/book/">Practical Common Lisp by Peter Seibel</a> - A great introduction for experienced programmers, and tries to highlight from the very beginning what makes CL different to other languages.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/google/lisp-koans">Common Lisp Koans</a> - Not exactly a book, but a set of koans to help you learn the language.</li>
+</ul>
+<ul>
+<li><a href="http://www.paulgraham.com/onlisp.html">On Lisp by Paul Graham</a> - A great book for intermediately experienced Lispers.</li>
+</ul>
+<ul>
+<li><a href="https://letoverlambda.com">Let Over Lambda by Doug Hoyte</a> - An advanced book on Lisp Macros.</li>
+<ul>
+<li>The first six chapters are available online.</li>
+</ul>
+<ul>
+<li><a href="https://www.reddit.com/r/lisp/comments/3actsc/let<em>over</em>lambda/">Comments on Let Over Lambda</a> - Several people recommend that you be comfortable with On Lisp before reading this book, and that the start is slow.</li>
+</ul>
+<ul>
+<li><a href="https://letoverlambda.com/index.cl/guest/chap2.html">The chapter on closures</a> - Has several non-trivial examples, and demonstrates the power of this feature.</li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://github.com/norvig/paip-lisp">Paradigms of Artificial Intelligence Programming by Peter Norvig</a> - Has many interesting applications of Lisp, but is no longer a good reference for AI.</li>
+</('ul', 0)>
+<h2>Offline Books</h2>
+<p>These are books that you'll have to buy, or borrow from a library.</p>
+<ul>
+<li><a href="http://landoflisp.com">Land of Lisp by Conrad Barski, MD</a> - A fun introduction to Lisp that uses comics and has you writing games.</li>
+<ul>
+<li>Available as an <a href="https://www.nostarch.com/lisp.htm">ebook</a>. </li>
+</ul>
+<ul>
+<li>A couple of the LOOP macros are written <code>for x for y...</code> which you can change to <code>for x from 0 for y...</code> to make them work in SBCL.</li>
+</ul>
+<ul>
+<li>Has an <a href="http://landoflisp.com/errata.html">errata page</a>.</li>
+</ul>
+<ul>
+<li>Most of the book is entertaining and fairly easy, but gets hairy from about Chapter 18. It doesn't feel like later chapters introduce much, so I recommend switching to a different book at that point.</li>
+</ul>
+<ul>
+<li>The Web server example in Ch 13, 19 and 20 will only work on CLISP, and needs the addition of HTTP response headers to render the HTML properly.</li>
+</ul>
+</ul>
+<ul>
+<li><a href="http://www.paulgraham.com/acl.html">ANSI Common Lisp by Paul Graham</a> - Good as a reference, covers CLOS, and has several example program implementations.</li>
+<ul>
+<li>Plaintext versions of <a href="http://lib.store.yahoo.net/lib/paulgraham/acl1.txt">Chapter 1</a> and <a href="http://lib.store.yahoo.net/lib/paulgraham/acl2.txt">Chapter 2</a> are available online.</li>
+</ul>
+</ul>
+<ul>
+<li><a href="http://weitz.de/cl-recipes/">Common Lisp Recipes by Edmund Weitz</a> - A great set of Common Lisp patterns.</li>
+</ul>
+<ul>
+<li><a href="https://www.amazon.com/Object-Oriented-Programming-COMMON-LISP-Programmers/dp/0201175894">Object-Oriented Programming in Common Lisp by Sonya E. Keene</a> - An in-depth description of the CLOS, and shows how to use it with example applications.</li>
+</ul>
+<ul>
+<li><a href="https://www.amazon.com/Art-Metaobject-Protocol-Gregor-Kiczales/dp/0262610744/">The Art of the Metaobject Protocol by Gregor Kiczales, Jim des Rivieres, and Daniel G. Bobrow</a> - Describes the CLOS Metaobject Protocol (MOP).</li>
+<ul>
+<li><a href="http://metamodular.com/CLOS-MOP/">Chapters 5 and 6 (available online)</a> - The specification of a metaobject protocol extension to CLOS, by Robert Strandh.</li>
+<ul>
+<li>Superseded by the <a href="https://clos-mop.hexstreamsoft.com/">modern public domain CLOS MOP specification</a> by Jean-Philippe Paradis (<a href="https://github.com/Hexstream">Hexstream</a>).</li>
+</ul>
+</ul>
+<ul>
+<li><a href="http://www.adamtornhill.com/reviews/amop.htm">Adam Tornhill on AMOP</a> - Recommends reading Practical Common Lisp, then  Object-Oriented Programming in Common Lisp, and then AMOP.</li>
+</('ul', 2)>
+</('ul', 0)>
+<h2>Online Community</h2>
+<ul>
+<li>The <a href="http://cliki.net">Cliki</a> - The Common Lisp Wiki. A great resource for all things CL. Has a great <a href="http://cliki.net/Getting+Started">Getting Started</a> page and an extensive list of <a href="http://cliki.net/Lisp%20books">Lisp books</a>.</li>
+</ul>
+<ul>
+<li>The #clschool, #lisp, #ccl, #sbcl and <a href="https://www.cliki.net/IRC">other rooms</a> on the <a href="https://libera.chat/">Libera.Chat</a> network are great places for learning about Common Lisp. (<a href="https://gist.github.com/joepie91/df80d8d36cd9d1bde46ba018af497409">Freenode should be avoided.</a>)</li>
+</ul>
+<ul>
+<li><a href="http://www.reddit.com/r/lisp/">Lisp Subreddit</a> - An active community, and has loads of useful links and reference documents in the sidebar.</li>
+<ul>
+<li><a href="https://www.reddit.com/r/Common_Lisp">Common Lisp Subreddit</a> - The Subreddit for Common Lisp.</li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://exercism.org/tracks/common-lisp">Exercism's Common Lisp track</a> - An excellent way to learn the language through practice, have your code reviewed, and to discuss solutions with other people.</li>
+</ul>
+<ul>
+<li><a href="https://discord.gg/7tSq5EaA6Z">Lisp Discord server</a> - Is a Discord for Lisp. Has a channel dedicated to Common Lisp and will happily answer questions.</li>
+</('ul', 0)>
+<h2>Library Management</h2>
+<p>These aren't libraries, but can help you find and install other libraries.</p>
+<ul>
+<li><a href="https://www.quicklisp.org/beta">Quicklisp</a> - A package management platform for Lisp libraries.</li>
+</ul>
+<ul>
+<li><a href="http://quickdocs.org">Quickdocs</a> - Documentation for projects in Quicklisp.</li>
+</ul>
+<ul>
+<li><a href="http://borretti.me/article/common-lisp-sotu-2015">State of the Common Lisp Ecosystem, 2015</a> - Article about what libraries you should use, and why.</li>
+</ul>
+<ul>
+<li><a href="http://articulate-lisp.com/project/abcs.html">Articulate Common Lisp</a> - Lists some useful libraries.</li>
+</('ul', 0)>
+<h2>Common Lisp Implementations</h2>
+<p>This section lists some common CL implementations and their manuals in alphabetical order. Unless otherwise noted, these are free software implementations. See also the Cliki's list of <a href="https://www.cliki.net/Common%20Lisp%20implementation">free software Common Lisp Implementations</a>.</p>
+<ul>
+<li><a href="https://franz.com/products/allegrocl/">Allegro Common Lisp (ACL)</a> - Commercial, but has a free <a href="https://franz.com/downloads/clp/survey">Express Edition</a>.</li>
+<ul>
+<li><a href="https://franz.com/support/documentation/">ACL manual</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/channel/UCN36UrxtyNBJPaG0kmBJNRw">Training videos on YouTube</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://clisp.sourceforge.io">CLISP</a></li>
+<ul>
+<li><a href="https://clisp.sourceforge.io/impnotes.html">CLISP Manual</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://ccl.clozure.com">Clozure Common Lisp (CCL)</a></li>
+<ul>
+<li><a href="https://ccl.clozure.com/manual/">CCL manual</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://www.cons.org/cmucl/">Carnegie Mellon University Common Lisp (CMUCL)</a></li>
+<ul>
+<li><a href="https://www.cons.org/cmucl/doc/index.html">CMUCL manual and other useful information</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://common-lisp.net/project/ecl/">Embeddable Common Lisp (ECL)</a></li>
+<ul>
+<li><a href="https://common-lisp.net/project/ecl/static/manual/">ECL manual</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="http://www.lispworks.com/products/index.html">LispWorks</a> - Commercial, but as mentioned previously, has a <a href="http://www.lispworks.com/downloads/index.html">Personal Edition</a> with minor limitations.</li>
+<ul>
+<li><a href="http://www.lispworks.com/documentation/index.html">LispWorks manual</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="http://www.sbcl.org">Steel Bank Common Lisp (SBCL)</a> - My personal favorite.</li>
+<ul>
+<li><a href="http://www.sbcl.org/manual/index.html">SBCL manual</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="http://web.archive.org/web/20171014210404/http://www.scieneer.com/scl/">Scieneer Common Lisp (SCL)</a> - A commercial Linux and Unix implementation, but has an unrestricted free evaluation and non-commercial use version.</li>
+<ul>
+<li><a href="http://web.archive.org/web/20171014210404/http://www.scieneer.com/scl/doc/">SCL manual</a></li>
+</('ul', 2)>
+</('ul', 0)>
+<h2>Credit</h2>
+<p>I got a lot of the information from <a href="https://stackoverflow.com/a/7224914/1005039">Rainer Joswig's Stack Overflow answer on learning Common Lisp</a>, and from the now-defunct Stack Overflow Documents site. The <a href="https://cliki.net/Getting%20Started">Cliki's Getting Started</a> page was also invaluable.</p>
+
+</body>
+</html>

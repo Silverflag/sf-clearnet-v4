@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zig</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Zig</h1>
+
+<p><strong>Repository:</strong> https://github.com/catdevnull/awesome-zig#readme</p>
+<p><strong>Source File:</strong> readme.md</p>
+
+<hr>
+
+<h1>Awesome Zig <a href="https://awesome.re/badge-flat2.svg"><img src="https://awesome.re" alt="Awesome</a>"></h1>
+
+<p><a href="https://ziglang.org"><img src="./zig-logo.svg" align="right" width="100"></a></p>
+
+<p>A general-purpose programming language and toolchain for maintaining robust, optimal, and reusable software.</p>
+
+<h2>Contents</h2>
+
+<ul>
+<li><a href="#algorithms-and-data-structures">Algorithms and data structures</a></li>
+</ul>
+<ul>
+<li><a href="#allocators-and-memory">Allocators and memory</a></li>
+</ul>
+<ul>
+<li><a href="#audio">Audio</a></li>
+</ul>
+<ul>
+<li><a href="#bootables">Bootables</a></li>
+</ul>
+<ul>
+<li><a href="#compilers-and-interpreters">Compilers and interpreters</a></li>
+</ul>
+<ul>
+<li><a href="#concurrency">Concurrency</a></li>
+</ul>
+<ul>
+<li><a href="#database">Database</a></li>
+</ul>
+<ul>
+<li><a href="#editor-plugins">Editor plugins</a></li>
+</ul>
+<ul>
+<li><a href="#emulators">Emulators</a></li>
+</ul>
+<ul>
+<li><a href="#game-tools-and-libraries">Game tools and libraries</a></li>
+</ul>
+<ul>
+<li><a href="#games">Games</a></li>
+</ul>
+<ul>
+<li><a href="#gui">GUI</a></li>
+</ul>
+<ul>
+<li><a href="#linters">Linters</a></li>
+</ul>
+<ul>
+<li><a href="#misc-libraries">Misc libraries</a></li>
+</ul>
+<ul>
+<li><a href="#network">Network</a></li>
+<ul>
+<li><a href="#http">HTTP</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#web">Web</a></li>
+</ul>
+<ul>
+<li><a href="#system-tools">System tools</a></li>
+</ul>
+<ul>
+<li><a href="#zig-development-tools">Zig development tools</a></li>
+<ul>
+<li><a href="#package-managers">Package managers</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#parser">Parser</a></li>
+</ul>
+<ul>
+<li><a href="#learning-resources">Learning resources</a></li>
+</ul>
+<ul>
+<li><a href="#cc-libraries-packaged-for-zig">C/C++ libraries packaged for Zig</a></li>
+</ul>
+<ul>
+<li><a href="#other">Other</a></li>
+</('ul', 0)>
+<h2>Algorithms and data structures</h2>
+<ul>
+<li><a href="https://github.com/ziglibs/s2s">ziglibs/s2s</a> - Binary serialization format and library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/BarabasGitHub/LZig4">BarabasGitHub/LZig4</a> - LZ4 implementation.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/DutchGhost/ArrayVec">DutchGhost/ArrayVec</a> - An array with a vector feeling.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/emekoi/deque.zig">emekoi/deque.zig</a> - A lock free chase-lev deque.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kristoff-it/zig-cuckoofilter">kristoff-it/zig-cuckoofilter</a> - Production-ready Cuckoo Filters for any C ABI compatible target.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/marijnfs/zigtimsort">marijnfs/zigtimsort</a> - TimSort implementation.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Sahnvour/zig-containers">Sahnvour/zig-containers</a> - A container library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Srekel/zig-sparse-set">Srekel/zig-sparse-set</a> - Sparse sets, supporting both SOA and AOS style.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/hexops/xorfilter">hexops/xorfilter</a> - Xor Filters for checking if a key is part of a set.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/JakubSzark/zig-string">JakubSzark/zig-string</a> - UTF-8 string data structure.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/karlseguin/cache.zig">karlseguin/cache.zig</a> - Thread-safe, expiration-aware, LRU cache.</li>
+</('ul', 0)>
+<h2>Allocators and memory</h2>
+<ul>
+<li><a href="https://github.com/fengb/zee<em>alloc">fengb/zee</em>alloc</a> - Tiny allocator primarily targeting WebAssembly.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mdsteele/ziegfried">mdsteele/ziegfried</a> - A general-purpose memory allocator.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/suirad/Seal">suirad/Seal</a> - An allocator that wraps another allocator and detects if memory is leaked after usage.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Hejsil/zig-gc">Hejsil/zig-gc</a> - A super simple mark-and-sweep garbage collector.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dbandstra/zig-hunk">dbandstra/zig-hunk</a> - Basic "Hunk" memory allocator, based on the hunk system from id Software's Quake engine.</li>
+</('ul', 0)>
+<h2>Audio</h2>
+<ul>
+<li><a href="https://github.com/Hejsil/zig-midi">Hejsil/zig-midi</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/hazeycode/zig-alsa">hazeycode/zig-alsa</a> - Bindings for ALSA (libasound).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dantecatalfamo/sndio-zig">dantecatalfamo/sndio-zig</a> - Bindings for <a href="https://sndio.org">sndio</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/orhun/linuxwave">orhun/linuxwave</a> - Generate music from the entropy of Linux.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dbandstra/zig-wav">dbandstra/zig-wav</a> - Simple WAV file parser and writer.</li>
+</('ul', 0)>
+<h2>Bootables</h2>
+<ul>
+<li><a href="https://github.com/AndreaOrru/zen">AndreaOrru/zen</a> - Experimental operating system.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/andrewrk/clashos">andrewrk/clashos</a> - Multiplayer arcade game for bare metal Raspberry Pi 3 B+.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/andrewrk/HellOS">andrewrk/HellOS</a> - "hello world" x86 kernel example.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/chivay/vmt">chivay/vmt</a> - Toy OS.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/DorianXGH/Lukarnel">DorianXGH/Lukarnel</a> - A microkernel with Rust microservices.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/iguessthislldo/georgios">iguessthislldo/georgios</a> - Hobby Operating System.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jzck/kernel-zig">jzck/kernel-zig</a> - Hobby x86 kernel.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/markfirmware/zig-bare-metal-microbit">markfirmware/zig-bare-metal-microbit</a> - Bare metal microbit program.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/markfirmware/zig-bare-metal-raspberry-pi">markfirmware/zig-bare-metal-raspberry-pi</a> - Bare metal raspberry pi program.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/MasterQ32/RetrOS">MasterQ32/RetrOS</a> - A retro-style gaming console running on bare x86 metal.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/nrdmn/uefi-examples">nrdmn/uefi-examples</a> - UEFI examples.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/nrdmn/uefi-paint">nrdmn/uefi-paint</a> - UEFI-bootable touch paint app.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/rafaelbreno/zig-os">rafaelbreno/zig-os</a> - A simple OS following Philipp Oppermann's posts "Writing an OS in Rust".</li>
+</ul>
+<ul>
+<li><a href="https://github.com/SamTebbs33/pluto">SamTebbs33/pluto</a> - An x86 kernel.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sjdh02/trOS">sjdh02/trOS</a> - Tiny aarch64 baremetal OS thingy.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tralamazza/embedded<em>zig">tralamazza/embedded</em>zig</a> - Minimal embedded ARM example (STM32F103 blue pill).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/yvt/zig-armv8m-test">yvt/zig-armv8m-test</a> - Example app for Armv8-M + TrustZone.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ZeeBoppityZagZiggity/ZBZZ.OS">ZeeBoppityZagZiggity/ZBZZ.OS</a> - An operating system built for RISCV.</li>
+</('ul', 0)>
+<h2>Compilers and interpreters</h2>
+<ul>
+<li><a href="https://github.com/oven-sh/bun">oven-sh/bun</a> - Incredibly fast JavaScript runtime, bundler, transpiler and package manager – all in one.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Vexu/bog">Vexu/bog</a> - Small, strongly typed, embeddable language.</li>
+</ul>
+<ul>
+<li><a href="https://lola.random-projects.net/">LoLa Programming Language</a> - (<a href="https://github.com/MasterQ32/LoLa">GitHub</a>) An embeddable programming language for game scripting.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/squeek502/zua">squeek502/zua</a> - An implementation of Lua 5.1 for learning purposes.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/CurtisFenner/zsmol">CurtisFenner/zsmol</a> - The new Smol compiler and reference.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dantecatalfamo/brainfuck-zig">dantecatalfamo/brainfuck-zig</a> - Brainfuck interpreter.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dantecatalfamo/mruby-zig">dantecatalfamo/mruby-zig</a> - <a href="https://mruby.org/">mruby</a> bindings.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dantecatalfamo/wren-zig">dantecatalfamo/wren-zig</a> - <a href="https://wren.io/">wren</a> bindings.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/fulcrum-so/ziggy-pydust">fulcrum-so/ziggy-pydust</a> - <a href="https://python.org/">Python</a> bindings.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/fubark/cyber">fubark/cyber</a> - Fast and concurrent scripting.</li>
+</('ul', 0)>
+<h2>Concurrency</h2>
+<ul>
+<li><a href="https://github.com/mitchellh/libxev">mitchellh/libxev</a> - Cross-platform event-loop.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kprotty/zefi">kprotty/zefi</a> - Fiber library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/rsepassi/zigcoro">rsepassi/zigcoro</a> - coroutine-friendly, based on libxev.</li>
+</ul>
+<ul>
+<li><a href="https://git.envs.net/iacore/minicoro-zig">iacore/minicoro-zig</a> - Bindings for minicoro - Stackful Stack-Switching Coroutine.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/floscodes/coroutinez">floscodes/coroutinez</a> - Small runtime for running tasks using coroutines.</li>
+</('ul', 0)>
+<h2>Database</h2>
+<ul>
+<li><a href="https://github.com/coilhq/tigerbeetle">coilhq/tigerbeetle</a> - A distributed financial accounting database designed for mission critical safety and performance.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kristoff-it/redis-cuckoofilter">kristoff-it/redis-cuckoofilter</a> - Hashing-function agnostic Cuckoo filters for Redis.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kristoff-it/zig-okredis">kristoff-it/zig-okredis</a> - Zero-allocation Client for Redis 6+.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/leroycep/sqlite-zig">leroycep/sqlite-zig</a> - SQLite bindings.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/vrischmann/zig-cassandra">vrischmann/zig-cassandra</a> - Client for Cassandra 2.1+.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/vrischmann/zig-sqlite">vrischmann/zig-sqlite</a> - SQLite wrapper.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/karlseguin/zuckdb.zig">karlseguin/zuckdb.zig</a> - DuckDB wrapper.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/karlseguin/pg.zig">karlseguin/pg.zig</a> - Native PostgreSQL client.</li>
+</('ul', 0)>
+<h2>Editor plugins</h2>
+<ul>
+<li><a href="https://github.com/MarioAriasC/zig-support">MarioAriasC/zig-support</a> - Language support for JetBrains IDEs (IntelliJ, CLion and others)</li>
+</ul>
+<ul>
+<li><a href="https://github.com/isaachier/ztags">isaachier/ztags</a> - Ctags implementation for Zig.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Tetralux/sublime-zig">Tetralux/sublime-zig</a> - My own, more lightweight, syntax highlighting for Zig.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ziglang/sublime-zig-language">ziglang/sublime-zig-language</a> - Zig language support for Sublime Text.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ziglang/vscode-zig">ziglang/vscode-zig</a> - Zig language support for VSCode.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ziglang/zig-mode">ziglang/zig-mode</a> - Zig mode for Emacs.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ziglang/zig.vim">ziglang/zig.vim</a> - Vim configuration for Zig.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/zigtools/zls">zigtools/zls</a> - Zig LSP implementation + Zig Language Server.</li>
+</('ul', 0)>
+<h2>Emulators</h2>
+<ul>
+<li><a href="https://github.com/fengb/fundude">fengb/fundude</a> - Gameboy emulator for WASM.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/GrooveStomp/chip8-zig">GrooveStomp/chip8-zig</a> - CHIP-8 emulator.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sourgrasses/ichigo">sourgrasses/ichigo</a> - Virtual Boy emulator.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/floooh/kc85.zig">floooh/kc85.zig</a> - A KC85 emulator.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Arwalk/ChipZ">Arwalk/ChipZ</a> A simple Chip8 emulator (library and executable).</li>
+</('ul', 0)>
+<h2>Game tools and libraries</h2>
+<ul>
+<li><a href="https://github.com/hexops/mach">hexops/mach</a> - Game engine and graphics toolkit.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/michal-z/zig-gamedev">michal-z/zig-gamedev</a> - DirectX 12 game development ecosystem.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/floooh/sokol-zig">floooh/sokol-zig</a> - <a href="https://github.com/floooh/sokol">Sokol</a> bindings.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/TM35-Metronome/metronome">TM35-Metronome/metronome</a> - A set of tools for modifying and randomizing Pokémon games.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/TM35-Metronome/tm35-nds">TM35-Metronome/tm35-nds</a> - A library for working with Nintendo DS roms.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/user00e00/sudokuinzig">user00e00/sudokuinzig</a> - Simple and robust sudoku solver.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/wendigojaeger/ZigGBA">wendigojaeger/ZigGBA</a> - SDK for creating Game Boy Advance games using Zig.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/hazeycode/brucelib">hazeycode/brucelib</a> - Monorepo of modules for programming cross-platforms games, simulations, engines & editors.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/andy5995/zigdeck">andy5995/zigdeck</a> - A library that creates and shuffles a deck of cards from which you can draw.</li>
+</('ul', 0)>
+<h2>Games</h2>
+<ul>
+<li><a href="https://github.com/Akuli/curses-minesweeper">Akuli/curses-minesweeper</a> - Minesweeper game written in curses.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/andrewrk/tetris">andrewrk/tetris</a> - A simple tetris clone.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/fabioarnold/snake-zig">fabioarnold/snake-zig</a> - A simple snake clone.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Stenodyon/blink">Stenodyon/blink</a> - A game about building logic with lasers.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/thejoshwolfe/legend-of-swarkland">thejoshwolfe/legend-of-swarkland</a> - Hack-n-slash roguelike inspired by NetHack.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tiehuis/zstack">tiehuis/zstack</a> - Line-race tetris mode.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kooparse/zalgebra">kooparse/zalgebra</a> - Linear algebra library for games and real-time computer graphics.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/floooh/pacman.zig">floooh/pacman.zig</a> - A Pacman clone.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dantecatalfamo/OpenCSE">dantecatalfamo/OpenCSE</a> - Free implementation of the Can't Stop Express dice game.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dbandstra/oxid">dbandstra/oxid</a> - Arcade-style game where you fight waves of monsters in a fixed-screen maze.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/six519/YieArKUNGFUZig">six519/YieArKUNGFUZig</a> - Yie Ar Kung-Fu clone with raylib.</li>
+</('ul', 0)>
+<h2>GUI</h2>
+<ul>
+<li><a href="https://github.com/capy-ui/capy">capy-ui/capy</a> - Cross-platform library for making true native GUIs.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/david-vanderson/gui">david-vanderson/gui</a> - Immediate mode GUI for Zig.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Aransentin/ZWL">Aransentin/ZWL</a> - Zig Windowing Library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/prime31/zig-upaya">prime31/zig-upaya</a> - GUI toolkit.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/fubark/cosmic">fubark/cosmic</a> - GUI toolkit.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/batiati/IUPforZig">batiati/IUPforZig</a> - Zig idiomatic and type-checked bindings for IUP Portable User Interface Toolkit.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/andrewrk/zig-sdl">andrewrk/zig-sdl</a> - Self-contained SDL2 package for Zig.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Snektron/vulkan-zig">Snektron/vulkan-zig</a> - Vulkan binding generator.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Avokadoen/zig<em>vulkan">Avokadoen/zig</em>vulkan</a> - Toy renderer using Vulkan and GLFW.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/andrewrk/zig-vulkan-triangle">andrewrk/zig-vulkan-triangle</a> - Simple triangle displayed using Vulkan, GLFW, and Zig.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kassane/qml_zig">kassane/QML-zig</a> - QML bindings.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/cshenton/learnopengl">cshenton/learnopengl</a> - <a href="https://learnopengl.com">Learn OpenGL</a> tutorials ported to Zig.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ifreund/river">ifreund/river</a> - Dynamic wayland compositor that takes inspiration from dwm and bspwm.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Nelarius/weekend-raytracer-zig">Nelarius/weekend-raytracer-zig</a> - An implementation of the "Ray Tracing in One Weekend" book.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/SpexGuy/Zig-Gltf-Display">SpexGuy/Zig-Gltf-Display</a> - A program that displays glTF files using Vulkan.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tiehuis/zig-raytrace">tiehuis/zig-raytrace</a> - Simple raytracer.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/donpdonp/zootdeck">donpdonp/zootdeck</a> - Fediverse GTK Desktop Reader.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/MasterQ32/ZigPaint">MasterQ32/ZigPaint</a> - A simple paint application. Used to create an OpenGL loader/wrapper and a minimal UI system.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/olexij-christian/zgtk3">olexij-christian/zgtk3</a> - GTK3 bindings.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/rcalixte/libqt6zig">rcalixte/libqt6zig</a> - Qt 6 bindings.</li>
+</('ul', 0)>
+<h2>Linters</h2>
+
+<ul>
+<li><a href="https://github.com/KurtWagner/zlinter">KurtWagner/zlinter</a> - Linter that integrates from source into your <code>build.zig</code></li>
+</ul>
+<ul>
+<li><a href="https://github.com/DonIsaac/zlint">DonIsaac/zlint</a> - Linter</li>
+</ul>
+<ul>
+<li><a href="https://github.com/nektro/ziglint">nektro/ziglint</a> - Linting suite</li>
+</('ul', 0)>
+<h2>Misc libraries</h2>
+<ul>
+<li><a href="https://github.com/natecraddock/ziglua">natecraddock/ziglua</a> - Bindings for the Lua C API.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ryoppippi/zigcv">ryoppippi/zigcv</a> - Bindings for OpenCV4.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/BraedonWooding/Lazy-Zig">BraedonWooding/Lazy-Zig</a> - Linq.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/DutchGhost/maybeuninit">DutchGhost/maybeuninit</a> - MaybeUninit.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/emekoi/log.zig">emekoi/log.zig</a> - A thread-safe logging library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kprotty/zap">kprotty/zap</a> - A collection of libraries which provide interfaces over the system for writing high performance applications.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/vbrusca/ZigMatrixUtils">vbrusca/ZigMatrixUtils</a> - Matrix manipulation and utility library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mlarouche/zigimg">mlarouche/zigimg</a> - Library for reading and writing different image formats.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/bfactory-ai/zignal">bfactory-ai/zignal</a> - Image processing library inspired by <a href="http://dlib.net/">dlib</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dbandstra/zig-pcx">dbandstra/zig-pcx</a> - PCX image format decoder and encoder.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ziglibs/known-folders">ziglibs/known-folders</a> - Provides access to well-known folders across several operating systems.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/SasLuca/zig-nanoid">SasLuca/zig-nanoid</a> - Battle-tested, tiny, secure, URL-friendly, unique string ID generator. Now available in pure Zig.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kassane/libvlc-zig">kassane/libvlc-zig</a> - Bindings for libVLC media framework.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/karlseguin/log.zig">karlseguin/log.zig</a> - Structured logging library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dantecatalfamo/9p-zig">dantecatalfamo/9p-zig</a> - 9P2000 client/server library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/karlseguin/singleflight.zig">karlseguin/singleflight.zig</a> - Duplicate function call suppression.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kassane/lean4-zig">kassane/lean4-zig</a> - Bindings for Lean 4 (theorem prover).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ATTron/astroz">attron/astroz</a> - Astronomical and Spacecraft Toolkit.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pblischak/zprob">pblischak/zprob</a> - Module for Random Number Distributions.</li>
+</('ul', 0)>
+<h2>Network</h2>
+<ul>
+<li><a href="https://github.com/MasterQ32/zig-network">MasterQ32/zig-network</a> - Small network abstraction layer around TCP & UDP.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dantecatalfamo/zig-dns">dantecatalfamo/zig-dns</a> - Experimental DNS library implemented in zig.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/euantorano/ip.zig">euantorano/ip.zig</a> - Library for working with IP Addresses.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lun-4/zigdig">lun-4/zigdig</a> - Naive DNS client library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/marler8997/netpunch">marler8997/netpunch</a> - Outbound proxy protocol.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/remeh/statsd-zig">remeh/statsd-zig</a> - Basic DogStatsD UDP server.</li>
+</('ul', 0)>
+<h3>HTTP</h3>
+<ul>
+<li><a href="https://github.com/Luukdegram/apple<em>pie">Luukdegram/apple</em>pie</a> - HTTP 1.0/1.1 Server implementation.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/truemedian/zfetch">truemedian/zfetch</a> - HTTP(S) client based on iguanaTLS.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ducdetronquito/requestz">ducdetronquito/requestz</a> - HTTP client based on h11.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ducdetronquito/h11">ducdetronquito/h11</a> - I/O-free HTTP/1.1 implementation inspired by hyper/h11.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lun-4/ziget">lun-4/ziget</a> - Simple wget without libc.</li>
+</ul>
+<ul>
+<li><del><a href="https://github.com/Vexu/routez">Vexu/routez</a> - HTTP server.</del></li>
+</ul>
+<ul>
+<li><a href="https://github.com/frmdstryr/zhp">frmdstryr/zhp</a> - Featureful HTTP server.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/axgdev/telegram<em>echobot</em>zig">axgdev/telegram<em>echobot</em>zig</a> - Telegram echo bot.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/karlseguin/http.zig">karlseguin/http.zig</a> - HTTP/1.1 server.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/zigzap/zap">zigzap/zap</a> - blazingly fast, robust HTTP server.</li>
+</('ul', 0)>
+<h3>Messaging</h3>
+<ul>
+<li><a href="https://github.com/skunkwerks/zamqp">skunkwerks/zamqp</a> - AMQP client, based on rabbitmq-c.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/nine-lives-later/zzmq">nine-lives-later/zzmq</a> - ZeroMQ library, based on CZMQ.</li>
+</('ul', 0)>
+<h2>Web</h2>
+<ul>
+<li><a href="https://github.com/andrewrk/lua-in-the-browser">andrewrk/lua-in-the-browser</a> - Using Zig to build Lua for WebAssembly.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/karlseguin/websocket.zig">karlseguin/websocket.zig</a> - A WebSocket implementation.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kivikakk/htmlentities.zig">kivikakk/htmlentities.zig</a> - HTML5 entity data.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/meheleventyone/zig-wasm-test">meheleventyone/zig-wasm-test</a> - A minimal WebAssembly example using Zig's build system.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/shritesh/zig-wasm-dom">shritesh/zig-wasm-dom</a> - Zig + WebAssembly + JS + DOM.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/shritesh/zigfmt-web">shritesh/zigfmt-web</a> - Zig fmt on the web.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/zigwasm/wasm-zig">zigwasm/wasm-zig</a> - Common WASM runtime binding to C API.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/zigwasm/wasmer-zig">zigwasm/wasmer-zig</a> - Bindings for the Wasmer WebAssembly runtime.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/zigwasm/wasmtime-zig">zigwasm/wasmtime-zig</a> - Bindings of Wasmtime.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/batiati/mustache-zig">batiati/mustache-zig</a> - Mustache implementation.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/floscodes/zerve">floscodes/zerve</a> - Simple framework for writing web services and web apps.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/zon-dev/zinc">zon-dev/zinc</a> - Zinc is a framework focusing on high performance, usability, security, and extensibility.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/by-nir/aws-lambda-zig">by-nir/aws-lambda-zig</a> - Super-fast AWS Lambda runtime for Zig.</li>
+</('ul', 0)>
+<h2>System tools</h2>
+<ul>
+<li><a href="https://github.com/pbui-project/pbui-main">pbui-project/pbui-main</a> - BSD/Linux core utilities written in Zig.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/hspak/brightnessztl">hspak/brightnessztl</a> - A CLI to control device backlight.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/thejoshwolfe/hexdump-zip">thejoshwolfe/hexdump-zip</a> - Produce an annotated hexdump of a zipfile.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kubkon/zacho">kubkon/zacho</a> - Zig's Mach-O parser.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/weskoerber/mac<em>address">weskoerber/mac</em>address</a> - A cross-platform library to retrieve the MAC address from your network interfaces without libc.</li>
+</('ul', 0)>
+<h2>Zig development tools</h2>
+<ul>
+<li><a href="https://github.com/marler8997/zigup">marler8997/zigup</a> - Download and manage zig compilers.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/korandoru/setup-zig">korandoru/setup-zig</a> - Set up a specific version of Zig environment on GitHub Actions.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/weskoerber/zvm">weskoerber/zvm</a> - POSIX-compliant bash script to manage multiple active Zig versions.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/vezel-dev/zig-sdk">vezel-dev/zig-sdk</a> - MSBuild SDK for building Zig, C, and C++ projects using the Zig compiler.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/aherrmann/rules<em>zig">aherrmann/rules</em>zig</a> - Bazel build rules for Zig.</li>
+</('ul', 0)>
+<h3>Package managers</h3>
+<ul>
+<li><a href="https://github.com/zigtools/zpm">zigtools/zpm</a> - Unofficial Zig package manager.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mattnite/gyro">mattnite/gyro</a> - Package manager with an index, build runner, and build dependencies.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/nektro/zigmod">nektro/zigmod</a> - Zig package manager.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/cheetah/asdf-zig">cheetah/asdf-zig</a> - Zig plugin for the ASDF package manager.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mattnite/ezpkg">mattnite/ezpkg</a> - Zig Package Manager Expansion Pack.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/nix-community/zon2nix">nix-community/zon2nix</a> - Convert the dependencies in <code>build.zig.zon</code> to a Nix expression.</li>
+</('ul', 0)>
+<h2>Parser</h2>
+<ul>
+<li><a href="https://github.com/darithorn/zig-toml">darithorn/zig-toml</a> - A TOML parser.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Himujjal/zig-json5">Himujjal/zig-json5</a> - JSON5 parser resembling the <code>std.json</code> APIs.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/EzequielRamis/zimdjson">EzequielRamis/zimdjson</a> - Parsing gigabytes of JSON per second. Zig port of simdjson with fundamental features.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/chwayne/rem">chwayne/rem</a> - An HTML parsing library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/goto-bus-stop/ziguid">goto-bus-stop/ziguid</a> - GUID parsing/stringifying.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/00JCIV00/cova">00JCIV00/cova</a> - Commands, Options, Values, Arguments. A simple yet robust cross-platform command line argument parsing library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Hejsil/zig-clap">Hejsil/zig-clap</a> - Simple command line argument parsing library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sam701/zig-cli">sam701/zig-cli</a> - Package for building command line apps.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kivikakk/libpcre.zig">kivikakk/libpcre.zig</a> - Bindings to libpcre for Perl-compatible regular expressions.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kivikakk/koino">kivikakk/koino</a> - CommonMark/GitHub Flavored Markdown parser and HTML renderer.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kubkon/zig-yaml">kubkon/zig-yaml</a> - YAML parser.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/loo-re/zini">loo-re/zini</a> - Consistent .ini parser.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sreehax/zig-ini">sreehax/zig-ini</a> - .ini parser.</li>
+</ul>
+<ul>
+<li><a href="https://gitea.nulo.in/Nulo/ini-parser">Nulo/ini-parser</a> - .ini parser.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tiehuis/zig-regex">tiehuis/zig-regex</a> - A regex implementation.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tiehuis/zig-ryu">tiehuis/zig-ryu</a> - Port of <a href="https://github.com/ulfjack/ryu">ryu</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Vexu/zuri">Vexu/zuri</a> - URI parser.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/vi/zigmkv">vi/zigmkv</a> - Matroska/webm (mkv) parser.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/winksaville/zig-parse-args">winksaville/zig-parse-args</a> - Parse command line arguments.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/winksaville/zig-parse-number">winksaville/zig-parse-number</a> - Implement ParseNumber which can parse any TypeId.Int or TypeId.Float.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/gernest/base32">gernest/base32</a> - Base32 encoding/decoding.</li>
+</ul>
+<ul>
+<li><a href="https://git.sr.ht/~caolan/zig-netstring">caolan/zig-netstring</a> - Netstring parser.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Arwalk/zig-protobuf">Arwalk/zig-protobuf</a> - Implementation of Protocol Buffers v3 leveraging Zig's comptime.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/iddev5/inon">iddev5/inon</a> - Data configuration file format.</li>
+</ul>
+<ul>
+<li><a href="https://codeberg.org/naneros/ztoml.git">naneros/ztoml</a> - TOMLv1.0.0 parser and convert TOML to JSON.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/InKryption/comath">InKryption/comath</a> - Calculate math expressions in comptime.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/weskoerber/kewpie">weskoerber/kewpie</a> - A simple query string parser.</li>
+</('ul', 0)>
+<h2>Learning resources</h2>
+<ul>
+<li><a href="https://github.com/belse-de/zig-tut">belse-de/zig-tut</a> - A collection of small projects and tutorials to learn Zig.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Sobeston/ziglearn">Sobeston/ziglearn</a> - Zig learning resources.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/zighelp/zighelp">zighelp/zighelp</a> - Get up to speed with Zig quickly (ziglearn fork).</li>
+</ul>
+<ul>
+<li><a href="https://codeberg.org/ziglings/exercises">ziglings/exercises</a> - Learn Zig by fixing tiny example programs.</li>
+</('ul', 0)>
+<h2>C/C++ libraries packaged for Zig</h2>
+
+<p>These C/C++ libraries were packaged to be used with the Zig build and packaging system (<code>build.zig</code>).</p>
+
+<h3>C</h3>
+
+<ul>
+<li><a href="https://github.com/andrewrk/SDL">andrewrk/SDL</a> - Simple Directmedia Layer.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/andrewrk/libz">andrewrk/libz</a> - Zlib data compression.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/andrewrk/ffmpeg">andrewrk/ffmpeg</a> - library only.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/andrewrk/libgroove">andrewrk/libgroove</a> - streaming audio processing library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/andrewrk/libsoundio/tree/zig-pkg">andrewrk/libsoundio</a> - library for real-time audio input and output.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kassane/openssl-zig">kassane/openssl-zig</a> - crypto, providers & ssl libraries only.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kassane/wolfssl">kassane/wolfssl</a> - wolfssl library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kassane/libbpf">kassane/libbpf</a> - BPF CO-RE (Compile Once – Run Everywhere).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kassane/winpthreads-zigbuild">kassane/winpthreads</a> - PThread library for MinGW.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/raysan5/raylib">raysan5/raylib</a> - A simple and easy-to-use library to enjoy videogames programming.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jmcnamara/libxlsxwriter">jmcnamara/libxlsxwriter</a> - Creating Excel XLSX files.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/alexrp/libffi">alexrp/libffi</a> - libffi with a Zig build script.</li>
+</('ul', 0)>
+<h3>C++</h3>
+
+<ul>
+<li><a href="https://github.com/andrewrk/libchromaprint">andrewrk/libchromaprint</a> - library for generating audio fingerprints used by AcoustID.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kassane/asio">kassane/asio</a> - (non-boost) Networking I/O library (w/ event-loop, C++14/17/20).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kassane/fmt">kassane/fmt</a> - Modern formatting library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kassane/context">kassane/context</a> - (boost-context) fiber library (C++14/17/20).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kassane/fiber">kassane/fiber</a> - (boost-fiber) userland threads (C++14/17/20).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kassane/beast">kassane/beast</a> - (boost-beast) HTTP and WebSocket (C++14/17/20).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kassane/hana">kassane/hana</a> - (boost-hana) Meta-programming library (header-only, C++14/17/20).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kassane/intrusive">kassane/intrusive</a> - (boost-intrusive) intrusive containers (header-only, C++03/11/14).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kassane/unordered">kassane/unordered</a> - (boost-unordered) hashmap and set concurrency containers (C++03/11/14).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kassane/catch2">kassane/catch2</a> - Unit testing library (C++14/17/20).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kassane/outcome">kassane/outcome</a> - (non-boost) Error handler (C++14/17/20).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kassane/json">kassane/json</a> - jsoncpp ported to Zig packaging.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kassane/Standalone-Server">kassane/Standalone-Server</a> - Asio standalone C++ HTTP/S Server.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kassane/range-v3">kassane/range-v3</a> - modern range library (C++14/17/20).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kassane/libzmq">kassane/libzmq</a> - ZeroMQ core engine in C++ library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kassane/libsigcplusplus">kassane/libsigcplusplus</a> - Typesafe callback system for standard C++.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ggerganov/llama.cpp">ggerganov/llama.cpp</a> - Port of Facebook's LLaMA model in C/C++.</li>
+</('ul', 0)>
+<h2>Other</h2>
+<ul>
+<li><a href="https://allyourcodebase.com/">All Your Codebase</a> - Development status of Zig and its' ecosystem.</li>
+</ul>
+<ul>
+<li><a href="https://zig.pm/">zig.pm</a> - A community-maintained repository of Zig packages.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/hspak/geteltorito-zig">hspak/geteltorito-zig</a> - Geteltorito re-write in Zig.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/momumi/x86-zig">momumi/x86-zig</a> - Library for assembling x86.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/nrdmn/ilo<em>license</em>key">nrdmn/ilo<em>license</em>key</a> - ILO license key library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/vegecode/svd2zig">vegecode/svd2zig</a> - Convert System View Description (svd) files to Zig headers for baremetal development.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mqttiotstuff/iotmonitor">mqttiotstuff/iotmonitor</a> - MQTT IotMonitor tools, save time to monitor mqtt agents or devices.</li>
+</ul>
+<ul>
+<li><a href="https://gitlab.com/ve-nt/outfieldr">ve-nt/outfieldr</a> - <a href="https://github.com/tldr-pages/tldr">TLDR</a> client.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kubkon/zig-ios-example">kubkon/zig-ios-example</a> - Minimal <code>build.zig</code> for targeting iOS.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ynuwenhof/zigbraten">ynuwenhof/zigbraten</a> - Proof of concept internal cheat for Cube 2: Sauerbraten.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/vbrusca/ZigSdlGameTemplate">vbrusca/ZigSdlGameTemplate</a> - SDL game project template.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/freref/fancy-cat">freref/fancy-cat</a> - PDF viewer for your terminal.</li>
+</ul>
+</body>
+</html>

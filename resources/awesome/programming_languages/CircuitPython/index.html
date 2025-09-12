@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CircuitPython</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>CircuitPython</h1>
+
+<p><strong>Repository:</strong> https://github.com/adafruit/awesome-circuitpython#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<h1>Awesome CircuitPython</h1>
+
+<p align="center">
+  <img style="width: min(400px, 100%)" src="https://raw.githubusercontent.com/adafruit/awesome-circuitpython/master/assets/awesome_circuitpython.png" alt="Awesome CircuitPython">
+<br>
+</p>
+
+<p><a href="https://awesome.re/badge.svg"><img src="https://awesome.re" alt="Awesome</a>"></p>
+
+<blockquote>
+<p>A curated list of awesome CircuitPython guides, videos, libraries, frameworks, software and resources.</p>
+</blockquote>
+
+<video style="display: block; max-width: 720px; width: 100%; margin: auto;" controls src="https://user-images.githubusercontent.com/1685947/115119719-d6e21f00-9f77-11eb-84bf-3f7af59948a3.mov"></video>
+
+<p><a href="https://learn.adafruit.com/welcome-to-circuitpython/what-is-circuitpython">CircuitPython</a> is Adafruit's branch of MicroPython designed to simplify experimentation and education on low-cost microcontrollers. It makes it easier than ever to start prototyping by requiring no upfront desktop software downloads. With CircuitPython you can write clean and simple Python code to control hardware instead of having to use complex low-level languages like C or C++ (what Arduino uses for programming). It's great for beginners!</p>
+
+<h2>Contents</h2>
+
+<ul>
+<li><a href="#circuitpythonorg">CircuitPython.org</a></li>
+</ul>
+<ul>
+<li><a href="#adafruit-learning-system-guides">Adafruit Learning System Guides</a></li>
+</ul>
+<ul>
+<li><a href="#community">Community</a></li>
+</ul>
+<ul>
+<li><a href="#Video">Videos</a></li>
+</ul>
+<ul>
+<li><a href="#books">Books</a></li>
+</ul>
+<ul>
+<li><a href="#code">Code</a></li>
+</ul>
+<ul>
+<li><a href="#frameworks">Frameworks</a></li>
+</ul>
+<ul>
+<li><a href="#hardware">Hardware</a></li>
+</ul>
+<ul>
+<li><a href="#newsletter">Newsletter</a></li>
+</ul>
+<ul>
+<li><a href="#news">In the news</a></li>
+</ul>
+<ul>
+<li><a href="#art">Art, logos, graphics</a></li>
+</ul>
+<ul>
+<li><a href="#social">Social media</a></li>
+</ul>
+<ul>
+<li><a href="#podcasts">Podcasts</a></li>
+</ul>
+<ul>
+<li><a href="#events">Events</a></li>
+</ul>
+<ul>
+<li><a href="#swag">Swag</a></li>
+</ul>
+<ul>
+<li><a href="#talks">Talks</a></li>
+</ul>
+<ul>
+<li><a href="#contributing">Contributing</a></li>
+</('ul', 0)>
+<h2>CircuitPython.org</h2>
+
+<p><a href="./assets/circuitpython-org.png"><img src="https://circuitpython.org/" alt="CircuitPython.org</a>"></p>
+
+<p><a href="https://circuitpython.org/">CircuitPython.org</a> is the first stop on the information snake highway. Here you can see all the <a href="https://circuitpython.org/downloads">supported boards and download</a> the specific firmware for each one, including beta, latest, and previous versions. Downloads can be sorted by: maker, features, name, and more. At this time there are over 500 boards supported in the CircuitPython family!</p>
+
+<h2>Adafruit Learning System Guides</h2>
+
+<ul>
+<li><a href="https://learn.adafruit.com/welcome-to-circuitpython/overview">Welcome to CircuitPython!</a> - An overview of CircuitPython and the community.</li>
+</ul>
+<ul>
+<li><a href="https://learn.adafruit.com/circuitpython-essentials">CircuitPython Essentials</a> - Learning the essential functions of CircuitPython.</li>
+</ul>
+<ul>
+<li><a href="https://learn.adafruit.com/category/circuitpython">learn.adafruit.com CircuitPython</a> - All Adafruit Learning Guides on CircuitPython.</li>
+</('ul', 0)>
+<h2>Community</h2>
+
+<ul>
+<li><a href="https://adafru.it/discord">Adafruit CircuitPython Discord channel #CircuitPython</a> - 24/7 chat and support on CircuitPython including a weekly podcast.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/playlist?list=PLjF7R1fz_OOUvw7tMv45xjWp0ht8yNgg0">CircuitPython Weekly Meeting</a> - Video archive of weekly community meeting via Discord, starting from September, 2017.</li>
+</ul>
+<ul>
+<li><a href="https://forums.adafruit.com/viewforum.php?f=60">Adafruit CircuitPython Forums</a> - The Adafruit discussion forum on CircuitPython.</li>
+</ul>
+<ul>
+<li><a href="https://www.reddit.com/r/circuitpython/">Reddit r/circuitpython</a> - a subreddit devoted to CircuitPython.</li>
+</ul>
+<ul>
+<li><a href="https://micropython.slack.com/">MicroPython Slack</a> - a Slack channel for MicroPython users. You can get an invitation <a href="https://slack-micropython.herokuapp.com/">here</a>.</li>
+</ul>
+<ul>
+<li><a href="https://www.meetup.com/MicroPython-Meetup/">MicroPython Meetup</a> - online and in Melbourne, Australia once a month, and <a href="https://melbournemicropythonmeetup.github.io/">Blog</a>.</li>
+</('ul', 0)>
+<h2>Video</h2>
+
+<h3>Educational</h3>
+
+<ul>
+<li><a href="https://www.youtube.com/playlist?list=PLjF7R1fz_OOWFqZfqW9jlvQSIUmwn9lWr">CircuitPython Parsec</a> - Adafruit's John Park's lessons on using CircuitPython for a variety of tasks.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/playlist?list=PLBJJ76R_ry5T3X72OIDkMOXQIdmcvSkue">CircuitPython School</a> - lessons and projects in Professor John Gallaugher's course Physical Computing: Art, Robotics, and Tech for Good at Boston College.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/playlist?list=PLBJJ76R_ry5Rz5YgfjpI4eCHmS5o5umL8">CircuitPython Projects</a> - fun maker, electronics programming, and robotics projects, all courtesy of Professor John Gallaugher, who teaches Physical Computing at Boston College.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/playlist?list=PLRHdgFNRLyaN6eCw8b0yoHKDY9B4GiirU">CircuitPython Hardware Tutorials</a> - YouTube videos by educator Brogan M. Pratt.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/playlist?list=PLRHdgFNRLyaOtopysljciT3-YzH858uDe">How to Program a Robot in Python: Beginners Guide</a> - YouTube videos by educator Brogan M. Pratt.</li>
+</('ul', 0)>
+<h2>Books</h2>
+
+<ul>
+<li><a href="https://www.amazon.com/Getting-Started-Adafruit-Circuit-Playground-dp-1680454889/dp/1680454889/ref=mt_paperback">Getting Started with Circuit Playground Express by Anne Barela</a> - Introduction and discussion of the Circuit Playground Express including programming via CircuitPython, MakeCode and Arduino.</li>
+</ul>
+<ul>
+<li><a href="https://www.amazon.com/CircuitPython-Development-Workshop-Agus-Kurniawan-ebook/dp/B07H2BDQLD/">CircuitPython Development Workshop by Agus Kurniawan</a> - This book helps you to get started with CircuitPython development. This book uses the Adafruit ItsyBitsy M0 Express board for development.</li>
+</ul>
+<ul>
+<li><a href="https://steam-tokyo.com/product/cpbook1/">CircuitPython for beginners with Adafruit Circuit Playground Express & Mu</a> - In Japanese by author <a href="https://twitter.com/AoyamaProd">Aoyama_PROD</a>, September, 2019 from <a href="https://techbookfest.org/">TechBookFest</a>.</li>
+</ul>
+<ul>
+<li><a href="https://www.adafruit.com/product/3325">Python for Microcontrollers: Getting Started with MicroPython - by Donald Norris</a> - Program your own MicroPython projects with ease—no prior programming experience necessary.</li>
+</ul>
+<ul>
+<li><a href="https://www.amazon.com/Programming-MicroPython-Embedded-Microcontrollers-Python/dp/1491972734">Programming with MicroPython - by Nicholas H. Tollervey, includes CircuitPython</a> - Discusses the MicroPython language.</li>
+</ul>
+<ul>
+<li><a href="https://store.rpipress.cc/collections/books/products/wearable-tech-projects-2019">Wearable Tech Projects by Sophy Wong</a> - Contains many wearable projects using CircuitPython.</li>
+</ul>
+<ul>
+<li><a href="https://www.barnesandnoble.com/w/learning-iot-with-python-and-raspberry-pi-ei-horvath/1133345171?ean=9780578549361">Learning IoT with Python and Raspberry Pi by E.I. Horvath, E.A. Horvath</a></li>
+</ul>
+<ul>
+<li><a href="https://www.amazon.com/author/rleander">Make Music with the Circuit Playground Express by Rick Leander</a> - Twelve projects that make music, sound and noise with Circuit Python.</li>
+</ul>
+<ul>
+<li><a href="https://www.amazon.com/author/rleander">Ten Games for the Circuit Playground Express by Rick Leander</a> - Ten classic games adapted for Circuit Python.</li>
+</ul>
+<ul>
+<li><a href="https://www.elektor.fr/initiation-au-langage-circuitpython-et-a-la-puce-nrf52840">Initiation au langage CircuitPython et à la puce nRF52840</a> - A French introduction to CircuitPython and the nRF52840.</li>
+</('ul', 0)>
+<h2>Code</h2>
+
+<ul>
+<li>CircuitPython Board Software Versions: Select per board at <a href="https://circuitpython.org/downloads">CircuitPython.org</a>.</li>
+</ul>
+<ul>
+<li><a href="https://circuitpython.readthedocs.io/en/latest/README.html">CircuitPython API Reference</a> - A list of functions and documentation available for CircuitPython.</li>
+</ul>
+<ul>
+<li><a href="https://learn.adafruit.com/circuitpython-essentials">CircuitPython Essentials</a> - Learning the essential functions of CircuitPython.</li>
+</ul>
+<ul>
+<li><a href="https://circuitpython.readthedocs.io/projects/circuitplayground/en/latest/">Circuit Playground Express CircuitPython API Reference</a> - The functions and documentation specific to the Circuit Playground Express using CircuitPython.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/adafruit/circuitpython">CircuitPython GitHub Repository</a> - The source code for CircuitPython on GitHub.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/adafruit/Adafruit<em>CircuitPython</em>Bundle/blob/master/circuitpython<em>library</em>list.md">Adafruit CircuitPython Libraries</a> - Current Adafruit CircuitPython Libraries. There are over 150+ libraries available. More on Libraries on <a href="https://circuitpython.org/libraries">CircuitPython.org</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/adafruit/CircuitPython<em>Community</em>Bundle/blob/main/circuitpython<em>community</em>library_list.md">CircuitPython Community Libraries</a> - CircuitPython Community Libraries. There are over 45+ libraries available.</li>
+</ul>
+<ul>
+<li><a href="https://learn.adafruit.com/circuitpython-on-raspberrypi-linux?view=all">Adafruit Blinka - SBC Compatibility</a> - CircuitPython Libraries on Raspberry Pi and other compatible single-board computers (SBC) running Linux.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/prcutler/awesome-macropad">Awesome List for the RP2040 Macropad</a> - A list of awesome Macropad applications, macros, 3D printed plans, and more.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/todbot/circuitpython-tricks">Tod Kurt's CircuitPython Tips and Tricks</a> - A collection of tips and tricks for CircuitPython. Also available as an Adafruit <a href="https://learn.adafruit.com/todbot-circuitpython-tricks?view=all">Learn Guide</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/todbot/circuitpython-synthio-tricks">Tod Kurt's CircuitPython <code>synthio</code> Tips and Tricks</a> - More tips and tricks from Tod Kurt about CircuitPython's <code>synthio</code> library.</li>
+</('ul', 0)>
+<h2>Frameworks</h2>
+
+<ul>
+<li><a href="https://code.circuitpython.org/">code.circuitpython.org - the online CircuitPython code editor</a> - edit code and download to your device via WiFi, Bluetooth or USB.</li>
+</ul>
+<ul>
+<li><a href="https://codewith.mu/">The Mu Editor, IDE, REPL, and plotter for CircuitPython</a> - The recommended offline Python editor for CircuitPython.</li>
+</ul>
+<ul>
+<li><a href="https://mu.readthedocs.io/en/latest/">For developers, Mu: A Python Code Editor</a> - The documentation for Mu.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/wmerkens/vscode-circuitpython">Using Microsoft VSCode for CircuitPython</a> (GitHub) and <a href="https://marketplace.visualstudio.com/items?itemName=wmerkens.vscode-circuitpython-v2">Microsoft Marketplace</a>.</li>
+</ul>
+<ul>
+<li><a href="https://thonny.org/">Thonny, a Python IDE for beginners</a> - An editor with support for CircuitPython and MicroPython.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/adafruit/glider">Glider: An app for editing Python on mobile devices wirelessly</a> - Also a <a href="https://youtu.be/NYpcjDBA6xw">video</a>, in development.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/s-light/CircuitPython<em>Atom</em>helper">A helper for CircuitPython development with Atom</a> - A helper for the <a href="https://atom.io/">Atom editor</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/microsoft/vscode-python-devicesimulator">Microsoft Device Simulator Express</a> - Virtual Circuit Playground Express and CircuitPython programming in Visual Studio Code (no longer maintained).</li>
+</ul>
+<ul>
+<li><a href="https://pewpew.rtfd.io">PewPew workshops</a> - Materials, examples, libraries and hardware for running Python game programming and electronics workshops with a minimum of problems.</li>
+</ul>
+<ul>
+<li>The CircuitPython Online IDE <a href="https://urfdvw.github.io/circuitpython-online-ide-2/">Version 2.1</a> - A browser based IDE for CircuitPython by River Wang</li>
+</('ul', 0)>
+<h2>Hardware</h2>
+
+<p>All supported boards may be viewed at <a href="https://circuitpython.org/downloads">circuitpython.org</a> to include descriptions, pictures, and compatible CircuitPython builds. For Single-Board Computers, the list of boards is <a href="https://circuitpython.org/blinka">under the Blinka category</a>.</p>
+
+<p>Looking to add a new board to CircuitPython? It's highly encouraged! Adafruit has four tutorials to help you do so:</p>
+
+<ul>
+<li><a href="https://learn.adafruit.com/how-to-add-a-new-board-to-circuitpython/overview">How to Add a New Board to CircuitPython</a></li>
+</ul>
+<ul>
+<li><a href="https://learn.adafruit.com/how-to-add-a-new-board-to-the-circuitpython-org-website">How to add a New Board to the circuitpython.org website</a></li>
+</ul>
+<ul>
+<li><a href="https://learn.adafruit.com/adding-a-single-board-computer-to-platformdetect-for-blinka">Adding a Single Board Computer to PlatformDetect for Blinka</a></li>
+</ul>
+<ul>
+<li><a href="https://learn.adafruit.com/adding-a-single-board-computer-to-blinka">Adding a Single Board Computer to Blinka</a></li>
+</ul>
+<p><a href="https://www.adafruit.com/category/956">CircuitPython sensors and accessories</a> - Complete listing of sensors, LCDs, displays, robotics, breakout boards, and more.</p>
+
+<p><a href="https://python.digikey.com">python.digikey.com</a> - Digi-Key electronics has a listing of all Python-supported boards on their site in one location including CircuitPython and MicroPython boards.</p>
+
+<h2>Newsletter</h2>
+
+<ul>
+<li><a href="https://www.adafruitdaily.com/">Adafruit Daily, Python for Microcontrollers</a> - A weekly newsletter on MicroPython, CircuitPython, and Python on single-board computers (SBC). A spam-free list.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/adafruit/circuitpython-weekly-newsletter">Contribute to newsletter</a> - Guidelines on contributing to the newsletter.</li>
+</ul>
+<ul>
+<li><a href="https://www.adafruitdaily.com/category/circuitpython/">Archives of all newsletters</a> - List of every newsletter published from the start, November 2016.</li>
+</ul>
+<ul>
+<li><a href="http://adafru.it/pohepisodes">Python on Hardware weekly Videocast</a> - Ladyada and PT review the highlights of the newsletter every week in this video series. The broadcast is also on <a href="https://podcasts.apple.com/us/podcast/python-on-hardware/id1451685192?mt=2">iTunes</a>, <a href="https://www.youtube.com/playlist?list=PLjF7R1fz_OOXRMjM7Sm0J2Xt6H81TdDev">YouTube</a>, <a href="https://www.instagram.com/adafruit/channel/">IGTV (Instagram TV</a>), and <a href="https://itunes.apple.com/us/podcast/python-on-hardware/id1451685192?mt=2">XML</a>.</li>
+</('ul', 0)>
+<h2>News</h2>
+
+<ul>
+<li><a href="https://www.tomshardware.com/raspberry-pi/adafruits-fruit-jam-is-a-raspberry-pi-pico-2-powered-credit-card-sized-computer">Adafruit's Fruit Jam is a Raspberry Pi Pico 2 powered, credit card sized computer</a> - Tom's Hardware, February 5, 2025</li>
+</ul>
+<ul>
+<li><a href="https://hackaday.com/2023/08/01/the-past-present-and-future-of-circuitpython/">The Past, Present, and Future of CircuitPython</a> - Hackaday interviews Limor "Ladyada" Fried about CircuitPython, August, 2023.</li>
+</ul>
+<ul>
+<li><a href="https://blog.adafruit.com/category/circuitpython/">CircuitPython on the Adafruit.com/blog</a> - Adafruit Blog posts discussing CircuitPython.</li>
+</ul>
+<ul>
+<li><a href="https://www.circuitpythonshow.com/@circuitpythonshow/episodes/kattni-rembor">CircuitPython Show Episode 1: Kattni Rembor</a> - Host Paul Cutler interviews CircuitPython team member Kattni Rembor, March 1, 2022.</li>
+</ul>
+<ul>
+<li><a href="https://www.hackster.io/news/scott-shawcroft-works-on-bare-metal-raspberry-pi-circuitpython-as-adafruit-plans-an-e-ink-computer-a6a037558ba5">Scott Shawcroft Works On Bare-Metal Raspberry Pi CircuitPython as Adafruit Plans an E Ink Computer</a> - Hackster.io, December 2021.</li>
+</ul>
+<ul>
+<li><a href="https://realpython.com/podcasts/rpp/75/">The Real Python Podcast Episode 75: Building With CircuitPython & Constraints of Python for Microcontrollers</a> - Scott Shawcroft, August 27, 2021.</li>
+</ul>
+<ul>
+<li><a href="https://traffic.libsyn.com/secure/makingembeddedsystems/embedded-ep372.mp3?download=true">embedded.fm Podcast Episode 372: The Motivation of Creativity</a> - interview with Anne Barela, CircuitPython team member and Python on Microcontrollers Editor, May 6, 2021.</li>
+</ul>
+<ul>
+<li><a href="https://dronebotworkshop.com/pi-pico-circuitpython/">DroneBot Workshop: Raspberry Pi Pico with CircuitPython</a> - March 5, 2021.</li>
+</ul>
+<ul>
+<li><a href="https://youtu.be/-bBHXimlfPQ">Changing Lives through Open Source, Passion and Mentoring</a> - the <a href="https://www.pyohio.org/2019/presentations/126/">keynote talk at PyOhio</a>, July 27, 2019 by Kattni Rembor.</li>
+</ul>
+<ul>
+<li><a href="https://blog.adafruit.com/2019/07/27/issue-84-the-magpi-magazinethe-magpi-magazine-control-servos-with-circuitpython-and-raspberry-pi-by-makermelissa-themagpi-raspberry_pi-circuitpython-blinka/">Control servos with CircuitPython and Raspberry Pi</a> - The MagPi Magazine, Issue 84, Melissa LeBlanc-Williams, July, 2019.</li>
+</ul>
+<ul>
+<li><a href="https://www.blog.pythonlibrary.org/2019/07/01/pydev-of-the-week-scott-shawcroft/">PyDev of the Week: Scott Shawcroft</a> - July 1, 2019.</li>
+</ul>
+<ul>
+<li><a href="https://pyfound.blogspot.com/2019/05/scott-shawcroft-history-of-circuitpython.html">Scott Shawcroft: History of CircuitPython</a> - A discussion of CircuitPython for the core developers of Python, PyCon 2019.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=HNrMjH9Yuv4">Five Things You Didn't Know Python Could Do</a> - YouTube video, June 19, 2019.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=35mXD40SvXM">PyCon2019 Keynote - Light Up Your Life - With Python and LEDs</a> - By Nina Zakharenko. Python opens a whole new world of working with wearable electronics. The slides are <a href="https://speakerdeck.com/nnja/preso-c22944f3-ce78-4ced-8a34-f866656bf6c8">also available</a>.</li>
+</ul>
+<ul>
+<li><a href="https://www.codecademy.com/learn/learn-circuitpython?utm<em>source=adafruit&utm</em>medium=partners&utm<em>campaign=circuitplayground&utm</em>content=blog_home">Learn Hardware Programming with CircuitPython</a> - A course offered by Codecademy in collaboration with Adafruit.</li>
+</ul>
+<ul>
+<li><a href="https://blog.adafruit.com/2019/03/31/use-circuitpython-boards-on-the-ti-83-premium-ce-calculator-tiplanetnews-ticalculators-circuitpython-circuitpython/">Use CircuitPython boards on the TI-83 Premium CE calculator</a> - CircuitPython runs on Texas Instrument calculators.</li>
+</ul>
+<ul>
+<li><a href="https://spectrum.ieee.org/scott-shawcroft-is-squeezing-python-into-microcontrollers">Scott Shawcroft Is Squeezing Python Into Microcontrollers</a> - IEEE Spectrum Magazine article on the Python programming language for makers.</li>
+</ul>
+<ul>
+<li><a href="https://blog.adafruit.com/2019/03/18/adafruit-circuit-playground-express-4-h-edition-approved-adafruit-4h-4h-4hgrowshere/">Circuit Playground Express 4-H edition approved</a> - The 4-H branded version was approved by the USDA, this is the first CircuitPython powered board that is also 4-H approved!</li>
+</ul>
+<ul>
+<li><a href="https://blog.adafruit.com/2019/03/17/circuitpython-in-space-pythonaut-circuitpython-adafruit-maholli404-zacinaction-smallsat-kicksat/">CircuitPython in Space</a> - <em>CircuitPython provides an approachable and logical means of conducting science with hardware. Paired with low-cost hardware shown to work in space, we can enable an new generation to question and explore the unknown. With the necessary “satellite stuff” already baked in, students can spend their time trying something new rather than reinventing the wheel</em>.</li>
+</ul>
+<ul>
+<li><a href="https://anchor.fm/disruptityourself/episodes/Adafruit-PyPortal-GUI-meets-CircuitPython-in-a-Big-Way-e3g745">Adafruit PyPortal: GUI meets CircuitPython in a Big Way</a> - Disrupt It Yourself podcast on CircuitPython and the IoT device, PyPortal.</li>
+</ul>
+<ul>
+<li><a href="https://youtu.be/Kz4C7sCLWb0">Cool Tools</a> - Sophy Wong Talks Circuit Playground Express including CircuitPython.</li>
+</ul>
+<ul>
+<li><a href="https://www.digikey.com/en/articles/techzone/2019/mar/the-basics-of-circuitpython-for-rapid-microcontroller-based-prototyping-and-development">CircuitPython for Rapid Microcontroller-Based Prototyping and Development</a> - Digi-Key on the open source community's efforts adapting specific microcontrollers and dev boards to support serious microcontroller development using CircuitPython.</li>
+</ul>
+<ul>
+<li><a href="https://hackspace.raspberrypi.com/articles/adafruit-grand-central-m4-express-review">HackSpace Magazine - Issue 17</a> - CircuitPython powered Adafruit Grand Central M4 Express review.</li>
+</ul>
+<ul>
+<li><a href="https://www.apress.com/us/blog/all-blog-posts/python-on-hardware-means-choices-for-makers/16332230">Python on Hardware Means Choices for Makers</a> - By Liz Clark - Apress. CircuitPython (a fork of MicroPython that is designed from the ground up to be beginner friendly.) This allows end users to use Python for their electronics hardware projects similar to how they may have used C/C++ with the Arduino IDE.</li>
+</ul>
+<ul>
+<li><a href="https://www.mouser.com/news/methods/2019-1/mobile/index.html#p=35">Method's Magazine</a> - Methods eZine: Design Trends & the Transformation of Everything features Python on hardware, page 35 - <a href="https://www.mouser.com/pdfdocs/Mouser-Methods-v3i1.pdf">PDF</a>.</li>
+</ul>
+<ul>
+<li><a href="https://blog.adafruit.com/2019/01/24/issue-15-hackspace-magazine-circuitpython-hackspacemag-by-ben-everard-ben_everard-circuitpython-circuitpython-madewithmu/">HackSpace Magazine - Issue 15</a> - CircuitPython makes the cover on HackSpace Magazine with feature article, and projects.</li>
+</ul>
+<ul>
+<li>Community call for what is wanted and needed in CircuitPython by year: <a href="https://blog.adafruit.com/2018/01/29/circuitpython-in-2018/">2018</a>, <a href="https://blog.adafruit.com/2018/12/17/what-do-you-want-from-circuitpython-in-2019-circuitpython2019-circuitpython/">2019</a>, <a href="https://blog.adafruit.com/2020/02/03/circuitpython2020-recap/">2020</a>, <a href="https://blog.adafruit.com/2021/01/01/where-should-circuitpython-go-in-2021-circuitpython2021-circuitpython/">2021</a>, <a href="https://blog.adafruit.com/2022/02/01/the-circuitpython-community-a-round-up-and-a-look-forward-to-202/">2022</a>, <a href="https://blog.adafruit.com/2023/01/23/circuitpython2023-wrap-up/">2023</a>, <a href="https://blog.adafruit.com/2024/01/31/first-circuitpython2024-posts-2-2/">2024</a>, and <a href="https://blog.adafruit.com/2025/01/15/thank-you-for-circuitpython2025/">2025</a>.</li>
+</ul>
+<ul>
+<li><a href="https://blog.adafruit.com/2018/08/27/circuitpython-in-microsolutions-digital-magazine-microchiptech-microchipmakes-circuitpython-adafruit/">CircuitPython in MicroSolutions Digital Magazine</a> - Microchip’s MicroSolutions, “Python on Microcontrollers” in Design Corner article. MicroSolutions is Microchip’s bi-monthly digital magazine.</li>
+</ul>
+<ul>
+<li><a href="https://makezine.com/2017/08/11/circuitpython-snakes-way-adafruit-hardware/">CircuitPython Snakes its Way onto Adafruit Hardware</a> - An article by MAKE on CircuitPython.</li>
+</ul>
+<ul>
+<li><a href="https://hackspace.raspberrypi.com/articles/adafruit-circuit-playground-express-review">Adafruit Circuit Playground Express review</a> - Raspberry Pi reviews the Circuit Playground Express.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=d-Uw3YOf7dE">The Amp Hour #383</a> - An Interview with Scott Shawcroft.</li>
+</ul>
+<ul>
+<li><a href="https://hackaday.com/blog/?s=circuitpython">CircuitPython on Hackaday</a> - Hackaday posts related to CircuitPython.</li>
+</ul>
+<ul>
+<li><a href="https://blog.hackster.io/search?q=circuitpython">CircuitPython on hackster.io</a> - Posts on hackster.io related to CircuitPython.</li>
+</ul>
+<ul>
+<li><a href="https://makezine.com/?s=circuitpython">CircuitPython on MAKE</a> - CircuitPython related content on MAKE.</li>
+</('ul', 0)>
+<h2>Art</h2>
+
+<ul>
+<li><a href="https://www.dropbox.com/sh/l6tp9ym5nf8h5v9/AABGu_q2pcdUQdx1avr8Xvvda?dl=0">CircuitPython Art Pack! Logos, banners, photos and Blinka!</a> - Adafruit art relating to CircuitPython.</li>
+</ul>
+<ul>
+<li><a href="https://scouv.lisn.upsaclay.fr/python-memento/memento-python3-en-latest.pdf">Python Cheat Sheet</a> - An up to date, consise reference for Python (regular Python or CPython) syntax</li>
+</('ul', 0)>
+<h2>Social</h2>
+
+<ul>
+<li><a href="https://twitter.com/search?f=tweets&vertical=default&q=%23CircuitPython&src=tyah">#CircuitPython tagged on Twitter, latest</a> - Twitter posts tagged CircuitPython.</li>
+</ul>
+<ul>
+<li><a href="https://twitter.com/circuitpython">CircuitPython Twitter</a> - Twitter account aggregator for CircuitPython news and more.</li>
+</ul>
+<ul>
+<li><a href="https://mastodon.social/tags/circuitpython">#CircuitPython tagged on Mastodon</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/results?sp=CAI%253D&search_query=circuitpython">CircuitPython videos on YouTube, latest</a> - YouTube posts tagged CircuitPython.</li>
+</ul>
+<ul>
+<li><a href="https://www.instagram.com/explore/tags/circuitpython/">#CircuitPython tagged photos & videos on Instagram</a> - Posts on Instagram tagged CircuitPython.</li>
+</ul>
+<ul>
+<li><a href="https://forum.micropython.org/search.php?keywords=adafruit&terms=all&author=&sc=1&sf=all&sr=posts&sk=t&sd=d&st=0&ch=300&t=0&submit=Search">CircuitPython - micropython.org forums</a> - Articles on the MicroPython forums tagged for CircuitPython.</li>
+</ul>
+<ul>
+<li><a href="https://www.reddit.com/domain/adafruit.com/search?q=circuit+python&sort=new&t=week">CircuitPython tagged on Reddit</a> - Reddit posts relating to CircuitPython.</li>
+</ul>
+<ul>
+<li><a href="https://www.reddit.com/r/circuitpython/">CircuitPython community on Reddit</a> - Dedicated home of CircuitPython on reddit <a href="https://www.reddit.com/r/circuitpython/">r/circuitpython/</a>.</li>
+</ul>
+<ul>
+<li><a href="https://hackaday.io/list/163331-circuitpython">CircuitPython on Hackaday.io</a> - Curated list of projects on hackaday.io.</li>
+</ul>
+<ul>
+<li><a href="https://blog.adafruit.com/2019/01/15/python-on-hardware-community-hub-on-hackster-io-hacksterio/">CircuitPython on hackster.io</a> - Python on hardware projects on hackster.io including CircuitPython.</li>
+</ul>
+<ul>
+<li><a href="https://www.instructables.com/howto/circuitpython/">CircuitPython on Instructables</a> - How-tos, guides, and more, using CircuitPython on Autodesk's Instructables.</li>
+</('ul', 0)>
+<h2>Podcasts</h2>
+
+<ul>
+<li><a href="https://podcasts.apple.com/us/podcast/circuitpython-weekly-meeting/id1451685016">Weekly community chat on Adafruit Discord server CircuitPython channel - Audio / Podcast edition</a> - Audio from the Discord chat space for CircuitPython, meetings are usually Mondays at 2pm ET, this is the audio version on <a href="https://podcasts.apple.com/us/podcast/circuitpython-weekly-meeting/id1451685016">iTunes</a>, Pocket Casts, <a href="https://adafru.it/spotify">Spotify</a>, and <a href="https://adafruit-podcasts.s3.amazonaws.com/circuitpython<em>weekly</em>meeting/audio-podcast.xml">XML feed</a>.</li>
+</ul>
+<ul>
+<li><a href="https://www.circuitpythonshow.com/@circuitpythonshow">The CircuitPython Show</a> - an interview podcast with people in the CircuitPython community hosted  by Paul Cutler.</li>
+</ul>
+<ul>
+<li><a href="https://blog.adafruit.com/2019/03/22/the-best-python-podcasts-python-talkpython-mkennedy-pythonbites-brianokken/">The Best Python Podcasts</a> - The Best Python Podcasts.</li>
+</ul>
+<ul>
+<li><a href="https://thebootloader.net">The Bootloader</a> - hosted by CircuitPython community members Paul Cutler and Tod Kurt, this podcast often covers CircuitPython topics.</li>
+</('ul', 0)>
+<h2>Events</h2>
+
+<ul>
+<li><a href="https://discord.gg/EAeBY6x">Weekly community chat on Adafruit Discord server CircuitPython channel</a> - The Discord chat space for CircuitPython, meetings are usually Mondays at 2pm ET.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/adafruit/live">Weekly Adafruit Show-and-tell, Wednesday 7:30pm ET on YouTube LIVE</a> - The weekly Adafruit Show-and-tell program often has CircuitPython-related projects on display.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/adafruit/live">ASK AN ENGINEER, Wednesday 8pm ET on YouTube LIVE</a> - The longest running YouTube live show about electronics, information on CircuitPython each week during "Python on hardware segment".</li>
+</('ul', 0)>
+<h2>Swag</h2>
+
+<ul>
+<li><a href="https://www.adafruit.com/product/3987">CircuitPlayground lanyard</a> - CircuitPlayground lanyard featuring Blinka.</li>
+</ul>
+<ul>
+<li><a href="https://www.adafruit.com/product/3725">Blinka the CircuitPython Sticker</a> - A sticker featuring Blinka, the CircuitPython mascot.</li>
+</ul>
+<ul>
+<li><a href="https://www.adafruit.com/product/2600">Blinka the CircuitPython Temporary Tattoo</a> - A temporary tattoo featuring the Blinka character.</li>
+</ul>
+<ul>
+<li><a href="https://www.adafruit.com/product/5873">CircuitPython 9 release poster</a> - CircuitPython release version 9 poster (out of stock).</li>
+</ul>
+<ul>
+<li><a href="https://www.adafruit.com/product/5513">CircuitPython 8 release poster</a> - CircuitPython release version 8 poster (out of stock).</li>
+</ul>
+<ul>
+<li><a href="https://www.adafruit.com/product/5067">CircuitPython 7 release poster</a> - CircuitPython release version 7 poster (out of stock).</li>
+</ul>
+<ul>
+<li><a href="https://www.adafruit.com/product/4713">CircuitPython 6 release poster</a> - CircuitPython release version 6 poster (out of stock).</li>
+</ul>
+<ul>
+<li><a href="https://www.adafruit.com/product/4365">CircuitPython 5 release poster</a> - CircuitPython release version 5 poster (out of stock).</li>
+</ul>
+<ul>
+<li><a href="https://www.adafruit.com/product/4082">CircuitPython 4 release poster</a> - CircuitPython release version 4 poster featuring Nordic (out of stock).</li>
+</ul>
+<ul>
+<li><a href="https://www.adafruit.com/product/3793">CircuitPython 3 release poster</a> - CircuitPython release version 3 poster (out of stock).</li>
+</ul>
+<ul>
+<li><a href="https://www.adafruit.com/product/3680">Blinka the CircuitPython Limited Edition Enamel Pin</a> - An enamel pin with the CircuitPython mascot (out of stock).</li>
+</('ul', 0)>
+<h2>Talks</h2>
+
+<ul>
+<li><a href="https://youtu.be/kVDFoyLCqXU">CircuitPython 入门</a> - CircuitPython 程序！An entry level CircuitPython tutorial in Chinese 01: From zero to Hello World (YouTube).</li>
+</ul>
+<ul>
+<li><a href="https://youtu.be/-bBHXimlfPQ">Changing Lives through Open Source, Passion and Mentoring</a> - Changing Lives through Open Source, Passion and Mentoring, Keynote by Kattni Rembor at PyOhio 2019.</li>
+</ul>
+<ul>
+<li><a href="https://youtu.be/rN7kvWuAt7k">CircuitPython: Python on hardware</a> - CircuitPython: Python on hardware by Dave Astels at PyCon Canada.</li>
+</ul>
+<ul>
+<li><a href="https://youtu.be/LRvh1UDTbU0">Embedded Programming for everyone using MicroPython and CircuitPython</a> - Embedded Programming for everyone using MicroPython and CircuitPython by Ayan Pahwa at FOSSASIA Summit.</li>
+</ul>
+<ul>
+<li><a href="https://blog.adafruit.com/2019/10/01/europython-2019-talk-video-nicholas-tollervey-tools-of-the-trade-the-making-of-a-code-editor-python-circuitpython-europython-ntoll/">EuroPython 2019 talk video: Nicholas Tollervey – Tools of the Trade: The Making of a Code Editor</a> - Nicholas Tollervey.</li>
+</ul>
+<ul>
+<li><a href="https://blog.adafruit.com/2019/10/01/europython-2019-talk-video-radomir-dopieralski-game-development-with-circuitpython-cirecuitpython-europython-deshipu/">EuroPython 2019 talk video: Radomir Dopieralski – Game Development with CircuitPython</a> - Radomir Dopieralski.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=437CZBnK8vI">Extending MicroPython: Using C for good</a> - A look at how MicroPython can be extended to add features and improve performance. By Matt Trentini at PyCon Australia.</li>
+</ul>
+<ul>
+<li><a href="https://blog.adafruit.com/2019/09/13/hanselminutes-technology-podcast-learning-circuitpython-with-scott-shawcroft-shanselman-circuitpython-tannewt-hanselminutes-adafruit/">Hanselminutes Technology Podcast – Learning CircuitPython with Scott Shawcroft</a> - Scott Shawcroft.</li>
+</ul>
+<ul>
+<li><a href="https://youtu.be/JAgCZ70Q3sg">Lighting Macro Photographs with CircuitPython</a> - Lighting Macro Photographs with CircuitPython by Stacy Morse at PyCon Australia.</li>
+</ul>
+<ul>
+<li><a href="https://youtu.be/Mb9c4e7ID9E">Max Holiday - CircuitPython in space, SmallSats and more!</a> - Max Holiday.</li>
+</ul>
+<ul>
+<li><a href="https://youtu.be/EvGhPmPPzko">MicroPython & the Internet of Things</a> - MicroPython & the Internet of Things by Damien George at GOTO 2016.</li>
+</ul>
+<ul>
+<li><a href="https://blog.adafruit.com/2019/05/06/pycon2019-keynote-python-on-hardware-nina-zakharenko-pythonhardware-pycon2019-circuitpython-python-circuitplaygroundexpress-nnja/">PyCon2019 Keynote: Python on Hardware – Nina Zakharenko</a> - Nina Zakharenko.</li>
+</ul>
+<ul>
+<li><a href="https://youtu.be/mmLI0HKfPQI">PyCon India - 2019 Interactive Hardware Poster Presentation powered by CircuitPython by Ayan Pahwa and Aakanksha Agrawal</a> - Ayan Pahwa and Aakanksha Agrawal.</li>
+</ul>
+<ul>
+<li><a href="https://blog.adafruit.com/2019/02/25/video-pycascades-light-up-your-life-with-python-and-leds-nnja-pycascades2019-pycascades-pycascades/">VIDEO: PyCascades – Light Up Your Life – With Python and LEDs</a> - Nina Zakharenko.</li>
+</ul>
+<ul>
+<li><a href="https://youtu.be/hHec4qL00x0">Writing fast and efficient MicroPython</a> - Writing fast and efficient MicroPython by Damien George at PyCon Australia.</li>
+</ul>
+<ul>
+<li><a href="https://www.nnja.io/post/2021/pycon2021-more-fun-circuitpython/">More Fun with Hardware and CircuitPython -- IoT, Wearables, and More!</a> - Nina Zakharenko at PyCon 2021.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=2i6qhfq5u78">EuroPython 2022 talk video: Radomir Dopieralski - Game Development with CircuitPython</a> - Radomir Dopieralski</li>
+</ul>
+<ul>
+<li><a href="https://youtu.be/XhwI8ZHhbE8">Connecting Old to New with CircuitPython: Retrocomputer input devices on modern PCs</a> - Jeff Epler at PyCon 2024</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=eiQ9RIt-cNM">Cutting the USB Cord: Wirelessly Programming CircuitPython</a> - Scott Shawcroft at PyCascades 2024</li>
+</('ul', 0)>
+<h2>Contributing</h2>
+
+<p>Contributions and suggestions are always welcome! Please make pull requests from your own fork to modify Awesome CircuitPython.</p>
+
+<p>The workflow is explained in detail here: <a href="https://learn.adafruit.com/contribute-to-circuitpython-with-git-and-github/overview">Adafruit : Contribute to CircuitPython with Git and GitHub</a>.</p>
+
+<h3>Contribution Workflow Overview</h3>
+
+<ol>
+<li>Fork <a href="https://github.com/adafruit/awesome-circuitpython">this repository</a> on GitHub.</li>
+</ol>
+<ol>
+<li>Clone the forked repo to your drive.</li>
+</ol>
+<ol>
+<li>Add a remote using owner adafruit and the original URL.</li>
+</ol>
+<ol>
+<li>Fetch the remote.</li>
+</ol>
+<ol>
+<li>Merge adafruit or main.</li>
+</ol>
+<ol>
+<li>Create a branch.</li>
+</ol>
+<ol>
+<li>Make a change.</li>
+</ol>
+<ol>
+<li>Commit and push to your repo.</li>
+</ol>
+<ol>
+<li>Create a pull request on the official repo.</li>
+</ol>
+<ol>
+<li>Once accepted, repeat by merging from the official repo to your fork's master, and re-branch.</li>
+</ol>
+<p>Questions? We're happy to <a href="https://discord.com/invite/5FBsBHU">help you to contribute on Discord</a>.</p>
+
+<h2>License & Trademarks</h2>
+
+<p><a href="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg"><img src="https://creativecommons.org/publicdomain/zero/1.0/" alt="CC0</a>"></p>
+
+<p>To the extent possible under law, the authors have waived all copyright and related or neighbouring rights to this work.</p>
+
+<p>Last updated: July 21, 2025</p>
+
+</body>
+</html>

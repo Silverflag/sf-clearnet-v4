@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Move</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Move</h1>
+
+<p><strong>Repository:</strong> https://github.com/MystenLabs/awesome-move#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<!--lint disable double-link-->
+<h1>Awesome Move <a href="https://awesome.re/badge.svg"><img src="https://awesome.re" alt="Awesome</a>"></h1>
+
+<blockquote>
+<p>A curated list of code and content from the <a href="https://github.com/move-language/move">Move</a> programming language community.</p>
+</blockquote>
+
+<p>Move is a programming language for writing safe smart contracts originally developed at Facebook to power the Libra blockchain. Move is designed to be a platform-agnostic language to enable common libraries, tooling, and developer communities across diverse blockchains with vastly different data and execution models. Move's ambition is to become the "JavaScript of web3" in terms of ubiquity--when developers want to quickly write safe code involving assets, it should be written in Move.</p>
+
+<h2>Contents</h2>
+
+<ul>
+<li><a href="#overview">Overview</a></li>
+</ul>
+<ul>
+<li><a href="#move-powered-blockchains">Move-Powered Blockchains</a></li>
+</ul>
+<ul>
+<li><a href="#books">Books</a></li>
+</ul>
+<ul>
+<li><a href="#tutorials">Tutorials</a></li>
+</ul>
+<ul>
+<li><a href="#community">Community</a></li>
+</ul>
+<ul>
+<li><a href="#code">Code</a></li>
+<ul>
+<li><a href="#fungible-tokens">Fungible Tokens</a></li>
+</ul>
+<ul>
+<li><a href="#non-fungible-tokens">Non-Fungible Tokens</a></li>
+</ul>
+<ul>
+<li><a href="#decentralized-identity">Decentralized Identity</a></li>
+</ul>
+<ul>
+<li><a href="#defi">DeFi</a></li>
+</ul>
+<ul>
+<li><a href="#socialfi">SocialFi</a></li>
+</ul>
+<ul>
+<li><a href="#on-chain-governance">On-Chain Governance</a></li>
+</ul>
+<ul>
+<li><a href="#cross-chain-bridge">Cross-Chain Bridge</a></li>
+</ul>
+<ul>
+<li><a href="#accounts">Accounts</a></li>
+</ul>
+<ul>
+<li><a href="#frameworks">Frameworks</a></li>
+</ul>
+<ul>
+<li><a href="#libraries">Libraries</a></li>
+</ul>
+<ul>
+<li><a href="#miscellaneous">Miscellaneous</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#tools">Tools</a></li>
+</ul>
+<ul>
+<li><a href="#ides">IDEs</a></li>
+</ul>
+<ul>
+<li><a href="#package-managers">Package Managers</a></li>
+</ul>
+<ul>
+<li><a href="#wallets">Wallets</a></li>
+</ul>
+<ul>
+<li><a href="#sdks">SDKs</a></li>
+</ul>
+<ul>
+<li><a href="#papers">Papers</a></li>
+<ul>
+<li><a href="#language-design">Language Design</a></li>
+</ul>
+<ul>
+<li><a href="#static-analysis-and-verification">Static Analysis and Verification</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#videos">Videos</a></li>
+</ul>
+<ul>
+<li><a href="#slides">Slides</a></li>
+</ul>
+<ul>
+<li><a href="#podcasts">Podcasts</a></li>
+</ul>
+<ul>
+<li><a href="#blog-posts">Blog Posts</a></li>
+</ul>
+<ul>
+<li><a href="#security">Security</a></li>
+</('ul', 0)>
+<h2>Overview</h2>
+
+<ul>
+<li><a href="https://github.com/move-language/move/tree/main/language/tools/move-cli#installation">Installation</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/mystenlabs/awesome-move/blob/main/docs/problem_statement.md#problem-statement">Problem Statement</a></li>
+</('ul', 0)>
+<h2>Move-Powered Blockchains</h2>
+
+<ul>
+<li><a href="https://github.com/MystenLabs/sui">Sui</a> - A next-generation smart contract platform with high throughput, low latency, and an asset-oriented programming model powered by the Move programming language (in <a href="https://medium.com/mysten-labs/sui-devnet-public-release-a2be304ff36b">devnet</a>).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/OLSF/libra">0L</a> - A reference implementation of a neutral replicated state machine. Forked from the Libra/Diem technologies (in <a href="https://0l.network/">mainnet</a>).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/starcoinorg/starcoin">Starcoin</a> - A smart contract blockchain network that scales by layering (in <a href="https://stcscan.io/">mainnet</a>).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/aptos-labs/aptos-core">Aptos</a> - Aptos-core strives towards being the safest and most scalable layer one blockchain solution (in <a href="https://explorer.aptoslabs.com/?network=mainnet">mainnet</a>).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pontem-network/pontem">Pontem</a> - Substrate based parachain with MoveVM onboard (in <a href="https://polkadot.js.org/apps/?rpc=wss://testnet.pontem.network/ws#/explorer">testnet</a>).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/celo-org/celo-blockchain">Celo</a> - Blockchain with EVM and MoveVM (<a href="https://www.businesswire.com/news/home/20210921006104/en/Celo-Sets-Sights-On-Becoming-Fastest-EVM-Chain-Through-Collaboration-With-Mysten-Labs">coming soon</a>).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/diem/diem">Diem</a> - The original Move based blockchain from Meta (form. Libra by Facebook) (discontinued).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/chainx-org/ChainX">ChainX</a> - Bitcoin's layer2 smart contract network has already supported WASM and EVM, and is supporting MoveVM (in <a href="https://scan.chainx.org">mainnet</a>).</li>
+</('ul', 0)>
+<h2>Books</h2>
+
+<ul>
+<li><a href="https://move-language.github.io/move/">Move Book</a> - Move book maintained by the Move core team (<a href="https://github.com/move-language/move/tree/main/language/documentation/book/translations/move-book-zh">中文</a>).</li>
+</ul>
+<ul>
+<li><a href="https://move-book.com/">Move Book</a> - Move book maintained by <a href="https://github.com/damirka">@damirka</a> (<a href="https://move-book.com/cn/">中文</a>).</li>
+</ul>
+<ul>
+<li><a href="https://www.move-patterns.com/">Move Patterns</a> - A book on Move software design patterns maintained by <a href="https://github.com/villesundell">@villesundell</a>.</li>
+</ul>
+<ul>
+<li><a href="https://examples.sui.io/">Sui Move by Example</a> - A book on the Sui Move variant maintained by <a href="https://github.com/MystenLabs">@MystenLabs</a>.</li>
+</('ul', 0)>
+<h2>Tutorials</h2>
+
+<ul>
+<li><a href="https://github.com/move-language/move/tree/main/language/documentation/tutorial">Implementing, testing, and verifying a fungible token</a> - Maintained by the Move core team.</li>
+</ul>
+<ul>
+<li><a href="https://docs.sui.io/build/programming-with-objects">Programming with objects</a> - Maintained by the Sui team.</li>
+</ul>
+<ul>
+<li><a href="https://starcoinorg.github.io/starcoin-cookbook/docs/move/">Move and SmartContract Development</a> - Maintained by the Starcoin team.</li>
+</ul>
+<ul>
+<li><a href="https://imcoding.online/courses/move-language">Move Language</a> - Interactive Move language course, free for everyone, maintained by <a href="https://imcoding.online">imcoding.online</a> (<a href="https://imcoding.online/courses/move-language?lng=zh">中文</a>).</li>
+</('ul', 0)>
+<h2>Community</h2>
+
+<ul>
+<li><a href="https://discord.gg/cPUmhe24Mz">Move Language Discord</a></li>
+</ul>
+<ul>
+<li><a href="https://discord.gg/sui">Move @ Sui by Mysten Labs Discord</a></li>
+</ul>
+<ul>
+<li><a href="https://discord.gg/0lnetwork">Move @ 0L Discord</a></li>
+</ul>
+<ul>
+<li><a href="https://discord.gg/starcoin">Move @ Starcoin Discord</a></li>
+</ul>
+<ul>
+<li><a href="https://discord.gg/aptoslabs">Move @ Aptos Discord</a></li>
+</ul>
+<ul>
+<li><a href="https://move-china.com">MoveChina</a> - The largest Chinese community for the Move programming language.</li>
+</('ul', 0)>
+<h2>Code</h2>
+
+<p>Code written in Move.</p>
+
+<h3>Fungible Tokens</h3>
+
+<ul>
+<li><a href="https://github.com/MystenLabs/sui/tree/main/sui<em>programmability/examples/fungible</em>tokens">Fungible token examples</a> - Multiple example token implementations from Sui.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/move-language/move/tree/main/language/documentation/examples/experimental/basic-coin">BasicCoin</a> - A toy implementation of an <a href="https://ethereum.org/en/developers/docs/standards/tokens/erc-20/">ERC20</a>-like fungible token.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/OLSF/libra/blob/main/language/diem-framework/modules/Diem.move">Diem</a> - An ERC20-like token with permissioned minting/burning, see also this <a href="https://github.com/diem/dip/blob/main/dips/dip-20.md">spec</a>. Deployed on 0L.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/starcoinorg/starcoin-framework/blob/main/sources/Token.move">Token</a> - Another ERC20-like Token. Deployed on Starcoin.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/OLSF/libra/blob/main/language/diem-framework/modules/0L/GAS.move">GAS</a> - A token that instantiates the Diem standard above. Deployed on 0L.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/starcoinorg/starcoin-framework/blob/main/sources/STC.move">STC</a> - A token that instantiates the Starcoin standard above. Deployed on Starcoin.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Elements-Studio/starswap-core/blob/master/sources/gov/STAR.move">STAR</a> - A governance token of Starswap dApp that powers the AMM+DEX ecosystem. Deployed on Starcoin.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Elements-Studio/poly-stc-contracts/blob/master/sources/asset/erc20/XUSDT.move">XUSDT</a> - A mapped assets of USDT on Starcoin.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Elements-Studio/poly-stc-contracts/blob/master/sources/asset/erc20/XETH.move">XETH</a> - A mapped assets of ETH on Starcoin.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/wenwenprotocol/wen-protocol">WEN stablecoin</a> - Deployed on Starcoin.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/BFlyFinance/FAI">FAI stablecoin</a> - An over-collateralized stable coin deployed on Starcoin.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/BFlyFinance/FLY">FLY stablecoin</a> - An implementation of forked OHM that deployed on Starcoin.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/OLSF/libra/blob/main/language/diem-framework/modules/XDX.move">Synthetic token backed by a basket containing a reserve of other tokens</a> - From Diem.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/OmniBTC/OmniBridge/blob/main/aptos/bridge/sources/xbtc.move">XBTC</a> - BTC mirror asset on Aptos.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/OmniBTC/OmniBridge/blob/main/sui/bridge/sources/xbtc.move">XBTC</a> - BTC mirror asset on Sui.</li>
+</('ul', 0)>
+<h3>Non-Fungible Tokens</h3>
+
+<ul>
+<li><a href="https://github.com/MystenLabs/sui/tree/main/sui_programmability/examples/nfts">NFT examples</a> - Multiple NFT example implementations from Sui.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/starcoinorg/starcoin-framework/blob/main/sources/NFT.move">NFT</a> - An ERC721-like token. Deployed on Starcoin.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/starcoinorg/starcoin-framework/blob/main/sources/MerkleNFT.move">Merkle Airdrop</a> - Utility for airdropping a large number of NFTs. Deployed on Starcoin.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/diem/diem/blob/main/diem-move/diem-framework/experimental/sources/NFT.move">NFT</a> - An implementation of a hybrid ERC721/ERC1155-like token. From Diem.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/diem/diem/blob/main/diem-move/diem-framework/experimental/sources/BARS.move">BARS</a> - An NFT that instantiates this hybrid standard. From Diem.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/diem/diem/blob/main/diem-move/diem-framework/experimental/sources/MultiToken.move">MultiToken</a> - An ERC1155-like token. From Diem.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/diem/diem/blob/main/diem-move/diem-framework/experimental/sources/NFTGallery.move">NFTGallery</a> - Utility for holding multiple NFT's of the same type. From Diem.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Origin-Byte/nft-protocol">NFT Protocol</a> - NFT protocol and collection framework. From OriginByte.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Mynft/suia">Suia</a> - The first POAP application on Sui.</li>
+</('ul', 0)>
+<h3>Decentralized Identity</h3>
+<ul>
+<li><a href="https://github.com/coming-chat/aptos-cid">aptos-cid</a> - Decentralized identity on Aptos, the underlying account system of ComingChat.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/NonceGeek/MoveDID">MoveDID</a> - MoveDID is a DID protocol that compatible with Move-based blockchain networks, including Aptos, Sui, and Starcoin. Maintained by the <a href="https://github.com/NonceGeek">NonceGeek</a>.</li>
+</('ul', 0)>
+<h3>DeFi</h3>
+
+<ul>
+<li><a href="https://github.com/MystenLabs/sui/tree/main/sui_programmability/examples/defi">DeFi examples</a> - Multiple DeFi example implementations from Sui.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/move-language/move/tree/main/language/documentation/examples/experimental/coin-swap">CoinSwap</a> - A toy implementation of a <a href="https://uniswap.org/">Uniswap</a>-like liquidity pool containing two tokens.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Elements-Studio/starswap-core">Starswap</a> - A Uniswap-style DEX. Deployed on Starcoin.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/move-language/move/blob/main/language/move-stdlib/nursery/sources/offer.move">Offer</a> - Generic implementation of atomic swaps for any pair of assets.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/coming-chat/aptos-red-packet">AptosRedPacket</a> - A red packet social app that combines private chat and encrypted wallet on Aptos.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/coming-chat/sui-red-packet">SuiRedPacket</a> - A red packet social app that combines private chat and encrypted wallet on Sui.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/OmniBTC/Aptos-AMM-swap">AptosAMMswap</a> - Aptos AMM Swap implemented by the OmniBTC team.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/OmniBTC/Sui-AMM-swap">SuiAMMswap</a> - Sui AMM Swap implemented by the OmniBTC team.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/OmniBTC/OmniSwap/tree/main/aptos">AptosOmniSwap</a> - One-click swap between aptos and EVM chains (such as ETH/BSC/AVAX, etc.) based on the cross-chain interoperability protocol wormhole.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/OmniBTC/DolaProtocol">DolaProtocol</a> - A Decentralized Omnichain Liquidity Aggregation Protocol with the single coin pool of each public chain as the core, Wormhole, Layerzero and other cross-chain messaging protocols as the bridge, and Sui public chain as the settlement center.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/coming-chat/object-market">ObjectMarket</a> - A unique object trading marketplace in the Sui network.</li>
+</('ul', 0)>
+<h3>SocialFi</h3>
+<ul>
+<li><a href="https://github.com/coming-chat/Dmens">Dmens</a> - Decentralized Moments which is a Blockchain Twitter Protocol built on the Sui network.</li>
+</('ul', 0)>
+<h3>On-Chain Governance</h3>
+
+<ul>
+<li><a href="https://github.com/OLSF/libra/blob/main/language/diem-framework/modules/0L/ValidatorUniverse.move">ValidatorUniverse</a> - Validator set management. Deployed on 0L.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/OLSF/libra/blob/main/language/diem-framework/modules/0L/Oracle.move">Oracle</a> - For on-chain community voting. Deployed on 0L.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/starcoinorg/starcoin-framework/blob/main/sources/Dao.move">DAO</a> - For on-chain proposals and voting. Deployed on Starcoin.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/diem/diem/blob/main/diem-move/diem-framework/DPN/sources/DiemSystem.move">DiemSystem</a> - Validator set management. From Diem.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/diem/diem/blob/main/diem-move/diem-framework/experimental/sources/Vote.move">Vote</a> - On-chain voting. From Diem.</li>
+</('ul', 0)>
+<h3>Cross-Chain Bridge</h3>
+
+<ul>
+<li><a href="https://github.com/Elements-Studio/poly-stc-contracts">Poly Bridge</a> - The first Cross-Chain Bridge between Move and EVM. Deployed on Starcoin.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/OmniBTC/OmniBridge">OmniBTC Bridge</a> - A bridge between Bitcoin and Move language public chains (like Aptos and Sui) based on ultra-light node.</li>
+</('ul', 0)>
+<h3>Accounts</h3>
+
+<ul>
+<li><a href="https://github.com/diem/diem/blob/main/diem-move/diem-framework/core/sources/Account.move">Account</a> - A generic account for Diem-powered chains. From Diem.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/OLSF/libra/blob/main/language/diem-framework/modules/DiemAccount.move">DiemAccount</a> - Fork of the above. From 0L.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/starcoinorg/starcoin-framework/blob/main/sources/Account.move">Account</a> - Fork of the above. From Starcoin.</li>
+</('ul', 0)>
+<h3>Frameworks</h3>
+
+<p>A Move <strong>framework</strong> is the set of Move modules included in the genesis state of the chain.</p>
+<p>These modules typically implement key concepts like accounts, currencies, .</p>
+<p>The ability to separate blockchain-specific framework logic from the generic functionality of the Move language is a key part of Move's platform-agnostic design.</p>
+
+<ul>
+<li><a href="https://github.com/MystenLabs/sui/tree/main/crates/sui-framework">Sui Framework</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/aptos-labs/aptos-core/tree/main/aptos-move/framework">Aptos Framework</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/OLSF/libra/tree/main/language/diem-framework/modules/0L">0L Framework</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/starcoinorg/starcoin-framework">Starcoin Framework</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/diem/diem/tree/main/diem-move/diem-framework/DPN">Diem Framework</a></li>
+</('ul', 0)>
+<h3>Libraries</h3>
+
+<ul>
+<li><a href="https://github.com/move-language/move/tree/main/language/move-stdlib">Move standard library</a> - Utilities intended (but not required) to be used in every platform running Move. From the Move repo.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/move-language/move/tree/main/language/move-stdlib/nursery">Move nursery</a> - Experimental modules that may eventually be promoted into the standard library. From the Move repo.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/OLSF/libra/blob/main/language/diem-framework/modules/0L/Decimal.move">Decimal</a> - Efficient implementation of a decimal value. From 0L.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/starcoinorg/starcoin-framework/blob/main/sources/Math.move">Math</a> - Math utility functions. From Starcoin.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/move-language/move/blob/main/language/move-stdlib/nursery/sources/compare.move">Compare</a> - Polymorphic comparison (i.e., compare any two Move values of the same type). From the nursery.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/move-language/move/blob/main/language/move-stdlib/nursery/sources/vault.move">Vault</a> - Library for capabilities. From the nursery.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/move-language/move/blob/main/language/move-stdlib/nursery/sources/acl.move">ACL</a> - Library for list-based access control. From the nursery.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/taoheorg/taohe">TaoHe</a> - A collection of nestable Move resources.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/starcoinorg/starcoin-framework-commons">Starcoin Framework Commons</a> - Libraries for Move commons utility on starcoin-framework. From Starcoin.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pentagonxyz/movemate">Movemate</a> - Smart contract building blocks for Aptos and Sui (Math utilities, governance contracts, escrow, and more). Maintained by the Pentagon team.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/snowflake-so/move-cron-parser#readme">Move cron parser</a> - Library is built for a purpose of parsing cron expression. Maintained by Snowflake Network team.</li>
+</('ul', 0)>
+<h3>Miscellaneous</h3>
+
+<ul>
+<li><a href="https://github.com/move-language/move/tree/main/language/evm">Move-on-EVM</a> - Experimental project to compile Move source code to EVM bytecode.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/whonore/aoc-move">aoc-move</a> - Advent of Code solutions in Move with some formal verification.</li>
+</('ul', 0)>
+<h2>Tools</h2>
+
+<ul>
+<li><a href="https://github.com/move-language/move/tree/main/language/tools/move-cli">Move Package Manager</a> - Like <code>cargo</code> or <code>npm</code> for Move: single CLI (and corresponding Rust API's for other tools to hook into) for building, running, testing, debugging, and verifying Move <a href="https://move-language.github.io/move/">packages</a>. Maintained by the Move core team.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/move-language/move/tree/main/language/move-prover">Move Prover</a> - Formal verification of user-defined specifications written in Move source code. Maintained by the Move core team.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/move-language/move/tree/main/language/tools/read-write-set">Move Read/Write Set Analyzer</a> - Static analysis tool for computing an overapproximation of the global memory touched by a Move program. Maintained by the Move core team.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/imcoding-online/js-move-playground">Move Playground JS Library</a> - Wrapping <a href="https://playground.pontem.network/">Move Playground by Pontem</a> as a JavaScript library for browser. You can use it to build your own Move Playground.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/coming-chat/go-sui-indexer">go-sui-indexer</a> - An off-fullnode service to serve data from Sui Node.</li>
+</('ul', 0)>
+<h2>IDEs</h2>
+
+<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=move.move-analyzer">Move VS Code plugin</a> - Maintained by the Move core team (<a href="https://github.com/move-language/move/tree/main/language/move-analyzer">source code</a>).</li>
+</ul>
+<ul>
+<li><a href="https://plugins.jetbrains.com/plugin/14721-move-language">Move IntelliJ plugin</a> - Maintained by the Pontem team (<a href="https://github.com/pontem-network/intellij-move">source code</a>).</li>
+</ul>
+<ul>
+<li><a href="https://playground.pontem.network/">Move Playground</a> - Like <a href="https://remix.ethereum.org/">Remix</a> for Move. Alpha version of a Web IDE. See <a href="https://gist.github.com/borispovod/64b6d23741d8c1f4b0b958a3a74aa68d">instructions</a>. Maintained by the Pontem team.</li>
+</ul>
+<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=starcoinorg.starcoin-ide">Starcoin IDE</a> - Maintained by the Starcoin team (<a href="https://github.com/starcoinorg/starcoin-ide">source code</a>).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/rvmelkonian/move.vim">Move Vim</a> - Maintained by <a href="https://github.com/rvmelkonian/">@rvmelkonian</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/amnn/move-mode">move-mode</a> - Major mode for Emacs maintained by <a href="https://github.com/amnn/">@amnn</a>.</li>
+</('ul', 0)>
+<h2>Package Managers</h2>
+<ul>
+<li><a href="https://www.movey.net/">Movey</a> - A crates.io-style repository of Move packages.</li>
+</('ul', 0)>
+<h2>Wallets</h2>
+
+<ul>
+<li><a href="https://github.com/starcoinorg/starmask-extension">StarMask</a> - A wallet for the Starcoin blockchain. Maintained by the Starcoin team (<a href="https://chrome.google.com/webstore/detail/starmask/mfhbebgoclkghebffdldpobeajmbecfk?hl=en">Chrome Webstore</a>).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/MystenLabs/sui/tree/main/apps/wallet">Sui Wallet</a> - A chrome (v88+) extension wallet for Sui (<a href="https://chrome.google.com/webstore/detail/sui-wallet/opcgpfmipidbgpenhmajoajpbobppdil">Chrome Webstore</a>).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pontem-network/pontem-wallet">Pontem Wallet</a> - Wallet extension for Aptos network by the Pontem team (<a href="https://chrome.google.com/webstore/detail/pontem-wallet/phkbamefinggmakgklpkljjmgibohnba">Chrome Webstore</a>).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/fewcha-wallet/fewcha.app">Fewcha Aptos Wallet</a> - The wallet of layer 1 blockchain Aptos (<a href="https://chrome.google.com/webstore/detail/fewcha-aptos-wallet/ebfidpplhabeedpnhjnobghokpiioolj">Chrome Webstore</a>).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pontem-network/lcs-js">bcs-js</a> - JavaScript implementation of the <a href="https://github.com/diem/bcs">BCS</a> serialization scheme used by Move, may be useful for implementing wallets.</li>
+</ul>
+<ul>
+<li><a href="https://coming.chat/">ComingChat</a> - A decentralized social finance/web3 portal.  Supporting public chain wallets, such as Sui and Aptos wallets.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/suiet/suiet">Suiet Wallet</a> - A open-source wallet for Sui. (<a href="https://chrome.google.com/webstore/detail/suiet/khpkpbbcccdmmclmpigdgddabeilkdpd">Chrome Webstore</a>, <a href="https://suiet.app">Website</a>) </li>
+</ul>
+<ul>
+<li><a href="https://github.com/EthosWallet/chrome-extension">Ethos Wallet</a> - Open-source chrome extension wallet for Sui (<a href="https://chrome.google.com/webstore/detail/ethos-sui-wallet/mcbigmjiafegjnnogedioegffbooigli">Chrome Webstore</a>, <a href="https://ethoswallet.xyz/">Website</a>).</li>
+</('ul', 0)>
+<h3>Wallet Adapters</h3>
+
+<ul>
+<li><a href="https://github.com/MystenLabs/sui/tree/main/sdk/wallet-adapter">Sui Wallet</a> - Sui Wallet Adapter.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/suiet/wallet-adapter">Suiet Wallet</a> - Suiet Wallet Adapter.</li>
+</('ul', 0)>
+<h3>Wallet Kits</h3>
+
+<ul>
+<li><a href="https://github.com/suiet/wallet-kit">Suiet Wallet Kit</a> - A package support all Sui wallets with customizable UI.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/EthosWallet/ethos-connect">Ethos Connect</a> - UI with built-in wallet adapter and Email option for supporting all wallets and wallet-less users on Sui.</li>
+</('ul', 0)>
+<h2>SDKs</h2>
+
+<h3>Sui SDKs</h3>
+<ul>
+<li><a href="https://docs.sui.io/devnet/build/rust-sdk">Rust SDK</a> (official)</li>
+</ul>
+<ul>
+<li><a href="https://github.com/MystenLabs/sui/tree/main/sdk/typescript">TS/JS SDK</a> (official)</li>
+</ul>
+<ul>
+<li><a href="https://github.com/coming-chat/go-sui-sdk">Golang SDK 1</a> (community)</li>
+</ul>
+<ul>
+<li><a href="https://github.com/block-vision/sui-go-sdk">Golang SDK 2</a> (community)</li>
+</ul>
+<ul>
+<li><a href="https://github.com/FrankC01/pysui">Python SDK</a> (community)</li>
+</ul>
+<ul>
+<li><a href="https://github.com/GrapeBaBa/sui4j">Java SDK</a> (community)</li>
+</ul>
+<ul>
+<li><a href="https://github.com/cosmostation/suikotlin">Kotlin SDK</a> (community)</li>
+</ul>
+<ul>
+<li><a href="https://github.com/naami-finance/SuiNet">C# SDK</a> (community)</li>
+</('ul', 0)>
+<h3>Sui Dapps SDKs</h3>
+<ul>
+<li><a href="https://github.com/OmniBTC/OmniSwap-Sui-SDK">OmniSwap-Sui-SDK</a> (community)</li>
+</('ul', 0)>
+<h3>Other network SDKs</h3>
+<ul>
+<li><a href="https://github.com/coming-chat/go-aptos-sdk">Aptos Golang SDK</a> (community)</li>
+</('ul', 0)>
+<h2>Papers</h2>
+
+<h3>Language Design</h3>
+
+<ul>
+<li><a href="https://developers.diem.com/papers/diem-move-a-language-with-programmable-resources/2019-06-18.pdf">Move: A Language With Programmable Resources</a> - This was the original Move white paper released in 2018. Many aspects of this are now out of date (e.g., the syntax and description of the bytecode instructions), but the first two sections are worth a read for explaining the difficulties of programming with assets and how Move tackles them.</li>
+</ul>
+<ul>
+<li><a href="https://arxiv.org/abs/2110.05043">Robust Safety for Move</a></li>
+</ul>
+<ul>
+<li><a href="https://arxiv.org/abs/2205.05181">The Move Borrow Checker</a></li>
+</ul>
+<ul>
+<li><a href="https://arxiv.org/abs/2004.05106">Resources: A Safe Language Abstraction for Money</a></li>
+</('ul', 0)>
+<h3>Static Analysis and Verification</h3>
+
+<ul>
+<li><a href="https://arxiv.org/abs/2110.08362">Fast and Reliable Formal Verification of Smart Contracts with the Move Prover</a></li>
+</ul>
+<ul>
+<li><a href="https://research.facebook.com/publications/the-move-prover/">The Move Prover</a></li>
+</ul>
+<ul>
+<li><a href="https://ethz.ch/content/dam/ethz/special-interest/infk/chair-program-method/pm/documents/Education/Theses/Constantin<em>M%C3%BCller</em>MS_Report.pdf">Verification of Programs Written in Libra's Move Language</a></li>
+</ul>
+<ul>
+<li><a href="https://research.facebook.com/publications/exact-and-linear-time-gas-cost-analysis/">Exact and Linear-Time Gas-Cost Analysis</a></li>
+</('ul', 0)>
+<h2>Videos</h2>
+
+<ul>
+<li><a href="https://youtu.be/J1U_0exNFu0">The Move Programming Language</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=xMsE1X4wio4">Move on Sui</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=gvRJdJTQd8U">Move on Aptos</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=EG2-7bQNPv4&ab<em>channel=FieldsInstitute">Move: A Safe Language for Programming with Money</a> - Talk from <a href="https://github.com/sblackshear">@sblackshear</a> at the <a href="http://www.fields.utoronto.ca/activities/seminar</em>series/blockchain-research-seminar-series">Fields Institute Blockchain</a> research seminar series.</li>
+</ul>
+<ul>
+<li><a href="http://www.fields.utoronto.ca/talks/Formal-verification-Move-programs-Libra-blockchain">Formal Verification of Move Programs for the Libra Blockchain</a> - Talk from <a href="https://github.com/DavidLDill">@DavidLDill</a> at the <a href="http://www.fields.utoronto.ca/activities/seminar_series/blockchain-research-seminar-series">Fields Institute Blockchain</a> research seminar series.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=b_2jZ4YEfWc">Move for the Masses</a> - Talk at the <a href="https://converge.circle.com/event/4ea0d06f-3900-4b6d-a9cd-aeaedda9ef2e/summary">Converge '22</a>.</li>
+</('ul', 0)>
+<h2>Slides</h2>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1Tb2iZD0xrQSlwXIJNL1djNYc0_p0szfB2STgURgHgls/edit?usp=sharing">Move deep dive</a></li>
+</ul>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1gU-M42Juz7ARc61unPXphJ_BX1OlQrBwR1VdaPT4M5w/edit?usp=sharing">Move overview</a> - Slides from <a href="https://reasoningaboutfinancialsystems.org/">Reasoning About Financial Systems</a> workshop at <a href="https://cbr.stanford.edu/sbc22/">SBC '22</a>.</li>
+</('ul', 0)>
+<h2>Podcasts</h2>
+
+<ul>
+<li><a href="https://zeroknowledge.fm/228-2/">Move and Sui with Sam Blackshear from Mysten Labs</a></li>
+</ul>
+<ul>
+<li><a href="https://twitter.com/i/spaces/1jMKgepNOleJL">Move AMA covering Move origin story</a></li>
+</('ul', 0)>
+<h2>Blog Posts</h2>
+<ul>
+<li><a href="https://medium.com/@kklas/smart-contract-development-move-vs-rust-4d8f84754a8f">Comparing Move and Rust smart contract development</a></li>
+</ul>
+<ul>
+<li><a href="https://sui.io/resources-move/why-we-created-sui-move">Comparing Diem-style Move and Sui Move</a></li>
+</('ul', 0)>
+<h2>Security</h2>
+<ul>
+<li><a href="https://medium.com/numen-cyber-labs/analysis-of-the-first-critical-0-day-vulnerability-of-aptos-move-vm-8c1fd6c2b98e">Aptos-movevm Denial of Service Vulnerability</a></li>
+</('ul', 0)>
+<h2>Contributing</h2>
+
+<p>Contributions welcome! Read the <a href="CONTRIBUTING.md">contribution guidelines</a> first.</p>
+
+</body>
+</html>

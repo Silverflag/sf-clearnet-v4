@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frege</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Frege</h1>
+
+<p><strong>Repository:</strong> https://github.com/sfischer13/awesome-frege#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<!--lint disable double-link-->
+
+<h1>Awesome Frege <a href="https://awesome.re/badge.svg"><img src="https://awesome.re" alt="Awesome</a>"></h1>
+
+<blockquote>
+<p>Useful resources for the <a href="https://github.com/Frege/frege">Frege</a> programming language</p>
+</blockquote>
+
+<p>You might also like <a href="https://github.com/krispo/awesome-haskell">awesome-haskell</a>.</p>
+
+<p><em>Please read the <a href="contributing.md">contribution guidelines</a> before contributing.</em></p>
+
+<h2>Contents</h2>
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<ul>
+<li><a href="#overview">Overview</a></li>
+</ul>
+<ul>
+<li><a href="#first-steps">First Steps</a></li>
+</ul>
+<ul>
+<li><a href="#comparisons">Comparisons</a></li>
+</ul>
+<ul>
+<li><a href="#official-resources">Official Resources</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#community">Community</a></li>
+<ul>
+<li><a href="#chat">Chat</a></li>
+</ul>
+<ul>
+<li><a href="#questions">Questions</a></li>
+</ul>
+<ul>
+<li><a href="#social-media">Social Media</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#information">Information</a></li>
+<ul>
+<li><a href="#articles--blogs">Articles & Blogs</a></li>
+</ul>
+<ul>
+<li><a href="#books">Books</a></li>
+</ul>
+<ul>
+<li><a href="#conferences">Conferences</a></li>
+</ul>
+<ul>
+<li><a href="#courses">Courses</a></li>
+</ul>
+<ul>
+<li><a href="#talks">Talks</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#libraries">Libraries</a></li>
+<ul>
+<li><a href="#android">Android</a></li>
+</ul>
+<ul>
+<li><a href="#big-data">Big Data</a></li>
+</ul>
+<ul>
+<li><a href="#databases">Databases</a></li>
+</ul>
+<ul>
+<li><a href="#email">Email</a></li>
+</ul>
+<ul>
+<li><a href="#graphics">Graphics</a></li>
+</ul>
+<ul>
+<li><a href="#gui">GUI</a></li>
+</ul>
+<ul>
+<li><a href="#web-frameworks">Web Frameworks</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#sample-applications">Sample Applications</a></li>
+<ul>
+<li><a href="#games">Games</a></li>
+</ul>
+<ul>
+<li><a href="#media">Media</a></li>
+</ul>
+<ul>
+<li><a href="#web">Web</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#tools">Tools</a></li>
+<ul>
+<li><a href="#build-tools">Build Tools</a></li>
+</ul>
+<ul>
+<li><a href="#ides">IDEs</a></li>
+</ul>
+<ul>
+<li><a href="#repls">REPLs</a></li>
+</ul>
+<ul>
+<li><a href="#unit-testing">Unit Testing</a></li>
+</ul>
+</ul>
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+<h2>Introduction</h2>
+
+<h3>Overview</h3>
+
+<ul>
+<li><a href="https://github.com/Frege/frege">Frege</a> - Official website.</li>
+</('ul', 0)>
+<h3>First Steps</h3>
+
+<ul>
+<li><a href="https://github.com/Frege/frege/wiki/Getting-Started">Getting Started</a> - First steps with Frege on the command line.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Frege/frege/tree/master/examples">Examples</a> - Some code examples.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tfausak/fregexample">Template</a> - Template for Frege projects.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/trending?l=frege">Trending</a> - Trending projects on GitHub.</li>
+</('ul', 0)>
+<h3>Comparisons</h3>
+
+<ul>
+<li><a href="https://github.com/Frege/frege/wiki/Differences-between-Frege-and-Haskell">Frege vs. Haskell</a> - Differences between Frege and Haskell.</li>
+</ul>
+<ul>
+<li><a href="https://stackoverflow.com/questions/17905322/what-are-the-main-differences-between-scala-and-frege-in-programming-paradigms">Frege vs. Scala</a> - Differences between Scala and Frege.</li>
+</('ul', 0)>
+<h3>Official Resources</h3>
+
+<ul>
+<li><a href="http://www.frege-lang.org/doc/Language.pdf">Language Reference</a> - Description of the language and its implementation.</li>
+</ul>
+<ul>
+<li><a href="http://www.frege-lang.org/doc/fregedoc.html">Standard Library API</a> - Frege API documentation.</li>
+</ul>
+<ul>
+<li><a href="http://www.frege-lang.org/doc/index.html">Java Runtime API</a> - Java API documentation.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Frege/frege/wiki/Frequently-Asked-Questions">FAQ</a> - Frequently asked questions.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Frege/frege/wiki">Wiki</a> - Official wiki.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Frege/frege/wiki/New-or-Changed-Features">Changelog</a> - Official changelog.</li>
+</('ul', 0)>
+<h2>Community</h2>
+
+<h3>Chat</h3>
+
+<ul>
+<li><a href="https://gitter.im/Frege/frege">Gitter</a> - Gitter channel.</li>
+</ul>
+<ul>
+<li><a href="https://webchat.freenode.net/?channels=%23frege">IRC</a> - IRC channel.</li>
+</('ul', 0)>
+<h3>Questions</h3>
+
+<ul>
+<li><a href="https://groups.google.com/forum/#!forum/frege-programming-language">Google Group</a> - Frege Google Group.</li>
+</ul>
+<ul>
+<li><a href="https://stackoverflow.com/questions/tagged/frege">Stack Overflow</a> - Frege tag on Stack Overflow.</li>
+</('ul', 0)>
+<h3>Social Media</h3>
+
+<ul>
+<li><a href="https://twitter.com/fregelang">Twitter</a> - Official Twitter account.</li>
+</ul>
+<ul>
+<li><a href="https://www.reddit.com/r/frege/">reddit</a> - Frege subreddit.</li>
+</ul>
+<ul>
+<li><a href="https://twitter.com/mittie">Dierk König</a> - Core contributor and Groovy expert.</li>
+</('ul', 0)>
+<h2>Information</h2>
+
+<h3>Articles & Blogs</h3>
+
+<ul>
+<li><a href="https://www.infoq.com/news/2015/08/frege-haskell-for-jvm">InfoQ</a> - InfoQ article on Frege.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Frege/frege/wiki/Articles">Frege Wiki</a> - List of more articles on the Frege wiki.</li>
+</ul>
+<ul>
+<li><a href="http://fregepl.blogspot.com">Frege Programming Language</a> - Blog of Ingo Wechsung.</li>
+</ul>
+<ul>
+<li><a href="https://jaxenter.de/frege-haskell-jvm-54617">JAXenter</a> - Interview with Ingo Wechsung (German).</li>
+</('ul', 0)>
+<h3>Books</h3>
+
+<ul>
+<li><a href="https://www.gitbook.com/book/dierk/fregegoodness/details">Frege Goodness</a> - Book by Dierk König.</li>
+</ul>
+<ul>
+<li><a href="https://www.gitbook.com/book/ingo60/frege-quick-reference/details">Frege Quick Reference</a> - Book by Ingo Wechsung.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/y-taka-23/learn-you-a-frege">Learn You a Frege for Great Good!</a> - Frege adaptation of Learn You a Haskell for Great Good!.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Frege/frege/wiki/Books">Frege Wiki</a> - List of more books on the Frege wiki.</li>
+</('ul', 0)>
+<h3>Conferences</h3>
+
+<ul>
+<li><a href="http://www.icfpconference.org/">ICFP</a> - International Conference on Functional Programming.</li>
+</('ul', 0)>
+<h3>Courses</h3>
+
+<ul>
+<li><a href="https://www.edx.org/course/introduction-functional-programming-delftx-fp101x-0">FP101x</a> - Introduction to Functional Programming on edX.</li>
+</('ul', 0)>
+<h3>Talks</h3>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=1P1-HXNfFPc">Overview</a> - Frege, a Haskell for the JVM by Dierk König.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=o2qwNlVeyA4">Frege vs. Haskell</a> - FregeDay: Roadmap for resolving differences between Haskell and Frege (Ingo Wechsung).</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/channel/UCwRL68qZFfub1Ep1EScfmBw">ICFP Videos</a> - Videos about functional programming.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Frege/frege/wiki/Talks">Frege Wiki</a> - List of more talks on the Frege wiki.</li>
+</('ul', 0)>
+<h2>Libraries</h2>
+
+<ul>
+<li><a href="https://github.com/Frege/frege/wiki/Libraries">Frege Wiki</a> - List of libraries on the Frege wiki.</li>
+</('ul', 0)>
+<h3>Android</h3>
+
+<ul>
+<li><a href="https://github.com/trilogysci/FregeAndroid">FregeAndroid</a> - Frege interface to the Android API.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ppelleti/frege-on-android">frege-on-android</a> - How to use Frege on Android.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mchav/FregeAndroid">FregeAndroid</a> - Proof of concept Android application in Frege.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mchav/GeoQuiz-Frege">GeoQuiz-Frege</a> - Port of the BigNerd Ranch GeoQuiz application in Frege.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mchav/froid">froid</a> - Library for using Frege in Android development.</li>
+</('ul', 0)>
+<h3>Big Data</h3>
+
+<ul>
+<li><a href="https://github.com/sw1sh/frege-spark">Spark</a> - Apache Spark with Frege.</li>
+</('ul', 0)>
+<h3>Databases</h3>
+
+<ul>
+<li><a href="https://github.com/fregelab/sirocco">Sirocco</a> - Frege library for relational databases.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/DellCliff/frege-dbc">frege-dbc</a> - JDBC with Frege.</li>
+</('ul', 0)>
+<h3>Email</h3>
+
+<ul>
+<li><a href="https://github.com/y-taka-23/frege-email">Frege Email</a> - SMTP library for Frege.</li>
+</('ul', 0)>
+<h3>Graphics</h3>
+
+<ul>
+<li><a href="https://github.com/mchav/Frege-RayTracer">Frege-RayTracer</a> - Ray tracer in Frege.</li>
+</('ul', 0)>
+<h3>GUI</h3>
+
+<ul>
+<li><a href="https://github.com/Frege/FregeFX">FregeFX</a> - Frege bindings for JavaFX.</li>
+</('ul', 0)>
+<h3>Web Frameworks</h3>
+
+<ul>
+<li><a href="https://github.com/fregelab/chinook">Chinook</a> - Frege web framework based on SparkJava.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mmhelloworld/fregelet">Fregelet</a> - Frege web framework based on servlet.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mmhelloworld/hello-play-frege">Play</a> - Play framework with Frege.</li>
+</('ul', 0)>
+<h2>Sample Applications</h2>
+
+<h3>Games</h3>
+
+<ul>
+<li><a href="https://github.com/tfausak/fr2048">2048</a> - Frege clone of 2048.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Ingo60/frech">frech</a> - Fully functional chess engine.</li>
+</('ul', 0)>
+<h3>Media</h3>
+
+<ul>
+<li><a href="https://github.com/mchav/Zwana">Zwana</a> - Piano using Java Midi.</li>
+</('ul', 0)>
+<h3>Web</h3>
+
+<ul>
+<li><a href="https://github.com/y-taka-23/restful-todo">RESTful Todo Manager</a> - Task list manager written in Frege.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mmhelloworld/hello-play-frege">Play Framework</a> - Play application written in Frege.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mchav/fervor">Fervor</a> - Server for local directories.</li>
+</('ul', 0)>
+<h2>Tools</h2>
+
+<h3>Build Tools</h3>
+
+<ul>
+<li><a href="http://leiningen.org/">Leiningen</a> - Project automation for Frege and Clojure.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Frege/frege-lein-template">Leiningen Template</a> - Template for frege-lein projects.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mchav/gottlob">gottlob</a> - Build tool for Frege.</li>
+</('ul', 0)>
+<h3>IDEs</h3>
+
+<ul>
+<li><a href="https://github.com/Frege/eclipse-plugin/wiki/fregIDE-Tutorial">fregIDE</a> - Eclipse plugin for Frege.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/carymrobbins/intellij-frege">intellij-frege</a> - Frege support for IntelliJ IDEA.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Dierk/frege-idea-plugin">frege-idea-plugin</a> - Language support for Frege in IntelliJ IDEA.</li>
+</('ul', 0)>
+<h3>REPLs</h3>
+
+<ul>
+<li><a href="https://github.com/Frege/frege-repl">Console REPL</a> - REPL on the console.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Dierk/frepl-gui">GUI REPL</a> - GUI based REPL.</li>
+</('ul', 0)>
+<h3>Unit Testing</h3>
+
+<ul>
+<li><a href="https://github.com/melrief/FrUnit">FrUnit</a> - JUnit for Frege.</li>
+</ul>
+</body>
+</html>

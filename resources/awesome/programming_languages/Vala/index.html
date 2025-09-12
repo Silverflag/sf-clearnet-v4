@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vala</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Vala</h1>
+
+<p><strong>Repository:</strong> https://github.com/desiderantes/awesome-vala#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<h1>Awesome Vala <a href="https://awesome.re/badge.svg"><img src="https://awesome.re" alt="Awesome</a>"></h1>
+
+<p><a href="https://vala.dev"><img src="vala.svg" align="right" width="100"></a></p>
+
+<p>A curated list of resources for Vala - A programming language using modern high level abstractions without imposing additional runtime requirements, by leaning on GLib and GObject.</p>
+
+<h2>Contents</h2>
+
+<ul>
+<li><a href="#apps">Apps</a></li>
+<ul>
+<li><a href="#cryptography--security">Cryptography & Security</a></li>
+</ul>
+<ul>
+<li><a href="#design-tools">Design Tools</a></li>
+</ul>
+<ul>
+<li><a href="#development-tools">Development Tools</a></li>
+</ul>
+<ul>
+<li><a href="#games">Games</a></li>
+</ul>
+<ul>
+<li><a href="#internet-browsers">Internet Browsers</a></li>
+</ul>
+<ul>
+<li><a href="#music">Music</a></li>
+</ul>
+<ul>
+<li><a href="#personalization">Personalization</a></li>
+</ul>
+<ul>
+<li><a href="#productivity">Productivity</a></li>
+</ul>
+<ul>
+<li><a href="#system-tools">System Tools</a></li>
+</ul>
+<ul>
+<li><a href="#virtualization">Virtualization</a></li>
+</ul>
+<ul>
+<li><a href="#weather">Weather</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#cli-tools">CLI Tools</a></li>
+</ul>
+<ul>
+<li><a href="#editor-plugins">Editor Plugins</a></li>
+</ul>
+<ul>
+<li><a href="#language-servers">Language Servers</a></li>
+</ul>
+<ul>
+<li><a href="#libraries">Libraries</a></li>
+<ul>
+<li><a href="#command-line">Command-line</a></li>
+</ul>
+<ul>
+<li><a href="#concurrency">Concurrency</a></li>
+</ul>
+<ul>
+<li><a href="#cryptography--security-1">Cryptography & Security</a></li>
+</ul>
+<ul>
+<li><a href="#data-structures--data-types">Data Structures & Data Types</a></li>
+</ul>
+<ul>
+<li><a href="#databases">Databases</a></li>
+</ul>
+<ul>
+<li><a href="#graphics-libraries">Graphics Libraries</a></li>
+</ul>
+<ul>
+<li><a href="#gui-programming">GUI Programming</a></li>
+</ul>
+<ul>
+<li><a href="#ioc-and-dependency-injection">IoC and Dependency Injection</a></li>
+</ul>
+<ul>
+<li><a href="#multimedia-processing">Multimedia Processing</a></li>
+</ul>
+<ul>
+<li><a href="#numerical-computation">Numerical Computation</a></li>
+</ul>
+<ul>
+<li><a href="#templating">Templating</a></li>
+</ul>
+<ul>
+<li><a href="#text-processing">Text Processing</a></li>
+</ul>
+<ul>
+<li><a href="#web-development">Web Development</a></li>
+</ul>
+<ul>
+<li><a href="#xml--data-serialization">XML & Data Serialization</a></li>
+</('ul', 4)>
+</('ul', 0)>
+<h2>Apps</h2>
+
+<h3>Cryptography & Security</h3>
+
+<ul>
+<li><a href="https://gitlab.com/vinarisoftware/integrity-check-gtk">Integrity Check</a> -  Linux application written in Vala and GTK, designed to get the verification sum of a file (MD5, SHA1, SHA256) and compare to the sum of verification provided by the file creator.</li>
+</('ul', 0)>
+<h3>Design Tools</h3>
+
+<ul>
+<li><a href="https://github.com/akiraux/Akira">Akira</a> -  Native Linux App for UI and UX Design built in Vala and GTK.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/johanmattssonm/birdfont">Birdfont</a> - A font editor for creating fonts in TTF, EOT, SVG and BIRDFONT format.</li>
+</('ul', 0)>
+<h3>Development Tools</h3>
+
+<ul>
+<li><a href="https://gitlab.gnome.org/GNOME/gitg">GitG</a> - A graphical user interface for <a href="https://git-scm.com/">git</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dbkangaroo/kangaroo">Kangaroo</a> - AI-powered SQL client and admin tool for popular databases.</li>
+</ul>
+<ul>
+<li><a href="https://gitlab.com/XavierEduardo99/vamm-vinari-software">VAMM (Vinari OS Apache & MariaDB Manager)</a> - Manages LAMP services using a GTK 3 GUI.</li>
+</('ul', 0)>
+<h3>Games</h3>
+
+<ul>
+<li><a href="https://github.com/tkashkin/GameHub">GameHub</a> - A unified library for all your games.</li>
+</ul>
+<ul>
+<li><a href="https://gitlab.gnome.org/World/highscore">High Score (GNOME Games)</a> - Retro gaming application for the GNOME desktop.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/antolius/sage">Sage</a> - A code breaking game made for elementary OS.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/avojak/warble">Warble</a> - Native Linux word-guessing game built in Vala and Gtk for elementary OS.</li>
+</('ul', 0)>
+<h3>Internet Browsers</h3>
+
+<ul>
+<li><a href="https://github.com/starfish-app/Starfish">Starfish</a> - A Gemini browser for elementary OS.</li>
+</('ul', 0)>
+<h3>Music</h3>
+
+<ul>
+<li><a href="https://gitlab.gnome.org/neithern/g4music">g4music</a> - A beautiful, fast, fluent, light weight music player written in GTK4.</li>
+</('ul', 0)>
+<h3>Personalization</h3>
+
+<ul>
+<li><a href="https://github.com/cheesecakeufo/komorebi">Korembi</a> - A beautiful and customizable wallpapers manager for Linux.</li>
+</('ul', 0)>
+<h3>Productivity</h3>
+
+<ul>
+<li><a href="https://github.com/phase1geo/Annotator">Annotator</a> - Annotate images for better communication.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/elfenware/badger">Badger</a> - Remind yourself to not sit and stare at the screen for too long.</li>
+</ul>
+<ul>
+<li><a href="https://gitlab.gnome.org/raggesilver/blackbox">Blackbox</a> - A beautiful GTK 4 terminal.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dino/dino">Dino</a> - A modern Jabber/XMPP Client using GTK+/Vala.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Diego-Ivan/Flowtime">Flowtime</a> - GTK4 Libadwaita Pomodoro Timer.</li>
+</ul>
+<ul>
+<li><a href="https://gitlab.gnome.org/GNOME/geary">geary</a> - Geary is an email application built around conversations, for the GNOME 3 desktop.</li>
+</ul>
+<ul>
+<li><a href="https://gitlab.gnome.org/GNOME/gnome-calculator">GNOME Calculator</a> - The calculator app for the GNOME desktop.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/artemanufrij/graphui">graphui</a> - Graph Visualization based on graphviz.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/cassidyjames/ideogram">Ideogram</a> -  Emoji Picker app.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/phase1geo/Minder">Minder</a> - Mind-mapping application.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lainsce/notejot">Notejot</a> - Stupidly-simple notes app.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Philip-Scott/Notes-up">Notes-up</a> - Markdown notes editor & manager.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/phase1geo/Outliner">Outliner</a> - Write outlines easily.</li>
+</ul>
+<ul>
+<li><a href="https://gitlab.com/posidon_software/paper/">Paper</a> - Take notes in Markdown.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pdfpc/pdfpc">pdfpc</a> - A GTK presenter application with multi-monitor support for PDF files.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/alainm23/planify">Planify</a> - Task manager with Todoist support designed for GNU/Linux.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Philip-Scott/Spice-up">Spice-up</a> - Presentations App for the modern Linux Desktop.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/phase1geo/TextShine">TextShine</a> - Convert and manipulate text.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/RajSolai/TextSnatcher">TextSnatcher</a> - Copy text from Images with ease.</li>
+</('ul', 0)>
+<h3>System Tools</h3>
+
+<ul>
+<li><a href="https://gitlab.gnome.org/GNOME/connections">Connections</a> - A remote desktop client for the GNOME desktop environment.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/elementary/appcenter">elementary OS App Center</a> - Pay-what-you-can app store for elementary OS.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/akarin123/manhelper">Man Helper</a> -  A lightweight GTK front-end for man pages.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/stsdc/monitor">Monitor</a> - Manage processes and monitor system resources.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/phw/peek">Peek</a> - Simple animated GIF screen recorder with an easy to use interface.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ErikReider/SwayNotificationCenter">SwayNotifiationCenter</a> - A simple GTK based notification daemon for SwayWM.</li>
+</('ul', 0)>
+<h3>Virtualization</h3>
+
+<ul>
+<li><a href="https://gitlab.gnome.org/GNOME/gnome-boxes">GNOME Boxes</a> - A simple GNOME 3 application to access virtual machines.</li>
+</('ul', 0)>
+<h3>Weather</h3>
+
+<ul>
+<li><a href="https://gitlab.com/bitseater/meteo">Meteo</a> - GTK Weather app using the OpenWeatherMap API.</li>
+</('ul', 0)>
+<h2>CLI Tools</h2>
+
+<ul>
+<li><a href="https://github.com/watsonprojects/EasyDocs">EasyDocs</a> -  Quickly read developer documentation.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/colinkiama/spider">Spider</a> - Quickly generate a HTML5 site structure.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/vala-lang/valdo">Valdo</a> - Create new Vala projects from templates.</li>
+</('ul', 0)>
+<h2>Editor Plugins</h2>
+
+<ul>
+<li><a href="https://github.com/vala-lang/vala-vscode">Vala VSCode</a> - A plugin for Visual Studio Code that enables basic autocompletion and syntax highlighting for Vala.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/technosophos/Vala-TMBundle">Vala-TMBundle</a> - A TextMate bundle that provides Vala syntax highlighting, code completion, etc. Sublime Text 3 can also use this plugin.</li>
+</ul>
+<ul>
+<li><a href="https://atom.io/packages/language-vala-modern">language-vala-modern</a> - Provides Vala language support in Atom. It's a fork of the unmaintained "language-vala package".</li>
+</ul>
+<ul>
+<li><a href="https://launchpad.net/valasyntax4sublimetext">Vala Syntax 4 Sublime Text</a> - A basic plugin for Sublime Text 3 that provides syntax highlighting.</li>
+</('ul', 0)>
+<h2>Language Servers</h2>
+
+<ul>
+<li><a href="https://github.com/vala-lang/vala-language-server">vala-language-server</a> - A language server that aims to provide code completion, formatting, syntax highlighting, and everything else according to the Language Server spec.</li>
+</('ul', 0)>
+<h2>Libraries</h2>
+
+<h3>Command-line</h3>
+
+<ul>
+<li><a href="https://github.com/naaando/console-command">console-command</a> - Library to route command-line arguments to a Command pattern object, current implementation covers extension by inheritance or using closures.</li>
+</('ul', 0)>
+<h3>Concurrency</h3>
+
+<ul>
+<li><a href="https://gitlab.com/kosmospredanie/gpseq">gpseq</a> - A parallelism library for Vala and GObject.</li>
+</('ul', 0)>
+<h3>Cryptography & Security</h3>
+
+<ul>
+<li><a href="https://www.gnutls.org/">GnuTLS</a> - A secure communications library implementing the SSL, TLS and DTLS protocols and technologies around them. It provides a simple API to access the secure communications protocols as well as APIs to parse and write X.509, PKCS #12, and other required structures.</li>
+</('ul', 0)>
+<h3>Data Structures & Data Types</h3>
+
+<ul>
+<li><a href="https://github.com/ebassi/graphene">Graphene</a> - A thin layer of types for graphic libraries. It provides common types needed to handle 3D transformations: points, triangles, rectangles, quads, quaternions, vectors, matrices, spheres, etc.</li>
+</ul>
+<ul>
+<li><a href="https://wiki.gnome.org/Projects/Libgee">Libgee</a> - A utility library providing GObject-based interfaces and classes for commonly used data structures (lists, maps, queues, trees, etc.).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/arteymix/numeric-glib">Numeric-GLib</a> - A collection of numeric data types for GLib (and Vala) via GCC extensions. It includes 128 bit integers & floats, complex types, vectorized operations, and decimal types.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lcallarec/united">United</a> - A library for unit manipulation (like kilograms, meters, etc).</li>
+</ul>
+<ul>
+<li><a href="https://gitlab.gnome.org/BZHDeveloper/vul">vul (Vala Utility Libraries)</a> - A set of utility libraries for Vala that add: Text stream handling (input and output), JSON serialization and deserialization, and, Archive compression and extraction.</li>
+</('ul', 0)>
+<h3>Databases</h3>
+
+<ul>
+<li><a href="https://github.com/AmbitionFramework/almanna">Almanna ORM</a> -  The Almanna ORM for Vala/GLib.</li>
+</('ul', 0)>
+<h3>Graphics Libraries</h3>
+
+<ul>
+<li><a href="http://gegl.org/babl/">Babl</a> - A dynamic, any to any, pixel format translation library.</li>
+</ul>
+<ul>
+<li><a href="https://cairographics.org/">Cairo</a> - A 2D graphics library with support for multiple output devices. This is pretty much the default library you get in Vala.</li>
+</ul>
+<ul>
+<li><a href="http://gegl.org/">GEGL</a> - A data flow based image processing framework, providing floating point processing and non-destructive image processing capabilities. Think of it as "Reactive Programming for Images".</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ev3dev/grx">GRX</a> - A graphics library for simple graphics displays (think 1-bit displays or Adafruit's PiTFT displays). It also includes keyboard, mouse, joystick and touchscreen input support.</li>
+</ul>
+<ul>
+<li><a href="https://gitlab.com/gsvg/gsvg">GSVG (GObject SVG Library)</a> - GSVG is an effort to provide a GLib GObject implementation of W3C standard API.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lcallarec/live-chart">live-chart</a> - A real-time charting library for Vala and GTK3 based on Cairo.</li>
+</ul>
+<ul>
+<li><a href="https://www.libsdl.org/">SDL2</a> - A cross-platform development library designed to provide low level access to audio, keyboard, mouse, joystick, and graphics hardware via OpenGL, Direct3D, and Vulkan. Bindings are included in Vala and will be available starting with Vala 0.52.</li>
+</('ul', 0)>
+<h3>GUI Programming</h3>
+
+<ul>
+<li><a href="https://www.gtk.org/">GTK</a> - The de facto library for GUI development in Vala. Bindings are included with the vala compiler.</li>
+</('ul', 0)>
+<h3>IoC and Dependency Injection</h3>
+
+<ul>
+<li><a href="https://github.com/nahuelwexd/Vadi">Vadi</a> - An IoC Container developed in order to facilitate the usage of dependency injection for Vala developers.</li>
+</('ul', 0)>
+<h3>Multimedia Processing</h3>
+
+<ul>
+<li><a href="http://gstreamer.freedesktop.org/">GStreamer</a> - A powerful framework for creating multimedia applications.</li>
+</('ul', 0)>
+<h3>Numerical Computation</h3>
+
+<ul>
+<li><a href="https://github.com/fusilero/libbalistica">balistica</a> - An open source ballistic simulation library. There's a complete calculator <a href="https://github.com/fusilero/balistica">here</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/rainwoodman/vast">vast</a> - A project for generative modeling in Vala. Think of TensorFlow rewritten in Vala.</li>
+</('ul', 0)>
+<h3>Templating</h3>
+
+<ul>
+<li><a href="https://github.com/arteymix/compose">Compose</a> - A functional templating library for Vala.</li>
+</ul>
+<ul>
+<li><a href="https://gitlab.gnome.org/GNOME/template-glib">template-glib</a> - A library for template expansion which supports calling into GObject Introspection from templates.</li>
+</('ul', 0)>
+<h3>Text Processing</h3>
+
+<ul>
+<li><a href="https://github.com/fabrixxm/libcmark-vapi">libcmark-vapi</a> - Vala bindings for libcmark, the CommonMark parsing and rendering library in C.</li>
+</('ul', 0)>
+<h3>Web Development</h3>
+
+<ul>
+<li><a href="https://github.com/AmbitionFramework/ambition">Ambition</a> - A web framework written in Vala, with the MVC pattern in mind. Kinda unmaintained (someone could refactor it to use Valum under the hood, and maybe move it to Meson 😉).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/valum-framework/valum">Valum</a> - A Web micro-framework entirely written in Vala.</li>
+</('ul', 0)>
+<h3>XML & Data Serialization</h3>
+
+<ul>
+<li><a href="https://gitlab.gnome.org/GNOME/gxml/">GXML</a> - A GObject API for manipulating XML and a Serializable framework from GObject to XML.</li>
+</ul>
+<ul>
+<li><a href="https://gitlab.gnome.org/GNOME/json-glib/">Json-GLib</a> - Implements a full JSON parser and generator using GLib and GObject, and integrates JSON with GLib data types.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/rainwoodman/libyaml-glib">libyaml-glib</a> - The GLib binding of libyaml, plus a GObject builder that understands YAML.</li>
+</ul>
+</body>
+</html>

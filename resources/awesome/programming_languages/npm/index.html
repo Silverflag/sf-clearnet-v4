@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>npm</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>npm</h1>
+
+<p><strong>Repository:</strong> https://github.com/sindresorhus/awesome-npm#readme</p>
+<p><strong>Source File:</strong> readme.md</p>
+
+<hr>
+
+<h1>Awesome npm <a href="https://awesome.re/badge.svg"><img src="https://awesome.re" alt="Awesome</a>"> <a href="https://www.npmjs.com"><img src="https://github.com/npm/logos/blob/7fb0bc425e0dac1bab065217c4ed595594448db4/npm-transparent.png" width="200" align="right" alt="npm"></a></h1>
+
+<blockquote>
+<p>Awesome <a href="https://www.npmjs.com">npm</a> resources and tips</p>
+</blockquote>
+
+<p><a href="https://en.wikipedia.org/wiki/Npm_(software">npm</a>) is a package manager for the JavaScript programming language and comes bundled in the <a href="https://en.wikipedia.org/wiki/Node.js">Node.js</a> runtime.</p>
+
+<p><em>Please read the <a href="contributing.md">contribution guidelines</a> before contributing.</em></p>
+
+<h2>Contents</h2>
+
+<ul>
+<li><a href="#articles">Articles</a></li>
+</ul>
+<ul>
+<li><a href="#tools">Tools</a></li>
+</ul>
+<ul>
+<li><a href="#packages">Packages</a></li>
+</ul>
+<ul>
+<li><a href="#clients">Clients</a></li>
+</ul>
+<ul>
+<li><a href="#tips">Tips</a></li>
+</ul>
+<ul>
+<li><a href="#faq">FAQ</a></li>
+</ul>
+<ul>
+<li><a href="#community">Community</a></li>
+</ul>
+<ul>
+<li><a href="#documentation">Documentation</a></li>
+</ul>
+<ul>
+<li><a href="#support">Support</a></li>
+</ul>
+<ul>
+<li><a href="#related">Related</a></li>
+</('ul', 0)>
+<h2>Articles</h2>
+
+<ul>
+<li><a href="https://github.com/sindresorhus/ama/issues/10#issuecomment-117766328">Small focused modules</a></li>
+</ul>
+<ul>
+<li><a href="http://blog.izs.me/post/48281998870/unix-philosophy-and-nodejs">Unix philosophy and Node.js</a> - Write programs that do one thing and do it well.</li>
+</ul>
+<ul>
+<li><a href="https://web.archive.org/web/20180302125059/https://substack.net/how<em>I</em>write_modules">Writing small modules</a></li>
+</ul>
+<ul>
+<li><a href="https://nodesource.com/blog/semver-a-primer/">Semver: A Primer</a> <em>(Must read!)</em></li>
+</ul>
+<ul>
+<li><a href="https://nodesource.com/blog/semver-tilde-and-caret/">Semver: Tilde and Caret</a></li>
+</ul>
+<ul>
+<li><a href="https://addyosmani.com/blog/using-npm-offline/">Offline installation of npm packages</a></li>
+</ul>
+<ul>
+<li><a href="https://web.archive.org/web/20180302164842/http://substack.net/task<em>automation</em>with<em>npm</em>run">Task automation with npm run</a></li>
+</ul>
+<ul>
+<li><a href="https://www.keithcirkel.co.uk/how-to-use-npm-as-a-build-tool/">How to use npm as a build tool</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/guides/blob/main/npm-global-without-sudo.md">Install npm packages globally without sudo on macOS and Linux</a></li>
+</ul>
+<ul>
+<li><a href="https://medium.com/@goldglovecb/npm-needs-a-personal-trainer-537e0f8859c6">Optimizing the footprint of an npm package</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/maxogden/art-of-node#modules">The Art of Node</a> - An introduction to Node.js and client-side development with npm.</li>
+</ul>
+<ul>
+<li><a href="https://css-tricks.com/why-npm-scripts/">Why npm scripts?</a> - An introduction to npm scripts with common packages and scripts, as well as a boilerplate project.</li>
+</('ul', 0)>
+<h2>Tools</h2>
+
+<h3>Web</h3>
+
+<ul>
+<li><a href="https://npms.io">npms</a> - Superb package search with deep analysis of package quality using a <a href="https://npms.io/about">myriad of metrics</a>.</li>
+</ul>
+<ul>
+<li><a href="https://nodei.co/">NodeICO</a> - Package badges.</li>
+</ul>
+<ul>
+<li><a href="https://libraries.io/npm">Libraries.io</a> - Package discovery.</li>
+</ul>
+<ul>
+<li><a href="http://npm-stat.com">npm-stat</a> - Statistics charts for packages.</li>
+</ul>
+<ul>
+<li><a href="http://npm.anvaka.com">npmgraph</a> - Visualization of dependencies.</li>
+</ul>
+<ul>
+<li><a href="http://www.npmtrends.com">npm trends</a> - Compare package download counts over time.</li>
+</ul>
+<ul>
+<li><a href="https://gist.github.com/bcoe/dcc961b869bbf6685002">npm-top</a> - npm users by downloads.</li>
+</ul>
+<ul>
+<li><a href="http://semver.npmjs.com">npm semver calculator</a> - Visually explore what versions of a package a semver range matches.</li>
+</ul>
+<ul>
+<li><a href="https://ghub.io">ghub.io</a> - Redirects to the GitHub repo of an npm package.</li>
+</ul>
+<ul>
+<li><a href="https://moiva.io">moiva</a> - Discover and compare packages.</li>
+</('ul', 0)>
+<h3>Browser extensions</h3>
+
+<ul>
+<li><a href="https://chrome.google.com/webstore/detail/octo-linker/jlmafbaeoofdegohdhinkhilhclaklkp">Octo-Linker</a> - Chrome extension to navigate across npm packages on GitHub with ease.</li>
+</ul>
+<ul>
+<li><a href="https://chrome.google.com/webstore/detail/npm-hub/kbbbjimdjbjclaebffknlabpogocablj">npm-hub</a> - Chrome extension to explore npm dependencies on GitHub repos.</li>
+</ul>
+<ul>
+<li><a href="https://chrome.google.com/webstore/detail/github-npm-stats/oomfflokggoffaiagenekchfnpighcef">github-npm-stats</a> - View npm download stats on GitHub.</li>
+</ul>
+<ul>
+<li><a href="https://chrome.google.com/webstore/detail/npm-search-update/kagpoplamlmaonpddimnnigiojimihnh">npm-search-update</a> - Chrome extension to quickly search for dependencies and monitor changes from the npm registry.</li>
+</('ul', 0)>
+<h3>CLI</h3>
+
+<ul>
+<li><a href="https://github.com/lukechilds/zsh-better-npm-completion">zsh-better-npm-completion</a> - Better ZSH completion for npm.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/voidcosmos/npkill">npkill</a> - Easily find and remove old and heavy node_modules folders.</li>
+</('ul', 0)>
+<h2>Packages</h2>
+
+<h3>Publishing</h3>
+
+<ul>
+<li><a href="https://github.com/sindresorhus/np">np</a> - A better <code>npm publish</code>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/inikulin/publish-please">publish-please</a> - Publish packages safely and gracefully.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/phuu/npm-release">npm-release</a> - Making releasing to npm so easy a kitten could probably do it™.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/timoxley/pkgfiles">pkgfiles</a> - List all files which would be published in a package.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/webpro/release-it">release-it</a> - Automate releases for Git repositories and/or npm packages. Changelog generation, GitHub/GitLab releases, etc.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/semantic-release/semantic-release">semantic-release</a> - Fully automated package publishing.</li>
+</('ul', 0)>
+<h3>Registry</h3>
+
+<ul>
+<li><a href="https://github.com/sindresorhus/npm-name-cli">npm-name</a> - Check whether a package name is available on npm.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/package-json">package-json</a> - Get the package.json of a package from the npm registry.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/latest-version-cli">latest-version</a> - Get the latest version of an npm package.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/npm-keyword">npm-keyword</a> - Get a list of npm packages with a certain keyword.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/npm-user">npm-user</a> - Get user info of an npm user.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/npm-email">npm-email</a> - Get the email of an npm user.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kevva/npm-user-packages-cli">npm-user-packages</a> - Get packages by an npm user.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/gillstrom/dpn">dpn</a> - Get the dependents of a user's npm packages.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/hughsk/npm-stats">npm-stats</a> - Get data from an npm registry.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/postmanlabs/npm-cli-login">npm-cli-login</a> - Log in to npm.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Pana/nrm">nrm</a> - Registry manager.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dickeyxxx/npm-register">npm-register</a> - Easy to set up and maintain npm registry and proxy.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/verdaccio/verdaccio">verdaccio</a> - Lightweight private npm proxy registry.</li>
+</ul>
+<ul>
+<li><a href="https://cloudsmith.io/l/npm-registry/">cloudsmith</a> - A fully managed package management SaaS with support for public and private npm registries (and many others).</li>
+</('ul', 0)>
+<h3>Other</h3>
+
+<ul>
+<li><a href="https://github.com/sindresorhus/npm-home">npm-home</a> - Open the npm page of a package.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/gh-home">gh-home</a> - Open the GitHub page of a package.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/alanshaw/david">david</a> - Check if your package dependencies are out of date.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dylang/npm-check">npm-check</a> - Check for outdated, incorrect, and unused dependencies, as well as interactive update.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/th0r/npm-upgrade">npm-upgrade</a> - Update outdated npm dependencies interactively.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/uber/npm-shrinkwrap">npm-shrinkwrap</a> - A consistent shrinkwrap tool.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/felixrieseberg/npm-windows-upgrade">npm-windows-upgrade</a> - Upgrade npm on Windows.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/generator-nm">generator-nm</a> - Scaffold out an npm package.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/package-up">package-up</a> - Find the closest package.json file.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/read-package-up">read-package-up</a> - Read the closest package.json file.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/npm/normalize-package-data">normalize-package-data</a> - Normalize package metadata.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/package-config">package-config</a> - Get namespaced config from the closest package.json.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/npm-run-path">npm-run-path</a> - Run locally installed binaries in the terminal by name like with global ones.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/nolanlawson/local-npm">local-npm</a> - Use npm <a href="https://addyosmani.com/blog/using-npm-offline/">offline</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/zeke/npe">npe</a> - CLI for inspecting and editing properties in package.json.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/samccone/engine-deps">engine-deps</a> - Manage Node.js version specific dependencies with ease.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/amovah/enpeem-search">enpeem-search</a> - Search packages by scraping the npm web search.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/seanzarrin/npm-issues">npm-issues</a> - Search known issues of all your packages at once.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/davej/john">john</a> - Make npm3's flat dependencies easier to find and sort.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ruyadorno/ntl">ntl</a> - Interactive CLI menu to list & run npm tasks.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/egoist/decheck">decheck</a> - Explore dependencies of npm packages in the command-line.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/JamieMason/shrinkpack">shrinkpack</a> - Lock down your dependencies and install offline.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/coderaiser/redrun">redrun</a> - Expand scripts from package.json to improve execution speed.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/egoist/package-size">package-size</a> - Get the bundle size of an npm package.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/imsnif/synp">synp</a> - Convert yarn.lock to package-lock.json and vice versa.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mysticatea/npm-run-all">npm-run-all</a> - CLI tool to run multiple npm-scripts in parallel or serial.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Qard/onchange">onchange</a> - Watch files and folders and run a command when something changed.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/micromata/cli-error-notifier">cli-error-notifier</a> - Sends native desktop notifications when npm scripts fail.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/rvpanoz/luna">luna</a> - App to manage npm dependencies.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/maticzav/emma-cli">emma-cli</a> - Interactive CLI package search utility.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lirantal/lockfile-lint">lockfile-lint</a> - Lint lockfiles for improved security and trust policies to mitigate malicious package injection and insecure lockfile resources.</li>
+</('ul', 0)>
+<h2>Clients</h2>
+
+<ul>
+<li><a href="https://github.com/yarnpkg/yarn">yarn</a> - Fast, reliable, and secure dependency management.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/npm/cli">npm</a> - The official client.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pnpm/pnpm">pnpm</a> - Fast, disk space efficient package manager.</li>
+</('ul', 0)>
+<h2>Tips</h2>
+
+<h3>Update to the latest npm version</h3>
+
+<pre><code>
+$ npm install --global npm
+</code></pre>
+
+<p><em><a href="https://github.com/felixrieseberg/npm-windows-upgrade">Windows users, read more.</a></em></p>
+
+<h3>Command aliases</h3>
+
+<ul>
+<li><code>npm i </code> → <code>npm install</code></li>
+</ul>
+<ul>
+<li><code>npm i -D</code> → <code>npm install --save-dev</code></li>
+</ul>
+<ul>
+<li><code>npm t</code> → <code>npm test</code></li>
+</ul>
+<ul>
+<li><code>npm it</code> → <code>npm install && npm test</code></li>
+</ul>
+<ul>
+<li><code>npm r</code> → <code>npm uninstall</code></li>
+</ul>
+<ul>
+<li><code>npm un</code> → <code>npm uninstall</code></li>
+</ul>
+<ul>
+<li><code>npm up</code> → <code>npm update</code></li>
+</('ul', 0)>
+<h3>Shell aliases</h3>
+
+<p>Speed up your common npm tasks.</p>
+
+<p>In your <code>.zshrc</code>/<code>.bashrc</code>:</p>
+
+<pre><code class="language-sh">
+alias ni=&#x27;npm install&#x27;
+alias nid=&#x27;npm install --save-dev&#x27;
+alias nig=&#x27;npm install --global&#x27;
+alias nt=&#x27;npm test&#x27;
+alias nit=&#x27;npm install &amp;&amp; npm test&#x27;
+alias nk=&#x27;npm link&#x27;
+alias nr=&#x27;npm run&#x27;
+alias ns=&#x27;npm start&#x27;
+alias nf=&#x27;npm cache clean &amp;&amp; rm -rf node_modules &amp;&amp; npm install&#x27;
+alias nlg=&#x27;npm list --global --depth=0&#x27;
+</code></pre>
+
+<h3>Don't add to package.json when installing</h3>
+
+<p>By default npm adds packages you install to the <code>dependencies</code> field in package.json (since v5). You can prevent this by specifying the <code>--no-save</code> flag. You can add a package to <code>devDependencies</code> with <code>--save-dev</code>/<code>-D</code>:</p>
+
+<pre><code>
+$ npm install --save-dev ava
+</code></pre>
+
+<h3>Run scripts</h3>
+
+<p>You can easily <a href="https://docs.npmjs.com/cli/run-script">run scripts</a> using npm by adding them to the <code>"scripts"</code> field in package.json and run them with <code>npm run <script-name></code>. Run <code>npm run</code> to see available scripts. Binaries of locally install packages are made available in the <a href="https://en.wikipedia.org/wiki/PATH_(variable">PATH</a>), so you can run them by name.</p>
+
+<pre><code class="language-json">
+{
+	&quot;name&quot;: &quot;awesome-package&quot;,
+	&quot;scripts&quot;: {
+		&quot;cat&quot;: &quot;cat-names&quot;
+	},
+	&quot;dependencies&quot;: {
+		&quot;cat-names&quot;: &quot;^1.0.0&quot;
+	}
+}
+</code></pre>
+
+<pre><code>
+$ npm run cat
+Max
+</code></pre>
+
+<p>All package.json properties are <a href="https://docs.npmjs.com/misc/scripts#packagejson-vars">exposed</a> as environment variables:</p>
+
+<pre><code class="language-json">
+{
+	&quot;name&quot;: &quot;awesome-package&quot;,
+	&quot;scripts&quot;: {
+		&quot;name&quot;: &quot;echo $npm_package_name&quot;
+	}
+}
+</code></pre>
+
+<pre><code>
+$ npm run name
+awesome-package
+</code></pre>
+
+<h4>Passing options to commands</h4>
+
+<p>You can pass options to the command you are using in your npm script by adding <code>-- --flag</code> like in the example below. The <code>--</code> <a href="https://unix.stackexchange.com/questions/11376/what-does-double-dash-mean-also-known-as-bare-double-dash">marks the end of options parsing</a>, so <code>npm run</code> will just ignore it and pass it to the command.</p>
+
+<pre><code class="language-json">
+{
+	&quot;name&quot;: &quot;awesome-package&quot;,
+	&quot;scripts&quot;: {
+		&quot;xo&quot;: &quot;xo&quot;,
+		&quot;xo:fix&quot;: &quot;npm run xo -- --fix&quot;,
+	}
+}
+</code></pre>
+
+<p><em>Adding the <code>-- --fix </code> option is like executing <code>xo --fix</code></em>.</p>
+
+<h4>Silent option</h4>
+
+<p><code>npm run</code> has a <code>--silent</code> option which is especially useful when combining npm scripts.</p>
+
+<p>Imagine you have a setup for linting your JavaScript files like the following:</p>
+
+<pre><code class="language-json">
+{
+	&quot;name&quot;: &quot;awesome-package&quot;,
+	&quot;scripts&quot;: {
+		&quot;xo&quot;: &quot;xo&quot;,
+		&quot;xo:fix&quot;: &quot;npm run xo --silent -- --fix&quot;,
+	}
+}
+</code></pre>
+
+<p><em>Using the <code>--silent</code> option reduces the output in the terminal. See <a href="https://twitter.com/mkuehnel/status/957965749473210369">this comparison</a>.</em></p>
+
+<h3>Lifecycle scripts</h3>
+
+<p>npm comes with predefined <a href="https://docs.npmjs.com/misc/scripts">lifecyle scripts</a> which are excuted under specific conditions if they are defined in your package.json.</p>
+
+<pre><code class="language-json">
+{
+	&quot;name&quot;: &quot;awesome-package&quot;,
+	&quot;scripts&quot;: {
+		&quot;prepublishOnly&quot;: &quot;nsp check&quot;
+	},
+	&quot;devDependencies&quot;: {
+		&quot;nsp&quot;: &quot;^3.0.0&quot;
+	}
+}
+</code></pre>
+
+<p>This will be executed automatically before your npm package is published to the registry via <code>npm publish</code> to check for known vulnerabilties in your dependencies.</p>
+
+<p><em>Note: <strong>prepublishOnly</strong> is available since npm v4.0.0. See <a href="https://docs.npmjs.com/misc/scripts#deprecation-note">npm docs</a>.</em></p>
+
+<h4><code>npm start</code> and <code>npm test</code></h4>
+
+<p><code>npm start</code> and <code>npm test</code> are also lifecycle scripts but are not executed automatically.</p>
+
+<pre><code class="language-json">
+{
+	&quot;name&quot;: &quot;awesome-package&quot;,
+	&quot;scripts&quot;: {
+		&quot;start&quot;: &quot;node server.js&quot;,
+		&quot;test&quot;: &quot;ava&quot;
+	},
+	&quot;devDependencies&quot;: {
+		&quot;ava&quot;: &quot;^1.0.0&quot;
+	}
+}
+</code></pre>
+
+<p>Therefore they can be executed simply with:</p>
+
+<pre><code class="language-console">
+$ npm test
+$ npm start
+</code></pre>
+
+<h4><code>pre</code> and <code>post</code> scripts</h4>
+
+<p>These are special lifecycle scripts which can be used to run scripts automatically in sequence.</p>
+
+<pre><code class="language-json">
+{
+	&quot;name&quot;: &quot;awesome-package&quot;,
+	&quot;scripts&quot;: {
+		&quot;pretest&quot;: &quot;eslint .&quot;,
+		&quot;test&quot;: &quot;ava&quot;
+	},
+	&quot;devDependencies&quot;: {
+		&quot;eslint&quot;: &quot;^4.19.0&quot;,
+		&quot;ava&quot;: &quot;^1.0.0&quot;
+	}
+}
+</code></pre>
+
+<pre><code class="language-console">
+$ npm test
+</code></pre>
+
+<p>This will lint your files before running your tests. The tests will not run if linting fails. Or more generally spoken: the following script won’t be executed if one of the scripts running in sequence exits with an exit code other than 0.</p>
+
+<p><em>Note: <code>pre</code> and <code>post</code> scripts can also be used for your custom npm scripts. So <code>npm run foo</code> will also run <code>prefoo</code> and <code>postfoo</code> if defined.</em></p>
+
+<h3>Run script with <code>npx</code></h3>
+
+<p><code>npm</code> <a href="https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b">comes bundled</a> with <code>npx</code> (Since v5.2.0) — a tool to execute package binaries. Each command is executed either from the local <code>node_modules/.bin</code> directory, or from a central cache, installing any packages needed in order for <code><command></code> to run.</p>
+
+<pre><code class="language-json">
+{
+	&quot;name&quot;: &quot;awesome-package&quot;,
+	&quot;dependencies&quot;: {
+		&quot;cat-names&quot;: &quot;^1.0.0&quot;
+	}
+}
+</code></pre>
+
+<p>If the binary is already installed, it will be executed from <code>node_modules/.bin</code>.</p>
+
+<pre><code>
+$ npx cat-names
+Max
+</code></pre>
+
+<p>But if the binary is missing, it will be installed first.</p>
+
+<pre><code>
+$ npx dog-names
+npx: installed 46 in 3.136s
+Bentley
+</code></pre>
+
+<h3>Run commands with different Node.js versions</h3>
+
+<p>With <code>npx</code> (Comes bundled with npm v5.2.0 or newer) and the <a href="https://www.npmjs.com/package/node-bin"><code>node-bin</code></a> package, you can easily try out code in different Node.js versions without having to use a version manager like <a href="http://nvm.sh"><code>nvm</code></a>, <a href="https://github.com/isaacs/nave"><code>nave</code></a>, or <a href="https://github.com/tj/n"><code>n</code></a>.</p>
+
+<pre><code>
+$ npx --package=node-bin@6.11.0 -- node --version
+v6.11.0
+</code></pre>
+
+<h3>Link local packages</h3>
+
+<p>Sometimes it can be useful to have a local version of a package as a dependency. You can use <code>npm link</code> to link one local package into another. Run <code>npm link</code> in the package you want to use. This creates a global reference. Then go into your original package and run <code>npm link <package-name></code> to link in the other package.</p>
+
+<pre><code>
+$ cd rainbow
+$ npm link
+$ cd ../unicorn
+$ npm link rainbow
+</code></pre>
+
+<p>You can now use <code>rainbow</code> as a dependency in the <code>unicorn</code> package.</p>
+
+<h3>Install a package from GitHub</h3>
+
+<p>npm supports using a shorthand for installing a package directly from a GitHub repo:</p>
+
+<pre><code>
+$ npm install sindresorhus/chalk
+</code></pre>
+
+<p>Let's target a specific commit as the main branch is a moving target:</p>
+
+<pre><code>
+$ npm install &#x27;sindresorhus/chalk#51b8f32&#x27;
+</code></pre>
+
+<p>Specify either a commit SHA, branch, tag, or nothing.</p>
+
+<p>You can also install Git dependencies with semver: <em>(Requires npm v5 or newer)</em></p>
+
+<pre><code>
+$ npm install &#x27;sindresorhus/chalk#semver:^2.0.0&#x27;
+</code></pre>
+
+<h3>Install a specific version of a package</h3>
+
+<pre><code>
+$ npm install chalk@1.0.0
+</code></pre>
+
+<h3>List top-level installed packages and their version</h3>
+
+<pre><code>
+$ npm ls --depth=0
+</code></pre>
+
+<h3>Command help</h3>
+
+<p>Get help docs for a command:</p>
+
+<pre><code>
+$ npm help &lt;command&gt;
+</code></pre>
+
+<p>Example:</p>
+
+<pre><code>
+$ npm help install
+</code></pre>
+
+<h3>Standalone version of a package</h3>
+
+<p>Quickly get a standalone version of a package that is browserified and usable in the browser.</p>
+
+<pre><code>
+https://wzrd.in/standalone/&lt;package-name&gt;[@&lt;version&gt;]
+</code></pre>
+
+<p>Examples:</p>
+
+<ul>
+<li><a href="https://wzrd.in/standalone/object-assign">https://wzrd.in/standalone/object-assign</a></li>
+</ul>
+<ul>
+<li><a href="https://wzrd.in/standalone/object-assign@4.0.0">https://wzrd.in/standalone/object-assign@4.0.0</a></li>
+</ul>
+<p>Great for prototyping, but download the file or use Browserify yourself for production.</p>
+
+<h2>FAQ</h2>
+
+<ul>
+<li><a href="http://stackoverflow.com/questions/11459733/check-in-node-modules-vs-shrinkwrap">Check in node_modules vs. shrinkwrap</a></li>
+</ul>
+<ul>
+<li><a href="http://stackoverflow.com/questions/18641899/what-is-the-difference-between-bower-and-npm">What is the difference between Bower and npm?</a></li>
+</ul>
+<ul>
+<li><a href="http://stackoverflow.com/questions/22137778/what-does-mean-in-package-json-versioning">What does <code>^</code> mean in package.json versioning?</a></li>
+</ul>
+<ul>
+<li><a href="http://stackoverflow.com/questions/10972176/find-the-version-of-an-installed-npm-package">Find the version of an installed npm package</a></li>
+</ul>
+<ul>
+<li><a href="http://stackoverflow.com/questions/18875674/whats-the-difference-between-dependencies-devdependencies-and-peerdependencies">What's the difference between dependencies, devDependencies, and peerDependencies in package.json?</a></li>
+</('ul', 0)>
+<h2>Community</h2>
+
+<ul>
+<li><a href="http://webchat.freenode.net/?channels=npm"><code>#npm</code> on Freenode</a></li>
+</ul>
+<ul>
+<li><a href="https://stackoverflow.com/questions/tagged/npm">Stack Overflow</a></li>
+</ul>
+<ul>
+<li><a href="https://www.reddit.com/r/npm">Reddit</a></li>
+</ul>
+<ul>
+<li><a href="https://twitter.com/npmjs">Twitter</a></li>
+</ul>
+<ul>
+<li><a href="https://blog.npmjs.org">Blog</a></li>
+</('ul', 0)>
+<h2>Documentation</h2>
+
+<ul>
+<li><a href="https://docs.npmjs.com">Official</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/npm/npm/wiki/Troubleshooting">Troubleshooting</a></li>
+</ul>
+<ul>
+<li><a href="https://docs.npmjs.com/getting-started/semantic-versioning">Semantic versioning</a></li>
+</ul>
+<ul>
+<li><a href="https://docs.npmjs.com/getting-started/fixing-npm-permissions">Fixing npm permissions</a></li>
+</ul>
+<ul>
+<li><a href="https://docs.npmjs.com/files/package.json">package.json</a></li>
+</ul>
+<ul>
+<li><a href="https://docs.npmjs.com/cli/run-script">npm run script</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/npm/download-counts">Stats API</a></li>
+</('ul', 0)>
+<h2>Support</h2>
+
+<ul>
+<li><a href="https://npm.community/c/support">npm.community</a></li>
+</ul>
+<ul>
+<li><a href="https://twitter.com/npm_support">Twitter</a></li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/support">Contact form</a></li>
+</('ul', 0)>
+<h2>Related</h2>
+
+<ul>
+<li><a href="https://github.com/sindresorhus/awesome-nodejs">awesome-nodejs</a></li>
+</ul>
+</body>
+</html>

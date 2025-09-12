@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VBA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>VBA</h1>
+
+<p><strong>Repository:</strong> https://github.com/sancarn/awesome-vba#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<h1>Awesome VBA !<a href="./resources/VBALogo.png">VBALogo</a> <a href="https://awesome.re/badge.svg"><img src="https://awesome.re" alt="Awesome</a>"></h1>
+
+<p>Visual Basic for Applications (VBA) is an implementation of Microsoft's event-driven programming language Visual Basic 6.0 (VB6) built into most desktop Microsoft Office applications.</p>
+
+<p>This is a curated list of Libraries and Resources for both VBA and VB6.</p>
+
+<p>Because of the nature of VBA, many libraries do not work on all Operating Systems, in all Office Applications or on all architectures(x64/x86), therefore we use symbology. <a href="#symbology">Read more about this here</a>.</p>
+
+<h2>Contents</h2>
+
+<ul>
+<li><a href="#frameworks">Frameworks</a></li>
+</ul>
+<ul>
+<li><a href="#libraries">Libraries</a></li>
+<ul>
+<li><a href="#data-formats">Data Formats (JSON, CSV, XML, etc.)</a></li>
+</ul>
+<ul>
+<li><a href="#data-structures">Data Structures (Array-List and Dictionary)</a></li>
+</ul>
+<ul>
+<li><a href="#math-libraries">Math libraries</a></li>
+</ul>
+<ul>
+<li><a href="#database-tools">Database tools</a></li>
+</ul>
+<ul>
+<li><a href="#userform-tools">Userform tools</a></li>
+</ul>
+<ul>
+<li><a href="#low-level-tools">Low level tools</a></li>
+</ul>
+<ul>
+<li><a href="#parsers--interpreters">Parsers / Interpreters</a></li>
+</ul>
+<ul>
+<li><a href="#web-tools">Web tools</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#developer-tools">Developer tools</a></li>
+</ul>
+<ul>
+<li><a href="#examples">Examples</a></li>
+<ul>
+<li><a href="#algorithms-code-optimisation-and-performance-testing">Algorithms, code optimisation, and performance testing</a></li>
+</ul>
+<ul>
+<li><a href="#ui-ribbon">UI Ribbon</a></li>
+</ul>
+<ul>
+<li><a href="#ui-userforms">UI Userforms</a></li>
+</ul>
+<ul>
+<li><a href="#low-level-examples">Low level examples</a></li>
+</ul>
+<ul>
+<li><a href="#addins">AddIns</a></li>
+</ul>
+<ul>
+<li><a href="#games--fun-projects">Games / Fun projects</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#external-tools">External tools</a></li>
+</ul>
+<ul>
+<li><a href="#style-guides">Style Guides</a></li>
+</ul>
+<ul>
+<li><a href="#information">Information</a></li>
+</ul>
+<ul>
+<li><a href="#resources">Resources</a></li>
+<ul>
+<li><a href="#win32-api-resources">Win32 API Resources</a></li>
+</ul>
+<ul>
+<li><a href="#vb6--vbscript">VB6 / VBScript</a></li>
+</ul>
+<ul>
+<li><a href="#websites">Websites</a></li>
+</ul>
+<ul>
+<li><a href="#books">Books</a></li>
+</ul>
+<ul>
+<li><a href="#youtube">YouTube</a></li>
+</ul>
+<ul>
+<li><a href="#forums">Forums</a></li>
+<hr>
+</('ul', 2)>
+</('ul', 0)>
+<h2>Frameworks</h2>
+
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-)  [![a_all]](#-) !<a href="https://img.shields.io/github/stars/sancarn/stdVBA?style&logo=github&label">GHStars</a> <a href="http://github.com/sancarn/stdVBA">stdVBA</a> - A framework containing numerous classes for automation and utility. Focuses on code compactness and long-term maintainability.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a<em>all]](#-) [![o</em>32]](#-) !<a href="https://img.shields.io/github/stars/kellyethridge/VBCorLib?style&logo=github&label">GHStars</a> <a href="https://github.com/kellyethridge/VBCorLib">VbCorLib</a> - A framework which brings many powerful .NET classes to VBA/VB6.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a_all]](#-) !<a href="https://img.shields.io/github/stars/RelaxTools/Hidennotare?style&logo=github&label">GHStars</a> <a href="https://github.com/RelaxTools/Hidennotare">Hidennotare</a> - A framework by Japanese author RelaxTools. Contains numerous classes, interfaces and forms.</li>
+</('ul', 0)>
+<h2>Libraries</h2>
+
+<h3>Data Formats</h3>
+
+<h4>JSON</h4>
+
+<ul>
+<li>[![p<em>win]](#-) [![p</em>mac]](#-) [![a_all]](#-) !<a href="https://img.shields.io/github/stars/cristianbuse/VBA-FastJSON?style&logo=github&label">GHStars</a> <a href="https://github.com/cristianbuse/VBA-FastJSON">VBA-FastJSON</a> - Fast, cross-platform, native json parser and serializer. Memory efficient (non-recursive), RFC 8259 compliant, UTF8 support</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>mac]](#-) [![a_all]](#-) !<a href="https://img.shields.io/github/stars/VBA-tools/VBA-JSON?style&logo=github&label">GHStars</a> <a href="https://github.com/VBA-tools/VBA-JSON">VBA-JSON</a> - JSON conversion and parsing.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a_all]](#-) <a href="https://www.vbforums.com/showthread.php?871695-VB6-VBA-JSON-parsing-to-built-in-VBA-Collections-with-JSON-Path-support">mdJSON</a> - JSON library with dot-notation for extracting paths.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a_all]](#-) <a href="https://www.vbforums.com/showthread.php?738845-VB6-JsonBag-Another-JSON-Parser-Generator">JSONBag</a> - Uses shebang notation to extract keys from JSON strings. Can also build JSON with this library.</li>
+</ul>
+<ul>
+<li>From Frameworks:</li>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a_all]](#-) In <code>stdVBA</code> find <code>stdJSON</code> - As above.</li>
+</('ul', 4)>
+</('ul', 0)>
+<h4>CSV</h4>
+
+<ul>
+<li>[![p<em>win]](#-) [![p</em>mac]](#-) [![a_all]](#-) !<a href="https://img.shields.io/github/stars/ws-garcia/VBA-CSV-interface?style&logo=github&label">GHStars</a> <a href="https://github.com/ws-garcia/VBA-CSV-interface">VBA-CSV-interface</a> - Powerful, fast and comprehensive RFC-4180 compliant CSV/TSV/DSV data management library.</li>
+</ul>
+<ul>
+<li>From Frameworks:</li>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a_all]](#-) In <code>Hidennotare</code> find <code>csvWriter</code> and <code>csvReader</code>.</li>
+</('ul', 2)>
+</('ul', 0)>
+<h4>XML</h4>
+
+<ul>
+<li>[![p<em>win]](#-) [![p</em>mac]](#-) [![a_all]](#-) !<a href="https://img.shields.io/github/stars/VBA-tools/VBA-XML?style&logo=github&label">GHStars</a> <a href="https://github.com/VBA-tools/VBA-XML">VBA-XML</a> - XML conversion and parsing.</li>
+</('ul', 0)>
+<h4>ZIP</h4>
+
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a_all]](#-) !<a href="https://img.shields.io/github/stars/cristianbuse/Excel-ZipTools?style&logo=github&label">GHStars</a> <a href="https://github.com/cristianbuse/Excel-ZipTools/tree/master">Excel-ZipTools</a> - Parse, read, and extract data from, Zip files. Written in pure vba.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a<em>all]](#-) !<a href="https://img.shields.io/github/stars/KallunWillock/vbaSquash?style&logo=github&label">GHStars</a> <a href="https://github.com/KallunWillock/vbaSquash/tree/master">vbaSquash</a> - Compress and decompress files and byte arrays using the built-in <code>cabinet.dll</code> functions available on Windows 8+. Provides access to compression algorithms <code>MSZIP</code>, <code>XPRESS</code>, <code>XPRESS</em>HUFF</code>, and <code>LZMS</code>.</li>
+</('ul', 0)>
+<h4>PDF</h4>
+
+<ul>
+<li>[![p<em>win]](#-) [![p</em>mac]](#-) [![a_all]](#-) !<a href="https://img.shields.io/github/stars/PerditionC/vbaPDF?style&logo=github&label">GHStars</a> <a href="https://github.com/PerditionC/vbaPDF">vbaPDF</a> - VBA code for simple modification of PDF files (read in, combine, write out).</li>
+</('ul', 0)>
+<h3>Data Structures</h3>
+
+<h4>Array-List</h4>
+
+<ul>
+<li>[![p<em>win]](#-) [![p</em>mac]](#-) [![a_all]](#-) !<a href="https://img.shields.io/github/stars/Senipah/VBA-Better-Array?style&logo=github&label">GHStars</a> <a href="https://github.com/Senipah/VBA-Better-Array/tree/master/src">Better array</a> - An array class providing features found in more modern languages.</li>
+</ul>
+<ul>
+<li>From Frameworks:</li>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a<em>all]](#-) [![o</em>32]](#-) In <code>VbCorLib</code> find <code>ArrayList</code> - As above.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a_all]](#-) In <code>stdVBA</code> find <code>stdArray</code> - As above. Also includes methods to search the array or perform checks from a callback.</li>
+</('ul', 4)>
+</('ul', 0)>
+<h4>Dictionary</h4>
+
+<ul>
+<li>[![p<em>win]](#-) [![p</em>mac]](#-) [![a_all]](#-) !<a href="https://img.shields.io/github/stars/cristianbuse/VBA-FastDictionary?style&logo=github&label">GHStars</a> <a href="https://github.com/cristianbuse/VBA-FastDictionary">VBA-FastDictionary</a> - Fast, cross-platform, native Dictionary. Replacement for scripting dictionary.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>mac]](#-) [![a_all]](#-) !<a href="https://img.shields.io/github/stars/VBA-tools/VBA-Dictionary?style&logo=github&label">GHStars</a> <a href="https://github.com/VBA-tools/VBA-Dictionary">VBA-Dictionary</a> - A dictionary object which stores key-value pairs.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a_all]](#-) !<a href="https://img.shields.io/github/stars/SSlinky/VBA-ExtendedDictionary?style&logo=github&label">GHStars</a> <a href="https://github.com/SSlinky/VBA-ExtendedDictionary">VBA-ExtendedDictionary</a> - A dictionary object using Scripting.Dictionary but exposes some additional useful functionality.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>mac]](#-) [![a_all]](#-) <a href="https://www.vbforums.com/showthread.php?834515-Simple-and-fast-lightweight-HashList-Class-(no-APIs">cHashList</a>) - Simple, Fast and lightweight HashList class with no use of Win32 API. Requires string keys however.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a<em>all]](#-) <a href="https://www.vbforums.com/showthread.php?834579-Wrapper-for-VB6-Collections">CollectionEx</a> - Extends the default VBA(/VB6) collection with methods to retrieve and check for key existence. <!--TODO: This is listed as p</em>win, but honestly this might work on mac given the correct API declarations. Would be worth testing, see MemoryTools for Copy Memory declares--></li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a<em>all]](#-) [![o</em>32]](#-) <a href="https://www.vbforums.com/showthread.php?788247-VB6-Hash-table">clsTrickHashTable</a> - A hash table using machine code injected at runtime. Full replacement for scripting dictionary, with bonus features.</li>
+</ul>
+<ul>
+<li>From Frameworks:</li>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a<em>all]](#-) [![o</em>32]](#-) In <code>VbCorLib</code> find <code>HashTable</code> - As above.</li>
+</ul>
+</ul>
+    <!-- Hidennotare, though it simply wraps Scripting.Dictioanry... -->
+
+<h3>Math libraries</h3>
+
+<ul>
+<li>[![p<em>win]](#-) [![p</em>mac]](#-) [![a_all]](#-) !<a href="https://img.shields.io/github/stars/Beakerboy/VBA-Math-Objects?style&logo=github&label">GHStars</a> <a href="https://github.com/Beakerboy/VBA-Math-Objects">VBA-Math-Objects</a> - A matrix and vector library.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>mac]](#-) [![a_all]](#-) !<a href="https://img.shields.io/github/stars/ws-garcia/VBA-float?style&logo=github&label">GHStars</a> <a href="https://github.com/ws-garcia/VBA-float ">VBA Float</a> - An utility to perform computations over big integers and rational numbers with thousands digits.</li>
+</('ul', 0)>
+<h3>Database tools</h3>
+
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a_all]](#-) !<a href="https://img.shields.io/github/stars/Beakerboy/VBA-SQL-Library?style&logo=github&label">GHStars</a> <a href="https://github.com/Beakerboy/VBA-SQL-Library">SQL Library</a> - An OOP SQL Library for psql, mssql, mysql databases.</li>
+</('ul', 0)>
+<h3>Userform tools</h3>
+
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a_all]](#-) !<a href="https://img.shields.io/github/stars/fafalone/cTaskDialog64?style&logo=github&label">GHStars</a> <a href="https://github.com/fafalone/cTaskDialog64">Task Dialog</a> - A huge amount of UI functionality from this 1 class, in a strictly dynamic and modular way. Great for data input forms. Also see <a href="https://www.vbforums.com/showthread.php?777021-VB6-TaskDialogIndirect-Complete-class-implementation-of-Vista-Task-Dialogs">vbforums</a> post for more information.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a<em>all]](#-) !<a href="https://img.shields.io/github/stars/fafalone/ucSimplePlayer?style&logo=github&label">GHStars</a> [![o</em>dll]](#- 'Requires external OCX') <a href="https://github.com/fafalone/ucSimplePlayer">ucSimplePlayer</a> - Simple video player user control.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a<em>all]](#-) !<a href="https://img.shields.io/github/stars/fafalone/ucWebView2?style&logo=github&label">GHStars</a> [![o</em>dll]](#- 'Requires external OCX') <a href="https://github.com/fafalone/ucWebView2">ucWebView2</a> - WebView2 user control.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a<em>all]](#-) !<a href="https://img.shields.io/github/stars/fafalone/ucAniGifEx?style&logo=github&label">GHStars</a> [![o</em>dll]](#- 'Requires external OCX') <a href="https://github.com/fafalone/ucAniGifEx">ucAniGifEx</a> - Animated GIF user control.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a_all]](#-) !<a href="https://img.shields.io/github/stars/todar/VBA-Material-Design?style&logo=github&label">GHStars</a> <a href="https://github.com/todar/VBA-Material-Design">Material UI</a> - Make your userform feel modern with Material UI.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>mac]](#-) [![a_all]](#-) !<a href="https://img.shields.io/github/stars/todar/VBA-Userform-EventListener?style&logo=github&label">GHStars</a> <a href="https://github.com/todar/VBA-Userform-EventListener">Easy EventListener</a> - Consolidate all event handling of a userform into 1 callback.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a<em>all]](#-) <a href="http://addinbox.sakura.ne.jp/Breakthrough</em>P-Ctrl<em>Arrays</em>Eng.htm">Pseudo Control Arrays</a> - Optimal means of Consolidating all event handling of a userform. Demonstrates usage of <code>ConnectToConnectionPoint</code> API. Also worth looking at <a href="https://stackoverflow.com/questions/61855925/reducing-withevent-declarations-and-subs-with-vba-and-activex#answer-61893857">this class</a> too.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a<em>all]](#-) !<a href="https://img.shields.io/github/stars/krishKM/Modern-UI-Components-for-VBA?style&logo=github&label">GHStars</a> [![o</em>dll]](#- 'Requires external DLLs') <a href="https://github.com/krishKM/Modern-UI-Components-for-VBA">Modern UI Components</a> - Custom modern looking controls.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a_all]](#-) !<a href="https://img.shields.io/github/stars/rubberduck-vba/MVVM?style&logo=github&label">GHStars</a> <a href="https://github.com/rubberduck-vba/MVVM">MVVM</a> - Model-View-ViewModel Infrastructure for maintainable userform development.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a_all]](#-) !<a href="https://img.shields.io/github/stars/todar/VBA-Userform-Animations?style&logo=github&label">GHStars</a> <a href="https://github.com/todar/VBA-Userform-Animations">VBA Userform Transitions and Animations</a> - An excellent library for implementing animation easings into the Userform.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a_all]](#-) !<a href="https://img.shields.io/github/stars/thetrik/VbTrickTimer?style&logo=github&label">GHStars</a> <a href="https://github.com/thetrik/VbTrickTimer">Trick's Timer</a> - If you need to run a piece of code continuously and don't have access to <code>Application.OnTime</code> (and/or you need to run it faster than once per second), this is the class for you! Also check out the <a href="https://www.vbforums.com/showthread.php?875635-VB6-VBA-Timer-class">forum post</a> for more information. Limitation: Requires a modal form.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a_all]](#-) !<a href="https://img.shields.io/github/stars/cristianbuse/VBA-SafeTimer?style&logo=github&label">GHStars</a> <a href="https://github.com/cristianbuse/VBA-SafeTimer">VBA-SafeTimer</a> - Reliable, no-crash timer for VBA. Code can be debugged and stopped safely. Works with or without a form.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a_all]](#-) <a href="https://www.mrexcel.com/board/threads/vba-drag-drop-filepath.843330/page-6#post-5898495">Drag and Drop filepaths</a> - Allow your userform to handle drag-and-drop files.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a_all]](#-) <a href="https://www.vbforums.com/showthread.php?847773-VB6-elevated-IE-Control-usage-with-HTML5-elements-and-COM-Event-connectors">Late-bound WebBrowser Control Events</a> - A technique to latch onto WebBrowser events in a late-bound manner.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a<em>all]](#-) [![o</em>paid]](#- '~£2 per control/application') <a href="https://www.kubiszyn.co.uk/">Mark's userform tools</a> - Numerous UI tools and pretty userforms.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a_all]](#-) !<a href="https://img.shields.io/github/stars/cristianbuse/VBA-UserForm-MouseScroll?style&logo=github&label">GHStars</a> <a href="https://github.com/cristianbuse/VBA-UserForm-MouseScroll">VBA-UserForm-MouseScroll</a> - Allows Mouse Wheel Scrolling on MSForms Controls and Userforms.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>mac]](#-) [![a_all]](#-) <a href="https://jkp-ads.com/Articles/treeview.asp">MSForms (Pure VBA) Treeview Control</a> - A treeview control replacement by JKP and Peter Thornton coded entirely in VBA.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>mac]](#-) [![a_all]](#-) <a href="https://app.monstercampaigns.com/c/fxzxd8wfvl4mnf4zmnp3/">MSForms (Pure VBA) ListBox Control</a> - Featured in <a href="https://www.youtube.com/watch?v=QYW1SlKfKdM">this video</a>. It has tons of useful features like sorting, filtering, single or multi-selection with select and deselect all, page navigation and hover highlight,</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a_all]](#-) <a href="https://www.mrexcel.com/board/threads/using-winapi-to-change-the-color-on-the-title-bar-of-a-userform.1205894/page-2#post-5892050">Custom Userform TitleBar color</a></li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a_all]](#-) <a href="https://www.mrexcel.com/board/threads/multicolor-drag-n-drop-listbox-class-win32.1206334/">Multi-color ListBox class</a></li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a_all]](#-) <a href="https://arkham46.developpez.com/articles/office/clgdiplus/">Use of GDIPlus in VBA</a> - GDIPlus can be used to create a <code>canvas</code> like element where any image can be drawn to. Additionally check out this <a href="https://arkham46.developpez.com/articles/office/clgdi32/">GDI32</a> class from the same author.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a<em>all]](#-) <a href="https://arkham46.developpez.com/articles/office/vbaopengl/?page=Page</em>1">Use of OpenGL in VBA</a> - OpenGL is a cross-language, cross-platform application programming interface for rendering 2D and 3D vector graphics. In this article the authors of the GDIPlus class.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a<em>all]](#-) [![o</em>32]](#-) <a href="https://vb6awards.blogspot.com/2017/11/vb6-graph-control.html">VB6 Graph Control</a> - Won't work natively in VBA without a <code>PictureBox</code> compatible substitute, but an extremely performant graph control regardless.</li>
+</('ul', 0)>
+<h3>Low level tools</h3>
+
+<ul>
+<li>[![p<em>win]](#-) [![p</em>mac]](#-) [![a_all]](#-) !<a href="https://img.shields.io/github/stars/cristianbuse/VBA-MemoryTools?style&logo=github&label">GHStars</a> <a href="https://github.com/cristianbuse/VBA-MemoryTools">VBA-MemoryTools</a> - Provides an ultra-fast, copy memory alternative.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a_all]](#-) <a href="https://www.mrexcel.com/board/threads/intercepting-resetting-of-vba-editor-as-well-as-unhandled-errors-for-safe-subclassing.1024295/">Safe Subclassing</a> - Provides the ability to subclass Excel/Word/PowerPoint window or Userforms to perform further automation. In the later threads there is also an example for subclassing other windows from other applications.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a_all]](#-) !<a href="https://img.shields.io/github/stars/Greedquest/vbInvoke?style&logo=github&label">GHStars</a> <a href="https://github.com/Greedquest/vbInvoke/tree/main">Calling private module functions</a> - You can also check out <a href="https://codereview.stackexchange.com/questions/274532/low-level-vba-hacking-making-private-functions-public">Greedo's code review</a>.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a<em>all]](#-) [![o</em>32]](#-) <a href="http://www.vbforums.com/showthread.php?781595-VB6-Call-Functions-By-Pointer-(Universall-DLL-Calls">Universal DLL Calls</a>) - A library which can be used to call functions of any function pointer, DLL or object in both <code>STDCALL</code> and <code>CDECL</code>.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a_all]](#-) !<a href="https://img.shields.io/github/stars/Greedquest/vbInvoke?style&logo=github&label">GHStars</a> <a href="https://github.com/Greedquest/vbInvoke">vbInvoke</a> - <code>Application.Run</code> but COM based and can call private module methods.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>mac]](#-) [![a_all]](#-) !<a href="https://img.shields.io/github/stars/cristianbuse/VBA-StateLossCallback?style&logo=github&label">GHStars</a> <a href="https://github.com/cristianbuse/VBA-StateLossCallback">VBA state-loss callback</a> - A crash free detector for VBA state-loss. State loss can occur when: Someone clicks <code>end</code> in an unhandled error; You click the VBA stop button; You enter design mode; Application exits.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a_all]](#-) !<a href="https://img.shields.io/github/stars/jet2jet/vb2clr?style&logo=github&label">GHStars</a> <a href="https://github.com/jet2jet/vb2clr">vb2clr</a> - Use C# from VBA using the .NET CLR runtime.</li>
+</ul>
+<ul>
+<li>From Frameworks:</li>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a_all]](#-) In <code>stdVBA</code> find <code>stdCOM</code> - A one stop shop for COM automation, from invoking interfaces by offsets to extracting type information.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a_all]](#-) In <code>stdVBA</code> find <code>stdReg</code> - Registry automation from searching to setting values.</li>
+</('ul', 4)>
+</('ul', 0)>
+<h3>Parsers / Interpreters</h3>
+
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a_all]](#-) !<a href="https://img.shields.io/github/stars/sihlfall/vba-regex?style&logo=github&label">GHStars</a> <a href="https://github.com/sihlfall/vba-regex">vba-regex</a> - A native regex expression parser and runtime engine.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a_all]](#-) !<a href="https://img.shields.io/github/stars/wqweto/VbPeg?style&logo=github&label">GHStars</a> <a href="https://github.com/wqweto/VbPeg">VbPeg</a> - A parser generator for VBA. Converts PEG grammar like <a href="https://github.com/wqweto/VbPeg/blob/master/test/Runner/peg/Kscope/grammar.peg">this</a> into <a href="https://github.com/wqweto/VbPeg/blob/master/test/Runner/peg/Kscope/cKscope.cls">VBA code like this</a>. Very useful if your implementing a new programming language in VBA. Wqweto has also included some math expression parsers as tests.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>mac]](#-) [![a_all]](#-) <a href="https://web.archive.org/web/20100703220609/http://digilander.libero.it/foxes/mathparser/MathExpressionsParser.htm">Volpi's Math Expression Parser</a> - A fast math expression parser. Doesn't allow calls to objects, no callstack.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>mac]](#-) [![a_all]](#-) !<a href="https://img.shields.io/github/stars/ws-garcia/VBA-Expressions?style&logo=github&label">GHStars</a> <a href="https://github.com/ws-garcia/VBA-Expressions">VBA Expressions</a> - A powerful string expression evaluator focussed on mathematics and data processing.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a_all]](#-) !<a href="https://img.shields.io/github/stars/Excel-lent/ClooWrapperVBA?style&logo=github&label">GHStars</a> <a href="https://github.com/Excel-lent/ClooWrapperVBA">ClooWrapperVBA</a> - Execute OpenCL from VBA, using either the GPU or CPU.</li>
+</ul>
+<ul>
+<li>From Frameworks:</li>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a_all]](#-) In <code>stdVBA</code> find <code>stdLambda</code> - Full programming language including object manipulation, call stack, etc. </li>
+</('ul', 4)>
+</('ul', 0)>
+<h3>Web tools</h3>
+
+<ul>
+<li>[![p<em>win]](#-) [![p</em>mac]](#-) [![a_all]](#-) !<a href="https://img.shields.io/github/stars/VBA-tools/VBA-Web?style&logo=github&label">GHStars</a> <a href="https://github.com/VBA-tools/VBA-Web">VBA-Web</a> - Connect VBA, Excel, Access, and Office for Windows and Mac to web services and the web.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>mac]](#-) [![a_all]](#-) !<a href="https://img.shields.io/github/stars/EagleAglow/vba-websocket-async?style&logo=github&label">GHStars</a> <a href="https://github.com/EagleAglow/vba-websocket">VBA-WebSocket</a> - Microsoft example code for a WebSocket client which can be used in conjunction with an echo server. There is also <a href="https://github.com/EagleAglow/vba-websocket-class">a class</a> and an <a href="https://github.com/EagleAglow/vba-websocket-async">async version</a> built by the discoverer of the microsoft code.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a<em>all]](#-) [![o</em>32]](#-) !<a href="https://img.shields.io/github/stars/wqweto/VbAsyncSocket?style&logo=github&label">GHStars</a> <a href="https://github.com/wqweto/VbAsyncSocket">vbAsyncSocket</a> - Simple and thin WinSock API wrappers for VB6 loosely based on the original CAsyncSocket wrapper in MFC.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a_all]](#-) !<a href="https://img.shields.io/github/stars/sancarn/stdVBA-Inspiration?style&logo=github&label">GHStars</a> <a href="https://www.codeproject.com/Tips/5307593/Automate-Chrome-Edge-using-VBA">Edge Automation</a> - Automate Chromium Edge using devtools protocol. <a href="https://github.com/sancarn/stdVBA-Inspiration/tree/master/ChromeEdgeAutomation">GitHub backup here</a>.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a_all]](#-) !<a href="https://img.shields.io/github/stars/PerditionC/VBAChromeDevProtocol?style&logo=github&label">GHStars</a> <a href="https://github.com/PerditionC/VBAChromeDevProtocol">Chrome Automation (via devtools protocol)</a> - Automate Chrome using chrome devtools protocol.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a_all]](#-) !<a href="https://img.shields.io/github/stars/GCuser99/SeleniumVBA?style&logo=github&label">GHStars</a> <a href="https://github.com/GCuser99/SeleniumVBA">SeleniumVBA</a> - Drive selenium webdriver directly from VBA. If you don't have the driver installed, the library will attempt to download it for you and run it. However AV may restrict the running of this process.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a_xl]](#-) !<a href="https://img.shields.io/github/stars/michaelneu/webxcel?style&logo=github&label">GHStars</a> <a href="https://github.com/michaelneu/webxcel">webxcel</a> - A webserver which runs a RESTful backend. The creator also made an <a href="https://dev.to/michaelneu/to-vba-and-beyond---building-a-restful-backend-using-plain-microsoft-excel-macros-76n">article</a> on how it works on dev.to.</li>
+</ul>
+<ul>
+<li>From Frameworks:</li>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a_all]](#-) In <code>stdVBA</code> find <code>stdHTTP</code> - Connect to and query web services.</li>
+</('ul', 4)>
+</('ul', 0)>
+<h2>Developer tools</h2>
+
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a<em>all]](#-) [![o</em>inst]](#-) <a href="https://rubberduckvba.com/">Rubberduck</a> - An open-source COM add-in project that integrates with the Visual Basic Editor to add modern-day features to the familiar IDE. Works in VBA6, VBA7.x (x86/x64), and yes, in VB6 too!</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a_xl]](#-) !<a href="https://img.shields.io/github/stars/spences10/VBA-IDE-Code-Export?style&logo=github&label">GHStars</a> <a href="https://github.com/spences10/VBA-IDE-Code-Export">VBA-IDE-Code-Export</a> - Addin contains a code importer and exporter for use with git (or any VCS).</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a<em>xl]](#-) [![a</em>wd]](#-) [![o<em>pass]](#-) - <a href="https://www.andypope.info/vba/ribboneditor</em>2010.htm">RibbonX</a> - AndyPope's Visual Ribbon Editor.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a_xl]](#-) <a href="https://yoursumbuddy.com/ribbon-customui-xml-editor/">Custom UI XML Editor</a> - Addin for directly adding, editing and validating ribbon XML (Excel 2010+).</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a<em>all]](#-) [![o</em>paid]](#- 'Costs upwards of $79') <a href="https://www.mztools.com/">MZ-Tools</a> - VBE addin providing development tools.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a_all]](#-) !<a href="https://img.shields.io/github/stars/wqweto/VbPeg?style&logo=github&label">GHStars</a> <a href="https://github.com/wqweto/VbPeg">VbPeg</a> - A parser generator for VBA. Converts PEG grammar like <a href="https://github.com/wqweto/VbPeg/blob/master/test/Runner/peg/Kscope/grammar.peg">this</a> into <a href="https://github.com/wqweto/VbPeg/blob/master/test/Runner/peg/Kscope/cKscope.cls">VBA code like this</a>. Very useful if you're implementing a new programming language in VBA.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a_all]](#-) <a href="http://leandroascierto.com/blog/vba-resource-file-editor/">VBA Resource File Editor</a> - Store other files inside your excel/word/powerpoint files for later use with this handy tool.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a<em>all]](#-) [![o</em>32]](#-) <a href="https://vbrichclient.com/#/en/About/">vbRichClient</a> - An external client full of useful libraries.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a<em>all]](#-) [![o</em>paid]](#- '£170-£205 license per dev') <a href="https://www.everythingaccess.com/vbwatchdog.asp">vbWatchDog</a> - <code>vbWatchdog</code> hacks the VBA runtime to provide module name, procedure name and line number where error occurred.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a_all]](#-) <a href="https://www.mrexcel.com/board/threads/dll-export-viewer-vba-based.1220909/">DLL Function Viewer</a> - Allows the export of function names from DLLs.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a_all]](#-) !<a href="https://img.shields.io/github/stars/sancarn/stdVBA-examples?style&logo=github&label">GHStars</a> <a href="https://github.com/sancarn/stdVBA-examples/tree/main/Examples/Inspector-Accessibility-v2">Accessibility Inspector</a> - An inspector/explorer for accessibility in applications. Useful for automation.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a_all]](#-) !<a href="https://img.shields.io/github/stars/sancarn/stdVBA-examples?style&logo=github&label">GHStars</a> <a href="https://github.com/sancarn/stdVBA-examples/tree/main/Examples/Inspector-RunningObjectTable">Running Object Table Inspector</a> - An inspector for the running object table (ROT), a table of global running COM objects which can be obtained.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a_all]](#-) !<a href="https://img.shields.io/github/stars/sancarn/stdVBA-examples?style&logo=github&label">GHStars</a> <a href="https://github.com/sancarn/stdVBA-examples/tree/main/Examples/Inspector-Clipboard">Clipboard Inspector</a> - Allows inspection of data held in the clipboard. Useful for reverse engineering clipboard usage in other applications.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a_all]](#-) !<a href="https://img.shields.io/github/stars/sancarn/stdVBA-examples?style&logo=github&label">GHStars</a> <a href="https://github.com/sancarn/stdVBA-examples/tree/main/Examples/Inspector-Registry">Registry Inspector</a> - Allows inspection of the win32 registry. Equivalent of regedit basically, but implemented entirely in VBA.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a_all]](#-) !<a href="https://img.shields.io/github/stars/sancarn/stdVBA-examples?style&logo=github&label">GHStars</a> <a href="https://github.com/sancarn/stdVBA-examples/tree/main/Examples/Inspector-JSON">JSON Inspector</a> - An inspector for JSON data, can be called on demand too as a dev tool for inspecting API responses.</li>
+</('ul', 0)>
+<h2>Examples</h2>
+
+<h3>Algorithms, code optimisation, and performance testing</h3>
+
+<ul>
+<li><a href="http://www.xbeat.net/vbspeed/">VBSpeed</a> - The Visual Basic Performance Site - focus on VB6 but transferrable across to VBA.</li>
+</('ul', 0)>
+<h3>UI Ribbon</h3>
+
+<ul>
+<li><a href="https://web.archive.org/web/20230806024653/https://www.rondebruin.nl/win/section2.htm">Ron de Bruin - Ribbons/QAT</a> - A leading resource for information/samples on developing custom ribbons and context menus.</li>
+</ul>
+<ul>
+<li><a href="http://www.spreadsheet1.com/office-excel-ribbon-imagemso-icons-gallery-page-01.html">Office MSO Icons</a> - Ribbon icons can often use one of the 1500 (3 pages on this site) MSO icons wich pre-exist in Office applications.</li>
+</('ul', 0)>
+<h3>UI Userforms</h3>
+
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a_all]](#-) <a href="https://www.vbforums.com/showthread.php?888843-Load-image-into-STATIC-control-Win32&p=5496575&viewfull=1#post5496575">Drag and drop control</a> - Dragging and dropping image controls around a userform.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a_all]](#-) !<a href="https://img.shields.io/github/stars/KallunWillock/EZPZMouseController?style&logo=github&label">GHStars</a> <a href="https://github.com/KallunWillock/EZPZMouseController/">EZPZMouseController</a> - An example of using native Microsoft Ink Collector to detect mouse wheel and mouse move events.</li>
+</('ul', 0)>
+<h3>Low level examples</h3>
+
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a_all]](#-) <a href="https://www.mrexcel.com/board/threads/how-to-target-instances-of-excel.1118789/page-2#post-5395037">Iterating the ROT</a> - An example of iterating the Running Object Table (ROT) to find Excel Workbook instances.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a_all]](#-) <a href="https://www.mrexcel.com/board/threads/how-to-target-instances-of-excel.1118789/page-2#post-5395519">Iterating Excel Instances via IAccessible</a> - In some cases Excel instances aren't registered to the ROT. The Excel application however implements <code>IAccessible</code>, which not only can be used to automate the UI, but can also be used to obtain the Excel Instance from a hwnd.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a_xl]](#-) <a href="https://www.mrexcel.com/board/threads/excel-screen-reader-upon-navigating-with-the-mouse-with-vba-alone.1162338/">Excel Screen Reader</a> - Not only an example of UI Automation, but also an example of using SAPI to do text to speech.</li>
+</ul>
+<!-- ### VBE UI -->
+
+<h3>AddIns</h3>
+
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a_xl]](#-) <a href="https://yoursumbuddy.com/blog/menurighter/">MenuRighter</a> - MenuRighter is an Excel addin that lets you modify right-click menus. You can add almost any control found in other right-click menus or Excel 2003's "classic" menus.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a_xl]](#-) <a href="http://samradapps.com/datepicker/">Sam Rad's DatePicker</a> - Visually impressive and professional DatePicker addin for Excel. Worksheet only / cannot be used with userforms.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>mac]](#-) [![a_xl]](#-) <a href="https://jkp-ads.com/excel-name-manager.asp">Excel Name Manager</a> - An enhanced Name Manager replacement by JKP, Charles Williams and Matthew Henson. 2025 Finalist in the Best Microsoft Excel Add-In category.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>mac]](#-) [![a_xl]](#-) <a href="https://jkp-ads.com/excel-flexfind.asp">Excel Flex Find</a> - An enhanced Find-And-Replace replacement by JKP that exends the search scope to objects and VBA code.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>mac]](#-) [![a_wd]](#-) !<a href="https://img.shields.io/github/stars/joey-melo/vba-syntax-higlight?style&logo=github&label">GHStars</a> <a href="https://github.com/joey-melo/vba-syntax-higlight/tree/main">Word VBA Syntax Highlighter</a> - Custom built Syntax Highlight tool for Word Documents.</li>
+</('ul', 0)>
+<h3>Games / Fun projects</h3>
+
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a_xl]](#-) !<a href="https://img.shields.io/github/stars/DylanTallchiefGit/xlStudio?style&logo=github&label">GHStars</a> <a href="https://github.com/DylanTallchiefGit/xlStudio">xlStudio</a> - A DAW for Microsoft Excel. Also check out the awesome <a href="https://youtu.be/RFdCM2kHL64">video</a>.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a<em>xl]](#-) <a href="https://s0lly.itch.io/cellivization">Cellivization</a> - A cool RTS-like game created in Excel. Also check out the awesome <a href="https://www.youtube.com/watch?v=PzETBRcr</em>i8">video</a>.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a_xl]](#-) <a href="http://leandroascierto.com/blog/juego-arkanoid-en-excel/">Arkanoid</a> - Arkanoid, a retro arcade game, built in Excel. On some machines it runs faster than others.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a_xl]](#-) !<a href="https://img.shields.io/github/stars/rubberduck-vba/Battleship?style&logo=github&label">GHStars</a> <a href="https://github.com/rubberduck-vba/Battleship">Battleships</a></li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a<em>ac]](#-) <a href="https://arkham46.developpez.com/articles/office/clgdiplus/tuto/tutoclgdiplusgame3/?page=Page</em>11#LXXIV">Pacman</a></li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) [![a_xl]](#-) !<a href="https://img.shields.io/github/stars/raspberrypioneer/ExcelCommodroid?style&logo=github&label">GHStars</a> <a href="https://github.com/raspberrypioneer/ExcelCommodroid/tree/main">ExcelCommodroid</a> - Commodore computer loader using MS Excel on Windows. VBA7 only.</li>
+</('ul', 0)>
+<h2>External tools</h2>
+
+<ul>
+<li>[![p<em>win]](#-) [![p</em>mac]](#-) !<a href="https://img.shields.io/github/stars/decalage2/oletools?style&logo=github&label">GHStars</a> [![a_misc]](# "Python") <a href="https://github.com/decalage2/oletools">oletools</a> - Python tool which can be used to decode VBA P-Code (VBA's intermediate language).</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>mac]](#-) [![a_misc]](#- 'VBA planned but as of 2022-05-27 can only compile to exe') <a href="https://twinbasic.com/">twinBasic</a> - A VBA compatible parser, evaluator and compiler.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>mac]](#-) !<a href="https://img.shields.io/github/stars/serkonda7/vscode-vba?style&logo=github&label">GHStars</a> [![a_misc]](# "VSCode") <a href="https://github.com/serkonda7/vscode-vba">vscode-vba</a> - Extension that adds VBA editor support to Visual Studio Code.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>mac]](#-) !<a href="https://img.shields.io/github/stars/SSlinky/VBA-LanguageServer?style&logo=github&label">GHStars</a> [![a_misc]](# "VSCode") <a href="https://marketplace.visualstudio.com/items?itemName=NotisDataAnalytics.vba-lsp">VBA Pro</a> - VSCode Extension that adds enhanced VBA support based on Language Service Protocol. The source is also <a href="https://github.com/SSlinky/VBA-LanguageServer">on GitHub</a>.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>mac]](#-) !<a href="https://img.shields.io/github/stars/DecimalTurn/VBA-Build?style&logo=github&label">GHStars</a> [![a_misc]](# "Github") <a href="https://github.com/DecimalTurn/VBA-Build">VBA Build</a> - Github action to automatically build a VBA project on commit.</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>mac]](#-) !<a href="https://img.shields.io/github/stars/Beakerboy/MS-OVBA?style&logo=github&label">GHStars</a> [![a_misc]](# "Python") <a href="https://github.com/Beakerboy/MS-OVBA">VBA Project Compiler</a> - A python library which can be utilised to compile VBA projects. There is also a built-in <a href="https://github.com/Beakerboy/Excel-Addin-Generator">Excel addin generator</a> made by the same author! You can see a list of related projects by the author <a href="https://github.com/sancarn/awesome-vba/issues/35">here</a>.</li>
+</('ul', 0)>
+<h2>Style Guides</h2>
+
+<ul>
+<li><a href="https://rubberduckvba.wordpress.com/2021/05/29/rubberduck-style-guide/">RubberDuck's style guide</a> - Has some great intermediate - advanced guidance.</li>
+</ul>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/previous-versions/visualstudio/visual-basic-6/aa240822(v%3dvs.60">VB6 Coding conventions</a>) - Variable/Class/Module naming conventions used in VBA. Greatly helps organisation in VBE (unless you have rubberduck).</li>
+</('ul', 0)>
+<h2>Information</h2>
+
+<ul>
+<li><a href="http://www.forestmoon.com/birthofvb/birthofvb.html">Thunder - The birth of Visual Basic</a> - A little article about the birth of VB7/VBA.</li>
+</ul>
+<ul>
+<li><a href="https://www.joelonsoftware.com/2006/06/16/my-first-billg-review/">My First Bill Gates Review</a> - Joel Spolsky, program manager for the Excel team, recounts his first Bill Gates review. Joel got numerous features added e.g. <code>IDispatch</code>, <code>Variant</code>, <code>For each</code> and <code>With</code>. It also discusses the dreaded Date bug ported to Excel from Lotus 123.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sancarn/stdVBA-Inspiration/blob/master/_OtherDocumentation/VBA%20and%20VB6%20History%20-%20Eb%20and%20Ruby/VBA%20History.md">Ruby, EB and DLL composition</a> - Translated copy of <a href="http://bbs.vbstreets.ru/viewtopic.php?f=101&t=56551">VBStreets article</a> created by Russian VBer <code>Хакер</code>. Details the composition of the VB6 and VBA dlls in amongst the history of the language.</li>
+</ul>
+<ul>
+<li><a href="https://www.vbforums.com/showthread.php?884919-pcode-internals">PCode Internals</a> - VBA is compiled to PCode. Understanding the lower level P-Code is a topic of heavy interest and research.</li>
+</ul>
+<ul>
+<li><a href="http://bbs.vbstreets.ru/viewtopic.php?f=101&t=56633">How many lines of code in EB</a> - Untranlated article by Russian VBer <code>Хакер</code> which estimates the number of lines of code in VB6/VBA.</li>
+</ul>
+<ul>
+<li><a href="https://www.vbforums.com/showthread.php?895566-RESOLVED-SAFEARRAY-Structure-for-an-Array">SAFEARRAYS</a> - The internal structure of arrays.</li>
+</ul>
+<ul>
+<li><a href="https://sancarn.github.io/vba-articles">Articles by Sancarn</a> - Various articles written by Sancarn about VBA including, performance, actual issues with VBA etc.</li>
+</('ul', 0)>
+<h2>Resources</h2>
+
+<h3>Win32 API Resources</h3>
+
+<ul>
+<li><a href="https://jkp-ads.com/Articles/apideclarations.asp">JKP API Declarations</a></li>
+</ul>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/previous-versions/office/office-2010/ee833946(v=office.14">Microsoft Office Code Compatibility Inspector</a>) - The Microsoft Office Code Compatibility Inspector was designed by Microsoft to troubleshoot compatibility issues with VBA code as when upgrading Office from 32-bit to 64-bit. MS has not maintained a link to the software for download from its servers, though versions of it are apparently available on the internet.</li>
+</('ul', 0)>
+<h3>VB6 / VBScript</h3>
+
+<ul>
+<li><a href="https://github.com/Planet-Source-Code/PSCIndex">Planet Source Code</a> - A code repository GitHub which holds copious amounts of code. The site was closed down in 2023, but fortunately all VBA/VB6 samples were archived on GitHub today. Possibly not the entire collection (?) of projects/source code that was previously available at the PSC website.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tannerhelland/vbAccelerator-Archive">vbAccelerator Archive</a> - Archived copy of vbAccelerator site (articles, source code, etc.) that disappeared in 2015, reappeared in 2018, and anyone's guess what's going to next&hellip; Primarily VB6, but useful VBA resource.</li>
+</('ul', 0)>
+<h3>Websites</h3>
+
+<ul>
+<li><a href="https://exceldevelopmentplatform.blogspot.com/">Excel Development Platform Blog</a> - Blog dealing with advanced topics/VBA.</li>
+</ul>
+<ul>
+<li><a href="https://msdn.microsoft.com/en-us/vba/office-vba-reference">MSDN VBA Documentation</a></li>
+</ul>
+<ul>
+<li><a href="https://docs.microsoft.com/en-gb/openspecs/microsoft<em>general</em>purpose<em>programming</em>languages/ms-vbal/d5418146-0bd2-45eb-9c7a-fd9502722c74">MS-VBAL Language Spec</a></li>
+</ul>
+<ul>
+<li><a href="https://web.archive.org/web/20230806005811/https://www.rondebruin.nl/index.htm">Ron de Bruin</a> - Simple-Intermediate topics. Note: Ron has archived all these sites, it will not be updated, and some information is out of date, yet it is still an incredible resource for VBA.</li>
+</ul>
+<ul>
+<li><a href="https://bytecomb.com/vba-reference/">Bytecomb VBA Reference</a> - Intermediate-advanced topics.</li>
+</ul>
+<ul>
+<li><a href="http://www.cpearson.com/excel">Chip Pearson's website</a> - Great resource for beginners-intermediate.</li>
+</ul>
+<ul>
+<li><a href="http://www.snb-vba.eu/inhoud_en.html">VBA for smarties</a> - A great reference to numerous data structures and mechanics.</li>
+</ul>
+<ul>
+<li><a href="https://rubberduckvba.wordpress.com/">Rubberduck Blog</a> - Intermediate-Advanced topics.</li>
+</ul>
+<ul>
+<li>[![a_ol]](#-) <a href="https://www.slipstick.com/">Slipstick</a> - Website of Diane Poremsky (MVP) with focus on Outlook and VBA.</li>
+</ul>
+<ul>
+<li>[![a_ol]](#-) <a href="https://techniclee.wordpress.com/">TechnicLee</a> - Outlook blog, many examples including code variations depending on user request.</li>
+</ul>
+<ul>
+<li>[![a_pp]](#-) <a href="https://pptvba.com/">PowerPoint VBA</a> - A site devoted to teaching VBA through making games in PowerPoint.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jeffpar/kbarchive/tree/master/id/vbwin">MS KB Archive</a> - Massive archive of vb6/vba problems, solutions and tutorials.</li>
+</ul>
+<ul>
+<li><a href="https://sancarn.github.io/vba-articles/">Sancarn's vba-articles</a> - Sancarn's articles on various topics related to VBA.</li>
+</ul>
+<ul>
+<li>[![a_ac]](#-) <a href="https://nolongerset.com">No Longer Set</a> - Access + VBA site of Microsoft MVP Mike Wolfe. Provides weekly updates on development of TwinBasic.</li>
+</ul>
+<ul>
+<li>[![a_ac]](#-) <a href="https://isladogs.co.uk/">Isladogs on Access</a> - Access + VBA site of Microsoft MVP Colin Riddington. Excellent resource with VBA projects in Access VBA.</li>
+</ul>
+<ul>
+<li>[![a_ac]](#-) <a href="https://www.devhut.net/">DevHut</a> - Access + VBA site of Daniel Pineault. Publishes series of deep-dive articles into various uses of VBA. Companion site to Youtube account.</li>
+</('ul', 0)>
+<h3>Books</h3>
+
+<ul>
+<li><a href="https://classicvb.net/hardweb/mckinney.htm">Hard Core Visual Basic</a> - An advanced programmer's guide to the new 5.0 version of Visual Basic. Includes a core set of utilities, shortcuts, and solutions to problems to achieve a wide range of functional programs. A hard book also exists. Also check out the <a href="https://jeffpar.github.io/kbarchive/kb/173/Q173840/">Comments and corrections</a>.</li>
+</ul>
+<ul>
+<li><a href="https://www.academia.edu/29801473/VBA<em>Developers</em>Handbook<em>Second</em>Edition">The VBA Developer's Handbook</a> - Write bulletproof VBA code for any situation. This book is the essential resource for developers working with any of the more than 300 products that employ the "Visual Basic for Applications" programming language. Hardbacks also available elsewhere.</li>
+</ul>
+<ul>
+<li><a href="https://pdfcoffee.com/advanced-visual-basic-6-power-techniques-for-everyday-programs978020170712024922-pdf-free.html">Advanced Visual Basic 6</a> - Power Techniques for Everyday Programs Matthew Curland. Hardbacks also available elsewhere.</li>
+</ul>
+<ul>
+<li><a href="https://oiipdf.com/download/professional-excel-development-the-definitive-guide-to-developing-applications-using-microsoft-excel-vba-and-net">Professional Excel Development</a> - In this book, four world-class Microsoft® Excel developers offer start-to-finish guidance for building powerful, robust, and secure applications with Excel. Hardbacks also available.</li>
+</ul>
+<ul>
+<li>[![o_paid]](#- '~$6') <a href="https://www.google.com/search?q=Excel+VBA+Programming+For+Dummies+book">Excel VBA Programming For Dummies</a> - It′s time to move to the next level—creating your own, customized Excel 2010 solutions using Visual Basic for Applications (VBA).Using step–by–step instruction and the accessible, friendly For Dummies style, this practical book shows you how to use VBA, write macros, customize your Excel apps to look and work the way you want, avoid errors, and more.</li>
+</ul>
+<ul>
+<li>[![o_paid]](#- '~$30') <a href="https://www.wiley.com/en-us/Excel+2019+Power+Programming+with+VBA-p-9781119514916">Power Programming with VBA</a> - Excel 2019 Power Programming with VBA is fully updated to cover all the latest tools and tricks of Excel 2019. Encompassing an analysis of Excel application development and a complete introduction to Visual Basic for Applications (VBA), this comprehensive book presents all of the techniques you need to develop both large and small Excel applications.</li>
+</ul>
+<ul>
+<li><a href="https://goalkicker.com/VBABook/">(E-Book) VBA beginners</a></li>
+</ul>
+<ul>
+<li><a href="https://goalkicker.com/ExcelVBABook/">(E-Book) Excel VBA beginners</a></li>
+</('ul', 0)>
+<h3>YouTube</h3>
+
+<ul>
+<li><a href="https://www.youtube.com/c/Excelmacromastery">Excel Macro Mastery</a> - Paul Kelly (MVP) - excelmacromastery.com.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/c/SigmaCoding">Sigma Coding</a> - Large catalogue of tutorials - beginner through to advanced. Delves into interesting areas of VBA not explored by other content creators.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/playlist?list=PLNIs-AWhQzckr8Dgmgb3akx_gFMnpxTN5">WiseOwl's VBA tutorials</a> - Great all-round resource for VBA. Perfect introduction for beginners. In-depth lessons into all aspects of VBA. Huge playlist that covers most types of VBA.</li>
+</ul>
+<ul>
+<li>[![o_paid]](#- 'Some libraries used are non-FOSS and created by VBA A2Z') <a href="https://www.youtube.com/c/VBAA2Z">VBA A2Z</a> - Many tutorials, some paid content. Good array of interesting and different topics - in-depth tutorials into different parts of VBA, with some .NET/VSTO videos. Strong focus on UI development.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/c/ExcelVbaIsFun">Excel VBA Is Fun</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/c/ExcelForFreelancers">Excel for Freelancers</a> - Hands-on tutorials to developing specific applications from beginning through to end. All levels.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/c/LeilaGharani">Leila Gharani</a> - Office-wide focus - useful for beginners.</li>
+</ul>
+<ul>
+<li>[![o<em>paid]](#- 'The video is from a consultant. Many of his videos are paid for.') <a href="https://youtu.be/MFR</em>XARJjoY">Get to know VBA</a> - Some great applications presented and created with VBA.</li>
+</ul>
+<ul>
+<li>[![a_ac]](#-) <a href="https://www.youtube.com/channel/UC9lSC6AT4d0qour-aIbMjFQ">D Pineault - Tech, Programming and more</a> - Youtube channel of Daniel Pineault. Companion channel to DevHut site.</li>
+</('ul', 0)>
+<h3>Forums</h3>
+
+<ul>
+<li><a href="http://reddit.co.uk/r/vba">Reddit</a> - Daily VBA Q&A. Occasional Pro-Tip sharing and Show & Tell library publishing.</li>
+</ul>
+<ul>
+<li><a href="https://stackoverflow.com/questions/tagged/vba">Stack Overflow</a> - A great place to ask questions. Duplicate questions are flagged as duplicates and send the author to the correct place.</li>
+</ul>
+<ul>
+<li><a href="https://chandoo.org/wp/">Chandoo</a> - Forum for the Chandoo - the blog of Purna Duggirala (MVP). Very active.</li>
+</ul>
+<ul>
+<li><a href="https://discord.gg/gpcSue9f">Visual Basic Discord</a> - A chat room for VB.NET/VBA/VB6 fanatics.</li>
+</ul>
+<ul>
+<li><a href="https://discord.gg/PU2vVDeb">Excel Discord</a> - Discord server moderated by Tim Heng (Excel MVP) with focus on helping Excel users.</li>
+</ul>
+<ul>
+<li><a href="https://www.mrexcel.com/board/">MrExcel</a> - Mostly Excel generic, but a lot of VBA content can be found here also.</li>
+</ul>
+<ul>
+<li><a href="https://www.excelforum.com/">Excel Forum</a></li>
+</ul>
+<ul>
+<li>[![a_ol]](#-) <a href="https://www.forums.slipstick.com">Slipstick</a> - Excellent forum for the Slipstick website (Outlook VBA) of Diane Poremsky (MVP). Diane is quick to respond, and her answers are extremely helpful.</li>
+</ul>
+<ul>
+<li><a href="https://www.vbforums.com/forumdisplay.php?37-Office-Development">VBForums - Office Development</a> - Forum with focus on VB6/.NET with VBA section.</li>
+</ul>
+<ul>
+<li>[![a_ac]](#-) <a href="https://www.access-programmers.co.uk/forums/forums/modules-vba.12/">Access World</a> - Forum with focus on Access and Access VBA.</li>
+</('ul', 0)>
+<h2>Footnotes</h2>
+
+<h3>Symbology</h3>
+
+<p>Because of the nature of VBA, many libraries do not work on all Operating Systems, in all Office Applications or in all architectures(x64/x86). Some libraries may also require external resources (DLL, Addins, etc.) which can be difficult to use due to VBA's lack of a package manager. To help you in finding projects suitable for your needs, this awesome list uses the following symbology. The symbology also has tooltips which may provide more information.</p>
+
+<h4>Platform Compatibility</h4>
+
+<p>[p_all]: ./resources/Crown.svg 'Compatible on all platforms'</p>
+<p>[p_mac]: ./resources/AppleLogo.svg 'macOS'</p>
+<p>[p_win]: ./resources/WindowsLogo.svg 'Windows OS'</p>
+<p>[p_now]: ./resources/NotApplicable.svg 'Not Windows OS'</p>
+<p>[p_nom]: ./resources/NotApplicable.svg 'Not macOS'</p>
+
+<ul>
+<li>[![p<em>win]](#-) [![p</em>mac]](#-) - Available on all platforms</li>
+</ul>
+<ul>
+<li>[![p<em>win]](#-) [![p</em>nom]](#-) - Available on Windows OS only</li>
+</ul>
+<ul>
+<li>[![p<em>now]](#-) [![p</em>mac]](#-) - Available on Mac OS only</li>
+</('ul', 0)>
+<h4>Application compatibility</h4>
+
+<p>[a_all]: ./resources/OfficeLogoPlus.svg 'All applications'</p>
+<p>[a_wd]: ./resources/WordLogo.svg 'Word'</p>
+<p>[a_xl]: ./resources/ExcelLogo.svg 'Excel'</p>
+<p>[a_ac]: ./resources/AccessLogo.svg 'Access'</p>
+<p>[a_ol]: ./resources/OutlookLogo.svg 'Outlook'</p>
+<p>[a_pp]: ./resources/PowerPointLogo.svg 'PowerPoint'</p>
+<p>[a_misc]: ./resources/Duck.svg</p>
+
+<ul>
+<li>[![a_all]](#-) - All applications</li>
+</ul>
+<ul>
+<li>[![a_wd]](#-) - Word</li>
+</ul>
+<ul>
+<li>[![a_xl]](#-) - Excel</li>
+</ul>
+<ul>
+<li>[![a_ac]](#-) - Access</li>
+</ul>
+<ul>
+<li>[![a_ol]](#-) - Outlook</li>
+</ul>
+<ul>
+<li>[![a_pp]](#-) - PowerPoint</li>
+</ul>
+<ul>
+<li>[![a_misc]](#- 'Misc') - Miscellaneous applications (MS Project, AutoCAD, etc.) - Specify in short description</li>
+</('ul', 0)>
+<h4>Other important information</h4>
+
+<p>[o_32]: ./resources/32-Bit.svg '32-bit only'</p>
+<p>[o_pass]: ./resources/Padlock.svg 'VBA is password protected'</p>
+<p>[o_dll]: ./resources/Dependencies.svg</p>
+<p>[o_inst]: ./resources/Installation.svg 'Requires installation'</p>
+<p>[o_paid]: ./resources/Money.svg</p>
+
+<ul>
+<li>[![o_32]](#-) - 32-bit only</li>
+</ul>
+<ul>
+<li>[![o_pass]](#-) - Written in VBA but the code is password protected</li>
+</ul>
+<ul>
+<li>[![o_dll]](#- 'Requires external dependencies') - Requires external dependencies e.g. <code>.dll</code>, <code>.ocx</code>, <code>.o</code>, etc.</li>
+</ul>
+<ul>
+<li>[![o_inst]](#-) - Requires installation</li>
+</ul>
+<ul>
+<li>[![o_paid]](#- 'Link includes/leads to paid content') - Link includes/leads to paid content</li>
+</('ul', 0)>
+<h2>Contributing</h2>
+
+<p>Your contributions are always welcome! Please take a look at the <a href="./Contributing.md">contribution guidelines</a> first.</p>
+
+</body>
+</html>

@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Promises</h1>
+
+<p><strong>Repository:</strong> https://github.com/wbinnssmith/awesome-promises#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<a href="https://promisesaplus.com/">
+    <img src="https://promisesaplus.com/assets/logo-small.png" alt="Promises/A+ logo" align="right" />
+</a>
+
+<h1>Awesome Promises <a href="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg"><img src="https://github.com/sindresorhus/awesome" alt="Awesome</a>"></h1>
+
+<blockquote>
+<p>A curated list of useful resources for JavaScript Promises</p>
+</blockquote>
+
+<p>Inspired by the <a href="https://github.com/sindresorhus/awesome">awesome</a> list thing. Not to be confused with other awesome promises like "I promise you a million dollars" or "I promise you'll stay fit and never have to go to the gym again".</p>
+
+<p><strong>Table of Contents</strong></p>
+
+<ul>
+<li><a href="#resources-blogs-and-books">Resources, Blogs, and Books</a></li>
+</ul>
+<ul>
+<li><a href="#promisesa-implementations-es6es2015-compatible">Promises/A+ Implementations (ES6/ES2015 compatible)</a></li>
+<ul>
+<li><a href="#strict-implementations">Strict Implementations</a></li>
+</ul>
+<ul>
+<li><a href="#implementations-with-extras">Implementations with extras</a></li>
+</ul>
+<ul>
+<li><a href="#fallbacks">Fallbacks</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#convenience-utilities">Convenience Utilities</a></li>
+</('ul', 0)>
+<h2>Resources, Blogs, and Books</h2>
+
+<h3>For beginners</h3>
+<ul>
+<li><a href="https://github.com/mattdesl/promise-cookbook">Promise Cookbook</a> - The why, what, and how. "A brief introduction [...] primarily aimed at frontend developers".</li>
+</ul>
+<ul>
+<li><a href="http://exploringjs.com/es6/ch_promises.html">Promises for Asynchronous Programming</a> - Chapter from <a href="http://exploringjs.com/">Exploring ES6</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/getify/You-Dont-Know-JS/blob/master/async%20&%20performance/ch3.md">You Don't Know JS: Promises</a> - Chapter from <a href="https://github.com/getify/You-Dont-Know-JS/tree/master/async%20%26%20performance">You Don't Know JS: Async & Performance</a></li>
+</ul>
+<ul>
+<li><a href="https://developers.google.com/web/fundamentals/getting-started/primers/promises">JavaScript Promises: an Introduction</a> - Basics of JavaScript's native promise implementation.</li>
+</ul>
+<ul>
+<li><a href="http://shop.oreilly.com/product/0636920032151.do">JavaScript with Promises</a> - from O'Reilly. Short and to-the-point. Uses native and bluebird.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/stevekane/promise-it-wont-hurt">Promise it won't hurt</a> - An interactive <a href="https://nodeschool.io/">nodeschool</a> workshop</li>
+</ul>
+<ul>
+<li><a href="http://es6katas.org/">ES6 Kata Promises</a> - Promises Katas : <a href="http://tddbin.com/#?kata=es6/language/promise/basics">Basics</a></li>
+</ul>
+<ul>
+<li><a href="https://ponyfoo.com/articles/es6-promises-in-depth">ES6 Promises in Depth</a></li>
+</ul>
+<ul>
+<li><a href="http://www.sohamkamani.com/blog/2016/08/28/incremenal-tutorial-to-promises/">An Incremental Tutorial on Promises</a> - An FAQ styled tutorial for beginners.</li>
+</('ul', 0)>
+<h3>Deep Dive</h3>
+<ul>
+<li><a href="https://github.com/sindresorhus/promise-fun">Promise Fun</a> - @sindresorhus's notes, patterns, and solutions to common Promise problems</li>
+</ul>
+<ul>
+<li><a href="https://blog.domenic.me/youre-missing-the-point-of-promises/">You're Missing the Point of Promises</a> - Promises are much more than callback aggregation, and that jQuery's implementation (prior to 3.0) isn't enough.</li>
+</ul>
+<ul>
+<li><a href="https://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html">We have a problem with promises</a> - "Many of us are using promises without really understanding them."</li>
+</ul>
+<ul>
+<li><a href="https://github.com/petkaantonov/bluebird/wiki/Promise-anti-patterns">Promise anti-patterns</a> - Common misuses and how to avoid them.</li>
+</ul>
+<ul>
+<li><a href="http://taoofcode.net/promise-anti-patterns/">Promise anti-patterns (2)</a> - Another set of promises anti-patterns</li>
+</ul>
+<ul>
+<li><a href="https://sdgluck.github.io/2015/08/24/promise-ponderings-patterns-apologies/">Promise Ponderings, (Anti-)Patterns, and Apologies</a> - Promise behaviour demonstrated and explained by common questions and their answers.</li>
+</ul>
+<ul>
+<li><a href="http://www.mattgreer.org/articles/promises-in-wicked-detail/">Javascript Promises...In Wicked Detail</a> - Recreate the promise implementation</li>
+</ul>
+<ul>
+<li><a href="https://www.w3.org/2001/tag/doc/promises-guide">Writing Promise-Using Specifications</a> - "This document gives guidance on how to write specifications that create, accept, or manipulate promises"</li>
+</ul>
+<ul>
+<li><a href="https://developers.google.com/web/fundamentals/getting-started/primers/async-functions">Async functions - making promises friendly</a></li>
+</('ul', 0)>
+<h3>References</h3>
+<ul>
+<li><a href="https://promisesaplus.com/">Promises/A+ specification</a></li>
+</ul>
+<ul>
+<li><a href="http://caniuse.com/#feat=promises">caniuse promises</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md">Fates and States</a> - Quick definitions of possible states.</li>
+</ul>
+<ul>
+<li><a href="https://bevacqua.github.io/promisees/">Promisees</a> - Promise visualization playground for the adventurous.</li>
+</('ul', 0)>
+<h2>Promises/A+ Implementations (ES6/ES2015 compatible)</h2>
+
+<h3>Strict Implementations</h3>
+<p>These implement no more or less than the es6 spec. They make great polyfills and are exceptionally compatible with native promises.</p>
+
+<ul>
+<li><a href="https://github.com/floatdrop/pinkie">pinkie</a> - Ponyfill. Node-oriented, but <a href="https://github.com/substack/node-browserify">browserifyable</a>. <em>Extremely</em> small implementation.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/getify/native-promise-only">native-promise-only</a> - Polyfill. Browser and node-compatible.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/stefanpenner/es6-promise">es6-promise</a> - Opt-in polyfill. A strict-spec subset of rsvp.js.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/calvinmetcalf/lie">lie</a> - Small, browserifyable with an opt-in polyfill.</li>
+</('ul', 0)>
+<h3>Implementations with extras</h3>
+<p>All of these provide more features than the language yet remain compatible. Node + Browsers for all.</p>
+
+<ul>
+<li><a href="https://github.com/petkaantonov/bluebird">bluebird</a> - Fully featured, extremely performant. Long stack traces & generator/coroutine support.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/briancavalier/creed">creed</a> - Hyper performant & full featured like Bluebird, but FP-oriented. Coroutines, generators, promises, ES2015 iterables, & fantasy-land spec.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tildeio/rsvp.js/">rsvp.js</a> - Lightweight with a few extras. Compatible down to IE6!</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kriskowal/q">Q</a> - One of the original implementations. Long stack traces and other goodies.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/then/promise">then/promise</a> - Small with <code>nodeify</code>, <code>denodify</code> and <code>done()</code> additions.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/cujojs/when">when.js</a> - Packed with control flow, functional, and utility methods.</li>
+</('ul', 0)>
+<h3>Fallbacks</h3>
+<ul>
+<li><a href="https://www.npmjs.com/package/native-or-bluebird">native-or-bluebird</a> - Helps transition to completely native.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/floatdrop/pinkie-promise">pinkie-promise</a> - Use native, or fall back to <code>pinkie</code>. Great for node library authors.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kevinbeaty/any-promise">any-promise</a> - Loads the first available implementation. Safe for browserify.</li>
+</('ul', 0)>
+<h2>Convenience Utilities</h2>
+<p>Native and strictly spec-compliant promises are awesome for compatibility, future-proofness, library authors, and browsers. However, libraries like bluebird patch goodies onto the <code>Promise</code> constructor and prototype. Solution? tiny modules of course!</p>
+
+<h3>sindresorhus's many Promise utilities (<a href="https://github.com/sindresorhus/promise-fun">see notes</a>)</h3>
+<ul>
+<li><a href="https://github.com/sindresorhus/delay">delay</a> - Delay a promise a specified amount of time.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/pify">pify</a> - Promisify ("denodify") a callback-style function.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/loud-rejection">loud-rejection</a> - Make unhandled promise rejections fail loudly instead of the default silent fail.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/hard-rejection">hard-rejection</a> - Make unhandled promise rejections fail hard right away instead of the default silent fail</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/p-queue">p-queue</a> - Promise queue with concurrency control</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/p-break">p-break</a> - Break out of a promise chain</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/p-lazy">p-lazy</a> - Create a lazy promise that defers execution until <code>.then()</code> or <code>.catch()</code> is called</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/p-defer">p-defer</a> - Create a deferred promise</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/p-if">p-if</a> - Conditional promise chains</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/p-tap">p-tap</a> - Tap into a promise chain without affecting its value or state</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/p-map">p-map</a> - Map over promises concurrently</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/p-all">p-all</a> - Run promise-returning & async functions concurrently with optional limited concurrency</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/p-limit">p-limit</a> - Run multiple promise-returning & async functions with limited concurrency</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/p-times">p-times</a> - Run promise-returning & async functions a specific number of times concurrently</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/p-catch-if">p-catch-if</a> - Conditional promise catch handler</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/p-time">p-time</a> - Measure the time a promise takes to resolve</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/p-log">p-log</a> - Log the value/error of a promise</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/p-filter">p-filter</a> - Filter promises concurrently</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/p-settle">p-settle</a> - Settle promises concurrently and get their fulfillment value or rejection reason</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/p-memoize">p-memoize</a> - Memoize promise-returning & async functions</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/p-whilst">p-whilst</a> - Calls a function repeatedly while a condition returns true and then resolves the promise</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/p-throttle">p-throttle</a> - Throttle promise-returning & async functions</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/p-debounce">p-debounce</a> - Debounce promise-returning & async functions</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/p-retry">p-retry</a> - Retry a promise-returning or async function</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/p-wait-for">p-wait-for</a> - Wait for a condition to be true</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/p-timeout">p-timeout</a> - Timeout a promise after a specified amount of time</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/p-race">p-race</a> - A better <code>Promise.race()</code></li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/p-try">p-try</a> - <code>Promise#try()</code> ponyfill - Starts a promise chain</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/p-finally">p-finally</a> - <code>Promise#finally()</code> ponyfill - Invoked when the promise is settled regardless of outcome</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/p-any">p-any</a> - Wait for any promise to be fulfilled</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/p-some">p-some</a> - Wait for a specified number of promises to be fulfilled</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/p-pipe">p-pipe</a> - Compose promise-returning & async functions into a reusable pipeline</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/p-each-series">p-each-series</a> - Iterate over promises serially</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/p-map-series">p-map-series</a> - Map over promises serially</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/p-reduce">p-reduce</a> - Reduce a list of values using promises into a promise for a value</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/p-props">p-props</a> - Like <code>Promise.all()</code> but for <code>Map</code> and <code>Object</code></li>
+</('ul', 0)>
+<h3>Others</h3>
+<ul>
+<li><a href="https://github.com/wbinnssmith/promise-method">promise-method</a> - Standalone <code>bluebird.method</code>. Turn a synchronously-returning method into a promise-returning one.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/then/is-promise">is-promise</a> - Determine if something looks like a Promise.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/then/sprom">sprom</a> - Resolve when a stream ends. Optional buffering (be careful with this!)</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mozilla/task.js">task.js</a> - Write async functions in a blocking style using promises and generators. Like <code>bluebird.coroutine</code>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tj/co">co</a> - Like <code>task.js</code> and <code>bluebird.coroutine</code>, but supports thunks too.</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/lie-fs">lie-fs</a> - Promise wrappers for Node's FS API.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/busterc/promise-do-until">promise-do-until</a> - Calls a function repeatedly until a condition returns true and then resolves the promise.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/busterc/promise-do-whilst">promise-do-whilst</a> - Calls a function repeatedly while a condition returns true and then resolves the promise.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/samccone/promise-semaphore">promise-semaphore</a> - Push a set of work to be done in a configurable serial fashion</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kevinoid/promise-nodeify">promise-nodeify</a> - Standalone <code>nodeify</code> method which calls a Node-style callback on resolution or rejection.</li>
+</('ul', 0)>
+<h2>License</h2>
+<p>Licensed under the <a href="https://creativecommons.org/publicdomain/zero/1.0/">Creative Commons CC0 License</a>.</p>
+
+</body>
+</html>

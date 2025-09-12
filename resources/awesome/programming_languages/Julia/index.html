@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Julia</h1>
+
+<p><strong>Repository:</strong> https://github.com/svaksha/Julia.jl#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<h1>Julia.jl</h1>
+
+<p><a href="http://svaksha.github.io/Julia.jl">Julia.jl</a> aggregates and curates decibans of knowledge resources for programming in <a href="https://github.com/JuliaLang">Julia</a>, an all-purpose programming language that addresses the needs of high-performance numerical analysis and computational science.</p>
+
+<ul>
+<li><a href="#index">INDEX</a></li>
+</ul>
+<ul>
+<li><a href="#license">LICENSE</a></li>
+<ul>
+<li><a href="#odbl-and-agplv3">ODbL and AGPLv3</a></li>
+</ul>
+<ul>
+<li><a href="#mirrors">Mirrors</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#contribute">CONTRIBUTE</a></li>
+<ul>
+<li><a href="#guidelines">Guidelines</a></li>
+</ul>
+<ul>
+<li><a href="#bugreport-pullrequest">BugReport-PullRequest</a></li>
+</ul>
+<ul>
+<li><a href="#package-status">Package Status</a></li>
+</ul>
+<ul>
+<li><a href="#stargazers">Stargazers</a></li>
+</ul>
+</ul>
+<p>----</p>
+
+<h1>INDEX</h1>
+
+<ul>
+<li><a href="https://github.com/svaksha/Julia.jl/blob/master/AI.md">AI</a> :: Algorithms, DataMining, Data Structures, HMM, ML, NLP, ...</li>
+</ul>
+<ul>
+<li><a href="https://github.com/svaksha/Julia.jl/blob/master/ActuarialScience.md">Actuarial Science</a> :: Software related to the subcategories of econometrics, finance, etc.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/svaksha/Julia.jl/blob/master/API.md">API</a> :: Language API's - C++, Fortran, Go, Java, JavaScript, MATLAB, Perl, Python, R, ...</li>
+</ul>
+<ul>
+<li><a href="https://github.com/svaksha/Julia.jl/blob/master/Biology.md">Biology</a> :: Bioinformatics, genomics, agriculture, food science, medicine, genetic engineering, Neuroscience, et. al...</li>
+</ul>
+<ul>
+<li><a href="https://github.com/svaksha/Julia.jl/blob/master/DesktopApplications.md">Desktop Applications</a> :: Front-end client application software, viz. Debuggers, Documentation generators, Desktop User Interface for word processors, GUI spreadsheets, etc..</li>
+</ul>
+<ul>
+<li><a href="https://github.com/svaksha/Julia.jl/blob/master/DevOps.md">DevOps</a> :: DevOps tools for infrastructure management, continuous integration (CI), continuous delivery (CD), package management, release engineering (RE), release management (RM), software configuration management (SCM), Test Driven Development, Sandbox, Functional/ Unit testing,... Quality-related tools, et al..</li>
+</ul>
+<ul>
+<li><a href="https://github.com/svaksha/Julia.jl/blob/master/Chemistry.md">Chemistry</a> :: Analytical chemistry, cheminformatics, crystallography, nanochemistry, nuclear chemistry ...</li>
+</ul>
+<ul>
+<li><a href="https://github.com/svaksha/Julia.jl/blob/master/Database.md">Database</a> :: NoSQL, RDBMS and Middleware API's.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/svaksha/Julia.jl/blob/master/DataScience.md">Data Science</a> :: OpenData + OpenScience, Free Data Sets, Reproducible research, RDM, Clinical Research Data, Metadata, Library data, Computational reproducibility, etc.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/svaksha/Julia.jl/blob/master/Earth-Science.md">Earth Science</a> :: Software related to the subcategories of cartography, climatology, geobiology, geochemistry, geography, geoinformatics, geology‎, geophysics‎, geoscience/GIS, geomathematics, meteorology, oceanography, etc...</li>
+</ul>
+<ul>
+<li><a href="https://github.com/svaksha/Julia.jl/blob/master/FileIO.md">FileIO</a> :: File IO (Input/Output) functionality and support for various data types and file formats.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/svaksha/Julia.jl/blob/master/Graphics.md">Graphics</a> :: Plotting, Graphics and other Visualization tools.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/svaksha/Julia.jl/blob/master/i18n-L10n.md">i18n-L10n</a> :: Transliteration, Internationalisation (i18n) and Localisation (L10n)</li>
+</ul>
+<ul>
+<li><a href="https://github.com/svaksha/Julia.jl/blob/master/Machines.md">Machines</a> :: Software for cross-platform hardware, Robotics, and other API libraries for machine-related software.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/svaksha/Julia.jl/blob/master/Mathematics.md">Mathematics</a> :: Algebra, Geometry,... anything Math related.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/svaksha/Julia.jl/blob/master/Optimization.md">Optimization</a> :: Mathematical optimization.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/svaksha/Julia.jl/blob/master/Physics.md">Physics</a> :: Julia software related to Physics.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/svaksha/Julia.jl/blob/master/Programming-Paradigms.md">Programming Paradigms</a> :: Programming Paradigms and language concepts that are used in the type system, data types, etc..</li>
+</ul>
+<ul>
+<li><a href="https://github.com/svaksha/Julia.jl/blob/master/Publications.md">Publications</a> :: Research Papers (journal and conference publications).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/svaksha/Julia.jl/blob/master/Resources.md">Resources</a> :: List of community resources, development links, including events, (un)conferences, forums/ meetup groups, NEWS, blogs, cookbooks, cheatsheets, IJulia NoteBooks, and other useful resources.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/svaksha/Julia.jl/blob/master/Server.md">Server</a> :: HTTP/Web, Networking, and other server-side utils...</li>
+</ul>
+<ul>
+<li><a href="https://github.com/svaksha/Julia.jl/blob/master/Space-Science.md">Space Science</a> :: Astronomy, Imaging, Planetary and <a href="https://en.wikipedia.org/wiki/Outline<em>of</em>space_science">space science</a> related packages.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/svaksha/Julia.jl/blob/master/Probability-Statistics.md">Probability & Statistics</a> :: Actuarial Science, Finance, economics, stochastic, insurance Statistics, Operations research and Benchmarks and Optimization toolkits....</li>
+</ul>
+<ul>
+<li><a href="https://github.com/svaksha/Julia.jl/blob/master/Super-Computing.md">Super Computing</a> :: HPC, Distributed Computing, Cloud computing, Cluster computing, Grid computing, Kernels and architectures like ARM, MIPS, GPU, CUDA, etc...</li>
+</ul>
+<ul>
+<li><a href="https://github.com/svaksha/Julia.jl/blob/master/Utilities.md">Utilities</a> :: Handy toolkits and other general utilities for your Desktop.</li>
+</ul>
+<p><strong>DISCLAIMER :</strong> As a new language in the scientific computing scene it is frequently in a state of flux due to the addition of new libraries, resulting in frequent changes and page reordering. Since the <strong>Julia.jl</strong> repo only provides a list (of links) of Julia packages out in the wild, it should not be considered an endorsement of any particular package for software quality, technical features, coding style/organization, etc...</p>
+
+<p>----</p>
+
+<h1>LICENSE</h1>
+
+<ul>
+<li>COPYRIGHT © 2012-Now <a href="http://svaksha.com/pages/Bio">SVAKSHA</a>, herewith dual-licensed for the data (ODbL-v1.0+) and the software (AGPLv3+), respectively.</li>
+</('ul', 0)>
+<h2><a href="https://opendatacommons.org/licenses/odbl/1-0/">ODbL</a> and <a href="http://www.gnu.org/licenses/agpl-3.0.html">AGPLv3</a></h2>
+
+<ul>
+<li>The <strong>data</strong> (aggregated and curated decibans of knowledge resources for Julia language) in this repository (<code>Julia.jl</code>) is released under the <a href="https://opendatacommons.org/licenses/odbl/1-0/">Open Database License</a> (ODbL-v1.0). The Open Database License (ODbL) grants anyone the freedom to share, create and adapt the data or database with proper <strong>credit attribution</strong> as specified in the license and <strong>offer any new work under the same terms</strong>, and <strong>release a public copy if using the new work for commercial purposes</strong>.</li>
+</ul>
+<ul>
+<li>The <strong>software</strong> used in <code>Julia.jl</code> is released under the <a href="http://www.gnu.org/licenses/agpl-3.0.html">AGPLv3 License</a>, and above, as detailed in the <a href="https://github.com/svaksha/Julia.jl/blob/master/LICENSE-AGPLv3.md">LICENSE-AGPLv3.md</a> file.</li>
+</ul>
+<ul>
+<li>ALL copies and forks of this work must retain the Copyright, respective Licence files for program code (AGPLv3) and data (ODbL) along with this permission notice in all copies or substantial portions of the new work.</li>
+</ul>
+<p>The motivation for this change is to make it easier for people to re-use this data as a knowledge resource within a database. For example, <a href="https://juliaobserver.com">julia-observer</a> is a visual tool for browsing through packages that pulls data from <code>Julia.jl</code>, <code>General</code> and various sources. By releasing the website code <a href="https://github.com/djsegal/julia_observer">publicly</a> are an example on how one can build upon or transform the data to benefit the community.</p>
+
+<h2>Mirrors</h2>
+<ul>
+<li><a href="https://bitbucket.org/svaksha/Julia.jl">Bitbucket</a> :: git clone git@bitbucket.org:svaksha/Julia.jl.git</li>
+</ul>
+<ul>
+<li><a href="https://gitlab.com/svaksha/Julia.jl">GitLab</a> :: git clone git@gitlab.com:svaksha/Julia.jl.git</li>
+</ul>
+<p>----</p>
+
+<h1>CONTRIBUTE</h1>
+
+<p><a href="https://github.com/svaksha/Julia.jl/graphs/contributors">Contributions</a> to <code>Julia.jl</code> are welcome in the form of pull requests (PR). Here are some guidelines and tips on how to submit a Bug Report (BR) and/or <a href="https://github.com/svaksha/Julia.jl/pulls">PR</a>:</p>
+
+<h2>Guidelines</h2>
+
+<p>The Julia community has <a href="http://julialang.org/community/standards/">ethical guidelines</a> aimed at respecting Copyright, Licenses and attribution standards<sup>{1} and {2}</sup> which you are requested to follow while submitting materials to be listed. Additionally, if you find any material (or code repos) that violates these ethical standards, please file a bug report for their removal from <code>Julia.jl</code>.</p>
+<ul>
+<li>References :</li>
+<ul>
+<li>{1} https://github.com/JuliaLang/julialang.github.com/issues/200</li>
+</ul>
+<ul>
+<li>{2} https://github.com/JuliaLang/julialang.github.com/issues/194</li>
+</('ul', 3)>
+</('ul', 0)>
+<h2>BugReport-PullRequest</h2>
+
+<ol>
+<li>Add your link as per the top-level Category page within the topic sub-section(s), in <em>alphabetical order</em>, with notes (if any) in the markdown files. Before creating a new top-level tag within the various categories, please check wikipedia or other resources first. If you are unable to decide, discuss it (via a BR, not a PR ;-)).</li>
+</ol>
+<ol>
+<li>In a CLI, type <code>julia Julia.jl</code> which will run the <a href="https://github.com/svaksha/Julia.jl/blob/master/src/scrape.jl">scraper</a>. Commit the <code>db.csv</code> file too.</li>
+</ol>
+<ol>
+<li>For broken links or outdated information, submit a bug report (BR), or make the necessary changes and submit a PR. Both are welcome. Please submit separate PR's for each link or change added.</li>
+</ol>
+<ol>
+<li>For Documentation and cookbooks, check if it matches the categories listed, else, list it on the <a href="https://github.com/svaksha/Julia.jl/blob/master/Resources.md">Resources.md</a> page.</li>
+</ol>
+<ol>
+<li>For those unable to use git, create a github account, then fork the <code>Julia.jl</code> repo on the user interface. Then edit the page by <a href="https://help.github.com/articles/editing-files-in-your-repository">clicking on the "pencil" icon on the markdown page</a>, then click on save and submit a PR. Github does this <a href="https://help.github.com/articles/editing-files-in-another-user-s-repository">automatically in 8 steps</a>.</li>
+</('ol', 0)>
+<h2>Package Status</h2>
+
+<p>Please note that this repo lists packages that are outdated and/or worked on older versions of Julia. These continue to remain listed as its openly available along with the hope that someone may want to continue with the work as a fork as it aligns with their research or work. These <a href="https://github.com/svaksha/Julia.jl/commit/a884fe9e921d57b87d85e970c2f57b8f21025641#commitcomment-15802037">comments</a> led to a <a href="https://github.com/svaksha/Julia.jl/issues/55">BR discussing</a> the addition of metadata tags that will enable programmers and package users to easily distinguish the status of various Julia packages that are under various stages of development. Currently, METADATA has a tag system but not all package authors use it, making it harder for lay users to know if the package maintenance is active or not.</p>
+
+<p>Lets experiment with asking package authors and core-commiters to tag their Julia packages on the following criteria :</p>
+
+<p>On a scale of 1 to 5 (1=lowest,..5=highest), please rank your package for,</p>
+
+<ul>
+<li><code>Usability</code> : Does the package do what it says it does? is it easy to figure out? Is the package production-ready and actively maintained (issues/PRs are responded and resolved in a timely manner, and maintenance and testing is at par with Julia release cycles).</li>
+</ul>
+<ul>
+<li><code>Quality</code> : Does the package have tests? are there lots of bugs? Do you have good documentation? Can it be used in production environments that expect prompt security patches?</li>
+</ul>
+<ul>
+<li><code>Activity</code> : Should a 3rd party user bother to use your library, or is it really only intended to be used by the package author? Let's say, an experimental "throw-away toy repo" whose development has now been abandoned.</li>
+</ul>
+<ul>
+<li><code>License</code> : Which software license do you use? If you dont have a license, please state <code>None</code>.</li>
+</('ul', 0)>
+<h2>Stargazers</h2>
+
+<p><a href="https://starchart.cc/svaksha/Julia.jl.svg"><img src="https://starchart.cc/svaksha/Julia.jl" alt="Stargazers over time</a>"></p>
+
+</body>
+</html>

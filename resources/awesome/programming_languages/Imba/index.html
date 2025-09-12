@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imba</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Imba</h1>
+
+<p><strong>Repository:</strong> https://github.com/koolamusic/awesome-imba#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<p align="center">
+	<a href="http://imba.io" align="center" target="_blank">
+		<img width="400" src="./logo/imba-awesome-logo.min.svg">
+	</a>
+</p>
+
+<h1>Awesome Imba <a href="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg"><img src="https://github.com/sindresorhus/awesome" alt="Awesome</a>"> <a href="https://img.shields.io/github/contributors/koolamusic/awesome-imba"><img src="#contributors" alt="GitHub contributors</a>"></h1>
+
+<blockquote>
+<p>A curated list of awesome Imba frameworks, libraries, software and resources</p>
+</blockquote>
+
+<p>Imba is a programming language inspired by Ruby and Python and compiles to performant and readable JavaScript with build-in transpilers and webpack loader.</p>
+
+<h2>Contents</h2>
+
+<ul>
+<li><a href="#resources">Resources</a></li>
+<ul>
+<li><a href="#official-resources">Official Resources</a></li>
+</ul>
+<ul>
+<li><a href="#toolkits-and-frameworks">Toolkits and Frameworks</a></li>
+</ul>
+<ul>
+<li><a href="#editor-plugins-and-ides">Editor Plugins and IDEs</a></li>
+</ul>
+<ul>
+<li><a href="#guides-and-tutorials">Guides and Tutorials</a></li>
+</ul>
+<ul>
+<li><a href="#articles">Articles</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#built-with-imba">Built with Imba</a></li>
+<ul>
+<li><a href="#real-world-apps">Real World Apps</a></li>
+</ul>
+<ul>
+<li><a href="#tools">Tools</a></li>
+</ul>
+<ul>
+<li><a href="#appswebsites">Apps/Websites</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#contribution">Contribution</a></li>
+</ul>
+<ul>
+<li><a href="#contributors">Contributors</a></li>
+</('ul', 0)>
+<h2>Resources</h2>
+
+<h4>Official Resources</h4>
+
+<ul>
+<li><a href="https://imba.io">Website</a></li>
+</ul>
+<ul>
+<li><a href="https://imba.io/docs">Docs</a></li>
+</ul>
+<ul>
+<li><a href="https://gitter.im/somebee/imba">Gitter</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/imba/imba">GitHub Repo</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/imba">GitHub Organization</a></li>
+</('ul', 0)>
+<h4>Toolkits and Frameworks</h4>
+
+<ul>
+<li><a href="https://github.com/athif23/start-imba">Start Imba</a> - Tool to bootstrap an Imba protect that was inspired by Create React App and Vue CLI.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/imba/hello-world-imba">Hello World Imba</a> - Official Imba "Hello World" example. Also you can use it as GitHub template.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/somebee/imba-router">Imba Router</a> - Experimental router for Imba.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/somebee/uxa">UXA</a> - Experimental framework for Imba.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/imba/parcel-plugin-imba">Parcel Plugin Imba</a> - <a href="https://parceljs.org/">Parcel Bundler</a> plugin to enable </li>
+</ul>
+<p>processing of Imba files.</p>
+<ul>
+<li><a href="https://github.com/nathanjohnson320/material-imba">Material Imba</a> - Material Design components written in Imba.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/haikyuu/imba-inertia-adapter">Imba Inertia Adapter</a> - Imba <a href="https://inertiajs.com">Inertia</a> adapter.</li>
+</ul>
+<ul>
+<li><a href="https://www.formidablejs.org/">Formidable</a> - Imba Framework for Rapid API Development.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/donaldp/imba-shell">Imba Shell</a> - Interactive debugger and REPL for Imba.</li>
+</('ul', 0)>
+<h4>Editor Plugins and IDEs</h4>
+
+<ul>
+<li><a href="http://github.com/somebee/language-imba">Atom</a> - Imba plugin for Atom.</li>
+</ul>
+<ul>
+<li><a href="http://github.com/somebee/sublime-imba">Sublime Text</a> - Imba plugin for Sublime.</li>
+</ul>
+<ul>
+<li><a href="http://github.com/somebee/vscode-imba">VSCode</a> - Imba plugin for VSCode.</li>
+</('ul', 0)>
+<h4>Guides and Tutorials</h4>
+
+<ul>
+<li><a href="https://imba.io/guides">Official Guide</a></li>
+</ul>
+<ul>
+<li><a href="https://imba.github.io/imba-guide/">Imba more depth Guide</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/jiggneshhgohel/hello-world-imba-tutorial">Hello World Imba Tutorial</a> - This is a detailed tutorial documenting the steps taken to build the "Hello World" app with Node.js, Imba and Webpack.</li>
+</ul>
+<ul>
+<li><a href="https://scrimba.com/p/pJkZsB/c6B9rAM">Why is Imba so fast?</a> - Learn why Imba is fast, how it works and then play around with it.</li>
+</ul>
+<ul>
+<li><a href="https://scrimba.com/playlist/pMvYcg">Quick introduction to Imba Router</a> - Learn how imba-router works in Imba.</li>
+</ul>
+<ul>
+<li><a href="https://scrimba.com/p/pDzDSZ/cRvRMSB">Creating a todo-list app in Imba</a> - Learn how to create an app faster and easier with Imba.</li>
+</('ul', 0)>
+<h4>Articles</h4>
+
+<ul>
+<li><a href="https://medium.freecodecamp.org/introduction-to-imba-the-alternative-to-javascript-e2aa1e3d1769">An Intro to Imba: the JavaScript-compatible language for lightning fast DOM updates - freeCodeCamp</a></li>
+</ul>
+<ul>
+<li><a href="https://adtmag.com/articles/2016/01/14/imba-web-language.aspx">New JavaScript-based Web Language Challenges React - ADTMag</a></li>
+</('ul', 0)>
+<h2>Built with Imba</h2>
+
+<h4>Real World Apps</h4>
+
+<ul>
+<li><a href="http://scrimba.com">Scrimba</a> - The interactive screencasting platform Scrimba.com is written in Imba, both frontend and backend.</li>
+</ul>
+<ul>
+<li><a href="https://rsf.is">Iceland Fish Auction Market</a> - A website for the iceland fish market.</li>
+</ul>
+<ul>
+<li><a href="https://gitspeak.com">GitSpeak</a> - A project management tool for developers.</li>
+</('ul', 0)>
+<h4>Tools</h4>
+
+<ul>
+<li><a href="https://github.com/konsumer/html2imba">html2imba</a> - <a href="http://konsumer.js.org/html2imba/">view online</a> - A tool to convert HTML to Imba tag source.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/taw/imba-json-beautifier">JSON pretty printer</a> - <a href="https://taw.github.io/imba-json-beautifier">view online</a> - JSON prettier.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/taw/imba-monoalphabetic">Monoalphabetic Cipher Decoder</a> - <a href="https://taw.github.io/imba-monoalphabetic">view online</a> - Decoder for monoalphabetic cipher.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/taw/imba-regexp-explorer">RegExp Explorer</a> - <a href="https://taw.github.io/imba-regexp-explorer">view online</a> - Regex tool.</li>
+</('ul', 0)>
+<h4>Apps/Websites</h4>
+
+<ul>
+<li><a href="https://github.com/somebee/todomvc-imba">Imba Todo MVC</a> -  Imba TodoMVC Example.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/shapkarin/imba-todo">Other Todo MVC</a> - <a href="https://shapkarin.github.io/imba-todo/">view online</a> - TodoMVC implementation following <a href="https://github.com/tastejs/todomvc">tastejs/todomvc</a> rules.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/taw/imba-todo-list">Simple Todo</a> - <a href="https://taw.github.io/imba-todo-list">view online</a> - More basic todo list app.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/cartonalexandre/imba-realworld-example-app">Imba Realworld App</a> - <a href="https://imba-realworld-example-app.netlify.com/">view online</a> - Project was created to demonstrate a fully fledged fullstack application that adheres to the <a href="https://github.com/gothinkster/realworld">RealWorld</a> spec and API.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/SamirHodzic/imba-capacitor-hn">Imba HackerNews Clone</a> - Demonstration of Imba & Capacitor used to build Hacker News clone.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/taw/imba-2048">2048 Game</a> - <a href="https://taw.github.io/imba-2048">view online</a> - 2048 Game.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/taw/imba-calculator">Calculator</a> - <a href="https://taw.github.io/imba-calculator">view online</a>  - Calculator.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/taw/imba-emoji-memory">Emoji Memory Game</a> - <a href="https://taw.github.io/imba-emoji-memory">view online</a> - Memory game.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/taw/imba-eyes">Eyes</a> - <a href="https://taw.github.io/imba-eyes">view online</a> - A cool interaction website.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/taw/imba-fifteen">Fifteen Puzzle</a> - <a href="https://taw.github.io/imba-fifteen">view online</a> - Fifteen puzzle.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/taw/imba-game-of-life">Game of Life</a> - <a href="https://taw.github.io/imba-game-of-life">view online</a> - Game of life.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/taw/imba-matrix-rain">Matrix Rain</a> - <a href="https://taw.github.io/imba-matrix-rain">view online</a> - Cool matrix-like rain animation.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/taw/imba-quote-machine">Quote Machine</a> - <a href="https://taw.github.io/imba-quote-machine">view online</a> - App that generates random quotes.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/taw/imba-rotn">ROT-N</a> - <a href="https://taw.github.io/imba-rotn">view online</a> - ROT-N app.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/taw/imba-snake">Snake Game</a> - <a href="https://taw.github.io/imba-snake">view online</a> - Snake game.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/taw/imba-weather">Weather App</a> - <a href="https://taw.github.io/imba-weather">view online</a> - Weather app.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/CassianoSF/imba-top-down-shooter">Top Down Shooter</a> - <a href="https://cassianosf.github.io/imba-top-down-shooter/dist/index.html">view online</a> - 2D zombie shooter game.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/haikyuu/perfect-stack">Ping CRM</a> - CRUD app with login, acccount, organizations and contacts management. Built with Inertia, Edgedb and Imba</li>
+</('ul', 0)>
+<h2>Contribution</h2>
+<p>Your contributions and suggestions are welcome anytime. Are you building great stuff with Imba? Feel free to share with us! :blush:</p>
+
+<p>Here are <a href="./CONTRIBUTING.md">instructions</a>. Please read the <a href=".github/CODE<em>OF</em>CONDUCT.md">Code of Conduct</a> as well.</p>
+
+<h2>Contributors</h2>
+
+<p>Thanks goes to these wonderful people (<a href="https://allcontributors.org/docs/en/emoji-key">emoji key</a>):</p>
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
+<table>
+  <tr>
+    <td align="center"><a href="http://shapkarin.me"><img src="https://avatars1.githubusercontent.com/u/1463086?v=4" width="100px;" alt="Yury Shapkarin"/><br /><sub><b>Yury Shapkarin</b></sub></a><br /><a href="#infra-shapkarin" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/koolamusic/awesome-imba/commits?author=shapkarin" title="Tests">⚠️</a> <a href="https://github.com/koolamusic/awesome-imba/commits?author=shapkarin" title="Code">💻</a> <a href="#example-shapkarin" title="Examples">💡</a> <a href="https://github.com/koolamusic/awesome-imba/commits?author=shapkarin" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://bit.ly/2EnR6Gf"><img src="https://avatars3.githubusercontent.com/u/8960757?v=4" width="100px;" alt="Andrew Miracle"/><br /><sub><b>Andrew Miracle</b></sub></a><br /><a href="https://github.com/koolamusic/awesome-imba/commits?author=koolamusic" title="Code">💻</a> <a href="https://github.com/koolamusic/awesome-imba/commits?author=koolamusic" title="Documentation">📖</a> <a href="#review-koolamusic" title="Reviewed Pull Requests">👀</a> <a href="#tool-koolamusic" title="Tools">🔧</a></td>
+    <td align="center"><a href="https://github.com/activestylus"><img src="https://avatars0.githubusercontent.com/u/285?v=4" width="100px;" alt="activestylus"/><br /><sub><b>activestylus</b></sub></a><br /><a href="#example-activestylus" title="Examples">💡</a></td>
+    <td align="center"><a href="https://b1001.herokuapp.com/"><img src="https://avatars3.githubusercontent.com/u/1680341?v=4" width="100px;" alt="Nathaniel Johnson"/><br /><sub><b>Nathaniel Johnson</b></sub></a><br /><a href="https://github.com/koolamusic/awesome-imba/commits?author=nathanjohnson320" title="Documentation">📖</a> <a href="#example-nathanjohnson320" title="Examples">💡</a></td>
+    <td align="center"><a href="http://imba.io"><img src="https://avatars2.githubusercontent.com/u/8467?v=4" width="100px;" alt="Sindre Aarsaether"/><br /><sub><b>Sindre Aarsaether</b></sub></a><br /><a href="https://github.com/koolamusic/awesome-imba/commits?author=somebee" title="Code">💻</a> <a href="https://github.com/koolamusic/awesome-imba/commits?author=somebee" title="Documentation">📖</a> <a href="#example-somebee" title="Examples">💡</a></td>
+    <td align="center"><a href="https://keybase.io/konsumer"><img src="https://avatars1.githubusercontent.com/u/83857?v=4" width="100px;" alt="David Konsumer"/><br /><sub><b>David Konsumer</b></sub></a><br /><a href="https://github.com/koolamusic/awesome-imba/commits?author=konsumer" title="Code">💻</a> <a href="https://github.com/koolamusic/awesome-imba/commits?author=konsumer" title="Documentation">📖</a> <a href="#example-konsumer" title="Examples">💡</a></td>
+    <td align="center"><a href="https://github.com/athif23"><img src="https://avatars3.githubusercontent.com/u/15215827?v=4" width="100px;" alt="At Indo"/><br /><sub><b>At Indo</b></sub></a><br /><a href="https://github.com/koolamusic/awesome-imba/commits?author=athif23" title="Code">💻</a> <a href="https://github.com/koolamusic/awesome-imba/commits?author=athif23" title="Documentation">📖</a> <a href="#design-athif23" title="Design">🎨</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/SamirHodzic"><img src="https://avatars0.githubusercontent.com/u/10077663?v=4" width="100px;" alt="SamirH"/><br /><sub><b>SamirH</b></sub></a><br /><a href="https://github.com/koolamusic/awesome-imba/commits?author=SamirHodzic" title="Code">💻</a> <a href="https://github.com/koolamusic/awesome-imba/commits?author=SamirHodzic" title="Documentation">📖</a> <a href="#example-SamirHodzic" title="Examples">💡</a></td>
+  </tr>
+</table>
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+<p>This project follows the <a href="https://github.com/all-contributors/all-contributors">all-contributors</a> specification. Contributions of any kind welcome!</p>
+
+<h2>License</h2>
+<p><a href="http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg"><img src="http://creativecommons.org/publicdomain/zero/1.0/" alt="CC0</a>"></p>
+
+<p>See <a href="LICENSE.md">LICENSE.md</a></p>
+
+</body>
+</html>

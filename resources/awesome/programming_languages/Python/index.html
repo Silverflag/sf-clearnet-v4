@@ -1,0 +1,2782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Python</h1>
+
+<p><strong>Repository:</strong> https://github.com/vinta/awesome-python#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<h1>Awesome Python <a href="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg"><img src="https://github.com/sindresorhus/awesome" alt="Awesome</a>"></h1>
+
+<p>An opinionated list of awesome Python frameworks, libraries, software and resources.</p>
+
+<p>Inspired by <a href="https://github.com/ziadoz/awesome-php">awesome-php</a>.</p>
+
+<ul>
+<li><a href="#awesome-python">Awesome Python</a></li>
+<ul>
+<li><a href="#admin-panels">Admin Panels</a></li>
+</ul>
+<ul>
+<li><a href="#algorithms-and-design-patterns">Algorithms and Design Patterns</a></li>
+</ul>
+<ul>
+<li><a href="#asgi-servers">ASGI Servers</a></li>
+</ul>
+<ul>
+<li><a href="#asynchronous-programming">Asynchronous Programming</a></li>
+</ul>
+<ul>
+<li><a href="#audio">Audio</a></li>
+</ul>
+<ul>
+<li><a href="#authentication">Authentication</a></li>
+</ul>
+<ul>
+<li><a href="#build-tools">Build Tools</a></li>
+</ul>
+<ul>
+<li><a href="#built-in-classes-enhancement">Built-in Classes Enhancement</a></li>
+</ul>
+<ul>
+<li><a href="#caching">Caching</a></li>
+</ul>
+<ul>
+<li><a href="#chatops-tools">ChatOps Tools</a></li>
+</ul>
+<ul>
+<li><a href="#cms">CMS</a></li>
+</ul>
+<ul>
+<li><a href="#code-analysis">Code Analysis</a></li>
+</ul>
+<ul>
+<li><a href="#command-line-interface-development">Command-line Interface Development</a></li>
+</ul>
+<ul>
+<li><a href="#command-line-tools">Command-line Tools</a></li>
+</ul>
+<ul>
+<li><a href="#computer-vision">Computer Vision</a></li>
+</ul>
+<ul>
+<li><a href="#configuration-files">Configuration Files</a></li>
+</ul>
+<ul>
+<li><a href="#cryptography">Cryptography</a></li>
+</ul>
+<ul>
+<li><a href="#data-analysis">Data Analysis</a></li>
+</ul>
+<ul>
+<li><a href="#data-validation">Data Validation</a></li>
+</ul>
+<ul>
+<li><a href="#data-visualization">Data Visualization</a></li>
+</ul>
+<ul>
+<li><a href="#database-drivers">Database Drivers</a></li>
+</ul>
+<ul>
+<li><a href="#database">Database</a></li>
+</ul>
+<ul>
+<li><a href="#date-and-time">Date and Time</a></li>
+</ul>
+<ul>
+<li><a href="#debugging-tools">Debugging Tools</a></li>
+</ul>
+<ul>
+<li><a href="#deep-learning">Deep Learning</a></li>
+</ul>
+<ul>
+<li><a href="#devops-tools">DevOps Tools</a></li>
+</ul>
+<ul>
+<li><a href="#distributed-computing">Distributed Computing</a></li>
+</ul>
+<ul>
+<li><a href="#distribution">Distribution</a></li>
+</ul>
+<ul>
+<li><a href="#documentation">Documentation</a></li>
+</ul>
+<ul>
+<li><a href="#downloader">Downloader</a></li>
+</ul>
+<ul>
+<li><a href="#editor-plugins-and-ides">Editor Plugins and IDEs</a></li>
+</ul>
+<ul>
+<li><a href="#email">Email</a></li>
+</ul>
+<ul>
+<li><a href="#environment-management">Environment Management</a></li>
+</ul>
+<ul>
+<li><a href="#file-manipulation">File Manipulation</a></li>
+</ul>
+<ul>
+<li><a href="#functional-programming">Functional Programming</a></li>
+</ul>
+<ul>
+<li><a href="#game-development">Game Development</a></li>
+</ul>
+<ul>
+<li><a href="#geolocation">Geolocation</a></li>
+</ul>
+<ul>
+<li><a href="#gui-development">GUI Development</a></li>
+</ul>
+<ul>
+<li><a href="#hardware">Hardware</a></li>
+</ul>
+<ul>
+<li><a href="#html-manipulation">HTML Manipulation</a></li>
+</ul>
+<ul>
+<li><a href="#http-clients">HTTP Clients</a></li>
+</ul>
+<ul>
+<li><a href="#image-processing">Image Processing</a></li>
+</ul>
+<ul>
+<li><a href="#implementations">Implementations</a></li>
+</ul>
+<ul>
+<li><a href="#interactive-interpreter">Interactive Interpreter</a></li>
+</ul>
+<ul>
+<li><a href="#internationalization">Internationalization</a></li>
+</ul>
+<ul>
+<li><a href="#job-scheduler">Job Scheduler</a></li>
+</ul>
+<ul>
+<li><a href="#logging">Logging</a></li>
+</ul>
+<ul>
+<li><a href="#machine-learning">Machine Learning</a></li>
+</ul>
+<ul>
+<li><a href="#miscellaneous">Miscellaneous</a></li>
+</ul>
+<ul>
+<li><a href="#natural-language-processing">Natural Language Processing</a></li>
+</ul>
+<ul>
+<li><a href="#network-virtualization">Network Virtualization</a></li>
+</ul>
+<ul>
+<li><a href="#news-feed">News Feed</a></li>
+</ul>
+<ul>
+<li><a href="#orm">ORM</a></li>
+</ul>
+<ul>
+<li><a href="#package-management">Package Management</a></li>
+</ul>
+<ul>
+<li><a href="#package-repositories">Package Repositories</a></li>
+</ul>
+<ul>
+<li><a href="#penetration-testing">Penetration testing</a></li>
+</ul>
+<ul>
+<li><a href="#permissions">Permissions</a></li>
+</ul>
+<ul>
+<li><a href="#processes">Processes</a></li>
+</ul>
+<ul>
+<li><a href="#recommender-systems">Recommender Systems</a></li>
+</ul>
+<ul>
+<li><a href="#refactoring">Refactoring</a></li>
+</ul>
+<ul>
+<li><a href="#restful-api">RESTful API</a></li>
+</ul>
+<ul>
+<li><a href="#robotics">Robotics</a></li>
+</ul>
+<ul>
+<li><a href="#rpc-servers">RPC Servers</a></li>
+</ul>
+<ul>
+<li><a href="#science">Science</a></li>
+</ul>
+<ul>
+<li><a href="#search">Search</a></li>
+</ul>
+<ul>
+<li><a href="#serialization">Serialization</a></li>
+</ul>
+<ul>
+<li><a href="#serverless-frameworks">Serverless Frameworks</a></li>
+</ul>
+<ul>
+<li><a href="#shell">Shell</a></li>
+</ul>
+<ul>
+<li><a href="#specific-formats-processing">Specific Formats Processing</a></li>
+</ul>
+<ul>
+<li><a href="#static-site-generator">Static Site Generator</a></li>
+</ul>
+<ul>
+<li><a href="#tagging">Tagging</a></li>
+</ul>
+<ul>
+<li><a href="#task-queues">Task Queues</a></li>
+</ul>
+<ul>
+<li><a href="#template-engine">Template Engine</a></li>
+</ul>
+<ul>
+<li><a href="#testing">Testing</a></li>
+</ul>
+<ul>
+<li><a href="#text-processing">Text Processing</a></li>
+</ul>
+<ul>
+<li><a href="#third-party-apis">Third-party APIs</a></li>
+</ul>
+<ul>
+<li><a href="#url-manipulation">URL Manipulation</a></li>
+</ul>
+<ul>
+<li><a href="#video">Video</a></li>
+</ul>
+<ul>
+<li><a href="#web-asset-management">Web Asset Management</a></li>
+</ul>
+<ul>
+<li><a href="#web-content-extracting">Web Content Extracting</a></li>
+</ul>
+<ul>
+<li><a href="#web-crawling">Web Crawling</a></li>
+</ul>
+<ul>
+<li><a href="#web-frameworks">Web Frameworks</a></li>
+</ul>
+<ul>
+<li><a href="#websocket">WebSocket</a></li>
+</ul>
+<ul>
+<li><a href="#wsgi-servers">WSGI Servers</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#resources">Resources</a></li>
+<ul>
+<li><a href="#newsletters">Newsletters</a></li>
+</ul>
+<ul>
+<li><a href="#podcasts">Podcasts</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#contributing">Contributing</a></li>
+<hr>
+</('ul', 0)>
+<h2>Admin Panels</h2>
+
+<p><em>Libraries for administrative interfaces.</em></p>
+
+<ul>
+<li><a href="https://github.com/ajenti/ajenti">ajenti</a> - The admin panel your servers deserve.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sehmaschine/django-grappelli">django-grappelli</a> - A jazzy skin for the Django Admin-Interface.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/flask-admin/flask-admin">flask-admin</a> - Simple and extensible administrative interface framework for Flask.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mher/flower">flower</a> - Real-time monitor and web admin for Celery.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jet-admin/jet-bridge">jet-bridge</a> - Admin panel framework for any application with nice UI (ex Jet Django).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/wooey/wooey">wooey</a> - A Django app which creates automatic web UIs for Python scripts.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/streamlit/streamlit">streamlit</a> - A framework which lets you build dashboards, generate reports, or create chat apps in minutes.</li>
+</('ul', 0)>
+<h2>Algorithms and Design Patterns</h2>
+
+<p><em>Python implementation of data structures, algorithms and design patterns. Also see <a href="https://github.com/tayllan/awesome-algorithms">awesome-algorithms</a>.</em></p>
+
+<ul>
+<li>Algorithms</li>
+<ul>
+<li><a href="https://github.com/keon/algorithms">algorithms</a> - Minimal examples of data structures and algorithms.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/prabhupant/python-ds">python-ds</a> - A collection of data structure and algorithms for coding interviews.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/grantjenks/python-sortedcontainers">sortedcontainers</a> - Fast and pure-Python implementation of sorted collections.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/TheAlgorithms/Python">thealgorithms</a> - All Algorithms implemented in Python.</li>
+</ul>
+</ul>
+<ul>
+<li>Design Patterns</li>
+<ul>
+<li><a href="https://github.com/tylerlaberge/PyPattyrn">pypattyrn</a> - A simple yet effective library for implementing common design patterns.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/faif/python-patterns">python-patterns</a> - A collection of design patterns in Python.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pytransitions/transitions">transitions</a> - A lightweight, object-oriented finite state machine implementation.</li>
+</('ul', 4)>
+</('ul', 0)>
+<h2>ASGI Servers</h2>
+
+<p><em><a href="https://asgi.readthedocs.io/en/latest/">ASGI</a>-compatible web servers.</em></p>
+
+<ul>
+<li><a href="https://github.com/django/daphne">daphne</a> - A HTTP, HTTP2 and WebSocket protocol server for ASGI and ASGI-HTTP.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/encode/uvicorn">uvicorn</a> - A lightning-fast ASGI server implementation, using uvloop and httptools.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pgjones/hypercorn">hypercorn</a> - An ASGI and WSGI Server based on Hyper libraries and inspired by Gunicorn.</li>
+</('ul', 0)>
+<h2>Asynchronous Programming</h2>
+
+<p><em>Libraries for asynchronous, concurrent and parallel execution. Also see <a href="https://github.com/timofurrer/awesome-asyncio">awesome-asyncio</a>.</em></p>
+
+<ul>
+<li><a href="https://docs.python.org/3/library/asyncio.html">asyncio</a> - (Python standard library) Asynchronous I/O, event loop, coroutines and tasks.</li>
+<ul>
+<li><a href="https://github.com/timofurrer/awesome-asyncio">awesome-asyncio</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://docs.python.org/3/library/concurrent.futures.html">concurrent.futures</a> - (Python standard library) A high-level interface for asynchronously executing callables.</li>
+</ul>
+<ul>
+<li><a href="https://docs.python.org/3/library/multiprocessing.html">multiprocessing</a> - (Python standard library) Process-based parallelism.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/python-trio/trio">trio</a> - A friendly library for async concurrency and I/O.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/twisted/twisted">twisted</a> - An event-driven networking engine.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/MagicStack/uvloop">uvloop</a> - Ultra fast asyncio event loop.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/eventlet/eventlet">eventlet</a> - Asynchronous framework with WSGI support.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/gevent/gevent">gevent</a> - A coroutine-based Python networking library that uses <a href="https://github.com/python-greenlet/greenlet">greenlet</a>.</li>
+</('ul', 0)>
+<h2>Audio</h2>
+
+<p><em>Libraries for manipulating audio and its metadata.</em></p>
+
+<ul>
+<li>Audio</li>
+<ul>
+<li><a href="https://github.com/beetbox/audioread">audioread</a> - Cross-library (GStreamer + Core Audio + MAD + FFmpeg) audio decoding.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/libAudioFlux/audioFlux">audioFlux</a> - A library for audio and music analysis, feature extraction.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/worldveil/dejavu">dejavu</a> - Audio fingerprinting and recognition.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/keunwoochoi/kapre">kapre</a> - Keras Audio Preprocessors.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/librosa/librosa">librosa</a> - Python library for audio and music analysis.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sergree/matchering">matchering</a> - A library for automated reference audio mastering.</li>
+</ul>
+<ul>
+<li><a href="http://bspaans.github.io/python-mingus/">mingus</a> - An advanced music theory and notation package with MIDI file and playback support.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tyiannak/pyAudioAnalysis">pyaudioanalysis</a> - Audio feature extraction, classification, segmentation and applications.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jiaaro/pydub">pydub</a> - Manipulate audio with a simple and easy high level interface.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Parisson/TimeSide">timeside</a> - Open web audio processing framework.</li>
+</ul>
+</ul>
+<ul>
+<li>Metadata</li>
+<ul>
+<li><a href="https://github.com/beetbox/beets">beets</a> - A music library manager and <a href="https://musicbrainz.org/">MusicBrainz</a> tagger.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/nicfit/eyeD3">eyed3</a> - A tool for working with audio files, specifically MP3 files containing ID3 metadata.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/quodlibet/mutagen">mutagen</a> - A Python module to handle audio metadata.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/devsnd/tinytag">tinytag</a> - A library for reading music meta data of MP3, OGG, FLAC and Wave files.</li>
+</('ul', 4)>
+</('ul', 0)>
+<h2>Authentication</h2>
+
+<p><em>Libraries for implementing authentications schemes.</em></p>
+
+<ul>
+<li>OAuth</li>
+<ul>
+<li><a href="https://github.com/lepture/authlib">authlib</a> - JavaScript Object Signing and Encryption draft implementation.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pennersr/django-allauth">django-allauth</a> - Authentication app for Django that "just works."</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jazzband/django-oauth-toolkit">django-oauth-toolkit</a> - OAuth 2 goodies for Django.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/oauthlib/oauthlib">oauthlib</a> - A generic and thorough implementation of the OAuth request-signing logic.</li>
+</ul>
+</ul>
+<ul>
+<li>JWT</li>
+<ul>
+<li><a href="https://github.com/jpadilla/pyjwt">pyjwt</a> - JSON Web Token implementation in Python.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mpdavis/python-jose/">python-jose</a> - A JOSE implementation in Python.</li>
+</('ul', 4)>
+</('ul', 0)>
+<h2>Build Tools</h2>
+
+<p><em>Compile software from source code.</em></p>
+
+<ul>
+<li><a href="https://github.com/openembedded/bitbake">bitbake</a> - A make-like build tool for embedded Linux.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/buildout/buildout">buildout</a> - A build system for creating, assembling and deploying applications from multiple parts.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/platformio/platformio-core">platformio</a> - A console tool to build code with different development platforms.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pybuilder/pybuilder">pybuilder</a> - A continuous build tool written in pure Python.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/SCons/scons">scons</a> - A software construction tool.</li>
+</('ul', 0)>
+<h2>Built-in Classes Enhancement</h2>
+
+<p><em>Libraries for enhancing Python built-in classes.</em></p>
+
+<ul>
+<li><a href="https://github.com/python-attrs/attrs">attrs</a> - Replacement for <code><strong>init</strong></code>, <code><strong>eq</strong></code>, <code><strong>repr</strong></code>, etc. boilerplate in class definitions.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jab/bidict">bidict</a> - Efficient, Pythonic bidirectional map data structures and related functionality..</li>
+</ul>
+<ul>
+<li><a href="https://github.com/cdgriffith/Box">box</a> - Python dictionaries with advanced dot notation access.</li>
+</ul>
+<ul>
+<li><a href="https://docs.python.org/3/library/dataclasses.html">dataclasses</a> - (Python standard library) Data classes.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/carlosescri/DottedDict">dotteddict</a> - A library that provides a method of accessing lists and dicts with a dotted path notation.</li>
+</('ul', 0)>
+<h2>CMS</h2>
+
+<p><em>Content Management Systems.</em></p>
+
+<ul>
+<li><a href="https://github.com/feincms/feincms">feincms</a> - One of the most advanced Content Management Systems built on Django.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/indico/indico">indico</a> - A feature-rich event management system, made @ <a href="https://en.wikipedia.org/wiki/CERN">CERN</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/wagtail/wagtail">wagtail</a> - A Django content management system.</li>
+</('ul', 0)>
+<h2>Caching</h2>
+
+<p><em>Libraries for caching data.</em></p>
+
+<ul>
+<li><a href="https://github.com/bbangert/beaker">beaker</a> - A WSGI middleware for sessions and caching.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/django-cache-machine/django-cache-machine">django-cache-machine</a> - Automatic caching and invalidation for Django models.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Suor/django-cacheops">django-cacheops</a> - A slick ORM cache with automatic granular event-driven invalidation.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sqlalchemy/dogpile.cache">dogpile.cache</a> - dogpile.cache is a next generation replacement for Beaker made by the same authors.</li>
+</ul>
+<ul>
+<li><a href="https://pypi.org/project/HermesCache/">hermescache</a> - Python caching library with tag-based invalidation and dogpile effect prevention.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lericson/pylibmc">pylibmc</a> - A Python wrapper around the <a href="https://libmemcached.org/libMemcached.html">libmemcached</a> interface.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/grantjenks/python-diskcache">python-diskcache</a> - SQLite and file backed cache backend with faster lookups than memcached and redis.</li>
+</('ul', 0)>
+<h2>ChatOps Tools</h2>
+
+<p><em>Libraries for chatbot development.</em></p>
+
+<ul>
+<li><a href="https://github.com/errbotio/errbot/">errbot</a> - The easiest and most popular chatbot to implement ChatOps.</li>
+</('ul', 0)>
+<h2>Code Analysis</h2>
+
+<p><em>Tools of static analysis, linters and code quality checkers. Also see <a href="https://github.com/mre/awesome-static-analysis">awesome-static-analysis</a>.</em></p>
+
+<ul>
+<li>Code Analysis</li>
+<ul>
+<li><a href="https://github.com/scottrogowski/code2flow">code2flow</a> - Turn your Python and JavaScript code into DOT flowcharts.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/PyCQA/prospector">prospector</a> - A tool to analyse Python code.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jendrikseipp/vulture">vulture</a> - A tool for finding and analysing dead Python code.</li>
+</ul>
+</ul>
+<ul>
+<li>Code Linters</li>
+<ul>
+<li><a href="https://github.com/PyCQA/flake8">flake8</a> - A wrapper around <code>pycodestyle</code>, <code>pyflakes</code> and McCabe.</li>
+<ul>
+<li><a href="https://github.com/DmytroLitvinov/awesome-flake8-extensions">awesome-flake8-extensions</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://github.com/pylint-dev/pylint">pylint</a> - A fully customizable source code analyzer.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/astral-sh/ruff">ruff</a> - An extremely fast Python linter and code formatter.</li>
+</ul>
+</ul>
+<ul>
+<li>Code Formatters</li>
+<ul>
+<li><a href="https://github.com/psf/black">black</a> - The uncompromising Python code formatter.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/timothycrosley/isort">isort</a> - A Python utility / library to sort imports.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/google/yapf">yapf</a> - Yet another Python code formatter from Google.</li>
+</ul>
+</ul>
+<ul>
+<li>Static Type Checkers, also see <a href="https://github.com/typeddjango/awesome-python-typing">awesome-python-typing</a></li>
+<ul>
+<li><a href="https://github.com/python/mypy">mypy</a> - Check variable types during compile time.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/facebook/pyre-check">pyre-check</a> - Performant type checking.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/python/typeshed">typeshed</a> - Collection of library stubs for Python, with static types.</li>
+</ul>
+</ul>
+<ul>
+<li>Static Type Annotations Generators</li>
+<ul>
+<li><a href="https://github.com/Instagram/MonkeyType">monkeytype</a> - A system for Python that generates static type annotations by collecting runtime types.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/google/pytype">pytype</a> - Pytype checks and infers types for Python code - without requiring type annotations.</li>
+</('ul', 4)>
+</('ul', 0)>
+<h2>Command-line Interface Development</h2>
+
+<p><em>Libraries for building command-line applications.</em></p>
+
+<ul>
+<li>Command-line Application Development</li>
+<ul>
+<li><a href="https://github.com/datafolklabs/cement">cement</a> - CLI Application Framework for Python.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pallets/click/">click</a> - A package for creating beautiful command line interfaces in a composable way.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/openstack/cliff">cliff</a> - A framework for creating command-line programs with multi-level commands.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/google/python-fire">python-fire</a> - A library for creating command line interfaces from absolutely any Python object.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/prompt-toolkit/python-prompt-toolkit">python-prompt-toolkit</a> - A library for building powerful interactive command lines.</li>
+</ul>
+</ul>
+<ul>
+<li>Terminal Rendering</li>
+<ul>
+<li><a href="https://github.com/rsalmei/alive-progress">alive-progress</a> - A new kind of Progress Bar, with real-time throughput, eta and very cool animations.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/peterbrittain/asciimatics">asciimatics</a> - A package to create full-screen text UIs (from interactive forms to ASCII animations).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/glamp/bashplotlib">bashplotlib</a> - Making basic plots in the terminal.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tartley/colorama">colorama</a> - Cross-platform colored terminal text.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Textualize/rich">rich</a> - Python library for rich text and beautiful formatting in the terminal. Also provides a great <code>RichHandler</code> log handler.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tqdm/tqdm">tqdm</a> - Fast, extensible progress bar for loops and CLI.</li>
+</('ul', 4)>
+</('ul', 0)>
+<h2>Command-line Tools</h2>
+
+<p><em>Useful CLI-based tools for productivity.</em></p>
+
+<ul>
+<li>Productivity Tools</li>
+<ul>
+<li><a href="https://github.com/copier-org/copier">copier</a> - A library and command-line utility for rendering projects templates.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/cookiecutter/cookiecutter">cookiecutter</a> - A command-line utility that creates projects from cookiecutters (project templates).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sloria/doitlive">doitlive</a> - A tool for live presentations in the terminal.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/gleitz/howdoi">howdoi</a> - Instant coding answers via the command line.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pyinvoke/invoke">invoke</a> - A tool for managing shell-oriented subprocesses and organizing executable Python code into CLI-invokable tasks.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/facebook/PathPicker">pathpicker</a> - Select files out of bash output.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/nvbn/thefuck">thefuck</a> - Correcting your previous console command.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tmux-python/tmuxp">tmuxp</a> - A <a href="https://github.com/tmux/tmux">tmux</a> session manager.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/timofurrer/try">try</a> - A dead simple CLI to try out python packages - it's never been easier.</li>
+</ul>
+</ul>
+<ul>
+<li>CLI Enhancements</li>
+<ul>
+<li><a href="https://github.com/httpie/cli">httpie</a> - A command line HTTP client, a user-friendly cURL replacement.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/laixintao/iredis">iredis</a> - Redis CLI with autocompletion and syntax highlighting.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dbcli/litecli">litecli</a> - SQLite CLI with autocompletion and syntax highlighting.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dbcli/mycli">mycli</a> - MySQL CLI with autocompletion and syntax highlighting.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dbcli/pgcli">pgcli</a> - PostgreSQL CLI with autocompletion and syntax highlighting.</li>
+</('ul', 4)>
+</('ul', 0)>
+<h2>Computer Vision</h2>
+
+<p><em>Libraries for Computer Vision.</em></p>
+
+<ul>
+<li><a href="https://github.com/JaidedAI/EasyOCR">easyocr</a> - Ready-to-use OCR with 40+ languages supported.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kornia/kornia/">kornia</a> - Open Source Differentiable Computer Vision Library for PyTorch.</li>
+</ul>
+<ul>
+<li><a href="https://opencv.org/">opencv</a> - Open Source Computer Vision Library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/madmaze/pytesseract">pytesseract</a> - A wrapper for <a href="https://github.com/tesseract-ocr">Google Tesseract OCR</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sirfz/tesserocr">tesserocr</a> - Another simple, Pillow-friendly, wrapper around the <code>tesseract-ocr</code> API for OCR.</li>
+</('ul', 0)>
+<h2>Configuration Files</h2>
+
+<p><em>Libraries for storing and parsing configuration options.</em></p>
+
+<ul>
+<li><a href="https://docs.python.org/3/library/configparser.html">configparser</a> - (Python standard library) INI file parser.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/DiffSK/configobj">configobj</a> - INI file parser with validation.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/facebookresearch/hydra">hydra</a> - Hydra is a framework for elegantly configuring complex applications.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/HBNetwork/python-decouple">python-decouple</a> - Strict separation of settings from code.</li>
+</('ul', 0)>
+<h2>Cryptography</h2>
+
+<ul>
+<li><a href="https://github.com/pyca/cryptography">cryptography</a> - A package designed to expose cryptographic primitives and recipes to Python developers.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/paramiko/paramiko">paramiko</a> - The leading native Python SSHv2 protocol library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pyca/pynacl">pynacl</a> - Python binding to the Networking and Cryptography (NaCl) library.</li>
+</('ul', 0)>
+<h2>Data Analysis</h2>
+
+<p><em>Libraries for data analyzing.</em></p>
+
+<ul>
+<li><a href="http://pandas.pydata.org/">pandas</a> - A library providing high-performance, easy-to-use data structures and data analysis tools.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/aws/aws-sdk-pandas">aws-sdk-pandas</a> - Pandas on AWS.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/simonw/datasette">datasette</a> - An open source multi-tool for exploring and publishing data.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/hi-primus/optimus">optimus</a> - Agile Data Science Workflows made easy with PySpark.</li>
+</('ul', 0)>
+<h2>Data Validation</h2>
+
+<p><em>Libraries for validating data. Used for forms in many cases.</em></p>
+
+<ul>
+<li><a href="https://github.com/pyeve/cerberus">cerberus</a> - A lightweight and extensible data validation library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Pylons/colander">colander</a> - Validating and deserializing data obtained via XML, JSON, an HTML form post.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/python-jsonschema/jsonschema">jsonschema</a> - An implementation of <a href="http://json-schema.org/">JSON Schema</a> for Python.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/keleshev/schema">schema</a> - A library for validating Python data structures.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/schematics/schematics">schematics</a> - Data Structure Validation.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/alecthomas/voluptuous">voluptuous</a> - A Python data validation library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pydantic/pydantic">pydantic</a> - Data validation using Python type hints.</li>
+</('ul', 0)>
+<h2>Data Visualization</h2>
+
+<p><em>Libraries for visualizing data. Also see <a href="https://github.com/sorrycc/awesome-javascript#data-visualization">awesome-javascript</a>.</em></p>
+
+<ul>
+<li><a href="https://github.com/altair-viz/altair">altair</a> - Declarative statistical visualization library for Python.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/bokeh/bokeh">bokeh</a> - Interactive Web Plotting for Python.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/bloomberg/bqplot">bqplot</a> - Interactive Plotting Library for the Jupyter Notebook.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/SciTools/cartopy">cartopy</a> - A cartographic python library with matplotlib support.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mingrammer/diagrams">diagrams</a> - Diagram as Code.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/matplotlib/matplotlib">matplotlib</a> - A Python 2D plotting library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/has2k1/plotnine">plotnine</a> - A grammar of graphics for Python based on ggplot2.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Kozea/pygal">pygal</a> - A Python SVG Charts Creator.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pygraphviz/pygraphviz/">pygraphviz</a> - Python interface to <a href="http://www.graphviz.org/">Graphviz</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pyqtgraph/pyqtgraph">pyqtgraph</a> - Interactive and realtime 2D/3D/Image plotting and science/engineering widgets.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mwaskom/seaborn">seaborn</a> - Statistical data visualization using Matplotlib.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/vispy/vispy">vispy</a> - High-performance scientific visualization based on OpenGL.</li>
+</('ul', 0)>
+<h2>Database</h2>
+
+<p><em>Databases implemented in Python.</em></p>
+
+<ul>
+<li><a href="https://github.com/patx/pickledb">pickleDB</a> - A simple and lightweight key-value store for Python.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/msiemens/tinydb">tinydb</a> - A tiny, document-oriented database.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/zopefoundation/ZODB">zodb</a> - A native object database for Python. A key-value and object graph database.</li>
+</('ul', 0)>
+<h2>Database Drivers</h2>
+
+<p><em>Libraries for connecting and operating databases.</em></p>
+
+<ul>
+<li>MySQL - <a href="http://shlomi-noach.github.io/awesome-mysql/">awesome-mysql</a></li>
+<ul>
+<li><a href="https://github.com/PyMySQL/mysqlclient">mysqlclient</a> - MySQL connector with Python 3 support (<a href="https://sourceforge.net/projects/mysql-python/">mysql-python</a> fork).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/PyMySQL/PyMySQL">pymysql</a> - A pure Python MySQL driver compatible to mysql-python.</li>
+</ul>
+</ul>
+<ul>
+<li>PostgreSQL - <a href="https://github.com/dhamaniasad/awesome-postgres">awesome-postgres</a></li>
+<ul>
+<li><a href="https://github.com/psycopg/psycopg">psycopg</a> - The most popular PostgreSQL adapter for Python.</li>
+</ul>
+</ul>
+<ul>
+<li>SQlite - <a href="https://github.com/planetopendata/awesome-sqlite">awesome-sqlite</a></li>
+<ul>
+<li><a href="https://docs.python.org/3/library/sqlite3.html">sqlite3</a> - (Python standard library) SQlite interface compliant with DB-API 2.0.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/simonw/sqlite-utils">sqlite-utils</a> - Python CLI utility and library for manipulating SQLite databases.</li>
+</ul>
+</ul>
+<ul>
+<li>Other Relational Databases</li>
+<ul>
+<li><a href="https://github.com/pymssql/pymssql">pymssql</a> - A simple database interface to Microsoft SQL Server.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mymarilyn/clickhouse-driver">clickhouse-driver</a> - Python driver with native interface for ClickHouse.</li>
+</ul>
+</ul>
+<ul>
+<li>NoSQL Databases</li>
+<ul>
+<li><a href="https://github.com/datastax/python-driver">cassandra-driver</a> - The Python Driver for Apache Cassandra.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/python-happybase/happybase">happybase</a> - A developer-friendly library for Apache HBase.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dpkp/kafka-python">kafka-python</a> - The Python client for Apache Kafka.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mongodb/mongo-python-driver">pymongo</a> - The official Python client for MongoDB.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mongodb/motor">motor</a> - The async Python driver for MongoDB.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/redis/redis-py">redis-py</a> - The Python client for Redis.</li>
+</('ul', 4)>
+</('ul', 0)>
+<h2>Date and Time</h2>
+
+<p><em>Libraries for working with dates and times.</em></p>
+
+<ul>
+<li><a href="https://github.com/arrow-py/arrow">arrow</a> - A Python library that offers a sensible and human-friendly approach to creating, manipulating, formatting and converting dates, times and timestamps.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dateutil/dateutil">dateutil</a> - Extensions to the standard Python <a href="https://docs.python.org/3/library/datetime.html">datetime</a> module.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sdispater/pendulum">pendulum</a> - Python datetimes made easy.</li>
+</ul>
+<ul>
+<li><a href="https://pypi.org/project/pytz/">pytz</a> - World timezone definitions, modern and historical. Brings the <a href="https://en.wikipedia.org/wiki/Tz_database">tz database</a> into Python.</li>
+</('ul', 0)>
+<h2>Debugging Tools</h2>
+
+<p><em>Libraries for debugging code.</em></p>
+
+<ul>
+<li>pdb-like Debugger</li>
+<ul>
+<li><a href="https://github.com/gotcha/ipdb">ipdb</a> - IPython-enabled <a href="https://docs.python.org/3/library/pdb.html">pdb</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/inducer/pudb">pudb</a> - A full-screen, console-based Python debugger.</li>
+</ul>
+</ul>
+<ul>
+<li>Tracing</li>
+<ul>
+<li><a href="https://github.com/ionelmc/python-manhole">manhole</a> - Debugging UNIX socket connections and present the stacktraces for all threads and an interactive prompt.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ionelmc/python-hunter">python-hunter</a> - A flexible code tracing toolkit.</li>
+</ul>
+</ul>
+<ul>
+<li>Profiler</li>
+<ul>
+<li><a href="https://github.com/benfred/py-spy">py-spy</a> - A sampling profiler for Python programs. Written in Rust.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/nvdv/vprof">vprof</a> - Visual Python profiler.</li>
+</ul>
+</ul>
+<ul>
+<li>Others</li>
+<ul>
+<li><a href="https://github.com/jazzband/django-debug-toolbar">django-debug-toolbar</a> - Display various debug information for Django.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pallets-eco/flask-debugtoolbar">flask-debugtoolbar</a> - A port of the django-debug-toolbar to flask.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/gruns/icecream">icecream</a> - Inspect variables, expressions, and program execution with a single, simple function call.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/eliben/pyelftools">pyelftools</a> - Parsing and analyzing ELF files and DWARF debugging information.</li>
+</('ul', 4)>
+</('ul', 0)>
+<h2>Deep Learning</h2>
+
+<p><em>Frameworks for Neural Networks and Deep Learning. Also see <a href="https://github.com/ChristosChristofidis/awesome-deep-learning">awesome-deep-learning</a>.</em></p>
+
+<ul>
+<li><a href="https://github.com/keras-team/keras">keras</a> - A high-level neural networks library and capable of running on top of either TensorFlow or Theano.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pytorch/pytorch">pytorch</a> - Tensors and Dynamic neural networks in Python with strong GPU acceleration.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Lightning-AI/pytorch-lightning">pytorch-lightning</a> - Deep learning framework to train, deploy, and ship AI products Lightning fast.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/DLR-RM/stable-baselines3">stable-baselines3</a> - PyTorch implementations of Stable Baselines (deep) reinforcement learning algorithms.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tensorflow/tensorflow">tensorflow</a> - The most popular Deep Learning framework created by Google.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Theano/Theano">theano</a> - A library for fast numerical computation.</li>
+</('ul', 0)>
+<h2>DevOps Tools</h2>
+
+<p><em>Software and libraries for DevOps.</em></p>
+
+<ul>
+<li>Configuration Management</li>
+<ul>
+<li><a href="https://github.com/ansible/ansible">ansible</a> - A radically simple IT automation platform.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/canonical/cloud-init">cloudinit</a> - A multi-distribution package that handles early initialization of a cloud instance.</li>
+</ul>
+<ul>
+<li><a href="https://www.openstack.org/">openstack</a> - Open source software for building private and public clouds.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pyinfra-dev/pyinfra">pyinfra</a> - A versatile CLI tools and python libraries to automate infrastructure.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/saltstack/salt">saltstack</a> - Infrastructure automation and management system.</li>
+</ul>
+</ul>
+<ul>
+<li>SSH-style Deployment</li>
+<ul>
+<li><a href="https://github.com/sebastien/cuisine">cuisine</a> - Chef-like functionality for Fabric.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/fabric/fabric">fabric</a> - A simple, Pythonic tool for remote execution and deployment.</li>
+</ul>
+</ul>
+<ul>
+<li>Process Management</li>
+<ul>
+<li><a href="https://github.com/Supervisor/supervisor">supervisor</a> - Supervisor process control system for UNIX.</li>
+</ul>
+</ul>
+<ul>
+<li>Monitoring</li>
+<ul>
+<li><a href="https://github.com/giampaolo/psutil">psutil</a> - A cross-platform process and system utilities module.</li>
+</ul>
+</ul>
+<ul>
+<li>Backup</li>
+<ul>
+<li><a href="https://github.com/borgbackup/borg">borg</a> - A deduplicating archiver with compression and encryption.</li>
+</('ul', 4)>
+</('ul', 0)>
+<h2>Distributed Computing</h2>
+
+<p><em>Frameworks and libraries for Distributed Computing.</em></p>
+
+<ul>
+<li>Batch Processing</li>
+<ul>
+<li><a href="https://github.com/dask/dask">dask</a> - A flexible parallel computing library for analytic computing.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/spotify/luigi">luigi</a> - A module that helps you build complex pipelines of batch jobs.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/apache/spark">PySpark</a> - <a href="https://spark.apache.org/">Apache Spark</a> Python API.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ray-project/ray/">Ray</a> - A system for parallel and distributed Python that unifies the machine learning ecosystem.</li>
+</ul>
+</ul>
+<ul>
+<li>Stream Processing</li>
+<ul>
+<li><a href="https://github.com/robinhood/faust">faust</a> - A stream processing library, porting the ideas from <a href="https://kafka.apache.org/documentation/streams/">Kafka Streams</a> to Python.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Parsely/streamparse">streamparse</a> - Run Python code against real-time streams of data via <a href="http://storm.apache.org/">Apache Storm</a>.</li>
+</('ul', 4)>
+</('ul', 0)>
+<h2>Distribution</h2>
+
+<p><em>Libraries to create packaged executables for release distribution.</em></p>
+
+<ul>
+<li><a href="https://github.com/ronaldoussoren/py2app">py2app</a> - Freezes Python scripts (Mac OS X).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/py2exe/py2exe">py2exe</a> - Freezes Python scripts (Windows).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dashingsoft/pyarmor">pyarmor</a> - A tool used to obfuscate python scripts, bind obfuscated scripts to fixed machine or expire obfuscated scripts.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pyinstaller/pyinstaller">pyinstaller</a> - Converts Python programs into stand-alone executables (cross-platform).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/linkedin/shiv">shiv</a> - A command line utility for building fully self-contained zipapps (PEP 441), but with all their dependencies included.</li>
+</('ul', 0)>
+<h2>Documentation</h2>
+
+<p><em>Libraries for generating project documentation.</em></p>
+
+<ul>
+<li><a href="https://github.com/sphinx-doc/sphinx/">sphinx</a> - Python Documentation generator.</li>
+<ul>
+<li><a href="https://github.com/yoloseem/awesome-sphinxdoc">awesome-sphinxdoc</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://github.com/mitmproxy/pdoc">pdoc</a> - Epydoc replacement to auto generate API documentation for Python libraries.</li>
+</('ul', 0)>
+<h2>Downloader</h2>
+
+<p><em>Libraries for downloading.</em></p>
+
+<ul>
+<li><a href="https://github.com/jindaxiang/akshare">akshare</a> - A financial data interface library, built for human beings!</li>
+</ul>
+<ul>
+<li><a href="https://github.com/s3tools/s3cmd">s3cmd</a> - A command line tool for managing Amazon S3 and CloudFront.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ytdl-org/youtube-dl/">youtube-dl</a> - A command-line program to download videos from YouTube and other video sites.</li>
+</('ul', 0)>
+<h2>Editor Plugins and IDEs</h2>
+
+<ul>
+<li>Emacs</li>
+<ul>
+<li><a href="https://github.com/jorgenschaefer/elpy">elpy</a> - Emacs Python Development Environment.</li>
+</ul>
+</ul>
+<ul>
+<li>Vim</li>
+<ul>
+<li><a href="https://github.com/davidhalter/jedi-vim">jedi-vim</a> - Vim bindings for the Jedi auto-completion library for Python.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/python-mode/python-mode">python-mode</a> - An all in one plugin for turning Vim into a Python IDE.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Valloric/YouCompleteMe">YouCompleteMe</a> - Includes <a href="https://github.com/davidhalter/jedi">Jedi</a>-based completion engine for Python.</li>
+</ul>
+</ul>
+<ul>
+<li>Visual Studio</li>
+<ul>
+<li><a href="https://github.com/Microsoft/PTVS">PTVS</a> - Python Tools for Visual Studio.</li>
+</ul>
+</ul>
+<ul>
+<li>Visual Studio Code</li>
+<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">Python</a> - The official VSCode extension with rich support for Python.</li>
+</ul>
+</ul>
+<ul>
+<li>IDE</li>
+<ul>
+<li><a href="https://www.jetbrains.com/pycharm/">PyCharm</a> - Commercial Python IDE by JetBrains. Has free community edition available.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/spyder-ide/spyder">spyder</a> - Open Source Python IDE.</li>
+</('ul', 4)>
+</('ul', 0)>
+<h2>Email</h2>
+
+<p><em>Libraries for sending and parsing email.</em></p>
+
+<ul>
+<li>Mail Servers</li>
+<ul>
+<li><a href="https://github.com/modoboa/modoboa">modoboa</a> - A mail hosting and management platform including a modern Web UI.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/moggers87/salmon">salmon</a> - A Python Mail Server.</li>
+</ul>
+</ul>
+<ul>
+<li>Clients</li>
+<ul>
+<li><a href="https://github.com/martinrusev/imbox">imbox</a> - Python IMAP for Humans.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kootenpv/yagmail">yagmail</a> - Yet another Gmail/SMTP client.</li>
+</ul>
+</ul>
+<ul>
+<li>Others</li>
+<ul>
+<li><a href="https://github.com/mailgun/flanker">flanker</a> - An email address and Mime parsing library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/marrow/mailer">mailer</a> - High-performance extensible mail delivery framework.</li>
+</('ul', 4)>
+</('ul', 0)>
+<h2>Environment Management</h2>
+
+<p><em>Libraries for Python version and virtual environment management.</em></p>
+
+<ul>
+<li><a href="https://github.com/pyenv/pyenv">pyenv</a> - Simple Python version management.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pypa/virtualenv">virtualenv</a> - A tool to create isolated Python environments.</li>
+</('ul', 0)>
+<h2>File Manipulation</h2>
+
+<p><em>Libraries for file manipulation.</em></p>
+
+<ul>
+<li><a href="https://docs.python.org/3/library/mimetypes.html">mimetypes</a> - (Python standard library) Map filenames to MIME types.</li>
+</ul>
+<ul>
+<li><a href="https://docs.python.org/3/library/pathlib.html">pathlib</a> - (Python standard library) An cross-platform, object-oriented path library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jaraco/path.py">path.py</a> - A module wrapper for <a href="https://docs.python.org/3/library/os.path.html">os.path</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ahupp/python-magic">python-magic</a> - A Python interface to the libmagic file type identification library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/gorakhargosh/watchdog">watchdog</a> - API and shell utilities to monitor file system events.</li>
+</('ul', 0)>
+<h2>Functional Programming</h2>
+
+<p><em>Functional Programming with Python.</em></p>
+
+<ul>
+<li><a href="https://github.com/evhub/coconut">coconut</a> - A variant of Python built for simple, elegant, Pythonic functional programming.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Suor/funcy">funcy</a> - A fancy and practical functional tools.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/erikrose/more-itertools">more-itertools</a> - More routines for operating on iterables, beyond <code>itertools</code>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dry-python/returns">returns</a> - A set of type-safe monads, transformers, and composition utilities.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pytoolz/cytoolz/">cytoolz</a> - Cython implementation of <code>Toolz</code>: High performance functional utilities.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pytoolz/toolz">toolz</a> - A collection of functional utilities for iterators, functions, and dictionaries.</li>
+</('ul', 0)>
+<h2>GUI Development</h2>
+
+<p><em>Libraries for working with graphical user interface applications.</em></p>
+
+<ul>
+<li><a href="https://docs.python.org/3/library/curses.html">curses</a> - Built-in wrapper for <a href="http://www.gnu.org/software/ncurses/">ncurses</a> used to create terminal GUI applications.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ChrisKnott/Eel">Eel</a> - A library for making simple Electron-like offline HTML/JS GUI apps.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/nucleic/enaml">enaml</a> - Creating beautiful user-interfaces with Declarative Syntax like QML.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/zoofIO/flexx">Flexx</a> - Flexx is a pure Python toolkit for creating GUI's, that uses web technology for its rendering.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/chriskiehl/Gooey">Gooey</a> - Turn command line programs into a full GUI application with one line.</li>
+</ul>
+<ul>
+<li><a href="https://kivy.org/">kivy</a> - A library for creating NUI applications, running on Windows, Linux, Mac OS X, Android and iOS.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pyglet/pyglet">pyglet</a> - A cross-platform windowing and multimedia library for Python.</li>
+</ul>
+<ul>
+<li><a href="https://pygobject.readthedocs.io/">PyGObject</a> - Python Bindings for GLib/GObject/GIO/GTK+ (GTK+3).</li>
+</ul>
+<ul>
+<li><a href="https://doc.qt.io/qtforpython/">PyQt</a> - Python bindings for the <a href="https://www.qt.io/">Qt</a> cross-platform application and UI framework.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/PySimpleGUI/PySimpleGUI">PySimpleGUI</a> - Wrapper for tkinter, Qt, WxPython and Remi.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/r0x0r/pywebview/">pywebview</a> - A lightweight cross-platform native wrapper around a webview component.</li>
+</ul>
+<ul>
+<li><a href="https://wiki.python.org/moin/TkInter">Tkinter</a> - Tkinter is Python's de-facto standard GUI package.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pybee/toga">Toga</a> - A Python native, OS native GUI toolkit.</li>
+</ul>
+<ul>
+<li><a href="http://urwid.org/">urwid</a> - A library for creating terminal GUI applications with strong support for widgets, events, rich colors, etc.</li>
+</ul>
+<ul>
+<li><a href="https://wxpython.org/">wxPython</a> - A blending of the wxWidgets C++ class library with the Python.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/RaylockLLC/DearPyGui/">DearPyGui</a> - A Simple GPU accelerated Python GUI framework</li>
+</('ul', 0)>
+<h2>GraphQL</h2>
+
+<p><em>Libraries for working with GraphQL.</em></p>
+
+<ul>
+<li><a href="https://github.com/graphql-python/graphene/">graphene</a> - GraphQL framework for Python.</li>
+</('ul', 0)>
+<h2>Game Development</h2>
+
+<p><em>Awesome game development libraries.</em></p>
+
+<ul>
+<li><a href="https://api.arcade.academy/en/latest/">Arcade</a> - Arcade is a modern Python framework for crafting games with compelling graphics and sound.</li>
+</ul>
+<ul>
+<li><a href="https://www.cocos.com/en/cocos2d-x">Cocos2d</a> - cocos2d is a framework for building 2D games, demos, and other graphical/interactive applications.</li>
+</ul>
+<ul>
+<li><a href="http://www.harfang3d.com">Harfang3D</a> - Python framework for 3D, VR and game development.</li>
+</ul>
+<ul>
+<li><a href="https://www.panda3d.org/">Panda3D</a> - 3D game engine developed by Disney.</li>
+</ul>
+<ul>
+<li><a href="http://www.pygame.org/news.html">Pygame</a> - Pygame is a set of Python modules designed for writing games.</li>
+</ul>
+<ul>
+<li><a href="http://www.ogre3d.org/tikiwiki/PyOgre">PyOgre</a> - Python bindings for the Ogre 3D render engine, can be used for games, simulations, anything 3D.</li>
+</ul>
+<ul>
+<li><a href="http://pyopengl.sourceforge.net/">PyOpenGL</a> - Python ctypes bindings for OpenGL and it's related APIs.</li>
+</ul>
+<ul>
+<li><a href="https://pysdl2.readthedocs.io">PySDL2</a> - A ctypes based wrapper for the SDL2 library.</li>
+</ul>
+<ul>
+<li><a href="https://www.renpy.org/">RenPy</a> - A Visual Novel engine.</li>
+</('ul', 0)>
+<h2>Geolocation</h2>
+
+<p><em>Libraries for geocoding addresses and working with latitudes and longitudes.</em></p>
+
+<ul>
+<li><a href="https://github.com/SmileyChris/django-countries">django-countries</a> - A Django app that provides a country field for models and forms.</li>
+</ul>
+<ul>
+<li><a href="https://docs.djangoproject.com/en/dev/ref/contrib/gis/">geodjango</a> - A world-class geographic web framework.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jazzband/geojson">geojson</a> - Python bindings and utilities for GeoJSON.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/geopy/geopy">geopy</a> - Python Geocoding Toolbox.</li>
+</('ul', 0)>
+<h2>HTML Manipulation</h2>
+
+<p><em>Libraries for working with HTML and XML.</em></p>
+
+<ul>
+<li><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">beautifulsoup</a> - Providing Pythonic idioms for iterating, searching, and modifying HTML or XML.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mozilla/bleach">bleach</a> - A whitelist-based HTML sanitization and text linkification library.</li>
+</ul>
+<ul>
+<li><a href="https://pypi.org/project/cssutils/">cssutils</a> - A CSS library for Python.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/html5lib/html5lib-python">html5lib</a> - A standards-compliant library for parsing and serializing HTML documents and fragments.</li>
+</ul>
+<ul>
+<li><a href="http://lxml.de/">lxml</a> - A very fast, easy-to-use and versatile library for handling HTML and XML.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pallets/markupsafe">markupsafe</a> - Implements a XML/HTML/XHTML Markup safe string for Python.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/gawel/pyquery">pyquery</a> - A jQuery-like library for parsing HTML.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/stchris/untangle">untangle</a> - Converts XML documents to Python objects for easy access.</li>
+</ul>
+<ul>
+<li><a href="http://weasyprint.org">WeasyPrint</a> - A visual rendering engine for HTML and CSS that can export to PDF.</li>
+</ul>
+<ul>
+<li><a href="https://xmldataset.readthedocs.io/en/latest/">xmldataset</a> - Simple XML Parsing.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/martinblech/xmltodict">xmltodict</a> - Working with XML feel like you are working with JSON.</li>
+</('ul', 0)>
+<h2>HTTP Clients</h2>
+
+<p><em>Libraries for working with HTTP.</em></p>
+
+<ul>
+<li><a href="https://github.com/encode/httpx">httpx</a> - A next generation HTTP client for Python.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/psf/requests">requests</a> - HTTP Requests for Humans.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/twisted/treq">treq</a> - Python requests like API built on top of Twisted's HTTP client.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/urllib3/urllib3">urllib3</a> - A HTTP library with thread-safe connection pooling, file post support, sanity friendly.</li>
+</('ul', 0)>
+<h2>Hardware</h2>
+
+<p><em>Libraries for programming with hardware.</em></p>
+
+<ul>
+<li><a href="https://github.com/boppreh/keyboard">keyboard</a> - Hook and simulate global keyboard events on Windows and Linux.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/boppreh/mouse">mouse</a> - Hook and simulate global mouse events on Windows and Linux.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/moses-palmer/pynput">pynput</a> - A library to control and monitor input devices.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/secdev/scapy">scapy</a> - A brilliant packet manipulation library.</li>
+</('ul', 0)>
+<h2>Image Processing</h2>
+
+<p><em>Libraries for manipulating images.</em></p>
+
+<ul>
+<li><a href="https://github.com/python-pillow/Pillow">pillow</a> - Pillow is the friendly <a href="http://www.pythonware.com/products/pil/">PIL</a> fork.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/WhyNotHugo/python-barcode">python-barcode</a> - Create barcodes in Python with no extra dependencies.</li>
+</ul>
+<ul>
+<li><a href="http://github.com/pymatting/pymatting">pymatting</a> - A library for alpha matting.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lincolnloop/python-qrcode">python-qrcode</a> - A pure Python QR Code generator.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dylanaraps/pywal">pywal</a> - A tool that generates color schemes from images.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/libvips/pyvips">pyvips</a> - A fast image processing library with low memory needs.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/fogleman/Quads">quads</a> - Computer art based on quadtrees.</li>
+</ul>
+<ul>
+<li><a href="http://scikit-image.org/">scikit-image</a> - A Python library for (scientific) image processing.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/thumbor/thumbor">thumbor</a> - A smart imaging service. It enables on-demand crop, re-sizing and flipping of images.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/emcconville/wand">wand</a> - Python bindings for <a href="http://www.imagemagick.org/script/magick-wand.php">MagickWand</a>, C API for ImageMagick.</li>
+</('ul', 0)>
+<h2>Implementations</h2>
+
+<p><em>Implementations of Python.</em></p>
+
+<ul>
+<li><a href="https://github.com/python/cpython">cpython</a> - <strong>Default, most widely used implementation of the Python programming language written in C.</strong></li>
+</ul>
+<ul>
+<li><a href="https://github.com/cython/cython">cython</a> - Optimizing Static Compiler for Python.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/metawilm/cl-python">clpython</a> - Implementation of the Python programming language written in Common Lisp.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/IronLanguages/ironpython3">ironpython</a> - Implementation of the Python programming language written in C#.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/micropython/micropython">micropython</a> - A lean and efficient Python programming language implementation.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/numba/numba">numba</a> - Python JIT compiler to LLVM aimed at scientific Python.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Maratyszcza/PeachPy">peachpy</a> - x86-64 assembler embedded in Python.</li>
+</ul>
+<ul>
+<li><a href="https://foss.heptapod.net/pypy/pypy">pypy</a> - A very fast and compliant implementation of the Python language.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pyston/pyston/">pyston</a> - A Python implementation using JIT techniques.</li>
+</('ul', 0)>
+<h2>Interactive Interpreter</h2>
+
+<p><em>Interactive Python interpreters (REPL).</em></p>
+
+<ul>
+<li><a href="https://github.com/bpython/bpython">bpython</a> - A fancy interface to the Python interpreter.</li>
+</ul>
+<ul>
+<li><a href="https://jupyter.org">Jupyter Notebook (IPython)</a> - A rich toolkit to help you make the most out of using Python interactively.</li>
+<ul>
+<li><a href="https://github.com/markusschanta/awesome-jupyter">awesome-jupyter</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://github.com/jonathanslenders/ptpython">ptpython</a> - Advanced Python REPL built on top of the <a href="https://github.com/jonathanslenders/python-prompt-toolkit">python-prompt-toolkit</a>.</li>
+</('ul', 0)>
+<h2>Internationalization</h2>
+
+<p><em>Libraries for working with i18n.</em></p>
+
+<ul>
+<li><a href="http://babel.pocoo.org/en/latest/">Babel</a> - An internationalization library for Python.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ovalhub/pyicu">PyICU</a> - A wrapper of International Components for Unicode C++ library (<a href="http://site.icu-project.org/">ICU</a>).</li>
+</('ul', 0)>
+<h2>Job Scheduler</h2>
+
+<p><em>Libraries for scheduling jobs.</em></p>
+
+<ul>
+<li><a href="https://airflow.apache.org/">Airflow</a> - Airflow is a platform to programmatically author, schedule and monitor workflows.</li>
+</ul>
+<ul>
+<li><a href="http://apscheduler.readthedocs.io/en/latest/">APScheduler</a> - A light but powerful in-process task scheduler that lets you schedule functions.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/thauber/django-schedule">django-schedule</a> - A calendaring app for Django.</li>
+</ul>
+<ul>
+<li><a href="http://pydoit.org/">doit</a> - A task runner and build tool.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/gunnery/gunnery">gunnery</a> - Multipurpose task execution tool for distributed systems with web-based interface.</li>
+</ul>
+<ul>
+<li><a href="https://joblib.readthedocs.io/">Joblib</a> - A set of tools to provide lightweight pipelining in Python.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/fengsp/plan">Plan</a> - Writing crontab file in Python like a charm.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/PrefectHQ/prefect">Prefect</a> - A modern workflow orchestration framework that makes it easy to build, schedule and monitor robust data pipelines.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dbader/schedule">schedule</a> - Python job scheduling for humans.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/knipknap/SpiffWorkflow">Spiff</a> - A powerful workflow engine implemented in pure Python.</li>
+</ul>
+<ul>
+<li><a href="https://docs.openstack.org/developer/taskflow/">TaskFlow</a> - A Python library that helps to make task execution easy, consistent and reliable.</li>
+</('ul', 0)>
+<h2>Logging</h2>
+
+<p><em>Libraries for generating and working with logs.</em></p>
+
+<ul>
+<li><a href="http://logbook.readthedocs.io/en/stable/">logbook</a> - Logging replacement for Python.</li>
+</ul>
+<ul>
+<li><a href="https://docs.python.org/3/library/logging.html">logging</a> - (Python standard library) Logging facility for Python.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Delgan/loguru">loguru</a> - Library which aims to bring enjoyable logging in Python.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/getsentry/sentry-python">sentry-python</a> - Sentry SDK for Python.</li>
+</ul>
+<ul>
+<li><a href="https://www.structlog.org/en/stable/">structlog</a> - Structured logging made easy.</li>
+</('ul', 0)>
+<h2>Machine Learning</h2>
+
+<p><em>Libraries for Machine Learning. Also see <a href="https://github.com/josephmisiti/awesome-machine-learning#python">awesome-machine-learning</a>.</em></p>
+
+<ul>
+<li><a href="https://github.com/openai/gym">gym</a> - A toolkit for developing and comparing reinforcement learning algorithms.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/h2oai/h2o-3">H2O</a> - Open Source Fast Scalable Machine Learning Platform.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/benhamner/Metrics">Metrics</a> - Machine learning evaluation metrics.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/numenta/nupic">NuPIC</a> - Numenta Platform for Intelligent Computing.</li>
+</ul>
+<ul>
+<li><a href="http://scikit-learn.org/">scikit-learn</a> - The most popular Python library for Machine Learning.</li>
+</ul>
+<ul>
+<li><a href="http://spark.apache.org/docs/latest/ml-guide.html">Spark ML</a> - <a href="http://spark.apache.org/">Apache Spark</a>'s scalable Machine Learning library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/josephreisinger/vowpal<em>porpoise">vowpal</em>porpoise</a> - A lightweight Python wrapper for <a href="https://github.com/JohnLangford/vowpal_wabbit/">Vowpal Wabbit</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dmlc/xgboost">xgboost</a> - A scalable, portable, and distributed gradient boosting library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mindsdb/mindsdb">MindsDB</a> - MindsDB is an open source AI layer for existing databases that allows you to effortlessly develop, train and deploy state-of-the-art machine learning models using standard queries.</li>
+</('ul', 0)>
+<h2>Microsoft Windows</h2>
+
+<p><em>Python programming on Microsoft Windows.</em></p>
+
+<ul>
+<li><a href="http://python-xy.github.io/">Python(x,y)</a> - Scientific-applications-oriented Python Distribution based on Qt and Spyder.</li>
+</ul>
+<ul>
+<li><a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/">pythonlibs</a> - Unofficial Windows binaries for Python extension packages.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pythonnet/pythonnet">PythonNet</a> - Python Integration with the .NET Common Language Runtime (CLR).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mhammond/pywin32">PyWin32</a> - Python Extensions for Windows.</li>
+</ul>
+<ul>
+<li><a href="https://winpython.github.io/">WinPython</a> - Portable development environment for Windows 7/8.</li>
+</('ul', 0)>
+<h2>Miscellaneous</h2>
+
+<p><em>Useful libraries or tools that don't fit in the categories above.</em></p>
+
+<ul>
+<li><a href="https://github.com/jek/blinker">blinker</a> - A fast Python in-process signal/event dispatching system.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mahmoud/boltons">boltons</a> - A set of pure-Python utilities.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pallets/itsdangerous">itsdangerous</a> - Various helpers to pass trusted data to untrusted environments.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/magenta/magenta">magenta</a> - A tool to generate music and art using artificial intelligence.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mitsuhiko/pluginbase">pluginbase</a> - A simple but flexible plugin system for Python.</li>
+</ul>
+<ul>
+<li><a href="http://www.tryton.org/">tryton</a> - A general purpose business framework.</li>
+</('ul', 0)>
+<h2>Natural Language Processing</h2>
+
+<p><em>Libraries for working with human languages.</em></p>
+
+<ul>
+<li>General</li>
+<ul>
+<li><a href="https://github.com/RaRe-Technologies/gensim">gensim</a> - Topic Modeling for Humans.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/saffsd/langid.py">langid.py</a> - Stand-alone language identification system.</li>
+</ul>
+<ul>
+<li><a href="http://www.nltk.org/">nltk</a> - A leading platform for building Python programs to work with human language data.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/clips/pattern">pattern</a> - A web mining module.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/aboSamoor/polyglot">polyglot</a> - Natural language pipeline supporting hundreds of languages.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/facebookresearch/pytext">pytext</a> - A natural language modeling framework based on PyTorch.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/PetrochukM/PyTorch-NLP">PyTorch-NLP</a> - A toolkit enabling rapid deep learning NLP prototyping for research.</li>
+</ul>
+<ul>
+<li><a href="https://spacy.io/">spacy</a> - A library for industrial-strength natural language processing in Python and Cython.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/stanfordnlp/stanza">Stanza</a> - The Stanford NLP Group's official Python library, supporting 60+ languages.</li>
+</ul>
+</ul>
+<ul>
+<li>Chinese</li>
+<ul>
+<li><a href="https://github.com/fighting41love/funNLP">funNLP</a> - A collection of tools and datasets for Chinese NLP.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/fxsjy/jieba">jieba</a> - The most popular Chinese text segmentation library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lancopku/pkuseg-python">pkuseg-python</a> - A toolkit for Chinese word segmentation in various domains.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/isnowfy/snownlp">snownlp</a> - A library for processing Chinese text.</li>
+</('ul', 4)>
+</('ul', 0)>
+<h2>Network Virtualization</h2>
+
+<p><em>Tools and libraries for Virtual Networking and SDN (Software Defined Networking).</em></p>
+
+<ul>
+<li><a href="https://github.com/mininet/mininet">mininet</a> - A popular network emulator and API written in Python.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/napalm-automation/napalm">napalm</a> - Cross-vendor API to manipulate network devices.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/noxrepo/pox">pox</a> - A Python-based SDN control applications, such as OpenFlow SDN controllers.</li>
+</('ul', 0)>
+<h2>News Feed</h2>
+
+<p><em>Libraries for building user's activities.</em></p>
+
+<ul>
+<li><a href="https://github.com/justquick/django-activity-stream">django-activity-stream</a> - Generating generic activity streams from the actions on your site.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tschellenbach/Stream-Framework">Stream Framework</a> - Building news feed and notification systems using Cassandra and Redis.</li>
+</('ul', 0)>
+<h2>ORM</h2>
+
+<p><em>Libraries that implement Object-Relational Mapping or data mapping techniques.</em></p>
+
+<ul>
+<li>Relational Databases</li>
+<ul>
+<li><a href="https://docs.djangoproject.com/en/dev/topics/db/models/">Django Models</a> - The Django ORM.</li>
+</ul>
+<ul>
+<li><a href="https://www.sqlalchemy.org/">SQLAlchemy</a> - The Python SQL Toolkit and Object Relational Mapper.</li>
+<ul>
+<li><a href="https://github.com/dahlia/awesome-sqlalchemy">awesome-sqlalchemy</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://github.com/pudo/dataset">dataset</a> - Store Python dicts in a database - works with SQLite, MySQL, and PostgreSQL.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sdispater/orator">orator</a> -  The Orator ORM provides a simple yet beautiful ActiveRecord implementation.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/encode/orm">orm</a> - An async ORM.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/coleifer/peewee">peewee</a> - A small, expressive ORM.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ponyorm/pony/">pony</a> - ORM that provides a generator-oriented interface to SQL.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/web2py/pydal/">pydal</a> - A pure Python Database Abstraction Layer.</li>
+</ul>
+</ul>
+<ul>
+<li>NoSQL Databases</li>
+<ul>
+<li><a href="https://github.com/stephenmcd/hot-redis">hot-redis</a> - Rich Python data types for Redis.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/MongoEngine/mongoengine">mongoengine</a> - A Python Object-Document-Mapper for working with MongoDB.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pynamodb/PynamoDB">PynamoDB</a> - A Pythonic interface for <a href="https://aws.amazon.com/dynamodb/">Amazon DynamoDB</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kiddouk/redisco">redisco</a> - A Python Library for Simple Models and Containers Persisted in Redis.</li>
+</('ul', 4)>
+</('ul', 0)>
+<h2>Package Management</h2>
+
+<p><em>Libraries for package and dependency management.</em></p>
+
+<ul>
+<li><a href="https://pip.pypa.io/en/stable/">pip</a> - The package installer for Python.</li>
+<ul>
+<li><a href="https://github.com/jazzband/pip-tools">pip-tools</a> - A set of tools to keep your pinned Python dependencies fresh.</li>
+</ul>
+<ul>
+<li><a href="https://pypi.org/">PyPI</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://github.com/conda/conda/">conda</a> - Cross-platform, Python-agnostic binary package manager.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sdispater/poetry">poetry</a> - Python dependency management and packaging made easy.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/astral-sh/uv">uv</a> - An extremely fast Python package and project manager, written in Rust.</li>
+</('ul', 0)>
+<h2>Package Repositories</h2>
+
+<p><em>Local PyPI repository server and proxies.</em></p>
+
+<ul>
+<li><a href="https://github.com/pypa/bandersnatch/">bandersnatch</a> - PyPI mirroring tool provided by Python Packaging Authority (PyPA).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/devpi/devpi">devpi</a> - PyPI server and packaging/testing/release tool.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jazzband/localshop">localshop</a> - Local PyPI server (custom packages and auto-mirroring of pypi).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pypa/warehouse">warehouse</a> - Next generation Python Package Repository (PyPI).</li>
+</('ul', 0)>
+<h2>Penetration Testing</h2>
+
+<p><em>Frameworks and tools for penetration testing.</em></p>
+
+<ul>
+<li><a href="https://github.com/Manisso/fsociety">fsociety</a> - A Penetration testing framework.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/trustedsec/social-engineer-toolkit">setoolkit</a> - A toolkit for social engineering.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sqlmapproject/sqlmap">sqlmap</a> - Automatic SQL injection and database takeover tool.</li>
+</('ul', 0)>
+<h2>Permissions</h2>
+
+<p><em>Libraries that allow or deny users access to data or functionality.</em></p>
+
+<ul>
+<li><a href="https://github.com/django-guardian/django-guardian">django-guardian</a> - Implementation of per object permissions for Django 1.2+</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dfunckt/django-rules">django-rules</a> - A tiny but powerful app providing object-level permissions to Django, without requiring a database.</li>
+</('ul', 0)>
+<h2>Processes</h2>
+
+<p><em>Libraries for starting and communicating with OS processes.</em></p>
+
+<ul>
+<li><a href="https://github.com/amitt001/delegator.py">delegator.py</a> - <a href="https://docs.python.org/3/library/subprocess.html">Subprocesses</a> for Humans 2.0.</li>
+</ul>
+<ul>
+<li><a href="https://sarge.readthedocs.io/en/latest/">sarge</a> - Yet another wrapper for subprocess.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/amoffat/sh">sh</a> - A full-fledged subprocess replacement for Python.</li>
+</('ul', 0)>
+<h2>Recommender Systems</h2>
+
+<p><em>Libraries for building recommender systems.</em></p>
+
+<ul>
+<li><a href="https://github.com/spotify/annoy">annoy</a> - Approximate Nearest Neighbors in C++/Python optimized for memory usage.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ibayer/fastFM">fastFM</a> - A library for Factorization Machines.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/benfred/implicit">implicit</a> - A fast Python implementation of collaborative filtering for implicit datasets.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/guestwalk/libffm">libffm</a> - A library for Field-aware Factorization Machine (FFM).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lyst/lightfm">lightfm</a> - A Python implementation of a number of popular recommendation algorithms.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/maciejkula/spotlight">spotlight</a> - Deep recommender models using PyTorch.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/NicolasHug/Surprise">Surprise</a> - A scikit for building and analyzing recommender systems.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jfkirk/tensorrec">tensorrec</a> - A Recommendation Engine Framework in TensorFlow.</li>
+</('ul', 0)>
+<h2>Refactoring</h2>
+
+<p><em>Refactoring tools and libraries for Python</em></p>
+
+<ul>
+<li><a href="http://bicyclerepair.sourceforge.net/">Bicycle Repair Man</a> - Bicycle Repair Man, a refactoring tool for Python.</li>
+</ul>
+<ul>
+<li><a href="https://pybowler.io/">Bowler</a> - Safe code refactoring for modern Python.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/python-rope/rope">Rope</a> -  Rope is a python refactoring library.</li>
+</('ul', 1)>
+<h2>RESTful API</h2>
+
+<p><em>Libraries for building RESTful APIs.</em></p>
+
+<ul>
+<li>Django</li>
+<ul>
+<li><a href="https://github.com/encode/django-rest-framework">django-rest-framework</a> - A powerful and flexible toolkit to build web APIs.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/django-tastypie/django-tastypie">django-tastypie</a> - Creating delicious APIs for Django apps.</li>
+</ul>
+</ul>
+<ul>
+<li>Flask</li>
+<ul>
+<li><a href="https://github.com/pyeve/eve">eve</a> - REST API framework powered by Flask, MongoDB and good intentions.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/flask-api/flask-api">flask-api</a> - Browsable Web APIs for Flask.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/flask-restful/flask-restful">flask-restful</a> - Quickly building REST APIs for Flask.</li>
+</ul>
+</ul>
+<ul>
+<li>Pyramid</li>
+<ul>
+<li><a href="https://github.com/Cornices/cornice">cornice</a> - A RESTful framework for Pyramid.</li>
+</ul>
+</ul>
+<ul>
+<li>Framework agnostic</li>
+<ul>
+<li><a href="https://github.com/falconry/falcon">falcon</a> - A high-performance framework for building cloud APIs and web app backends.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tiangolo/fastapi">fastapi</a> - A modern, fast, web framework for building APIs with Python 3.6+ based on standard Python type hints.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/hugapi/hug">hug</a> - A Python 3 framework for cleanly exposing APIs.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jeffknupp/sandman2">sandman2</a> - Automated REST APIs for existing database-driven systems.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sanic-org/sanic">sanic</a> - A Python 3.6+ web server and web framework that's written to go fast.</li>
+</('ul', 4)>
+</('ul', 0)>
+<h2>Robotics</h2>
+
+<p><em>Libraries for robotics.</em></p>
+
+<ul>
+<li><a href="https://github.com/AtsushiSakai/PythonRobotics">PythonRobotics</a> - This is a compilation of various robotics algorithms with visualizations.</li>
+</ul>
+<ul>
+<li><a href="http://wiki.ros.org/rospy">rospy</a> - This is a library for ROS (Robot Operating System).</li>
+</('ul', 0)>
+<h2>RPC Servers</h2>
+
+<p><em>RPC-compatible servers.</em></p>
+
+<ul>
+<li><a href="https://github.com/tomerfiliba/rpyc">RPyC</a> (Remote Python Call) - A transparent and symmetric RPC library for Python</li>
+</ul>
+<ul>
+<li><a href="https://github.com/0rpc/zerorpc-python">zeroRPC</a> - zerorpc is a flexible RPC implementation based on <a href="http://zeromq.org/">ZeroMQ</a> and <a href="http://msgpack.org/">MessagePack</a>.</li>
+</('ul', 0)>
+<h2>Science</h2>
+
+<p><em>Libraries for scientific computing. Also see <a href="https://github.com/TomNicholas/Python-for-Scientists">Python-for-Scientists</a>.</em></p>
+
+<ul>
+<li><a href="http://www.astropy.org/">astropy</a> - A community Python library for Astronomy.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/chapmanb/bcbio-nextgen">bcbio-nextgen</a> - Providing best-practice pipelines for fully automated high throughput sequencing analysis.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/chapmanb/bcbb">bccb</a> - Collection of useful code related to biological analysis.</li>
+</ul>
+<ul>
+<li><a href="http://biopython.org/wiki/Main_Page">Biopython</a> - Biopython is a set of freely available tools for biological computation.</li>
+</ul>
+<ul>
+<li><a href="http://cclib.github.io/">cclib</a> - A library for parsing and interpreting the results of computational chemistry packages.</li>
+</ul>
+<ul>
+<li><a href="http://colour-science.org/">Colour</a> - Implementing a comprehensive number of colour theory transformations and algorithms.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/benedekrozemberczki/karateclub">Karate Club</a> - Unsupervised machine learning toolbox for graph structured data.</li>
+</ul>
+<ul>
+<li><a href="https://networkx.github.io/">NetworkX</a> - A high-productivity software for complex networks.</li>
+</ul>
+<ul>
+<li><a href="http://nipy.org">NIPY</a> - A collection of neuroimaging toolkits.</li>
+</ul>
+<ul>
+<li><a href="http://www.numpy.org/">NumPy</a> - A fundamental package for scientific computing with Python.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/obspy/obspy/wiki/">ObsPy</a> - A Python toolbox for seismology.</li>
+</ul>
+<ul>
+<li><a href="https://open-babel.readthedocs.io/">Open Babel</a> - A chemical toolbox designed to speak the many languages of chemical data.</li>
+</ul>
+<ul>
+<li><a href="http://www.pydy.org/">PyDy</a> - Short for Python Dynamics, used to assist with workflow in the modeling of dynamic motion.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pymc-devs/pymc3">PyMC</a> - Markov Chain Monte Carlo sampling toolkit.</li>
+</ul>
+<ul>
+<li><a href="http://qutip.org/">QuTiP</a> - Quantum Toolbox in Python.</li>
+</ul>
+<ul>
+<li><a href="http://www.rdkit.org/">RDKit</a> - Cheminformatics and Machine Learning Software.</li>
+</ul>
+<ul>
+<li><a href="https://www.scipy.org/">SciPy</a> - A Python-based ecosystem of open-source software for mathematics, science, and engineering.</li>
+</ul>
+<ul>
+<li><a href="https://gitlab.com/team-simpy/simpy">SimPy</a> -  A process-based discrete-event simulation framework.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/statsmodels/statsmodels">statsmodels</a> - Statistical modeling and econometrics in Python.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sympy/sympy">SymPy</a> - A Python library for symbolic mathematics.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/quantopian/zipline">Zipline</a> - A Pythonic algorithmic trading library.</li>
+</('ul', 0)>
+<h2>Search</h2>
+
+<p><em>Libraries and software for indexing and performing search queries on data.</em></p>
+
+<ul>
+<li><a href="https://github.com/django-haystack/django-haystack">django-haystack</a> - Modular search for Django.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/elastic/elasticsearch-dsl-py">elasticsearch-dsl-py</a> - The official high-level Python client for Elasticsearch.</li>
+</ul>
+<ul>
+<li><a href="https://www.elastic.co/guide/en/elasticsearch/client/python-api/current/index.html">elasticsearch-py</a> - The official low-level Python client for <a href="https://www.elastic.co/products/elasticsearch">Elasticsearch</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/django-haystack/pysolr">pysolr</a> - A lightweight Python wrapper for <a href="https://lucene.apache.org/solr/">Apache Solr</a>.</li>
+</ul>
+<ul>
+<li><a href="http://whoosh.readthedocs.io/en/latest/">whoosh</a> - A fast, pure Python search engine library.</li>
+</('ul', 0)>
+<h2>Serialization</h2>
+
+<p><em>Libraries for serializing complex data types</em></p>
+
+<ul>
+<li><a href="https://github.com/marshmallow-code/marshmallow">marshmallow</a> - A lightweight library for converting complex objects to and from simple Python datatypes.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/TkTech/pysimdjson">pysimdjson</a> - A Python bindings for <a href="https://github.com/lemire/simdjson">simdjson</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/python-rapidjson/python-rapidjson">python-rapidjson</a> - A Python wrapper around <a href="https://github.com/Tencent/rapidjson">RapidJSON</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/esnme/ultrajson">ultrajson</a> - A fast JSON decoder and encoder written in C with Python bindings.</li>
+</('ul', 0)>
+<h2>Serverless Frameworks</h2>
+
+<p><em>Frameworks for developing serverless Python code.</em></p>
+
+<ul>
+<li><a href="https://github.com/nficano/python-lambda">python-lambda</a> - A toolkit for developing and deploying Python code in AWS Lambda.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/zappa/Zappa">Zappa</a> - A tool for deploying WSGI applications on AWS Lambda and API Gateway.</li>
+</('ul', 0)>
+<h2>Shell</h2>
+
+<p><em>Shells based on Python.</em></p>
+
+<ul>
+<li><a href="https://github.com/xonsh/xonsh/">xonsh</a> - A Python-powered, cross-platform, Unix-gazing shell language and command prompt.</li>
+</('ul', 0)>
+<h2>Specific Formats Processing</h2>
+
+<p><em>Libraries for parsing and manipulating specific text formats.</em></p>
+
+<ul>
+<li>General</li>
+<ul>
+<li><a href="https://github.com/jazzband/tablib">tablib</a> - A module for Tabular Datasets in XLS, CSV, JSON, YAML.</li>
+</ul>
+</ul>
+<ul>
+<li>Office</li>
+<ul>
+<li><a href="https://github.com/elapouya/python-docx-template">docxtpl</a> - Editing a docx document by jinja2 template</li>
+</ul>
+<ul>
+<li><a href="https://openpyxl.readthedocs.io/en/stable/">openpyxl</a> - A library for reading and writing Excel 2010 xlsx/xlsm/xltx/xltm files.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pyexcel/pyexcel">pyexcel</a> - Providing one API for reading, manipulating and writing csv, ods, xls, xlsx and xlsm files.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/python-openxml/python-docx">python-docx</a> - Reads, queries and modifies Microsoft Word 2007/2008 docx files.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/scanny/python-pptx">python-pptx</a> - Python library for creating and updating PowerPoint (.pptx) files.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/unoconv/unoconv">unoconv</a> - Convert between any document format supported by LibreOffice/OpenOffice.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jmcnamara/XlsxWriter">XlsxWriter</a> - A Python module for creating Excel .xlsx files.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ZoomerAnalytics/xlwings">xlwings</a> - A BSD-licensed library that makes it easy to call Python from Excel and vice versa.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/python-excel/xlwt">xlwt</a> / <a href="https://github.com/python-excel/xlrd">xlrd</a> - Writing and reading data and formatting information from Excel files.</li>
+</ul>
+</ul>
+<ul>
+<li>PDF</li>
+<ul>
+<li><a href="https://github.com/pdfminer/pdfminer.six">pdfminer.six</a> - Pdfminer.six is a community maintained fork of the original PDFMiner.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mstamy2/PyPDF2">PyPDF2</a> - A library capable of splitting, merging and transforming PDF pages.</li>
+</ul>
+<ul>
+<li><a href="https://www.reportlab.com/opensource/">ReportLab</a> - Allowing Rapid creation of rich PDF documents.</li>
+</ul>
+</ul>
+<ul>
+<li>Markdown</li>
+<ul>
+<li><a href="https://github.com/lepture/mistune">Mistune</a> - Fastest and full featured pure Python parsers of Markdown.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/waylan/Python-Markdown">Python-Markdown</a> - A Python implementation of John Gruber’s Markdown.</li>
+</ul>
+</ul>
+<ul>
+<li>YAML</li>
+<ul>
+<li><a href="http://pyyaml.org/">PyYAML</a> - YAML implementations for Python.</li>
+</ul>
+</ul>
+<ul>
+<li>CSV</li>
+<ul>
+<li><a href="https://github.com/wireservice/csvkit">csvkit</a> - Utilities for converting to and working with CSV.</li>
+</ul>
+</ul>
+<ul>
+<li>Archive</li>
+<ul>
+<li><a href="https://github.com/mitsuhiko/unp">unp</a> - A command line tool that can unpack archives easily.</li>
+</('ul', 4)>
+</('ul', 0)>
+<h2>Static Site Generator</h2>
+
+<p><em>Static site generator is a software that takes some text + templates as input and produces HTML files on the output.</em></p>
+
+<ul>
+<li><a href="https://github.com/lektor/lektor">lektor</a> - An easy to use static CMS and blog engine.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mkdocs/mkdocs/">mkdocs</a> - Markdown friendly documentation generator.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sunainapai/makesite">makesite</a> - Simple, lightweight, and magic-free static site/blog generator (< 130 lines).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/getnikola/nikola">nikola</a> - A static website and blog generator.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/getpelican/pelican">pelican</a> - Static site generator that supports Markdown and reST syntax.</li>
+</('ul', 0)>
+<h2>Tagging</h2>
+
+<p><em>Libraries for tagging items.</em></p>
+
+<ul>
+<li><a href="https://github.com/jazzband/django-taggit">django-taggit</a> - Simple tagging for Django.</li>
+</('ul', 0)>
+<h2>Task Queues</h2>
+
+<p><em>Libraries for working with task queues.</em></p>
+
+<ul>
+<li><a href="https://docs.celeryproject.org/en/stable/">celery</a> - An asynchronous task queue/job queue based on distributed message passing.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Bogdanp/dramatiq">dramatiq</a> - A fast and reliable background task processing library for Python 3.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/coleifer/huey">huey</a> - Little multi-threaded task queue.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pricingassistant/mrq">mrq</a> - A distributed worker task queue in Python using Redis & gevent.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/rq/rq">rq</a> - Simple job queues for Python.</li>
+</('ul', 0)>
+<h2>Template Engine</h2>
+
+<p><em>Libraries and tools for templating and lexing.</em></p>
+
+<ul>
+<li><a href="https://genshi.edgewall.org/">Genshi</a> - Python templating toolkit for generation of web-aware output.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pallets/jinja">Jinja2</a> - A modern and designer friendly templating language.</li>
+</ul>
+<ul>
+<li><a href="http://www.makotemplates.org/">Mako</a> - Hyperfast and lightweight templating for the Python platform.</li>
+</('ul', 0)>
+<h2>Testing</h2>
+
+<p><em>Libraries for testing codebases and generating test data.</em></p>
+
+<ul>
+<li>Testing Frameworks</li>
+<ul>
+<li><a href="https://github.com/HypothesisWorks/hypothesis">hypothesis</a> - Hypothesis is an advanced Quickcheck style property based testing library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/nose-devs/nose2">nose2</a> - The successor to <code>nose</code>, based on `unittest2.</li>
+</ul>
+<ul>
+<li><a href="https://docs.pytest.org/en/latest/">pytest</a> - A mature full-featured Python testing tool.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/robotframework/robotframework">Robot Framework</a> - A generic test automation framework.</li>
+</ul>
+<ul>
+<li><a href="https://docs.python.org/3/library/unittest.html">unittest</a> - (Python standard library) Unit testing framework.</li>
+</ul>
+</ul>
+<ul>
+<li>Test Runners</li>
+<ul>
+<li><a href="https://github.com/CleanCut/green">green</a> - A clean, colorful test runner.</li>
+</ul>
+<ul>
+<li><a href="http://nestorsalceda.github.io/mamba/">mamba</a> - The definitive testing tool for Python. Born under the banner of BDD.</li>
+</ul>
+<ul>
+<li><a href="https://tox.readthedocs.io/en/latest/">tox</a> - Auto builds and tests distributions in multiple Python versions</li>
+</ul>
+</ul>
+<ul>
+<li>GUI / Web Testing</li>
+<ul>
+<li><a href="https://github.com/locustio/locust">locust</a> - Scalable user load testing tool written in Python.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/asweigart/pyautogui">PyAutoGUI</a> - PyAutoGUI is a cross-platform GUI automation Python module for human beings.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kiwicom/schemathesis">Schemathesis</a> - A tool for automatic property-based testing of web applications built with Open API / Swagger specifications.</li>
+</ul>
+<ul>
+<li><a href="https://pypi.org/project/selenium/">Selenium</a> - Python bindings for <a href="http://www.seleniumhq.org/">Selenium</a> WebDriver.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/seatgeek/sixpack">sixpack</a> - A language-agnostic A/B Testing framework.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/cobrateam/splinter">splinter</a> - Open source tool for testing web applications.</li>
+</ul>
+</ul>
+<ul>
+<li>Mock</li>
+<ul>
+<li><a href="https://pypi.org/project/doublex/">doublex</a> - Powerful test doubles framework for Python.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/spulec/freezegun">freezegun</a> - Travel through time by mocking the datetime module.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/patrys/httmock">httmock</a> - A mocking library for requests for Python 2.6+ and 3.2+.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/gabrielfalcao/HTTPretty">httpretty</a> - HTTP request mock tool for Python.</li>
+</ul>
+<ul>
+<li><a href="https://docs.python.org/3/library/unittest.mock.html">mock</a> - (Python standard library) A mocking and patching library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mindflayer/python-mocket">mocket</a> - A socket mock framework with gevent/asyncio/SSL support.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/getsentry/responses">responses</a> - A utility library for mocking out the requests Python library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kevin1024/vcrpy">VCR.py</a> - Record and replay HTTP interactions on your tests.</li>
+</ul>
+</ul>
+<ul>
+<li>Object Factories</li>
+<ul>
+<li><a href="https://github.com/FactoryBoy/factory<em>boy">factory</em>boy</a> - A test fixtures replacement for Python.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/klen/mixer">mixer</a> - Another fixtures replacement. Supports Django, Flask, SQLAlchemy, Peewee and etc.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/vandersonmota/model<em>mommy">model</em>mommy</a> - Creating random fixtures for testing in Django.</li>
+</ul>
+</ul>
+<ul>
+<li>Code Coverage</li>
+<ul>
+<li><a href="https://pypi.org/project/coverage/">coverage</a> - Code coverage measurement.</li>
+</ul>
+</ul>
+<ul>
+<li>Fake Data</li>
+<ul>
+<li><a href="https://github.com/emirozer/fake2db">fake2db</a> - Fake database generator.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/joke2k/faker">faker</a> - A Python package that generates fake data.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lk-geimfari/mimesis">mimesis</a> - is a Python library that help you generate fake data.</li>
+</ul>
+<ul>
+<li><a href="https://pypi.org/project/radar/">radar</a> - Generate random datetime / time.</li>
+</('ul', 4)>
+</('ul', 0)>
+<h2>Text Processing</h2>
+
+<p><em>Libraries for parsing and manipulating plain texts.</em></p>
+
+<ul>
+<li>General</li>
+<ul>
+<li><a href="https://github.com/chardet/chardet">chardet</a> - Python 2/3 compatible character encoding detector.</li>
+</ul>
+<ul>
+<li><a href="https://docs.python.org/3/library/difflib.html">difflib</a> - (Python standard library) Helpers for computing deltas.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/LuminosoInsight/python-ftfy">ftfy</a> - Makes Unicode text less broken and more consistent automagically.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/seatgeek/fuzzywuzzy">fuzzywuzzy</a> - Fuzzy String Matching.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ztane/python-Levenshtein/">Levenshtein</a> - Fast computation of Levenshtein distance and string similarity.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/vinta/pangu.py">pangu.py</a> - Paranoid text spacing.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pwaller/pyfiglet">pyfiglet</a> - An implementation of figlet written in Python.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mozillazg/python-pinyin">pypinyin</a> - Convert Chinese hanzi (漢字) to pinyin (拼音).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/orsinium/textdistance">textdistance</a> - Compute distance between sequences with 30+ algorithms.</li>
+</ul>
+<ul>
+<li><a href="https://pypi.org/project/Unidecode/">unidecode</a> - ASCII transliterations of Unicode text.</li>
+</ul>
+</ul>
+<ul>
+<li>Slugify</li>
+<ul>
+<li><a href="https://github.com/dimka665/awesome-slugify">awesome-slugify</a> - A Python slugify library that can preserve unicode.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/un33k/python-slugify">python-slugify</a> - A Python slugify library that translates unicode to ASCII.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mozilla/unicode-slugify">unicode-slugify</a> - A slugifier that generates unicode slugs with Django as a dependency.</li>
+</ul>
+</ul>
+<ul>
+<li>Unique identifiers</li>
+<ul>
+<li><a href="https://github.com/davidaurelio/hashids-python">hashids</a> - Implementation of <a href="http://hashids.org">hashids</a> in Python.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/skorokithakis/shortuuid">shortuuid</a> - A generator library for concise, unambiguous and URL-safe UUIDs.</li>
+</ul>
+</ul>
+<ul>
+<li>Parser</li>
+<ul>
+<li><a href="https://github.com/dabeaz/ply">ply</a> - Implementation of lex and yacc parsing tools for Python.</li>
+</ul>
+<ul>
+<li><a href="http://pygments.org/">pygments</a> - A generic syntax highlighter.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pyparsing/pyparsing">pyparsing</a> - A general purpose framework for generating parsers.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/derek73/python-nameparser">python-nameparser</a> - Parsing human names into their individual components.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/daviddrysdale/python-phonenumbers">python-phonenumbers</a> - Parsing, formatting, storing and validating international phone numbers.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/selwin/python-user-agents">python-user-agents</a> - Browser user agent parser.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/andialbrecht/sqlparse">sqlparse</a> - A non-validating SQL parser.</li>
+</('ul', 4)>
+</('ul', 0)>
+<h2>Third-party APIs</h2>
+
+<p><em>Libraries for accessing third party services APIs. Also see <a href="https://github.com/realpython/list-of-python-api-wrappers">List of Python API Wrappers and Libraries</a>.</em></p>
+
+<ul>
+<li><a href="https://libcloud.apache.org/">apache-libcloud</a> - One Python library for all clouds.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/boto/boto3">boto3</a> - Python interface to Amazon Web Services.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/istrategylabs/django-wordpress">django-wordpress</a> - WordPress models and views for Django.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mobolic/facebook-sdk">facebook-sdk</a> - Facebook Platform Python SDK.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/google/google-api-python-client">google-api-python-client</a> - Google APIs Client Library for Python.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/burnash/gspread">gspread</a> - Google Spreadsheets Python API.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ryanmcgrath/twython">twython</a> - A Python wrapper for the Twitter API.</li>
+</('ul', 0)>
+<h2>URL Manipulation</h2>
+
+<p><em>Libraries for parsing URLs.</em></p>
+
+<ul>
+<li><a href="https://github.com/gruns/furl">furl</a> - A small Python library that makes parsing and manipulating URLs easy.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/codeinthehole/purl">purl</a> - A simple, immutable URL class with a clean API for interrogation and manipulation.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ellisonleao/pyshorteners">pyshorteners</a> - A pure Python URL shortening lib.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/marshmallow-code/webargs">webargs</a> - A friendly library for parsing HTTP request arguments with built-in support for popular web frameworks.</li>
+</('ul', 0)>
+<h2>Video</h2>
+
+<p><em>Libraries for manipulating video and GIFs.</em></p>
+
+<ul>
+<li><a href="https://zulko.github.io/moviepy/">moviepy</a> - A module for script-based movie editing with many formats, including animated GIFs.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/aizvorski/scikit-video">scikit-video</a> - Video processing routines for SciPy.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/abhiTronix/vidgear">vidgear</a> - Most Powerful multi-threaded Video Processing framework.</li>
+</('ul', 0)>
+<h2>Web Asset Management</h2>
+
+<p><em>Tools for managing, compressing and minifying website assets.</em></p>
+
+<ul>
+<li><a href="https://github.com/django-compressor/django-compressor">django-compressor</a> - Compresses linked and inline JavaScript or CSS into a single cached file.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jazzband/django-pipeline">django-pipeline</a> - An asset packaging library for Django.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jschneier/django-storages">django-storages</a> - A collection of custom storage back ends for Django.</li>
+</ul>
+<ul>
+<li><a href="http://www.fanstatic.org/en/latest/">fanstatic</a> - Packages, optimizes, and serves static file dependencies as Python packages.</li>
+</ul>
+<ul>
+<li><a href="http://wimleers.com/fileconveyor">fileconveyor</a> - A daemon to detect and sync files to CDNs, S3 and FTP.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/miracle2k/flask-assets">flask-assets</a> - Helps you integrate webassets into your Flask app.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/miracle2k/webassets">webassets</a> - Bundles, optimizes, and manages unique cache-busting URLs for static resources.</li>
+</('ul', 0)>
+<h2>Web Content Extracting</h2>
+
+<p><em>Libraries for extracting web contents.</em></p>
+
+<ul>
+<li><a href="https://github.com/Alir3z4/html2text">html2text</a> - Convert HTML to Markdown-formatted text.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/michaelhelmick/lassie">lassie</a> - Web Content Retrieval for Humans.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/coleifer/micawber">micawber</a> - A small library for extracting rich content from URLs.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/codelucas/newspaper">newspaper</a> - News extraction, article extraction and content curation in Python.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/buriy/python-readability">python-readability</a> - Fast Python port of arc90's readability tool.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/psf/requests-html">requests-html</a> - Pythonic HTML Parsing for Humans.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/miso-belica/sumy">sumy</a> - A module for automatic summarization of text documents and HTML pages.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/deanmalmgren/textract">textract</a> - Extract text from any document, Word, PowerPoint, PDFs, etc.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/gaojiuli/toapi">toapi</a> - Every web site provides APIs.</li>
+</('ul', 0)>
+<h2>Web Crawling</h2>
+
+<p><em>Libraries to automate web scraping.</em></p>
+
+<ul>
+<li><a href="https://github.com/kurtmckee/feedparser">feedparser</a> - Universal feed parser.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lorien/grab">grab</a> - Site scraping framework.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/MechanicalSoup/MechanicalSoup">mechanicalsoup</a> - A Python library for automating interaction with websites.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/scrapy/scrapy">scrapy</a> - A fast high-level screen scraping and web crawling framework.</li>
+</('ul', 0)>
+<h2>Web Frameworks</h2>
+
+<p><em>Traditional full stack web frameworks. Also see <a href="https://github.com/vinta/awesome-python#restful-api">RESTful API</a>.</em></p>
+
+<ul>
+<li>Synchronous</li>
+<ul>
+<li><a href="https://github.com/django/django">django</a> - The most popular web framework in Python.</li>
+<ul>
+<li><a href="https://github.com/shahraizali/awesome-django">awesome-django</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/wsvincent/awesome-django">awesome-django</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://github.com/pallets/flask">flask</a> - A microframework for Python.</li>
+<ul>
+<li><a href="https://github.com/humiaozuzu/awesome-flask">awesome-flask</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://pylonsproject.org/">pyramid</a> - A small, fast, down-to-earth, open source Python web framework.</li>
+<ul>
+<li><a href="https://github.com/uralbash/awesome-pyramid">awesome-pyramid</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://github.com/MasoniteFramework/masonite">masonite</a> - The modern and developer centric Python web framework.</li>
+</ul>
+</ul>
+<ul>
+<li>Asynchronous</li>
+<ul>
+<li><a href="https://github.com/tornadoweb/tornado">tornado</a> - A web framework and asynchronous networking library.</li>
+</('ul', 4)>
+</('ul', 0)>
+<h2>WebSocket</h2>
+
+<p><em>Libraries for working with WebSocket.</em></p>
+
+<ul>
+<li><a href="https://github.com/crossbario/autobahn-python">autobahn-python</a> - WebSocket & WAMP for Python on Twisted and <a href="https://docs.python.org/3/library/asyncio.html">asyncio</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/django/channels">channels</a> - Developer-friendly asynchrony for Django.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/aaugustin/websockets">websockets</a> - A library for building WebSocket servers and clients with a focus on correctness and simplicity.</li>
+</('ul', 0)>
+<h2>WSGI Servers</h2>
+
+<p><em>WSGI-compatible web servers.</em></p>
+
+<ul>
+<li><a href="https://github.com/benoitc/gunicorn">gunicorn</a> - Pre-forked, ported from Ruby's Unicorn project.</li>
+</ul>
+<ul>
+<li><a href="https://uwsgi-docs.readthedocs.io/en/latest/">uwsgi</a> - A project aims at developing a full stack for building hosting services, written in C.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Pylons/waitress">waitress</a> - Multi-threaded, powers Pyramid.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pallets/werkzeug">werkzeug</a> - A WSGI utility library for Python that powers Flask and can easily be embedded into your own projects.</li>
+</('ul', 0)>
+<h1>Resources</h1>
+
+<p>Where to discover learning resources or new Python libraries.</p>
+
+<h2>Newsletters</h2>
+
+<ul>
+<li><a href="http://python.libhunt.com/newsletter">Awesome Python Newsletter</a></li>
+</ul>
+<ul>
+<li><a href="https://pycoders.com/">Pycoder's Weekly</a></li>
+</ul>
+<ul>
+<li><a href="https://realpython.com/python-tricks/">Python Tricks</a></li>
+</ul>
+<ul>
+<li><a href="https://www.pythonweekly.com/">Python Weekly</a></li>
+</('ul', 0)>
+<h2>Podcasts</h2>
+
+<ul>
+<li><a href="https://djangochat.com/">Django Chat</a></li>
+</ul>
+<ul>
+<li><a href="https://pythonbytes.fm">Python Bytes</a></li>
+</ul>
+<ul>
+<li><a href="https://talkpython.fm/">Talk Python To Me</a></li>
+</ul>
+<ul>
+<li><a href="https://podcast.pythontest.com/">Python Test</a></li>
+</ul>
+<ul>
+<li><a href="https://realpython.com/podcasts/rpp/">The Real Python Podcast</a></li>
+</('ul', 0)>
+<h1>Contributing</h1>
+
+<p>Your contributions are always welcome! Please take a look at the <a href="https://github.com/vinta/awesome-python/blob/master/CONTRIBUTING.md">contribution guidelines</a> first.</p>
+
+<ul>
+<li>- -</li>
+</ul>
+<p>If you have any question about this opinionated list, do not hesitate to contact me <a href="https://twitter.com/VintaChen">@VintaChen</a> on Twitter or open an issue on GitHub.</p>
+
+</body>
+</html>
