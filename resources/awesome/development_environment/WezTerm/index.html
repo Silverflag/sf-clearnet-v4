@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WezTerm</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>WezTerm</h1>
+
+<p><strong>Repository:</strong> https://github.com/michaelbrusegard/awesome-wezterm#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<!-- lint ignore awesome-git-repo-age -->
+
+<h1>Awesome WezTerm <a href="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg"><img src="https://github.com/sindresorhus/awesome" alt="Awesome</a>"></h1>
+
+<img src="https://raw.githubusercontent.com/wez/wezterm/main/assets/icon/wezterm-icon.svg" align="right" width="144" />
+
+<blockquote>
+<p>Collections of awesome WezTerm plugins. <a href="https://github.com/wezterm/wezterm/blob/main/docs/config/plugins.md">Plugin Guide</a>. Found something cool? Please <a href="CONTRIBUTING.md">contribute</a>!</p>
+</blockquote>
+
+<p><a href="https://wezfurlong.org/wezterm/">WezTerm</a> is a powerful cross-platform terminal emulator and multiplexer written by <a href="https://github.com/wez">@wez</a> and implemented in <a href="https://www.rust-lang.org">Rust</a>.</p>
+
+<p>To enhance your WezTerm configuration experience:</p>
+
+<ul>
+<li><a href="https://github.com/justinsgithub/wezterm-types">justinsgithub/wezterm-types</a> - WezTerm types that can be added as a completion source in your editor to provide code assistance when working with WezTerm's Lua API.</li>
+</('ul', 0)>
+<h2>Contents</h2>
+
+<ul>
+<li><a href="#ai">AI</a></li>
+</ul>
+<ul>
+<li><a href="#keybinding">Keybinding</a></li>
+</ul>
+<ul>
+<li><a href="#media">Media</a></li>
+</ul>
+<ul>
+<li><a href="#neovim">Neovim</a></li>
+</ul>
+<ul>
+<li><a href="#panes">Panes</a></li>
+</ul>
+<ul>
+<li><a href="#session">Session</a></li>
+</ul>
+<ul>
+<li><a href="#tab-bar">Tab bar</a></li>
+</ul>
+<ul>
+<li><a href="#themes">Themes</a></li>
+</ul>
+<ul>
+<li><a href="#utility">Utility</a></li>
+</('ul', 0)>
+<h2>AI</h2>
+
+<ul>
+<li><a href="https://github.com/Michal1993r/ai-helper.wezterm/tree/master">Michal1993r/ai-helper.wezterm</a> - Ask AI for CLI help with LM Studio or Google Gemini.</li>
+</('ul', 0)>
+<h2>Keybinding</h2>
+
+<ul>
+<li><a href="https://github.com/MLFlexer/modal.wezterm">MLFlexer/modal.wezterm</a> - Predefined Vim-like modal keybindings with a good looking UI.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sei40kr/wez-pain-control?tab=readme-ov-file">sei40kr/wez-pain-control</a> - Pane control keybindings like tmux-pain-control.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sei40kr/wez-tmux">sei40kr/wez-tmux</a> - Ported tmux keybindings.</li>
+</('ul', 0)>
+<h2>Media</h2>
+
+<ul>
+<li><a href="https://github.com/xarvex/presentation.wez">xarvex/presentation.wez</a> - Rather simple presentation mode toggle.</li>
+</('ul', 0)>
+<h2>Neovim</h2>
+
+<ul>
+<li><a href="https://github.com/mrjones2014/smart-splits.nvim">mrjones2014/smart-splits.nvim</a> - Provides an addon for seamless pane navigation between Neovim and the WezTerm MUX.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/winter-again/wezterm-config.nvim">winter-again/wezterm-config.nvim</a> - Interact with the WezTerm configuration directly from Neovim.</li>
+</('ul', 0)>
+<h2>Panes</h2>
+
+<ul>
+<li><a href="https://github.com/ChrisGVE/pivot<em>panes.wezterm">ChrisGVE/pivot</em>panes.wezterm</a> - Toggle pane orientation between horizontal and vertical splits.</li>
+</('ul', 0)>
+<h2>Session</h2>
+
+<ul>
+<li><a href="https://github.com/DavidRR-F/quick<em>domains.wezterm">DavidRR-F/quick</em>domains.wezterm</a> - Faster way to search and attach to (SSH) domains.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mikkasendke/sessionizer.wezterm">mikkasendke/sessionizer.wezterm</a> - Opening git repositories as their own WezTerm workspaces using <code>fd</code>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/MLFlexer/resurrect.wezterm">MLFlexer/resurrect.wezterm</a> - Save and restore the state of windows, tabs and panes.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/MLFlexer/smart<em>workspace</em>switcher.wezterm">MLFlexer/smart<em>workspace</em>switcher.wezterm</a> - Switch between workspaces with fuzzy finding and <code>zoxide</code>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/vieitesss/workspacesionizer.wezterm">vieitesss/workspacesionizer.wezterm</a> - Blazingly fast workspace chooser inspired by <code>tmux-sessionizer</code>.</li>
+</('ul', 0)>
+<h2>Tab bar</h2>
+
+<ul>
+<li><a href="https://github.com/adriankarlen/bar.wezterm">adriankarlen/bar.wezterm</a> - A configurable tab bar with batteries included.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/michaelbrusegard/tabline.wez">michaelbrusegard/tabline.wez</a> - A versatile and easy to use retro tab bar with the <code>lualine.nvim</code> configuration format.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/rootiest/battery.wez">rootiest/battery.wez</a> - A colorful and fancy battery component for the retro tab bar.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/yriveiro/wezterm-status">yriveiro/wezterm-status</a> - Configurable status for the retro tab bar.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/yriveiro/wezterm-tabs">yriveiro/wezterm-tabs</a> - Configurable tabs for the retro tab bar.</li>
+</('ul', 0)>
+<h2>Themes</h2>
+
+<ul>
+<li><a href="https://github.com/neapsix/wezterm">neapsix/wezterm</a> - Rosé Pine theme, all natural pine, faux fur and a bit of soho vibes.</li>
+</('ul', 0)>
+<h2>Utility</h2>
+
+<ul>
+<li><a href="https://github.com/aureolebigben/wezterm-cmd-sender">aureolebigben/wezterm-cmd-sender</a> - Send commands to multiple panes.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ChrisGVE/dev.wezterm">ChrisGVE/dev.wezterm</a> - Location resolver for development and deployment of a plugin.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ChrisGVE/lib.wezterm">ChrisGVE/lib.wezterm</a> - A library of common utility functions for plugin developers.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ChrisGVE/listeners.wezterm">ChrisGVE/listeners.wezterm</a> - Enables enhanced event listener capabilities with persistent state management.</li>
+</ul>
+<ul>
+<li><a href="https://gitlab.com/lilaqua/tunicodes">lilaqua/tunicodes</a> - Insert Unicode characters via their codepoints.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/zsh-sage/toggle<em>terminal.wez">zsh-sage/toggle</em>terminal.wez</a> - An easy-to-use toggleable terminal window.</li>
+</ul>
+</body>
+</html>

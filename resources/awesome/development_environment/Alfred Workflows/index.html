@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfred Workflows</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Alfred Workflows</h1>
+
+<p><strong>Repository:</strong> https://github.com/alfred-workflows/awesome-alfred-workflows#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<blockquote>
+<p>[!WARNING]</p>
+<p>This list is deprecated in favour of <a href="https://alfred.app/">the official Alfred Gallery</a>.</p>
+<p>Future submissions should be directed there.</p>
+</blockquote>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#communication">Communication</a></li>
+</ul>
+<ul>
+<li><a href="#developer">Developer</a></li>
+</ul>
+<ul>
+<li><a href="#helpers">Helpers</a></li>
+</ul>
+<ul>
+<li><a href="#miscellaneous">Miscellaneous</a></li>
+</ul>
+<ul>
+<li><a href="#multimedia">Multimedia</a></li>
+</ul>
+<ul>
+<li><a href="#productivity">Productivity</a></li>
+</ul>
+<ul>
+<li><a href="#scientific">Scientific</a></li>
+</ul>
+<ul>
+<li><a href="#security">Security</a></li>
+</ul>
+<ul>
+<li><a href="#system">System</a></li>
+</ul>
+<ul>
+<li><a href="#text-manipulation">Text Manipulation</a></li>
+</ul>
+<ul>
+<li><a href="#web">Web</a></li>
+</ul>
+<ul>
+<li><a href="#other-lists">Other Lists</a></li>
+</('ul', 0)>
+<h2>Communication</h2>
+<ul>
+<li><a href="http://www.alfredforum.com/topic/1274-adium-workflow/">Adium</a> - Adium workflow to chat with people on your list.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/deanishe/alfred-mailto">MailTo</a> - Quickly compose emails to your contacts and contact groups.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/BalliAsghar/mailsy-alfred">Mailsy</a> - Quickly generate a disposable email.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/yannickglt/alfred-slack">Slack</a> - Alfred workflow to interact, and perform various functions with the service Slack.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/vitorgalvao/alfred-workflows/tree/master/TemporaryEmail">TemporaryEmail</a> - Get a temporary email inbox.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/stephancasas/alfred-mouseless-messenger">Mouseless Messenger</a></li>
+</('ul', 0)>
+<h2>Developer</h2>
+<ul>
+<li><a href="https://github.com/rkoval/alfred-aws-console-services-workflow">AWS Console Services</a> - Quickly open up AWS Console Services in your browser or search for entities within them.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ruedap/alfred-bootstrap-icons-workflow">Bootstrap Icons</a> - Quickly look up Bootstrap Icons and add the desired one to your clipboard.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/willfarrell/alfred-caniuse-workflow">caniuse</a> - Caniuse.com workflow to query HTML / CSS support.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/robjtede/alfred-caniuse-rs">caniuse.rs</a> - Rust feature support and version info from <a href="https://caniuse.rs">caniuse.rs</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/willfarrell/alfred-cdn-workflow">CDN</a> - Check which CDNs a package is hosted on.</li>
+</ul>
+<ul>
+<li><a href="http://www.packal.org/workflow/colors">Colors</a> - Convert color formats & access the OS X color panel.</li>
+</ul>
+<ul>
+<li><a href="https://kapeli.com/dash">Dash</a> - Allows you to query Dash for Developer Documentation.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/yannickglt/alfred-devdocs">DevDocs</a> - An Alternative to Dash. Allows you query <a href="https://devdocs.io/">devdocs.io</a> for documentation.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/deanishe/alfred-fakeum">Fakeum</a> - Generate all kinds of test data.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ruedap/alfred2-font-awesome-workflow">Font Awesome</a> - Quickly look up font awesome icons and add the desired one to your clipboard.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/gharlan/alfred-github-workflow">Github</a> - GitHub command bar, similiar to the command bar in Github.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/deanishe/alfred-repos">Git Repos</a> - Search and open the Git repos on your system.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/bchatard/alfred-jetbrains">JetBrains</a> - Open project with one of JetBrains' products.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/vmitchell85/alforge">Laravel Forge</a> - alForge, Open and run commands on Laravel Forge.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/importre/alfred-mdi">mdi</a> - Find <a href="https://github.com/google/material-design-icons">Material Design Icons</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/alfred-npms">npms</a> - Search for npm packages with <a href="https://npms.io">npms.io</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/SamVerschueren/alfred-ng">ng</a> - Search through the <a href="https://angular.io">angular.io</a> documentation.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/willfarrell/alfred-pkgman-workflow">Package Managers</a> - Package Repo Search.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/vinkla/alfred-packagist">Packagist</a> - Search for PHP packages with <a href="https://packagist.org">Packagist</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/zhaocai/alfred2-sourcetree-workflow">Source Tree</a> - List, search, and open Source Tree repositories.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/techouse/alfred-tailwindcss-docs">Tailwind CSS Docs</a> - Search the <a href="https://tailwindcss.com/docs/">Tailwind CSS</a> documentation.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/m1keil/alfred-vagrant-workflow">VagrantUP</a> - List and control Vagrant environments with Alfred2.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/alexchantastic/alfred-open-with-vscode-workflow">VSCode</a> - An Alfred 4 workflow opening files or folders with Visual Studio Code.</li>
+</('ul', 0)>
+<h2>Text Manipulation</h2>
+<ul>
+<li><a href="https://github.com/willfarrell/alfred-encode-decode-workflow">Encode / Decode</a> - Transform your query strings through base64, html, url, and utf-8 encode/decode.</li>
+</ul>
+<ul>
+<li><a href="http://www.packal.org/workflow/funnel">Funnel</a> - Funnel selected text or a file through various filters.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/importre/alfred-hl">hl</a> - Syntax highlight code in the clipboard.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ajgon/alfred2-html-entity-lookup">HTML Entity Lookup</a> - Search for entity characters based on how they look or by name.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/smargh/alfred_pandoctor">Pandoctor</a> - Alfred interface to <a href="http://pandoc.org">pandoc</a>, a tool that allows to convert between text formats (Markdown, LaTeX, DOC, DOCX, ...).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/bevesce/unicode-symbols-search">Unicode Text Search</a> - Search for Unicode Symbols.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/logicxd/alfred-vscodediff">VSCodeDiff</a> - Show the diff of the last 2 items in clipboard history using VSCode.</li>
+</('ul', 0)>
+<h2>Scientific</h2>
+<ul>
+<li><a href="https://github.com/deanishe/alfred-convert">Convert</a> - Offline conversion of units and (crypto)currencies.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/hbuschme/doi-tools-alfred-workflow/">DOITools</a> - Tools to resolve, open, shorten DOI numbers and even convert them to bibtex.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/andrewning/alfred-workflows-scientific">Scientific Workflow</a> - Workflows that are useful for scientists: e.g. LaTeX, importing references in bibtex.</li>
+</ul>
+<ul>
+<li><a href="http://www.packal.org/workflow/skim-remote">Skim remote</a> - Controls the <a href="http://skim-app.sourceforge.net">Skim PDF Viewer</a> remotely from Alfred.</li>
+</('ul', 0)>
+<h2>Productivity</h2>
+<ul>
+<li><a href="https://github.com/deanishe/alfred-gcal">Google Calendar View</a> - View your Google Calendar events.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/deanishe/i-sheet-you-not">I Sheet You Not</a> - Generate your own workflows from Excel spreadsheets.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/squatto/alfred-imessage-2fa">iMessage 2FA</a> - Find two-factor authentication codes in your recent iMessage messages.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/xilopaint/alfred-pdf-tools">PDF Tools</a> - Optimize, encrypt and manipulate PDF files.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/xilopaint/alfred-things">Things</a> - Interact with Things 3 using Alfred.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/skibitsky/alfred-timing">Timing</a> - Interact with the <a href="https://timingapp.com/">Timing</a> app.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/moranje/alfred-workflow-todoist">Todoist</a> - Add tasks to Todoist.</li>
+</('ul', 0)>
+<h2>Miscellaneous</h2>
+<ul>
+<li><a href="https://github.com/devnoname120/alfred-emoji-picker">Emoji picker</a> - Fast emoji input.</li>
+</ul>
+<ul>
+<li><a href="http://joelcalifa.com/blog/alfred-emoji-snippet-pack/">Emoji Snippet Pack</a> - Snippet Pack for Emojis.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/alfred-emoj">Emoj</a> - Find relevant emoji from text.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/techouse/alfred-gitmoji">Gitmoji</a> - Search for <a href="https://gitmoji.dev">Gitmojis</a> easily.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/raarellano/alfred-lorem-ipsum-workflow">Lorem Ipsum</a> - Generate lorem ipsum(...) text from Alfred.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/vinkla/alfred-kaomoji">Kaomoji</a> - Find relevant kaomoji from text.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/perfectworks/alfred-workflow-moment">Moment</a> - Advanced time utility, inspired by <a href="https://momentjs.com">moment.js</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/vitorgalvao/alfred-workflows/tree/master/WebScreenshot">WebScreenshot</a> - Take screenshots directly to imgur.</li>
+</('ul', 0)>
+<h2>Multimedia</h2>
+<ul>
+<li><a href="http://alfred-spotify-mini-player.com">Spotify Mini Player</a> - Take full control of your <a href="https://www.spotify.com">Spotify</a> library.</li>
+</('ul', 0)>
+<h2>Security</h2>
+<ul>
+<li><a href="https://github.com/bachya/lp-vault-manager">LastPass Vault Manager</a> - A workflow to interact with a LastPass vault.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/deanishe/alfred-pwgen">Password Generator</a> - Configurable offline password generator.</li>
+</ul>
+<ul>
+<li><a href="http://www.packal.org/workflow/random-mac">Random MAC</a> - Assigns a random MAC address to <code>en0</code> (e.g. for free wifi).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/deanishe/alfred-vpn-manager">VPN Manager</a> - Control <a href="https://tunnelblick.net/">Tunnelblick</a> and <a href="https://www.sparklabs.com/viscosity/">Viscosity</a> OpenVPN connections.</li>
+</('ul', 0)>
+<h2>System</h2>
+<ul>
+<li><a href="https://github.com/vitorgalvao/alfred-workflows/tree/master/AppFreeze">AppFreeze</a> - Pauses and resumes execution of the frontmost app.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/deanishe/alfred-appscripts">AppScripts</a> - Search and run JXA/AppleScripts for the active application.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/vegardinho/alfred<em>bluetooth</em>controller">Bluetooth Controller</a> - Manage bluetooth status and device connectivity.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/franzheidl/copy-paths-to-clipboard">Copy Paths to Clipboard</a> - Copy Current File Paths to Clipboard as POSIX, HFS, or File URLs.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/danielbayley/alfred-finder-new-item">Finder New item</a> - Swiftly create new items in Finder with support for templates.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/SamVerschueren/alfred-fkill">Fkill</a> - Fabulously search and kill processes.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/iansinnott/alfred-maestro">Keyboard Maestro</a> - Execute Keyboard Maestro macros from Alfred.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/zhaocai/alfred2-keylue-workflow">Keylue</a> - Key Clue, Menu Bar and Keyboard Maestro Hot Key Search</li>
+</ul>
+<ul>
+<li><a href="http://www.packal.org/workflow/network-info">Network Info</a> -  Display ip addresses or mac addresses for all network interfaces.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/isometry/alfred-ssh/">SSH</a> - Autocompletes SSH sessions based on <code>~/.ssh/known_hosts</code>, <code>~/.ssh/config</code> and <code>/etc/hosts</code></li>
+</ul>
+<ul>
+<li><a href="https://github.com/hanjm/alfred-ssh-iterm-workflow">SSH iTerm</a> - Query <code>~/.ssh/config</code> and open ssh host with iTerm badge.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mandrigin/AlfredSwitchWindows">Swift Windows Switcher</a> - Switches between open windows and a browser (Safari/Chrome) tabs.</li>
+</ul>
+<ul>
+<li><a href="http://www.packal.org/workflow/temporary-mute">TemporaryMute</a> - Mutes the volume of their computer for a specified duration of time.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/LeEnno/alfred-terminalfinder">TerminalFinder</a> - Alfred workflow to open current Finder window in Terminal/iTerm and vice versa.</li>
+</('ul', 0)>
+<h2>Web</h2>
+<ul>
+<li><a href="https://github.com/vitorgalvao/alfred-workflows/tree/master/BugNot">BugNot</a> - Get logins from bugmenot.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/vitorgalvao/alfred-workflows/tree/master/IncognitoClone">IncognitoClone</a> - Opens Chrome’s frontmost tab in an incognito window.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/wmorland/alfred-py3-default-browser">Default Browser</a> - Switch the default web browser.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/deanishe/alfred-reddit">Reddit</a> - Search and browse subreddits and hot posts within Alfred.</li>
+</('ul', 0)>
+<h2>Helpers</h2>
+
+<ul>
+<li><a href="https://github.com/techouse/alfred_workflow">Alfred Workflow (for Dart)</a> - Dart library for writing Alfred workflows. Inspired by <a href="https://github.com/deanishe/alfred-workflow">Alfred-Workflow</a> for Python.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sindresorhus/alfy">Alfy</a> - Node.js library to create Alfred workflows with ease.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/deanishe/awgo">AwGo</a> - Full-featured library for Go to build lightning-fast workflows in a jiffy.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/deanishe/alfred-fuzzy">Fuzzy Search</a> - Add fuzzy search to any Script Filter.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/vitorgalvao/alfred-workflows/tree/master/OneUpdater">OneUpdater</a> - Minimal Configuration method in adding auto-updating to your workflow.</li>
+</('ul', 0)>
+<h2>Other Lists</h2>
+<p>Here are a list of other collections of alfred collections which are useful.</p>
+
+<ul>
+<li><a href="https://github.com/ctwise/alfred-workflows">Ctwise Alfred Workflows</a> - Workflows from the Github user "ctwise".</li>
+</ul>
+<ul>
+<li><a href="http://www.packal.org/">Packal</a> - The biggest place to find Workflows.</li>
+</ul>
+<ul>
+<li><a href="https://pacmax.org/">PacMax</a> – Pacmax was assembled as a way for Alfred lovers to find and share their favorite workflows, snippets, and themes.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/vitorgalvao/alfred-workflows/">Vítor Galvão’s Alfred Workflows</a> - Workflows from the Github user "vitorgalvao".</li>
+</('ul', 0)>
+<h2>Contributing</h2>
+<p><a href="https://github.com/derimagia/awesome-alfred-workflows/blob/master/CONTRIBUTING.md">See the guide</a></p>
+
+<h2>License</h2>
+<a rel="license" href="http://creativecommons.org/publicdomain/mark/1.0/">
+<p><img src="http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg"</p>
+<p>style="border-style: none;" alt="Public Domain Mark" /></p>
+</a>
+
+<p>To the extent possible under law, <a href="https://github.com/derimagia">David Wikoff</a> has waived all copyright and related or neighboring rights to this work.</p>
+
+<p>To the extent possible under law, <a href="https://github.com/slippycheeze">Daniel Pittman (SlippyCheeze)</a> has waived all copyright and related or neighboring rights to this work.</p>
+
+</body>
+</html>

@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atom</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Atom</h1>
+
+<p><strong>Repository:</strong> https://github.com/mehcode/awesome-atom#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<h1>Awesome Atom <a href="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg"><img src="https://github.com/sindresorhus/awesome" alt="Awesome</a>"></h1>
+
+<p>A curated list of delightful Atom packages and resources. For more awesomeness, check out <a href="https://github.com/sindresorhus/awesome">awesome</a>.</p>
+
+<h2>Table of Content</h2>
+
+<ul>
+<li><a href="#syntax">Syntax</a></li>
+</ul>
+<ul>
+<li><a href="#lint">Lint</a></li>
+</ul>
+<ul>
+<li><a href="#build">Build</a></li>
+</ul>
+<ul>
+<li><a href="#extensions">Extensions</a></li>
+<ul>
+<li><a href="#nuclide">Nuclide</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="http://enrmarc.github.io/atom-theme-gallery/">Themes</a></li>
+</ul>
+<ul>
+<li><a href="#collaboration">Collaboration</a></li>
+<ul>
+<li><a href="#codesidestory">CodeSideStory</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#uncategorized">Uncategorized</a></li>
+<ul>
+<li><a href="#nuclide">Nuclide</a></li>
+</ul>
+<ul>
+<li><a href="#advanced-open-file">Advanced Open File</a></li>
+</ul>
+<ul>
+<li><a href="#atom-reverser">Atom Reverser</a></li>
+</ul>
+<ul>
+<li><a href="#atom-terminal">Atom Terminal</a></li>
+</ul>
+<ul>
+<li><a href="#autocomplete-module-import">Autocomplete module import</a></li>
+</ul>
+<ul>
+<li><a href="#beautify">Beautify</a></li>
+</ul>
+<ul>
+<li><a href="#code-peek">Code Peek</a></li>
+</ul>
+<ul>
+<li><a href="#color-picker">Color Picker</a></li>
+</ul>
+<ul>
+<li><a href="#copy-paste">Copy Paste</a></li>
+</ul>
+<ul>
+<li><a href="#css-declaration-sorter">CSS Declaration Sorter</a></li>
+</ul>
+<ul>
+<li><a href="#duplicate-selection">Duplicate Selection</a></li>
+</ul>
+<ul>
+<li><a href="#editor-config">Editor Config</a></li>
+</ul>
+<ul>
+<li><a href="#emmet">Emmet</a></li>
+</ul>
+<ul>
+<li><a href="#file-icons">File Icons</a></li>
+</ul>
+<ul>
+<li><a href="#fonts">Fonts</a></li>
+</ul>
+<ul>
+<li><a href="#git-time-machine">Git Time Machine</a></li>
+</ul>
+<ul>
+<li><a href="#html-to-css">html-to-css</a></li>
+</ul>
+<ul>
+<li><a href="#imdone">iMDone</a></li>
+</ul>
+<ul>
+<li><a href="#jumpy">Jumpy</a></li>
+</ul>
+<ul>
+<li><a href="#merge-conflicts">Merge Conflicts</a></li>
+</ul>
+<ul>
+<li><a href="#minimap">Minimap</a></li>
+</ul>
+<ul>
+<li><a href="#pigments">Pigments</a></li>
+</ul>
+<ul>
+<li><a href="#project-plus">Project Plus</a></li>
+</ul>
+<ul>
+<li><a href="#sort-lines">Sort lines</a></li>
+</ul>
+<ul>
+<li><a href="#sorter">Sorter</a></li>
+</ul>
+<ul>
+<li><a href="#sync-settings">Sync Settings</a></li>
+</ul>
+<ul>
+<li><a href="#platformio-ide-terminal">PlatformIO IDE Terminal</a></li>
+</ul>
+<ul>
+<li><a href="#ternjs">TernJS</a></li>
+</ul>
+<ul>
+<li><a href="#test-navigator">Test Navigator</a></li>
+</ul>
+<ul>
+<li><a href="#themer">Themer</a></li>
+</ul>
+<ul>
+<li><a href="#toggle-quotes">Toggle Quotes</a></li>
+</('ul', 2)>
+</('ul', 0)>
+<h2>Syntax</h2>
+
+<p>Language packages extend the editor with syntax highlighting and/or</p>
+<p>snippets for a specific language or file format.</p>
+
+<ul>
+<li><a href="https://atom.io/packages/angularjs">Angular</a></li>
+</ul>
+<ul>
+<li><a href="https://atom.io/packages/language-vue">Vue.js</a></li>
+</ul>
+<ul>
+<li><a href="https://atom.io/packages/language-docker">Dockerfile</a></li>
+</ul>
+<ul>
+<li><a href="https://atom.io/packages/language-markdown">Markdown</a></li>
+</ul>
+<ul>
+<li><a href="https://atom.io/packages/react">React</a></li>
+</ul>
+<ul>
+<li><a href="https://atom.io/packages/stylus">Stylus</a></li>
+</ul>
+<ul>
+<li><a href="https://atom.io/packages/language-pug">Pug</a></li>
+</ul>
+<ul>
+<li><a href="https://atom.io/packages/language-tcl">Tcl</a></li>
+</ul>
+<ul>
+<li><a href="https://atom.io/packages/atom-typescript">TypeScript</a></li>
+</('ul', 1)>
+<h2>Lint</h2>
+
+<p>In case the awesome nirvana that is linting has not yet been unleashed upon you:</p>
+<blockquote>
+<p>lint was the name originally given to a particular program that flagged some suspicious and non-portable constructs (likely to be bugs) in C language source code. The term is now applied generically to tools that flag suspicious usage in software written in any computer language.</p>
+</blockquote>
+
+<p>To enable linting, you'll need the general <a href="https://atom.io/packages/linter">linter</a> which provides the interface for the provider plugins for specific languages. The full list of current plugins can be found at <a href="http://atomlinter.github.io/">atomlinter.github.io</a>, a few examples being:</p>
+
+<ul>
+<li>C++</li>
+<ul>
+<li><a href="https://atom.io/packages/linter-clang">linter-clang</a></li>
+</ul>
+<ul>
+<li><a href="https://atom.io/packages/linter-cppcheck">linter-cppcheck</a></li>
+</ul>
+<ul>
+<li><a href="https://atom.io/packages/linter-gcc">linter-gcc</a> - on-the-fly linting!</li>
+</ul>
+<ul>
+<li><a href="https://atom.io/packages/linter-cpplint">linter-cpplint</a> - checks against google style guide</li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://atom.io/packages/linter-stylelint">CSS</a> — stylelint</li>
+</ul>
+<ul>
+<li><a href="https://atom.io/packages/linter-eslint">JavaScript</a> — eslint</li>
+</ul>
+<ul>
+<li><a href="https://atom.io/packages/linter-pylama">Python</a> — pylama</li>
+</ul>
+<ul>
+<li><a href="https://atom.io/packages/linter-sass-lint">SASS</a> — sass-lint</li>
+</ul>
+<ul>
+<li><a href="https://atom.io/packages/linter-stylint">Stylus</a> — stylint</li>
+</ul>
+<ul>
+<li><a href="https://atom.io/packages/linter-tslint">TypeScript</a> - tslint</li>
+</ul>
+<p>!<a href="https://camo.githubusercontent.com/70b6e697c9d793642414b4ea6d08dbb9678877b3/687474703a2f2f672e7265636f726469742e636f2f313352666d6972507a322e676966">atom-linter</a></p>
+
+<h2>Build</h2>
+
+<p>To enable building, you'll need the general <a href="https://atom.io/packages/build">build</a> which provides the interface for the provider plugins for specific languages and adds integrates with <a href="#lint">lint</a>. The full list of current plugins can be found at <a href="http://atombuild.github.io/">atombuild.github.io</a>, a few examples being:</p>
+
+<ul>
+<li><a href="https://atom.io/packages/build-applescript">AppleScript</a> — oscompile</li>
+</ul>
+<ul>
+<li><a href="https://atom.io/packages/build-xcodebuild">C/C++/Objective C</a> — xcodebuild</li>
+</ul>
+<ul>
+<li><a href="https://atom.io/packages/build-coffee">CoffeeScript</a> - coffee</li>
+</ul>
+<ul>
+<li><a href="https://github.com/AtomBuild/atom-build-make">GNU Make</a> - make</li>
+</ul>
+<ul>
+<li><a href="https://atom.io/packages/build-sass">Sass</a> — sass</li>
+</ul>
+<ul>
+<li><a href="https://atom.io/packages/build-tsc">TypeScript</a> - tsc</li>
+</ul>
+<p>!<a href="https://camo.githubusercontent.com/ca10be645c7a2024dddc550466e67d692fb411ed/68747470733a2f2f6e6f7365676c69642e6769746875622e696f2f746172676574732d6d616b652e676966">atom-build</a></p>
+
+<h2>Extensions</h2>
+
+<h4><a href="https://nuclide.io/">Nuclide</a></h4>
+<blockquote>
+<p>An open IDE for web and native mobile development, built on top of Atom maintained by <a href="https://github.com/facebook/nuclide">Facebook</a>.</p>
+</blockquote>
+
+<p><img src="https://nuclide.io/static/images/docs/promo-hack.png" alt=""></p>
+
+<h2>Collaboration</h2>
+
+<h4><a href="https://atom.io/packages/codesidestory-atom">CodeSideStory</a></h4>
+<blockquote>
+<p>An Atom/Slack integration to start conversations about code right from the editor. Record screens and archive it right next to the line number to provide more context to your code.</p>
+</blockquote>
+
+<p><img src="https://storage.googleapis.com/codesidestory/static/media/atom_ss.c29b4b0b.png" alt=""></p>
+
+<h2>Uncategorized</h2>
+
+<h4><a href="https://atom.io/packages/advanced-open-file">Advanced Open File</a></h4>
+<blockquote>
+<p>Helps Atom users to open files and folders easily. It can also creates new files and folders if they don't currently exist.</p>
+</blockquote>
+
+<p><img src="http://osmose.github.io/advanced-open-file/demo.gif" alt=""></p>
+
+<h4><a href="https://atom.io/packages/atom-reverser">Atom Reverser</a></h4>
+<blockquote>
+<p>Reverses your current selections; e.g. <code>false</code> to <code>true</code></p>
+</blockquote>
+
+<p>!<a href="https://i.imgur.com/YawGVsN.gif">Atom Reverser in action</a></p>
+
+<h4><a href="https://atom.io/packages/atom-terminal">Atom Terminal</a></h4>
+<blockquote>
+<p>Launch terminal app on current file's directory with "Ctrl-Shift-T" in Atom.</p>
+</blockquote>
+
+<p><img src="https://raw.githubusercontent.com/karan/atom-terminal/master/terminal.gif" alt=""></p>
+
+<h4><a href="https://atom.io/packages/autocomplete-module-import">Autocomplete module import</a></h4>
+<blockquote>
+<p>Search & install npm packages from import/require statements by <a href="https://www.algolia.com/">Algolia</a></p>
+</blockquote>
+
+<p><img src="https://camo.githubusercontent.com/53350e9c6d303f60101e1644605fe62f529e45f2/687474703a2f2f672e7265636f726469742e636f2f643576695542385859372e676966" alt=""></p>
+
+<h4><a href="https://atom.io/packages/atom-beautify">Beautify</a></h4>
+<blockquote>
+<p><a href="https://github.com/beautify-web/js-beautify">Beautify</a></p>
+</blockquote>
+<p>HTML (including <a href="http://handlebarsjs.com/">Handlebars</a>),</p>
+<p>CSS (including <a href="http://sass-lang.com/">Sass</a> and <a href="http://lesscss.org/">LESS</a>),</p>
+<p>JavaScript, and much more in Atom.</p>
+
+<h4><a href="https://atom.io/packages/code-peek">Code Peek</a></h4>
+<blockquote>
+<p>Quickly peek and edit functions in separate files from the context of your current editor.</p>
+</blockquote>
+
+<p>!<a href="https://github.com/DFreds/code-peek-atom/blob/master/code-peek.gif?raw=true">Code Peek Demo</a></p>
+
+<h4><a href="https://atom.io/packages/color-picker">Color Picker</a></h4>
+<blockquote>
+<p>Color picker that supports HEX, HEXa, RGB, RGBa, HSL, HSLa, HSV, HSVa, VEC3, VEC4 – and is able to convert between the formats. It also inspects Sass and LESS color variables.</p>
+</blockquote>
+
+<p>!<a href="https://github.com/thomaslindstrom/color-picker/raw/master/preview.gif">Color Picker in action</a></p>
+
+<h4><a href="https://atom.io/packages/copy-paste">Copy Paste</a></h4>
+<blockquote>
+<p>Types in your code for your from the clipboard/buffer. Simply copy the code and hit the shortcut to watch your code being typed. Copy paste is ideal for screencasts and online courses.</p>
+</blockquote>
+
+<h4><a href="https://atom.io/packages/css-declaration-sorter">CSS Declaration Sorter</a></h4>
+<blockquote>
+<p>Sorts your CSS, Less or Sass declarations in Atom, never gets tired. You can choose from various ready-made orders to keep your CSS tidy.</p>
+</blockquote>
+
+<p>!<a href="https://github.com/Siilwyn/css-declaration-sorter-atom/raw/master/show-off.gif">CSS Declaration Sorter Demo</a></p>
+
+<h4><a href="https://atom.io/packages/duplicate-line-or-selection">Duplicate Selection</a></h4>
+<blockquote>
+<p>Duplicates the selection if there is one, otherwise, duplicates the line.</p>
+</blockquote>
+
+<h4><a href="https://atom.io/packages/editorconfig">Editor Config</a></h4>
+<blockquote>
+<p><a href="http://editorconfig.org">EditorConfig</a> helps developers maintain consistent coding styles between different editors</p>
+</blockquote>
+
+<p>!<a href="https://f.cloud.github.com/assets/170270/2327994/dfe40cb4-a3f6-11e3-862f-894999973373.png">atom-editor-config</a></p>
+
+<h4><a href="https://atom.io/packages/emmet">Emmet</a></h4>
+<blockquote>
+<p>Plugin which greatly improves HTML and CSS writing. Shortcuts can expand to complete set of HTML or CSS selectors.</p>
+</blockquote>
+
+<h4><a href="https://atom.io/packages/file-icons">File Icons</a></h4>
+<blockquote>
+<p>Adds file specific icons to atom for improved visual grepping. Works with Tree View and Fuzzy Finder and Tabs.</p>
+</blockquote>
+
+<h4><a href="https://atom.io/packages/fonts">Fonts</a></h4>
+<blockquote>
+<p>Lots of monospace fonts.</p>
+</blockquote>
+
+<h4><a href="https://atom.io/packages/git-time-machine">Git Time Machine</a></h4>
+<blockquote>
+<p>It shows visual plot of commits to the current file over time and you can click on it on the timeplot or hover over the plot and see all of the commits for a time range.</p>
+</blockquote>
+
+<p>!<a href="https://i.github-camo.com/62085307dccead1c2f5efdf4d7a40f9cdb777b93/68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f6c6974746c656265652f6769742d74696d652d6d616368696e652f6d61737465722f7265736f75726365732f74696d656d616368696e652e676966">git-time-machine</a></p>
+
+<h4><a href="https://atom.io/packages/html-to-css">html-to-css</a></h4>
+<blockquote>
+<p>Generates CSS boilerplate based on the selected HTML. Supports CSS, SCSS, Sass, LESS, BEM, JSX.</p>
+</blockquote>
+
+<p>!<a href="https://camo.githubusercontent.com/b164c4b7b244006a7bcf7442d8c4b0812e4edcd0/687474703a2f2f64726163756c2e6b696c6c2e706c2f2537456172642f68746d6c746f6373732e676966">html-to-css</a></p>
+
+<h4><a href="https://atom.io/packages/imdone-atom">iMDone</a></h4>
+<blockquote>
+<p>A task-board for TODOs, FIXMEs, HACKs, etc in your code.</p>
+</blockquote>
+
+<p><img src="https://cloud.githubusercontent.com/assets/441774/9805863/757d5532-5814-11e5-8759-4196bd92c822.gif" alt=""></p>
+
+<h4><a href="https://atom.io/packages/jumpy">Jumpy</a></h4>
+<blockquote>
+<p>An Atom package that creates dynamic hotkeys to jump around files across visible panes.</p>
+</blockquote>
+
+<p><img src="https://raw.githubusercontent.com/DavidLGoldberg/jumpy/master/_images/jumpy.gif" alt=""></p>
+
+<h4><a href="https://atom.io/packages/merge-conflicts">Merge Conflicts</a></h4>
+<blockquote>
+<p>Resolve your git merge conflicts in Atom.</p>
+</blockquote>
+
+<p><img src="https://raw.github.com/smashwilson/merge-conflicts/master/docs/conflict-resolution.gif" alt=""></p>
+
+<h4><a href="https://atom.io/packages/minimap">Minimap</a></h4>
+<blockquote>
+<p>A preview of the full source code.</p>
+</blockquote>
+
+<h4><a href="https://atom.io/packages/pigments">Pigments</a></h4>
+<blockquote>
+<p>A package to display colors in project and files.</p>
+</blockquote>
+
+<p><img src="http://abe33.github.io/atom-pigments/pigments.gif?raw=true" alt=""></p>
+
+<h4><a href="https://atom.io/packages/project-plus">Project Plus</a></h4>
+<blockquote>
+<p>Simply awesome project management in Atom.</p>
+</blockquote>
+
+<p><img src="https://raw.githubusercontent.com/mehcode/atom-project-plus/master/project-plus.gif" alt=""></p>
+
+<h4><a href="https://atom.io/packages/sort-lines">Sort Lines</a></h4>
+<blockquote>
+<p>Sorts your lines. Never gets tired.</p>
+</blockquote>
+
+<p><img src="https://camo.githubusercontent.com/59de82a667ea690b778abaa5ba8a407f8659ebb3/68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f323938382f313739363839312f38356536396666322d366139332d313165332d383961632d3331393237663630343539322e676966" alt=""></p>
+
+<h4><a href="https://atom.io/packages/sorter">Sorter</a></h4>
+<blockquote>
+<p>Sorts Lines, JSON, CSS, HTML, CSV. Restores semicolons. Respects indentation. Supports natural sort.</p>
+</blockquote>
+
+<h4><a href="https://atom.io/packages/sync-settings">Sync Settings</a></h4>
+<blockquote>
+<p>Synchronize package settings, keymap and installed packages across Atom instances.</p>
+</blockquote>
+
+<h4><a href="https://atom.io/packages/platformio-ide-terminal">PlatformIO IDE Terminal</a></h4>
+<blockquote>
+<p>A terminal package for Atom, complete with themes, API and more for PlatformIO IDE.</p>
+<p>This is a maintained (as of 2017-07-13) fork of terminal-plus.  </p>
+</blockquote>
+
+<p><img src="https://raw.githubusercontent.com/jeremyramin/terminal-plus/master/resources/demo.gif" alt=""></p>
+
+<h4><a href="https://atom.io/packages/atom-ternjs">TernJS</a></h4>
+<blockquote>
+<p>Javascript code intelligence for atom with tern.js and autocomplete-plus.</p>
+</blockquote>
+
+<h3><a href="https://atom.io/packages/test-navigator">Test Navigator</a></h3>
+<blockquote>
+<p>Quickly navigate between test and implementation files.</p>
+</blockquote>
+
+<p>!<a href="https://github.com/DFreds/test-navigator-atom/blob/master/test-navigator.gif?raw=true">Test Navigator Demo</a></p>
+
+<h4><a href="https://themer.mjswensen.com">Themer</a></h4>
+<blockquote>
+<p>Generate Atom syntax/UI theme packages (and matching themes for your other tools) from your favorite colors.</p>
+</blockquote>
+
+<h4><a href="https://atom.io/packages/toggle-quotes">Toggle Quotes</a></h4>
+<blockquote>
+<p>Quickly toggle between single and double quotes.</p>
+</blockquote>
+
+<h4><a href="https://atom.io/packages/tree-view-search-bar">Tree View Search Bar</a></h4>
+<blockquote>
+<p>Quick look in tree view.</p>
+</blockquote>
+
+</body>
+</html>

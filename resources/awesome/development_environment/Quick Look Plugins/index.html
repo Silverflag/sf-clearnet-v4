@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Look Plugins</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quick Look Plugins</h1>
+
+<p><strong>Repository:</strong> https://github.com/sindresorhus/quick-look-plugins#readme</p>
+<p><strong>Source File:</strong> readme.md</p>
+
+<hr>
+
+<h1>Quick Look plugins <a href="https://awesome.re/badge.svg"><img src="https://awesome.re" alt="Awesome</a>"></h1>
+
+<blockquote>
+<p>List of useful <a href="https://en.wikipedia.org/wiki/Quick_Look">Quick Look</a> plugins for developers</p>
+</blockquote>
+
+<h2>Install</h2>
+
+<h3>Using <a href="https://brew.sh">Homebrew</a></h3>
+
+<ul>
+<li>Run <code>brew install <package></code></li>
+</('ul', 0)>
+<h4>Install all</h4>
+
+<pre><code>
+brew install qlcolorcode qlstephen qlmarkdown quicklook-json qlimagesize suspicious-package apparency quicklookase qlvideo
+</code></pre>
+
+<h5>Catalina notes</h5>
+
+<p>To get plugins working in Catalina, you will need to remove the quarantine attribute.</p>
+
+<p>Run this to see the attributes:</p>
+
+<pre><code>
+xattr -r ~/Library/QuickLook
+</code></pre>
+
+<p>And run this to remove the attributes:</p>
+
+<pre><code>
+xattr -d -r com.apple.quarantine ~/Library/QuickLook
+</code></pre>
+
+<h3>Manually</h3>
+
+<ul>
+<li>Click "download manually"</li>
+</ul>
+<ul>
+<li>Move the downloaded .qlgenerator file to <code>~/Library/QuickLook</code></li>
+</ul>
+<ul>
+<li>Run <code>qlmanage -r</code></li>
+</('ul', 0)>
+<h2>Plugins</h2>
+
+<h3><a href="https://github.com/anthonygelibert/QLColorCode">QLColorCode</a></h3>
+
+<blockquote>
+<p>Preview source code files with syntax highlighting</p>
+</blockquote>
+
+<p>Run <code>brew install qlcolorcode</code> or <a href="https://github.com/anthonygelibert/QLColorCode/releases/latest">download manually</a></p>
+
+<p><a href="screenshots/QLColorCode.png"><img src="https://github.com/anthonygelibert/QLColorCode" alt="</a>"></p>
+
+<h3><a href="https://github.com/whomwah/qlstephen">QLStephen</a></h3>
+
+<blockquote>
+<p>Preview plain text files without or with unknown file extension. Example: README, CHANGELOG, index.styl, etc.</p>
+</blockquote>
+
+<p>Run <code>brew install qlstephen</code> or <a href="https://github.com/whomwah/qlstephen/releases/latest">download manually</a></p>
+
+<p><a href="screenshots/QLStephen.png"><img src="https://github.com/whomwah/qlstephen" alt="</a>"></p>
+
+<h3><a href="https://github.com/toland/qlmarkdown">QLMarkdown</a></h3>
+
+<blockquote>
+<p>Preview Markdown files</p>
+</blockquote>
+
+<p>Run <code>brew install qlmarkdown</code> or <a href="https://github.com/downloads/toland/qlmarkdown/QLMarkdown-1.3.zip">download manually</a></p>
+
+<p><a href="screenshots/QLMarkdown.png"><img src="https://github.com/toland/qlmarkdown" alt="</a>"></p>
+
+<h3><a href="http://www.sagtau.com/quicklookjson.html">QuickLookJSON</a></h3>
+
+<blockquote>
+<p>Preview JSON files</p>
+</blockquote>
+
+<p>Run <code>brew install quicklook-json</code> or <a href="http://www.sagtau.com/media/QuickLookJSON.qlgenerator.zip">download manually</a></p>
+
+<p><a href="screenshots/QuickLookJSON.png"><img src="http://www.sagtau.com/quicklookjson.html" alt="</a>"></p>
+
+<h3><a href="https://macitbetter.com/downloads/">BetterZipQL</a></h3>
+
+<blockquote>
+<p>Preview archives</p>
+</blockquote>
+
+<blockquote>
+<p>Note: The BetterZipQL plugin was integrated with the BetterZip app.</p>
+</blockquote>
+
+<p>Run <code>brew install betterzip</code> to install the BetterZip app and its Quick Look plugin or <a href="https://macitbetter.com/BetterZip.zip">download manually</a></p>
+
+<p>The legacy BetterZipQL plugin can be <a href="https://macitbetter.com/dl/BetterZipQL-1.5.zip">downloaded here</a>.</p>
+
+<p><a href="screenshots/BetterZipQL.png"><img src="https://macitbetter.com/BetterZip-Quick-Look-Generator/" alt="</a>"></p>
+
+<h3><a href="https://github.com/Nyx0uf/qlImageSize">qlImageSize</a></h3>
+
+<blockquote>
+<p>Display image size and resolution</p>
+</blockquote>
+
+<p>Run <code>brew install qlimagesize</code> or <a href="https://github.com/Nyx0uf/qlImageSize#installation">download manually</a></p>
+
+<p><a href="screenshots/qlImageSize.png"><img src="https://github.com/Nyx0uf/qlImageSize" alt="</a>"></p>
+
+<h3><a href="https://www.mothersruin.com/software/SuspiciousPackage/">Suspicious Package</a></h3>
+
+<blockquote>
+<p>Preview the contents of a standard Apple installer package</p>
+</blockquote>
+
+<p>Run <code>brew install suspicious-package</code> or <a href="https://www.mothersruin.com/software/downloads/SuspiciousPackage.xip">download manually</a></p>
+
+<p><a href="screenshots/SuspiciousPackage.png"><img src="https://www.mothersruin.com/software/SuspiciousPackage/" alt="</a>"></p>
+
+<h3><a href="https://www.mothersruin.com/software/Apparency/">Apparency</a></h3>
+
+<blockquote>
+<p>Preview the contents of a macOS app</p>
+</blockquote>
+
+<p>Run <code>brew install apparency</code> or <a href="https://mothersruin.com/software/downloads/Apparency.dmg">download manually</a></p>
+
+<p><a href="screenshots/Apparency.png"><img src="https://mothersruin.com/software/Apparency/" alt="</a>"></p>
+
+<h3><a href="https://github.com/rsodre/QuickLookASE">QuickLookASE</a></h3>
+
+<blockquote>
+<p>Preview Adobe ASE Color Swatches generated with Adobe Photoshop, Adobe Illustrator, <a href="https://color.adobe.com">Adobe Color CC</a>, <a href="http://www.eigenlogik.com/spectrum/mac">Spectrum</a>, <a href="https://www.colourlovers.com">COLOURlovers</a>, <a href="http://www.codeadventure.com">Prisma</a>, among many others.</p>
+</blockquote>
+
+<p>Run <code>brew install quicklookase</code> or <a href="https://github.com/rsodre/QuickLookASE/releases/latest">download manually</a></p>
+
+<p><a href="screenshots/QuickLookASE.png"><img src="https://github.com/rsodre/QuickLookASE" alt="</a>"></p>
+
+<h3><a href="https://github.com/Marginal/QLVideo">QLVideo</a></h3>
+
+<blockquote>
+<p>Preview most types of video files, as well as their thumbnails, cover art and metadata</p>
+</blockquote>
+
+<p>Run <code>brew install qlvideo</code> or <a href="https://github.com/Marginal/QLVideo/releases/latest">download manually</a></p>
+
+<p><a href="screenshots/QLVideo.png"><img src="https://github.com/Marginal/QLVideo" alt="</a>"></p>
+
+<h2>More</h2>
+
+<p><em>These are not included in <a href="#install-all">Install all</a>.</em></p>
+
+<h3><a href="https://bigzlabs.com/peek">Peek</a> 💰</h3>
+
+<blockquote>
+<p>Peek allows you to copy and find text, jump to line numbers, render Github-flavored Markdown with a generated table of contents, restore scroll positions, highlight syntax, & more in the Quick Look previews of over 300 file extensions.</p>
+</blockquote>
+
+<p>Purchase on the <a href="https://apps.apple.com/app/peek-quick-look-extension/id1554235898">App Store</a>.</p>
+
+<p><em>The app is abandoned and buggy, but still functional.</em></p>
+
+<p><a href="screenshots/Peek.png"><img src="https://bigzlabs.com/peek" alt="</a>"></p>
+
+<h3><a href="https://anybox.ltd/folder-preview">Folder Preview</a> 💰</h3>
+
+<blockquote>
+<p>Preview folders and ZIP files with the familiar experience of Finder.</p>
+</blockquote>
+
+<p>Purchase on the <a href="https://apps.apple.com/app/folder-preview/id6698876601">App Store</a>.</p>
+
+<p><a href="screenshots/FolderPreview.png"><img src="https://anybox.ltd/folder-preview" alt="</a>"></p>
+
+<h3><a href="https://github.com/ealeksandrov/ProvisionQL">ProvisionQL</a></h3>
+
+<blockquote>
+<p>Preview iOS / macOS app and provision information</p>
+</blockquote>
+
+<p>Run <code>brew install provisionql</code> or <a href="https://github.com/ealeksandrov/ProvisionQL/releases/latest">download manually</a></p>
+
+<p><a href="screenshots/ProvisionQL.png"><img src="https://github.com/ealeksandrov/ProvisionQL" alt="</a>"></p>
+
+<h3><a href="https://github.com/hezi/QuickLookAPK">QuickLookAPK</a></h3>
+
+<blockquote>
+<p>Preview Android APK files</p>
+</blockquote>
+
+<p>Run <code>brew install quicklookapk</code> or <a href="https://github.com/hezi/QuickLookAPK/blob/master/QuickLookAPK.qlgenerator.zip">download manually</a></p>
+
+<p><a href="screenshots/QuickLookAPK.png"><img src="https://github.com/hezi/QuickLookAPK" alt="</a>"></p>
+
+<h3><a href="https://github.com/pixelrowdies/quicklook-pat">quicklook-pat</a></h3>
+
+<blockquote>
+<p>Preview Adobe Photoshop pattern files</p>
+</blockquote>
+
+<p>Run <code>brew install quicklook-pat</code> or <a href="https://github.com/pixelrowdies/quicklook-pat/releases">download manually</a></p>
+
+<p><a href="screenshots/quicklook-pat.png"><img src="https://github.com/pixelrowdies/quicklook-pat" alt="</a>"></p>
+
+<h3><a href="https://github.com/dchest/webp-quicklook">WebP</a></h3>
+
+<blockquote>
+<p>Preview WebP images</p>
+</blockquote>
+
+<blockquote>
+<p>NOTE: This is already covered by <code>qlImageSize</code>, so this plugin is listed here only in case you do not like <code>qlImageSize</code>.</p>
+</blockquote>
+
+<p>Run <code>brew install webpquicklook</code> or <a href="https://github.com/dchest/webp-quicklook/releases/latest">download manually</a></p>
+
+<p><a href="screenshots/WebP.png"><img src="https://github.com/dchest/webp-quicklook" alt="</a>"></p>
+
+<h3><a href="https://github.com/sbarex/SourceCodeSyntaxHighlight">SourceCodeSyntaxHighlight</a></h3>
+
+<blockquote>
+<p>Preview many different source code files</p>
+</blockquote>
+
+<p>Run <code>brew install --cask --no-quarantine syntax-highlight</code> or <a href="https://github.com/sbarex/SourceCodeSyntaxHighlight/releases/latest">download manually</a></p>
+
+<p><a href="https://user-images.githubusercontent.com/8471055/118415204-5f53fc80-b6a9-11eb-93d8-b88c442c5744.png"><img src="https://github.com/sbarex/SourceCodeSyntaxHighlight" alt="</a>"></p>
+
+<p><strong>Note:</strong> This might overwrite some other Quick Look plugins.</p>
+
+<h2>License</h2>
+
+<p><a href="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg"><img src="https://creativecommons.org/publicdomain/zero/1.0/" alt="CC0</a>"></p>
+
+<p>To the extent possible under law, <a href="https://sindresorhus.com">Sindre Sorhus</a> has waived all copyright and related or neighboring rights to this work.</p>
+
+</body>
+</html>

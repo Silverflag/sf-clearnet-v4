@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Cheat Sheet &amp; Git Flow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Git Cheat Sheet & Git Flow</h1>
+
+<p><strong>Repository:</strong> https://github.com/arslanbilal/git-cheat-sheet#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<h1>Git and Git Flow Cheat Sheet</h1>
+<p><a href="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg"><img src="https://github.com/sindresorhus/awesome" alt="Awesome</a>"></p>
+
+<p align="center">
+    <img alt="Git" src="./Img/git-logo.png" height="190" width="455">
+</p>
+
+<hr>
+
+<h2>📖 About</h2>
+
+<p>This comprehensive Git cheat sheet helps you master Git commands without memorizing everything. Whether you're a beginner or an experienced developer, this guide provides quick reference to essential Git operations.</p>
+
+<p><strong>Contributions Welcome!</strong> Feel free to:</p>
+<ul>
+<li>Fix grammar mistakes</li>
+</ul>
+<ul>
+<li>Add new commands</li>
+</ul>
+<ul>
+<li>Translate to your language</li>
+</ul>
+<ul>
+<li>Improve explanations</li>
+<hr>
+</('ul', 0)>
+<h2>📋 Table of Contents</h2>
+
+<ul>
+<li><a href="#-setup">🔧 Setup</a></li>
+</ul>
+<ul>
+<li><a href="#️-configuration-files">⚙️ Configuration Files</a></li>
+</ul>
+<ul>
+<li><a href="#-create-repository">🆕 Create Repository</a></li>
+</ul>
+<ul>
+<li><a href="#-local-changes">📝 Local Changes</a></li>
+</ul>
+<ul>
+<li><a href="#-search">🔍 Search</a></li>
+</ul>
+<ul>
+<li><a href="#-commit-history">📖 Commit History</a></li>
+</ul>
+<ul>
+<li><a href="#-move--rename">📁 Move / Rename</a></li>
+</ul>
+<ul>
+<li><a href="#-branches--tags">🌿 Branches & Tags</a></li>
+</ul>
+<ul>
+<li><a href="#-update--publish">🔄 Update & Publish</a></li>
+</ul>
+<ul>
+<li><a href="#-merge--rebase">🔀 Merge & Rebase</a></li>
+</ul>
+<ul>
+<li><a href="#️-undo">↩️ Undo</a></li>
+</ul>
+<ul>
+<li><a href="#-git-flow">🌊 Git Flow</a></li>
+</ul>
+<ul>
+<li><a href="#-other-languages">🌍 Other Languages</a></li>
+<hr>
+</('ul', 0)>
+<h2>🔧 Setup</h2>
+
+<h3>View Configuration</h3>
+
+<p><strong>Show current configuration:</strong></p>
+<pre><code class="language-bash">
+git config --list
+</code></pre>
+
+<p><strong>Show repository configuration:</strong></p>
+<pre><code class="language-bash">
+git config --local --list
+</code></pre>
+
+<p><strong>Show global configuration:</strong></p>
+<pre><code class="language-bash">
+git config --global --list
+</code></pre>
+
+<p><strong>Show system configuration:</strong></p>
+<pre><code class="language-bash">
+git config --system --list
+</code></pre>
+
+<h3>User Configuration</h3>
+
+<p><strong>Set your name for version history:</strong></p>
+<pre><code class="language-bash">
+git config --global user.name &quot;[firstname lastname]&quot;
+</code></pre>
+
+<p><strong>Set your email address:</strong></p>
+<pre><code class="language-bash">
+git config --global user.email &quot;[valid-email]&quot;
+</code></pre>
+
+<h3>Display & Editor Settings</h3>
+
+<p><strong>Enable automatic command line coloring:</strong></p>
+<pre><code class="language-bash">
+git config --global color.ui auto
+</code></pre>
+
+<p><strong>Set global editor for commits:</strong></p>
+<pre><code class="language-bash">
+git config --global core.editor vi
+</code></pre>
+
+<hr>
+
+<h2>⚙️ Configuration Files</h2>
+
+<table>
+<thead><tr>
+<th>Scope</th>
+<th>Location</th>
+<th>Command Flag</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>-------</td>
+<td>----------</td>
+<td>--------------</td>
+</tr>
+<tr>
+<td><strong>Repository</strong></td>
+<td><code><repo>/.git/config</code></td>
+<td><code>--local</code></td>
+</tr>
+<tr>
+<td><strong>User</strong></td>
+<td><code>~/.gitconfig</code></td>
+<td><code>--global</code></td>
+</tr>
+<tr>
+<td><strong>System</strong></td>
+<td><code>/etc/gitconfig</code></td>
+<td><code>--system</code></td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+
+<h2>🆕 Create Repository</h2>
+
+<h3>Clone Existing Repository</h3>
+
+<p><strong>Via SSH:</strong></p>
+<pre><code class="language-bash">
+git clone ssh://user@domain.com/repo.git
+</code></pre>
+
+<p><strong>Via HTTPS:</strong></p>
+<pre><code class="language-bash">
+git clone https://domain.com/user/repo.git
+</code></pre>
+
+<h3>Initialize New Repository</h3>
+
+<p><strong>Create repository in current directory:</strong></p>
+<pre><code class="language-bash">
+git init
+</code></pre>
+
+<p><strong>Create repository in specific directory:</strong></p>
+<pre><code class="language-bash">
+git init &lt;directory&gt;
+</code></pre>
+
+<hr>
+
+<h2>📝 Local Changes</h2>
+
+<h3>Check Status & Differences</h3>
+
+<p><strong>View working directory status:</strong></p>
+<pre><code class="language-bash">
+git status
+</code></pre>
+
+<p><strong>Show changes to tracked files:</strong></p>
+<pre><code class="language-bash">
+git diff
+</code></pre>
+
+<p><strong>Show changes in specific file:</strong></p>
+<pre><code class="language-bash">
+git diff &lt;file&gt;
+</code></pre>
+
+<h3>Staging Changes</h3>
+
+<p><strong>Add all current changes:</strong></p>
+<pre><code class="language-bash">
+git add .
+</code></pre>
+
+<p><strong>Add specific files:</strong></p>
+<pre><code class="language-bash">
+git add &lt;filename1&gt; &lt;filename2&gt;
+</code></pre>
+
+<p><strong>Interactively add parts of a file:</strong></p>
+<pre><code class="language-bash">
+git add -p &lt;file&gt;
+</code></pre>
+
+<h3>Committing Changes</h3>
+
+<p><strong>Commit all tracked file changes:</strong></p>
+<pre><code class="language-bash">
+git commit -a
+</code></pre>
+
+<p><strong>Commit staged changes:</strong></p>
+<pre><code class="language-bash">
+git commit
+</code></pre>
+
+<p><strong>Commit with message:</strong></p>
+<pre><code class="language-bash">
+git commit -m &#x27;message here&#x27;
+</code></pre>
+
+<p><strong>Skip staging and commit with message:</strong></p>
+<pre><code class="language-bash">
+git commit -am &#x27;message here&#x27;
+</code></pre>
+
+<p><strong>Commit with specific date:</strong></p>
+<pre><code class="language-bash">
+git commit --date=&quot;`date --date=&#x27;n day ago&#x27;`&quot; -am &quot;&lt;Commit Message Here&gt;&quot;
+</code></pre>
+
+<h3>Modify Last Commit</h3>
+
+<blockquote>
+<p>⚠️ <strong>Warning:</strong> Don't amend published commits!</p>
+</blockquote>
+
+<p><strong>Amend last commit:</strong></p>
+<pre><code class="language-bash">
+git commit -a --amend
+</code></pre>
+
+<p><strong>Amend without changing commit message:</strong></p>
+<pre><code class="language-bash">
+git commit --amend --no-edit
+</code></pre>
+
+<p><strong>Change committer date:</strong></p>
+<pre><code class="language-bash">
+GIT_COMMITTER_DATE=&quot;date&quot; git commit --amend
+</code></pre>
+
+<p><strong>Change author date:</strong></p>
+<pre><code class="language-bash">
+git commit --amend --date=&quot;date&quot;
+</code></pre>
+
+<h3>Stashing Changes</h3>
+
+<p><strong>Save current changes temporarily:</strong></p>
+<pre><code class="language-bash">
+git stash
+</code></pre>
+
+<p><strong>Apply last stashed changes:</strong></p>
+<pre><code class="language-bash">
+git stash apply
+</code></pre>
+
+<p><strong>Apply specific stash:</strong></p>
+<pre><code class="language-bash">
+git stash apply stash@{stash_number}
+</code></pre>
+<blockquote>
+<p>Use <code>git stash list</code> to see available stashes</p>
+</blockquote>
+
+<p><strong>Remove last stash:</strong></p>
+<pre><code class="language-bash">
+git stash drop
+</code></pre>
+
+<p><strong>Move uncommitted changes to another branch:</strong></p>
+<pre><code class="language-bash">
+git stash
+git checkout branch2
+git stash pop
+</code></pre>
+
+<hr>
+
+<h2>🔍 Search</h2>
+
+<h3>Text Search</h3>
+
+<p><strong>Search for text in all files:</strong></p>
+<pre><code class="language-bash">
+git grep &quot;Hello&quot;
+</code></pre>
+
+<p><strong>Search in specific version:</strong></p>
+<pre><code class="language-bash">
+git grep &quot;Hello&quot; v2.5
+</code></pre>
+
+<h3>Commit Search</h3>
+
+<p><strong>Find commits that introduced specific keyword:</strong></p>
+<pre><code class="language-bash">
+git log -S &#x27;keyword&#x27;
+</code></pre>
+
+<p><strong>Search with regular expression:</strong></p>
+<pre><code class="language-bash">
+git log -S &#x27;keyword&#x27; --pickaxe-regex
+</code></pre>
+
+<hr>
+
+<h2>📖 Commit History</h2>
+
+<h3>Basic History</h3>
+
+<p><strong>Show all commits (detailed):</strong></p>
+<pre><code class="language-bash">
+git log
+</code></pre>
+
+<p><strong>Show commits (one line each):</strong></p>
+<pre><code class="language-bash">
+git log --oneline
+</code></pre>
+
+<p><strong>Show commits by specific author:</strong></p>
+<pre><code class="language-bash">
+git log --author=&quot;username&quot;
+</code></pre>
+
+<p><strong>Show changes for specific file:</strong></p>
+<pre><code class="language-bash">
+git log -p &lt;file&gt;
+</code></pre>
+
+<h3>Advanced History</h3>
+
+<p><strong>Compare branches:</strong></p>
+<pre><code class="language-bash">
+git log --oneline &lt;origin/master&gt;..&lt;remote/master&gt; --left-right
+</code></pre>
+
+<p><strong>Show who changed what and when:</strong></p>
+<pre><code class="language-bash">
+git blame &lt;file&gt;
+</code></pre>
+
+<h3>Reference Logs</h3>
+
+<p><strong>Show reference log:</strong></p>
+<pre><code class="language-bash">
+git reflog show
+</code></pre>
+
+<p><strong>Delete reference log:</strong></p>
+<pre><code class="language-bash">
+git reflog delete
+</code></pre>
+
+<hr>
+
+<h2>📁 Move / Rename</h2>
+
+<p><strong>Rename a file:</strong></p>
+<pre><code class="language-bash">
+git mv Index.txt Index.html
+</code></pre>
+
+<hr>
+
+<h2>🌿 Branches & Tags</h2>
+
+<h3>List Branches</h3>
+
+<p><strong>List local branches:</strong></p>
+<pre><code class="language-bash">
+git branch
+</code></pre>
+
+<p><strong>List all branches (local + remote):</strong></p>
+<pre><code class="language-bash">
+git branch -a
+</code></pre>
+
+<p><strong>List remote branches:</strong></p>
+<pre><code class="language-bash">
+git branch -r
+</code></pre>
+
+<p><strong>List merged branches:</strong></p>
+<pre><code class="language-bash">
+git branch --merged
+</code></pre>
+
+<h3>Switch & Create Branches</h3>
+
+<p><strong>Switch to existing branch:</strong></p>
+<pre><code class="language-bash">
+git checkout &lt;branch&gt;
+</code></pre>
+
+<p><strong>Create and switch to new branch:</strong></p>
+<pre><code class="language-bash">
+git checkout -b &lt;branch&gt;
+</code></pre>
+
+<p><strong>Switch to previous branch:</strong></p>
+<pre><code class="language-bash">
+git checkout -
+</code></pre>
+
+<p><strong>Create branch from existing branch:</strong></p>
+<pre><code class="language-bash">
+git checkout -b &lt;new_branch&gt; &lt;existing_branch&gt;
+</code></pre>
+
+<p><strong>Create branch from specific commit:</strong></p>
+<pre><code class="language-bash">
+git checkout &lt;commit-hash&gt; -b &lt;new_branch_name&gt;
+</code></pre>
+
+<p><strong>Create branch without switching:</strong></p>
+<pre><code class="language-bash">
+git branch &lt;new-branch&gt;
+</code></pre>
+
+<p><strong>Create tracking branch:</strong></p>
+<pre><code class="language-bash">
+git branch --track &lt;new-branch&gt; &lt;remote-branch&gt;
+</code></pre>
+
+<h3>Branch Operations</h3>
+
+<p><strong>Checkout single file from different branch:</strong></p>
+<pre><code class="language-bash">
+git checkout &lt;branch&gt; -- &lt;filename&gt;
+</code></pre>
+
+<p><strong>Apply specific commit from another branch:</strong></p>
+<pre><code class="language-bash">
+git cherry-pick &lt;commit hash&gt;
+</code></pre>
+
+<p><strong>Rename current branch:</strong></p>
+<pre><code class="language-bash">
+git branch -m &lt;new_branch_name&gt;
+</code></pre>
+
+<p><strong>Delete local branch:</strong></p>
+<pre><code class="language-bash">
+git branch -d &lt;branch&gt;
+</code></pre>
+
+<p><strong>Force delete local branch:</strong></p>
+<pre><code class="language-bash">
+git branch -D &lt;branch&gt;
+</code></pre>
+<blockquote>
+<p>⚠️ <strong>Warning:</strong> You will lose unmerged changes!</p>
+</blockquote>
+
+<h3>Tags</h3>
+
+<p><strong>Create tag at HEAD:</strong></p>
+<pre><code class="language-bash">
+git tag &lt;tag-name&gt;
+</code></pre>
+
+<p><strong>Create annotated tag:</strong></p>
+<pre><code class="language-bash">
+git tag -a &lt;tag-name&gt;
+</code></pre>
+
+<p><strong>Create tag with message:</strong></p>
+<pre><code class="language-bash">
+git tag &lt;tag-name&gt; -am &#x27;message here&#x27;
+</code></pre>
+
+<p><strong>List all tags:</strong></p>
+<pre><code class="language-bash">
+git tag
+</code></pre>
+
+<p><strong>List tags with messages:</strong></p>
+<pre><code class="language-bash">
+git tag -n
+</code></pre>
+
+<hr>
+
+<h2>🔄 Update & Publish</h2>
+
+<h3>Remote Management</h3>
+
+<p><strong>List configured remotes:</strong></p>
+<pre><code class="language-bash">
+git remote -v
+</code></pre>
+
+<p><strong>Show remote information:</strong></p>
+<pre><code class="language-bash">
+git remote show &lt;remote&gt;
+</code></pre>
+
+<p><strong>Add new remote:</strong></p>
+<pre><code class="language-bash">
+git remote add &lt;remote&gt; &lt;url&gt;
+</code></pre>
+
+<p><strong>Rename remote:</strong></p>
+<pre><code class="language-bash">
+git remote rename &lt;remote&gt; &lt;new_remote&gt;
+</code></pre>
+
+<p><strong>Remove remote:</strong></p>
+<pre><code class="language-bash">
+git remote rm &lt;remote&gt;
+</code></pre>
+<blockquote>
+<p>ℹ️ <strong>Note:</strong> This only removes the remote reference locally, not the remote repository itself.</p>
+</blockquote>
+
+<h3>Fetch & Pull</h3>
+
+<p><strong>Download changes without merging:</strong></p>
+<pre><code class="language-bash">
+git fetch &lt;remote&gt;
+</code></pre>
+
+<p><strong>Download and merge changes:</strong></p>
+<pre><code class="language-bash">
+git pull &lt;remote&gt; &lt;branch&gt;
+</code></pre>
+
+<p><strong>Get changes from main branch:</strong></p>
+<pre><code class="language-bash">
+git pull origin master
+</code></pre>
+
+<p><strong>Pull with rebase:</strong></p>
+<pre><code class="language-bash">
+git pull --rebase &lt;remote&gt; &lt;branch&gt;
+</code></pre>
+
+<h3>Push & Publish</h3>
+
+<p><strong>Publish local changes:</strong></p>
+<pre><code class="language-bash">
+git push &lt;remote&gt; &lt;branch&gt;
+</code></pre>
+
+<p><strong>Delete remote branch:</strong></p>
+<pre><code class="language-bash">
+# Git v1.7.0+
+git push &lt;remote&gt; --delete &lt;branch&gt;
+
+# Git v1.5.0+
+git push &lt;remote&gt; :&lt;branch&gt;
+</code></pre>
+
+<p><strong>Publish tags:</strong></p>
+<pre><code class="language-bash">
+git push --tags
+</code></pre>
+
+<hr>
+
+<h2>🔀 Merge & Rebase</h2>
+
+<h3>Merge Operations</h3>
+
+<p><strong>Merge branch into current HEAD:</strong></p>
+<pre><code class="language-bash">
+git merge &lt;branch&gt;
+</code></pre>
+
+<p><strong>Configure merge tool globally:</strong></p>
+<pre><code class="language-bash">
+git config --global merge.tool meld
+</code></pre>
+
+<p><strong>Use configured merge tool:</strong></p>
+<pre><code class="language-bash">
+git mergetool
+</code></pre>
+
+<h3>Rebase Operations</h3>
+
+<blockquote>
+<p>⚠️ <strong>Warning:</strong> Don't rebase published commits!</p>
+</blockquote>
+
+<p><strong>Rebase current HEAD onto branch:</strong></p>
+<pre><code class="language-bash">
+git rebase &lt;branch&gt;
+</code></pre>
+
+<p><strong>Abort rebase:</strong></p>
+<pre><code class="language-bash">
+git rebase --abort
+</code></pre>
+
+<p><strong>Continue rebase after resolving conflicts:</strong></p>
+<pre><code class="language-bash">
+git rebase --continue
+</code></pre>
+
+<h3>Conflict Resolution</h3>
+
+<p><strong>Mark file as resolved:</strong></p>
+<pre><code class="language-bash">
+git add &lt;resolved-file&gt;
+</code></pre>
+
+<p><strong>Remove resolved file:</strong></p>
+<pre><code class="language-bash">
+git rm &lt;resolved-file&gt;
+</code></pre>
+
+<h3>Squashing Commits</h3>
+
+<p><strong>Interactive rebase for squashing:</strong></p>
+<pre><code class="language-bash">
+git rebase -i &lt;commit-just-before-first&gt;
+</code></pre>
+
+<p><strong>Example squash configuration:</strong></p>
+<pre><code>
+# Before
+pick &lt;commit_id&gt;
+pick &lt;commit_id2&gt;
+pick &lt;commit_id3&gt;
+
+# After (squash commit_id2 and commit_id3 into commit_id)
+pick &lt;commit_id&gt;
+squash &lt;commit_id2&gt;
+squash &lt;commit_id3&gt;
+</code></pre>
+
+<hr>
+
+<h2>↩️ Undo</h2>
+
+<h3>Discard Changes</h3>
+
+<p><strong>Discard all local changes:</strong></p>
+<pre><code class="language-bash">
+git reset --hard HEAD
+</code></pre>
+
+<p><strong>Unstage all files:</strong></p>
+<pre><code class="language-bash">
+git reset HEAD
+</code></pre>
+
+<p><strong>Discard changes in specific file:</strong></p>
+<pre><code class="language-bash">
+git checkout HEAD &lt;file&gt;
+</code></pre>
+
+<h3>Reset Operations</h3>
+
+<p><strong>Reset to previous commit (discard all changes):</strong></p>
+<pre><code class="language-bash">
+git reset --hard &lt;commit&gt;
+</code></pre>
+
+<p><strong>Reset to remote branch state:</strong></p>
+<pre><code class="language-bash">
+git reset --hard &lt;remote/branch&gt;
+# Example: git reset --hard upstream/master
+</code></pre>
+
+<p><strong>Reset preserving changes as unstaged:</strong></p>
+<pre><code class="language-bash">
+git reset &lt;commit&gt;
+</code></pre>
+
+<p><strong>Reset preserving uncommitted local changes:</strong></p>
+<pre><code class="language-bash">
+git reset --keep &lt;commit&gt;
+</code></pre>
+
+<h3>Revert Commits</h3>
+
+<p><strong>Revert commit (create new commit with opposite changes):</strong></p>
+<pre><code class="language-bash">
+git revert &lt;commit&gt;
+</code></pre>
+
+<h3>Clean Ignored Files</h3>
+
+<p><strong>Remove accidentally committed files that should be ignored:</strong></p>
+<pre><code class="language-bash">
+git rm -r --cached .
+git add .
+git commit -m &quot;remove ignored files&quot;
+</code></pre>
+
+<hr>
+
+<h2>🌊 Git Flow</h2>
+
+<p><strong>Improved Git-flow:</strong> <a href="https://github.com/petervanderdoes/gitflow-avh">git-flow-avh</a></p>
+
+<h3>📋 Table of Contents</h3>
+<ul>
+<li><a href="#setup-1">🔧 Setup</a></li>
+</ul>
+<ul>
+<li><a href="#getting-started">🚀 Getting Started</a></li>
+</ul>
+<ul>
+<li><a href="#features">✨ Features</a></li>
+</ul>
+<ul>
+<li><a href="#make-a-release">🎁 Make a Release</a></li>
+</ul>
+<ul>
+<li><a href="#hotfixes">🔥 Hotfixes</a></li>
+</ul>
+<ul>
+<li><a href="#commands-overview">📊 Commands Overview</a></li>
+<hr>
+</('ul', 0)>
+<h3>🔧 Setup {#setup-1}</h3>
+
+<blockquote>
+<p><strong>Prerequisite:</strong> Working Git installation required. Git-flow works on macOS, Linux, and Windows.</p>
+</blockquote>
+
+<p><strong>macOS (Homebrew):</strong></p>
+<pre><code class="language-bash">
+brew install git-flow-avh
+</code></pre>
+
+<p><strong>macOS (MacPorts):</strong></p>
+<pre><code class="language-bash">
+port install git-flow
+</code></pre>
+
+<p><strong>Linux (Debian-based):</strong></p>
+<pre><code class="language-bash">
+sudo apt-get install git-flow
+</code></pre>
+
+<p><strong>Windows (Cygwin):</strong></p>
+<blockquote>
+<p>Requires wget and util-linux</p>
+<pre><code class="language-bash">
+wget -q -O - --no-check-certificate https://raw.githubusercontent.com/petervanderdoes/gitflow/develop/contrib/gitflow-installer.sh install &lt;state&gt; | bash
+</code></pre>
+</blockquote>
+
+<hr>
+
+<h3>🚀 Getting Started</h3>
+
+<p>Git-flow needs initialization to customize your project setup.</p>
+
+<p><strong>Initialize (interactive):</strong></p>
+<pre><code class="language-bash">
+git flow init
+</code></pre>
+<blockquote>
+<p>You'll answer questions about branch naming conventions. Default values are recommended.</p>
+</blockquote>
+
+<p><strong>Initialize (use defaults):</strong></p>
+<pre><code class="language-bash">
+git flow init -d
+</code></pre>
+
+<hr>
+
+<h3>✨ Features</h3>
+
+<p>Features are for developing new functionality for upcoming releases. They typically exist only in developer repositories.</p>
+
+<p><strong>Start new feature:</strong></p>
+<pre><code class="language-bash">
+git flow feature start MYFEATURE
+</code></pre>
+<blockquote>
+<p>Creates feature branch based on 'develop' and switches to it</p>
+</blockquote>
+
+<p><strong>Finish feature:</strong></p>
+<pre><code class="language-bash">
+git flow feature finish MYFEATURE
+</code></pre>
+<blockquote>
+<p>This will:</p>
+<p>1. Merge MYFEATURE into 'develop'</p>
+<p>2. Remove the feature branch</p>
+<p>3. Switch back to 'develop'</p>
+</blockquote>
+
+<p><strong>Publish feature (for collaboration):</strong></p>
+<pre><code class="language-bash">
+git flow feature publish MYFEATURE
+</code></pre>
+
+<p><strong>Get published feature:</strong></p>
+<pre><code class="language-bash">
+git flow feature pull origin MYFEATURE
+</code></pre>
+
+<p><strong>Track origin feature:</strong></p>
+<pre><code class="language-bash">
+git flow feature track MYFEATURE
+</code></pre>
+
+<hr>
+
+<h3>🎁 Make a Release</h3>
+
+<p>Releases support preparation of new production releases, allowing minor bug fixes and preparing meta-data.</p>
+
+<p><strong>Start release:</strong></p>
+<pre><code class="language-bash">
+git flow release start RELEASE [BASE]
+</code></pre>
+<blockquote>
+<p>Creates release branch from 'develop'. Optionally specify [BASE] commit SHA-1.</p>
+</blockquote>
+
+<p><strong>Publish release:</strong></p>
+<pre><code class="language-bash">
+git flow release publish RELEASE
+</code></pre>
+
+<p><strong>Track remote release:</strong></p>
+<pre><code class="language-bash">
+git flow release track RELEASE
+</code></pre>
+
+<p><strong>Finish release:</strong></p>
+<pre><code class="language-bash">
+git flow release finish RELEASE
+</code></pre>
+<blockquote>
+<p>This will:</p>
+<p>1. Merge release branch into 'master'</p>
+<p>2. Tag the release</p>
+<p>3. Back-merge release into 'develop'</p>
+<p>4. Remove release branch</p>
+</blockquote>
+
+<blockquote>
+<p>💡 <strong>Don't forget:</strong> Push your tags with <code>git push --tags</code></p>
+</blockquote>
+
+<hr>
+
+<h3>🔥 Hotfixes</h3>
+
+<p>Hotfixes address critical issues in live production versions. They branch off from the corresponding tag on master.</p>
+
+<p><strong>Start hotfix:</strong></p>
+<pre><code class="language-bash">
+git flow hotfix start VERSION [BASENAME]
+</code></pre>
+
+<p><strong>Finish hotfix:</strong></p>
+<pre><code class="language-bash">
+git flow hotfix finish VERSION
+</code></pre>
+<blockquote>
+<p>Merges back into both 'develop' and 'master', and tags the master merge</p>
+</blockquote>
+
+<hr>
+
+<h3>📊 Commands Overview</h3>
+
+<p align="center">
+    <img alt="Git Flow Commands" src="./Img/git-flow-commands.png" height="270" width="460">
+</p>
+
+<h3>🌊 Git Flow Schema</h3>
+
+<p align="center">
+    <img alt="Git Flow Schema" src="Img/git-flow-commands-without-flow.png">
+</p>
+
+<hr>
+
+<h2>🌍 Other Languages</h2>
+
+<p>This cheat sheet is available in multiple languages:</p>
+
+<table>
+<thead><tr>
+<th>Language</th>
+<th>Link</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>----------</td>
+<td>------</td>
+</tr>
+<tr>
+<td>🇸🇦 Arabic</td>
+<td><a href="./other-sheets/git-cheat-sheet-ar.md">git-cheat-sheet-ar.md</a></td>
+</tr>
+<tr>
+<td>🇧🇩 Bengali</td>
+<td><a href="./other-sheets/git-cheat-sheet-bn.md">git-cheat-sheet-bn.md</a></td>
+</tr>
+<tr>
+<td>🇧🇷 Brazilian Portuguese</td>
+<td><a href="./other-sheets/git-cheat-sheet-pt<em>BR.md">git-cheat-sheet-pt</em>BR.md</a></td>
+</tr>
+<tr>
+<td>🇨🇳 Chinese</td>
+<td><a href="./other-sheets/git-cheat-sheet-zh.md">git-cheat-sheet-zh.md</a></td>
+</tr>
+<tr>
+<td>🇩🇪 German</td>
+<td><a href="./other-sheets/git-cheat-sheet-de.md">git-cheat-sheet-de.md</a></td>
+</tr>
+<tr>
+<td>🇬🇷 Greek</td>
+<td><a href="./other-sheets/git-cheat-sheet-el.md">git-cheat-sheet-el.md</a></td>
+</tr>
+<tr>
+<td>🇮🇳 Hindi</td>
+<td><a href="./other-sheets/git-cheat-sheet-hi.md">git-cheat-sheet-hi.md</a></td>
+</tr>
+<tr>
+<td>🇰🇷 Korean</td>
+<td><a href="./other-sheets/git-cheat-sheet-ko.md">git-cheat-sheet-ko.md</a></td>
+</tr>
+<tr>
+<td>🇵🇱 Polish</td>
+<td><a href="./other-sheets/git-cheat-sheet-pl.md">git-cheat-sheet-pl.md</a></td>
+</tr>
+<tr>
+<td>🇪🇸 Spanish</td>
+<td><a href="./other-sheets/git-cheat-sheet-es.md">git-cheat-sheet-es.md</a></td>
+</tr>
+<tr>
+<td>🇹🇷 Turkish</td>
+<td><a href="./other-sheets/git-cheat-sheet-tr.md">git-cheat-sheet-tr.md</a></td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+
+<h2>🤝 Contributing</h2>
+
+<p>We welcome contributions! You can:</p>
+
+<ul>
+<li>🐛 Report bugs or typos</li>
+</ul>
+<ul>
+<li>✨ Add new Git commands</li>
+</ul>
+<ul>
+<li>🌍 Translate to new languages</li>
+</ul>
+<ul>
+<li>💡 Improve explanations</li>
+</ul>
+<ul>
+<li>📝 Enhance formatting</li>
+</ul>
+<p><strong>How to contribute:</strong></p>
+<ol>
+<li>Fork this repository</li>
+</ol>
+<ol>
+<li>Create your feature branch (<code>git checkout -b feature/AmazingFeature</code>)</li>
+</ol>
+<ol>
+<li>Commit your changes (<code>git commit -m 'Add some AmazingFeature'</code>)</li>
+</ol>
+<ol>
+<li>Push to the branch (<code>git push origin feature/AmazingFeature</code>)</li>
+</ol>
+<ol>
+<li>Open a Pull Request</li>
+<hr>
+</('ol', 0)>
+<h2>📄 License</h2>
+
+<p>This project is open source and available under the <a href="LICENSE">MIT License</a>.</p>
+
+<hr>
+
+<p align="center">
+    <b>⭐ Star this repository if you found it helpful!</b>
+</p>
+
+</body>
+</html>
