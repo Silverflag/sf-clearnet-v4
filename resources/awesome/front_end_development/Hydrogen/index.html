@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hydrogen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hydrogen</h1>
+
+<p><strong>Repository:</strong> https://github.com/shopify/awesome-hydrogen#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<img width="400" src="./assets/hydrogen-logo.svg">
+
+<h1>Awesome Hydrogen <a href="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg"><img src="https://github.com/sindresorhus/awesome" alt="Awesome</a>"></h1>
+
+<p>Hydrogen is Shopify's open source stack for headless commerce.</p>
+
+<h2>Contents</h2>
+
+<ul>
+<li><a href="#official-resources">Official Resources</a></li>
+</ul>
+<ul>
+<li><a href="#getting-started">Getting Started</a></li>
+</ul>
+<ul>
+<li><a href="#tools">Tools</a></li>
+</ul>
+<ul>
+<li><a href="#community">Community</a></li>
+</ul>
+<ul>
+<li><a href="#examples">Examples</a></li>
+</ul>
+<ul>
+<li><a href="#apps--integrations">Apps & Integrations</a></li>
+</ul>
+<ul>
+<li><a href="#blog-posts">Blog Posts</a></li>
+</ul>
+<ul>
+<li><a href="#podcasts">Podcasts</a></li>
+</ul>
+<ul>
+<li><a href="#conference-talks">Conference Talks</a></li>
+</ul>
+<ul>
+<li><a href="#showcase">Showcase</a></li>
+</('ul', 0)>
+<h2>Official Resources</h2>
+
+<ul>
+<li><a href="https://shopify.dev/docs/custom-storefronts/hydrogen">Docs</a></li>
+</ul>
+<ul>
+<li><a href="https://shopify.dev/docs/custom-storefronts/hydrogen-react">Hydrogen React</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/Shopify/hydrogen">GitHub</a></li>
+</('ul', 0)>
+<h2>Getting Started</h2>
+
+<ul>
+<li><a href="https://shopify.dev/docs/custom-storefronts/hydrogen/getting-started/quickstart">Quickstart</a> - Create a Hydrogen app locally.</li>
+</ul>
+<ul>
+<li><a href="https://shopify.dev/docs/custom-storefronts/hydrogen/building">Tutorial</a> - From "Hello World" to a fully built out Shopify custom storefront.</li>
+</('ul', 0)>
+<h2>Tools</h2>
+
+<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=crtogrm.hydrogen-vscode&ssr=false#overview">Hydrogen for VSCode</a></li>
+</('ul', 0)>
+<h2>Community</h2>
+
+<ul>
+<li><a href="https://discord.gg/shopifydevs">Discord</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/Shopify/hydrogen-v1/discussions">GitHub Discussions</a></li>
+</('ul', 0)>
+<h2>Examples</h2>
+
+<ul>
+<li><a href="https://github.com/Shopify/hydrogen/tree/2023-04/examples/express">Hydrogen NodeJS Express Example</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/Shopify/gated-hydrogen-example">Tokengated Storefront Example</a></li>
+</('ul', 0)>
+<h2>Apps & Integrations</h2>
+
+<ul>
+<li><a href="https://github.com/algolia/shopify-hydrogen-algolia">Algolia</a> - Search & discovery.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Crossing-Minds/hydrogen-demo-store">Crossing Minds</a> - Product recommendation engine.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/DynamicYield/shopify-hydrogen-demo">Dynamic Yield</a> - Personalization.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/gorgias/hydrogen-demo/">Gorgias</a> - Customer support.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Nosto/shopify-hydrogen-demo">Nosto</a> - Personalization.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/okendo/okendo-shopify-hydrogen-demo">Okendo</a> - Customer reviews.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/packdigital/pack-hydrogen-demo">Pack Digital</a> - Digital Experience Platform.</li>
+</ul>
+<ul>
+<li><a href="https://bitbucket.org/rebuyengine/npm-rebuy-hydrogen">Rebuy</a> - Product recommendations.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sanity-io/hydrogen-sanity-demo">Sanity</a> - Headless CMS.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/swym-corp/swym-hydrogen-store">Swym</a> - Wishlists.</li>
+</ul>
+<ul>
+<li><a href="https://vercel.com/templates/remix/hydrogen-2">Vercel</a> - Deploy to Vercel.</li>
+</ul>
+<ul>
+<li>Contentful (Coming Soon)</li>
+</ul>
+<ul>
+<li>Yotpo (Coming Soon)</li>
+</ul>
+<ul>
+<li>Netlify (Coming Soon)</li>
+</('ul', 0)>
+<h2>Blog Posts</h2>
+
+<ul>
+<li><a href="https://hydrogen.shopify.dev/roadmap#remixing-hydrogen">Remixing Hydrogen</a></li>
+</ul>
+<ul>
+<li><a href="https://vervaunt.com/shopify-hydrogen-oxygen-pros-cons">Headless Shopify - Hydrogen & Oxygen Pros & Cons + Alternative Routes</a></li>
+</('ul', 0)>
+<h2>Podcasts</h2>
+
+<ul>
+<li><a href="https://jsparty.fm/228#t=31:29">JS Party – Episode #228 Live from Remix Conf!</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=MbfKZmvefNs">Remixing Hydrogen - Lessons learnt embracing the platform by JP Prieto</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=dTh1esIxw1k">Headless commerce with Shopify's Hydrogen with Bret Little</a></li>
+</('ul', 0)>
+<h2>Conference Talks</h2>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=qVkRyjSrhXs&t=22990s">Juan Pablo Prieto at Remix Conf 2023</a></li>
+</('ul', 0)>
+<h2>Showcase</h2>
+
+<ul>
+<li><a href="https://hydrogen.shopify.dev/case-studies/patta-x-tommy">Patta x Tommy</a></li>
+</ul>
+<ul>
+<li><a href="https://hydrogen.shopify.dev/case-studies/kamp-grizzly">Kamp Grizzly</a></li>
+</ul>
+<ul>
+<li><a href="https://hydrogen.shopify.dev/case-studies/allbirds">AllBirds</a></li>
+</ul>
+<ul>
+<li><a href="https://theheadlessclub.com/tool/hydrogen">The Headless Club</a></li>
+</ul>
+</body>
+</html>

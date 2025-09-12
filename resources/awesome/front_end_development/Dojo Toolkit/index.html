@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Toolkit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dojo Toolkit</h1>
+
+<p><strong>Repository:</strong> https://github.com/petk/awesome-dojo#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<h1>Awesome Dojo</h1>
+
+<a href="https://github.com/sindresorhus/awesome"><img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" alt="Awesome" height="18"></a>
+<p><a href="https://img.shields.io/badge/license-CC0-blue.svg?style=plastic "CC0 License""><img src="#contributing-and-license" alt="CCO License</a>"></p>
+<p><a href="https://img.shields.io/badge/project-maintained-brightgreen.svg?style=plastic "Project Maintained""><img src="https://github.com/petk/awesome-dojo/commits/master" alt="Project Maintained</a>"></p>
+<p><a href="https://img.shields.io/travis/petk/awesome-dojo/master.svg"><img src="https://travis-ci.org/petk/awesome-dojo" alt="Build Status</a>"></p>
+
+<p>A curated list of awesome <a href="http://dojotoolkit.org">Dojo JavaScript Toolkit</a> libraries, resources and other shiny things.</p>
+
+<p>Inspired by the <code>awesome-*</code> trend on GitHub.</p>
+
+<blockquote>
+<p>A JavaScript toolkit that saves you time and scales with your development process. Provides everything you need to build a Web app. Language utilities, UI components, and more, all in one place, designed to work together perfectly.</p>
+</blockquote>
+
+<h2>Index</h2>
+
+<ul>
+<li><a href="#dojotoolkitorg-resources-and-documentation">DojoToolkit.org resources and documentation</a></li>
+</ul>
+<ul>
+<li><a href="#tutorials">Tutorials</a></li>
+</ul>
+<ul>
+<li><a href="#bootstraps-and-boilerplates">Bootstraps and boilerplates</a></li>
+</ul>
+<ul>
+<li><a href="#packages-libraries-and-scripts">Packages, libraries and scripts</a></li>
+</ul>
+<ul>
+<li><a href="#serverside-integrations">Serverside integrations</a></li>
+</ul>
+<ul>
+<li><a href="#testing">Testing</a></li>
+</ul>
+<ul>
+<li><a href="#applications">Applications</a></li>
+</ul>
+<ul>
+<li><a href="#themes">Themes</a></li>
+</ul>
+<ul>
+<li><a href="#typescript">TypeScript</a></li>
+</ul>
+<ul>
+<li><a href="#community">Community</a></li>
+</ul>
+<ul>
+<li><a href="#other-awesome-lists">Other Awesome Lists</a></li>
+</ul>
+<ul>
+<li><a href="#contributing-and-license">Contributing and License</a></li>
+</('ul', 0)>
+<h2>DojoToolkit.org resources and documentation</h2>
+
+<ul>
+<li><a href="http://dojotoolkit.org/api/">API</a> - API reference for Dojo Toolkit</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dojo/meta/wiki/Roadmap">Roadmap</a> Dojo Roadmap (all versions)</li>
+</ul>
+<ul>
+<li><a href="http://dojotoolkit.org/blog/">Blog</a> - Dojo Toolkit Blog</li>
+</ul>
+<ul>
+<li><a href="http://demos.dojotoolkit.org/demos/">Demos</a> - Dojo Toolkit Demos</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dojo/docs">Reference guide</a> - <a href="http://dojotoolkit.org/reference-guide/1.10/">http://dojotoolkit.org/reference-guide/1.10/</a></li>
+</ul>
+<ul>
+<li><a href="http://dojotoolkit.org/documentation/">Tutorials</a> - authorized and updated tutorials for Dojo Toolkit</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dojo/meta">Dojo Meta</a> - Dojo 2 contribution and coding guidelines</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dojo/dojo-website">Dojo Website</a> - Website for Dojo Toolkit 1.x to 2.x transition</li>
+</ul>
+<p><a href="#awesome-dojo">Back to top</a></p>
+
+<h2>Tutorials</h2>
+
+<ul>
+<li><a href="https://www.sitepen.com/blog/2014/08/13/dojo-faq-how-do-i-use-bootstrap-with-dijit/">Dojo and Bootstrap FAQ</a> - how to use Bootstrap with Dijit</li>
+</ul>
+<ul>
+<li><a href="https://github.com/cepa/dojo-tutorial">Dojo Toolkit 1.9 tutorial</a> - A tutorial using Dojo Toolkit 1.9</li>
+</ul>
+<ul>
+<li><a href="https://github.com/DavidSpriggs/Dojo--The-Good-Parts">Dojo the Good parts</a> - ESRI Developer Summit Presentation held March 10-13th 2014 in Palm Springs.</li>
+</ul>
+<ul>
+<li><a href="https://www.pluralsight.com/courses/dojo-fundamentals">Pluralsight's Dojo tutorial</a> - Video tutorials for learning Dojo Toolkit</li>
+</ul>
+<p><a href="#awesome-dojo">Back to top</a></p>
+
+<h2>Bootstraps and boilerplates</h2>
+
+<ul>
+<li><a href="https://github.com/atoha/dbootstrap">dboostrap</a> - Bootstrap theme for Dojo</li>
+</ul>
+<ul>
+<li><a href="https://github.com/csnover/dojo-boilerplate">Dojo Boilerplate</a> - A starting boilerplate for developing with Dojo Toolkit</li>
+</ul>
+<ul>
+<li><a href="https://github.com/xsokev/Dojo-Bootstrap">Dojo Twitter bootstrap</a> - An implementation of the Twitter Bootstrap framework using Dojo</li>
+</ul>
+<ul>
+<li><a href="https://github.com/gpedro/dojo.js">dojo.js</a> - Minimalistic boilerplate to start your dojo with Jasmine and Gulp.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kitsonk/dojo-node-boilerplate">dojo-node-boilerplate</a> - A quickstart "template" for using Dojo Toolkit on NodeJS</li>
+</ul>
+<p><a href="#awesome-dojo">Back to top</a></p>
+
+<h2>Packages, libraries and scripts</h2>
+
+<ul>
+<li><a href="https://github.com/adrobisch/angular-dojo">AngularJS Dojo</a> - AngularJS directives for dojo widgets</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ibm-js/delite">delite</a> - HTML Custom Element / Widget infrastructure</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ibm-js/deliteful">deliteful</a> - Multichannel (desktop/mobile) UI Custom Elements Library</li>
+</ul>
+<ul>
+<li><a href="http://packages.dojofoundation.org/">Dojo Foundation packages</a> - Packages available on Dojo Foundation</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kfranqueiro/dojo-smore">dojo-smore</a> - package with Dojo/Store implementation</li>
+</ul>
+<ul>
+<li><a href="https://github.com/bryanforbes/generator-dojo">generator-dojo</a> - A yeoman generator for Dojo projects</li>
+</ul>
+<ul>
+<li>Grids</li>
+<ul>
+<li><a href="http://dgrid.io/">dgrid</a> - next-generation grid component that takes full advantage of modern browsers and object stores.</li>
+</ul>
+<ul>
+<li><a href="http://oria.github.io/gridx/">gridx</a> - A fast rendering, well modularized and plugin architecture based Grid.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/xblox/xgrid">xgrid</a> - dgrid extensions.</li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://github.com/phated/grunt-dojo">grunt-dojo</a> - Build Dojo inside a Grunt task</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dojo/grunt-dojo2">grunt-dojo2</a> - Build Dojo2 inside a Grunt task</li>
+</ul>
+<ul>
+<li><a href="https://github.com/garcimouche/karma-dojo">karma-dojo</a> - A <a href="http://karma-runner.github.io/">Karma</a> plugin. Adapter for Dojo Toolkit.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/theintern/leadfoot">Leadfoot</a> - A JavaScript client library that brings cross-platform consistency to the Selenium WebDriver API</li>
+</ul>
+<ul>
+<li><a href="https://github.com/SitePen/dstore">Sitepen dstore</a> - Data infrastructure framework, providing the tools for modelling and interacting with data collections and objects.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/xblox/xaction">xaction</a> - Component providing UI and logic for user actions.</li>
+</('ul', 0)>
+<h4>Dojo 2</h4>
+
+<ul>
+<li><a href="https://github.com/dojo/core">Dojo core</a> - Dojo 2 package containing TypeScript and JavaScript core utilities</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dojo/dom">DOM Utilities</a> - Dojo2 DOM Utilities</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dojo/cli">Dojo Command Line Tooling</a>   - Command Line Tooling for Dojo2 Applications</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dojo/loader">Dojo loader</a> - AMD loader for Dojo2.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dojo/routing">Dojo routing</a> - Dojo2 Routing</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dojo/compose">Dojo compose</a> - Dojo2 Composition Library</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dojo/widgets">Dojo widgets</a> - A core UI component library for Dojo 2</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dojo/has">Dojo has</a> - A feature detection library</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dojo/shim">Dojo shim</a> - Modules that provide modular fills of ES6+ functionality</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dojo/parser">Dojo parse</a> - A package for declaratively instantiating widgets.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dojo/app">Dojo2 App</a> - An application framework for Dojo 2 (example)</li>
+</ul>
+<p><a href="#awesome-dojo">Back to top</a></p>
+
+<h2>Serverside integrations</h2>
+
+<ul>
+<li><a href="https://github.com/klipstein/dojango/">Dojango</a> - Dojo and Django Python framework integration</li>
+</ul>
+<ul>
+<li><a href="http://robin850.github.io/dojo-rails/">dojo-rails</a> - Dojo and Ruby on Rails framework integration</li>
+</ul>
+<ul>
+<li><a href="https://github.com/cometd/dojo-maven">Dojo Maven</a> - Maven packaging of the Dojo Toolkit</li>
+</ul>
+<ul>
+<li>ASP.NET</li>
+<ul>
+<li><a href="https://www.codeproject.com/Articles/650443/DataGrid-View-with-Sorting-and">Dojo & ASP.NET</a> - DataGrid View with Sorting and Paging using Dojo EnhancedGrid, JsonRest Store, Entity Framework, SQL Server, ASP.NET MVC Web API</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lstratman/Dojo.NET">Dojo.NET</a> - .NET class library that provides WebControl bindings to ASP.NET websites (both WebForms and MVC, including Razor) using the Dojo toolkit.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Reactive-Extensions/RxJS-Dojo">Reactive Extensions</a> - Reactive Extensions bindings for the Dojo Toolkit</li>
+</ul>
+</ul>
+<ul>
+<li>Java</li>
+<ul>
+<li><a href="http://www.dojofaces.org">Dojofaces</a> - project that assists JSF developers in connecting Dojo widgets with JSF backing beans</li>
+</ul>
+<ul>
+<li><a href="http://directwebremoting.org/dwr/index.html">DWR</a> - library that enables Java on the server and JavaScript in a browser</li>
+</ul>
+<ul>
+<li><a href="https://grails.org/">Grails</a> - open source full stack web application framework that has support for Dojo with <a href="http://grails.org/plugin/dojo">plugin</a></li>
+</ul>
+<ul>
+<li><a href="http://www.lightstreamer.com/">LightStreamer</a> - Server with Dojo integrated</li>
+</ul>
+<ul>
+<li><a href="https://www.sitepen.com/blog/2011/08/11/how-do-you-use-the-dojo-store-jsonrest-api-with-spring/">Spring</a> - How to integrate Spring and Dojo</li>
+</ul>
+<ul>
+<li><a href="http://www-03.ibm.com/software/products/en/appserv-was">Websphere</a> - Application server has Dojo integrated</li>
+</ul>
+</ul>
+<ul>
+<li>Node.js</li>
+<ul>
+<li><a href="https://github.com/agebrock/dojo-node">dojo-node</a> - Lightwave Dojo wrapper for Node.js</li>
+</ul>
+<ul>
+<li><a href="https://github.com/supnate/dojos">Dojos</a> - Server side dojo on NodeJS</li>
+</ul>
+<ul>
+<li><a href="http://dojotoolkit.org/documentation/tutorials/1.10/node/">Node.js integration</a> - Tutorial how to use Dojo and Node.js</li>
+</ul>
+</ul>
+<ul>
+<li>PHP</li>
+<ul>
+<li><a href="https://github.com/zoopcommerce/pixie">Dojo & Composer</a> - custom Composer installers for zoop packages including Dojo</li>
+</ul>
+<ul>
+<li><a href="https://www.sitepen.com/blog/2011/09/06/what-is-the-best-way-to-use-dojo-with-a-symfony-backend/">Dojo & Symfony PHP framework</a> - integrating Dojo Toolkit with Symfony PHP framework</li>
+</ul>
+<ul>
+<li><a href="https://github.com/superdweebie/DojoModule">Dojo & Zend PHP framework</a> - integrating Dojo Toolkit with Zend Framework through DojoModule</li>
+</ul>
+</ul>
+<p><a href="#awesome-dojo">Back to top</a></p>
+
+<h2>Testing</h2>
+
+<ul>
+<li><a href="https://github.com/theintern/">Intern</a> - A next-generation code testing stack for JavaScript.</li>
+</ul>
+<ul>
+<li><a href="https://theintern.github.io/intern/#what-is-intern">Intern User guide</a> - A quite complete manual about how to use The Intern</li>
+</ul>
+<ul>
+<li><a href="https://github.com/glamb/generator-internjs-pageobjects/">Intern Yeoman page objects</a> - A Yeoman generator to create unit test and suites</li>
+</ul>
+<ul>
+<li><a href="https://github.com/naglalakk/generator-intern">Intern Yeoman generator</a> - Yeoman generator - Intern</li>
+</ul>
+<p><a href="#awesome-dojo">Back to top</a></p>
+
+<h2>Applications</h2>
+
+<ul>
+<li><a href="https://github.com/dreaswar/AuShadha">AuShada</a> - Django and Dojo application for Electronic Medical Records (EMR) and Public Health Management</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dojo/dapi">dapi</a> - node.js Dojo API viewer</li>
+</ul>
+<ul>
+<li><a href="https://github.com/theintern/digdug">Dig Dug</a> - A JavaScript library for launching WebDriver service tunnels</li>
+</ul>
+<ul>
+<li><a href="https://github.com/rmurphey/dojo-demo">Dojo Demo</a> - Dojo demo</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sirprize/dojorama">dojorama</a> - Single page demo application based on Dojo 1.9, Twitter Bootstrap 3 and history API</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dmachi/dojox_application">Dojox application</a> - Dojox Application Framework for mobile, tablets, and desktops</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dojo/js-doc-parse">js-doc-parse</a> - Library for parsing dojo JavaScript files and extracting inline documentation</li>
+</ul>
+<ul>
+<li><a href="https://github.com/phiggins42/rstwiki">rstwiki</a> - Simple reST/wiki system built with Python and Dojo Toolkit</li>
+</ul>
+<ul>
+<li><a href="https://github.com/scripted-editor">Scripted</a> - Scripted is a fast and lightweight code editor with an initial focus on JavaScript editing</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tastejs/todomvc">todomvc</a> - Helping you select an MV\* framework - todo app examples</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dojo/examples">Dojo2 Example</a> - Dojo 2 Examples</li>
+</ul>
+<ul>
+<li><a href="https://github.com/xblox/xamiro">xamiro</a> - IDE alike file manager in PHP and JavaScript with minimal dependencies.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/flysurfer28/windows-dist">Windows-dist</a> - Full automation suite for IoT and prototyping.</li>
+</ul>
+<p><a href="#awesome-dojo">Back to top</a></p>
+
+<h2>Themes</h2>
+
+<ul>
+<li><a href="https://github.com/kfranqueiro/dijit-claro-stylus">dijit-claro-stylus</a> - A straight conversion of Dijit's Claro theme from LESS to Stylus.</li>
+</ul>
+<ul>
+<li><a href="http://yiweima.github.io/flatdojo/">Flat Dojo Theme</a> - Esri Flat Dijit Design</li>
+</ul>
+<ul>
+<li><a href="http://websemantics.github.io/semantic-dojo/">Semantic Dojo Theme</a> - A responsive Dojo theme that harnesses the style awesomeness of <a href="http://semantic-ui.com/">Semantic UI</a> Framework.</li>
+</ul>
+<p><a href="#awesome-dojo">Back to top</a></p>
+
+<h2>TypeScript</h2>
+
+<ul>
+<li><a href="https://www.sitepen.com/blog/2013/12/31/definitive-guide-to-typescript/">Definitive TypeScript Guide</a> - A guide about features and functionalities of TypeScript</li>
+</ul>
+<ul>
+<li><a href="https://github.com/stopyoukid/DojoToTypescriptConverter">Dojo to Typescript Converter</a> - A typescript script which creates typescript compatible declarations from a dojo api.json file.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/schungx/Dojo-TypeScript">Dojo-TypeScript</a> - Using Dojo 1.9 AMD-style with Microsoft TypeScript 0.9.5</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dojo/typings">Dojo Typings</a> - A repository of Dojo 1 TypeScript Typings (including Dijit and DojoX)</li>
+</ul>
+<p><a href="#awesome-dojo">Back to top</a></p>
+
+<h2>Community</h2>
+
+<ul>
+<li><a href="https://www.facebook.com/groups/288220914564119/">Brazilian Facebook Group</a> - Brazilian Dojo Community on Facebook</li>
+</ul>
+<ul>
+<li><a href="http://dojotoolkit.org/community/">Dojo mailing list</a> - mailing list for questions and discussions</li>
+</ul>
+<ul>
+<li><a href="http://stackoverflow.com/questions/tagged/dojo">Dojo on StackOverflow</a> - Dojo Toolkit support on StackOverflow</li>
+</ul>
+<ul>
+<li><a href="https://twitter.com/dojo">Dojo on Twitter</a> - Dojo's Twitter account</li>
+</ul>
+<ul>
+<li><a href="https://www.facebook.com/groups/4375511291/">Facebook Group</a> - Dojo community on Facebook</li>
+</ul>
+<ul>
+<li><a href="https://plus.google.com/communities/107837593684207188221">Google Plus Community</a> - Dojo community on Google Plus</li>
+</ul>
+<ul>
+<li><a href="https://www.linkedin.com/groups/Dojo-Ajax-Toolkit-Developers-71399">Linked In Dojo Ajax Toolkit Developers Group</a> - Dojo Community on LinkedIn</li>
+</ul>
+<ul>
+<li><a href="https://www.linkedin.com/groups/dojo-toolkit-81926">Linked In Dojo Toolkit Group</a> - Dojo Community on LinkedIn</li>
+</ul>
+<ul>
+<li><a href="https://www.reddit.com/r/dojo/">Reddit Community</a> - growing community discussing Dojo on Reddit (invitation-only).</li>
+</ul>
+<ul>
+<li><a href="https://connect.sensiolabs.com/club/dojo-toolkit">SensioLabs Connect Club</a> - Sensiolabs Connect Dojo Toolkit Club for PHP and Symfony developers</li>
+</ul>
+<ul>
+<li><a href="http://irc.lc/freenode/dojo">IRC</a> - Large and active IRC support channel.</li>
+</ul>
+<ul>
+<li><a href="https://www.meetup.com/topics/dojo/">Meetup</a> - Get involved locally and find local user groups.</li>
+</ul>
+<p><a href="#awesome-dojo">Back to top</a></p>
+
+<h2>Other Awesome Lists</h2>
+
+<ul>
+<li><a href="https://github.com/sorrycc/awesome-javascript">awesome-javascript</a> - awesome JavaScript list</li>
+</ul>
+<ul>
+<li><a href="https://github.com/heatroom/awesome-javascript-books">awesome-javascript-books</a> - awesome JavaScript books</li>
+</ul>
+<ul>
+<li>awesome lists:</li>
+<ul>
+<li><a href="https://github.com/sindresorhus/awesome">awesome</a> - awesome list</li>
+</ul>
+<ul>
+<li><a href="https://github.com/emijrp/awesome-awesome">awesome-awesome</a> - awesome list</li>
+</ul>
+<ul>
+<li><a href="https://getawesomeness.herokuapp.com/">GetAwesomeness</a> - awesome lists</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jnv/lists">lists</a> - awesome lists</li>
+</ul>
+<ul>
+<li><a href="https://github.com/bradoyler/awesome-all">awesome-all</a> - awesome lists</li>
+</ul>
+<ul>
+<li><a href="https://github.com/erichs/awesome-awesome">awesome-awesome</a> - awesome lists</li>
+</ul>
+</ul>
+<p><a href="#awesome-dojo">Back to top</a></p>
+
+<h2>Contributing and License</h2>
+
+<p>You are most welcome to <a href="CONTRIBUTING.md">contribute</a> to this awesome Dojo Toolkit list as well. Big thanks to all <a href="https://github.com/petk/awesome-dojo/graphs/contributors">contributors</a> who have helped to build this list.</p>
+
+<p><a href="https://licensebuttons.net/p/zero/1.0/88x31.png"><img src="https://creativecommons.org/publicdomain/zero/1.0/" alt="CC0</a>"></p>
+
+<p>To the extent possible under law, <a href="https://github.com/petk">Peter Kokot</a> has waived all copyright and related or neighboring rights to this work.</p>
+
+<p><a href="#awesome-dojo">Back to top</a></p>
+
+</body>
+</html>

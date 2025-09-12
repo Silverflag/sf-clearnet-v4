@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building Blocks for Web Apps</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Building Blocks for Web Apps</h1>
+
+<p><strong>Repository:</strong> https://github.com/componently-com/awesome-building-blocks-for-web-apps#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<h1>Awesome Building Blocks for Web Apps <a href="https://awesome.re/badge-flat2.svg"><img src="https://awesome.re" alt="Awesome</a>"> <a href="https://img.shields.io/twitter/url/http/shields.io.svg?style=social"><img src="https://twitter.com/intent/tweet?text=Here%27s%20a%20list%20of%20standalone%20features%20you%20can%20integrate%20into%20your%20web%20app&url=https://github.com/componently-com/awesome-building-blocks-for-web-apps&via=componently&hashtags=webdev,componently,react,blocks,developers" alt="Tweet</a>"></h1>
+
+<p><strong>Curated list of standalone features to be integrated into web applications: Get full features built by others instead of having to write everything yourself.</strong></p>
+
+<hr>
+
+<p>If you like these building blocks, check out <a href="https://www.componently.com/?utm<em>source=github-awesome-components&utm</em>medium=referral&utm_campaign=awesome-list">componently.com</a>, a marketplace where developers can search, compare and integrate web application building blocks.</p>
+
+<hr>
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<h2>Contents</h2>
+
+<ul>
+<li><a href="#ui-elements">UI Elements</a></li>
+</ul>
+<ul>
+<li><a href="#exit-intent-popup">Exit Intent Popup</a></li>
+</ul>
+<ul>
+<li><a href="#auth">Auth</a></li>
+</ul>
+<ul>
+<li><a href="#booking">Booking</a></li>
+</ul>
+<ul>
+<li><a href="#notification">Notification</a></li>
+</ul>
+<ul>
+<li><a href="#social">Social</a></li>
+</ul>
+<ul>
+<li><a href="#chat-bot">Chat Bot</a></li>
+</ul>
+<ul>
+<li><a href="#chat">Chat</a></li>
+</ul>
+<ul>
+<li><a href="#monitoring">Monitoring</a></li>
+</ul>
+<ul>
+<li><a href="#content-management">Content Management</a></li>
+</ul>
+<ul>
+<li><a href="#consent-management">Consent Management</a></li>
+</ul>
+<ul>
+<li><a href="#media">Media</a></li>
+</ul>
+<ul>
+<li><a href="#form">Form</a></li>
+</ul>
+<ul>
+<li><a href="#marketing">Marketing</a></li>
+</ul>
+<ul>
+<li><a href="#changelog">Changelog</a></li>
+</ul>
+<ul>
+<li><a href="#telecommunication">Telecommunication</a></li>
+</ul>
+<ul>
+<li><a href="#social-media">Social Media</a></li>
+</ul>
+<ul>
+<li><a href="#search">Search</a></li>
+</ul>
+<ul>
+<li><a href="#feature-flags">Feature flags</a></li>
+</ul>
+<ul>
+<li><a href="#reviews">Reviews</a></li>
+</ul>
+<ul>
+<li><a href="#related-awesome-lists">Related awesome-lists</a></li>
+</ul>
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+<h2>UI Elements</h2>
+
+<ul>
+<li><a href="https://tailwindui.com/">Tailwind UI</a> - UI components, by the creators of Tailwind CSS.</li>
+</ul>
+<ul>
+<li><a href="https://webix.com/">Webix</a> - JavaScript UI library and framework for displaying data in different ways.</li>
+</ul>
+<ul>
+<li><a href="https://www.highcharts.com/">Highcharts</a> - Interactive charts for web.</li>
+</ul>
+<ul>
+<li><a href="https://www.webatoms.in">Webatoms</a> - JavaScript bridge for Xamarin.Forms.</li>
+</ul>
+<ul>
+<li><a href="https://www.creative-tim.com/">Creative Tim</a> - Themes for React, Angular, Vue, Lavarel and HTML5.</li>
+</ul>
+<ul>
+<li><a href="https://www.syncfusion.com/">Syncfusion</a> - Data visualization components and PDF Viewer.</li>
+</ul>
+<ul>
+<li><a href="https://coreui.io/pro/vue">CoreUI</a> - Vue admin template.</li>
+</ul>
+<ul>
+<li><a href="https://uifort.com/">UIfort</a> - UI design systems for all major frontend frameworks.</li>
+</ul>
+<ul>
+<li><a href="https://semantic-ui.com/">Semantic UI</a> - Open source UI component library for React, Meteor, Ember and Angular.</li>
+</ul>
+<ul>
+<li><a href="https://designrevision.com/downloads/shards-pro">Design Revision's Shards Pro</a> - Design blocks for web or mobile apps.</li>
+</ul>
+<ul>
+<li><a href="https://themesberg.com">Themesberg</a> - Bootstrap templates, themes and UI kits.</li>
+</ul>
+<ul>
+<li><a href="https://treact.owaiskhan.me/">Treact</a> - React templates for landing pages, built on Tailwind CSS.</li>
+</ul>
+<ul>
+<li><a href="https://creativedesignsguru.com">Creative Designs Guru</a> - Themes for React, Nextjs and Eleventy, built with Tailwind CSS.</li>
+</('ul', 0)>
+<h2>Exit Intent Popup</h2>
+<ul>
+<li><a href="https://wisepops.com/">Wisepops</a> - Contextual popups, banners and bars for mobile and desktop visitors.</li>
+</ul>
+<ul>
+<li><a href="https://www.listagram.com">Listagram</a> - Interactive opt-in form for collecting email addresses.</li>
+</ul>
+<ul>
+<li><a href="https://www.poptin.com">Poptin</a> - Popups and forms that can be integrated anywhere in the website.</li>
+</ul>
+<ul>
+<li><a href="https://www.embedery.com">Embedery</a> - Popups to engage visitors.</li>
+</('ul', 0)>
+<h2>Auth</h2>
+<ul>
+<li><a href="https://auth0.com/">Auth0</a> - Authentication management with native support for Angular, React and VueJS.</li>
+</ul>
+<ul>
+<li><a href="https://clerk.com">Clerk</a> – Complete user management UIs and APIs, purpose-built for React, Next.js, and the modern web.</li>
+</ul>
+<ul>
+<li><a href="https://firebase.google.com">Firebase</a> - PaaS from Google, including authentication management.</li>
+</ul>
+<ul>
+<li><a href="https://www.okta.com/">Okta</a> - Authentication and Authorization solution with support for Angular, React and VueJS.</li>
+</ul>
+<ul>
+<li><a href="https://www.onelogin.com/">Onelogin</a> - Authentication focussed on company internal applications.</li>
+</ul>
+<ul>
+<li><a href="https://azure.microsoft.com/en-us/services/active-directory/#security">Microsoft Azure Active Directory</a> - Authentication management in Azure, based on Microsoft accounts.</li>
+</ul>
+<ul>
+<li><a href="https://aws.amazon.com/cognito/">AWS Cognito</a> - AWS authentication management. Frontend integration is part of <a href="https://aws.amazon.com/de/amplify/">AWS Amplify</a>.</li>
+</('ul', 0)>
+<h2>Booking</h2>
+<ul>
+<li><a href="https://calendly.com/">Calendly</a> - Stand-alone booking solution.</li>
+</ul>
+<ul>
+<li><a href="https://www.zoho.com/bookings/">Zoho Bookings</a> - Online scheduler integrated into Zoho Suite.</li>
+</ul>
+<ul>
+<li><a href="https://acuityscheduling.com/">Acuity Scheduling</a> - Appointment scheduling with extensive API.</li>
+</ul>
+<ul>
+<li><a href="https://10to8.com/">10to8</a> - Booking tool with many features in the free tier.</li>
+</ul>
+<ul>
+<li><a href="https://www.supersaas.com/">SuperSaaS</a> - Appointment scheduling with focus on group scheduling.</li>
+</ul>
+<ul>
+<li><a href="https://simplybook.me/">SimplyBook.Me</a> - Booking tool with its own booking directory.</li>
+</ul>
+<ul>
+<li><a href="https://www.oncehub.com/">OnceHub</a> - Scheduling via ScheduleOnce and meeting management via InviteOnce.</li>
+</ul>
+<ul>
+<li><a href="https://youcanbook.me/">YouCanBookMe</a> - Online scheduling for teams.</li>
+</ul>
+<ul>
+<li><a href="https://www.onsched.com/">OnSched</a> - Scheduling API for marketplaces & applications.</li>
+</ul>
+<ul>
+<li><a href="https://www.appointmentplus.com/">AppointmentPlus</a> - Appointment scheduling with coupons.</li>
+</ul>
+<ul>
+<li><a href="https://www.booxi.com/">Booxi</a> - Booking and online directory components.</li>
+</ul>
+<ul>
+<li><a href="https://get.cogsworth.com/">Cogsworth Scheduler</a> - Online Scheduler for business with a powerful API.</li>
+</('ul', 0)>
+<h2>Notification</h2>
+<ul>
+<li><a href="https://onesignal.com/">OneSignal</a> - Mobile and web notifications.</li>
+</ul>
+<ul>
+<li><a href="https://notific.io/">Notific</a> - Notifications including a PHP SDK.</li>
+</ul>
+<ul>
+<li><a href="https://www.wonderpush.com/">WonderPush</a> - Notifications focused on speed.</li>
+</ul>
+<ul>
+<li><a href="https://vwo.com/engage/push-notifications/">VWO Engage</a> - Notifications as part of a larger marketing suite.</li>
+</ul>
+<ul>
+<li><a href="https://signalize.com/">Signalize</a> - Free notifications with paid analytics add on.</li>
+</('ul', 0)>
+<h2>Social</h2>
+<ul>
+<li><a href="https://getstream.io/">Stream</a> - Activity feed & chat APIs.</li>
+</ul>
+<ul>
+<li><a href="https://embedsocial.com/products/embedfeed/">EmbedSocial's embedfeed</a> - Social media aggregator.</li>
+</('ul', 0)>
+<h2>Chat Bot</h2>
+<ul>
+<li><a href="https://www.freshworks.com/live-chat-software/">Fresh chat</a> - Chatbot in Freshworks support suite.</li>
+</ul>
+<ul>
+<li><a href="https://www.tiledesk.com/">Tiledesh</a> - AI-powered live chat.</li>
+</('ul', 0)>
+<h2>Chat</h2>
+<ul>
+<li><a href="https://www.daily.co/">Daily.co</a> - Video chat.</li>
+</('ul', 0)>
+<h2>Monitoring</h2>
+<ul>
+<li><a href="https://sentry.io/">Sentry</a> - Full-stack error monitoring with release management included.</li>
+</ul>
+<ul>
+<li><a href="https://raygun.com/platform/crash-reporting">Raygun Crash Reporting</a> - Error monitoring as part of the Raygun suite.</li>
+</ul>
+<ul>
+<li><a href="https://www.honeybadger.io/">Honeybadger</a> - Error, uptime and check-in monitoring.</li>
+</ul>
+<ul>
+<li><a href="https://rollbar.com/">Rollbar</a> - Error monitoring with the ability to replay HTTP requests that caused errors.</li>
+</('ul', 0)>
+<h2>Content Management</h2>
+<ul>
+<li><a href="https://www.contentful.com">Contentful</a> - Headless content management system.</li>
+</('ul', 0)>
+<h2>Consent Management</h2>
+<ul>
+<li><a href="https://cookiefirst.com/">Cookiefirst</a> - Cookie consent manager.</li>
+</ul>
+<ul>
+<li><a href="https://usercentrics.com/">usercentrics</a> - Compliance manager that can be implemented as part of existing pages.</li>
+</ul>
+<ul>
+<li><a href="https://www.sourcepoint.com/">Sourcepoint</a> - Compliance management as part of a suite including also ad blocker recovery.</li>
+</ul>
+<ul>
+<li><a href="https://piwik.pro/gdpr-consent-manager/">PiwikPro</a> - Compliance management as part of an analytics tool.</li>
+</ul>
+<ul>
+<li><a href="https://www.consentmanager.de/">Consent Management Provider</a> - German management tool for Cookie Consent.</li>
+</ul>
+<ul>
+<li><a href="https://www.uniconsent.com/">UniConsent</a> - Consent management platform for GDPR, CCPA, COPPA compliance.</li>
+</ul>
+<ul>
+<li><a href="https://trustarc.com/">TrustArc</a> - Privacy management for the CCPA, GDPR, LGPD and 900+ other global regulations.</li>
+</ul>
+<ul>
+<li><a href="https://www.cookiebot.com/">Cookiebot</a> - Cookie tracking manager.</li>
+</ul>
+<ul>
+<li><a href="https://www.iubenda.com/">iubenda</a> - Consent management and terms and conditions generator.</li>
+</ul>
+<ul>
+<li><a href="https://www.civicuk.com/cookie-control/">Civic Cookie Control</a> - Smaller Cookie and GDPR compliance product.</li>
+</ul>
+<ul>
+<li><a href="https://www.ccm19.de/">CCM19</a> - German cookie consent manager.</li>
+</ul>
+<ul>
+<li><a href="https://cookieinformation.com/">CookieInformation</a> - Focus on compliance reporting via a dashboard.</li>
+</ul>
+<ul>
+<li><a href="https://www.cookiepro.com/">CookiePro</a> - Cookie management as part of a privacy management solution.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Mastermindzh/react-cookie-consent">React Cookie Consent</a> - A small and customizable cookie consent bar for React applications.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/buildo/react-cookie-banner">React Cookie Banner</a> - React cookie banner which can be automatically dismissed with a scroll.</li>
+</('ul', 0)>
+<h2>Media</h2>
+<ul>
+<li><a href="https://mux.com/">Mux</a> - Stream hosted and live videos.</li>
+</ul>
+<ul>
+<li><a href="https://developer.spotify.com/documentation/web-playback-sdk/">Spotify web playback SDK</a> - Client-side JavaScript library which allows you to create a new player in Spotify Connect and play any audio track from Spotify in the browser via encrypted media extensions.</li>
+</('ul', 0)>
+<h2>Form</h2>
+<ul>
+<li><a href="https://www.staticforms.xyz/">Static Forms</a> - Form that sends its results to your email.</li>
+</ul>
+<ul>
+<li><a href="https://flyingforms.io/?utm<em>source=github-awesome-components&utm</em>medium=referral&utm_campaign=awesome-list">FlyingForms</a> - Building, versioning and managing forms.</li>
+</ul>
+<ul>
+<li><a href="https://kirokuforms.com/">KirokuForms</a> - Drag-and-drop form builder with generous free tier, email notifications, and full API access.</li>
+</('ul', 0)>
+<h2>Marketing</h2>
+<ul>
+<li><a href="https://trustpulse.com/">TrustPulse</a> - Shows recent buyers on your website.</li>
+</('ul', 0)>
+<h2>Changelog</h2>
+<ul>
+<li><a href="https://www.getbeamer.com">Beamer</a> - Combination of push notifications and changelog management.</li>
+</ul>
+<ul>
+<li><a href="https://changelogfy.com/">Changelogfy</a> - A product release notes tool.</li>
+</ul>
+<ul>
+<li><a href="https://changefeed.app/">Changefeed</a> - Changelog as stand-alone page or embeddable widget.</li>
+</ul>
+<ul>
+<li><a href="https://canny.io/features/changelog">Canny's Changelog</a> - Combines changelog with product roadmaps.</li>
+</ul>
+<ul>
+<li><a href="https://www.productflare.com/changelog">ProductFlare's Changelog</a> - Changelog widget around a product team task management system.</li>
+</ul>
+<ul>
+<li><a href="https://changes.blue">Changes</a> - Changelog building kit.</li>
+</('ul', 0)>
+<h2>Telecommunication</h2>
+<ul>
+<li><a href="https://www.vonage.com/">Vonage</a> - Voice, messaging, video and data capabilities across unified communications, contact centers and communications APIs.</li>
+</('ul', 0)>
+<h2>Social Media</h2>
+<ul>
+<li><a href="https://www.addthis.com/">AddThis</a> - Social sharing buttons, available on AMPs.</li>
+</ul>
+<ul>
+<li><a href="https://sharethis.com/">ShareThis</a> - Social sharing buttons.</li>
+</ul>
+<ul>
+<li><a href="https://www.addtoany.com/">AddToAny</a> - Sharing buttons for many different target services.</li>
+</('ul', 0)>
+<h2>Search</h2>
+<ul>
+<li><a href="https://www.algolia.com/">Algolia</a> - Search for your application.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/elastic/search-ui">Search UI</a> - UI integration for ElastiSearch.</li>
+</('ul', 0)>
+<h2>Feature flags</h2>
+<ul>
+<li><a href="https://www.optimizely.com/rollouts">Optimizely's Rollouts</a> - Feature flags combined with A/B testing.</li>
+</ul>
+<ul>
+<li><a href="https://launchdarkly.com/">LaunchDarkly</a> - Feature management with multiple integrations in CI servers and ticketing systems.</li>
+</ul>
+<ul>
+<li><a href="https://www.split.io/">Split</a> - Another feature management with multiple integrations in CI servers and ticketing systems.</li>
+</ul>
+<ul>
+<li><a href="https://rollout.io/">Rollout</a> - Feature management focusing on segmented roll-out of features.</li>
+</('ul', 0)>
+<h2>Reviews</h2>
+<ul>
+<li><a href="https://justreview.co/">JustReview</a> - Collect reviews from e-commerce, social media and review service providers and embed on a website.</li>
+</ul>
+<ul>
+<li><a href="https://reviewsonmywebsite.com/">ReviewsOnMyWebsite</a> - Collect, monitor and display customer reviews.</li>
+</('ul', 0)>
+<h2>Related awesome-lists</h2>
+<ul>
+<li><a href="https://github.com/mateusortiz/webcomponents-the-right-way">Web Components</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/mfornos/awesome-microservices">Microservices</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/ChristianUlbrich/awesome-microfrontends">Micro Frontends</a></li>
+</ul>
+</body>
+</html>

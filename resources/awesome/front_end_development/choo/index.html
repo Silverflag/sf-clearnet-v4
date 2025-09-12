@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>choo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>choo</h1>
+
+<p><strong>Repository:</strong> https://github.com/choojs/awesome-choo#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<h1>Awesome choo <a href="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg"><img src="https://github.com/sindresorhus/awesome" alt="Awesome</a>"> <div align="right">:steam_locomotive::train::train::train::train::train:</div></h1>
+
+<blockquote>
+<p><a href="https://choo.io/">choo</a> is a <code>4kb</code> framework for creating</p>
+<p>sturdy frontend applications</p>
+</blockquote>
+
+<h2>Contents</h2>
+
+<ul>
+<li><a href="#official-resources">Official resources</a></li>
+</ul>
+<ul>
+<li><a href="#dependencies">Dependencies</a></li>
+</ul>
+<ul>
+<li><a href="#demos">Demos</a></li>
+</ul>
+<ul>
+<li><a href="#community">Community</a></li>
+</ul>
+<ul>
+<li><a href="#plugins-and-addons">Plugins and addons</a></li>
+</ul>
+<ul>
+<li><a href="#elements">Elements</a></li>
+</ul>
+<ul>
+<li><a href="#cli-templates">CLI Templates</a></li>
+</ul>
+<ul>
+<li><a href="#resources">Resources</a></li>
+</ul>
+<ul>
+<li><a href="#projects-using-choo">Projects using choo</a></li>
+</('ul', 0)>
+<h3>Official resources</h3>
+
+<ul>
+<li><a href="https://github.com/yoshuawuyts/choo/blob/master/README.md">Docs</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/yoshuawuyts/choo-handbook">Handbook</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/yoshuawuyts/choo">Repo</a></li>
+</ul>
+<ul>
+<li><a href="https://choo.io/">Website</a></li>
+</ul>
+<ul>
+<li><a href="https://twitter.com/yoshuawuyts/status/730087077803528193">Twitter thread</a></li>
+</('ul', 0)>
+<h3>Dependencies</h3>
+<p><code>choo</code> is a modular framework. These are the dependencies it glues together</p>
+<p>under the hood:</p>
+
+<ul>
+<li><a href="https://github.com/shama/bel">bel</a> - Create composable DOM elements using</li>
+</ul>
+<p>template strings.</p>
+<ul>
+<li><a href="https://github.com/substack/hyperx">hyperx</a> - Convert template strings to</li>
+</ul>
+<p>library backends.</p>
+<ul>
+<li><a href="https://github.com/choojs/nanomorph">nanomorph</a> - Hyper fast diffing algorithm for real DOM nodes.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/yoshuawuyts/nanoraf">nanoraf</a> - Only call RAF when needed.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/choojs/nanorouter">nanorouter</a> - Smol frontend router.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/choojs/nanobus">nanobus</a> - Tiny message bus.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/choojs/nanolocation">nanolocation</a> - Small window.location library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/choojs/nanohref">nanohref</a> - Tiny href click handler library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/choojs/nanoquery">nanoquery</a> - Tiny querystring module.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/choojs/nanotiming">nanotiming</a> - Small timing library.</li>
+</('ul', 0)>
+<h3>Demos</h3>
+
+<ul>
+<li><a href="http://requirebin.com/?gist=e589473373b3100a6ace29f7bbee3186">Input example</a> - (<a href="https://github.com/yoshuawuyts/choo/tree/master/examples/title">repo</a>)</li>
+</ul>
+<ul>
+<li><a href="https://hyperdev.com/#!/project/fork-fang">HTTP effects</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/yoshuawuyts/choo/tree/master/examples/mailbox">Mailbox routing</a></li>
+</ul>
+<ul>
+<li><a href="http://shuheikagawa.com/todomvc-choo">TodoMVC</a> - (<a href="https://github.com/shuhei/todomvc-choo">repo</a>)</li>
+</ul>
+<ul>
+<li><a href="https://choo-firebase-2ec21.firebaseapp.com">choo-firebase</a> - (<a href="https://github.com/mw222rs/choo-firebase">repo</a>)</li>
+</ul>
+<ul>
+<li><a href="https://grow.static.land">Grow</a> - (<a href="https://github.com/sethvincent/grow">repo</a>)</li>
+</ul>
+<ul>
+<li><a href="http://chootbot.herokuapp.com">Chatbot</a> - (<a href="https://github.com/plaey/chatbot">repo</a>)</li>
+</ul>
+<ul>
+<li><a href="https://github.com/akiva/chat-random">chat-random</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/timwis/choo-leaflet-demo">choo-leaflet-demo</a></li>
+</ul>
+<ul>
+<li><a href="https://zhouhansen.github.io/choo-scriber">choo-scriber</a> - (<a href="https://github.com/ZhouHansen/choo-scriber">repo</a>)</li>
+</('ul', 0)>
+<h3>Community</h3>
+
+<ul>
+<li><a href="https://webchat.freenode.net/?channels=choo">Freenode</a></li>
+</('ul', 0)>
+<h3>Plugins and addons</h3>
+
+<ul>
+<li><a href="https://github.com/bcomnes/choo-location-electron">choo-location-electron</a> - Fix <code>choo</code>'s router in electron.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/yoshuawuyts/choo-log">choo-log</a> - Development logger for choo.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mantoni/choo-test">choo-test</a> - Easy choo app unit testing.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/yoshuawuyts/choo-persist/">choo-persist</a> - Synchronize choo state with LocalStorage.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/rahatarmanahmed/choo-promise">choo-promise</a> - Use promises in effects and subscriptions.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/yoshuawuyts/choo-pull">choo-pull</a> - Wrap handlers to use pull-stream in a choo plugin.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/yoshuawuyts/choo-redirect">choo-redirect</a> - Redirect a view to another view.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/yoshuawuyts/choo-model">choo-model</a> - Experimental state management lib for choo.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/bengourley/choo-resume">choo-resume</a> - choo-resume + hot-rld = hot app reload in choo.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/graforlock/choo-detached">choo-detached</a> - Use <code>choo</code> as a mountable, simple stand-alone component (no routing).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/choojs/choo-service-worker">choo-service-worker</a> - Service worker loader for <code>choo</code>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/YerkoPalma/choo-websocket">choo-websocket</a> - Small wraper around WebSocket browser API, for <code>choo</code> apps.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ungoldman/choo-store">choo-store</a> - Lightweight state structure for choo apps.</li>
+</('ul', 0)>
+<h3>Elements</h3>
+
+<ul>
+<li><a href="https://github.com/finnp/dom-notifications">dom-notifications</a> - Atom-inspired notifications component.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/trainyard/choodown">choodown</a> - A simple markdown component for choo.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dbtek/choo-md-editor">choo-md-editor</a> - Lightweight markdown editor that can be used inside Choo app or as a standalone library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/rexmortus/choo-chartist">choo-chartist</a> - A little component for using <a href="https://gionkunz.github.io/chartist-js/">Chartist</a> with the choo framework.</li>
+</('ul', 0)>
+<h3>CLI Templates</h3>
+
+<p>Templates for <a href="https://github.com/trainyard/choo-cli">choo-cli</a></p>
+
+<ul>
+<li><a href="https://github.com/trainyard/template-basic">trainyard/template-basic</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/haroenv/template-webpack">haroenv/template-webpack</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/simonwjackson/atomic-choo">simonwjackson/atomic-choo</a> - An opinionated project seed to get started developing with electron, webpack and choo.</li>
+</ul>
+<p>Other CLI templates</p>
+<ul>
+<li><a href="https://github.com/graforlock/choo-bandwagon">graforlock/choo-bandwagon</a></li>
+</('ul', 0)>
+<h3>Resources</h3>
+<blockquote>
+<p>:movie_camera: : videos</p>
+<p>:computer: : tutorials</p>
+<p>:book: : articles</p>
+</blockquote>
+
+<ul>
+<li>:computer: <a href="https://yoshuawuyts.gitbooks.io/choo/content/02<em>your</em>first_app.html">Your first choo app</a></li>
+</ul>
+<ul>
+<li>:movie_camera: <a href="https://www.youtube.com/watch?v=a97Mw2z1SAI">TCBY community live hangout</a></li>
+</ul>
+<ul>
+<li>:book: <a href="https://medium.com/@yoshuawuyts/a-better-frontend-experience-7b0498c85658">A better frontend experience</a></li>
+</ul>
+<ul>
+<li>:book: <a href="http://blog.krawaller.se/posts/composition-in-cyclejs-choo-react-and-angular2">Composition in CycleJS, choo, React and Angular2</a></li>
+</ul>
+<ul>
+<li>:book: <a href="http://blog.krawaller.se/posts/stupidly-smart-components-in-choo">Stupidly smart components in choo</a></li>
+</('ul', 0)>
+<h3>Projects using choo</h3>
+
+<ul>
+<li><a href="https://github.com/toddself/boxcar">boxcar</a> - A choo-based grid/spreadsheet editor.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/willkessler/choo-sortable">choo-sortable</a> - Building sortable code with choo.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mw222rs/hacker-choo">hacker-choo</a> - Hacker Typer clone written in choo.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/npeihl/footprint-rechoo">footprint-rechoo</a> - A choo rewrite of <a href="http://github.com/sjcgis/footprint-review">footprint-review</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/freeman-lab/minidocs">minidocs</a> – A documentation site generator built with choo.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/timwis/dataface">dataface</a> - Desktop application to manage databases.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/HoverBaum/BlankUp-Electron">BlankUp</a> - Multiplatform markdown editor.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kvnneff/hackernews-choo">hackernews-choo</a> - A Hacker News reader built with choo.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/YerkoPalma/tic-tac-toe">tic-tac-choo</a> - Progressive tic tac toe game, made with choo.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/timwis/enviar">enviar</a> - Chat interface for SMS / text messages.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kaktus/kaktus">kaktus</a> - A new minimalistic web browser, built on <code>choo</code> and IndexedDB.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/CiviCDR/civicdr.org">civicdr.org</a> - Website for <a href="https://civicdr.org/">CiviCDR</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/notenoughneon/nekocafe">nekocafe</a> - Web chat room :cat: :speech_balloon:.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/robotopia-x/robotopia">Robotopia</a> - Introducing kids to coding with tiny virtual robots!</li>
+</ul>
+<ul>
+<li><a href="https://github.com/afk-mcz/busca">busca</a> - A small web-extension to search the current tab on reddit.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/luizbaldi/choo-ban">choo-ban</a> - Simple kanban to manage board tasks, built with <code>choo</code>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/boowajs/boowa">boowa</a> - A fun blog generator, built with <code>choo</code>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/hypermodules/hyperamp">hyperamp</a> - Humble music player.</li>
+</('ul', 0)>
+<h3>License</h3>
+
+<p><a href="http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg"><img src="https://creativecommons.org/publicdomain/zero/1.0/" alt="CC0</a>"></p>
+
+<p>To the extent possible under law, <a href="https://github.com/YerkoPalma">Yerko Palma</a> has waived all copyright and related or neighboring rights to this work.</p>
+
+</body>
+</html>

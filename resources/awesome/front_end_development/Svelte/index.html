@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Svelte</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Svelte</h1>
+
+<p><strong>Repository:</strong> https://github.com/TheComputerM/awesome-svelte#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<p align="center">
+  <br>
+  <img width="200" src="./awesome-svelte.svg" alt="awesome-svelte logo">
+  <br>
+  <br>
+</p>
+
+<h1>Awesome Svelte <a href="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg"><img src="https://github.com/sindresorhus/awesome" alt="Awesome</a>"></h1>
+
+<blockquote>
+<p>⚡ A curated list of awesome Svelte resources</p>
+</blockquote>
+
+<p><a href="https://svelte.dev/">Svelte</a> is a new way to build web applications. It's a compiler that takes your declarative components and converts them into efficient JavaScript</p>
+
+<p>Contributions welcome. Add links through pull requests or create an issue to start a discussion.</p>
+
+<h2>Contents</h2>
+
+<ul>
+<li><a href="#awesome-svelte-">Awesome Svelte</a></li>
+<ul>
+<li><a href="#contents">Contents</a></li>
+</ul>
+<ul>
+<li><a href="#resources">Resources</a></li>
+<ul>
+<li><a href="#official-resources">Official Resources</a></li>
+</ul>
+<ul>
+<li><a href="#community">Community</a></li>
+</ul>
+<ul>
+<li><a href="#conferences">Conferences</a></li>
+</ul>
+<ul>
+<li><a href="#podcasts">Podcasts</a></li>
+</ul>
+<ul>
+<li><a href="#youtube-channels">YouTube Channels</a></li>
+</ul>
+<ul>
+<li><a href="#tutorials">Tutorials</a></li>
+</ul>
+<ul>
+<li><a href="#studies">Studies</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#integrations">Integrations</a></li>
+<ul>
+<li><a href="#preprocessing">Preprocessing</a></li>
+</ul>
+<ul>
+<li><a href="#mobile">Mobile</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#state-libraries">State Libraries</a></li>
+</ul>
+<ul>
+<li><a href="#ui-libraries">UI Libraries</a></li>
+</ul>
+<ul>
+<li><a href="#ui-components">UI Components</a></li>
+<ul>
+<li><a href="#table">Table</a></li>
+</ul>
+<ul>
+<li><a href="#notification">Notification</a></li>
+</ul>
+<ul>
+<li><a href="#grid">Grid</a></li>
+</ul>
+<ul>
+<li><a href="#icons">Icons</a></li>
+</ul>
+<ul>
+<li><a href="#calendar">Calendar</a></li>
+</ul>
+<ul>
+<li><a href="#maps">Maps</a></li>
+</ul>
+<ul>
+<li><a href="#charts">Charts</a></li>
+</ul>
+<ul>
+<li><a href="#miscellaneous">Miscellaneous</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#scaffold">Scaffold</a></li>
+</ul>
+<ul>
+<li><a href="#utilities">Utilities</a></li>
+<ul>
+<li><a href="#animations">Animations</a></li>
+</ul>
+<ul>
+<li><a href="#drag--drop">Drag \& Drop</a></li>
+</ul>
+<ul>
+<li><a href="#forms">Forms</a></li>
+<ul>
+<li><a href="#form-components">Form Components</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#http-requests">HTTP Requests</a></li>
+</ul>
+<ul>
+<li><a href="#sound--video">Sound \& Video</a></li>
+</ul>
+<ul>
+<li><a href="#webgl">WebGL</a></li>
+</ul>
+<ul>
+<li><a href="#pwa">PWA</a></li>
+</ul>
+<ul>
+<li><a href="#portal">Portal</a></li>
+</ul>
+<ul>
+<li><a href="#fonts">Fonts</a></li>
+</ul>
+<ul>
+<li><a href="#internationalization">Internationalization</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#routers">Routers</a></li>
+</ul>
+<ul>
+<li><a href="#frameworks">Frameworks</a></li>
+</ul>
+<ul>
+<li><a href="#dev-tools">Dev Tools</a></li>
+<ul>
+<li><a href="#lint">Lint</a></li>
+</ul>
+<ul>
+<li><a href="#test">Test</a></li>
+</ul>
+<ul>
+<li><a href="#editors">Editors</a></li>
+<ul>
+<li><a href="#visual-studio-code">Visual Studio Code</a></li>
+</ul>
+<ul>
+<li><a href="#sublime-text">Sublime Text</a></li>
+</ul>
+<ul>
+<li><a href="#vim">Vim</a></li>
+</ul>
+<ul>
+<li><a href="#jetbrains">JetBrains</a></li>
+</('ul', 6)>
+</('ul', 4)>
+</('ul', 2)>
+</('ul', 0)>
+<h2>Resources</h2>
+
+<h3>Official Resources</h3>
+
+<ul>
+<li><a href="https://svelte.dev/tutorial">Official Guide</a></li>
+</ul>
+<ul>
+<li><a href="https://svelte.dev/docs">API Reference</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/sveltejs/svelte">GitHub Repo</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/sveltejs/svelte/blob/master/packages/svelte/CHANGELOG.md">Changelog</a></li>
+</('ul', 0)>
+<h3>Community</h3>
+
+<ul>
+<li><a href="https://twitter.com/sveltejs">Twitter</a></li>
+</ul>
+<ul>
+<li><a href="https://svelte.dev/chat">Discord</a></li>
+</ul>
+<ul>
+<li><a href="https://www.reddit.com/r/sveltejs/">Reddit</a></li>
+</ul>
+<ul>
+<li><a href="https://discord.com/invite/YTXq3ZtBbx">Japan Discord</a> - Svelte 日本.</li>
+</('ul', 0)>
+<h3>Conferences</h3>
+
+<ul>
+<li><a href="https://sveltesummit.com/">Svelte Summit</a></li>
+</('ul', 0)>
+<h3>Podcasts</h3>
+
+<ul>
+<li><a href="https://www.svelteradio.com/">Svelte Radio</a></li>
+</('ul', 0)>
+<h3>YouTube Channels</h3>
+
+<ul>
+<li><a href="https://www.youtube.com/channel/UCZSr5B0l07JXK2FIeWA0-jw">Svelte Society</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/channel/UCg6SQd5jnWo5Y70rZD9SQFA">Svelte Mastery</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/@JoyofCodeDev">Joy of Code</a></li>
+</('ul', 0)>
+<h3>Tutorials</h3>
+
+<ul>
+<li><a href="https://www.edistys.dev/blog/getting-started-with-svelte-5-a-guide-for-react-developers">Getting Started with Svelte 5: A Guide for React Developers</a> - Edistys</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=8DQailPy3q8">Svelte 5 Basics - Complete Svelte 5 Course for Beginners</a> - Syntax (YouTube)</li>
+</('ul', 0)>
+<h3>Studies</h3>
+
+<p><em>Studies and research on the Svelte framework.</em></p>
+
+<ul>
+<li><a href="https://svelte-scaling.acmion.com/">SvelteScaling</a> - Does Svelte Scale? <em>(pre-v5)</em></li>
+</ul>
+<ul>
+<li><a href="https://github.com/halfnelson/svelte-it-will-scale">Will it Scale?</a> - Finding Svelte's inflection point. <em>(pre-v5)</em></li>
+</('ul', 0)>
+<h2>Integrations</h2>
+
+<h3>Preprocessing</h3>
+
+<ul>
+<li><a href="https://github.com/sveltejs/svelte-preprocess">svelte-preprocess</a> - A preprocessor for PostCSS, SCSS, Less, Stylus, Coffeescript, TypeScript, Pug and much more.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pngwn/MDsveX">MDSveX</a> - Preprocessor for MDX markdown.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/l-portet/svelte-switch-case">svelte-switch-case</a> - Switch case syntax for Svelte.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ls-age/svelte-preprocess-less">svelte-preprocess-less</a> - Preprocessor for less.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tivac/modular-css/tree/main/packages/svelte">modular-css</a> - Preprocessor support for modular-css.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ls-age/svelte-preprocess-sass">svelte-preprocess-sass</a> - Preprocessor for sass.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/AlexxNB/svelte-preprocess-markdown">svelte-preprocess-markdown</a> - Write Svelte components in markdown syntax.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/nvlang/sveltex">@nvl/sveltex</a> - Svelte + Markdown + LaTeX.</li>
+</('ul', 0)>
+<h3>Mobile</h3>
+
+<p><em>UI frameworks for mobile.</em></p>
+
+<ul>
+<li><a href="https://svelte-native.technology/">Svelte Native</a> - Svelte controlling native components via Nativescript.</li>
+</ul>
+<ul>
+<li><a href="https://framework7.io/svelte/">Framework7</a> - Full featured HTML framework for building iOS & Android apps.</li>
+</ul>
+<ul>
+<li><a href="https://capacitorjs.com/solution/svelte">Capacitor</a> - Build native mobile apps with web technology and Svelte.</li>
+</('ul', 0)>
+<h2>State Libraries</h2>
+
+<ul>
+<li><a href="https://github.com/sveltetools/svelte-asyncable">svelte-asyncable</a> - The Svelte store contract with support for asynchronous values.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Marcisbee/exome">exome</a> - Simple proxy based state manager for deeply nested states.</li>
+</ul>
+<ul>
+<li><a href="https://tanstack.com/store/latest/docs/framework/svelte/quick-start">tanstack-store</a> - Framework agnostic type-safe store w/ reactive framework adapters.</li>
+</ul>
+<p>-</p>
+
+<h2>UI Libraries</h2>
+
+<ul>
+<li><a href="https://ui.lomer.dev">lomer-ui</a> - A dead-simple CLI tool to instantly kickstart your components.</li>
+</ul>
+<ul>
+<li><a href="https://www.shadcn-svelte.com/">shadcn-svelte</a> - Beautifully designed components that you can copy and paste into your apps.</li>
+</ul>
+<ul>
+<li><a href="https://svelteui.dev/">SvelteUI</a> - all inclusive Svelte library - Components, Actions, Utilities, Animations.</li>
+</ul>
+<ul>
+<li><a href="https://flowbite-svelte.com/">Flowbite Svelte</a> - Open-source Svelte UI components built with Tailwind CSS and Flowbite.</li>
+</ul>
+<ul>
+<li><a href="https://www.skeleton.dev/docs/get-started">Skeleton</a> - Skeleton uses Tailwind utility classes and design system to easily create theme-able user interfaces.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sveltestrap/sveltestrap">Sveltestrap</a> - Bootstrap 4 & 5 components.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/IBM/carbon-components-svelte">carbon-components-svelte</a> - Svelte implementation of the IBM Carbon Design System.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/hperrin/svelte-material-ui">Svelte Material UI</a> - Material UI Components.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/melt-ui/melt-ui">Melt UI</a> - A collection of accessible, reusable, and composable headless component builders and utilities.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/illright/attractions">attractions</a> - A pretty cool and modern UI kit. <em>(pre-v5)</em></li>
+</ul>
+<ul>
+<li><a href="https://github.com/Tommertom/svelte-ionic-app">ionic-svelte</a> - Svelte integration with Ionic's UI for mobile app development, including many starters.</li>
+</ul>
+<ul>
+<li><a href="https://www.yesvelte.com/">YeSvelte</a> - YeSvelte is flexible Svelte UI component library built on top of Bootstrap css.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/techniq/svelte-ux">Svelte UX</a> - Large collection of components, actions, stores, and utilities to build highly interactive applications</li>
+</ul>
+<ul>
+<li><a href="https://stdf.design">STDF</a> - Mobile web component library based on Svelte and Tailwind.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/KTibow/m3-svelte">M3 Svelte</a> - Robust component library implementing Material Design 3</li>
+</ul>
+<ul>
+<li><a href="https://amadeusitgroup.github.io/AgnosUI/latest/">AgnosUI</a> - Highly configurable headless framework agnostic component library</li>
+</ul>
+<ul>
+<li><a href="https://daisyui.com/">daisyUI</a> - The most popular component library for Tailwind CSS - <code>daisyUI</code> adds component class names to Tailwind CSS so you can make beautiful websites faster than ever.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/matyunya/smelte">Smelte</a> - UI framework with material components built with Tailwind CSS. <em>(pre-v5)</em></li>
+</ul>
+<ul>
+<li><a href="https://github.com/svar-widgets/core">SVAR Core for Svelte</a> - A collection of 20+ Svelte UI components for building fast-performing, interactive and responsive web apps.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/agnosticui/agnosticui">AgnosticUI</a> - Accessible Svelte Component Primitives (that also work with React, Vue 3, and Angular).</li>
+</ul>
+<ul>
+<li><a href="https://animation-svelte.vercel.app">Svelte Animations</a> - Consist of Svelte Magic UI, Svelte Aceternity UI, Svelte Luxe Components over 200+ Free Animation Components & 2 Templates </li>
+</ul>
+<ul>
+<li><a href="https://sv-blocks.vercel.app">Svelte Marketing Blocks</a> - A powerful library of 100+ marketing and UI blocks built using Shadcn Svelte, Tailwind CSS v4, and Svelte 5.</li>
+</ul>
+<ul>
+<li><a href="https://quaff.dev">Quaff</a> - An extensive UI framework featuring modern and elegant components following Material Design 3 principles.</li>
+</('ul', 0)>
+<h2>UI Components</h2>
+
+<h3>Table</h3>
+
+<p><em>Tables and data grids.</em></p>
+
+<ul>
+<li><a href="https://github.com/vincjo/datatables">@vincjo/datatables</a> - A toolkit for creating datatable components with Svelte.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dasDaniel/svelte-table">svelte-table</a> - A table implementation that allows sorting and filtering.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ivosdc/svelte-generic-crud-table">svelte-generic-crud-table</a> - Agnostic web-component for object-arrays with CRUD functionality. Sort and resize columns. Multiple tables per page.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ivosdc/svelte-generic-table-pager">svelte-generic-table-pager</a> - Svelte-generic-crud-table with paginator.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/muonw/powertable">powertable</a> - PowerTable is a JavaScript component that turns JSON data into an interactive HTML table. This facilitates manual inspection, sorting, filtering, searching, and editing of the data.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jjagielka/svelte-pivottable">svelte-pivottable</a> - Svelte-based pivot table library with drag'n'drop functionality.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/revolist/svelte-datagrid">svelte-datagrid</a> - Powerful data grid library based on <a href="https://rv-grid.com">revogrid</a> with best features from Excel.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/WJSoftware/wjfe-dataview">@wjfe/dataview</a> - Table for data visualization purposes with advanced features like column pinning, and the only component in the world that does cross-table column position synchronization for master-child scenarios.</li>
+</('ul', 0)>
+<h3>Notification</h3>
+
+<p><em>Toaster / snackbar - Notify the user with a modeless temporary little popup.</em></p>
+
+<ul>
+<li><a href="https://github.com/beyonk-adventures/svelte-notifications">svelte-notifications</a> - Toast notifications component that can be used in any JS application.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kevmodrome/svelte-favicon-badge">svelte-favicon-badge</a> - A custom component that adds a favicon and a badge that you can use to show for example number of unread messages, etc.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/zerodevx/svelte-toast">@zerodevx/svelte-toast</a> - Simple elegant toast notifications.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kbrgl/svelte-french-toast">svelte-french-toast</a> - Buttery smooth toast notifications for Svelte, inspired by React Hot Toast. Lightweight, customizable, and beautiful by default.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/wobsoriano/svelte-sonner">svelte-sonner</a> - An opinionated toast component for Svelte.</li>
+</('ul', 0)>
+<h3>Grid</h3>
+
+<ul>
+<li><a href="https://github.com/andrelmlins/svelte-grid-responsive">svelte-grid-responsive</a> - Bootstrap-inspired responsive grid system.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/himynameisdave/svelte-flex">svelte-flex</a> - A simple and reusable flexbox component for Svelte.</li>
+</('ul', 0)>
+<h3>Icons</h3>
+
+<ul>
+<li><a href="https://github.com/unplugin/unplugin-icons">unplugin-icons</a> - Access thousands of icons as components on-demand universally.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Cweili/svelte-fa">svelte-fa</a> - Tiny FontAwesome 5 and 6 component.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/RobBrazier/svelte-awesome">svelte-awesome</a> - Awesome SVG icon component, built with Font Awesome icons.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/steeze-ui/icons">steeze-ui/icons</a> - Effortless Icon Packs & Components for Svelte, React, Vue and more.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/AnxiousDarkly/svelte-icons">svelte-icons</a> - Icon components.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/krowten/svelte-heroicons">svelte-heroicons</a> - Icons, crafted by the creators of Tailwind CSS.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/aykutkardas/svelte-icomoon">svelte-icomoon</a> - It makes it very simple to use SVG icons in your Svelte projects.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/devShamim/svelte-unicons">svelte-unicons</a> - Unicons svg icons for Svelte based on @iconscout/unicons.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lucide-icons/lucide">lucide-svelte</a> - Implementation of the lucide icon library for svelte applications.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/leshak/svelte-icons-pack">svelte-icons-pack</a> - Based on <a href="https://github.com/react-icons/react-icons">https://github.com/react-icons/react-icons</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pouchlabs/svesome">svesome</a> - A fontawesome v6 icons wrapper for svelte its awesome.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jis3r/icons">moving icons</a> - A collection of beautifully crafted, animated Lucide icons.</li>
+</('ul', 0)>
+<h3>Calendar</h3>
+
+<p><em>Display non-editable events in a calendar.</em></p>
+
+<ul>
+<li><a href="https://github.com/YogliB/svelte-fullcalendar">svelte-fullcalendar</a> - A component wrapper around FullCalendar.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/6eDesign/svelte-calendar">svelte-calendar</a> - A lightweight datepicker with neat animations and a unique UX.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/probablykasper/date-picker-svelte">date-picker-svelte</a> - A date and time picker for Svelte with clean UX.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/schedule-x/schedule-x">@schedule-x/svelte</a> - A material design event calendar library.</li>
+</('ul', 0)>
+<h3>Maps</h3>
+
+<ul>
+<li><a href="https://github.com/beyonk-adventures/svelte-googlemaps">svelte-googlemaps</a> - Google Maps component.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/beyonk-adventures/svelte-mapbox">svelte-mapbox</a> - MapBox map and autocomplete components.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/anoram/leaflet-svelte">leaflet-svelte</a> - Svelte wrapper for Leaflet.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/gavinr-maps/esri-svelte-example">esri-svelte</a> - Web application that shows how to use the ArcGIS API for JavaScript with Svelte.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dimfeld/svelte-maplibre">svelte-maplibre</a> - Svelte bindings for the MapLibre mapping library.</li>
+</('ul', 0)>
+<h3>Charts</h3>
+
+<ul>
+<li><a href="https://github.com/himynameisdave/svelte-frappe-charts">svelte-frappe-charts</a> - Svelte bindings for frappe-charts.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mhkeller/layercake">Layer Cake</a> - A framework for mostly-reusable graphics with svelte</li>
+</ul>
+<ul>
+<li><a href="https://github.com/techniq/layerchart">LayerChart</a> - Large collection of composable Svelte components to build a wide range of visualizations, built upon Layer Cake</li>
+</('ul', 0)>
+<h3>Graphs</h3>
+
+<ul>
+<li><a href="https://svelteflow.dev">svelte-flow</a> - A customizable Svelte component for building node-based editors and interactive diagrams by the creators of React Flow</li>
+</('ul', 0)>
+<h3>Miscellaneous</h3>
+
+<ul>
+<li><a href="https://kitschpatrol.com/svelte-tweakpane-ui">Svelte Tweakpane UI</a> - UI elements from <a href="https://tweakpane.github.io/docs/">Tweakpane</a> wrapped in a collection of idiomatic Svelte components.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kpulkit29/svelte-tree-viewer">svelte-tree-viewer</a> - A lightweight component to render tree views.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/himynameisdave/svelte-copyright">svelte-copyright</a> - A Svelte component to format and display a copyright notice.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/orefalo/svelte-splitpanes">svelte-splitpanes</a> - Full featured resizeable views panels.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/WoolDoughnut310/mathjax-svelte">mathjax-svelte</a> - A Svelte component for MathJax.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/efstajas/svelte-stepper">svelte-stepper</a> - A Svelte component for building animated step flows.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/rofixro/css-3d-progress">css-3d-progress</a> - A 3D Progress Bar component</li>
+</ul>
+<ul>
+<li><a href="https://github.com/palerdot/svelte-speedometer">svelte-speedometer</a> - Svelte component for showing speedometer like gauge using d3.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/embedz/embedz">embedz</a> - Easy, dependency free embeds for Svelte and Vue.</li>
+</ul>
+<ul>
+<li><a href="https://edra.tsuzat.com">Edra</a> - Best Rich Text Editor, made for Svelte Developers with Tiptap.</li>
+</('ul', 0)>
+<h2>Scaffold</h2>
+
+<p><em>Templates / boilerplate / starter kits / stack ensemble / Yeoman generator.</em></p>
+
+<ul>
+<li><a href="https://github.com/vitejs/vite/tree/main/packages/create-vite#readme">create-vite</a> - Generates scaffold for a vite + svelte app.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sveltejs/kit/tree/master/packages/create-svelte#readme">create-svelte</a> - A CLI for creating a new SvelteKit project.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/CriticalMoments/CMSaasStarter">saasstarter</a> - A open source, fast, and free to host Svelte SaaS template.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tretapey/svelte-pwa">svelte-pwa-template</a> - A starter template for PWAs based in the official Template. <em>(pre-v5)</em></li>
+</ul>
+<ul>
+<li><a href="https://github.com/bavragor/vite-svelte-docker-template">vite-svelte-docker-template</a> - Template for Svelte + Docker + Vite + Vitest.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/code-gio/svelte-docs-starter">svelte-docs-starter</a> - A modern documentation template built with Svelte 5, MDSvex, and Tailwind CSS.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/phaserjs/template-svelte">template-svelte</a> - An official quickstart template with Phaser.</li>
+</('ul', 0)>
+<h2>Utilities</h2>
+
+<h3>Animations</h3>
+
+<ul>
+<li><a href="https://auto-animate.formkit.com/">AutoAnimate</a> - A zero-config, drop-in animation utility that adds smooth transitions to your Svelte app.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/henriquehbr/svelte-typewriter">svelte-typewriter</a> - A simple and reusable typewriter effect for your Svelte applications.</li>
+</('ul', 0)>
+<h3>Drag & Drop</h3>
+
+<ul>
+<li><a href="https://github.com/PuruVJ/neodrag">neodrag</a> - One Draggable to rule them all 💍.</li>
+</('ul', 0)>
+<h3>Forms</h3>
+
+<ul>
+<li><a href="https://superforms.rocks">Superforms</a> - SvelteKit library for handling server and client validation, and client-side display of forms.</li>
+</ul>
+<ul>
+<li><a href="https://www.formsnap.dev/">Formsnap</a> - High level Svelte components for forms, built on top of Superforms and Zod.</li>
+</ul>
+<ul>
+<li><a href="https://felte.dev/">felte</a> - Extensible form library, with built-in Yup, Zod, Vest, and Superstruct validation.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ealush/vest">vest</a> - 🦺 Declarative form validation framework inspired by unit testing.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/arabdevelop/svelte-formly">svelte-formly</a> - A good solution to generate and control a dynamic forms using core and custom rules with customize styles. <em>(pre-v5)</em></li>
+</ul>
+<ul>
+<li><a href="https://github.com/pragmatic-engineering/svelte-form-builder-community">svelte-form-builder</a> - A No-code Drag n Drop Form Builder built for Svelte.</li>
+</ul>
+<ul>
+<li><a href="https://svelte-form-builder.vercel.app">Svelte Form Builder</a> - Create forms with Shadcn Svelte, Superforms and ZOD | Valibot Schema within minutes.</li>
+</('ul', 0)>
+<h4>Form Components</h4>
+
+<p><em>Individual form components.</em></p>
+
+<ul>
+<li><a href="https://github.com/HosseinShabani/svelte-checkbox">svelte-checkbox</a> - A checkbox component (cool animation, customizable). <em>(pre-v5)</em></li>
+</ul>
+<ul>
+<li><a href="https://github.com/beyonk-adventures/svelte-toggle">svelte-toggle</a> - Basic toggle component with styling. <em>(pre-v5)</em></li>
+</('ul', 0)>
+<h3>HTTP Requests</h3>
+
+<ul>
+<li><a href="https://github.com/ConsoleTVs/sswr">sswr</a> - Svelte stale while revalidate (SWR) data fetching strategy.</li>
+</ul>
+<ul>
+<li><a href="https://sveltequery.vercel.app/">svelte-query</a> - Fetch, cache and update data in your Svelte applications all without touching any "global state".</li>
+</ul>
+<ul>
+<li><a href="https://tanstack.com/query/latest/docs/svelte/overview">tanstack-svelte-query</a> - Framework agnostic type-safe query and mutation library for Svelte.</li>
+</('ul', 0)>
+<h3>Sound & Video</h3>
+
+<ul>
+<li><a href="https://github.com/Rajaniraiyn/svelte-sound">svelte-sound</a> - Svelte Actions to play interaction sounds on target DOM events.</li>
+</('ul', 0)>
+<h3>WebGL</h3>
+
+<ul>
+<li><a href="https://github.com/vatro/svelthree">svelthree</a> - Component library for declarative construction of reactive and reusable three.js scene graphs.</li>
+</ul>
+<ul>
+<li><a href="https://threlte.xyz">threlte</a> - Threlte is a renderer and component library for using Three.js in a declarative and state-driven way in Svelte apps.</li>
+</('ul', 0)>
+<h3>PWA</h3>
+
+<ul>
+<li><a href="https://github.com/hedgehog125/SvelteKit-Adapter-Versioned-Worker">SvelteKit-Adapter-Versioned-Worker</a> - An easy-to-use service worker build plugin where you don't need to worry about cache durations.</li>
+</('ul', 0)>
+<h3>Portal</h3>
+
+<ul>
+<li><a href="https://github.com/romkor/svelte-portal">svelte-portal</a> - Component for rendering outside the DOM of parent component.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/nasso/svelte-teleport">svelte-teleport</a> - A component to teleport elements across the DOM.</li>
+</('ul', 0)>
+<h3>Fonts</h3>
+
+<ul>
+<li><a href="https://github.com/svelte-web-fonts/google">svelte-web-fonts/google</a> - Tiny component for easily loading Fonts via the Google Fonts API including autocompletion.</li>
+</('ul', 0)>
+<h3>Internationalization</h3>
+
+<ul>
+<li><a href="https://github.com/nubolab-ffwd/svelte-fluent">svelte-fluent</a> - Components for easy integration of <a href="https://projectfluent.org/">Fluent</a> localization.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kaisermann/svelte-i18n">svelte-i18n</a> - Internationalization library for Svelte.</li>
+</ul>
+<ul>
+<li><a href="https://zhangfisher.github.io/voerka-i18n/">VoerkaI18n</a> - Internationalization solution for <code>Javascript/Typescript/Vue/React/Solidjs/SvelteJs/ReactNative</code></li>
+</ul>
+<ul>
+<li><a href="https://github.com/jarda-svoboda/sveltekit-i18n">sveltekit-i18n</a> - For integrating <a href="https://www.npmjs.com/package/i18n">i18n</a> style localization in SvelteKit.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tolgee/tolgee-js/tree/main/packages/svelte">@tolgee/svelte</a> - Web-based localization tool enabling users to translate directly in the Svelte app they develop.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/i18n-pro/svelte">@i18n-pro/svelte</a> - Lightweight, simple, flexible, automatic translation internationalization tool for Svelte.</li>
+</ul>
+<ul>
+<li><a href="https://inlang.com/m/dxnzrydw/library-inlang-paraglideJsAdapterSvelteKit">ParaglideJS</a> - Tiny, typesafe i18n library with translated links out of the box.</li>
+</('ul', 0)>
+<h2>Routers</h2>
+
+<p><em>For Single Page Applications (SPAs) and more.</em></p>
+
+<ul>
+<li><a href="https://github.com/jorgegorka/svelte-router">svelte-router-spa</a> - Router adds routing to your Single Page Applications (SPA). Includes localisation, guards and nested layouts.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/EmilTholin/svelte-routing">svelte-routing</a> - A declarative Svelte routing library with SSR support.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/AlexxNB/tinro">tinro</a> - A tiny, dependency free and highly declarative router.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ItalyPaleAle/svelte-spa-router">svelte-spa-router</a> - Optimized for Single Page Applications (SPA) with hash based routing and support for parameters.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/arthurgermano/svelte-client-router">svelte-client-router</a> - Svelte Client Router is everything you need and think when routing SPA's.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/DanielSharkov/svelte-router">@danielsharkov/svelte-router</a> - A simple & easy to use SPA router, developed with page transitions in mind.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/shaunlee/svelterouter">@shaun/svelterouter</a> - Another vue-router inspired Svelte router.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/howesteve/elegua">Elegua</a> - Small (< 180LoC), fast, easy, full featured SPA router</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mateothegreat/svelte5-router">svelte5-router</a> - First Svelte 5 SPA router with nesting, hooks, and more.. Use components, snippets, or both!</li>
+</ul>
+<ul>
+<li><a href="https://github.com/WJSoftware/wjfe-n-savant">@wjfe/n-savant</a> - Fast, reactive router with always-on path and hash routing, and the router that invented multi-hash routing.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/colinlienard/sv-router">sv-router</a> - Type-safe SPA router with file-based or code-based routing.</li>
+</('ul', 0)>
+<h2>Frameworks</h2>
+
+<ul>
+<li><a href="https://svelte.dev/docs/kit/introduction">SvelteKit</a> - The fastest way to build Svelte apps.</li>
+</ul>
+<ul>
+<li><a href="https://routify.dev/">Routify</a> - Routes for Svelte, automated by your file structure.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/elderjs/elderjs">Elder.js</a> - Opinionated static site generator and web framework for Svelte built with SEO in mind. <em>(pre-v5)</em></li>
+</ul>
+<ul>
+<li><a href="https://www.junglejs.org/">JungleJS</a> - The Jamstack framework for Svelte with GraphQL. <em>(pre-v5)</em></li>
+</ul>
+<ul>
+<li><a href="https://github.com/mblouka/svelte-document">svelte-document</a> - Create documents (PDFs), resumes, or presentations entirely in Svelte.</li>
+</('ul', 0)>
+<h2>Dev Tools</h2>
+
+<h3>Lint</h3>
+
+<p><em>Lint and format your code.</em></p>
+
+<ul>
+<li><a href="https://github.com/sveltejs/prettier-plugin-svelte">prettier-plugin-svelte</a> - Format your components using prettier.</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/svelte-check">svelte-check</a> - Check your code.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sveltejs/eslint-plugin-svelte">eslint-plugin-svelte</a> - An ESLint plugin for Svelte using AST.</li>
+</('ul', 0)>
+<h3>Test</h3>
+
+<ul>
+<li><a href="https://github.com/mihar-22/svelte-jester">svelte-jester</a> - A Jest transformer to compile your components before importing them into tests.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/testing-library/svelte-testing-library">@testing-library/svelte</a> - Simple and complete Svelte DOM testing utilities that encourage good testing practices.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/rspieker/jest-transform-svelte">jest-transform-svelte</a> - Jest Transformer for Svelte components.</li>
+</('ul', 0)>
+<h3>Editors</h3>
+
+<p><em>Text editor plugins.</em></p>
+
+<h4>Visual Studio Code</h4>
+
+<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode">Svelte for VS Code</a> - Provides syntax highlighting and rich intellisense for your components.</li>
+</ul>
+<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=fivethree.vscode-svelte-snippets">Svelte 3 Snippets</a> - Svelte 3 Snippets for VS Code.</li>
+</('ul', 0)>
+<h4>Sublime Text</h4>
+
+<ul>
+<li><a href="https://packagecontrol.io/packages/Svelte">Svelte</a> - Syntax highlighting and support for Sublime Text.</li>
+</('ul', 0)>
+<h4>Vim</h4>
+
+<ul>
+<li><a href="https://github.com/leafOfTree/vim-svelte-plugin">vim-svelte-plugin</a> - Syntax highlighting and support for Vim.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/coc-extensions/coc-svelte">coc-svelte</a> - Syntax highlighting and support for (Neo)Vim.</li>
+</('ul', 0)>
+<h4>JetBrains</h4>
+
+<ul>
+<li><a href="https://plugins.jetbrains.com/plugin/12375-svelte">Svelte</a> - Syntax highlighting and support for JetBrains.</li>
+</ul>
+</body>
+</html>

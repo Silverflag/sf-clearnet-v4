@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend GIS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Frontend GIS</h1>
+
+<p><strong>Repository:</strong> https://github.com/joewdavies/awesome-frontend-gis#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<!--lint disable double-link awesome-heading -->
+<div align="center">
+<h2>Awesome Frontend GIS   <a href="https://github.com/sindresorhus/awesome">
+    <img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" alt="Awesome" href="https://github.com/sindresorhus/awesome">
+  </a></h2>
+
+<p>Geographic Information Systems (GIS) for web browsers. <br></p>
+<p>For managing, analyzing, editing, and visualizing geographic data.</p>
+
+<div>
+    <a href="https://github.com/eurostat/gridviz" target="_blank">
+        <img src='https://user-images.githubusercontent.com/25485293/191950255-cbd83c6a-4880-4c0a-a665-b59a21467702.PNG'>
+    </a>
+</div>
+
+<p><em>A compilation of geospatial-related web frameworks, tools, demos, applications, data sources and more.</em></p>
+
+</div>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#-javascript-libraries">👨‍💻 <strong>JavaScript Libraries</strong></a></li>
+<ul>
+<li><a href="#mapping">Mapping</a> </li>
+</ul>
+<ul>
+<li><a href="#data-processing">Data Processing</a></li>
+</ul>
+<ul>
+<li><a href="#lidar">LiDAR</a></li>
+</ul>
+<ul>
+<li><a href="#remote-sensing">Remote Sensing</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#-data-sources">💾 <strong>Data sources</strong></a></li>
+<ul>
+<li><a href="#downloads">Downloads</a></li>
+</ul>
+<ul>
+<li><a href="#web-apis">Web APIs</a></li>
+</ul>
+<ul>
+<li><a href="#collections">Collections</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#-notebooks">📒 <strong>Notebooks</strong></a></li>
+<ul>
+<li><a href="#beginner">Beginner</a></li>
+</ul>
+<ul>
+<li><a href="#intermediate">Intermediate</a></li>
+</ul>
+<ul>
+<li><a href="#advanced">Advanced</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#world<em>map-web-maps">:world</em>map: Web maps</a></li>
+</ul>
+<ul>
+<li><a href="#-web-apps">🌐 <strong>Web apps</strong></a></li>
+</ul>
+<ul>
+<li><a href="#-colour-advice">🎨 <strong>Colour advice</strong></a></li>
+</ul>
+<ul>
+<li><a href="#-icons">📍 <strong>Icons</strong></a></li>
+</ul>
+<ul>
+<li><a href="#-videos">📺 <strong>Videos</strong></a></li>
+</ul>
+<ul>
+<li><a href="#-further-reading">📚 <strong>Further reading</strong></a></li>
+</('ul', 0)>
+<h2>👨‍💻 JavaScript Libraries</h2>
+
+<h3>Mapping</h3>
+<p>Libraries for creating web maps:</p>
+
+<ul>
+<li><a href="https://github.com/antvis/L7">antvis L7</a> - Large-scale WebGL-powered Geospatial Data Visualization. !<a href="https://img.shields.io/github/stars/antvis/L7?style=social">GitHub stars</a></li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/javascript/latest/">ArcGIS Maps SDK for JavaScript</a> - Modern JavaScript API and web component library for building interactive 2D and 3D web apps for the browser.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Esri/arcgis-rest-js">ArcGIS REST JS</a> - Compact, modular JavaScript wrappers for the ArcGIS REST API that run in Node.js and modern browsers. !<a href="https://img.shields.io/github/stars/Esri/arcgis-rest-js?style=social">GitHub stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/neocarto/bertin">Bertin.js</a> - A JavaScript library for visualizing geospatial data and making thematic maps for the web. !<a href="https://img.shields.io/github/stars/neocarto/bertin?style=social">GitHub stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/CesiumGS/cesium">Cesium.js</a> - An open-source JavaScript library for world-class 3D mapping of geospatial data. !<a href="https://img.shields.io/github/stars/CesiumGS/cesium?style=social">GitHub stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/d3/d3-geo">d3-geo</a> - A library for creating maps based on D3.js. !<a href="https://img.shields.io/github/stars/d3/d3-geo?style=social">GitHub stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/d3/d3-geo-projection">d3-geo-projection</a> - Extended geographic projections. !<a href="https://img.shields.io/github/stars/d3/d3-geo-projection?style=social">GitHub stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/Fil/d3-geo-voronoi">d3-geo-voronoi</a> - Voronoi diagrams and Delaunay triangulation for the sphere. !<a href="https://img.shields.io/github/stars/Fil/d3-geo-voronoi?style=social">GitHub stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/markmarkoh/datamaps">datamaps</a> - Customizable map visualizations in one file. !<a href="https://img.shields.io/github/stars/markmarkoh/datamaps?style=social">GitHub stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/visgl/deck.gl">Deck.GL</a> - WebGL2 powered geospatial visualization layers. !<a href="https://img.shields.io/github/stars/visgl/deck.gl?style=social">GitHub stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/eurostat/eurostat-map.js">Eurostat-map</a> - Create and customise web maps showing Eurostat data using D3.js. !<a href="https://img.shields.io/github/stars/eurostat/eurostat-map.js?style=social">GitHub stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/vasturiano/globe.gl">globe.gl</a> - This library is a convenience wrapper around the three-globe plugin, using ThreeJS/WebGL for 3D rendering. !<a href="https://img.shields.io/github/stars/vasturiano/globe.gl?style=social">GitHub stars</a></li>
+</ul>
+<ul>
+<li><a href="https://developers.google.com/maps/documentation/javascript">Google Maps</a> - Google Maps API for JavaScript.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/eurostat/gridviz">gridviz</a> - A package for visualizing gridded data. !<a href="https://img.shields.io/github/stars/eurostat/gridviz?style=social">GitHub stars</a></li>
+</ul>
+<ul>
+<li><a href="https://developer.here.com/develop/javascript-api">HERE maps API</a> - Build web applications with feature-rich and customizable HERE maps.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/iTowns/itowns">iTowns</a> - A Three.js-based framework written in JavaScript/WebGL for visualizing 3D geospatial data. !<a href="https://img.shields.io/github/stars/iTowns/itowns?style=social">GitHub stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/Leaflet/Leaflet">Leaflet</a> - The leading open-source JavaScript library for mobile-friendly interactive maps. !<a href="https://img.shields.io/github/stars/Leaflet/Leaflet?style=social">GitHub stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/windycom/API">Map Forecast API</a> - Simple-to-use library based on Leaflet 1.4.x. It allows you to show wind maps. !<a href="https://img.shields.io/github/stars/windycom/API?style=social">GitHub stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/mapbox/mapbox-gl-js">Mapbox GL JS</a> - JavaScript library that uses WebGL to render interactive maps from vector tiles. !<a href="https://img.shields.io/github/stars/mapbox/mapbox-gl-js?style=social">GitHub stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/maplibre/maplibre-gl-js">maplibre</a> - It originated as an open-source fork of mapbox-gl-js, before their switch to a non-OSS license in December 2020. !<a href="https://img.shields.io/github/stars/maplibre/maplibre-gl-js?style=social">GitHub stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/maptalks/maptalks.js">MapTalks.js</a> - An open-source JavaScript library for integrated 2D/3D maps. !<a href="https://img.shields.io/github/stars/maptalks/maptalks.js?style=social">GitHub stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/openlayers/openlayers">OpenLayers</a> - A high-performance, feature-packed library for creating interactive maps on the web. !<a href="https://img.shields.io/github/stars/openlayers/openlayers?style=social">GitHub stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/zcreativelabs/react-simple-maps">react-simple-maps</a> - An SVG mapping component library for React, built on top of d3-geo. !<a href="https://img.shields.io/github/stars/zcreativelabs/react-simple-maps?style=social">GitHub stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/tangrams/tangram">Tangram</a> - WebGL map rendering engine for creative cartography. !<a href="https://img.shields.io/github/stars/tangrams/tangram?style=social">GitHub stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/TerriaJS/terriajs">TerriaJS</a> - TerriaJS is a library for building rich, web-based geospatial data explorers. !<a href="https://img.shields.io/github/stars/TerriaJS/terriajs?style=social">GitHub stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/wrld3d/wrld.js/">Wrld.js</a> - Animated 3D city maps based on Leaflet. !<a href="https://img.shields.io/github/stars/wrld3d/wrld.js?style=social">GitHub stars</a></li>
+</('ul', 0)>
+<h3>Data Processing</h3>
+<p>Libraries that help you analyse and process geospatial data:</p>
+<ul>
+<li><a href="https://github.com/springmeyer/arc.js">Arc.js</a> - Calculate great circles routes as lines in GeoJSON or WKT format. !<a href="https://img.shields.io/github/stars/springmeyer/arc.js?style=social">GitHub stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/tmcw/awesome-geojson">awesome-GeoJSON</a> - Catalogue of GeoJSON tools. !<a href="https://img.shields.io/github/stars/tmcw/awesome-geojson?style=social">GitHub stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/mathigon/euclid.js">Euclid.ts</a> - 2D Euclidean geometry classes, utilities, and drawing tools. !<a href="https://img.shields.io/github/stars/mathigon/euclid.js?style=social">GitHub stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/mourner/flatbush">flatbush</a> - A really fast static spatial index for 2D points and rectangles in JavaScript. !<a href="https://img.shields.io/github/stars/mourner/flatbush?style=social">GitHub stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/flatgeobuf/flatgeobuf">FlatGeoBuf</a> - A performant binary encoding for geographic data based on flatbuffers. !<a href="https://img.shields.io/github/stars/flatgeobuf/flatgeobuf?style=social">GitHub stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/alexbol99/flatten-js">flatten-js</a> - For manipulating geometrical shapes, finding intersections, checking inclusion, calculating distance, transformations, and more. !<a href="https://img.shields.io/github/stars/alexbol99/flatten-js?style=social">GitHub stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/urbica/galton">Galton</a> - Lightweight Node.js isochrone server. !<a href="https://img.shields.io/github/stars/urbica/galton?style=social">GitHub stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/bugra9/gdal3.js">gdal3.js</a> - Convert raster and vector geospatial data to various formats. !<a href="https://img.shields.io/github/stars/bugra9/gdal3.js?style=social">GitHub stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/GeoTIFF/geoblaze">geoblaze</a> - A blazing fast JavaScript raster processing engine. !<a href="https://img.shields.io/github/stars/GeoTIFF/geoblaze?style=social">GitHub stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/mapbox/geobuf">geobuf</a> - Geobuf is a compact binary encoding for geographic data. !<a href="https://img.shields.io/github/stars/mapbox/geobuf?style=social">GitHub stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/geotiffjs/geotiff.js">GeoTiff.js</a> - Parse TIFF files for visualization or analysis. !<a href="https://img.shields.io/github/stars/geotiffjs/geotiff.js?style=social">GitHub stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/manuelbieh/geolib">geolib</a> - Library to provide basic geospatial operations. !<a href="https://img.shields.io/github/stars/manuelbieh/geolib?style=social">GitHub stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/ngageoint/geopackage-js">geopackage-js</a> - The GeoPackage JavaScript library provides the ability to read GeoPackage files. !<a href="https://img.shields.io/github/stars/ngageoint/geopackage-js?style=social">GitHub stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/opengeospatial/geoparquet">geoparquet</a> - Encoding geospatial data in Apache Parquet. !<a href="https://img.shields.io/github/stars/opengeospatial/geoparquet?style=social">GitHub stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/neocarto/geotoolbox">geotoolbox</a> - Provides several GIS operations for use with geojson properties. !<a href="https://img.shields.io/github/stars/neocarto/geotoolbox?style=social">GitHub stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/mapbox/geojson-merge">geojson-merge</a> - Merge multiple GeoJSON files into one FeatureCollection. !<a href="https://img.shields.io/github/stars/mapbox/geojson-merge?style=social">GitHub stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/mapbox/geojson-vt">geojson-vt</a> - A highly efficient JavaScript library for slicing GeoJSON data. !<a href="https://img.shields.io/github/stars/mapbox/geojson-vt?style=social">GitHub stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/HarryStevens/geometric">Geometric.js</a> - A JavaScript library for doing geometry. !<a href="https://img.shields.io/github/stars/HarryStevens/geometric?style=social">GitHub stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/bjornharrtell/jsts">JSTS</a> - JavaScript Topology Suite. !<a href="https://img.shields.io/github/stars/bjornharrtell/jsts?style=social">GitHub stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/koopjs/koop">koop</a> - A JavaScript toolkit for connecting incompatible spatial APIs. !<a href="https://img.shields.io/github/stars/koopjs/koop?style=social">GitHub stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/uber-web/math.gl">math.gl</a> - JavaScript math library focused on Geospatial and 3D use cases. !<a href="https://img.shields.io/github/stars/uber-web/math.gl?style=social">GitHub stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/proj4js/proj4js">Proj4js</a> - Transform coordinates from one coordinate system to another. !<a href="https://img.shields.io/github/stars/proj4js/proj4js?style=social">GitHub stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/mourner/rbush">rbush</a> - RBush is a high-performance JavaScript library for 2D spatial indexing. !<a href="https://img.shields.io/github/stars/mourner/rbush?style=social">GitHub stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/jvail/spl.js">spl.js</a> - Makes it possible to use SpatiaLite functionality in JavaScript. !<a href="https://img.shields.io/github/stars/jvail/spl.js?style=social">GitHub stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/riatelab/statsbreaks">statsbreaks</a> - Split a quantitative dataset into classes for thematic mapping. !<a href="https://img.shields.io/github/stars/riatelab/statsbreaks?style=social">GitHub stars</a></li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/supercluster">supercluster</a> - A very fast JavaScript library for geospatial point clustering. !<a href="https://img.shields.io/github/stars/mapbox/supercluster?style=social">GitHub stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/Turfjs/turf">Turf.js</a> - A JavaScript library for spatial analysis. !<a href="https://img.shields.io/github/stars/Turfjs/turf?style=social">GitHub stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/topojson/topojson">topoJSON</a> - Convert GeoJSON to TopoJSON for use in D3 maps. !<a href="https://img.shields.io/github/stars/topojson/topojson?style=social">GitHub stars</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/arthur-e/Wicket">Wicket</a> - A modest library for moving between Well-Known Text (WKT) and various framework geometries. !<a href="https://img.shields.io/github/stars/arthur-e/Wicket?style=social">GitHub stars</a></li>
+</('ul', 0)>
+<h3>LiDAR</h3>
+<p>Tools for visualizing point clouds with web browsers:</p>
+
+<ul>
+<li><a href="https://github.com/verma/plasio">Plasio</a> - Drag-n-drop In-browser LAS/LAZ point cloud viewer.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/potree/potree">Potree</a> - WebGL point cloud viewer for large datasets.</li>
+</ul>
+<ul>
+<li><a href="https://potree.org/potree/examples/cesium_retz.html">Potree & Cesium.js</a> - Rezt, Austria LIDAR viewer.</li>
+</ul>
+<ul>
+<li><a href="https://threejs.org/examples/#webgl<em>loader</em>pcd">Three.js</a> - Point cloud data loader.</li>
+</('ul', 0)>
+<h3>Remote Sensing</h3>
+
+<p>Resources for frontend earth observation and remote sensing:</p>
+
+<ul>
+<li><a href="https://github.com/nasa-gibs/worldview">EOSDIS Worldview</a> - Interactive interface for browsing global, full-resolution satellite imagery.</li>
+</ul>
+<ul>
+<li><a href="https://developers.google.com/earth-engine/tutorials/tutorial<em>api</em>01">Google Earth Engine</a> - Geospatial processing service.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sentinel-hub/custom-scripts">Sentinel Hub custom scripts</a> - A repository of custom scripts to be used with Sentinel Hub.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sentinel-hub/sentinelhub-js/">sentinelhub-js</a> - Download and process satellite imagery using Sentinel Hub services.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/awesome-spectral-indices">Spectral</a> - Awesome Spectral Indices for the Google Earth Engine JavaScript API.</li>
+</('ul', 0)>
+<h2>💾 Data sources</h2>
+<p>A collection of geospatial open data sources:</p>
+
+<h3>Downloads</h3>
+<p>Data available for download:</p>
+
+<ul>
+<li><a href="https://hub.arcgis.com/">ArcGIS Hub</a> - Over 380,000 open datasets.</li>
+</ul>
+<ul>
+<li><a href="https://ec.europa.eu/eurostat/web/gisco/geodata/digital-elevation-model/copernicus#Elevation">Copernicus global DEM</a> - Global elevation tiles.</li>
+</ul>
+<ul>
+<li><a href="https://www.copernicus.eu/en/access-data/conventional-data-access-hubs">Copernicus open access hub</a> - Copernicus satellite imagery download.</li>
+</ul>
+<ul>
+<li><a href="https://www.ngdc.noaa.gov/mgg">ETOPO1</a> - 1 arc-minute global relief model of Earth's surface.</li>
+</ul>
+<ul>
+<li><a href="https://ec.europa.eu/eurostat/web/gisco/geodata/grids">European population grids - GISCO</a> - Population figures in grid cells.</li>
+</ul>
+<ul>
+<li><a href="https://ec.europa.eu/eurostat/web/gisco/geodata/administrative-units/postal-codes">European Postcodes Point Data</a> - Location of postal codes across Europe.</li>
+</ul>
+<ul>
+<li><a href="https://www.geoboundaries.org/">Geoboundaries</a> - The world's largest open, free political boundaries database.</li>
+</ul>
+<ul>
+<li><a href="https://www.gbif.org/">Global Biodiversity Information Facility (GBIF)</a> - Open access to biodiversity data.</li>
+</ul>
+<ul>
+<li><a href="https://kerdoc.cica.es/">Global Climate Monitor</a> - Global open climate data.</li>
+</ul>
+<ul>
+<li><a href="https://datasets.wri.org/dataset/globalpowerplantdatabase">Global power plant database</a> - Open source database of power plants.</li>
+</ul>
+<ul>
+<li><a href="https://galileo.gisdata.io/">Galileo</a> - Geospatial data discovery and management platform.</li>
+</ul>
+<ul>
+<li><a href="https://ec.europa.eu/eurostat/web/gisco/geodata/basic-services#Healthcare">Healthcare Services in Europe</a> - Locations of healthcare services in Europe.</li>
+</ul>
+<ul>
+<li><a href="https://www.hydrosheds.org/">HydroSHEDS</a> - Consistent hydrographic data for global applications.</li>
+</ul>
+<ul>
+<li><a href="https://search.earthdata.nasa.gov/search">NASA Earth Data</a> - Search, discover, visualize, refine, and access NASA Earth Observation data in your browser with Earthdata Search.</li>
+</ul>
+<ul>
+<li><a href="https://neo.gsfc.nasa.gov/">NASA Earth Observations</a> - Browse and download satellite data imagery.</li>
+</ul>
+<ul>
+<li><a href="https://www.naturalearthdata.com/">Natural Earth</a> - Free vector and raster map data.</li>
+</ul>
+<ul>
+<li><a href="https://openaerialmap.org/">OpenAerialMap</a> - Open service for accessing licensed imagery.</li>
+</ul>
+<ul>
+<li><a href="https://openmaptiles.org/">OpenMapTiles</a> - Free OpenStreetMap Vector Tiles.</li>
+</ul>
+<ul>
+<li><a href="https://www.geofabrik.de/data/download.html">OpenStreetMap</a> - Free, world-wide geographic data set.</li>
+</ul>
+<ul>
+<li><a href="https://opentopography.org/">Open Topography</a> - High-resolution topography data and tools.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/teamookla/ookla-open-data">Ookla internet speed data</a> - Global network performance metrics.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sentinel-hub/custom-scripts">Sentinel Hub custom scripts</a> - Repository of custom scripts for Sentinel Hub.</li>
+</ul>
+<ul>
+<li><a href="https://earthexplorer.usgs.gov/">USGS Earth Explorer</a> - Query and order satellite images and more.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/topojson/world-atlas">World Atlas TopoJSON</a> - Natural Earth's vector data as TopoJSON.</li>
+</ul>
+<ul>
+<li><a href="https://data.worldbank.org/">World Bank</a> - Free access to global development data.</li>
+</ul>
+<ul>
+<li><a href="https://www.worldpop.org/">WorldPop</a> - Open access spatial demographic datasets.</li>
+</('ul', 0)>
+<h3>Web APIs</h3>
+<p>Restful APIs for consuming geospatial data on the fly:</p>
+
+<ul>
+<li><a href="https://gisco-services.ec.europa.eu/addressapi/docs/">Address API</a> - Pan-European address data with geocoding and reverse-geocoding.</li>
+</ul>
+<ul>
+<li><a href="https://api.gouv.fr/les-api/api-geo">API Geo</a> - Official French geographical data API.</li>
+</ul>
+<ul>
+<li><a href="https://developers.arcgis.com/rest/location-based-services/">ArcGIS location services</a> - Basemaps, Geocoding, Places, routing, and GeoEnrichment.</li>
+</ul>
+<ul>
+<li><a href="https://www.getthedata.com/bng2latlong">bng2latlong</a> - Converts British National Grid to latitude and longitude.</li>
+</ul>
+<ul>
+<li><a href="https://docs.breezometer.com/api-documentation/introduction/">breezometer</a> - Air Quality, Weather, Pollen, and Environmental data.</li>
+</ul>
+<ul>
+<li><a href="https://countrystatecity.in/">Country State City API</a> - Database of city, state, and country data.</li>
+</ul>
+<ul>
+<li><a href="https://apidocs.geoapify.com/">Geoapify</a> - Geospatial services such as maps, geocoding, and routing.</li>
+</ul>
+<ul>
+<li><a href="http://www.geonames.org/export/web-services.html">geonames</a> - Supports placename lookup and reverse geocoding.</li>
+</ul>
+<ul>
+<li><a href="https://geocode.xyz/">Geocode.xyz</a> - Reverse geocoding, forward geocoding, and geoparsing API.</li>
+</ul>
+<ul>
+<li><a href="https://gisco-services.ec.europa.eu/distribution/v2/">GISCO data distribution API</a> - European Commission data source for administrative regions and boundaries.</li>
+</ul>
+<ul>
+<li><a href="https://www.graphhopper.com/route-optimization/">GraphHopper Route Optimization API</a> - Solves various vehicle routing problems.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/movebank/movebank-api-doc">movebank-api</a> - Platform for animal tracking data.</li>
+</ul>
+<ul>
+<li><a href="https://openaq.org/">OpenAQ</a> - Largest open-source air quality data platform.</li>
+</ul>
+<ul>
+<li><a href="https://openchargemap.org">Open Charge Map API</a> - Public registry of electric vehicle charging locations.</li>
+</ul>
+<ul>
+<li><a href="https://opencagedata.com/api">OpenCage</a> - Forward and reverse geocoding API using open data.</li>
+</ul>
+<ul>
+<li><a href="https://open-meteo.com/">Open-Meteo</a> - Global weather forecast API.</li>
+</ul>
+<ul>
+<li><a href="http://open-notify.org/Open-Notify-API/">Open Notify</a> - ISS location and number of people in space.</li>
+</ul>
+<ul>
+<li><a href="https://www.getthedata.com/open-postcode-geo-api">Open Postcode Geo API</a> - British postcodes with geospatial data.</li>
+</ul>
+<ul>
+<li><a href="https://openskynetwork.github.io/opensky-api/rest.html">OpenSky API</a> - Retrieve live airspace information.</li>
+</ul>
+<ul>
+<li><a href="https://openrouteservice.org/dev/#/api-docs">openrouteservice</a> - Directions, isochrones, and geocoding services.</li>
+</ul>
+<ul>
+<li><a href="https://wiki.openstreetmap.org/wiki/Overpass_API">OpenStreetMap</a> - Retrieve OpenStreetMap data via Overpass API.</li>
+</ul>
+<ul>
+<li><a href="https://www.opentopodata.org/">opentopodata API</a> - Open Topography Data API.</li>
+</ul>
+<ul>
+<li><a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a> - Retrieve OpenStreetMap data.</li>
+</ul>
+<ul>
+<li><a href="https://www.rainviewer.com/api.html">RainViewer</a> - Free weather radar and satellite data API.</li>
+</ul>
+<ul>
+<li><a href="https://restcountries.com/">REST countries</a> - Get country information via a RESTful API.</li>
+</ul>
+<ul>
+<li><a href="https://sunrise-sunset.org">Sunrise and sunset</a> - Provides sunset and sunrise times for locations.</li>
+</ul>
+<ul>
+<li><a href="https://developer.tomtom.com/api-explorer-index/documentation/product-information/introduction">TomTom</a> - Geocoding, routing, traffic, and more.</li>
+</ul>
+<ul>
+<li><a href="https://earthquake.usgs.gov/fdsnws/event/1/">USGS earthquake data</a> - Search earthquake data by various parameters.</li>
+</ul>
+<ul>
+<li><a href="https://developer.what3words.com/public-api">what3words</a> - Converts 3-word addresses to coordinates.</li>
+</('ul', 0)>
+<h3>Collections</h3>
+<p>Compilations and repositories of open geospatial datasets:</p>
+<ul>
+<li><a href="https://github.com/awesomedata/awesome-public-datasets">awesome-public-datasets</a> - An awesome repository full of open datasets from an abundance of different categories.</li>
+</ul>
+<ul>
+<li><a href="https://freegisdata.rtwilson.com/">Free GIS data</a> - Links to over 500 sites providing freely available geographic datasets.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/public-apis-dev/public-apis">Public APIs</a> - A collective list of free APIs for use in software and web development.</li>
+</ul>
+<ul>
+<li><a href="https://www.wri.org/data">WRI</a> - World Resources Institute.</li>
+</('ul', 0)>
+<h2>📒 Notebooks</h2>
+<p>Some JavaScript notebooks to help you code:</p>
+
+<h3>Beginner</h3>
+<ul>
+<li><a href="https://observablehq.com/@observablehq/hello-leaflet">Hello, Leaflet</a> - ObservableHQ.</li>
+</ul>
+<ul>
+<li><a href="https://observablehq.com/@neocartocnrs/hello-bertin-js">Hello, Bertin.js</a> - Nicolas Lambert.</li>
+</ul>
+<ul>
+<li><a href="https://observablehq.com/@observablehq/hello-mapbox-gl">Hello, Mapbox GL</a> - Mike Bostock.</li>
+</ul>
+<ul>
+<li><a href="https://observablehq.com/@joewdavies/eurostat-map-js">Hello, eurostat-map.js</a> - Joe Davies.</li>
+</ul>
+<ul>
+<li><a href="https://observablehq.com/@neocartocnrs/hello-gridviz">Hello, gridviz</a> - Nicolas Lambert.</li>
+</('ul', 0)>
+<h3>Intermediate</h3>
+<ul>
+<li><a href="https://observablehq.com/@d3/world-tour">World Tour</a> - D3.</li>
+</ul>
+<ul>
+<li><a href="https://observablehq.com/@d3/choropleth">Choropleth</a> - D3.</li>
+</ul>
+<ul>
+<li><a href="https://observablehq.com/@jgaffuri/nice-scale-bar">How to make a nice scalebar</a> - Julien Gaffuri.</li>
+</ul>
+<ul>
+<li><a href="https://observablehq.com/@chriszrc/gischat-twitter-users-with-mapboxgl-globe-projection">#GISCHAT Twitter Users with MapBoxGL - Globe Projection</a> - Chris Marx.</li>
+</ul>
+<ul>
+<li><a href="https://observablehq.com/@larsvers/hexgrid-maps-with-d3-hexgrid">Hexgrid maps with d3-hexgrid</a> - Larsvers.</li>
+</ul>
+<ul>
+<li><a href="https://observablehq.com/@stephanietuerk/bivariate-choropleth-with-continuous-color-scales">Bivariate Choropleth with Continuous Color Scales</a> - Stephanie Tuerk.</li>
+</ul>
+<ul>
+<li><a href="https://observablehq.com/@joewdavies/visualizing-eurostat-grid-data-using-three-js-d3">Visualizing Eurostat grid data using Three.js & D3</a> - Joe Davies.</li>
+</('ul', 0)>
+<h3>Advanced</h3>
+
+<ul>
+<li><a href="https://observablehq.com/@karimdouieb/try-to-impeach-this-challenge-accepted">Try to impeach this? Challenge accepted!</a> - Karim Douieb.</li>
+</ul>
+<ul>
+<li><a href="https://observablehq.com/@neocartocnrs/bars-pubs-in-paris">Bars and pubs in Paris</a> - Nicolas Lambert.</li>
+</ul>
+<ul>
+<li><a href="https://observablehq.com/@karimdouieb/brussels-streets-gender-inequality">Brussels Street Gender Inequality</a> - Karim Douieb.</li>
+</ul>
+<ul>
+<li><a href="https://observablehq.com/@bmschmidt/animating-voting-maps-with-regl">Animating voting maps with regl</a> - Benjamin Schmidt.</li>
+</ul>
+<ul>
+<li><a href="https://observablehq.com/@jgaffuri/election-map-dorling-striped-circles">Election maps as dorling striped circles</a> - Julien Gaffuri.</li>
+</ul>
+<ul>
+<li><a href="https://observablehq.com/@kylebarron/geoparquet-on-the-web">GeoParquet on the web</a> - Kyle Barron.</li>
+</ul>
+<ul>
+<li><a href="https://observablehq.com/@dkaoster/interactive-regl-wind-demo">Interactive Regl wind demo</a> - Daniel Kao.</li>
+</ul>
+<ul>
+<li><a href="https://observablehq.com/@adrianblanco/dorling-cartogram-of-the-spanish-presidential-election">Dorling cartogram of the Spanish Presidential election</a> - Adrián Blanco.</li>
+</ul>
+<ul>
+<li><a href="https://observablehq.com/@joewdavies/visualizing-earthquakes-with-three-js">Visualizing earthquakes with Three.js</a> - Joe Davies.</li>
+</ul>
+<ul>
+<li><a href="https://observablehq.com/@kylebarron/geoarrow-and-geoparquet-in-deck-gl">GeoArrow and GeoParquet in deck.gl</a> - Kyle Barron.</li>
+</('ul', 0)>
+<h2>:world_map: Web maps</h2>
+<p>A compilation of interesting web maps:</p>
+
+<ul>
+<li><a href="https://tjukanovt.github.io/notable-people">Map of notable people</a> - Topi Tjukanov.</li>
+</ul>
+<ul>
+<li><a href="https://www.submarinecablemap.com/">Submarine cable map</a> - TeleGeography.</li>
+</ul>
+<ul>
+<li><a href="https://radio.garden/">Radio Garden</a> - 3D Globe Radio Tuner.</li>
+</ul>
+<ul>
+<li><a href="https://www.nytimes.com/interactive/2018/10/12/us/map-of-every-building-in-the-united-states.html">Map of every building in the United States</a> - New York Times.</li>
+</ul>
+<ul>
+<li><a href="https://orbis.stanford.edu/">Map of the Roman transport network</a> - The Stanford Geospatial Network Model of the Roman World.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mapbox/webgl-wind">Webgl Wind</a> - A WebGL-powered visualization of wind power. Capable of rendering up to 1 million wind particles at 60fps.</li>
+</ul>
+<ul>
+<li><a href="https://ec.europa.eu/statistical-atlas/viewer">Statistical Atlas</a> - A leaflet-powered atlas showcasing Eurostat's statistics.</li>
+</ul>
+<ul>
+<li><a href="https://shademap.app/">ShadeMap</a> - Every mountain, building and tree shadow in the world simulated for any date and time.</li>
+</ul>
+<ul>
+<li><a href="https://climatearchive.org/">ClimateArchive</a> - An interactive visualisation of climate model data across time and space.</li>
+</ul>
+<ul>
+<li><a href="https://www.oldmapsonline.org/">Old Maps Online</a> - Browse historical places and search for old maps with timeline.</li>
+</ul>
+<ul>
+<li><a href="https://www.chronotrains.com">chronotrains</a> - Where can you go by train in 8h?</li>
+</('ul', 0)>
+<h2>🌐 Web apps</h2>
+<p>Plug-and-play geospatial web apps:</p>
+
+<ul>
+<li><a href="https://anvaka.github.io/city-roads/">city roads</a> - Render every single road in any city at once.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/datawrapper/datawrapper">Datawrapper</a> - Create charts, maps, and tables.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Azgaar/Fantasy-Map-Generator">Fantasy Map Generator</a> - Free web application for creating and editing fantasy maps.</li>
+</ul>
+<ul>
+<li><a href="http://app.geotiff.io/">geotiff.io</a> - Provides quick access to easy-to-use raster processing.</li>
+</ul>
+<ul>
+<li><a href="https://gisco-services.ec.europa.eu/image/">IMAGE</a> - Tool for generating thematic maps.</li>
+</ul>
+<ul>
+<li><a href="https://kepler.gl/demo">Kepler</a> - A powerful open-source geospatial analysis tool for large-scale datasets.</li>
+</ul>
+<ul>
+<li><a href="https://magrit.cnrs.fr/">magrit</a> - An online application for thematic mapping.</li>
+</ul>
+<ul>
+<li><a href="https://mapshaper.org/">mapshaper</a> - Online editor for map data.</li>
+</ul>
+<ul>
+<li><a href="https://maponshirt.com">MapOnShirt</a> - Create colorful designs from maps and turn them into products.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/maputnik/editor">Maputnik</a> - Free and open visual editor for Mapbox GL styles.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/alyssaxuu/mapus">mapus</a> - Tool for collaboratively exploring and annotating maps.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/anvaka/peak-map">Peak Map</a> - Visualizes elevation of any area on the map with filled area charts.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/verma/plasio">Plasio</a> - Drag-n-drop in-browser LAS/LAZ point cloud viewer.</li>
+</ul>
+<ul>
+<li><a href="https://storymap.knightlab.com/">StoryMap JS</a> - Open-source alternative to ESRI's Story Map application.</li>
+</ul>
+<ul>
+<li><a href="https://topoexport.com">TopoExport</a> - Export 2D contour lines and 3D topography using open-source datasets.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/umap-project/umap">uMap</a> - Create maps with OpenStreetMap layers and embed them in your site.</li>
+</ul>
+<ul>
+<li><a href="http://bboxfinder.com/">bboxFinder</a> - Helper page for finding bbox values from a map.</li>
+</ul>
+<ul>
+<li><a href="https://geojson.io/">geojson.io</a> - A quick, simple tool for creating, viewing, and sharing spatial data.</li>
+</ul>
+<ul>
+<li><a href="https://geojsonlint.com/">GeoJSONLint</a> - Use this site to validate and view your GeoJSON.</li>
+</('ul', 0)>
+<h2>🎨 Colour advice</h2>
+<p>Colour usage is very important in data visualisation and cartography. Here are some tools to help you choose the best colours for your maps:</p>
+
+<ul>
+<li><a href="https://github.com/CartoDB/CartoColor">CartoColor</a> - A set of custom color palettes built on top of standards for color use on maps.</li>
+</ul>
+<ul>
+<li><a href="https://gka.github.io/palettes/#/9">Chroma.js Color Palette Helper</a> - Chroma.js-powered tool for mastering multi-hued, multi-stop color scales.</li>
+</ul>
+<ul>
+<li><a href="https://colorbrewer2.org/">ColorBrewer</a> - Colour advice for maps, based on Dr. Cynthia Brewer's research.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/riatelab/dicopal.js">Dicopal.js</a> - Discrete color palettes for JavaScript.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/riccardoscalco/textures">Textures.js</a> - JavaScript library for creating SVG patterns, designed for data visualization.</li>
+</ul>
+<ul>
+<li><a href="https://www.susielu.com/data-viz/viz-palette">viz-palette</a> - Tool optimized for tweaking, copying, and pasting colors in and out of JavaScript.</li>
+</('ul', 0)>
+<h2>📍 Icons</h2>
+<p>Icons to add to your GIS websites:</p>
+<ul>
+<li><a href="https://github.com/Viglino/font-gis">font-GIS</a> - A very very cool icon font set for use with GIS and spatial analysis tools.</li>
+</ul>
+<ul>
+<li><a href="https://mapicons.mapsmarker.com/">Map Icons Collection</a> - A set of more than 1000 free and customizable icons to use as placemarks for your POI (Point of Interests) locations on your maps.</li>
+</ul>
+<ul>
+<li><a href="https://fonts.google.com/icons?icon.query=map">Material Symbols</a> - Over 2,990 glyphs in a single font file with a wide range of design variants.</li>
+</ul>
+<ul>
+<li><a href="https://apidocs.geoapify.com/playground/icon/">Geoapify map marker playground</a> - The Marker Icon API lets you create beautiful icons and use them as Map Markers.</li>
+</('ul', 0)>
+<h2>📺 Videos</h2>
+<p>Videos of web mapping presentations and tutorials:</p>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=nZaZ2dB6pow">Mapping Geolocation with Leaflet.js - Working with Data and APIs in JavaScript</a> - The Coding Train.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=PpWAKVjPlgU">10 Maps, and the Tech and Stories Behind Them</a> - Maarten Lambrechts.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=vM8M4QloVL0&t=4418s">Intermediate Three.js Tutorial - Create a Globe with Custom Shaders</a> - Chris Courses.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=e803ElX5Q_c">Statistical Cartography - Design principles for statistical map design</a> - Julien Gaffuri.</li>
+</('ul', 0)>
+<h2>📚 Further reading</h2>
+<ul>
+<li><a href="https://clauswilke.com/dataviz/">Fundamentals of Data Visualization</a> - Claus O. Wilke.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/uwcartlab/webmapping">A Workbook for Interactive Cartography and Visualization on the Open Web</a> - Robert Roth, Carl Sack, Gareth Baldrica-Franklin, Yuying Chen, Rich Donohue, Lily Houtman, Tim Prestby, Robin Tolochko, Nick Underwood.</li>
+</ul>
+<ul>
+<li><a href="https://www.esri.com/en-us/esri-press/browse/thematic-mapping">Thematic Mapping: 101 Inspiring Ways to Visualise Empirical Data</a> - Kenneth Field.</li>
+</ul>
+<ul>
+<li><a href="https://colorbrewer2.org/learnmore/schemes_full.html#qualitative">Color use guidelines for mapping and visualization</a> - Cynthia A. Brewer.</li>
+</ul>
+<ul>
+<li><a href="https://geonetworks.github.io/">Geospatial Network Visualization</a> - A collection of visualization techniques for geospatial network data.</li>
+</('ul', 0)>
+<h2>Contributing</h2>
+
+<p>Contributions of any kind are welcome, just follow the <a href="./CONTRIBUTING.md">guidelines</a> by either:</p>
+
+<ul>
+<li>Filling a <a href="https://github.com/joewdavies/awesome-frontend-gis/issues/new/">suggestion issue</a> (easier).</li>
+</ul>
+<ul>
+<li>Opening a <a href="https://github.com/joewdavies/awesome-frontend-gis/compare">pull request</a>.</li>
+<hr>
+</ul>
+<p>If you have any questions about this list, please don't hesitate to contact me <a href="https://twitter.com/joewdavies">@joewdavies</a> on X (formerly Twitter) or <a href="https://github.com/joewdavies/awesome-frontend-gis/issues/new">open a GitHub issue</a>.</p>
+
+</body>
+</html>

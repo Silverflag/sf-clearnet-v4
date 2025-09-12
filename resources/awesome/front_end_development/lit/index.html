@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>lit</h1>
+
+<p><strong>Repository:</strong> https://github.com/web-padawan/awesome-lit#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<h1>Awesome Lit <a href="https://awesome.re/badge.svg"><img src="https://awesome.re" alt="Awesome</a>"></h1>
+
+<blockquote>
+<p>A curated list of awesome Lit resources.</p>
+</blockquote>
+
+<p><a href="https://github.com/lit/lit">Lit</a> — a simple library for building fast, lightweight web components.</p>
+
+<p>At Lit's core is a boilerplate-killing component base class that provides reactive state, scoped styles, and a declarative template system that's tiny, fast and expressive.</p>
+
+<h2>Contents</h2>
+
+<ul>
+<li><a href="#general-resources">General resources</a></li>
+</ul>
+<ul>
+<li><a href="#community">Community</a></li>
+</ul>
+<ul>
+<li><a href="#overview">Overview</a></li>
+</ul>
+<ul>
+<li><a href="#starter-templates">Starter Templates</a></li>
+</ul>
+<ul>
+<li><a href="#codelabs">Codelabs</a></li>
+</ul>
+<ul>
+<li><a href="#tutorials">Tutorials</a></li>
+</ul>
+<ul>
+<li><a href="#examples">Examples</a></li>
+</ul>
+<ul>
+<li><a href="#lit-labs">Lit Labs</a></li>
+</ul>
+<ul>
+<li><a href="#extensions">Extensions</a></li>
+</ul>
+<ul>
+<li><a href="#design-systems">Design Systems</a></li>
+</ul>
+<ul>
+<li><a href="#component-libraries">Component Libraries</a></li>
+</ul>
+<ul>
+<li><a href="#standalone-components">Standalone Components</a></li>
+</ul>
+<ul>
+<li><a href="#tools">Tools</a></li>
+<ul>
+<li><a href="#building">Building</a></li>
+</ul>
+<ul>
+<li><a href="#linting">Linting</a></li>
+</ul>
+<ul>
+<li><a href="#ide-plugins">IDE Plugins</a></li>
+</ul>
+<ul>
+<li><a href="#typescript-plugins">TypeScript Plugins</a></li>
+</ul>
+<ul>
+<li><a href="#other-tools">Other Tools</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#cdn">CDN</a></li>
+</ul>
+<ul>
+<li><a href="#integrations">Integrations</a></li>
+</ul>
+<ul>
+<li><a href="#videos">Videos</a></li>
+</ul>
+<ul>
+<li><a href="#podcasts">Podcasts</a></li>
+</ul>
+<ul>
+<li><a href="#archive">Archive</a></li>
+</ul>
+<ul>
+<li><a href="#similar-libraries">Similar libraries</a></li>
+</ul>
+<ul>
+<li><a href="#other-awesome-resources">Other awesome resources</a></li>
+</('ul', 0)>
+<h2>General resources</h2>
+
+<ul>
+<li><a href="https://lit.dev/docs/">Documentation</a></li>
+</ul>
+<ul>
+<li><a href="https://lit.dev/tutorials/">Tutorials</a></li>
+</ul>
+<ul>
+<li><a href="https://lit.dev/playground/">Playground</a></li>
+</ul>
+<ul>
+<li><a href="https://lit.dev/blog/">Blog</a></li>
+</('ul', 0)>
+<h2>Community</h2>
+
+<ul>
+<li><a href="https://discord.com/invite/buildWithLit">Discord</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/lit/lit">GitHub</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/lit/lit/discussions">GitHub Discussions</a></li>
+</ul>
+<ul>
+<li><a href="https://twitter.com/buildWithLit">Twitter</a></li>
+</ul>
+<ul>
+<li><a href="https://stackoverflow.com/questions/tagged/lit+or+lit-html+or+lit-element">Stack Overflow</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/channel/UCok4ZKSzM3jY7JQRMlF-DPg/">YouTube</a></li>
+</('ul', 0)>
+<h2>Overview</h2>
+
+<ul>
+<li><a href="https://developers.google.com/web/updates/2019/02/lit-element-and-lit-html">Lightning-fast templates & Web Components: lit-html & LitElement</a></li>
+</ul>
+<ul>
+<li><a href="https://lit.dev/blog/2021-04-21-lit-2.0-meet-lit-all-over-again/">Lit 2.0: Meet Lit, all over again!</a></li>
+</ul>
+<ul>
+<li><a href="https://lit.dev/blog/2021-09-21-announcing-lit-2/">Announcing Lit 2 stable release</a></li>
+</('ul', 0)>
+<h2>Starter Templates</h2>
+
+<ul>
+<li><a href="https://github.com/lit/lit-element-starter-js">LitElement JavaScript starter</a> - Sample component using LitElement with JavaScript.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lit/lit-element-starter-ts">LitElement TypeScript starter</a> - Sample component using LitElement with TypeScript.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/fernandopasik/hello-web-components">hello-web-components</a> - Simple starter web component written in TypeScript using Lit.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/e111077/lit-sass-js-starter">Lit Sass JavaScript Starter</a> - Project that has a simple setup for SASS + JS + Lit, using Rollup.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/e111077/lit-sass-ts-starter">Lit Sass TypeScript Starter</a> - Project that has a simple setup for SASS + TS + Lit, using Rollup.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/andrewlevada/webpack-lit-template">Lit Webpack Starter</a> - Starter for multipage apps with Lit and Typescript, using Webpack.</li>
+</ul>
+<ul>
+<li><a href="https://open-wc.org/docs/development/generator/">Open Web Components Generator</a> - Starter app based on Open Web Components Recommendations.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pwa-builder/pwa-starter">pwa-starter</a> - LitElement edition of the PWABuilder pwa-starter.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/IBM/pwa-lit-template">pwa-lit-template</a> - Build Progressive Web Applications following the modern web standards.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/e111077/vite-lit-element-ts-sass">Vite Lit Element TS SASS</a> - Example Vite project using Lit 2, Typescript, and SASS.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/vitejs/vite/tree/main/packages/create-vite/template-lit">Vite Lit Starter</a> - Lit based template preset for Vite.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/vitejs/vite/tree/main/packages/create-vite/template-lit-ts">Vite Lit TS Starter</a> - Lit and TypeScript based template preset for Vite.</li>
+</('ul', 0)>
+<h2>Codelabs</h2>
+
+<ul>
+<li><a href="https://codelabs.developers.google.com/codelabs/lit-brick-viewer#0">Build a Brick Viewer with lit-element</a></li>
+</ul>
+<ul>
+<li><a href="https://codelabs.developers.google.com/codelabs/lit-story-viewer#0">Build a Story Component with lit-element</a></li>
+</ul>
+<ul>
+<li><a href="https://codelabs.developers.google.com/codelabs/the-lit-path#0">From Web Component to Lit Element</a></li>
+</ul>
+<ul>
+<li><a href="https://open-wc.org/codelabs/basics/lit-html.html#0">lit-html & lit-element: basics</a></li>
+</ul>
+<ul>
+<li><a href="https://open-wc.org/codelabs/intermediate/lit-html.html#0">lit-html & lit-element: intermediate</a></li>
+</ul>
+<ul>
+<li><a href="https://codelabs.developers.google.com/codelabs/lit-2-for-react-devs#0">Lit for React Developers</a></li>
+</('ul', 0)>
+<h2>Tutorials</h2>
+
+<ul>
+<li><a href="https://www.smashingmagazine.com/2022/09/building-retro-draggable-web-component-using-lit/">Building A Retro Draggable Web Component Using Lit</a></li>
+</ul>
+<ul>
+<li><a href="https://rodydavis.com/posts/lit-rich-text-editor/">Building a Rich Text Editor with Lit</a></li>
+</ul>
+<ul>
+<li><a href="https://rodydavis.com/posts/lit-draggable-dom/">Draggable DOM with Lit</a></li>
+</ul>
+<ul>
+<li><a href="https://labs.thisdot.co/blog/getting-started-with-litelement-and-typescript">Getting started with LitElement and TypeScript</a></li>
+</ul>
+<ul>
+<li><a href="https://dev.to/jdvivar/here-s-a-minimalist-no-frills-redux-toolkit-litelement-example-1j91">Here's a minimalist no-frills Redux Toolkit & LitElement example</a></li>
+</ul>
+<ul>
+<li><a href="https://rodydavis.com/posts/lit-html-table/">JSON to HTML Table with Lit</a></li>
+</ul>
+<ul>
+<li><a href="https://terodox.tech/handling-web-component-markup-with-lit-html/">lit-html Part 1 - A solution for DOM management in web components</a></li>
+</ul>
+<ul>
+<li><a href="https://terodox.tech/lit-html-part-2/">lit-html Part 2 - Working with attributes and properties</a></li>
+</ul>
+<ul>
+<li><a href="https://rodydavis.com/posts/figma-and-lit/">Lit and Figma</a></li>
+</ul>
+<ul>
+<li><a href="https://rodydavis.com/posts/flutter-and-lit/">Lit and Flutter</a></li>
+</ul>
+<ul>
+<li><a href="https://rodydavis.com/posts/lit-monaco-editor/">Lit and Monaco Editor</a></li>
+</ul>
+<ul>
+<li><a href="https://rodydavis.com/posts/lit-vscode-extension/">Lit and VSCode Extensions</a></li>
+</ul>
+<ul>
+<li><a href="https://rodydavis.com/posts/lit-sheet-music/">Lit Sheet Music</a></li>
+</ul>
+<ul>
+<li><a href="https://labs.thisdot.co/blog/navigation-lifecycle-using-vaadin-router-litelement-and-typescript">Navigation Lifecycle using Vaadin Router, LitElement and TypeScript</a></li>
+</ul>
+<ul>
+<li><a href="https://www.smashingmagazine.com/2020/01/recreating-arduino-pushbutton-svg/">Recreating The Arduino Pushbutton Using SVG And &lt;lit-element&gt;</a></li>
+</ul>
+<ul>
+<li><a href="https://labs.thisdot.co/blog/routing-management-with-litelement">Routing Management with LitElement and TypeScript</a></li>
+</ul>
+<ul>
+<li><a href="https://dev.to/open-wc/some-things-to-know-about-litelement-282c">Some things to know about Lit</a></li>
+</('ul', 0)>
+<h2>Examples</h2>
+
+<ul>
+<li><a href="https://github.com/rodydavis/lit-native">Lit Native</a> - Reuse Lit web components on native platforms.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/rodydavis/lit-node-editor">Lit Node Editor</a> - Node editor built with canvas API and simple graph data structure.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/rodydavis/lit-3d-piano/">Lit 3D Piano</a> - 3D Piano built with Lit, Three.js and Tone.js.</li>
+</ul>
+<ul>
+<li><a href="https://open-wc.org/guides/developing-components/code-examples/#lit-html-and-lit-element">Open Web Components Examples</a> - Code examples of common patterns using Lit.</li>
+</ul>
+<ul>
+<li><a href="https://kevinpschaaf.github.io/lit-migration-guide">Polymer → Lit Migration Guide</a> - Code examples showing migration guidance from Polymer to Lit.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/rodydavis/vite-rxdb-lit">Vite + RxDB + Lit</a> - Minimal example to get RxDB running with Vite.</li>
+</('ul', 0)>
+<h2>Lit Labs</h2>
+
+<ul>
+<li><a href="https://www.npmjs.com/package/@lit/localize"><code>@lit/localize</code></a> - Library and command-line tool for localizing web applications built using Lit.</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/@lit-labs/ssr"><code>@lit-labs/ssr</code></a> - Package for server-side rendering Lit templates and components.</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/@lit-labs/motion"><code>@lit-labs/motion</code></a> - Lit directives for making things move.</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/@lit-labs/react"><code>@lit-labs/react</code></a> - React integration for Web Components and reactive Lit controllers.</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/@lit-labs/scoped-registry-mixin"><code>@lit-labs/scoped-registry-mixin</code></a> - Mixin for LitElement that integrates with the speculative Scoped CustomElementRegistry polyfill to evaluate the proposal and facilitate feedback.</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/@lit-labs/task"><code>@lit-labs/task</code></a> - Controller for Lit that renders asynchronous tasks.</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/@lit-labs/virtualizer"><code>@lit-labs/virtualizer</code></a> - Package that provides virtual scrolling for Lit.</li>
+</('ul', 0)>
+<h2>Extensions</h2>
+
+<ul>
+<li><a href="https://www.npmjs.com/package/@adobe/lit-mobx"><code>@adobe/lit-mobx</code></a> - Mixin and base class for using mobx with Lit.</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/@apollo-elements/lit-apollo"><code>@apollo-elements/lit-apollo</code></a> - LitElement integrations with Apollo GraphQL.</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/@lit-app/state"><code>@lit-app/state</code></a> - Lean and simple global State management for Lit 2.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/shoelace-style/localize"><code>@shoelace-style/localize</code></a> - A micro library for localizing custom elements, providing directives for Lit.</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/@stefanholzapfel/lit-state"><code>@stefanholzapfel/lit-state</code></a> - Lightweight reactive state management for Lit 2.</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/@vaadin/form"><code>@vaadin/form</code></a> - Set of utilities for building forms with TypeScript and Lit.</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/dark-theme-utils"><code>dark-theme-utils</code></a> - Useful utilities for dark mode built with Web Components.</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/exome"><code>exome</code></a> - State manager for deeply nested states that supports Lit.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/MatthiasKainer/pure-lit"><code>pure-lit</code></a> - Register your Lit elements as pure functions.</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/lit-element-effect"><code>lit-element-effect</code></a> - Effect hooks for LitElement.</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/lit-element-state-decoupler"><code>lit-element-state-decoupler</code></a> - Utility for state handling outside of the component for LitElement.</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/lit-redux-router"><code>lit-redux-router</code></a> - Declarative way of routing for Lit powered by pwa-helpers and Redux.</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/lit-svelte-stores"><code>lit-svelte-stores</code></a> - Lit controller to use svelte stores as state management.</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/lit-vaadin-helpers"><code>lit-vaadin-helpers</code></a> - Helpers for using Vaadin web components with Lit 2.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/aggre/ullr"><code>ullr</code></a> - Build Web Components with functional programming using Lit.</li>
+</('ul', 0)>
+<h2>Design Systems</h2>
+
+<ul>
+<li><a href="https://github.com/axa-ch-webhub-cloud/pattern-library">AXA Pattern Library</a> - AXA CH UI components library built with LitElement.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/BrightspaceUI/core">Brightspace UI core</a> - Collection of web components for building Brightspace applications.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/carbon-design-system/carbon-web-components">Carbon Web Components</a> - Carbon Design System variant on top of Web Components.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/vmware-clarity/core/tree/main/projects/core">Clarity Core Web Components</a> - Suite of web components for Clarity Design System.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/eduferfer/kor">Kor</a> - An open source Design System and lightweight UI Component Library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ing-bank/lion">Lion</a> - Highly performant, accessible and flexible Web Components.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/material-components/material-web">Material Web Components</a> - Material Design implemented as Web Components.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/momentum-design/momentum-ui/tree/master/web-components">Momentum UI Web Components</a> - Set of UI components based on Momentum Design.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/phase2/outline">Outline Design System</a> - Web component based design system starter kit.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ithaka/pharos">Pharos Design System</a> - JSTOR's design system to create cohesive, supportive, and beautiful experiences.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/RedHat-UX/red-hat-design-system">Red Hat Design System</a> - Web components for building uniform experiences with the Red Hat brand.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/shoelace-style/shoelace">Shoelace</a> - Collection of professionally designed UI components built on a framework-agnostic technology.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/adobe/spectrum-web-components">Spectrum Web Components</a> - Adobe Spectrum design language implementation built with LitElement.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/SAP/ui5-webcomponents">UI5 Web Components</a> - Enterprise-flavored sugar on top of native APIs!</li>
+</('ul', 0)>
+<h2>Component Libraries</h2>
+
+<ul>
+<li><a href="https://github.com/apollo-elements/apollo-elements">Apollo Elements</a> - Custom elements meet Apollo GraphQL.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kjantzer/bui">Blackstone UI</a> - Web components for creating interfaces built with lit-html and LitElement.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/fsx950223/chartjs-web-components">Chartjs Web Components</a> - Web components for chartjs.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/CleverCloud/clever-components">Clever components</a> - Collection of Web Components made by Clever Cloud.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/curvenote/article">Curvenote</a> - Web components for creating interactive scientific articles.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Polydile/dile-components">Dile Components</a> - General use Web Components for websites and applications.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/esphome/esp-web-tools">ESP Web Tools</a> - Allow flashing ESPHome or other ESP-based firmwares via the browser.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/eclipse/eclipsefuro-web">Furo Webcomponents</a> - Enterprise ready set of web components which work best with Eclipse Furo.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/equinor/fusion-web-components">Fusion Web Components</a> - Ser of web components used by Equinor Fusion.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/IgniteUI/igniteui-webcomponents">Ignite UI Web Components</a> - Complete library of UI components from Infragistics.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/elmsln/lrnwebcomponents">LRNWebComponents</a> - ELMS:LN produced web components for any project.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/medblocks/medblocks-ui">Medblocks UI</a> - Web Components for rapid development of openEHR and FHIR systems.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/microsoftgraph/microsoft-graph-toolkit">Microsoft Graph Toolkit</a> - Collection of web components for the Microsoft Graph.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/stryker-mutator/mutation-testing-elements">Mutation testing elements</a> - A schema for mutation testing results with the web components to visualize it.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/1-Platform/op-components">One Platform Components</a> - Set of web components for Red Hat One Platform.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/PolymerLabs/playground-elements">Playground Elements</a> - Serverless code experiences with web components.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/bennypowers/stripe-elements">Stripe Elements</a> - Custom Element Wrapper for Stripe.js v3 Elements.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/LeavittSoftware/titanium-elements">Titanium Elements</a> - Collection of lightweight web components used by Leavitt Group Enterprises.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/WebLogin/trendchart-elements">TrendChart Elements</a> - Components to generate simple charts representing trends.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/umbraco/Umbraco.UI">Umbraco UI Components</a> - Collection of user interface web components for Umbraco CMS.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/vidstack/vds-elements">Vidstack Elements</a> - Spec-compliant customizable, extensible, accessible and universal media elements.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/bendera/vscode-webview-elements">VSCode Webview Elements</a> - Components for creating VSCode extensions which use the Webview API.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/eeditiones/tei-publisher-components">Web Components for TEI Publisher</a> - Web components used by TEI Publisher and apps generated by it.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Webmarkets/wm-web-components">Webmarkets web components</a> - Set of Webmarkets' public web components.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/rough-stuff/wired-elements">Wired Elements</a> - Collection of elements that appear hand drawn.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/wokwi/wokwi-elements">Wokwi Elements</a> - Web Components for Arduino and various electronic parts.</li>
+</('ul', 0)>
+<h2>Standalone Components</h2>
+
+<ul>
+<li><a href="https://github.com/web-padawan/api-viewer-element"><code><api-viewer></code></a> - API documentation and live playground for Web Components.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/motss/app-datepicker"><code><app-datepicker></code></a> - Datepicker element built with LitElement and Material Design 2.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/boguz/burgton-button"><code><burgton-button></code></a> - Simple to use, customizable and accessible burger-button element.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/justinribeiro/code-block"><code><code-block></code></a> - Web component that displays colorfully formatted code with Prism.js and LitElement.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/bennypowers/codesandbox-button"><code><codesandbox-button></code></a> - Custom Element that shows a CodeSandbox demo when you click on it.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/toeverything/blocksuite"><code><editor-container></code></a> - Block based editor, designed for general-purpose collaborative applications.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/LostInBrittany/granite-qrcode-generator"><code><granite-qrcode-generator></code></a> - Custom element to generate and render QR Codes, using qr.js library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/alangdm/helium-animated-pages"><code><helium-animated-pages></code></a> - Web component for creating CSS animations built with Lit.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/alenaksu/json-viewer"><code><json-viewer></code></a> - Web Component to visualize JSON data in a tree view.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sachinchoolur/lightGallery/tree/master/lightgallery-lit"><code><light-gallery></code></a> - Full featured JavaScript image and video gallery for Lit.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/DoubleTrade/lit-datatable"><code><lit-datatable></code></a> - Material Design implementation of a data table, powered by LitElement.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/andy-austin/lit-image-cropper"><code><lit-image-cropper></code></a> - Fast and lightweight image cropper component.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/LottieFiles/lottie-player"><code><lottie-player></code></a> - Web Component for easily embedding and playing Lottie animations.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/GoogleWebComponents/model-viewer"><code><model-viewer></code></a> - A web component for rendering interactive 3D models.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mrin9/RapiDoc"><code><rapi-doc></code></a> - Web Component to view OpenAPI 3.0 & Swagger 2.0 Spec.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/thomasloven/round-slider"><code><round-slider></code></a> - Simple round slider web component built with Lit.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/justinribeiro/stl-part-viewer"><code><stl-part-viewer></code></a> - LitElement web component that utilizes Three.js to display an STL model file.</li>
+</('ul', 0)>
+<h2>Tools</h2>
+
+<h3>Building</h3>
+
+<ul>
+<li><a href="https://www.npmjs.com/package/babel-plugin-lit-property-types-from-ts">babel-plugin-lit-property-types-from-ts</a> - Babel plugin for setting <code>type</code> for reactive properties declared in Lit components based on TypeScript type annotations.</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/babel-plugin-template-html-minifier">babel-plugin-template-html-minifier</a> - Babel plugin for minifying HTML in tagged template strings.</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/esbuild-plugin-lit">esbuild-plugin-lit</a> - ESBuild plugin to import CSS, SVG, HTML, XLIFF files as JavaScript tagged-template literal objects.</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/esbuild-plugin-lit-css">esbuild-plugin-lit-css</a> - ESBuild plugin to import css files as JavaScript tagged-template literal objects.</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/lit-css-loader">lit-css-loader</a> - Webpack loader to import css files as JavaScript tagged-template literal objects.</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/lit-scss-loader">lit-scss-loader</a> - Webpack loader to import the CSS/SCSS into Lit components.</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/rollup-plugin-lit-css">rollup-plugin-lit-css</a> - Rollup plugin to import css files as JavaScript tagged-template literal objects.</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/rollup-plugin-minify-html-literals">rollup-plugin-minify-html-literals</a> - Rollup plugin to minify HTML in tagged template strings.</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/rollup-plugin-postcss-lit">rollup-plugin-postcss-lit</a> - Rollup plugin to load PostCSS-processed stylesheets in Lit components.</li>
+</('ul', 0)>
+<h3>Linting</h3>
+
+<ul>
+<li><a href="https://www.npmjs.com/package/eslint-plugin-lit">eslint-plugin-lit</a> - ESLint plugin for Lit template strings.</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/eslint-plugin-lit-a11y">eslint-plugin-lit-a11y</a> - Accessibility linting plugin for Lit templates.</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/lit-analyzer">lit-analyzer</a> - CLI that type checks bindings in Lit templates.</li>
+</('ul', 0)>
+<h3>IDE Plugins</h3>
+
+<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=bierner.lit-html">vscode-lit-html</a> - Syntax highlighting and IntelliSense for lit-html template strings.</li>
+</ul>
+<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=runem.lit-plugin">vscode-lit-plugin</a> - Syntax highlighting, type checking and code completion for lit-html.</li>
+</ul>
+<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=Tobermory.es6-string-html">es6-string-html</a> - VSCode extension which provides syntax highlighting for HTML in ES6 multiline strings.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jonsmithers/vim-html-template-literals">vim-html-template-literals</a> - Syntax highlighting and indentation for HTML inside of tagged template literals.</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/@web-types/lit">@web-types/lit</a> - Attribute completion for HTML inside of tagged template literals.</li>
+</('ul', 0)>
+<h3>TypeScript Plugins</h3>
+
+<ul>
+<li><a href="https://www.npmjs.com/package/ts-lit-plugin">ts-lit-plugin</a> - Plugin that adds type checking and code completion for Lit templates.</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/typescript-lit-html-plugin">typescript-lit-html-plugin</a> - TypeScript server plugin that adds IntelliSense for Lit templates.</li>
+</('ul', 0)>
+<h3>Other Tools</h3>
+
+<ul>
+<li><a href="https://www.npmjs.com/package/@custom-elements-manifest/analyzer">@custom-elements-manifest/analyzer</a> - CLI tool to generate API documentation for web components.</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/@storybook/web-components">Storybook for web-components</a> - UI development environment for plain web-component snippets.</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/web-components-codemods">web-components-codemods</a> - Codemods for Web Components compatible with lit-html template literals.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Matsuuu/web-component-devtools">Web Component DevTools</a> - Browser extension for developers working with Web Components.</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/@wcfactory/cli">Web Component Factory</a> - CLI tool for generating, building, testing and publishing web components.</li>
+</('ul', 0)>
+<h2>CDN</h2>
+
+<p>The following content delivery networks provide ES module versions of Lit:</p>
+
+<ul>
+<li><a href="https://cdn.esm.sh/lit">cdn.esm.sh</a></li>
+</ul>
+<ul>
+<li><a href="https://cdn.jsdelivr.net/npm/lit/+esm">jsDelivr CDN</a></li>
+</ul>
+<ul>
+<li><a href="https://jspm.dev/lit">JSPM CDN</a></li>
+</ul>
+<ul>
+<li><a href="https://cdn.skypack.dev/lit">Skypack CDN</a></li>
+</ul>
+<ul>
+<li><a href="https://unpkg.com/lit?module">unpkg.com</a></li>
+</ul>
+<p>See <a href="https://lit.dev/docs/getting-started/#use-bundles">lit.dev documentation</a> for using bundles.</p>
+
+<h2>Integrations</h2>
+
+<ul>
+<li><a href="https://github.com/bridgetownrb/bridgetown-lit-renderer">Bridgetown Lit Renderer</a> - SSR + hydration of Lit components for Bridgetown.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/fable-compiler/Fable.Lit">Fable.Lit</a> - Collection of tools to embed HTML code into F# code with the power of Lit.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ruby2js/ruby2js">Ruby2JS</a> - Minimal yet extensible Ruby to JavaScript conversion.</li>
+</('ul', 0)>
+<h2>Videos</h2>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=ri9FEl_hRTc">Lit 3.0 Launch Event</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=ruql541T7gc">Efficient, Expressive, and Extensible HTML Templates (Polymer Summit 2017)</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=Io6JjgckHbg">lit-HTML (Chrome Dev Summit 2017)</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=f1j7b696L-E">Lit Beta Launch Event (2021)</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=nfb779XIhsU">Lit 2.0 Release Livestream</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=uCHZJy2n8Qs">VDOM vs lit-html - HTTP203</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=9FB0GSOAESo">Declarative Reactive Web Components with Justin Fagnani</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=x9YDQUJx2uw">Building a Complex Application with Web Components and LitElement</a></li>
+</('ul', 0)>
+<h2>Podcasts</h2>
+
+<ul>
+<li><a href="https://thewebplatformpodcast.com/159-lithtml-html-templates-via-javascript-template-literals">The Web Platform Podcast 159: lit-html - HTML Templates via JavaScript Template Literals</a> -</li>
+</ul>
+<p>An episode with the lit-html creator Justin Fagnani.</p>
+<ul>
+<li><a href="https://shoptalkshow.com/episodes/348/">ShopTalk Show 348: Getting lit-html with Justin Fagnani</a> - Another episode with Justin Fagnani as a guest.</li>
+</('ul', 0)>
+<h2>Archive</h2>
+
+<p>The following articles refer to older versions of lit-html and LitElement.</p>
+
+<ul>
+<li><a href="https://dev.to/azure/too-hard-too-soft-just-right-rendering-html-with-lit-html-1km8">Render HTML with Vanilla JavaScript and lit-html</a></li>
+</ul>
+<ul>
+<li><a href="https://dev.to/julcasans/a-gentle-introduction-to-lit-html-3d74">A gentle introduction to lit-html</a></li>
+</ul>
+<ul>
+<li><a href="https://dev.to/julcasans/lit-html-templates-from-zero-to-hero-2afm">lit-html templates from zero to hero</a></li>
+</ul>
+<ul>
+<li><a href="https://justinribeiro.com/chronicle/2019/04/11/updating-blog-pwa-from-polymer-to-litelement-workbox-and-rollup/">Updating blog-pwa from Polymer to LitElement, Workbox, and Rollup</a></li>
+</ul>
+<ul>
+<li><a href="https://dev.to/bennypowers/lets-build-web-components-part-5-litelement-906">Let's Build Web Components! Part 5: LitElement</a></li>
+</ul>
+<ul>
+<li><a href="https://medium.com/@westbrook/litelement-to-do-app-1e08a31707a4">LitElement To Do App</a></li>
+</ul>
+<ul>
+<li><a href="https://43081j.com/2018/09/polymer-lit-with-rollup">LitElement with Rollup, Babel & Karma</a></li>
+</ul>
+<ul>
+<li><a href="https://medium.com/@kennethrohde/a-new-lean-way-of-creating-web-apps-88a49c5b87ec">A new, lean way of creating web apps</a></li>
+</ul>
+<ul>
+<li><a href="https://43081j.com/2018/08/future-of-polymer">The future of Polymer & lit-html</a></li>
+</ul>
+<ul>
+<li><a href="https://lucamezzalira.com/2018/08/14/a-night-experimenting-with-lit-html/">A night experimenting with Lit-HTML</a></li>
+</ul>
+<ul>
+<li><a href="https://medium.com/@pascalschilp/making-a-fullstack-crud-app-with-lithtml-redux-express-and-webpack-fe7e5cf8b3ef">Making a fullstack CRUD app with LitHTML, Redux, Express, and Webpack</a></li>
+</ul>
+<ul>
+<li><a href="https://dev.to/dkundel/building-a-chat-with-twilio-lit-html-parcel-and-typescript-1jo1">Building a chat with Twilio, lit-html, Parcel and TypeScript</a></li>
+</('ul', 0)>
+<h2>Similar libraries</h2>
+
+<p>These libraries are not related to Lit, but are built using similar concepts. They use <code>html</code> tagged</p>
+<p>template literal, and leverage the benefits of the same <a href="#ide-plugins">IDE Plugins</a> for syntax highlighting.</p>
+
+<ul>
+<li><a href="https://www.npmjs.com/package/haunted">haunted</a> - React's Hooks API but for standard web components and hyperHTML or lit-html.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/developit/htm">htm</a> - Hyperscript Tagged Markup: JSX alternative using standard tagged templates, with compiler support.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/hybridsjs/hybrids">hybrids</a> - UI library for creating Web Components with simple and functional API.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/motss/lit-ntml">lit-ntml</a> - Lightweight and modern templating for SSR in Node.js, inspired by lit-html.</li>
+</('ul', 0)>
+<h2>Other awesome resources</h2>
+
+<p><strong>If you want more awesome resources, check the <a href="https://github.com/sindresorhus/awesome">awesome</a> list!</strong></p>
+
+<hr>
+
+<h2>License</h2>
+
+<p><a href="https://upload.wikimedia.org/wikipedia/commons/6/69/CC0_button.svg"><img src="http://creativecommons.org/publicdomain/zero/1.0/" alt="CC0</a>"></p>
+
+</body>
+</html>

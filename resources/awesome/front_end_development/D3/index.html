@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D3</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>D3</h1>
+
+<p><strong>Repository:</strong> https://github.com/wbkd/awesome-d3#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<h1>Awesome D3 <a href="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg"><img src="https://github.com/sindresorhus/awesome" alt="Awesome</a>"></h1>
+
+<p>This list keeps track of interesting <a href="http://d3js.org">D3js</a> libraries, plugins and utilities.</p>
+<p><br />We decided not to list tutorials, resources or concepts here, because there is already a <strong><a href="https://github.com/mbostock/d3/wiki/Tutorials">very good list of readings</a></strong> out there you can check out and contribute to.</p>
+
+<p>Curators: <a href="https://twitter.com/moklick">Moritz Klack</a> and <a href="https://twitter.com/chrtze">Christopher Möller</a> of <a href="http://www.webkid.io">webkid.io</a></p>
+
+<p>You can also explore the list with our interactive <a href="https://d3-discovery.net/">D3 Discovery</a> tool.</p>
+
+<h2>Charts</h2>
+
+<ul>
+<li><a href="https://github.com/naver/billboard.js">billboard.js</a> - Re-usable chart library [bar, line, area, donut, pie, step, spline]</li>
+</ul>
+<ul>
+<li><a href="https://github.com/britecharts/britecharts">britecharts</a> - Client-side reusable charting library [bar, line, donut, sparkline, step]</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Microsoft/chart-parts">chart-parts</a> - A flexible, React-friendly, Grammar of Graphics for data visualization</li>
+</ul>
+<ul>
+<li><a href="https://github.com/square/cubism">cubism</a> - Time series visualization</li>
+</ul>
+<ul>
+<li><a href="https://github.com/c3js/c3">c3</a> - Reusable chart library [line, spline, step, area, stacked, bar, pie, donut]</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dagrejs/dagre-d3">dagre-d3</a> - Layout directed graphs on the client-side</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dc-js/dc.js">dc.js</a> - For heavy amounts of data</li>
+</ul>
+<ul>
+<li><a href="https://github.com/d2bjs/d2b">d2b</a> - Chart library for axis, pie, sankey, sunburst charts</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tj/d3-bar">d3-bar</a> - Bar chart</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Kcnarf/d3-beeswarm">d3-beeswarm</a> - Plugin which computes a beeswarm arrangement</li>
+</ul>
+<ul>
+<li><a href="https://github.com/akngs/d3-boxplot">d3-boxplot</a> - d3js box plot plugin</li>
+</ul>
+<ul>
+<li><a href="https://github.com/johnwalley/d3-bumps-chart">d3-bumps-chart</a> - Plugin for visualizing bumps charts</li>
+</ul>
+<ul>
+<li><a href="https://github.com/erikbrinkman/d3-dag">d3-dag</a> - Layout algorithms for visualizing directed acylic graphs</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jamesleesaunders/d3-ez">d3-ez</a> - Easy Reusable D3 Charts & Components [bar, donut, pie, bubble, rose, heatmap]</li>
+</ul>
+<ul>
+<li><a href="https://github.com/spiermar/d3-flame-graph">d3-flame-graph</a> - Flame graphs from hierarchical data</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jakezatecky/d3-funnel">d3-funnel</a> - A funnel and pyramid chart library</li>
+</ul>
+<ul>
+<li><a href="https://github.com/romsson/d3-gridding">d3-gridding</a> - Chart mockups using grids</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tj/d3-heatmap">d3-heatmap</a> - Heatmap</li>
+</ul>
+<ul>
+<li><a href="https://github.com/koudelka/d3-message-sequence">d3-message-sequence</a> - A dynamic/static message sequence chart</li>
+</ul>
+<ul>
+<li><a href="https://github.com/chuntul/d3-upset">d3-upset</a> - Functions for plotting an UpSet plot [upset, bar, intersections, venn, relationships]</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jamesleesaunders/d3-x3d">d3-x3d</a> - Data Driven 3D Charts with D3 and X3D [bubble, bar, surfacearea, scatterplot, area]</li>
+</ul>
+<ul>
+<li><a href="https://github.com/d3fc/d3fc">d3fc</a> - A collection of interactive chart components [line, bar, stacked, scatter, candlestick, ohlc]</li>
+</ul>
+<ul>
+<li><a href="https://github.com/alexandersimoes/d3plus">d3plus</a> - Extension library for easy creation of visualizations [scatter, stacked, line, bar, pie, network, bubble, box, map]</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kbroman/d3panels">d3panels</a> - Interactive charts with linked brushing [dot, scatter, line, heatmap, histogram]</li>
+</ul>
+<ul>
+<li><a href="https://github.com/benkeen/d3pie">d3pie</a> - A configurable pie chart lib and generator</li>
+</ul>
+<ul>
+<li><a href="https://github.com/NathanEpstein/D3xter">D3xter</a> - Straight forward plotting [plot, timeline, bar, histogram, pie]</li>
+</ul>
+<ul>
+<li><a href="https://github.com/heavysixer/d4">D4</a> - Re-usable charts DSL [bar, donut, line, scatter, stacked, waterfall]</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ErikGartner/dTree">dTree</a> - Family tree library</li>
+</ul>
+<ul>
+<li><a href="https://github.com/marmelab/EventDrops">EventDrops</a> - A time based/event series interactive visualization</li>
+</ul>
+<ul>
+<li><a href="https://github.com/metricsgraphics/metrics-graphics">metrics-graphics</a> - Optimized for visualizing time-series data [line, scatter, area]</li>
+</ul>
+<ul>
+<li><a href="https://github.com/biovisualize/micropolar/">micropolar</a> - A polar chart library</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mpld3/mpld3">mpld3</a> - Export matplotlib graphics to work in the Browser</li>
+</ul>
+<ul>
+<li><a href="https://github.com/eisman/neo4jd3">neo4jd3</a> - Neo4j graph visualization</li>
+</ul>
+<ul>
+<li><a href="https://github.com/novus/nvd3">nvd3</a> - Re-usable charts and chart components [box plot, buttlet, candlestick, line, bar, pie, scatter, sparkline]</li>
+</ul>
+<ul>
+<li><a href="https://github.com/oecd-cyc/oecd-simple-charts">oecd-simple-charts</a> - Simple charting library [box plot, stacked bar, pearl chart]</li>
+</ul>
+<ul>
+<li><a href="https://github.com/plotly/plotly.js/">plotly.js</a> - High level charting library [scatter, line, bar, pie, box plot, histogram, heatmap]</li>
+</ul>
+<ul>
+<li><a href="https://github.com/palantir/plottable">plottable</a> - Flexible, interactive charts for the web [area, bar, line, pie, scatter, stacked]</li>
+</ul>
+<ul>
+<li><a href="https://github.com/shutterstock/rickshaw">rickshaw</a> - Toolkit for creating interactive real-time graphs [line, scatter, bar]</li>
+</ul>
+<ul>
+<li><a href="https://github.com/TargetProcess/tauCharts">taucharts</a> - Charts with a focus on design and flexibility [line, bar, area, stacked]</li>
+</ul>
+<ul>
+<li><a href="https://github.com/vega/vega">vega</a> - A visualization grammar</li>
+</ul>
+<ul>
+<li><a href="https://github.com/vega/vega-lite">vega-lite</a> - A high-level grammar of interactive graphics</li>
+</ul>
+<ul>
+<li><a href="https://github.com/vega/vega-lite-api">vega-lite-api</a> - A JavaScript API for Vega-Lite.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/benfred/venn.js">venn.js</a> - Area proportional Venn and Euler diagrams</li>
+</ul>
+<ul>
+<li><a href="https://github.com/flrs/visavail">visavail</a> - Time data availability visualization</li>
+</ul>
+<ul>
+<li><a href="https://github.com/vizabi/vizabi">vizabi</a> - A framework for building visual data exploration tools [bubble, map, line, bar, sankey, donut]</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tgdwyer/WebCola">WebCola</a> - Layout for graph visualization and exploration</li>
+</ul>
+<ul>
+<li><a href="https://github.com/imkevinxu/xkcdgraphs">xkcdgraphs</a> - Xkcd style graphs [line]</li>
+</('ul', 0)>
+<h5>Third Party</h5>
+
+<ul>
+<li><a href="https://github.com/mhkeller/layercake">Layer Cake</a> - A graphics framework built on top of Svelte.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/plouc/nivo">nivo</a> - Dataviz components for React with isomorphic ability [bar, line, area, bubble, chord, heatmap]</li>
+</ul>
+<ul>
+<li><a href="https://github.com/swimlane/ngx-charts">ngx-charts</a> - Chart framework for Angular [bar, pie, line, area, polar, stacked, bubble]</li>
+</ul>
+<ul>
+<li><a href="https://github.com/finnfiddle/potion">potion</a> - Collection of React components for composing visualizations</li>
+</ul>
+<ul>
+<li><a href="https://github.com/codesuki/react-d3-components">react-d3-components</a> - D3 Components [bar, stacked, scatter, line, area, pie]</li>
+</ul>
+<ul>
+<li><a href="https://github.com/react-d3-library/react-d3-library">react-d3-library</a> - Library to use D3 in React [area, bar, line, pie, scatter]</li>
+</ul>
+<ul>
+<li><a href="https://github.com/rrag/react-stockcharts">react-stockcharts</a> - Highly customizable stock charts [area, line, scatter, bubble, bar, stacked, candlestick]</li>
+</ul>
+<ul>
+<li><a href="https://github.com/uber/react-vis">react-vis</a> - A collection of react components to render visualizations [area, bar, heatmap, line, scatter]</li>
+</ul>
+<ul>
+<li><a href="https://github.com/reaviz/reaviz">reaviz</a> - Data visualization library for React based on D3</li>
+</ul>
+<ul>
+<li><a href="https://github.com/recharts/recharts">recharts</a> - Re-designed charting library built with React</li>
+</ul>
+<ul>
+<li><a href="https://github.com/nteract/semiotic">semiotic</a> - A data visualization framework combining React & D3 [scatter, line, area]</li>
+</ul>
+<ul>
+<li><a href="https://github.com/FormidableLabs/victory">victory</a> - Composable React components for building visualizations [area, bar, candlestick, pie, line, scatter, voronoi]</li>
+</ul>
+<ul>
+<li><a href="https://github.com/hshoff/vx">vx</a> - Visualization components for React [bar, line, scatter, stacked, area, pattern, heatmap, pie, radial, map, geo]</li>
+</ul>
+<ul>
+<li><a href="https://github.com/GopherJ/Vs">Vs</a> - Declarative visualisation components for Vue.js [bar, line, area, pie, donut, stacked, sankey, timeline]</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ignoreintuition/v-chart-plugin">v-chart-plugin</a> - Easily bind a chart to the data stored in your Vue.js components.</li>
+</('ul', 0)>
+<h2>Maps</h2>
+
+<ul>
+<li><a href="https://github.com/rveciana/d3-composite-projections">d3-composite-projections</a> - Projections for showing countries' distant lands together</li>
+</ul>
+<ul>
+<li><a href="https://github.com/markmarkoh/datamaps">datamaps</a> - Customizable map visualizations in one file</li>
+</ul>
+<ul>
+<li><a href="https://github.com/shawnbot/topogram">d3-topogram</a> - Continuous area cartograms based on TopoJSON</li>
+</ul>
+<ul>
+<li><a href="https://github.com/bsouthga/d3-exploder">d3-exploder</a> - Lets you easily move and resize geographic features</li>
+</ul>
+<ul>
+<li><a href="https://github.com/d3/d3-geo-polygon">d3-geo-polygon</a> - Clipping and geometric operations for spherical polygons</li>
+</ul>
+<ul>
+<li><a href="https://github.com/d3/d3-geo-projection">d3-geo-projection</a> - Extended geographic projections</li>
+</ul>
+<ul>
+<li><a href="https://github.com/HarryStevens/d3-geo-scale-bar">d3-geo-scale-bar</a> - Displays automatic scale bars for projected geospatial data.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Fil/d3-geo-voronoi">d3-geo-voronoi</a> - Voronoi diagrams and Delaunay triangulation for the sphere</li>
+</ul>
+<ul>
+<li><a href="https://github.com/yaph/d3-geomap">d3-geomap</a> - Library for creating geographic maps</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sebastian-meier/d3.geo2rect">d3.geo2rect</a> - Morphing geojson polygons into rectangles</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Fil/d3-inertia">d3-inertia</a> - An extension to d3-drag that continues the mouse movement with some inertia</li>
+</ul>
+<ul>
+<li><a href="https://github.com/floledermann/mapmap.js">mapmap.js</a> - A data-driven API for interactive thematic maps</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Packet-Clearing-House/maptable">maptable</a> - Convert datasets to a set of visual components (Map, Filters, Table)</li>
+</ul>
+<ul>
+<li><a href="https://github.com/MinnPost/simple-map-d3">simple-map-d3</a> - Easy choropleth style maps</li>
+</ul>
+<ul>
+<li><a href="https://github.com/newsappsio/spam">spam</a> - Create maps with D3 and Canvas, easily</li>
+</('ul', 0)>
+<h5>Third Party</h5>
+
+<ul>
+<li><a href="https://github.com/Asymmetrik/leaflet-d3">leaflet-d3</a> - Collection of plugins for using D3 with Leaflet [map, geo]</li>
+</ul>
+<ul>
+<li><a href="https://github.com/WikimapsAtlas/WikimapsAtlas-generator">Wikimaps-D3js Atlas</a> - CLI to generate raster, topojson and svg maps [map, geo]</li>
+</ul>
+<ul>
+<li><a href="https://github.com/zcreativelabs/react-simple-maps">react-simple-maps</a> - An SVG mapping component library for React, built on top of d3-geo [map, geo]</li>
+</('ul', 0)>
+<h2>Utils</h2>
+
+<ul>
+<li><a href="https://github.com/crossfilter/crossfilter">crossfilter</a> - Library for exploring large multivariate datasets</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kristw/d3kit-timeline">d3kit-timeline</a> - Timeline component that labels do not overlap</li>
+</ul>
+<ul>
+<li><a href="https://github.com/GlobalWebIndex/d3scription">d3scription</a> - Tooltip with window edge collision detection</li>
+</ul>
+<ul>
+<li><a href="https://github.com/susielu/d3-annotation">d3-annotation</a> - Annotation helper with built-in annotation types</li>
+</ul>
+<ul>
+<li><a href="https://github.com/curran/d3-area-label">d3-area-label</a> - A library for placing labels in areas</li>
+</ul>
+<ul>
+<li><a href="https://github.com/bumbeishvili/d3-breadcrumbs">d3-breadcrumbs</a> - Simplifies breadcrumbs usage</li>
+</ul>
+<ul>
+<li><a href="https://github.com/curran/d3-component">d3-component</a> - Lightweight component abstraction</li>
+</ul>
+<ul>
+<li><a href="https://github.com/wbkd/d3-extended">d3-extended</a> - Extends d3 with some common jQuery functions</li>
+</ul>
+<ul>
+<li><a href="https://github.com/bahmutov/d3-helpers">d3-helpers</a> - Little utility functions</li>
+</ul>
+<ul>
+<li><a href="https://github.com/vijithassar/d3-history">d3-history</a> - Proper URL bar history</li>
+</ul>
+<ul>
+<li><a href="https://github.com/petulla/d3-hsluv">d3-hsluv</a> - Human-friendly HSL (Hue, Saturation, Lightness) color space.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tomgp/d3-iconarray">d3-iconarray</a> - A plug-in for aligning elements in grids</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pbeshai/d3-interpolate-path">d3-interpolate-path</a> - Interpolates paths with different number of points</li>
+</ul>
+<ul>
+<li><a href="https://github.com/gka/d3-jetpack">d3-jetpack</a> - Nifty convenience wrappers that speed up your daily work</li>
+</ul>
+<ul>
+<li><a href="https://github.com/skokenes/d3-lasso">d3-lasso</a> - Tag elements by drawing a line over or around objects</li>
+</ul>
+<ul>
+<li><a href="https://github.com/susielu/d3-legend">d3-legend</a> - Legend helper</li>
+</ul>
+<ul>
+<li><a href="https://github.com/nbremer/d3-loom">d3-loom</a> - Plugin to create a "loom" visualization</li>
+</ul>
+<ul>
+<li><a href="https://github.com/53seven/d3-nelson-rules">d3-nelson-rules</a> - Apply nelsons rules of process control to a set of data</li>
+</ul>
+<ul>
+<li><a href="https://github.com/efekarakus/d3-peaks">d3-peaks</a> - Find peaks in a noisy signal</li>
+</ul>
+<ul>
+<li><a href="https://github.com/armollica/d3-ring-note">d3-ring-note</a> - Plugin for placing circle and text annotations</li>
+</ul>
+<ul>
+<li><a href="https://github.com/schnerd/d3-scale-cluster">d3-scale-cluster</a> - Scale that clusters data into discrete groups</li>
+</ul>
+<ul>
+<li><a href="https://github.com/zazuko/d3-sparql">d3-sparql</a> - Utility for accessing data from SPARQL Endpoints</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ErikOnBike/d3-template">d3-template</a> - Plugin to create and render templates using D3's data binding mechanism</li>
+</ul>
+<ul>
+<li><a href="https://github.com/bumbeishvili/d3-tooltip">d3-tooltip</a> - Arrow shaped tooltip with shadows and dynamic content</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Kcnarf/d3-voronoi-treemap">d3-voronoi-treemap</a> - Computes a treemap based on a Voronoi tesselation</li>
+</ul>
+<ul>
+<li><a href="https://github.com/vijithassar/d3-xray">d3-xray</a> - Bookmarklet that logs results of the data joins as you mouse over</li>
+</ul>
+<ul>
+<li><a href="https://github.com/bizweekgraphics/swoopyarrows">swoopyarrows</a> - Plugin to create swoopy arrows</li>
+</ul>
+<ul>
+<li><a href="https://github.com/1wheel/swoopy-drag">swoopy-drag</a> - Artisanal label placement for d3 graphics</li>
+</ul>
+<ul>
+<li><a href="https://github.com/riccardoscalco/textures">textures</a> - SVG patterns for data visualization</li>
+</('ul', 0)>
+<h2>Miscellaneous</h2>
+
+<ul>
+<li><a href="https://github.com/ebemunk/chess-dataviz">chess-dataviz</a> - Chess dataviz library</li>
+</ul>
+<ul>
+<li><a href="https://github.com/fzaninotto/CodeFlower">codeflower</a> - Bird's eye view of the whole code</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jasondavies/d3-cloud">d3-cloud</a> - Word clouds</li>
+</ul>
+<ul>
+<li><a href="https://github.com/patorjk/d3-context-menu">d3-context-menu</a> - Helper to create context-menus</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sohamkamani/d3-force-gravity">d3-force-gravity</a> - Implement gravitational attraction (or force-field-like repulsion)</li>
+</ul>
+<ul>
+<li><a href="https://github.com/twosixlabs/d3-force-reuse">d3-force-reuse</a> - Faster force-directed graph layouts by reusing force approximations</li>
+</ul>
+<ul>
+<li><a href="https://github.com/twosixlabs/d3-force-sampled">d3-force-sampled</a> - Super fast, linear-time force-directed graph layouts by Random Vertex Sampling</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sebastian-meier/d3.sketchy">d3.sketchy</a> - Creates sketchy backgrounds, shapes and lines</li>
+</ul>
+<ul>
+<li><a href="https://github.com/d3plus/d3plus-text">d3plus-text</a> - Smart SVG text box with line wrapping and automatic font scaling</li>
+</ul>
+<ul>
+<li><a href="https://github.com/1wheel/graph-scroll">graph-scroll</a> - Simple scrolling events</li>
+</ul>
+<ul>
+<li><a href="https://github.com/knsv/mermaid">mermaid</a> - Generation of diagrams and flowcharts from text in a markdown style</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dborzov/netvis">netvis</a> - Visualize network communication for arbitrary protocols</li>
+</ul>
+<ul>
+<li><a href="https://github.com/PierreCapo/treeviz">treeviz</a> - Create customizable trees from json data</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Lissy93/twitter-sentiment-visualisation">twitter-sentiment-visualisation</a> - A series of D3.js charts showing realtime sentiment of Twitter data  </li>
+</('ul', 0)>
+<h2>Server side</h2>
+<ul>
+<li><a href="https://github.com/d3-node/d3-node">d3-node</a> - Static chart and map generation</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tracyhenry/Kyrix">Kyrix</a> - Interactive pan/zoom Visualizations with automatic server-side scaling support. </li>
+</('ul', 0)>
+<h2>Bl.ocks.org Profiles</h2>
+
+<ul>
+<li><a href="https://bl.ocks.org/1wheel">Adam Pearce - 1wheel</a></li>
+</ul>
+<ul>
+<li><a href="https://bl.ocks.org/ColinEberhardt">Colin Eberhardt - ColinEberhardt</a></li>
+</ul>
+<ul>
+<li><a href="https://bl.ocks.org/HarryStevens">Harry Stevens - HarryStevens</a></li>
+</ul>
+<ul>
+<li><a href="https://bl.ocks.org/LuisSevillano">Luis Sevillano - LuisSevillano</a></li>
+</ul>
+<ul>
+<li><a href="https://bl.ocks.org/d3indepth">Peter Cook - d3indepth</a></li>
+</ul>
+<ul>
+<li><a href="https://bl.ocks.org/emeeks">Elijah Meeks - emeeks</a></li>
+</ul>
+<ul>
+<li><a href="https://bl.ocks.org/enjalot">Ian Johnson - enjalot</a></li>
+</ul>
+<ul>
+<li><a href="https://bl.ocks.org/fil">Philippe Rivière - fil</a></li>
+</ul>
+<ul>
+<li><a href="https://bl.ocks.org/mbostock">Mike Bostock - mbostock</a></li>
+</ul>
+<ul>
+<li><a href="https://bl.ocks.org/mfilippo">Matteo Filipponi - mfilippo</a></li>
+</ul>
+<ul>
+<li><a href="https://bl.ocks.org/micahstubbs">Micah Stubbs - micahstubbs</a></li>
+</ul>
+<ul>
+<li><a href="https://bl.ocks.org/nbremer">Nadieh Bremer - nbremer</a></li>
+</ul>
+<ul>
+<li><a href="https://bl.ocks.org/nitaku">Matteo Abrate - nitaku</a></li>
+</ul>
+<ul>
+<li><a href="https://bl.ocks.org/susielu">Susie Lu - susielu</a></li>
+</ul>
+<ul>
+<li><a href="https://bl.ocks.org/sxywu">Shirley Wu - sxywu</a></li>
+</ul>
+<ul>
+<li><a href="https://bl.ocks.org/syntagmatic">Kai Chang - syntagmatic</a></li>
+</ul>
+<ul>
+<li><a href="https://bl.ocks.org/tomshanley">Tom Shanley - tomshanley</a></li>
+</ul>
+<ul>
+<li><a href="https://bl.ocks.org/vasturiano">Vasco Asturiano - vasturiano</a></li>
+</ul>
+<ul>
+<li><a href="https://bl.ocks.org/veltman">Noah Veltman - veltman</a></li>
+</ul>
+<ul>
+<li><a href="https://bl.ocks.org/zanarmstrong">Zan Armstrong - zanarmstrong</a></li>
+</ul>
+</body>
+</html>

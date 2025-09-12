@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML5</h1>
+
+<p><strong>Repository:</strong> https://github.com/diegocard/awesome-html5#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<p>Awesome HTML5 <a href="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg"><img src="https://github.com/sindresorhus/awesome" alt="Awesome</a>"> <a href="https://api.travis-ci.org/diegocard/awesome-html5.svg?branch=master"><img src="https://travis-ci.org/diegocard/awesome-html5" alt="Build Status</a>"></p>
+<p>=============</p>
+
+<p>A curated list of awesome HTML5 resources. Inspired by <a href="https://github.com/ziadoz/awesome-php">awesome-php</a> and <a href="https://github.com/vinta/awesome-python">awesome-python</a></p>
+
+<h2>Table of Contents</h2>
+<ul>
+<li><a href="#articles-and-standards">Articles and standards</a></li>
+</ul>
+<ul>
+<li><a href="#multimedia-capabilities">Multimedia capabilities</a></li>
+<ul>
+<li><a href="#audio">Audio</a></li>
+</ul>
+<ul>
+<li><a href="#media-capture">Media capture</a></li>
+</ul>
+<ul>
+<li><a href="#picture-in-picture">Picture in Picture</a></li>
+</ul>
+<ul>
+<li><a href="#speech-synthesis">Speech synthesis</a></li>
+</ul>
+<ul>
+<li><a href="#voice-recognition">Voice recognition</a></li>
+</ul>
+<ul>
+<li><a href="#virtual-reality">Virtual Reality (VR)</a></li>
+</ul>
+<ul>
+<li><a href="#web-animations">Web animations</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#elements">Elements</a></li>
+<ul>
+<li><a href="#canvas">Canvas</a></li>
+</ul>
+<ul>
+<li><a href="#head">Head</a></li>
+</ul>
+<ul>
+<li><a href="#sectioning">Sectioning</a></li>
+</ul>
+<ul>
+<li><a href="#media-elements">Media Elements</a></li>
+</ul>
+<ul>
+<li><a href="#forms">Forms</a></li>
+</ul>
+<ul>
+<li><a href="#time">Time</a></li>
+</ul>
+<ul>
+<li><a href="#webtt">WebVTT</a></li>
+</ul>
+<ul>
+<li><a href="#html-imports">HTML Imports</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#development-apis">Development APIs</a></li>
+<ul>
+<li><a href="#permissions">Permissions</a></li>
+</ul>
+<ul>
+<li><a href="#geolocation">Geolocation</a></li>
+</ul>
+<ul>
+<li><a href="#cryptography">Cryptography</a></li>
+</ul>
+<ul>
+<li><a href="#file">File</a></li>
+</ul>
+<ul>
+<li><a href="#frame-timing">Frame timing</a></li>
+</ul>
+<ul>
+<li><a href="#requestidlecallback">requestIdleCallback</a></li>
+</ul>
+<ul>
+<li><a href="#requestanimationframe">requestAnimationFrame</a></li>
+</ul>
+<ul>
+<li><a href="#web-payments">Web payments</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#semantics">Semantics</a></li>
+</ul>
+<ul>
+<li><a href="#accessibility">Accessibility</a></li>
+</ul>
+<ul>
+<li><a href="#dom-management">DOM management</a></li>
+<ul>
+<li><a href="#shadow-dom">Shadow DOM</a></li>
+</ul>
+<ul>
+<li><a href="#data-binding">Data Binding</a></li>
+</ul>
+<ul>
+<li><a href="#web-components">Web Components</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#progressive-web-apps">Progressive web apps</a></li>
+<ul>
+<li><a href="#service-workers">Service Workers</a></li>
+</ul>
+<ul>
+<li><a href="#offline-caching">Offline caching</a></li>
+</ul>
+<ul>
+<li><a href="#push-notifications">Push Notifications</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#client-side-storage">Client side storage</a></li>
+</ul>
+<ul>
+<li><a href="#performance">Performance</a></li>
+</ul>
+<ul>
+<li><a href="#mobile">Mobile</a></li>
+</ul>
+<ul>
+<li><a href="#communications-and-interoperability">Communications and interoperability</a></li>
+<ul>
+<li><a href="#web-sockets">Web Sockets</a></li>
+</ul>
+<ul>
+<li><a href="#webrtc">WebRTC</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#web-workers">Web Workers</a></li>
+</ul>
+<ul>
+<li><a href="#webgl">WebGL</a></li>
+</ul>
+<ul>
+<li><a href="#browser-compatibility">Browser compatibility</a></li>
+</ul>
+<ul>
+<li><a href="#books">Books</a></li>
+</ul>
+<ul>
+<li><a href="#game-development">Game development</a></li>
+</ul>
+<ul>
+<li><a href="#bootcamp">Bootcamp</a></li>
+</ul>
+<ul>
+<li><a href="#videos-and-keynotes">Videos and Keynotes</a></li>
+</ul>
+<ul>
+<li><a href="#websites-and-resources">Websites and resources</a></li>
+<ul>
+<li><a href="#websites">Websites</a></li>
+</ul>
+<ul>
+<li><a href="#weekly-news">Weekly news</a></li>
+</ul>
+<ul>
+<li><a href="#twitter">Twitter</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#contributing">Contributing</a></li>
+</('ul', 0)>
+<h2>Articles and standards</h2>
+
+<ul>
+<li><a href="https://w3c.github.io/html/">HTML 5.3</a> - Current HTML5 spec</li>
+</ul>
+<ul>
+<li><a href="https://www.smashingmagazine.com/2009/04/progressive-enhancement-what-it-is-and-how-to-use-it/">Progressive enhancement</a></li>
+</ul>
+<ul>
+<li><a href="https://extensiblewebmanifesto.org/">The extensible web manifesto</a></li>
+</ul>
+<ul>
+<li><a href="https://www.w3.org/TR/html5-diff/">Differences between HTML5 and HTML4 from W3C</a></li>
+</('ul', 0)>
+<h2>Multimedia capabilities</h2>
+
+<h3>Audio</h3>
+
+<ul>
+<li><a href="https://www.html5rocks.com/en/tutorials/webaudio/intro/?redirect<em>from</em>locale=es">Getting started with the Web Audio API</a></li>
+</ul>
+<ul>
+<li><a href="https://developer.mozilla.org/es/docs/Web<em>Audio</em>API">Web Audio API at MDN</a></li>
+</ul>
+<ul>
+<li><a href="https://jonathan.bergknoff.com/journal/making-a-guitar-tuner-html5">Making a Guitar Tuner with HTML5</a></li>
+</ul>
+<ul>
+<li><a href="https://www.twilio.com/blog/audio-visualisation-web-audio-api--react">Audio visualisation with the Web Audio API and React</a></li>
+</('ul', 0)>
+<h3>Media Capture</h3>
+
+<ul>
+<li><a href="https://www.html5rocks.com/es/tutorials/getusermedia/intro/">Capturing Audio & Video in HTML5</a></li>
+</ul>
+<ul>
+<li><a href="https://www.sitepoint.com/using-the-media-capture-api/">Using the media capture API</a></li>
+</('ul', 0)>
+<h3>Picture in Picture</h3>
+
+<ul>
+<li><a href="https://developers.google.com/web/updates/2018/10/watch-video-using-picture-in-picture">Chrome's new Picture in Picture API</a></li>
+</('ul', 0)>
+<h3>Speech Synthesis</h3>
+
+<ul>
+<li><a href="http://creative-punch.net/2014/10/intro-html5-speech-synthesis-api/">Intro to the HTML5 Speech Synthesis API</a></li>
+</ul>
+<ul>
+<li><a href="https://shapeshed.com/html5-speech-recognition-api/">Another useful intro</a></li>
+</('ul', 0)>
+<h3>Voice Recognition</h3>
+
+<ul>
+<li><a href="https://www.google.com/intl/en/chrome/demos/speech.html">Web speech API demo</a></li>
+</ul>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web<em>Speech</em>API/Using<em>the</em>Web<em>Speech</em>API">Using the Web Speech API</a></li>
+</ul>
+<ul>
+<li><a href="https://www.sitepoint.com/experimenting-web-speech-api/">Experimenting with the Web Speech API</a></li>
+</ul>
+<ul>
+<li><a href="https://www.talater.com/annyang/">Free voice recognition library (annyang)</a></li>
+</('ul', 0)>
+<h3>Virtual Reality</h3>
+
+<ul>
+<li><a href="https://blog.mozilla.org/blog/2018/09/18/firefox-reality-now-available/">Firefox Reality now available</a></li>
+</('ul', 0)>
+<h3>Web animations</h3>
+
+<ul>
+<li><a href="http://danielcwilson.com/blog/2015/07/animations-intro/">Intro to web animations</a></li>
+</ul>
+<ul>
+<li><a href="http://danielcwilson.com/blog/2016/08/why-waapi/">When to Use the Web Animations API</a></li>
+</('ul', 0)>
+<h2>Elements</h2>
+
+<h3>Canvas</h3>
+
+<ul>
+<li><a href="https://www.w3schools.com/tags/tag_canvas.asp">Brief description from W3 Schools</a></li>
+</ul>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial">Tutorial from MDN</a></li>
+</ul>
+<ul>
+<li><a href="https://www.html5canvastutorials.com/">Various Tutorials</a></li>
+</ul>
+<ul>
+<li><a href="https://simon.html5.org/dump/html5-canvas-cheat-sheet.html">Cheat Sheet</a></li>
+</('ul', 0)>
+<h3>Head</h3>
+
+<ul>
+<li><a href="https://gethead.info/">A list of things that go in your pages' HEAD element</a></li>
+</('ul', 0)>
+<h3>Sectioning</h3>
+
+<ul>
+<li><a href="https://blog.teamtreehouse.com/use-html5-sectioning-elements">How to Use The HTML5 Sectioning Elements</a></li>
+</('ul', 0)>
+<h3>Media Elements</h3>
+
+<ul>
+<li>Audio and Video</li>
+<ul>
+<li><a href="https://www.w3schools.com/tags/tag_audio.asp">audio tag from W3Schools</a></li>
+</ul>
+<ul>
+<li><a href="https://www.w3schools.com/tags/tag_video.asp">video tag from W3 Schools</a></li>
+</ul>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia<em>and</em>embedding/Video<em>and</em>audio_content">Tutorial from MDN</a></li>
+</ul>
+<ul>
+<li><a href="https://www.html5rocks.com/en/tutorials/getusermedia/intro/">Capturing audio and video in HTML5</a></li>
+</ul>
+</ul>
+<ul>
+<li>embed tag</li>
+<ul>
+<li><a href="https://www.w3schools.com/tags/tag_embed.asp">Brief description from W3 Schools</a></li>
+</ul>
+</ul>
+<ul>
+<li>source tag</li>
+<ul>
+<li><a href="https://www.w3schools.com/tags/tag_source.asp">Brief description from W3 Schools</a></li>
+</ul>
+</ul>
+<ul>
+<li>track tag</li>
+<ul>
+<li><a href="https://www.w3schools.com/tags/tag_track.asp">Brief description from W3 Schools</a></li>
+</('ul', 2)>
+</('ul', 0)>
+<h3>Forms</h3>
+
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms">Changes to forms in HTML5 from MDN</a></li>
+</ul>
+<ul>
+<li><a href="https://www.w3schools.com/html/html_forms.asp">HTML Forms</a></li>
+</('ul', 0)>
+<h3>Details</h3>
+
+<ul>
+<li><a href="https://blog.teamtreehouse.com/use-details-summary-elements">How to Use the Details and Summary Elements</a></li>
+</ul>
+<ul>
+<li><a href="https://www.smashingmagazine.com/2014/11/complete-polyfill-html5-details-element/">Details element polyfill</a></li>
+</('ul', 0)>
+<h3>Time</h3>
+
+<ul>
+<li><a href="https://www.sitepoint.com/html5-time-element-guide/">Time element guide</a></li>
+</('ul', 0)>
+<h3>WebVTT</h3>
+
+<ul>
+<li><a href="http://www.w3.org/TR/2014/WD-webvtt1-20141113/">First draft from W3C</a></li>
+</('ul', 0)>
+<h3>HTML Imports</h3>
+
+<ul>
+<li><a href="https://www.webcomponents.org/community/articles/introduction-to-html-imports">Introduction to HTML imports</a></li>
+</('ul', 0)>
+<h2>Development APIs</h2>
+
+<h3>Permissions</h3>
+
+<ul>
+<li><a href="https://developers.google.com/web/updates/2015/04/permissions-api-for-the-web">Permissions API for the Web by Google</a></li>
+</('ul', 0)>
+<h3>Geolocation</h3>
+
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API">Using Geolocation</a></li>
+</ul>
+<ul>
+<li><a href="https://code.tutsplus.com/tutorials/html5-apps-positioning-with-geolocation--mobile-456">HTML5 Apps: Positioning with Geolocation</a></li>
+</('ul', 0)>
+<h3>Cryptography</h3>
+
+<ul>
+<li><a href="http://www.w3.org/TR/WebCryptoAPI/">Web Cryptography API draft</a></li>
+</ul>
+<ul>
+<li><a href="http://diafygi.github.io/webcrypto-examples/">Table of web cryptography support</a></li>
+</ul>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/crypto">Window.crypto</a></li>
+</ul>
+<ul>
+<li><a href="http://www.w3.org/2012/webcrypto/webcrypto-next-workshop/report.html">Cryptography next steps from W3C</a></li>
+</('ul', 0)>
+<h3>File</h3>
+
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/File/Using<em>files</em>from<em>web</em>applications">Using files from web applications (MDN)</a></li>
+</ul>
+<ul>
+<li><a href="https://www.html5rocks.com/en/tutorials/file/dndfiles/">Reading local files in JavaScript</a></li>
+</ul>
+<ul>
+<li><a href="https://w3c.github.io/FileAPI/">File API Draft</a></li>
+</ul>
+<ul>
+<li><a href="http://www.w3.org/TR/file-system-api/">File system API</a></li>
+</('ul', 0)>
+<h3>Frame timing</h3>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=4zoC3eaa9z0">Video from google developers</a></li>
+</ul>
+<ul>
+<li><a href="https://w3c.github.io/frame-timing/">Draft from W3C</a></li>
+</('ul', 0)>
+<h3>requestIdleCallback</h3>
+
+<ul>
+<li><a href="https://developers.google.com/web/updates/2015/08/using-requestidlecallback">On Google developers</a></li>
+</('ul', 0)>
+<h3>requestAnimationFrame</h3>
+
+<ul>
+<li><a href="https://css-tricks.com/using-requestanimationframe/">Using requestAnimationFrame (CSS Tricks)</a></li>
+</ul>
+<ul>
+<li><a href="https://medium.com/@paul_irish/requestanimationframe-scheduling-for-nerds-9c57f7438ef4#.9gev5fdub">Great article by Paul Irish</a></li>
+</('ul', 0)>
+<h3>Web payments</h3>
+
+<ul>
+<li><a href="https://developers.google.com/web/fundamentals/payments/">Web payments API overview</a></li>
+</('ul', 0)>
+<h2>Semantics</h2>
+
+<ul>
+<li><a href="https://www.w3schools.com/html/html5<em>semantic</em>elements.asp">Semantic elements from W3Schools</a></li>
+</ul>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using<em>HTML</em>sections<em>and</em>outlines">Sections and Outlines of an HTML5 from MDN Document</a></li>
+</ul>
+<ul>
+<li><a href="https://www.smashingmagazine.com/2011/11/html5-semantics/">HTML5 Semantics from Smashing Magazine</a></li>
+</ul>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction<em>to</em>HTML/Advanced<em>text</em>formatting">Lesser known semantics element from W3C & Opera</a></li>
+</('ul', 0)>
+<h2>Accessibility</h2>
+
+<ul>
+<li><a href="https://developers.google.com/web/fundamentals/accessibility/">Excellent intro to accessibility from Google's fundamentals</a></li>
+</ul>
+<ul>
+<li><a href="https://webaim.org/standards/wcag/checklist">Accessibility checklist for web developers</a></li>
+</ul>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA">ARIA from MDN</a></li>
+</ul>
+<ul>
+<li><a href="https://a11y-style-guide.com/style-guide/">Great Accessibility Style Guide</a></li>
+</ul>
+<ul>
+<li><a href="https://alistapart.com/article/designing-for-cognitive-differences">Designing for Cognitive Differences</a></li>
+</ul>
+<ul>
+<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/">Guide on how HTML elements are supported by screen readers</a></li>
+</ul>
+<ul>
+<li><a href="https://dynomapper.com/blog/27-accessibility-testing/246-top-25-awesome-accessibility-testing-tools-for-websites">Top 25 Accessibility Testing Tools for Website</a></li>
+</ul>
+<ul>
+<li><a href="http://www.w3.org/WAI/ER/tools/">Web Accessibility Evaluation Tools List from W3</a></li>
+</ul>
+<ul>
+<li><a href="http://pa11y.org/">Pa11y - automated accessibility testing</a></li>
+</ul>
+<ul>
+<li><a href="https://developer.paciellogroup.com/blog/2014/10/aria-in-html-there-goes-the-neighborhood/">Aria in HTML</a></li>
+</ul>
+<ul>
+<li><a href="https://2017.ind.ie/blog/accessible-video-player/">Accessible and Responsive HTML5 Video Player</a></li>
+</('ul', 0)>
+<h2>DOM Management</h2>
+
+<h3>Shadow DOM</h3>
+
+<ul>
+<li><a href="https://developers.google.com/web/fundamentals/web-components/shadowdom">Shadow DOM v1: self-contained web components</a></li>
+</ul>
+<ul>
+<li><a href="https://hayato.io/2016/shadowdomv1/">What's New in Shadow DOM v1 (by examples)</a></li>
+</('ul', 0)>
+<h3>Data Binding</h3>
+
+<ul>
+<li><a href="https://www.html5rocks.com/en/tutorials/es7/observe/">Data-binding Revolutions with Object.observe()</a></li>
+</('ul', 0)>
+<h3>Web Components</h3>
+
+<ul>
+<li><a href="https://developers.google.com/web/fundamentals/web-components/customelements">Custom elements v1: reusable web components</a></li>
+</ul>
+<ul>
+<li><a href="https://hacks.mozilla.org/2018/11/the-power-of-web-components/">The power of web components</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/polymer">Polymer project</a></li>
+</ul>
+<ul>
+<li><a href="https://www.webcomponents.org/community/articles/a-quick-polymer-introduction">A Quick Introduction To Polymer</a></li>
+</ul>
+<ul>
+<li><a href="https://www.polymer-project.org/blog/es6">Building web components using Polymer and ES6 classes</a></li>
+</ul>
+<ul>
+<li><a href="http://www.backalleycoder.com/2016/08/26/demythstifying-web-components/">Demythstifying Web Components</a></li>
+</ul>
+<ul>
+<li><a href="https://www.html5rocks.com/en/tutorials/webcomponents/imports/">HTML imports</a></li>
+</ul>
+<ul>
+<li><a href="https://www.html5rocks.com/en/tutorials/webcomponents/yeoman/">Building Webapps with Yeoman and Polymer</a></li>
+</('ul', 0)>
+<h2>Progressive web apps</h2>
+
+<ul>
+<li><a href="https://developers.google.com/web/progressive-web-apps/">Intro to PWAs</a></li>
+</ul>
+<ul>
+<li><a href="https://www.smashingmagazine.com/2018/11/guide-pwa-progressive-web-applications/">An Extensive Guide To Progressive Web Applications</a></li>
+</ul>
+<ul>
+<li><a href="https://cloudfour.com/thinks/the-business-case-for-progressive-web-apps/">The Business Case for Progressive Web Apps</a></li>
+</('ul', 0)>
+<h3>Service Workers</h3>
+
+<ul>
+<li><a href="https://developers.google.com/web/fundamentals/primers/service-workers/">Service Worker fundamentals</a></li>
+</ul>
+<ul>
+<li><a href="https://serviceworkies.com/">ServiceWorkies - Learn SWs playing a game</a></li>
+</ul>
+<ul>
+<li><a href="https://serviceworke.rs/">The Service Worker Cookbook</a></li>
+</ul>
+<ul>
+<li><a href="https://www.madebymike.com.au/writing/service-workers/">Offline content with service workers</a></li>
+</ul>
+<ul>
+<li><a href="https://www.smashingmagazine.com/2016/02/making-a-service-worker/">Making a Service Worker: a case study (Smashing Magazine)</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/w3c/ServiceWorker/blob/master/explainer.md">Service workers explained</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=IIRj8DftkqE">Service Worker Libraries, Totally Tooling Tips</a></li>
+</ul>
+<ul>
+<li><a href="https://ponyfoo.com/articles/serviceworker-revolution">ServiceWorker: Revolution of the Web Platform</a></li>
+</('ul', 0)>
+<h3>Offline caching</h3>
+
+<ul>
+<li><a href="https://developers.google.com/web/fundamentals/instant-and-offline/offline-cookbook/">The Offline Cookbook</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=qDJAz3IIq18">Instant-loading Offline-first (Progressive Web App Summit 2016)</a></li>
+</ul>
+<ul>
+<li><a href="https://medium.com/dev-channel/offline-storage-for-progressive-web-apps-70d52695513c#.jsbxgywzz">Offline Storage for Progressive Web Apps (article by Addy Osmani)</a></li>
+</ul>
+<ul>
+<li><a href="https://www.html5rocks.com/en/tutorials/appcache/beginner/">A Beginner's Guide to Using the Application Cache</a></li>
+</('ul', 0)>
+<h3>Push Notifications</h3>
+
+<ul>
+<li><a href="https://developers.google.com/web/fundamentals/push-notifications/">Web Push Notifications (Google's Web fundamentals)</a></li>
+</ul>
+<ul>
+<li><a href="http://w3c.github.io/push-api/">Push API W3C draft</a></li>
+</ul>
+<ul>
+<li><a href="https://notifications.spec.whatwg.org/">Notifications API spec</a></li>
+</('ul', 0)>
+<h2>Client side storage</h2>
+
+<ul>
+<li><a href="https://www.html5rocks.com/en/tutorials/offline/storage/">Client-Side Storage</a></li>
+</ul>
+<ul>
+<li><a href="https://jakearchibald.com/2014/offline-cookbook/">Offline Cookbook</a></li>
+</ul>
+<ul>
+<li><a href="https://www.codemag.com/Article/1411041">Introduction to IndexedDB</a></li>
+</ul>
+<ul>
+<li><a href="https://code.tutsplus.com/tutorials/real-world-off-line-data-storage--net-34063">Real-World Off-Line Data Storage</a></li>
+</ul>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Overlay<em>Extensions/XUL</em>School/Local_Storage">Local storage tutorial</a></li>
+</('ul', 0)>
+<h2>Performance</h2>
+
+<ul>
+<li><a href="https://www.ampproject.org/learn/overview/">Accelerated Mobile Pages (AMP)</a></li>
+</ul>
+<ul>
+<li><a href="https://developers.google.com/speed/docs/insights/rules">Google developers best practices</a></li>
+</ul>
+<ul>
+<li><a href="https://developers.google.com/web/fundamentals/performance/why-performance-matters/">Optimizing performance from Google Web Fundamentals</a></li>
+</ul>
+<ul>
+<li><a href="http://www.w3.org/TR/2014/WD-resource-hints-20141021/">Resource hints draft (preconnect and preload)</a></li>
+</ul>
+<ul>
+<li><a href="https://medium.com/@luisvieira_gmr/html5-prefetch-1e54f6dda15d">Prefetching and prerendeding</a></li>
+</ul>
+<ul>
+<li><a href="https://www.html5rocks.com/en/tutorials/speed/img-compression/">Image compression</a></li>
+</ul>
+<ul>
+<li><a href="https://www.html5rocks.com/en/tutorials/speed/txt-compression/">Text compression</a></li>
+</ul>
+<ul>
+<li><a href="http://www.w3.org/TR/resource-timing/">Resource timing spec</a></li>
+</('ul', 0)>
+<h2>Mobile</h2>
+
+<ul>
+<li><a href="https://developers.google.com/web/fundamentals/web-app-manifest/">The Web App Manifest (Google's fundamentals)</a></li>
+</ul>
+<ul>
+<li><a href="https://www.html5rocks.com/webappfieldguide/toc/index/">Field guide to web applications</a></li>
+</ul>
+<ul>
+<li><a href="http://ccoenraets.github.io/cordova-tutorial/">Apache Cordova tutorial</a></li>
+</ul>
+<ul>
+<li><a href="https://code.tutsplus.com/tutorials/phonegap-from-scratch-introduction--mobile-9171">PhoneGap from Scratch</a></li>
+</ul>
+<ul>
+<li><a href="https://www.html5rocks.com/en/tutorials/speed/quick/">Best practices for mobile web apps</a></li>
+</ul>
+<ul>
+<li><a href="https://docs.telerik.com/kendo-ui/controls/hybrid/introduction">Build mobile apps with Kendo UI</a></li>
+</ul>
+<ul>
+<li><a href="https://code.tutsplus.com/tutorials/html5-vibration-api--mobile-22585">HTML5 Vibration API</a></li>
+</ul>
+<ul>
+<li><a href="https://code.tutsplus.com/tutorials/html5-battery-status-api--mobile-22795">HTML5 Battery Status API</a></li>
+</ul>
+<ul>
+<li><a href="https://eprint.iacr.org/2015/616.pdf">Privacy analysis of the HTML5 Battery Status API</a></li>
+</ul>
+<ul>
+<li><a href="https://code.tutsplus.com/tutorials/html5-network-information-api--cms-21598">HTML5 Network Information API</a></li>
+</ul>
+<ul>
+<li><a href="https://docs.sencha.com/">Sencha Touch tutorials</a></li>
+</('ul', 0)>
+<h2>Communications and interoperability</h2>
+
+<h3>Web Sockets</h3>
+
+<ul>
+<li><a href="https://www.html5rocks.com/en/tutorials/websockets/basics/">Introducing Websockets</a></li>
+</ul>
+<ul>
+<li><a href="https://www.websocket.org/aboutwebsocket.html">About HTML5 WebSocket</a></li>
+</ul>
+<ul>
+<li><a href="http://www.tutorialspark.com/html5/HTML5_WebSockets.php">HTML5 Web Sockets API</a></li>
+</('ul', 0)>
+<h3>WebRTC</h3>
+
+<ul>
+<li><a href="https://www.innoarchitech.com/what-is-webrtc-and-how-does-it-work/">What is WebRTC and how does it work</a></li>
+</ul>
+<ul>
+<li><a href="https://blog.carbonfive.com/2014/10/16/webrtc-made-simple/">WebRTC made simple</a></li>
+</ul>
+<ul>
+<li><a href="https://www.html5rocks.com/en/tutorials/webrtc/datachannels/">WebRTC data channels tutorial</a></li>
+</ul>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Games/Techniques/WebRTC<em>data</em>channels">WebRTC data channels from MDN</a></li>
+</('ul', 0)>
+<h2>Web Workers</h2>
+
+<ul>
+<li><a href="https://www.html5rocks.com/en/tutorials/workers/basics/">Web Worker Basics</a></li>
+</ul>
+<ul>
+<li><a href="https://hacks.mozilla.org/2015/07/how-fast-are-web-workers/">How fast are web workers?</a></li>
+</ul>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web<em>Workers</em>API/Using<em>web</em>workers">Web Workers in MDN</a></li>
+</ul>
+<ul>
+<li><a href="https://code.tutsplus.com/tutorials/getting-started-with-web-workers--net-27667">Getting started with Web Workers</a></li>
+</('ul', 0)>
+<h2>WebGL</h2>
+
+<ul>
+<li><a href="https://www.html5rocks.com/en/tutorials/webgl/webgl_fundamentals/">WebGL Fundamentals</a></li>
+</('ul', 0)>
+<h2>Browser compatibility</h2>
+
+<ul>
+<li><a href="http://www.iwanttouse.com/">I want to use</a></li>
+</ul>
+<ul>
+<li><a href="https://caniuse.com/">Can I use...</a></li>
+</ul>
+<ul>
+<li><a href="http://w3c.github.io/developers/tools/">W3C quality tools</a></li>
+</ul>
+<ul>
+<li><a href="http://beta.html5test.com/">HTML5 test</a></li>
+</ul>
+<ul>
+<li><a href="https://bestvpn.org/html5demos/">HTML5 demos</a></li>
+</('ul', 0)>
+<h2>Books</h2>
+
+<ul>
+<li><a href="http://diveinto.html5doctor.com/">Dive Into HTML5</a></li>
+</ul>
+<ul>
+<li><a href="https://www.amazon.com/HTML5-Running-Dive-Future-Development/dp/0596806027">HTML5: Up and Running</a></li>
+</ul>
+<ul>
+<li><a href="http://shop.oreilly.com/product/0636920021360.do">Using the HTML5 Filesystem API</a></li>
+</ul>
+<ul>
+<li><a href="https://www.apress.com/us/book/9781430266976">HTML5 Game Development Insights</a></li>
+</ul>
+<ul>
+<li><a href="https://www.manning.com/books/web-design-playground">Web Design Playground: HTML & CSS The Interactive Way</a></li>
+</('ul', 0)>
+<h2>Game development</h2>
+
+<ul>
+<li><a href="https://hacks.mozilla.org/2013/09/getting-started-with-html5-game-development/">Getting started with HTML5 Game Development from Mozilla Hacks</a></li>
+</ul>
+<ul>
+<li><a href="https://hacks.mozilla.org/2016/02/html-5-game-development-video-series/">HTML 5 game development video series by Mozilla</a></li>
+</ul>
+<ul>
+<li><a href="http://html5gamedevelopment.com/">Info, news and tutorials</a></li>
+</ul>
+<ul>
+<li><a href="https://html5-game-development.zeef.com/andre.antonio.schmitz">Over 380 resources on HTML5 game development</a></li>
+</ul>
+<ul>
+<li>Opensource JavaScript game engines</li>
+<ul>
+<li><a href="https://github.com/pixijs/pixi.js">Pixi.js</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/photonstorm/phaser">Phaser</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/melonjs/melonJS">MelonJS</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/gamelab/kiwi.js">Kiwi.js</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/craftyjs/Crafty">Crafty</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/wellcaffeinated/PhysicsJS">PhysicsJS</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/shakiba/stage.js">Stage.js</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/cocos2d/cocos2d-html5">Cocos2d</a></li>
+</('ul', 2)>
+</('ul', 0)>
+<h2>Bootcamp</h2>
+<p>*<a href="https://www.freecodecamp.org/">Learn coding for free online</a></p>
+<p>*<a href="https://www.khanacademy.org/">Free online cources</a></p>
+
+<h2>Videos and Keynotes</h2>
+
+<ul>
+<li><a href="https://html5devconf.com/videos.html">HTML5 Developer Conference</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=DH1vTVkqCDQ">Polymer: declarative, encapsulated, reusable components</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=EXjPsvwIDwU">Making the mobile web fast, feature-rich, and beautiful</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=euCNWhs7ivQ">Dart: HTML of the Future, Today!</a></li>
+</('ul', 0)>
+<h2>Websites and resources</h2>
+
+<h3>Websites</h3>
+
+<ul>
+<li><a href="https://webplatform.github.io/docs/Main_Page/index.html">HTML official reference</a> (allows collaborative modification of content like wiki)</li>
+</ul>
+<ul>
+<li><a href="https://www.html5rocks.com/en/">HTML5 Rocks</a> (news, tutorials and updates)</li>
+</ul>
+<ul>
+<li><a href="http://html5gallery.com/">HTML5 Gallery</a> (a showcase of sites using HTML5 markup and API's)</li>
+</ul>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML">HTML5 development guide from MDN</a></li>
+</ul>
+<ul>
+<li><a href="http://www.w3.org/2014/06/w3c-highlights/">W3C Highlights form June 2014</a></li>
+</ul>
+<ul>
+<li><a href="https://html5please.com/">HTML5 Please</a> (Know when HTML5 feature are ready to use)</li>
+</ul>
+<ul>
+<li><a href="https://keenhtml.com">Keen HTML</a> (Free interactive lessons to learn HTML)</li>
+</ul>
+<ul>
+<li><a href="https://css-tricks.com/complete-guide-table-element/">A Complete Guide to the Table Element </a> </li>
+</('ul', 0)>
+<h3>Weekly news</h3>
+
+<ul>
+<li><a href="https://frontendfoc.us/">HTML5 Weekly</a></li>
+</ul>
+<ul>
+<li><a href="https://hacks.mozilla.org/category/mozilla-hacks-weekly/">Mozilla Hacks Weekly Articles</a></li>
+</ul>
+<ul>
+<li><a href="http://responsivedesignweekly.com/">Responsive Design Newsletter</a></li>
+</('ul', 0)>
+<h3>Twitter</h3>
+
+<ul>
+<li><a href="https://twitter.com/html5">@html5</a></li>
+</ul>
+<ul>
+<li><a href="https://twitter.com/html5rock">@html5rock</a></li>
+</ul>
+<ul>
+<li><a href="https://twitter.com/html5gallery">@html5gallery</a></li>
+</ul>
+<ul>
+<li><a href="https://twitter.com/html5doctor">@html5doctor</a></li>
+</ul>
+<ul>
+<li><a href="https://twitter.com/GameDevHTML5">@GameDevHTML5</a></li>
+</ul>
+<ul>
+<li><a href="https://twitter.com/mozhacks">@mozhacks</a></li>
+</ul>
+<ul>
+<li><a href="https://twitter.com/googlechrome">@googlechrome</a></li>
+</('ul', 0)>
+<h2>Other awesome lists</h2>
+
+<ul>
+<li><a href="https://github.com/bayandin/awesome-awesomeness">awesome-awesomeness</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/jnv/lists">lists</a></li>
+</ul>
+<ul>
+<li><a href="https://hackr.io/tutorials/learn-html-5">Community Curated Resources</a></li>
+</('ul', 0)>
+<h2>Contributing</h2>
+
+<p>Your contributions are always welcome!</p>
+
+</body>
+</html>

@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>React</h1>
+
+<p><strong>Repository:</strong> https://github.com/enaqx/awesome-react#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<h1>Awesome React <a href="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg"><img src="https://github.com/sindresorhus/awesome" alt="Awesome</a>"></h1>
+
+<p>A collection of awesome things regarding the React ecosystem.</p>
+
+<ul>
+<li><a href="#react">React</a></li>
+<ul>
+<li><a href="#react-general-resources">React General Resources</a></li>
+</ul>
+<ul>
+<li><a href="#react-tutorials">React Tutorials</a></li>
+</ul>
+<ul>
+<li><a href="#react-frameworks">React Frameworks</a></li>
+</ul>
+<ul>
+<li><a href="#react-component-libraries">React Component Libraries</a></li>
+</ul>
+<ul>
+<li><a href="#react-state-management-and-data-fetching">React State Management and Data Fetching</a></li>
+</ul>
+<ul>
+<li><a href="#react-styling">React Styling</a></li>
+</ul>
+<ul>
+<li><a href="#react-routing">React Routing</a></li>
+</ul>
+<ul>
+<li><a href="#react-development-tools">React Development Tools</a></li>
+</ul>
+<ul>
+<li><a href="#react-libraries">React Libraries</a></li>
+</ul>
+<ul>
+<li><a href="#react-testing">React Testing</a></li>
+</ul>
+<ul>
+<li><a href="#react-awesome-components">React Awesome Components</a></li>
+</ul>
+<ul>
+<li><a href="#react-components-sandboxes">React Components Sandboxes</a></li>
+</ul>
+<ul>
+<li><a href="#react-forms">React Forms</a></li>
+</ul>
+<ul>
+<li><a href="#react-tables-and-grids">React Tables and Grids</a></li>
+</ul>
+<ul>
+<li><a href="#react-maps">React Maps</a></li>
+</ul>
+<ul>
+<li><a href="#react-charts">React Charts</a></li>
+</ul>
+<ul>
+<li><a href="#react-renderers">React Renderers</a></li>
+</ul>
+<ul>
+<li><a href="#react-internationalization">React Internationalization</a></li>
+</ul>
+<ul>
+<li><a href="#react-graphics-and-animations">React Graphics and Animations</a></li>
+</ul>
+<ul>
+<li><a href="#react-integration">React Integration</a></li>
+</ul>
+<ul>
+<li><a href="#react-real-apps">React Real Apps</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#react-native">React Native</a></li>
+<ul>
+<li><a href="#react-native-general-resources">React Native General Resources</a></li>
+</ul>
+<ul>
+<li><a href="#react-native-navigation">React Native Navigation</a></li>
+</ul>
+<ul>
+<li><a href="#react-native-awesome-components">React Native Awesome Components</a></li>
+</ul>
+<ul>
+<li><a href="#react-native-libraries">React Native Libraries</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#contribution">Contribution</a></li>
+</('ul', 0)>
+<h3>React</h3>
+
+<h4>React General Resources</h4>
+
+<ul>
+<li><a href="https://react.dev/">React Official Website</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/facebook/react">React GitHub</a></li>
+</ul>
+<ul>
+<li><a href="http://www.reactiflux.com/">Reactiflux Discord Channel</a></li>
+</ul>
+<ul>
+<li><a href="https://react.dev/community">React Community</a></li>
+</ul>
+<ul>
+<li><a href="https://react.dev/community/conferences">React Conferences</a></li>
+</ul>
+<ul>
+<li><a href="https://codesandbox.io/s/new">React CodeSandbox Playground</a></li>
+</('ul', 0)>
+<h4>React Tutorials</h4>
+
+<ul>
+<li><a href="https://react.dev/learn">React Official Tutorial</a></li>
+</ul>
+<ul>
+<li><a href="https://code.visualstudio.com/docs/nodejs/reactjs-tutorial">Using React in Visual Studio Code</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/sudheerj/reactjs-interview-questions">React Interview Questions & Answers</a></li>
+</ul>
+<ul>
+<li><a href="https://www.patterns.dev/">Design patterns and Component patterns for building powerful Web Apps</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/alan2207/bulletproof-react">A simple, scalable, and powerful architecture for building production ready React applications</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/typescript-cheatsheets/react-typescript-cheatsheet">Cheatsheets for experienced React developers getting started with TypeScript</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/howtographql/howtographql">The Fullstack Tutorial for GraphQL</a></li>
+</('ul', 0)>
+<h4>React Frameworks</h4>
+
+<ul>
+<li><a href="https://github.com/vercel/next.js">next</a> - The React Framework</li>
+</ul>
+<ul>
+<li><a href="https://github.com/remix-run/remix">remix</a> - Full stack web Framework that lets you focus on the user interface</li>
+</ul>
+<ul>
+<li><a href="https://github.com/gatsbyjs/gatsby">gatsby</a> - Build modern websites with React</li>
+</ul>
+<ul>
+<li><a href="https://github.com/marmelab/react-admin">react-admin</a> - A frontend Framework for building B2B applications</li>
+</ul>
+<ul>
+<li><a href="https://github.com/refinedev/refine">refine</a> - Build your React-based CRUD applications, without constraints</li>
+</('ul', 0)>
+<h4>React Component Libraries</h4>
+
+<ul>
+<li><a href="https://github.com/mui/material-ui">material-ui</a> - Ready-to-use foundational React components</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ant-design/ant-design">ant-design</a> - An enterprise-class UI design language and React UI library</li>
+</ul>
+<ul>
+<li><a href="https://github.com/shadcn-ui/ui">shadcn-ui</a> - Beautifully designed components built using Radix UI and Tailwind CSS</li>
+</ul>
+<ul>
+<li><a href="https://github.com/react-bootstrap/react-bootstrap">react-bootstrap</a> - Bootstrap components built with React</li>
+</ul>
+<ul>
+<li><a href="https://github.com/microsoft/fluentui">fluentui</a> - Microsoft's Fluent UI</li>
+</ul>
+<ul>
+<li><a href="https://github.com/framework7io/framework7">framework7</a> - Full featured HTML framework for building iOS & Android apps</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ariakit/ariakit">ariakit</a> - Toolkit for building accessible web apps with React</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mantinedev/mantine">mantine</a> - Fully featured React components library</li>
+</ul>
+<ul>
+<li><a href="https://github.com/resend/react-email">react-email</a> - Unstyled components for creating beautiful emails</li>
+</('ul', 0)>
+<h4>React State Management and Data Fetching</h4>
+
+<ul>
+<li><a href="https://github.com/reduxjs/redux">redux</a> - Predictable State Container for JavaScript Apps</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mobxjs/mobx">mobx</a> - Simple, scalable state management</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pmndrs/zustand">zustand</a> - Bear necessities for state management in React</li>
+</ul>
+<ul>
+<li><a href="https://github.com/TanStack/query">tanstack-query</a> - Powerful asynchronous state management</li>
+</ul>
+<ul>
+<li><a href="https://github.com/vercel/swr">swr</a> - React Hooks for Data Fetching</li>
+</ul>
+<ul>
+<li><a href="https://github.com/apollographql/apollo-client">apollo-client</a> - A fully-featured, production ready caching GraphQL client</li>
+</ul>
+<ul>
+<li><a href="https://github.com/facebook/relay">relay</a> - A framework for building data-driven React applications</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pmndrs/jotai">jotai</a> - Primitive and flexible state management for React</li>
+</ul>
+<ul>
+<li><a href="https://github.com/statelyai/xstate">xstate</a> - State machines and statecharts for the modern web</li>
+</ul>
+<ul>
+<li><a href="https://github.com/zerobias/effector">effector</a> - Business logic with ease</li>
+</ul>
+<ul>
+<li><a href="https://github.com/immerjs/immer">immer</a> - Create the next immutable state by mutating the current one</li>
+</ul>
+<ul>
+<li><a href="https://github.com/immutable-js/immutable-js">immutable-js</a> - Immutable persistent data collections for Javascript</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pubkey/rxdb">rxdb</a> - A fast, offline-first, reactive database for JavaScript Applications</li>
+</('ul', 0)>
+<h4>React Styling</h4>
+
+<ul>
+<li><a href="https://github.com/styled-components/styled-components">styled-components</a> - Visual primitives for the component age</li>
+</ul>
+<ul>
+<li><a href="https://github.com/emotion-js/emotion">emotion</a> - CSS-in-JS library designed for high performance style composition</li>
+</ul>
+<ul>
+<li><a href="https://github.com/seek-oss/vanilla-extract">vanilla-extract</a> - Zero-runtime Stylesheets-in-TypeScript</li>
+</('ul', 0)>
+<h4>React Routing</h4>
+
+<ul>
+<li><a href="https://github.com/remix-run/react-router">react-router</a> - Declarative routing for React</li>
+</ul>
+<ul>
+<li><a href="https://github.com/molefrog/wouter">wouter</a> - A minimalist-friendly routing</li>
+</ul>
+<ul>
+<li><a href="https://github.com/TanStack/router">tanstack-router</a> - Type-safe router with built-in caching & URL state management</li>
+</('ul', 0)>
+<h4>React Development Tools</h4>
+
+<ul>
+<li><a href="https://github.com/facebook/create-react-app">create-react-app</a> - Set up a modern Web app by running one command</li>
+</ul>
+<ul>
+<li><a href="https://github.com/vitejs/vite">vite</a> - Next Generation Frontend Tooling</li>
+</ul>
+<ul>
+<li><a href="https://github.com/parcel-bundler/parcel">parcel</a> - The zero configuration build tool for the web</li>
+</ul>
+<ul>
+<li><a href="https://github.com/aidenybai/million">million</a> - An extremely fast and lightweight optimizing compiler</li>
+</ul>
+<ul>
+<li><a href="https://github.com/skellock/reactotron">reactotron</a> - A desktop app for inspecting your React and React Native projects</li>
+</ul>
+<ul>
+<li><a href="https://github.com/yannickcr/eslint-plugin-react">eslint-plugin-react</a> - React specific linting rules for ESLint</li>
+</ul>
+<ul>
+<li><a href="https://github.com/welldone-software/why-did-you-render">why-did-you-render</a> - Monkey patches React to notify you about avoidable re-renders</li>
+</('ul', 0)>
+<h4>React Libraries</h4>
+
+<ul>
+<li><a href="https://github.com/preactjs/preact">preact</a> - Fast React alternative with the same modern API</li>
+</ul>
+<ul>
+<li><a href="https://github.com/floating-ui/floating-ui">floating-ui</a> - Toolkit to create floating elements</li>
+</ul>
+<ul>
+<li><a href="https://github.com/gregberge/loadable-components">loadable-components</a> - The recommended Code Splitting library for React</li>
+</ul>
+<ul>
+<li><a href="https://github.com/rpldy/react-uploady">react-uploady</a> - Modern file-upload components & hooks for React</li>
+</ul>
+<ul>
+<li><a href="https://github.com/downshift-js/downshift">downshift</a> - React autocomplete, combobox or select dropdown components</li>
+</ul>
+<ul>
+<li><a href="https://github.com/bvaughn/react-error-boundary">react-error-boundary</a> - A React error boundary component that lets you catch errors</li>
+</('ul', 0)>
+<h4>React Testing</h4>
+
+<ul>
+<li><a href="https://github.com/facebook/jest">jest</a> - Delightful JavaScript Testing</li>
+</ul>
+<ul>
+<li><a href="https://github.com/testing-library/react-testing-library">react-testing-library</a> - Simple and complete React DOM testing utilities</li>
+</ul>
+<ul>
+<li><a href="https://github.com/cypress-io/cypress">cypress</a> - Fast, easy and reliable testing for anything that runs in a browser</li>
+</('ul', 0)>
+<h4>React Awesome Components</h4>
+
+<ul>
+<li><a href="https://github.com/brillout/awesome-react-components">Awesome React Components</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/JedWatson/react-select">react-select</a> - The Select Component for React</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jquense/react-big-calendar">react-big-calendar</a> - Calendar component</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Hacker0x01/react-datepicker/">react-datepicker</a> - A simple and reusable datepicker component for React</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dvtng/react-loading-skeleton">react-loading-skeleton</a> - Create skeleton screens that automatically adapt to your app</li>
+</ul>
+<ul>
+<li><a href="https://github.com/zpao/qrcode.react">react-qrcode</a> - QR component for use with React</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pierpo/react-archer">react-archer</a> - Draw arrows between React elements</li>
+</ul>
+<ul>
+<li><a href="https://github.com/react-icons/react-icons">react-icons</a> - SVG React icons of popular icon packs</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lukasbach/react-complex-tree">react-complex-tree</a> - Unopinionated Accessible Tree</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mohitk05/react-insta-stories">react-insta-stories</a> - A React component for Instagram like stories</li>
+</ul>
+<ul>
+<li><a href="https://github.com/nolimits4web/swiper">swiper</a> - Most modern mobile touch slider</li>
+</ul>
+<ul>
+<li><a href="https://github.com/rcbyr/keen-slider">keen-slider</a> - The Touch slider carousel</li>
+</ul>
+<ul>
+<li><a href="https://github.com/porscheofficial/cookie-consent-banner">cookie-consent-banner</a> – The lightweight and flexible Cookie Consent Banner</li>
+</ul>
+<ul>
+<li><a href="https://github.com/anatoliygatt/heart-switch">heart-switch</a> - A heart-shaped toggle switch component for React</li>
+</ul>
+<ul>
+<li><a href="https://github.com/timc1/kbar">kbar</a> - Fast, portable, and extensible cmd+k interface for your site</li>
+</ul>
+<ul>
+<li><a href="https://github.com/yairEO/tagify">tagify</a> - Lightweight, efficient Tags input component</li>
+</ul>
+<ul>
+<li><a href="https://github.com/measuredco/puck">puck</a> - The visual editor for React</li>
+</('ul', 0)>
+<h4>React Components Sandboxes</h4>
+
+<ul>
+<li><a href="https://github.com/storybookjs/storybook">storybook</a> - Storybook is a frontend workshop for building UI components and pages in isolation</li>
+</ul>
+<ul>
+<li><a href="https://github.com/styleguidist/react-styleguidist">react-styleguidist</a> - Isolated React component development environment with a living style guide</li>
+</ul>
+<ul>
+<li><a href="https://github.com/react-cosmos/react-cosmos">react-cosmos</a> - Dev tool for creating reusable React components</li>
+</ul>
+<ul>
+<li><a href="https://github.com/teambit/bit">bit</a> - A build system for development of composable software</li>
+</('ul', 0)>
+<h4>React Forms</h4>
+
+<ul>
+<li><a href="https://github.com/react-hook-form/react-hook-form">react-hook-form</a> - React Hooks for form state management and validation</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jaredpalmer/formik">formik</a> - Build forms in React, without the tears</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mozilla-services/react-jsonschema-form">react-jsonschema-form</a> - A React component for building Web forms from JSON Schema</li>
+</ul>
+<ul>
+<li><a href="https://github.com/alibaba/formily">formily</a> - Alibaba Group Unified Form Solution</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ealush/vest">vest</a> - Declarative validations framework</li>
+</('ul', 0)>
+<h4>React Tables and Grids</h4>
+
+<ul>
+<li><a href="https://github.com/react-grid-layout/react-grid-layout">react-grid-layout</a> - A draggable and resizable grid layout with responsive breakpoints</li>
+</ul>
+<ul>
+<li><a href="https://github.com/TanStack/table">tanstack-table</a> - Headless UI for building powerful tables & datagrids</li>
+</ul>
+<ul>
+<li><a href="https://github.com/adazzle/react-data-grid">react-data-grid</a> - Feature-rich and customizable data grid React component</li>
+</('ul', 0)>
+<h4>React Maps</h4>
+
+<ul>
+<li><a href="https://github.com/visgl/react-map-gl">react-map-gl</a> - React friendly API wrapper around MapboxGL JS</li>
+</ul>
+<ul>
+<li><a href="https://github.com/PaulLeCam/react-leaflet">react-leaflet</a> - React components for Leaflet maps</li>
+</('ul', 0)>
+<h4>React Charts</h4>
+
+<ul>
+<li><a href="https://github.com/recharts/recharts">recharts</a> - Redefined chart library built with React and D3</li>
+</ul>
+<ul>
+<li><a href="https://github.com/airbnb/visx">visx</a> - Visualization components</li>
+</ul>
+<ul>
+<li><a href="https://github.com/FormidableLabs/victory">victory</a> - A collection of composable React components for building interactive data visualizations</li>
+</ul>
+<ul>
+<li><a href="https://github.com/uber/react-vis">react-vis</a> - Data Visualization Components</li>
+</ul>
+<ul>
+<li><a href="https://github.com/plouc/nivo">nivo</a> - Provides a rich set of data visualization components built on top of the D3 and React libraries</li>
+</ul>
+<ul>
+<li><a href="https://github.com/xyflow/xyflow">xyflow</a> - A customizable React component for building node-based editors and interactive diagrams</li>
+</('ul', 0)>
+<h4>React Renderers</h4>
+
+<ul>
+<li><a href="https://github.com/pmndrs/react-three-fiber">react-three-fiber</a> - A React renderer for Three.js</li>
+</ul>
+<ul>
+<li><a href="https://github.com/vadimdemedes/ink">ink</a> - React for interactive command-line apps</li>
+</ul>
+<ul>
+<li><a href="https://github.com/remotion-dev/remotion">remotion</a> - Make videos programmatically with React</li>
+</ul>
+<ul>
+<li><a href="https://github.com/diegomura/react-pdf">react-pdf</a> - Create PDF files using React</li>
+</ul>
+<ul>
+<li><a href="https://github.com/react-figma/react-figma">react-figma</a> - A React renderer for Figma</li>
+</('ul', 0)>
+<h4>React Internationalization</h4>
+
+<ul>
+<li><a href="https://github.com/formatjs/formatjs">formatjs</a> - Internationalize your web apps</li>
+</ul>
+<ul>
+<li><a href="https://github.com/i18next/react-i18next">react-i18next</a> - Internationalization for React done right</li>
+</('ul', 0)>
+<h4>React Graphics and Animations</h4>
+
+<ul>
+<li><a href="https://github.com/pmndrs/react-spring">react-spring</a> - A spring physics based React animation library</li>
+</ul>
+<ul>
+<li><a href="https://github.com/framer/motion">framer-motion</a> - Open source, production-ready animation and gesture library for React</li>
+</ul>
+<ul>
+<li><a href="https://github.com/formkit/auto-animate">auto-animate</a> - A zero-config, drop-in animation utility that adds smooth transitions</li>
+</ul>
+<ul>
+<li><a href="https://github.com/matteobruni/tsparticles">react-tsparticles</a> - Easily create highly customizable particles effects</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mkosir/react-parallax-tilt">react-parallax-tilt</a> - Easily apply tilt hover effect on React components</li>
+</ul>
+<ul>
+<li><a href="https://github.com/geosigno/simpleParallax.js">simple-parallax-js</a> - The easiest way to get a parallax effect with React and JavaScript</li>
+</('ul', 0)>
+<h4>React Integration</h4>
+
+<ul>
+<li><a href="https://github.com/rescript-lang/rescript-compiler">rescript-compiler</a> - A robustly typed language that compiles to efficient and human-readable JavaScript</li>
+</ul>
+<ul>
+<li><a href="https://github.com/reactjs/react-rails">react-rails</a> - Integrate React with Rails</li>
+</ul>
+<ul>
+<li><a href="https://github.com/fulcrologic/fulcro">fulcro</a> - A library for development of web applications in clj/cljs</li>
+</ul>
+<ul>
+<li><a href="https://tw-elements.com/docs/standard/integrations/react-integration/">tailwind-react</a> - Article that shows you how to integrate React application with Tailwind</li>
+</('ul', 0)>
+<h4>React Real Apps</h4>
+
+<ul>
+<li><a href="https://github.com/mattermost/mattermost-server">mattermost-server</a> - An open source platform for secure collaboration</li>
+</ul>
+<ul>
+<li><a href="https://github.com/elastic/kibana">kibana</a> - Your window into the Elastic Stack</li>
+</ul>
+<ul>
+<li><a href="https://github.com/captbaritone/webamp">webamp</a> - Winamp 2 reimplemented for the browser</li>
+</ul>
+<ul>
+<li><a href="https://github.com/gaearon/overreacted.io">overreacted</a> - Personal blog by Dan Abramov</li>
+</ul>
+<ul>
+<li><a href="https://github.com/wavetermdev/waveterm">wave</a> - An open-source, cross-platform terminal for seamless workflows</li>
+</('ul', 0)>
+<h3>React Native</h3>
+
+<h4>React Native General Resources</h4>
+
+<ul>
+<li><a href="https://reactnative.dev/">React Native Official Website</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/facebook/react-native">React Native GitHub</a></li>
+</ul>
+<ul>
+<li><a href="https://reactnative.dev/community/overview">React Native Community</a></li>
+</ul>
+<ul>
+<li><a href="https://expo.dev/">Expo</a></li>
+</ul>
+<ul>
+<li><a href="https://snack.expo.dev/">Expo Snack Playground</a></li>
+</('ul', 0)>
+<h4>React Native Navigation</h4>
+
+<ul>
+<li><a href="https://github.com/react-navigation/react-navigation">react-navigation</a> - Routing and navigation for your React Native apps</li>
+</('ul', 0)>
+<h4>React Native Awesome Components</h4>
+
+<ul>
+<li><a href="https://github.com/oblador/react-native-vector-icons">react-native-vector-icons</a> - Customizable Icons for React Native</li>
+</ul>
+<ul>
+<li><a href="https://github.com/FaridSafi/react-native-gifted-chat">react-native-gifted-chat</a> - The most complete chat UI for React Native</li>
+</('ul', 0)>
+<h4>React Native Libraries</h4>
+
+<ul>
+<li><a href="https://github.com/realm/realm-js">realm-js</a> - A mobile database: an alternative to SQLite & key-value stores</li>
+</ul>
+<ul>
+<li><a href="https://github.com/react-native-device-info/react-native-device-info">react-native-device-info</a> - Device Information for React Native iOS and Android</li>
+</('ul', 0)>
+<h3>Contribution</h3>
+
+<p>This list began as a personal compilation of interesting things related to React. When it was initiated, React was still in beta, a special script was required to convert JSX to JS, and Flux had not yet been released. Today, React has become mainstream, with numerous developments taking place. Kindly refrain from using this list as an advertisement board or a space to promote your experiments. We focus on sharing entirely free resources here. Please feel free to propose updates for outdated projects and articles, as well as new contributions. Your input and suggestions are wholeheartedly♡ appreciated. (✿◠‿◠)</p>
+
+<p><a href="https://i.creativecommons.org/l/by/4.0/88x31.png"><img src="http://creativecommons.org/licenses/by/4.0/" alt="CC0</a>"></p>
+
+</body>
+</html>

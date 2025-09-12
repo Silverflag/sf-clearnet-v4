@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebGPU</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>WebGPU</h1>
+
+<p><strong>Repository:</strong> https://github.com/mikbry/awesome-webgpu#readme</p>
+<p><strong>Source File:</strong> readme.md</p>
+
+<hr>
+
+<h1>Awesome WebGPU <a href="https://awesome.re/badge.svg"><img src="https://awesome.re" alt="Awesome</a>"></h1>
+
+<p><a href="https://www.w3.org/TR/webgpu/"><img src="https://www.w3.org/2023/02/webgpu-logos/webgpu-notext.svg" align="right" height="150"></a></p>
+
+<blockquote>
+<p>Lovely curated list of WebGPU resources, libraries and tools.</p>
+</blockquote>
+
+<p>WebGPU is a work in progress Web standard from <a href="https://www.w3.org/">W3C</a> for modern 3D and GPU computing. Its purpose is to get the best performances on recent GPUs from desktop to mobile. Unlike WebGL, WebGPU is not a port of an existing native API. It borrows concepts from Metal, Vulkan and Direct3D12.</p>
+
+<h2>Contents</h2>
+
+<ul>
+<li><a href="#websites">Websites</a></li>
+</ul>
+<ul>
+<li><a href="#browser-support">Browser support</a></li>
+</ul>
+<ul>
+<li><a href="#articles">Articles</a></li>
+</ul>
+<ul>
+<li><a href="#tutorials">Tutorials</a></li>
+</ul>
+<ul>
+<li><a href="#books">Books</a></li>
+</ul>
+<ul>
+<li><a href="#libraries">Libraries</a></li>
+</ul>
+<ul>
+<li><a href="#debuggers-and-profilers">Debuggers and Profilers</a></li>
+</ul>
+<ul>
+<li><a href="#gists">Gists</a></li>
+</ul>
+<ul>
+<li><a href="#demos">Demos</a></li>
+</ul>
+<ul>
+<li><a href="#videos">Videos</a></li>
+</ul>
+<ul>
+<li><a href="#presentations">Presentations</a></li>
+</ul>
+<ul>
+<li><a href="#community">Community</a></li>
+</ul>
+<ul>
+<li><a href="#bug-reporting">Bug reporting</a></li>
+</('ul', 0)>
+<h2>Websites</h2>
+
+<h3>Official websites</h3>
+<ul>
+<li><a href="https://github.com/gpuweb/gpuweb">GPUWeb</a> - Official GitHub repository.</li>
+</ul>
+<ul>
+<li><a href="https://x.com/webgpu">WebGPU - Twitter</a> - Official X/Twitter account.</li>
+</ul>
+<ul>
+<li><a href="https://gpuweb.github.io/gpuweb/explainer/">Official WebGPU Explainer</a></li>
+</('ul', 0)>
+<h3>WebGPU Specifications</h3>
+<ul>
+<li><a href="https://www.w3.org/standards/history/webgpu/">History</a></li>
+</ul>
+<ul>
+<li><a href="https://gpuweb.github.io/gpuweb/">Editor's Draft</a></li>
+</('ul', 0)>
+<h3>WGSL (WebGPU Shading Language) Specifications</h3>
+<ul>
+<li><a href="https://www.w3.org/TR/WGSL/">Working Draft</a></li>
+</ul>
+<ul>
+<li><a href="https://gpuweb.github.io/gpuweb/wgsl/">Editor's Draft</a></li>
+</('ul', 0)>
+<h3>API documentations</h3>
+<ul>
+<li><a href="https://webgpu.rocks/">API quick reference and documentation</a> - WebGPU.rocks.</li>
+</ul>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">MDN</a> - MDN WebGPU API references.</li>
+</('ul', 0)>
+<h3>Misc</h3>
+<ul>
+<li><a href="https://developer.chrome.com/docs/web-platform/webgpu">Google Developers Site</a></li>
+</ul>
+<ul>
+<li><a href="https://awesomeopensource.com/projects/webgpu">107 WebGPU Projects on GitHub</a> - AwesomeOpenSource.com.</li>
+</ul>
+<ul>
+<li><a href="https://www.reddit.com/r/webgpu/">r/WebGPU - Reddit</a> - WebGPU Subreddit.</li>
+</ul>
+<ul>
+<li><a href="https://compute.toys/">compute.toys</a> - Compute shader playground (like shadertoy).</li>
+</ul>
+<ul>
+<li><a href="https://shadeup.dev/">Shadeup</a> - Language/website that makes experimenting with WebGPU easier.</li>
+</ul>
+<ul>
+<li><a href="https://google.github.io/tour-of-wgsl/">Tour of WGSL</a> - A quick introduction to the WebGPU Shading Language.</li>
+</ul>
+<ul>
+<li><a href="https://www.webgpuexperts.com/blog">WebGPU Experts Blog</a> - Monthly news about WebGPU.</li>
+</('ul', 0)>
+<h2>Browser support</h2>
+<blockquote>
+<p>This is an experimental technology</p>
+</blockquote>
+<ul>
+<li><a href="https://github.com/gpuweb/gpuweb/wiki/Implementation-Status">Implementation status</a> - Official W3C Group.</li>
+</ul>
+<ul>
+<li><a href="https://caniuse.com/webgpu">WebGPU browser support overview</a> - CanIUse.com WebGPU.</li>
+</('ul', 0)>
+<h3>Chrome</h3>
+<blockquote>
+<p>Chrome and Blink/Chromium based browsers support WebGPU</p>
+</blockquote>
+<ul>
+<li><a href="https://www.google.com/chrome/">Desktop</a> - WebGPU supported by default on Windows and macOS.</li>
+</ul>
+<ul>
+<li><a href="https://developer.chrome.com/blog/new-in-webgpu-121">Android</a> - WebGPU is supported by default.</li>
+</ul>
+<ul>
+<li><a href="https://www.microsoft.com/edge/">Edge</a> - WebGPU is supported by default.</li>
+</('ul', 0)>
+<h3>Firefox</h3>
+<blockquote>
+<p>WebGPU support is still experimental</p>
+</blockquote>
+<ul>
+<li><a href="https://nightly.mozilla.org/">Firefox Nightly</a> - Go to <code>about:config</code> and set <code>dom.webgpu.enabled</code> to true.</li>
+</('ul', 0)>
+<h3>Safari</h3>
+<blockquote>
+<p>WebGPU support is still experimental</p>
+</blockquote>
+<ul>
+<li><a href="https://developer.apple.com/safari/resources/">macOS Safari TP</a> - WebGPU is enabled by default since 190.</li>
+</ul>
+<ul>
+<li><a href="https://www.apple.com/safari/">macOS Safari</a> - Soon available.</li>
+</ul>
+<ul>
+<li><a href="https://mil-tokyo.github.io/webdnn/docs/tips/enable<em>webgpu</em>ios.html">iOS</a> - You can enable WebGPU in <code>Settings</code> &rightarrow; <code>Safari</code> &rightarrow; <code>Advanced</code> &rightarrow; <code>Feature Flags</code> &rightarrow; <code>WebGPU</code>.</li>
+</('ul', 0)>
+<h2>Articles</h2>
+
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/WebGPU">WebGPU</a> - Wikipedia article.</li>
+</ul>
+<ul>
+<li><a href="https://hacks.mozilla.org/2020/04/experimental-webgpu-in-firefox/">A Taste of WebGPU in Firefox</a> - Mozilla.org article by Dzmitry Malyshau.</li>
+</ul>
+<ul>
+<li><a href="https://kvark.github.io/web/gpu/native/2020/05/03/point-of-webgpu-native">Point of WebGPU native</a> - By Dzmitry Malyshau.</li>
+</ul>
+<ul>
+<li><a href="https://dmnsgn.medium.com/13c4ba049039">Graphics on the web and beyond with WebGPU</a> - By <a href="https://dmnsgn.medium.com/">Damien Seguin</a>.</li>
+</ul>
+<ul>
+<li><a href="https://kvark.github.io/web/gpu/gecko/2019/12/10/gecko-webgpu">Implementing WebGPU in Gecko</a> - By <a href="https://github.com/kvark">Dzmitry Malyshau</a>.</li>
+</ul>
+<ul>
+<li><a href="https://www.construct.net/en/blogs/ashleys-blog-2/webgl-webgpu-construct-1519">From WebGL to WebGPU in Construct</a> - By Ashley Gullen.</li>
+</ul>
+<ul>
+<li><a href="https://www.construct.net/en/blogs/ashleys-blog-2/brief-history-graphics-web-1517">A brief history of graphics on the web and WebGPU</a> - By Ashley Gullen.</li>
+</ul>
+<ul>
+<li><a href="https://toji.github.io/webgpu-best-practices/img-textures.html">WebGPU texture best practices</a> - By Brandon Jones.</li>
+</ul>
+<ul>
+<li><a href="https://toji.github.io/webgpu-best-practices/buffer-uploads.html">WebGPU Buffer upload best practices</a> - By Brandon Jones.</li>
+</ul>
+<ul>
+<li><a href="https://gfx-rs.github.io/2020/04/21/wgpu-web">wgpu-rs on the web</a> - Rust Graphics Mages.</li>
+</ul>
+<ul>
+<li><a href="https://tvm.apache.org/2020/05/14/compiling-machine-learning-to-webassembly-and-webgpu">Compiling Machine Learning to WASM and WebGPU with Apache TVM</a> - By <a href="https://github.com/tqchen">Tianqi Chen</a> & <a href="https://github.com/jroesch">Jared Roesch</a>.</li>
+</ul>
+<ul>
+<li><a href="https://paulbutler.org/2020/the-webassembly-app-gap/">The WebAssembly App Gap</a> - By <a href="https://github.com/paulgb">Paul Butler</a>.</li>
+</ul>
+<ul>
+<li><a href="https://webkit.org/blog/7380/next-generation-3d-graphics-on-the-web/">Next-generation 3D Graphics on the web</a> - Webkit.org article by <a href="https://twitter.com/grorgwork">Dean Jackson</a>.</li>
+</ul>
+<ul>
+<li><a href="https://toji.github.io/webgpu-gltf-case-study/">Efficently rendering glTF models - A WebGPU Case Study</a> - By <a href="https://github.com/toji">Brandon Jones</a>.</li>
+</ul>
+<ul>
+<li><a href="https://surma.dev/things/webgpu/index.html">WebGPU - All of the cores, none of the canvas</a> - By <a href="https://github.com/surma">Surma</a>.</li>
+</ul>
+<ul>
+<li><a href="https://webgpufundamentals.org/">WebGPU Fundamentals</a> - A set of articles to help learn WebGPU.</li>
+</ul>
+<ul>
+<li><a href="https://tchayen.com/pbr-in-webgpu-implementation-details">PBR in WebGPU: implementation details</a> - By <a href="https://github.com/tchayen">Tomasz Czajecki</a>.</li>
+</ul>
+<ul>
+<li><a href="https://cohost.org/mcc/post/1406157-i-want-to-talk-about-webgpu">I want to talk about WebGPU</a> - By <a href="https://mastodon.social/@mcc">Andi</a>.</li>
+</ul>
+<ul>
+<li><a href="https://developer.chrome.com/blog/from-webgl-to-webgpu/">From WebGL to WebGPU</a> - By Google.</li>
+</ul>
+<ul>
+<li><a href="https://amirsojoodi.github.io/posts/WebGPU-for-Dummies/">WebGPU for Dummies</a> - By Amir Sojoodi.</li>
+</ul>
+<ul>
+<li><a href="https://amirsojoodi.github.io/posts/WebGPU-Timestamp/">WebGPU Timestamps</a> - By Amir Sojoodi.</li>
+</ul>
+<ul>
+<li><a href="https://developer.chrome.com/blog/io24-webassembly-webgpu-2">WebAssembly and WebGPU</a> - Learn how WebAssembly and WebGPU improve ml performance on the web Part2.</li>
+</('ul', 0)>
+<h2>Tutorials</h2>
+
+<ul>
+<li><a href="https://alain.xyz/blog/raw-webgpu">Raw WebGPU</a> - An overview on how to write a WebGPU application, by <a href="https://github.com/alaingalvan">Alain Galvan</a>.</li>
+</ul>
+<ul>
+<li><a href="https://dev.to/ndesmic/basic-webgpu-rendering-2kob">Basic WebGPU Rendering</a> - Summary of the steps to render a scene, by <a href="https://github.com/ndesmic">@ndesmic</a>.</li>
+</ul>
+<ul>
+<li><a href="https://web.dev/gpu-compute/">Get started with GPU Compute on the Web</a> - Tutorial on how to use WebGPU for non-graphical applications, by <a href="https://github.com/beaufortfrancois">François Beaufort</a>.</li>
+</ul>
+<ul>
+<li><a href="https://metalbyexample.com/webgpu-part-one/">WebGPU for Metal Developers Part 1</a> and <a href="https://metalbyexample.com/webgpu-part-two/">Part 2</a> - Introduction to WebGPU from Apple's GPU API, Metal, by <a href="https://twitter.com/warrenm">Warren Moore</a>.</li>
+</ul>
+<ul>
+<li><a href="https://www.willusher.io/graphics/2023/04/10/0-to-gltf-triangle/">From 0 to glTF with WebGPU: Series</a> <a href="https://github.com/Twinklebear/webgpu-0-to-gltf?tab=readme-ov-file">(repository)</a> - A tutorial to create a glTF model viewer, by <a href="https://github.com/Twinklebear">Will Usher</a>.</li>
+</ul>
+<ul>
+<li><a href="https://sotrh.github.io/learn-wgpu/">Learn wgpu</a> - Tutorial and examples on wgpu, a Rust implementation of WebGPU, by <a href="https://github.com/sotrh">@sotrh</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/hjlld/LearningWebGPU">LearningWebGPU 教程 (Chinese)</a> - By <a href="https://github.com/hjlld">@hjlld</a>.</li>
+</ul>
+<ul>
+<li><a href="https://maierfelix.github.io/2020-01-13-webgpu-ray-tracing/">Real-Time Ray-Tracing in WebGPU</a> - Building a Ray tracer using a modified version of WebGPU implementation with Vulkan and DX12 ray tracing extensions, by <a href="https://github.com/maierfelix">Felix Maier</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/OmarShehata/webgpu-compute-rasterizer/blob/main/how-to-build-a-compute-rasterizer.md">Build a compute rasterizer in WebGPU</a> - How to build a complete rasterizer using compute shaders, by <a href="https://github.com/OmarShehata">Omar Shehata</a>.</li>
+</ul>
+<ul>
+<li><a href="https://arche.graphics/docs/intro">WebGPU Engine Development (Chinese/English)</a> - Development process of WebGPU Engine (C++ and TypeScript).</li>
+</ul>
+<ul>
+<li><a href="https://eliemichel.github.io/LearnWebGPU">Learn WebGPU for native C++ development</a> - A tutorial on WebGPU for Desktop applications using wgpu or Dawn, by <a href="https://github.com/eliemichel">@eliemichel</a>.</li>
+</('ul', 0)>
+<h2>Books</h2>
+
+<ul>
+<li><a href="https://books.google.com/books?id=tPQyEAAAQBAJ&printsec=frontcover">Practical WebGPU Graphics</a> - by <a href="https://github.com/jack1232">Jack Xu</a></li>
+</('ul', 0)>
+<h2>Libraries</h2>
+
+<ul>
+<li><a href="https://doc.babylonjs.com/setup/support/webGPU">Babylon.js</a> - Open game and rendering engine.</li>
+</ul>
+<ul>
+<li><a href="https://threejs.org/">Three.js</a> - Easy-to-use, lightweight, general-purpose 3D library.</li>
+</ul>
+<ul>
+<li><a href="https://dawn.googlesource.com/dawn">Dawn</a> - Google implementation that powers WebGPU in Chromium, can be used as a standalone package.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/gfx-rs/wgpu">wgpu</a> - Mozilla implementation used in Firefox. Like Dawn, can be used as a standalone package.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/webgpu-native/webgpu-headers">webgpu-headers</a> - C/C++ headers.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/floooh/sokol/">sokol</a> - Simple STB-style cross-platform libraries for C and C++.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/redcamel/RedGPU">RedGPU</a> - JavaScript WbeGPU library, by <a href="https://github.com/redcamel">@redcamel</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/WaveEngine/WebGPU.NET">WebGPU .NET</a> - .NET bindings, built on top of wgpu.</li>
+</ul>
+<ul>
+<li><a href="https://deno.com/">Deno</a> - Runtime for JavaScript, TypeScript, and WebAssembly based on the V8 engine.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Reon90/redcube">RedCube</a> - glTF viewer based on a WebGPU backend.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/gnikoloff/hwoa-rang-gpu">hwoa-rang-gpu</a> - Micro WebGPU rendering & compute library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/brendan-duncan/wgsl<em>reflect">wgsl</em>reflect</a> - A WebGPU Shading Language parser and reflection library for JavaScript.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/yangfengzzz/Arche.js">Arche Graphics</a> - WebGPU Graphics Engine.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/eliemichel/WebGPU-Cpp">WebGPU-C++</a> - A single-file zero-overhead C++ idiomatic wrapper, by @eliemichel.</li>
+</ul>
+<ul>
+<li><a href="https://usegpu.live">Use.GPU</a> - Reactive/declarative WebGPU runtime.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/hpugis/GEngine">GEngine</a> - A basic rendering engine based on WebGPU, by junwei.gu.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mighdoll/thimbleberry">Thimbleberry</a> - Reusuable WebGPU shaders and support functions.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/codedhead/webrtx">WebRTX</a> - WebGPU Ray Tracing Extension.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jay19240/SWGPU">SWGPU</a> - A Simple WebGPU Game Engine.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/wcandillon/react-native-webgpu">React Native WebGPU</a> - React Native implementation of WebGPU using Dawn.</li>
+</ul>
+<ul>
+<li><a href="https://typegpu.com/">TypeGPU</a> - TypeScript API for constructing, writing to and reading from GPU buffers with inferred type-safety.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/wgsl-tooling-wg/wesl-spec/blob/main/README.md">WESL</a> - WGSL extensions for <code>import</code>, <code>@if</code>, and more. </li>
+</ul>
+<ul>
+<li><a href="https://github.com/eddow/webgpgpu">WebGpGpu.ts</a> - A WebGPU framework to access compute shaders, browser or server-side, without the steep learning curve.</li>
+</('ul', 0)>
+<h2>Debuggers and Profilers</h2>
+
+<ul>
+<li><a href="https://github.com/takahirox/webgpu-devtools">webgpu-devtools</a> - Web browser extention.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/brendan-duncan/webgpu_recorder">webgpu-recorder</a> - A WebGPU playback recorder.</li>
+</ul>
+<ul>
+<li><a href="https://crates.io/crates/wgpu-profiler">webgpu-profiler</a> - A profiler for Rust + WebGPU.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/webgpu/webgpu-debugger">webgpu-debugger</a> - Early stage debugger.</li>
+</('ul', 0)>
+<h2>Gists</h2>
+
+<ul>
+<li><a href="https://gist.github.com/munrocket/30e645d584b5300ee69295e54674b3e4">2D</a> and <a href="https://gist.github.com/munrocket/f247155fc22ecb8edf974d905c677de1">3D SDF Primitives</a> - Signed distance field primitives in WGSL, by <a href="https://github.com/munrocket">@munrocket</a>.</li>
+</('ul', 0)>
+<h2>Demos</h2>
+
+<p>Right now, demos work best on Chrome/Edge.</p>
+
+<ul>
+<li><a href="https://webgpu.github.io/webgpu-samples/">WebGPU Samples</a> - A set of samples and demos demonstrating the use of the WebGPU API - <a href="https://github.com/webgpu/webgpu-samples">Repository</a></li>
+</ul>
+<ul>
+<li><a href="https://toji.github.io/webgpu-test/">WebGPU first-person exploration of the Sponza Palace</a> - Scene render comparison between WebGL, WebGL 2.0 and WebGPU, by Brandon Jones - <a href="https://github.com/toji/webgpu-test">Repository</a></li>
+</ul>
+<ul>
+<li><a href="https://toji.github.io/webgpu-clustered-shading/">WebGPU Clustered Shading</a> - By Brandon Jones - <a href="https://github.com/toji/webgpu-clustered-shading">Repository</a></li>
+</ul>
+<ul>
+<li><a href="https://toji.github.io/webgpu-metaballs/">WebGPU Metaballs</a> - By Brandon Jones - <a href="https://github.com/toji/webgpu-metaballs">Repository</a></li>
+</ul>
+<ul>
+<li><a href="https://toji.github.io/webgpu-external-test/">WebGPU External Texture Test</a> - By Brandon Jones - <a href="https://github.com/toji/webgpu-external-test">Repository</a></li>
+</ul>
+<ul>
+<li><a href="https://takahirox.github.io/online-wgsl-editor/">Online WGSL Editor</a> - By <a href="https://github.com/takahirox">Takahiro</a> - <a href="https://github.com/takahirox/online-wgsl-editor">Repository</a></li>
+</ul>
+<ul>
+<li><a href="https://threejs.org/examples/?q=webgpu">Three.js WebGPU examples</a> - A collection of examples from three.js using the WebGPU renderer - <a href="https://github.com/mrdoob/three.js/tree/dev/examples#:~:text=webgpu_compute.html">Repository</a></li>
+</ul>
+<ul>
+<li><a href="https://spookyball.com">Spookyball</a> - A Halloween-themed, open source Breakout clone, by Brandon Jones - <a href="https://github.com/toji/spookyball">Repository</a></li>
+</ul>
+<ul>
+<li><a href="https://playground.babylonjs.com/">Babylon.js Playground</a> - By <a href="https://www.babylonjs.com/">Babylon.js</a> (Note: Select <code>WebGPU</code> in the top right corner).</li>
+</ul>
+<ul>
+<li><a href="https://hsimpson.github.io/webgpu-particles/">WebGPU Particles</a> - Calculate and render particles, by <a href="https://github.com/hsimpson">Daniel Toplak</a> - <a href="https://github.com/hsimpson/webgpu-particles">Repository</a></li>
+</ul>
+<ul>
+<li><a href="https://laskin.live">An online WebGPU calculator</a> - An online calculator, but you can only use it on your remote friend's GPU (via WebRTC) - <a href="https://github.com/periferia-labs/laskin.live">Repository</a></li>
+</ul>
+<ul>
+<li><a href="https://tsherif.github.io/webgpu-examples/">WebGPU Examples</a> - A few examples of rendering algorithms implemented in WebGPU, by <a href="https://github.com/tsherif">Tarek Sherif</a> - <a href="https://github.com/tsherif/webgpu-examples">Repository</a></li>
+</ul>
+<ul>
+<li><a href="https://wgpu.rs/examples/">wgpu examples</a> - Official list of examples from the <a href="https://wgpu.rs">wgpu</a> library - <a href="https://github.com/gfx-rs/wgpu/tree/trunk/examples">Repository</a></li>
+</ul>
+<ul>
+<li><a href="https://www.babylonjs.com/Demos/WebGPU/forestWebGPU.html">Forest WebGPU</a> - A scene built with Babylon.js.</li>
+</ul>
+<ul>
+<li><a href="https://06wj.github.io/WebGPU-Playground/">WebGPU-Playground</a> - A playground to experiment with WebGPU, by <a href="https://github.com/06wj">@06wj</a> - <a href="https://github.com/06wj/WebGPU-Playground">Repository</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/maierfelix/dawn-ray-tracing">Dawn RT</a> - A fork of dawn with Ray tracing extensions, by Felix Maier.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/MacTuitui/wgpu-load-test">wgpu-load-test</a> - A wgpu stress test, by <a href="https://github.com/MacTuitui">Alexis Andre</a>.</li>
+</ul>
+<ul>
+<li><a href="https://hello-webgpu-compute.glitch.me">WebGPU Compute 101 Demo</a> - A simple example using compute shaders. <a href="https://glitch.com/edit/#!/hello-webgpu-compute">source</a></li>
+</ul>
+<ul>
+<li><a href="https://kishimisu.github.io/WebGPU-Fluid-Simulation/">WebGPU 2D Fluid Simulation</a> - An implementation of "Real-Time Fluid Dynamics for Games" paper, by <a href="https://github.com/kishimisu">kishimisu</a> - <a href="https://github.com/kishimisu/WebGPU-Fluid-Simulation">Repository</a></li>
+</ul>
+<ul>
+<li><a href="https://s-macke.github.io/WebGPU-Lab/">WebGPU-Lab</a> - Demos and experiments, focused on compute shaders, by <a href="https://github.com/s-macke">Sebastian Macke</a> - <a href="https://github.com/s-macke/WebGPU-Lab">Repository</a></li>
+</ul>
+<ul>
+<li><a href="https://www.wgsl.dev/editor">WebGPU Live Demo Editor</a> - A collection of WebGPU examples by <a href="https://github.com/hepp">Hepp Maccoy</a> - <a href="https://github.com/hepp/webgpu-examples">Repository</a></li>
+</ul>
+<ul>
+<li><a href="https://thimbleberry.dev">Thimbleberry Image Transform Demo</a> - An Image processing app built using Thimbleberry, by <a href="https://vis.social/@mighdoll">mighdoll</a> - <a href="https://github.com/mighdoll/thimbleberry/tree/main/image-demo">Repository</a></li>
+</ul>
+<ul>
+<li><a href="https://shadowray.gl">Shadowray Playground</a> - Demo of WebRTX, an extension of the WebGPU API with ray tracing capabilities, implemented with compute shaders, by <a href="https://github.com/codedhead">codedhead</a>.</li>
+</ul>
+<ul>
+<li><a href="https://mlc.ai/web-stable-diffusion/#text-to-image-generation-demo">Web Stable Diffusion</a> - An implementation of the image generator AI model, by CMU, OctoML, Catalyst et al - <a href="https://github.com/mlc-ai/web-stable-diffusion">Repository</a></li>
+</ul>
+<ul>
+<li><a href="https://mlc.ai/web-llm/">WebLLM</a> - LLM inference engine, by CMU, University of Washington, OctoML, et al - <a href="https://github.com/mlc-ai/web-llm">Repository</a></li>
+</ul>
+<ul>
+<li><a href="https://deepkolos.github.io/shader-graph-wgsl/">Shader Graph WGSL</a> - A node based shader editor, by <a href="https://github.com/deepkolos">deepkolos</a> - <a href="https://github.com/deepkolos/shader-graph-wgsl">Repository</a></li>
+</ul>
+<ul>
+<li><a href="https://gpuharbor.ucsc.edu/webgpu-mem-testing/">WebGPU Memory Model Testing</a> - Memory models testing suite, by <a href="https://github.com/reeselevine">Reese Levine</a> et al., UC Santa Cruz - <a href="https://github.com/reeselevine/webgpu-litmus">Repository</a></li>
+</ul>
+<ul>
+<li><a href="https://conorpo.github.io/marching-cubes-webgpu/">Marching Cubes WebGPU</a> - Marching cubes implementation, by <a href="https://github.com/conorpo">Conor O'Malley</a> - <a href="https://github.com/conorpo/marching-cubes-webgpu">Repository</a></li>
+</ul>
+<ul>
+<li><a href="https://iamferm.in/webgpu-path-tracing/">WebGPU Path Tracing</a> - A path tracer powered by WebGPU compute shaders, by <a href="https://github.com/ferminLR">Fermin Lozano</a> - <a href="https://github.com/ferminLR/webgpu-path-tracing">Repository</a></li>
+</('ul', 0)>
+<h2>Videos</h2>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=A2FxeEl4nWw">From WebGL to WebGPU: A perspective from Babylon js by David Catuhe</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=K2JzIUIHIhc">Next-Generation 3D Graphics on the Web (Google I/O 2019)</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/playlist?list=PLMinhigDWz6f5Nm_GYGREYnaf9mzoNdjX">WebGL to WebGPU (playlist)</a> - By <a href="https://www.youtube.com/c/SketchpunkLabs">SketchpunkLabs</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/playlist?list=PLnTPVrg9-a1Ou2KXUniDr1HC7qgL2JD2x">WebGPU (playlist)</a> - By <a href="https://www.youtube.com/channel/UCBTwKzJg-BR56tKWO5CT7XA">Genka</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/playlist?list=PL_UrKDEhALdKh0118flOjuAnVIGKFUJXN">WebGPU Graphics Programming Step-by-Step (playlist)</a> - By <a href="https://www.youtube.com/channel/UCg14XfqXim0vpgabU3T7tRg">Practical Programming with Dr. Xu</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=m6T-Mq1BPXg">Introducing WebGPU: Unlocking modern GPU access for JavaScript</a> - By Google.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=DdMl4E7xQEY">A proper look at WebGPU for native games</a> - By <a href="https://www.madrigalgames.com/">Madrigal</a></li>
+</('ul', 0)>
+<h2>Presentations</h2>
+
+<ul>
+<li><a href="https://fosdem.org/2020/schedule/event/rust_webgpu/">Building WebGPU with Rust</a> - By Dzmitry Malyshau from Mozilla.</li>
+</('ul', 0)>
+<h2>Community</h2>
+
+<ul>
+<li><a href="https://www.w3.org/community/gpu/">GPU for the web community group</a> - W3C Community.</li>
+</ul>
+<ul>
+<li><a href="https://lists.w3.org/Archives/Public/public-gpu/">Public GPU</a> - W3C Mailing list.</li>
+</ul>
+<ul>
+<li><a href="https://matrix.to/#/#WebGPU:matrix.org">Matrix WebGPU</a> - Unofficial channel.</li>
+</ul>
+<ul>
+<li><a href="https://news.ycombinator.com/item?id=23079200">YC Point of WebGPU on native</a> - Discussion regarding this article.</li>
+</('ul', 0)>
+<h2>Bug reporting</h2>
+
+<ul>
+<li><a href="https://bugs.webkit.org/buglist.cgi?bug<em>status=UNCONFIRMED&bug</em>status=NEW&bug<em>status=ASSIGNED&bug</em>status=REOPENED&component=WebGPU">Webkit</a></li>
+</ul>
+<ul>
+<li><a href="https://bugzilla.mozilla.org/buglist.cgi?product=Core&component=Graphics%3A%20WebGPU">Firefox</a></li>
+</ul>
+<ul>
+<li><a href="https://bugs.chromium.org/p/chromium/issues/list?q=component:Blink%3EWebGPU">Chromium</a></li>
+<hr>
+</ul>
+<p>To the extent possible under law, <a href="https://github.com/mikbry">Mik Bry</a> has waived all copyright and related or neighboring rights to this work.</p>
+
+<p>Contributions welcome! Read the <a href="contributing.md">contribution guidelines</a> first.</p>
+
+</body>
+</html>

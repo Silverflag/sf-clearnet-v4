@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iOS UI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>iOS UI</h1>
+
+<p><strong>Repository:</strong> https://github.com/cjwirth/awesome-ios-ui#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<p>awesome-ios-ui <a href="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg"><img src="https://github.com/sindresorhus/awesome" alt="Awesome</a>"></p>
+<p>==============</p>
+
+<p>A curated list of awesome iOS UI/UX libraries.</p>
+<p>Inspired by [wasabeef]'s excellent [Android Version].</p>
+
+<h3>Contributing</h3>
+
+<p>Found a UI/UX library that you think is <em>awesome</em>?? Want to share it with the world? Add your repo's information to my [awesome-creator], where I keep the library metadata!</p>
+
+<h3>Index</h3>
+<ul>
+<li><a href="#animations-and-transitions">Animations and Transitions</a> - <a href="/pages/Animations.md">file</a></li>
+</ul>
+<ul>
+<li><a href="#badges">Badges</a> - <a href="/pages/Badges.md">file</a></li>
+</ul>
+<ul>
+<li><a href="#calendars">Calendars</a> - <a href="/pages/Calendars.md">file</a></li>
+</ul>
+<ul>
+<li><a href="#effects">Effects</a> - <a href="/pages/Effects.md">file</a></li>
+</ul>
+<ul>
+<li><a href="#material-design">Material Design</a> - <a href="/pages/MaterialDesign.md">file</a></li>
+</ul>
+<ul>
+<li><a href="#notifications-and-alerts">Notifications and Alerts</a> - <a href="/pages/NotificationsAlerts.md">file</a></li>
+</ul>
+<ul>
+<li><a href="#onboarding-and-tutorials">Onboarding and Tutorials</a> - <a href="/pages/Onboarding.md">file</a></li>
+</ul>
+<ul>
+<li><a href="#photo-and-video">Photo and Video</a> - <a href="/pages/PhotoVideo.md">file</a></li>
+</ul>
+<ul>
+<li><a href="#progress-views">Progress Views</a> - <a href="/pages/ProgressViews.md">file</a></li>
+</ul>
+<ul>
+<li><a href="#refreshcontrols">RefreshControls</a> - <a href="/pages/RefreshControls.md">file</a></li>
+</ul>
+<ul>
+<li><a href="#side-menu">Side Menu</a> - <a href="/pages/SideMenu.md">file</a></li>
+</ul>
+<ul>
+<li><a href="#tab-bars">Tab Bars</a> - <a href="/pages/TabBars.md">file</a></li>
+</ul>
+<ul>
+<li><a href="#tablecollection-views">Table/Collection Views</a> - <a href="/pages/TableCollectionViews.md">file</a></li>
+</ul>
+<ul>
+<li><a href="#user-input">User Input</a> - <a href="/pages/UserInput.md">file</a></li>
+</ul>
+<p>Animations and Transitions</p>
+<p>==========================</p>
+<p>Repo | Demo</p>
+<p>--- | ---</p>
+<p><a href="https://github.com/shu223/AnimatedTransitionGallery">AnimatedTransitionGallery</a> <br> <a href="http://gh-btns.cjwirth.com/stars/shu223/AnimatedTransitionGallery"><img src="https://github.com/shu223/AnimatedTransitionGallery/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [Unknown][Unknown] | <img src="/assets/AnimatedTransitionGallery1.gif"></p>
+<p><a href="https://github.com/Raizlabs/RZTransitions">RZTransitions</a> <br> <a href="http://gh-btns.cjwirth.com/stars/Raizlabs/RZTransitions"><img src="https://github.com/Raizlabs/RZTransitions/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [MIT][MIT] | <img src="/assets/RZTransitions1.gif" width="49%" ></p>
+<p><a href="https://github.com/daltoniam/DCAnimationKit">DCAnimationKit</a> <br> <a href="http://gh-btns.cjwirth.com/stars/daltoniam/DCAnimationKit"><img src="https://github.com/daltoniam/DCAnimationKit/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [Apache v2][Apache v2] | <img src="/assets/DCAnimationKit1.gif" width="49%" > <img src="/assets/DCAnimationKit2.gif" width="49%" ></p>
+<p><a href="https://github.com/poetmountain/PMTween">PMTween</a> <br> <a href="http://gh-btns.cjwirth.com/stars/poetmountain/PMTween"><img src="https://github.com/poetmountain/PMTween/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [MIT][MIT] | <img src="/assets/PMTween1.gif"> <img src="/assets/PMTween2.gif"></p>
+<p><a href="https://github.com/szk-atmosphere/SAHistoryNavigationViewController">SAHistoryNavigationViewController</a> <br> <a href="http://gh-btns.cjwirth.com/stars/szk-atmosphere/SAHistoryNavigationViewController"><img src="https://github.com/szk-atmosphere/SAHistoryNavigationViewController/stargazers" alt="</a>"> <br> Language: Swift <br> License: [MIT][MIT] | <img src="/assets/SAHistoryNavigationViewController1.gif"></p>
+<p><a href="https://github.com/inFullMobile/WobbleView">WobbleView</a> <br> <a href="http://gh-btns.cjwirth.com/stars/inFullMobile/WobbleView"><img src="https://github.com/inFullMobile/WobbleView/stargazers" alt="</a>"> <br> Language: Swift <br> License: [MIT][MIT] | <img src="/assets/wobble-view.gif"></p>
+<p><a href="https://github.com/callumboddy/CBZSplashView">CBZSplashView</a> <br> <a href="http://gh-btns.cjwirth.com/stars/callumboddy/CBZSplashView"><img src="https://github.com/callumboddy/CBZSplashView/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [MIT][MIT] | <img src="/assets/CBZSplashView1.gif" width="49%" ></p>
+
+<p>Badges</p>
+<p>======</p>
+<p>Repo | Demo</p>
+<p>--- | ---</p>
+<p><a href="https://github.com/cwRichardKim/RKNotificationHub">RKNotificationHub</a> <br> <a href="http://gh-btns.cjwirth.com/stars/cwRichardKim/RKNotificationHub"><img src="https://github.com/cwRichardKim/RKNotificationHub/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [MIT][MIT] | <img src="/assets/RKNotificationHub1.gif"></p>
+<p><a href="https://github.com/TanguyAladenise/BBBadgeBarButtonItem">BBBadgeBarButtonItem</a> <br> <a href="http://gh-btns.cjwirth.com/stars/TanguyAladenise/BBBadgeBarButtonItem"><img src="https://github.com/TanguyAladenise/BBBadgeBarButtonItem/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [MIT][MIT] | <img src="/assets/BBBadgeBarButtonItem1.png"></p>
+<p><a href="https://github.com/JaviSoto/JSBadgeView">JSBadgeView</a> <br> <a href="http://gh-btns.cjwirth.com/stars/JaviSoto/JSBadgeView"><img src="https://github.com/JaviSoto/JSBadgeView/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [MIT][MIT] | <img src="/assets/JSBadgeView1.png"> <img src="/assets/JSBadgeView2.png"></p>
+
+<p>Calendars</p>
+<p>=========</p>
+<p>Repo | Demo</p>
+<p>--- | ---</p>
+<p><a href="https://github.com/WenchaoIOS/FSCalendar">FSCalendar</a> <br> <a href="http://gh-btns.cjwirth.com/stars/WenchaoIOS/FSCalendar"><img src="https://github.com/WenchaoIOS/FSCalendar/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [MIT][MIT] | <img src="/assets/FSCalendar1.jpg"></p>
+<p><a href="https://github.com/Glow-Inc/GLCalendarView">GLCalendarView</a> <br> <a href="http://gh-btns.cjwirth.com/stars/Glow-Inc/GLCalendarView"><img src="https://github.com/Glow-Inc/GLCalendarView/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [MIT][MIT] | <img src="/assets/GLCalendarView1.gif"></p>
+<p><a href="https://github.com/jonathantribouharet/JTCalendar">JTCalendar</a> <br> <a href="http://gh-btns.cjwirth.com/stars/jonathantribouharet/JTCalendar"><img src="https://github.com/jonathantribouharet/JTCalendar/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [MIT][MIT] | <img src="/assets/JTCalendar1.gif"> <img src="/assets/JTCalendar2.png"></p>
+
+<p>Effects</p>
+<p>=======</p>
+<p>Repo | Demo</p>
+<p>--- | ---</p>
+<p><a href="https://github.com/Flipboard/FLAnimatedImage">FLAnimatedImage</a> <br> <a href="http://gh-btns.cjwirth.com/stars/Flipboard/FLAnimatedImage"><img src="https://github.com/Flipboard/FLAnimatedImage/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [MIT][MIT] | <img src="/assets/FLAnimatedImage1.gif" width="49%" ></p>
+<p><a href="https://github.com/shu223/PulsingHalo">PulsingHalo</a> <br> <a href="http://gh-btns.cjwirth.com/stars/shu223/PulsingHalo"><img src="https://github.com/shu223/PulsingHalo/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [MIT][MIT] | <img src="/assets/PulsingHalo1.gif"></p>
+<p><a href="https://github.com/andreamazz/UITextField-Shake">UITextField-Shake</a> <br> <a href="http://gh-btns.cjwirth.com/stars/andreamazz/UITextField-Shake"><img src="https://github.com/andreamazz/UITextField-Shake/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [MIT][MIT] | <img src="/assets/UITextField-Shake1.gif"></p>
+
+<p>Material Design</p>
+<p>===============</p>
+<p>Repo | Demo</p>
+<p>--- | ---</p>
+<p><a href="https://github.com/CosmicMind/Material">Material</a> <br> <a href="http://gh-btns.cjwirth.com/stars/CosmicMind/Material"><img src="https://github.com/CosmicMind/Material/stargazers" alt="</a>"> <br> Language: Swift <br> License: [BSD-3][BSD-3] | <img src="/assets/Material1.gif"> <img src="/assets/Material2.gif"> <img src="/assets/Material3.gif"></p>
+<p><a href="https://github.com/nghialv/MaterialKit">MaterialKit</a> <br> <a href="http://gh-btns.cjwirth.com/stars/nghialv/MaterialKit"><img src="https://github.com/nghialv/MaterialKit/stargazers" alt="</a>"> <br> Language: Swift <br> License: [MIT][MIT] | <img src="/assets/MaterialKit1.gif"></p>
+
+<p>Notifications and Alerts</p>
+<p>========================</p>
+<p>Repo | Demo</p>
+<p>--- | ---</p>
+<p><a href="https://github.com/KrauseFx/TSMessages">TSMessages</a> <br> <a href="http://gh-btns.cjwirth.com/stars/KrauseFx/TSMessages"><img src="https://github.com/KrauseFx/TSMessages/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [MIT][MIT] | <img src="/assets/TSMessages1.png"> <img src="/assets/TSMessages2.png"> <img src="/assets/TSMessages3.png"></p>
+<p><a href="https://github.com/cruffenach/CRToast">CRToast</a> <br> <a href="http://gh-btns.cjwirth.com/stars/cruffenach/CRToast"><img src="https://github.com/cruffenach/CRToast/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [MIT][MIT] | <img src="/assets/CRToast1.gif"></p>
+<p><a href="https://github.com/terryworona/TWMessageBarManager">TWMessageBarManager</a> <br> <a href="http://gh-btns.cjwirth.com/stars/terryworona/TWMessageBarManager"><img src="https://github.com/terryworona/TWMessageBarManager/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [MIT][MIT] | <img src="/assets/TWMessageBarManager1.png"></p>
+<p><a href="https://github.com/cwRichardKim/RKDropdownAlert">RKDropdownAlert</a> <br> <a href="http://gh-btns.cjwirth.com/stars/cwRichardKim/RKDropdownAlert"><img src="https://github.com/cwRichardKim/RKDropdownAlert/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [MIT][MIT] | <img src="/assets/RKDropdownAlert1.gif" width="49%" > <img src="/assets/RKDropdownAlert2.gif" width="49%" ></p>
+<p><a href="https://github.com/KyoheiG3/SimpleAlert">SimpleAlert</a> <br> <a href="http://gh-btns.cjwirth.com/stars/KyoheiG3/SimpleAlert"><img src="https://github.com/KyoheiG3/SimpleAlert/stargazers" alt="</a>"> <br> Language: Swift <br> License: [MIT][MIT] | <img src="/assets/SimpleAlert1.gif"></p>
+<p><a href="https://github.com/atljeremy/JFMinimalNotifications">JFMinimalNotifications</a> <br> <a href="http://gh-btns.cjwirth.com/stars/atljeremy/JFMinimalNotifications"><img src="https://github.com/atljeremy/JFMinimalNotifications/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [MIT][MIT] | <img src="/assets/JFMinimalNotifications1.gif" width="49%" > <img src="/assets/JFMinimalNotifications2.gif" width="49%" > <img src="/assets/JFMinimalNotifications3.jpeg"></p>
+<p><a href="https://github.com/matteogobbi/MGFashionMenuView">MGFashionMenuView</a> <br> <a href="http://gh-btns.cjwirth.com/stars/matteogobbi/MGFashionMenuView"><img src="https://github.com/matteogobbi/MGFashionMenuView/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [MIT][MIT] | <img src="/assets/MGFashionMenuView1.gif"></p>
+<p><a href="https://github.com/jmascia/KLCPopup">KLCPopup</a> <br> <a href="http://gh-btns.cjwirth.com/stars/jmascia/KLCPopup"><img src="https://github.com/jmascia/KLCPopup/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [MIT][MIT] | <img src="/assets/KLCPopup1.gif" width="49%" ></p>
+<p><a href="https://github.com/m1entus/MZFormSheetController">MZFormSheetController</a> <br> <a href="http://gh-btns.cjwirth.com/stars/m1entus/MZFormSheetController"><img src="https://github.com/m1entus/MZFormSheetController/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [MIT][MIT] | <img src="/assets/MZFormSheetController1.png" width="49%" > <img src="/assets/MZFormSheetController2.gif" width="49%" ></p>
+<p><a href="https://github.com/thii/Notie">Notie</a> <br> <a href="http://gh-btns.cjwirth.com/stars/thii/Notie"><img src="https://github.com/thii/Notie/stargazers" alt="</a>"> <br> Language: Swift <br> License: [MIT][MIT] | <img src="/assets/Notie1.gif" width="49%" ></p>
+<p><a href="https://github.com/LeoNatan/LNNotificationsUI">LNNotificationsUI</a> <br> <a href="http://gh-btns.cjwirth.com/stars/LeoNatan/LNNotificationsUI"><img src="https://github.com/LeoNatan/LNNotificationsUI/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [MIT][MIT] | <img src="/assets/LNNotificationsUI1.gif"></p>
+
+<p>Onboarding and Tutorials</p>
+<p>========================</p>
+<p>Repo | Demo</p>
+<p>--- | ---</p>
+<p><a href="https://github.com/IFTTT/JazzHands">JazzHands</a> <br> <a href="http://gh-btns.cjwirth.com/stars/IFTTT/JazzHands"><img src="https://github.com/IFTTT/JazzHands/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [MIT][MIT] | <img src="/assets/JazzHands1.gif"></p>
+<p><a href="https://github.com/MatthewYork/MYBlurIntroductionView">MYBlurIntroductionView</a> <br> <a href="http://gh-btns.cjwirth.com/stars/MatthewYork/MYBlurIntroductionView"><img src="https://github.com/MatthewYork/MYBlurIntroductionView/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [MIT][MIT] | <img src="/assets/MYBlurIntroductionView1.gif" width="49%" ></p>
+<p><a href="https://github.com/mamaral/Onboard">Onboard</a> <br> <a href="http://gh-btns.cjwirth.com/stars/mamaral/Onboard"><img src="https://github.com/mamaral/Onboard/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [MIT][MIT] | <img src="/assets/Onboard1.gif" width="49%" ></p>
+
+<p>Photo and Video</p>
+<p>===============</p>
+<p>Repo | Demo</p>
+<p>--- | ---</p>
+<p><a href="https://github.com/mwaterfall/MWPhotoBrowser">MWPhotoBrowser</a> <br> <a href="http://gh-btns.cjwirth.com/stars/mwaterfall/MWPhotoBrowser"><img src="https://github.com/mwaterfall/MWPhotoBrowser/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [MIT][MIT] | <img src="/assets/MWPhotoBrowser1.png" width="49%" > <img src="/assets/MWPhotoBrowser2.png" width="49%" > <img src="/assets/MWPhotoBrowser3.png" width="49%" > <img src="/assets/MWPhotoBrowser4.png" width="49%" ></p>
+<p><a href="https://github.com/0xced/XCDYouTubeKit">XCDYouTubeKit</a> <br> <a href="http://gh-btns.cjwirth.com/stars/0xced/XCDYouTubeKit"><img src="https://github.com/0xced/XCDYouTubeKit/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [MIT][MIT] | <img src="/assets/XCDYouTubeKit1.png"></p>
+<p><a href="https://github.com/mariohahn/MHVideoPhotoGallery">MHVideoPhotoGallery</a> <br> <a href="http://gh-btns.cjwirth.com/stars/mariohahn/MHVideoPhotoGallery"><img src="https://github.com/mariohahn/MHVideoPhotoGallery/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [MIT][MIT] | <img src="/assets/MHVideoPhotoGallery1.gif" width="49%" > <img src="/assets/MHVideoPhotoGallery2.gif" width="49%" > <img src="/assets/MHVideoPhotoGallery3.gif" width="49%" > <img src="/assets/MHVideoPhotoGallery4.gif" width="49%" ></p>
+<p><a href="https://github.com/EddyBorja/EBPhotoPages">EBPhotoPages</a> <br> <a href="http://gh-btns.cjwirth.com/stars/EddyBorja/EBPhotoPages"><img src="https://github.com/EddyBorja/EBPhotoPages/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [MIT][MIT] | <img src="/assets/EBPhotoPages1.png" width="49%" > <img src="/assets/EBPhotoPages2.png" width="49%" > <img src="/assets/EBPhotoPages3.png" width="49%" > <img src="/assets/EBPhotoPages4.png" width="49%" ></p>
+<p><a href="https://github.com/autresphere/ASMediaFocusManager">ASMediaFocusManager</a> <br> <a href="http://gh-btns.cjwirth.com/stars/autresphere/ASMediaFocusManager"><img src="https://github.com/autresphere/ASMediaFocusManager/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [MIT][MIT] | <img src="/assets/ASMediaFocusManager1.gif"> <img src="/assets/ASMediaFocusManager2.gif"></p>
+<p><a href="https://github.com/movielala/VideoSplashKit">VideoSplashKit</a> <br> <a href="http://gh-btns.cjwirth.com/stars/movielala/VideoSplashKit"><img src="https://github.com/movielala/VideoSplashKit/stargazers" alt="</a>"> <br> Language: Swift <br> License: [MIT][MIT] | <img src="/assets/VideoSplash1.gif"></p>
+
+<p>Progress Views</p>
+<p>==============</p>
+<p>Repo | Demo</p>
+<p>--- | ---</p>
+<p><a href="https://github.com/jdg/MBProgressHUD">MBProgressHUD</a> <br> <a href="http://gh-btns.cjwirth.com/stars/jdg/MBProgressHUD"><img src="https://github.com/jdg/MBProgressHUD/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [MIT][MIT] | <img src="/assets/MBProgressHUD1.png"> <img src="/assets/MBProgressHUD2.png"> <img src="/assets/MBProgressHUD3.png"> <img src="/assets/MBProgressHUD4.png"> <img src="/assets/MBProgressHUD5.png"> <img src="/assets/MBProgressHUD6.png"> <img src="/assets/MBProgressHUD7.png"></p>
+<p><a href="https://github.com/mrackwitz/MRProgress">MRProgress</a> <br> <a href="http://gh-btns.cjwirth.com/stars/mrackwitz/MRProgress"><img src="https://github.com/mrackwitz/MRProgress/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [MIT][MIT] | <img src="/assets/MRProgress2.jpg"> <img src="/assets/MRProgress4.jpg"> <img src="/assets/MRProgress6.jpg"></p>
+<p><a href="https://github.com/Marxon13/M13ProgressSuite">M13ProgressSuite</a> <br> <a href="http://gh-btns.cjwirth.com/stars/Marxon13/M13ProgressSuite"><img src="https://github.com/Marxon13/M13ProgressSuite/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [MIT][MIT] | <img src="/assets/M13ProgressSuite1.gif"> <img src="/assets/M13ProgressSuite2.gif"> <img src="/assets/M13ProgressSuite3.gif"> <img src="/assets/M13ProgressSuite4.gif"> <img src="/assets/M13ProgressSuite5.gif"> <img src="/assets/M13ProgressSuite6.gif"> <img src="/assets/M13ProgressSuite7.gif"> <img src="/assets/M13ProgressSuite8.gif"></p>
+<p><a href="https://github.com/elbryan/FFCircularProgressView">FFCircularProgressView</a> <br> <a href="http://gh-btns.cjwirth.com/stars/elbryan/FFCircularProgressView"><img src="https://github.com/elbryan/FFCircularProgressView/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [MIT][MIT] | <img src="/assets/FFCircularProgressView1.gif"></p>
+<p><a href="https://github.com/skywinder/GaugeKit">GaugeKit</a> <br> <a href="http://gh-btns.cjwirth.com/stars/skywinder/GaugeKit"><img src="https://github.com/skywinder/GaugeKit/stargazers" alt="</a>"> <br> Language: Swift <br> License: [MIT][MIT] | <img src="/assets/GaugeKit1.gif"></p>
+<p><a href="https://github.com/ninjaprox/NVActivityIndicatorView">NVActivityIndicatorView</a> <br> <a href="http://gh-btns.cjwirth.com/stars/ninjaprox/NVActivityIndicatorView"><img src="https://github.com/ninjaprox/NVActivityIndicatorView/stargazers" alt="</a>"> <br> Language: Swift <br> License: [MIT][MIT] | <img src="/assets/NVActivityIndicatorView1.gif"></p>
+
+<p>RefreshControls</p>
+<p>===============</p>
+<p>Repo | Demo</p>
+<p>--- | ---</p>
+<p><a href="https://github.com/coolbeet/CBStoreHouseRefreshControl">CBStoreHouseRefreshControl</a> <br> <a href="http://gh-btns.cjwirth.com/stars/coolbeet/CBStoreHouseRefreshControl"><img src="https://github.com/coolbeet/CBStoreHouseRefreshControl/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [MIT][MIT] | <img src="/assets/CBStoreHouseRefreshControl1.gif"> <img src="/assets/CBStoreHouseRefreshControl2.gif"></p>
+<p><a href="https://github.com/uzysjung/UzysAnimatedGifPullToRefresh">UzysAnimatedGifPullToRefresh</a> <br> <a href="http://gh-btns.cjwirth.com/stars/uzysjung/UzysAnimatedGifPullToRefresh"><img src="https://github.com/uzysjung/UzysAnimatedGifPullToRefresh/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [MIT][MIT] | <img src="/assets/UzysAnimatedGifPullToRefresh1.gif"></p>
+<p><a href="https://github.com/boztalay/BOZPongRefreshControl">BOZPongRefreshControl</a> <br> <a href="http://gh-btns.cjwirth.com/stars/boztalay/BOZPongRefreshControl"><img src="https://github.com/boztalay/BOZPongRefreshControl/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [MIT][MIT] | <img src="/assets/BOZPongRefreshControl1.gif"></p>
+<p><a href="https://github.com/mentionapp/mntpulltoreact">mntpulltoreact</a> <br> <a href="http://gh-btns.cjwirth.com/stars/mentionapp/mntpulltoreact"><img src="https://github.com/mentionapp/mntpulltoreact/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [Apache v2][Apache v2] | <img src="/assets/MNTPullToReact1.gif"></p>
+<p><a href="https://github.com/uzysjung/UzysCircularProgressPullToRefresh">UzysCircularProgressPullToRefresh</a> <br> <a href="http://gh-btns.cjwirth.com/stars/uzysjung/UzysCircularProgressPullToRefresh"><img src="https://github.com/uzysjung/UzysCircularProgressPullToRefresh/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [MIT][MIT] | <img src="/assets/UzysCircularProgressPullToRefresh1.gif"></p>
+<p><a href="https://github.com/cemolcay/PullToRefreshCoreText">PullToRefreshCoreText</a> <br> <a href="http://gh-btns.cjwirth.com/stars/cemolcay/PullToRefreshCoreText"><img src="https://github.com/cemolcay/PullToRefreshCoreText/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [MIT][MIT] | <img src="/assets/PullToRefreshCoreText1.gif"></p>
+
+<p>Side Menu</p>
+<p>=========</p>
+<p>Repo | Demo</p>
+<p>--- | ---</p>
+<p><a href="https://github.com/romaonthego/RESideMenu">RESideMenu</a> <br> <a href="http://gh-btns.cjwirth.com/stars/romaonthego/RESideMenu"><img src="https://github.com/romaonthego/RESideMenu/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [MIT][MIT] | <img src="/assets/RESideMenu1.gif"></p>
+<p><a href="https://github.com/romaonthego/REFrostedViewController">REFrostedViewController</a> <br> <a href="http://gh-btns.cjwirth.com/stars/romaonthego/REFrostedViewController"><img src="https://github.com/romaonthego/REFrostedViewController/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [MIT][MIT] | <img src="/assets/REFrostedViewController1.gif" width="49%" ></p>
+<p><a href="https://github.com/twotoasters/TWTSideMenuViewController">TWTSideMenuViewController</a> <br> <a href="http://gh-btns.cjwirth.com/stars/twotoasters/TWTSideMenuViewController"><img src="https://github.com/twotoasters/TWTSideMenuViewController/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [MIT][MIT] | <img src="/assets/TWTSideMenuViewController1.gif"></p>
+<p><a href="https://github.com/SocialObjects-Software/AMSlideMenu">AMSlideMenu</a> <br> <a href="http://gh-btns.cjwirth.com/stars/SocialObjects-Software/AMSlideMenu"><img src="https://github.com/SocialObjects-Software/AMSlideMenu/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [MIT][MIT] | <img src="/assets/AMSlideMenu1.gif"></p>
+<p><a href="https://github.com/arn00s/cariocamenu">CariocaMenu</a> <br> <a href="http://gh-btns.cjwirth.com/stars/arn00s/CariocaMenu"><img src="https://github.com/arn00s/CariocaMenu/stargazers" alt="</a>"> <br> Language: Swift <br> License: [MIT][MIT] | <img src="/assets/cariocamenu.gif"></p>
+
+<p>Tab Bars</p>
+<p>========</p>
+<p>Repo | Demo</p>
+<p>--- | ---</p>
+<p><a href="https://github.com/jamesdunay/MinimalTabBar">MinimalTabBar</a> <br> <a href="http://gh-btns.cjwirth.com/stars/jamesdunay/MinimalTabBar"><img src="https://github.com/jamesdunay/MinimalTabBar/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [MIT][MIT] | <img src="/assets/MinimalTabBar1.gif"></p>
+<p><a href="https://github.com/Ramotion/adaptive-tab-bar">adaptive-tab-bar</a> <br> <a href="http://gh-btns.cjwirth.com/stars/Ramotion/adaptive-tab-bar"><img src="https://github.com/Ramotion/adaptive-tab-bar/stargazers" alt="</a>"> <br> Language: Swift <br> License: [MIT][MIT] | <img src="/assets/adaptive-tab-bar1.png"></p>
+<p><a href="https://github.com/Yalantis/FoldingTabBar.iOS">FoldingTabBar.iOS</a> <br> <a href="http://gh-btns.cjwirth.com/stars/Yalantis/FoldingTabBar.iOS"><img src="https://github.com/Yalantis/FoldingTabBar.iOS/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [MIT][MIT] | <img src="/assets/FoldingTabBar.iOS1.gif"></p>
+<p><a href="https://github.com/Goles/GGTabBar">GGTabBar</a> <br> <a href="http://gh-btns.cjwirth.com/stars/Goles/GGTabBar"><img src="https://github.com/Goles/GGTabBar/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [MIT][MIT] | <img src="/assets/GGTabBar1.png"></p>
+<p><a href="https://github.com/bfeher/BFPaperTabBarController">BFPaperTabBarController</a> <br> <a href="http://gh-btns.cjwirth.com/stars/bfeher/BFPaperTabBarController"><img src="https://github.com/bfeher/BFPaperTabBarController/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [MIT][MIT] | <img src="/assets/BFPaperTabBarController1.gif"></p>
+
+<p>Table/Collection Views</p>
+<p>======================</p>
+<p>Repo | Demo</p>
+<p>--- | ---</p>
+<p><a href="https://github.com/MP0w/MPSkewed">MPSkewed</a> <br> <a href="http://gh-btns.cjwirth.com/stars/MP0w/MPSkewed"><img src="https://github.com/MP0w/MPSkewed/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [BSD-3][BSD-3] | <img src="/assets/MPSkewed1.gif" width="49%" > <img src="/assets/MPSkewed2.gif" width="49%" ></p>
+<p><a href="https://github.com/Augustyniak/RATreeView">RATreeView</a> <br> <a href="http://gh-btns.cjwirth.com/stars/Augustyniak/RATreeView"><img src="https://github.com/Augustyniak/RATreeView/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [MIT][MIT] | <img src="/assets/RATreeView1.gif" width="75%" ></p>
+<p><a href="https://github.com/betzerra/MosaicLayout">MosaicLayout</a> <br> <a href="http://gh-btns.cjwirth.com/stars/betzerra/MosaicLayout"><img src="https://github.com/betzerra/MosaicLayout/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [MIT][MIT] | <img src="/assets/MosaicLayout1.png"></p>
+<p><a href="https://github.com/damirstuhec/DSDynamicScrollView">DSDynamicScrollView</a> <br> <a href="http://gh-btns.cjwirth.com/stars/damirstuhec/DSDynamicScrollView"><img src="https://github.com/damirstuhec/DSDynamicScrollView/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [MIT][MIT] | <img src="/assets/DSDynamicScrollView1.gif"></p>
+<p><a href="https://github.com/jamztang/CSStickyHeaderFlowLayout">CSStickyHeaderFlowLayout</a> <br> <a href="http://gh-btns.cjwirth.com/stars/jamztang/CSStickyHeaderFlowLayout"><img src="https://github.com/jamztang/CSStickyHeaderFlowLayout/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [MIT][MIT] | <img src="/assets/CSStickyHeaderFlowLayout1.gif" width="49%" > <img src="/assets/CSStickyHeaderFlowLayout2.gif" width="49%" > <img src="/assets/CSStickyHeaderFlowLayout3.gif" width="49%" ></p>
+<p><a href="https://github.com/bryankeller/BLKFlexibleHeightBar">BLKFlexibleHeightBar</a> <br> <a href="http://gh-btns.cjwirth.com/stars/bryankeller/BLKFlexibleHeightBar"><img src="https://github.com/bryankeller/BLKFlexibleHeightBar/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [MIT][MIT] | <img src="/assets/BLKFlexibleHeightBar1.gif" width="49%" > <img src="/assets/BLKFlexibleHeightBar2.gif" width="49%" ></p>
+<p><a href="https://github.com/szk-atmosphere/SAParallaxViewControllerSwift">SAParallaxViewControllerSwift</a> <br> <a href="http://gh-btns.cjwirth.com/stars/szk-atmosphere/SAParallaxViewControllerSwift"><img src="https://github.com/szk-atmosphere/SAParallaxViewControllerSwift/stargazers" alt="</a>"> <br> Language: Swift <br> License: [MIT][MIT] | <img src="/assets/SAParallaxViewControllerSwift1.gif"></p>
+<p><a href="https://github.com/matteogobbi/MGSpotyViewController">MGSpotyViewController</a> <br> <a href="http://gh-btns.cjwirth.com/stars/matteogobbi/MGSpotyViewController"><img src="https://github.com/matteogobbi/MGSpotyViewController/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [MIT][MIT] | <img src="/assets/MGSpotyViewController1.gif"></p>
+<p><a href="https://github.com/ra1028/RAReorderableLayout">RAReorderableLayout</a> <br> <a href="http://gh-btns.cjwirth.com/stars/ra1028/RAReorderableLayout"><img src="https://github.com/ra1028/RAReorderableLayout/stargazers" alt="</a>"> <br> Language: Swift <br> License: [MIT][MIT] | <img src="/assets/RAReorderableLayout1.gif"></p>
+
+<p>User Input</p>
+<p>==========</p>
+<p>Repo | Demo</p>
+<p>--- | ---</p>
+<p><a href="https://github.com/ren6/RKRichTextView">RKRichTextView</a> <br> <a href="http://gh-btns.cjwirth.com/stars/ren6/RKRichTextView"><img src="https://github.com/ren6/RKRichTextView/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [MIT][MIT] | <img src="/assets/RKRichTextView1.png"></p>
+<p><a href="https://github.com/nnhubbard/ZSSRichTextEditor">ZSSRichTextEditor</a> <br> <a href="http://gh-btns.cjwirth.com/stars/nnhubbard/ZSSRichTextEditor"><img src="https://github.com/nnhubbard/ZSSRichTextEditor/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [MIT][MIT] | <img src="/assets/ZSSRichTextEditor1.gif"></p>
+<p><a href="https://github.com/cjwirth/RichEditorView">RichEditorView</a> <br> <a href="http://gh-btns.cjwirth.com/stars/cjwirth/RichEditorView"><img src="https://github.com/cjwirth/RichEditorView/stargazers" alt="</a>"> <br> Language: Swift <br> License: [BSD-3][BSD-3] | <img src="/assets/RichEditorView1.gif"></p>
+<p><a href="https://github.com/raulriera/TextFieldEffects">TextFieldEffects</a> <br> <a href="http://gh-btns.cjwirth.com/stars/raulriera/TextFieldEffects"><img src="https://github.com/raulriera/TextFieldEffects/stargazers" alt="</a>"> <br> Language: Swift <br> License: [MIT][MIT] | <img src="/assets/TextFieldEffects.gif"></p>
+<p><a href="https://github.com/slackhq/SlackTextViewController">SlackTextViewController</a> <br> <a href="http://gh-btns.cjwirth.com/stars/slackhq/SlackTextViewController"><img src="https://github.com/slackhq/SlackTextViewController/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [Apache v2][Apache v2] | <img src="/assets/SlackTextViewController1.gif"></p>
+<p><a href="https://github.com/jverdi/JVFloatLabeledTextField">JVFloatLabeledTextField</a> <br> <a href="http://gh-btns.cjwirth.com/stars/jverdi/JVFloatLabeledTextField"><img src="https://github.com/jverdi/JVFloatLabeledTextField/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [MIT][MIT] | <img src="/assets/JVFloatLabeledTextField1.gif" width="100%" ></p>
+<p><a href="https://github.com/skywinder/ActionSheetPicker-3.0">ActionSheetPicker-3.0</a> <br> <a href="http://gh-btns.cjwirth.com/stars/skywinder/ActionSheetPicker-3.0"><img src="https://github.com/skywinder/ActionSheetPicker-3.0/stargazers" alt="</a>"> <br> Language: Obj-C <br> License: [BSD-3][BSD-3] | <img src="/assets/ActionSheetPicker3.gif"></p>
+<p><a href="https://github.com/hanton/HTYTextField">HTYTextField</a> <br> <a href="http://gh-btns.cjwirth.com/stars/hanton/HTYTextField"><img src="https://github.com/hanton/HTYTextField/stargazers" alt="</a>"> <br> Language: Swift <br> License: [MIT][MIT] | <img src="/assets/HTYTextField1.gif"></p>
+
+<p>[wasabeef]: https://github.com/wasabeef</p>
+<p>[Android Version]: https://github.com/wasabeef/awesome-android-ui</p>
+<p>[awesome-creator]: https://github.com/cjwirth/awesome-creator</p>
+<p>[MIT]: http://opensource.org/licenses/MIT</p>
+<p>[Apache v2]: https://www.apache.org/licenses/LICENSE-2.0</p>
+<p>[BSD-2]: http://opensource.org/licenses/BSD-2-Clause</p>
+<p>[BSD-3]: http://opensource.org/licenses/BSD-3-Clause</p>
+<p>[Unknown]: https://github.com/shu223/AnimatedTransitionGallery/issues/5</p>
+
+</body>
+</html>

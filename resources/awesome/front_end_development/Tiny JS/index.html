@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiny JS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tiny JS</h1>
+
+<p><strong>Repository:</strong> https://github.com/thoughtspile/awesome-tiny-js#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<h1>Awesome Tiny JS <a href="https://awesome.re/badge-flat.svg"><img src="https://awesome.re" alt="Awesome</a>"></h1>
+
+<p>A collection of tiny JS libraries to put your bundle on a diet. Curated by <a href="https://blog.thoughtspile.tech">Vladimir Klepov</a> Rules:</p>
+
+<ul>
+<li>Size is under 2Kb-ish, min + gzip, with all deps, except where noted.</li>
+</ul>
+<ul>
+<li>For multi-purpose libraries, the size of a useful subset must be under 2Kb-ish.</li>
+</ul>
+<ul>
+<li>Second-level libraries only allowed for React, Vue, Angular, svelte. </li>
+</ul>
+<ul>
+<li>Useful client-side. I haven't figured out participation rules for node-only libraries, and I'm not too worried about them.</li>
+</ul>
+<ul>
+<li>100+ GitHub stars. Adding every obsure library will dilute the list.</li>
+</ul>
+<ul>
+<li>No zero-JS (CSS- or type-only) libraries. It's not awesome-css or something.</li>
+</ul>
+<p>Disclaimers:</p>
+
+<ul>
+<li>Most framework-specific libraries are for React, because that's what I'm familiar with.</li>
+</('ul', 0)>
+<h2>Contents</h2>
+
+<ul>
+<li><a href="#ui-frameworks">UI Frameworks</a></li>
+</ul>
+<ul>
+<li><a href="#event-emitters">Event Emitters</a></li>
+</ul>
+<ul>
+<li><a href="#reactive-programming">Reactive Programming</a></li>
+</ul>
+<ul>
+<li><a href="#state-managers">State Managers</a></li>
+</ul>
+<ul>
+<li><a href="#routers-and-url-utils">Routers and URL Utils</a></li>
+</ul>
+<ul>
+<li><a href="#api-layer">API Layer</a></li>
+</ul>
+<ul>
+<li><a href="#i18n">I18N</a></li>
+</ul>
+<ul>
+<li><a href="#dates-and-time">Dates and Time</a></li>
+</ul>
+<ul>
+<li><a href="#generic-utilities">Generic Utilities</a></li>
+</ul>
+<ul>
+<li><a href="#unique-id-generation">Unique ID Generation</a></li>
+</ul>
+<ul>
+<li><a href="#colors">Colors</a></li>
+</ul>
+<ul>
+<li><a href="#to-be-continued">To be Continued</a></li>
+</('ul', 0)>
+<h2>UI Frameworks</h2>
+
+<p>UI frameworks (libraries?) provide declarative templates, event bindings, and observable state to update the view. I've been generous and expanded the size limit for this category to 4Kb, but also increased the star limit to 3K.</p>
+
+<ul>
+<li><a href="https://github.com/preactjs/preact">preact</a> - React-like API (pre-hooks) in 4Kb. Cool ecosystem of similarly tiny tools and components. Highly recommended.</li>
+</ul>
+<p>The following libraries are small and cool, but note they're about <a href="https://npmtrends.com/fre-vs-hyperapp-vs-million-vs-preact-vs-redom-vs-riot">500x less popular than preact.</a> Kudos for deconstrucing the very essence of a "framework":</p>
+
+<ul>
+<li><a href="https://github.com/aidenybai/million">million</a> - Marketed as a <em>drop-in replacement for React,</em> but in under 2Kb.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/frejs/fre">fre</a> - React-like library with hooks and concurrency, 1–3Kb.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jorgebucaran/hyperapp">hyperapp</a> - Declarative UI with pure JS syntax and immutable state, under 2Kb.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/redom/redom">redom</a> - Hyperapp-style templates with <em>imperative</em> event listeners and updates, around 2Kb.</li>
+</ul>
+<p>And if being declarative is not your thing:</p>
+
+<ul>
+<li><a href="https://github.com/franciscop/umbrella">umbrella</a> - jQuery-style DOM manipulation library in 3Kb.</li>
+</('ul', 0)>
+<h2>Event Emitters</h2>
+
+<p>Event emitter pattern is fairly easy to implement yourself, but why bother when you have these cool tools? With an arms race to build the smallest one, the limit is 0.5Kb.</p>
+
+<ul>
+<li><a href="https://github.com/developit/mitt">mitt</a> - 200-byte emitter. I use it on most projects.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ai/nanoevents">nanoevents</a> - Smaller and with nicer unsubscribe API, but no '*' event.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/chrisdavies/eev">eev</a> - More of the same in 500b.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/hustcc/onfire.js">onfire.js</a> - 500b, but has <code>.once</code>.</li>
+</('ul', 0)>
+<h2>Reactive Programming</h2>
+
+<p>A step up from a raw event emitter, reactive libraries can build chains of event transforms, filters, and side-effects. You can already use these to build UIs by manually updating DOM on state change:</p>
+
+<ul>
+<li><a href="https://github.com/paldepind/flyd">flyd</a> - Rx-styled event streams in a 2Kb-ish package.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/elbywan/hyperactiv">hyperactiv</a> - 4 functions to make objects observable and listen to changes, in 1Kb.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/fabiospampinato/flimsy">flimsy</a> - 1Kb reactive core of solid.js that <em>almost</em> fit into UI frameworks category. Author warning: <em>is probably buggier.</em></li>
+</ul>
+<p>Honorable mentions: <a href="https://github.com/staltz/callbag-basics">callbag-basics</a> and <a href="https://github.com/vobyjs/oby">oby</a> <em>could</em> make it <em>if</em> they had tree-shaking, but otherwise are around 7Kb.</p>
+
+<h2>State Managers</h2>
+
+<p>State managers combine observable state with actions and framework bindings, intended for app-wide state.</p>
+
+<ul>
+<li><a href="https://github.com/pmndrs/zustand">zustand</a> - ~1Kb store with pleasant actions and selectors. React / vanilla.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/nanostores/nanostores">nanostores</a> - Modular store in sub-1Kb with lots of framework connectors.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/artalar/reatom">reatom</a> — Reactive stores with a 2Kb core. React / svelte connectors cost extra.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/storeon/storeon">storeon</a> - Minimal 400-byte redux-styled store. (p)react, has third-party connectors.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/developit/unistore">unistore</a> - Sub-1Kb store with actions from preact developers, (p)react support.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/teafuljs/teaful">teaful</a> - (p)react store with useState-like API in 1Kb.</li>
+</('ul', 0)>
+<h2>Routers and URL Utils</h2>
+
+<p>Do stuff on URL / history changes, with path matching and parsing:</p>
+
+<ul>
+<li><a href="https://github.com/molefrog/wouter">wouter</a> - Declarative routes for (p)react in 1.5Kb, or a 400-byte hook.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/nanostores/router">@nanostores/router</a> - Routes as a nanostores store (framework-agnostic), sub-1Kb.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lukeed/navaid">navaid</a> - History-based observable router, sub-1Kb.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jgallen23/routie">routie</a> - Hash-based observable router, sub-1Kb.</li>
+</ul>
+<p>Just want to parse or match URL paths without observing them? Here you go:</p>
+
+<ul>
+<li><a href="https://github.com/lukeed/matchit">matchit</a> - Route parser and matcher, sub-1Kb.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lukeed/regexparam">regexparam</a> - Convert path to regexp in 400 bytes.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lukeed/qss">qss</a> - Parse querystrings in 300b. Not sure you need it, <a href="https://developer.mozilla.org/en-US/docs/Web/API/URL">URL API</a> support is good.</li>
+</('ul', 0)>
+<h2>API Layer</h2>
+
+<p><code>fetch</code> API has some boilerplate associated with it: serialize & parse data, reject on non-200 response, etc. These tiny packages handle it for you:</p>
+
+<ul>
+<li><a href="https://github.com/developit/redaxios">redaxios</a> - Drop-in axios replacement in 800 bytes.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/elbywan/wretch">wretch</a> - Chainable API with error processing in 2Kb, and lots of extra plugins.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/truework/gretchen">gretchen</a> - Chainable API with type-safe errors in 2Kb.</li>
+</ul>
+<p>If for some reason you still need a fetch polyfill, try this one:</p>
+
+<ul>
+<li><a href="https://github.com/developit/unfetch">unfetch</a> - Loose fetch polyfill in 500 bytes.</li>
+</('ul', 0)>
+<h2>I18N</h2>
+
+<p>A map of strings might seem enough to translate an app, but these tools also handle interpolation and some extra goodies:</p>
+
+<ul>
+<li><a href="https://github.com/nanostores/i18n">@nanostores/i18n</a> - Detect locale, load dictionaries, format dates / numbers in sub-1Kb.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lukeed/rosetta">rosetta</a> - Bare-bones interpolation in 300 bytes.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lingui/js-lingui">lingui</a> - 1.7Kb core with template strings and optional react connector. babel-depenent.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ibitcy/eo-locale">eo-locale</a> - Interpolation & dates / numbers in under 2Kb, including react bindings.</li>
+</('ul', 0)>
+<h2>Dates and Time</h2>
+
+<p>Date and time manipulation in pure JS is quite verbose. Luckily, two of the top date libraries have sensible size:</p>
+
+<ul>
+<li><a href="https://github.com/date-fns/date-fns/">date-fns</a> - Not tiny as a whole, but most functions are under 1Kb each (<code>format</code> is quite heavy).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/iamkun/dayjs">dayjs</a> - 2Kb-ish library with <em>alomost</em> moment.js-compatible API, covers most use cases.</li>
+</ul>
+<p>And here are some more packages that only do formatting:</p>
+
+<ul>
+<li><a href="https://github.com/aweary/tinytime">tinytime</a> - Simple 1Kb date formatter, like <code>{h}:{mm} -> 9:33</code>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lukeed/tinydate">tinydate</a> - 400-byte date formatter, only supports padded numeric format (September -> 09).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jonschlinkert/time-stamp">time-stamp</a> - More of the same, in 700 bytes.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/vercel/ms">ms</a> - Parse & format ms durations, e.g. <code>"1m" <-> 60000</code>, in 900 bytes.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/hustcc/timeago.js">timeago.js</a> - Format dates into stuff like <em>X minutes ago</em> or <em>in X hours,</em> 2Kb.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lukeed/fromnow">fromnow</a> - More of the same, but in 350 bytes.</li>
+</ul>
+<p>Note that the built-in <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat"><code>Intl.DateTimeFormat</code></a> has decent support.</p>
+
+<h2>Generic Utilities</h2>
+
+<p>Something you'd find in lodash or ramda, but smaller. Most are pretty similar and very small, with minor differences in package structure (single / package-per-helper) and tree shaking vs direct helper import.</p>
+
+<ul>
+<li><a href="https://github.com/remeda/remeda">remeda</a> - 90 tree-shakable helpers.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/selfrefactor/rambda">rambda</a> - 187 tree-shakable helpers.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/angus-c/just">just</a> - 82 helpers in separate packages.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Tinkoff/utils.js">@tinkoff/utils</a> - 173 helpers, 1 import per helper. Conservative browser target.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/marpple/FxTS">@fxts/core</a> - 96 tree-shakable helpers. Lazy evaluation support.</li>
+</ul>
+<p>Honorable mention: <a href="https://github.com/jashkenas/underscore">underscore,</a> outshined by lodash by chance, contains many sub-1Kb helpers. It does not tree-shake as well as the libraries above due to codebase structure.</p>
+
+<p>Note: lodash itself is not tree-shakable, but has made many attempts at modulaity with <code>lodash.method</code> packages, imports from <code>lodash/method</code>, and <code>lodash-es</code>, none of which work well in practice. But yes, lodash does handle some corner cases.</p>
+
+<p>Also note that much of the original lodash functionality comes built-in with modern ES. Prefer native versions over libraries as your browser target allows.</p>
+
+<h2>Unique ID Generation</h2>
+
+<p>Unique ID generation does not take a lot of code, but it's not someting I'd want to write myself. Limit is 500 bytes. Also note that the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Crypto/randomUUID">native <code>crypto.randomUUID</code></a> has <a href="https://caniuse.com/mdn-api<em>crypto</em>randomuuid">OK support.</a></p>
+
+<ul>
+<li><a href="https://github.com/lukeed/uuid">uuid</a> - Real UUIDs in 240 bytes.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ai/nanoid">nanoid</a> - Random IDs with larger alphabet in 130 bytes.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lukeed/uid">uid</a> - Can do in in 130–205 bytes.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lukeed/hexoid">hexoid</a> - Hex IDs in 190 bytes.</li>
+</('ul', 0)>
+<h2>Colors</h2>
+
+<p>Color manipulation is rare in pure UI development, but very helpful for data visualization, and uses <a href="https://en.wikipedia.org/wiki/HSL<em>and</em>HSV#Color<em>conversion</em>formulae">freaky math.</a> Don't fry your brain, take these:</p>
+
+<ul>
+<li><a href="https://github.com/omgovich/colord">colord</a> - Manipulate colors and convert formats. 1.7Kb, exotic color spaces as plugins.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/stayradiated/colr">colr</a> - Fits more color spaces, but fewer manipulations than colord, into 1.9Kb.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/davidmerfield/randomColor">randomcolor</a> - Random attractive colors with configuration, just above 2Kb.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/cdonohue/polychrome">polychrome</a> - Color manipulation in 2Kb.</li>
+</('ul', 0)>
+<h2>To be Continued</h2>
+
+<p>See <a href="./WIP.md">WIP.md</a> for a list of small libraries I have found, but not yet analyzed deeply.</p>
+
+<p>Suggestions welcome! Please check that the lib you're suggesting:</p>
+
+<ul>
+<li>Fits the <a href="#awesome-tiny-js">criteria.</a></li>
+</ul>
+<ul>
+<li>Is not already in <a href="./WIP.md">WIP.</a> </li>
+</ul>
+<p>And drop a pull request or an <a href="https://github.com/thoughtspile/awesome-tiny-js/issues">issue</a>.</p>
+
+<hr>
+
+<p>Collected and reviewed by <a href="https://blog.thoughtspile.tech">Vladimir Klepov</a> in 2023. <a href="./LICENSE">CC0 license.</a></p>
+
+</body>
+</html>

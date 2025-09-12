@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storybook</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Storybook</h1>
+
+<p><strong>Repository:</strong> https://github.com/lauthieb/awesome-storybook#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<h1>Awesome Storybook <a href="https://awesome.re/badge.svg"><img src="https://awesome.re" alt="Awesome</a>"></h1>
+
+<p><a href="https://storybook.js.org"><img src="storybook-logo.svg" align="right" width="80"></a></p>
+
+<blockquote>
+<p>A curated list of awesome resources about Storybook's ecosystem :art:</p>
+</blockquote>
+
+<p><a href="https://storybook.js.org">Storybook</a> is a frontend tool for building UI components faster and easier.</p>
+
+<p>Contributions welcome. Add links through pull requests or create an issue to start a discussion.</p>
+
+<h2>Contents</h2>
+
+<ul>
+<li><a href="#official-resources">Official resources</a></li>
+</ul>
+<ul>
+<li><a href="#community-resources">Community resources</a></li>
+</ul>
+<ul>
+<li><a href="#examples">Examples</a></li>
+</ul>
+<ul>
+<li><a href="#tutorials">Tutorials</a></li>
+</ul>
+<ul>
+<li><a href="#talks">Talks</a></li>
+</ul>
+<ul>
+<li><a href="#blog-posts">Blog posts</a></li>
+</ul>
+<ul>
+<li><a href="#contributing">Contributing</a></li>
+</('ul', 0)>
+<h2>Official resources</h2>
+
+<ul>
+<li><a href="https://storybook.js.org">Website</a></li>
+</ul>
+<ul>
+<li><a href="https://storybook.js.org/docs">Docs</a></li>
+</ul>
+<ul>
+<li><a href="https://storybook.js.org/showcase">Showcase</a></li>
+</ul>
+<ul>
+<li><a href="https://storybook.js.org/blog">Blog</a></li>
+</ul>
+<ul>
+<li><a href="https://storybook.js.org/tutorials/">Tutorials</a></li>
+</ul>
+<ul>
+<li><a href="https://x.com/storybookjs">X</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/storybookjs">GitHub</a></li>
+</ul>
+<ul>
+<li><a href="https://medium.com/storybookjs">Medium</a></li>
+</ul>
+<ul>
+<li><a href="https://discord.gg/storybook">Discord</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/storybookjs/brand">Brand's materials</a></li>
+</ul>
+<ul>
+<li><a href="https://master--5ccbc373887ca40020446347.chromatic.com/">Design system</a></li>
+</('ul', 0)>
+<h2>Community resources</h2>
+
+<ul>
+<li><a href="https://dev.to/t/storybook">DEV.to #storybook</a> - Posts about Storybook on DEV.to blogging platform.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/DAN-AKL/storybook-documentation-primitives">Documentation Primitives</a> - Custom DocBlocks for Storybook Docs.</li>
+</('ul', 0)>
+<h2>Examples</h2>
+
+<ul>
+<li><a href="https://decathlon.github.io/vitamin-web">Decathlon - Design System</a></li>
+</ul>
+<ul>
+<li><a href="https://primer.github.io/storybook/">GitHub - Design System</a></li>
+</ul>
+<ul>
+<li><a href="https://react-dates.github.io/react-date">Airbnb - react-date</a></li>
+</ul>
+<ul>
+<li><a href="https://mashmatrix.github.io/react-lightning-design-system/">Salesforce - Design System</a></li>
+</ul>
+<ul>
+<li><a href="https://quantum.okta.design/">Auth0/OKta - Quantum Design System</a></li>
+</ul>
+<ul>
+<li><a href="https://axafrance.github.io/react-toolkit/latest/storybook/">AXA France - Design System</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/shared-components/shared-react-components-example">Shared React Components Boilerplate</a></li>
+</ul>
+<ul>
+<li><a href="https://www.apideck.design/">Apideck - Components</a></li>
+</ul>
+<ul>
+<li><a href="https://qui-max.netlify.app/?path=/story/intro--page">Qui - Vue 2/3 Design system</a></li>
+</ul>
+<ul>
+<li><a href="https://mistica-web.vercel.app/?path=/story/welcome--welcome">Mística - Design system</a></li>
+</ul>
+<ul>
+<li><a href="https://recharts.org/en-US/storybook">Recharts - Storybook</a></li>
+</('ul', 0)>
+<h2>Tutorials</h2>
+
+<details>
+<summary>2022</summary>
+
+<ul>
+<li><a href="https://snipcart.com/blog/storybook-react-tutorial-example">Storybook React: A Beginner's Tutorial to UI Components</a></li>
+</ul>
+</details>
+
+<details>
+<summary>2020</summary>
+
+<ul>
+<li><a href="https://davidyeiser.com/tutorials/storybook-react-with-dark-mode">Simple Storybook React Setup with Dark Mode Integration</a></li>
+</ul>
+</details>
+
+<details>
+<summary>2018</summary>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=va-JzrmaiUM">Adding Storybook Style Guide to a Create React App</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=_jttw14T52o">Build your components with Storybook</a></li>
+</ul>
+</details>
+
+<h2>Talks</h2>
+
+<details>
+<summary>2019</summary>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=zMpSwo03aKo">Storybook, le playground qu'il vous faut pour vos composants UI! (FR)</a></li>
+</ul>
+</details>
+
+<details>
+<summary>2018</summary>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=XN398jfTwQI">VueNYC - Learn Storybook</a></li>
+</ul>
+</details>
+
+<details>
+<summary>2017</summary>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=E2c183LS4lA">React Storybook Tutorial with Examples - Getting Started with React Storybook</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=PF0Vi-iIyoo">React Storybook: Design, Dev, Doc, Debug Components - React Conf 2017</a></li>
+</ul>
+</details>
+
+<h2>Blog posts</h2>
+
+<details>
+<summary>2019</summary>
+
+<ul>
+<li><a href="https://dev.to/loicgoyet/how-i-manage-to-make-my-storybook-project-the-most-efficient-possible-2d8o">How I manage to make my Storybook project the most efficient possible</a></li>
+</ul>
+<ul>
+<li><a href="https://medium.com/storybookjs/instant-accessibility-qa-linting-in-storybook-4a474b0f5347">Real-time accessibility testing with Storybook</a></li>
+</ul>
+</details>
+
+<details>
+<summary>2018</summary>
+
+<ul>
+<li><a href="https://auth0.com/blog/using-storybook-with-vuejs/">Using Storybook with VueJS</a></li>
+</ul>
+<ul>
+<li><a href="https://www.nickyt.co/blog/setting-up-storybook-for-preact-p5a/">Setting up Storybook for Preact</a></li>
+</ul>
+<ul>
+<li><a href="https://auth0.com/blog/setting-up-a-component-library-with-react-and-storybook/">Setting Up a Component Library with React and Storybook</a></li>
+</ul>
+<ul>
+<li><a href="https://dev.to/madhu/storybook---ui-component-development-tool-for-react-vue-and-angular-article-focusing-on-react-29od">Storybook - UI component development tool for React, Vue, and Angular (Article focusing on React)</a></li>
+</ul>
+<ul>
+<li><a href="https://www.chromatic.com/blog/storybook-vs-styleguidist/">Storybook vs Styleguidist</a></li>
+</ul>
+</details>
+
+<details>
+<summary>2017</summary>
+
+<ul>
+<li><a href="https://spin.atomicobject.com/storybook-tests-react/">Five Reasons to Use Storybook Tests</a></li>
+</ul>
+</details>
+
+<h2>Contributing</h2>
+
+<p>Contributions welcome! Read the <a href="CONTRIBUTING.md">contribution guidelines</a> first.</p>
+
+</body>
+</html>

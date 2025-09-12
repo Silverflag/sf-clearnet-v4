@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WordPress Gatsby</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>WordPress-Gatsby</h1>
+
+<p><strong>Repository:</strong> https://github.com/henrikwirth/awesome-wordpress-gatsby#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<div align="center">
+  <br /><br />
+  <a href="https://awesome.re"><img src="https://awesome.re/badge-flat.svg" /></a>
+  <br /><br /><br />
+  <a href="https://wordpress.org/"><img width="150" height="150" align="center" src="media/wordpress-logo.svg" alt="WordPress"></a>
+      <a href="https://www.gatsbyjs.org/"><img width="150" height="150" align="center" src="media/gatsby-logo.svg" alt="Gatsby"></a>
+  <br /><br />
+  <p>
+    <b>
+<p>A curated list of resources about WordPress as a headless CMS with Gatsby as a Static Site Generator (SSG).</p>
+    </b>
+  </p>
+  <br />
+</div>
+
+<p>A <strong>headless CMS</strong> is a back-end only content management system (CMS). Its purpose is to serve content and make it accessible via an API (e.g. REST or GraphQL).</p>
+
+<p>A <strong>Static Site Generator (SSG)</strong> is a framework or setup, that helps you to generate static websites (HTML/CSS/JS). The source of your data can be anything from local files (e.g. text files or markdown) to APIs (e.g. REST, GraphQL).</p>
+
+<br />
+
+<p><strong>Why Gatsby and WordPress?</strong></p>
+
+<p>WordPress is one of the <strong>most used CMS in the world</strong> and therefore many people already know how to work with it. The typical front-end approach with PHP-based templates is getting more and more problematic in an environment where performance is key. The approach to use WordPress as a headless CMS with normal API calls through JavaScript already exists, but also has the downside of having to make requests to the server and rendering depending on the response. This adds time to load. <strong>Gatsby instead, pre-renders the whole site at compile time</strong> and therefore the user gets a <strong>fully prepared static site on their first request</strong>, making it one of the <strong>best approaches for performance</strong>. Another huge benefit is <strong>security</strong>, as your WordPress instance can be anywhere, even locally and you don't need to expose any of it to the user. <strong>The static Gatsby site therefore, is not hackable.</strong> Find further arguments for pros and cons in the resources below.</p>
+
+<h2>Contents</h2>
+<!-- TOC -->
+<ul>
+<li><a href="#communities">Communities</a></li>
+</ul>
+<ul>
+<li><a href="#articles-and-talks">Articles and Talks</a></li>
+</ul>
+<ul>
+<li><a href="#plugins">Plugins</a></li>
+<ul>
+<li><a href="#wordpress">WordPress</a></li>
+</ul>
+<ul>
+<li><a href="#gatsby">Gatsby</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#free-tutorials--courses">Free Tutorials / Courses</a></li>
+<ul>
+<li><a href="#written-tutorials">Written Tutorials</a></li>
+</ul>
+<ul>
+<li><a href="#video-tutorials">Video Tutorials</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#paid-tutorials--courses">Paid Tutorials / Courses</a></li>
+</ul>
+<ul>
+<li><a href="#starters">Starters</a></li>
+</ul>
+<ul>
+<li><a href="#themes">Themes</a></li>
+</ul>
+<!-- /TOC -->
+
+<h2>Communities</h2>
+<p>If you need help with anything, there are some highly active communities.</p>
+
+<p><strong>WPGraphQL</strong></p>
+<ul>
+<li><a href="https://wpgql-slack.herokuapp.com/">Slack Chat</a></li>
+</ul>
+<ul>
+<li><a href="https://spectrum.chat/wpgraphql">Spectrum Chat</a></li>
+</ul>
+<ul>
+<li><a href="https://twitter.com/wpgraphql">Twitter</a></li>
+</ul>
+<p><strong>Gatsby</strong></p>
+<ul>
+<li><a href="https://gatsby.dev/discord">Discord Chat</a></li>
+</ul>
+<ul>
+<li><a href="https://www.reddit.com/r/gatsbyjs/">Reddit</a></li>
+</ul>
+<ul>
+<li><a href="https://stackoverflow.com/questions/tagged/gatsby">Stack Overflow</a></li>
+</('ul', 0)>
+<h2>Articles and Talks</h2>
+
+<p>List of articles and talks that elaborate on the technology stack in general.</p>
+
+<ul>
+<li>2021.02: <a href="https://www.gatsbyjs.com/blog/wordpress-integration">Announcing Gatsby’s New WordPress Integration</a></li>
+</ul>
+<ul>
+<li>2021.02: <a href="https://www.youtube.com/watch?v=Me_A0HBYXx8">Jason Bahl of WPGraphQL's role in the operating system for the web</a></li>
+</ul>
+<ul>
+<li>2021.02: <a href="https://www.youtube.com/watch?v=8SAdtU8HAwM">Torque News Drop: Jason Bahl and WPGraphQL</a></li>
+</ul>
+<ul>
+<li>2021.02: <a href="https://wptavern.com/gatsby-launches-new-wordpress-integration-expanding-support-for-headless-architecture">Gatsby Launches New WordPress Integration, Expanding Support for Headless Architecture</a></li>
+</ul>
+<ul>
+<li>2020.11: <a href="https://www.wpgraphql.com/2020/11/16/announcing-wpgraphql-v1/">Announcing WPGraphQL v1.0</a></li>
+</ul>
+<ul>
+<li>2020.07: <a href="https://css-tricks.com/my-long-journey-to-a-decoupled-wordpress-gatsby-site/">My Long Journey to a Decoupled WordPress Gatsby Site</a></li>
+</ul>
+<ul>
+<li>2019.06: [Modern Web Development on the JAMstack</li>
+</ul>
+<p>](https://www.netlify.com/oreilly-jamstack/) - A report from Netlify about Modern Web Development on the JAMStack, published by O'REILLY.</p>
+
+<h2>Plugins</h2>
+
+<p>List of useful plugins to make WordPress and Gatsby work together. Ordered alphabetically.</p>
+
+<h3>WordPress</h3>
+
+<h4>Essential Plugins</h4>
+
+<ul>
+<li><a href="https://github.com/wp-graphql/wp-graphql">WPGraphQL</a> - <a href="https://docs.wpgraphql.com/">Documentation</a> - WPGraphQL brings the power of GraphQL to your WordPress site.</li>
+</ul>
+<ul>
+<li><a href="https://wordpress.org/plugins/wp-gatsby/">WPGatsby</a> - This plugin configures your WordPress site to be an optimized source for Gatsby.</li>
+</('ul', 0)>
+<h4>WPGraphQL Extensions</h4>
+
+<ul>
+<li><a href="https://github.com/funkhaus/wp-graphql-cors">WPGraphQL Cors</a> - This FREE plugin from @kidunot89 and @byfunkhaus claims to enable authentication with WPGraphQL to “just work” by allowing you to set CORS headers that GraphQL will accept, which means WordPress default auth cookies can be accepted.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/builtbycactus/total-counts-for-wp-graphql">Total Counts for WPGraphQL</a> - This FREE plugin from @builtbycactus exposes total counts to connections in the WPGraphQL Schema.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pristas-peter/wp-graphql-gutenberg">WPGraphQL Gutenberg</a> - Exposes Gutenberg blocks to the WPGraphQL API.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/wp-graphql/wp-graphql-jwt-authentication">WPGraphQL JWT Authentication</a> - Extends the WPGraphQL plugin to provide authentication using JWT (JSON Web Tokens).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/valu-digital/wp-graphql-lock">WPGraphQL Lock</a> - Enables query locking for WPGraphQL by implementing persisted GraphQL queries.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/roborourke/wp-graphql-meta">WPGraphQL Meta</a> - This FREE plugin from @robertorourke exposes meta registered via the WordPress register_meta API to WPGraphQL.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/wp-graphql/wp-graphql-meta-query">WPGraphQL Meta Query</a> - Adds Meta_Query support to the WPGraphQL Plugin for postObject query args.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Quartz/wp-graphql-persisted-queries">WPGraphQL Persisted Queries</a> - This FREE plugin from @qz adds the ability to use Persisted Queries with WPGraphQL.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/darylldoyle/wp-graphql-offset-pagination">WPGraphQL Offset Pagination</a> - This FREE plugin from @enshrined adds basic offset pagination as opposed to the standard Cursor based pagination that ships with WPGraphQL.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ashhitch/wp-graphql-send-mail">WPGraphQL Send Email</a> - This FREE plugin from @Ash_Hitchcock allows you to send emails via a simple mutation. Includes the abilitty to restrict sending to trusted origins.</li>
+<hr>
+</ul>
+<p><strong>Extensions for that use other plugins with WPGraphQL</strong></p>
+
+<ul>
+<li><a href="https://github.com/funkhaus/ql-search">QL Search</a> - An extension that integrates SearchWP into WPGraphQL.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Quartz/wp-graphql-content-blocks">WPGraphQL Content Blocks</a> - This FREE plugin from the folks at QZ.com exposes a way to query HTML content from WordPress Posts and Pages as “Blocks” (not related to Gutenberg) to bring more structure to your queried content.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/DalkMania/wp-graphql-cpt">WPGraphQL Enable All Post Types (DalkMania)</a> - This FREE plugin from @DalkMania automatically adds ALL registered post types to the WPGraphQL Schema.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/TylerBarnes/wp-graphql-enable-all-post-types">WPGraphQL Enable All Post Types (TylerBarnes)</a> - This FREE plugin from @tylbar automatically adds ALL registered post types to the WPGraphQL Schema.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/izzygld/wp-graphql-google-schema">WPGraphQL Google Schema</a> - This FREE plugin from @izzygld261 adds Google Schema support to WPGraphQL.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pristas-peter/wp-graphql-gutenberg-acf">WPGraphQL Gutenberg ACF</a> - Exposes ACF blocks through GraphQL</li>
+</ul>
+<ul>
+<li><a href="https://github.com/DalkMania/wp-graphql-mb">WPGraphQL MB (MetaBox)</a> - This FREE plugin from @DalkMania adds all registered metaboxes using <a href="https://metabox.io/">metabox.io</a> to the WPGraphQL Schema.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/hsimah-services/wp-graphql-mb-relationships">WPGraphQL MetaBox Relationships</a> - This FREE plugin from @hsimah adds support for the <a href="https://metabox.io/">metabox.io</a> Relationships field to WPGraphQL (when also using his wp-graphql-metabox plugin).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/andrenoberto/wp-graphql-polls">WPGraphQL Polls</a> - This FREE plugin from @andrenosouza allows you to interact with data from the WP-Polls plugin via GraphQL Queries and Mutations.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/valu-digital/wp-graphql-polylang">WPGraphQL Polylang Extension</a> - Extends WPGraphQL schema with language data from the Polylang plugin.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/wp-graphql/wp-graphql-tax-query">WPGraphQL Tax Query</a> - Adds Tax<em>Query support to the WPGraphQL Plugin for postObject query args (WP</em>Query).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/rburgst/wp-graphql-wpml">WPGraphQL WPML</a> - This FREE plugin from @rburgst extends the WPGraphQL schema with language data from the WPML plugin. In addition it turns off WPML default filters in order to be able to iterate over all posts regardless of language.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/wp-graphql/wp-graphql-acf">WPGraphQL for Advanced Custom Fields</a> - Exposes Advanced Custom Fields to the WPGraphQL Schema.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/wp-graphql/wp-graphql-buddypress">WPGraphQL for BuddyPress</a> - This FREE plugin from @RenatoNascAlves exposes BuddyPress data to WPGraphQL.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/matepaiva/wp-graphql-crb">WPGraphQL for Carbon Fields</a> - This FREE plugin from @matepaiva exposes fields registered using Carbon Fields to the WPGraphQL Schema.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/wp-graphql/wp-graphql-custom-post-type-ui">WPGraphQL for Custom Post Type UI</a> - This FREE plugin adds settings to Custom Post Type UI allowing you to set which Post Types and Taxonomies registered by CPTUI should display in the WPGraphQL Schema.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/hsimah-services/wp-graphql-facetwp">WPGraphQL for FacetWP</a> - This FREE plugin from @hsimah exposes filters on WPGraphQL queries to allow for faceted search with FacetWP.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/harness-software/wp-graphql-gravity-forms">WPGraphQL for Gravity Forms</a> - This FREE plugin from @KellenMace of @harness_up exposes @gravityforms data to WPGraphQL, allowing you to query for forms, fields, entries, and more.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/hsimah-services/wp-graphql-metabox">WPGraphQL for Metabox</a> - This FREE plugin from @hsimah exposes fields registered using the popular http://MetaBox.io to the WPGraphQL Schema.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/toriphes/wp-graphql-ninja-forms">WPGraphQL for Ninja Forms</a> - This free plugin exposes forms created by the Ninja Forms plugin to the WPGraphQL Schema and allows for the forms to be submitted via GraphQL Mutations.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/harness-software/wp-graphql-posts-to-posts">WPGraphQL for Posts 2 Posts</a> - This FREE plugin from @KellenMace of @harness_up automatically creates GraphQL connections for all of your Posts 2 Posts connections.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ashhitch/wp-graphql-yoast-seo">WPGraphQL for SEOPress</a> - This FREE plugin from @moon_meister exposes data managed by SEOPress to the WPGraphQL Schema, allowing for SEO data to be used in your headless applications.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/wp-graphql/wp-graphql-woocommerce">WPGraphQL for WooCommerce</a> - This FREE plugin exposes WooCommerce data to WPGraphQL allowing you to interact with your store’s data via GraphQL Queries and mutations.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ashhitch/wp-graphql-yoast-seo">WPGraphQl Yoast SEO Plugin</a> - Exposes Yoast SEO data to the WPGraphQL Plugin.</li>
+</('ul', 0)>
+<h4>Other helpful Plugins</h4>
+
+<ul>
+<li><a href="https://wordpress.org/plugins/advanced-custom-fields/">Advanced Custom Fields</a> - <a href="https://www.advancedcustomfields.com/pro/">ACF PRO</a></li>
+</ul>
+<ul>
+<li><a href="https://wordpress.org/plugins/headless-mode/">Headless Mode</a> - Headless mode sets up a redirect for all users trying to access the site. The only requests that are granted admission are ones that are either trying to access the REST API, the WP GraphQL API, or any logged-in user looking to access the headless install to edit or create posts.</li>
+</ul>
+<ul>
+<li><a href="https://wordpress.org/plugins/polylang/">Polylang</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/crgeary/wp-jamstack-deployments">WP JAMstack Deployments</a> - WordPress plugin for JAMstack deployments on Netlify (and other platforms).</li>
+</('ul', 0)>
+<h3>Gatsby Plugins</h3>
+
+<ul>
+<li><a href="https://www.gatsbyjs.org/packages/gatsby-image">gatsby-image</a></li>
+</ul>
+<ul>
+<li><a href="https://www.gatsbyjs.org/packages/gatsby-source-filesystem">gatsby-source-filesystem</a></li>
+</ul>
+<ul>
+<li><a href="https://www.gatsbyjs.org/packages/gatsby-source-wordpress">gatsby-source-wordpress</a></li>
+</('ul', 0)>
+<h2>Free Tutorials / Courses</h2>
+
+<p><strong>Note:</strong> Since the release of gatsby-source-wordpress V4, it is the preferred over gatsby-source-graphql and therefore I will only list tutorials related to that approach.</p>
+
+<h3>Written Tutorials</h3>
+
+<ul>
+<li>2019.11: <a href="https://dev.to/nevernull/overview-guide-to-gatsby-wordpress-starter-advanced-with-previews-i18n-and-more-583l">Guide to Gatsby WordPress Starter Advanced with Previews, i18n and more</a> - A tutorial series starting with the basic setup of WordPress and Gatsby with WPGraphQL and then dives into more advanced subjects like deployments, previews, i18n and a page-builder like setup with ACF flexible cotent fields.</li>
+</ul>
+<ul>
+<li>2019.08: <a href="https://justinwhall.com/live-previews-with-wordpress-gatsby/">Live Previews with WordPress and Gatsby</a> - Tutorial showing how to use the theme’s higher order component to facilitate previews for WordPress posts and custom post types.</li>
+</ul>
+<ul>
+<li>2019.08: <a href="https://dev.to/nevernull/gatsby-with-wpgraphql-acf-and-gatbsy-image-72m">Gatsby with WPGraphQL, ACF and Gatbsy-Image</a> - A guide, that shows how to implement gatsby-image, so it can be used for WordPress media files.</li>
+</ul>
+<ul>
+<li>2018.08: <a href="https://justinwhall.com/headless-wordpress-gatsby-netlify-continous-deployment/">Headless WordPress + Gatsby + Netlify continuous deployment</a> - Guide showing how to create a WordPress + Gatsby + Netlify setup in a few simple steps.</li>
+</('ul', 0)>
+<h3>Video Tutorials</h3>
+
+<ul>
+<li>2019.11: <a href="https://whatjackhasmade.co.uk/series/gatsby-wordpress-2019/">25+ Videos - Gatsby + WordPress (2019) Complete Course</a> - The series focuses on how we can use WordPress as a headless CMS with a GraphQL schema to interface with. After setting up our WordPress site and theme, we'll move onto Gatsby and how we can use our new schema to generate content for our Gatsby site, programmatically generating pages, converting Gutenberg blocks to React components and finishing off the chapter with a focus on SEO in Gatsby.</li>
+</ul>
+<ul>
+<li>2019.07: <a href="https://www.youtube.com/watch?v=DH7I1xRrbxs">Gatsby + WordPress with WPGraphQL (with Jason Bahl) — Learn With Jason</a> - In this stream, Jason Bahl teaches how to use WordPress with Advanced Custom Fields and WPGraphQL to create an powerful, flexible admin dashboard, then query and display that data in a Gatsby site.</li>
+</ul>
+<ul>
+<li>2019.07: <a href="https://www.youtube.com/watch?v=9KGuI0UmpMw">Crash Course: Headless WordPress with WPGraphQL, ACF, and React</a> - In this video, Alex Young (WPCasts) goes over how to get a simple headless WordPress setup with WPGraphQL and React.</li>
+</ul>
+<ul>
+<li>2019.06: <a href="https://www.youtube.com/watch?v=aqEfEuVWqws">Using WordPress with WPGraphQL</a> - In this video you will learn how to use GraphQL with WordPress using an awesome plugin named WPGraphQL and some extra cool stuff like GraphQL + Advanced Custom Fields.</li>
+</ul>
+<ul>
+<li>2019.04: <a href="https://www.youtube.com/watch?v=rIg4MHc8elg">WPGraphQL for ACF</a> - Jason Bahl shows how to use WPGraphQL for Advanced Custom Fields.</li>
+</ul>
+<ul>
+<li>2018.07: [GraphQL with WordPress and Gutenberg - Jason Bahl - 2018 JavaScript for WordPress Conference</li>
+</ul>
+<p>](https://www.youtube.com/watch?v=6CuM1PY9ESQ) - In this talk from the 2018 JavaScript for WordPress Conference, the Developer of the WP GraphQL Plugin, Jason Bahl, gives updated examples of how you can use GraphQL with WordPress and Gutenberg.</p>
+
+<h2>Paid Tutorials / Courses</h2>
+<p>List of paid courses.</p>
+
+<ul>
+<li>2021.01: <a href="https://www.linkedin.com/learning/building-a-headless-wordpress-site-with-gatsby">Building a Headless WordPress Site with Gatsby</a> - This course is a step-by-step walk through using gatsby-source-wordpress plugin to create a fully functional headless Gatsby WordPress site with posts, pages, categories, tags, post navigation and other features.</li>
+</('ul', 0)>
+<h2>Starters</h2>
+<p>List of project starters, that you can clone and start building upon.</p>
+
+<ul>
+<li><a href="https://github.com/henrikwirth/gatsby-starter-wordpress-twenty-twenty">Gatsby Starter - WordPress Twenty Twenty</a> - A port of the WordPress Twenty Twenty theme to Gatsby using the new gatsby-source-wordpress@v4.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/wp-graphql/gatsby-wpgraphql-blog-example">Gatsby + WPGraphQL Blog Example</a> - Demo showing how to use WPGraphQL as the source for Gatsby Sites.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/justinwhall/gatsby-wordpress-netlify-starter">Gatsby + Headless WordPress + Netlify Starter</a> - A Gatsby + WordPress starter for continuous deployment to Netlify.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/henrikwirth/gatsby-starter-wordpress-advanced">Gatsby WordPress Starter Advanced</a> - An advanced Gatsby + WordPress starter, that is built along a tutorial series and works with ACF flexible content fields to create content blocks/layouts.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/zeevo/gatsby-starter-wordpress-blog">Gatsby Starter Blog</a> - Blog starter with enough features to be production ready out of the box.</li>
+</('ul', 0)>
+<h2>Themes</h2>
+<p>List of gatsby-themes that work with WordPress as a source, which you can use in your Gatsby setup.</p>
+
+<ul>
+<li><a href="https://github.com/zgordon/twentynineteen-gatsby-theme">Twenty Nineteen Gatsby Theme</a> - A port of the Twenty Nineteen WordPress Theme over to Gatsby.</li>
+</ul>
+<ul>
+<li>[Gatsby WordPress Publisher Theme</li>
+</ul>
+<p>](https://github.com/staticfuse/gatsby-theme-publisher) - The Gatsby Publisher Theme allows you to create a headless (or decoupled) WordPress site. This theme will display all of your pages and posts in a static front-end built on React and Gatsby.</p>
+
+<h2>Contribute</h2>
+
+<p>Contributions welcome! Read the <a href="contributing.md">contribution guidelines</a> first.</p>
+
+<h2>License</h2>
+
+<p><a href="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg"><img src="https://creativecommons.org/publicdomain/zero/1.0" alt="CC0</a>"></p>
+
+<p>To the extent possible under law, Henrik Wirth has waived all copyright and</p>
+<p>related or neighboring rights to this work.</p>
+
+<!--- unicorn --->
+
+</body>
+</html>

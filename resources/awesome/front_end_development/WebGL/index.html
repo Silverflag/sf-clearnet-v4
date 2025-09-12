@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebGL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>WebGL</h1>
+
+<p><strong>Repository:</strong> https://github.com/sjfricke/awesome-webgl#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<h1>Awesome WebGL <a href="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg"><img src="https://github.com/sindresorhus/awesome" alt="Awesome</a>"></h1>
+
+<p><a href="https://www.khronos.org/webgl/"><img src="webgl_logo.png" align="right" width="175"></a></p>
+
+<p>This is a curated list of awesome WebGL libraries, resources and much more.</p>
+
+<h2>What is WebGL</h2>
+
+<p>WebGL (Web Graphics Library) is a JavaScript API for rendering interactive 3D computer graphics and 2D graphics within</p>
+<p>any compatible web browser without the use of plug-ins. WebGL is integrated completely into all the web standards</p>
+<p>of the browser allowing GPU accelerated usage of physics and image processing and effects as part of the web page canvas.</p>
+
+<p>WebGL elements can be mixed with other HTML elements and composited with other parts of the page or page background.</p>
+<p>WebGL programs consist of control code written in JavaScript and shader code that is executed on a computer's Graphics</p>
+<p>Processing Unit (GPU).</p>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#webgl">WebGL</a></li>
+</ul>
+<ul>
+<li><a href="#webgl-2">WebGL 2</a></li>
+</ul>
+<ul>
+<li><a href="#webvr">WebVR</a></li>
+</ul>
+<ul>
+<li><a href="#libraries">Libraries</a></li>
+</ul>
+<ul>
+<li><a href="#community">Community</a></li>
+</('ul', 0)>
+<h2>WebGL</h2>
+
+<blockquote>
+<p>All things dealing with WebGL</p>
+</blockquote>
+
+<h3>WebGL sub-categories</h3>
+<ul>
+<li><a href="#articles">Articles</a></li>
+</ul>
+<ul>
+<li><a href="#blog-series">Blog Series</a></li>
+</ul>
+<ul>
+<li><a href="#books">Books</a></li>
+</ul>
+<ul>
+<li><a href="#bug-reporting">Bug Reporting</a></li>
+</ul>
+<ul>
+<li><a href="#glsl-editors">GLSL Editors</a></li>
+</ul>
+<ul>
+<li><a href="#references">References</a></li>
+</ul>
+<ul>
+<li><a href="#talks">Talks</a></li>
+</ul>
+<ul>
+<li><a href="#toolsdebugging">Tools/Debugging</a></li>
+<ul>
+<li><a href="#chrome-specific-toolsdebugger">Chrome Specific Tools/Debugger</a></li>
+</ul>
+<ul>
+<li><a href="#firefox-specific-toolsdebugger">Firefox Specific Tools/Debugger</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#tutorials">Tutorials</a></li>
+</ul>
+<ul>
+<li><a href="#videos">Videos</a></li>
+</('ul', 0)>
+<h3>Articles</h3>
+
+<blockquote>
+<p>WebGL articles and/or blog posts (non-tutorials)</p>
+</blockquote>
+
+<ul>
+<li><a href="https://medium.com/@mattdesl/non-intrusive-webgl-cebd176c281d#.gyc6h9mr5">Context Loss & Preloading</a> - How to manage WebGL when you run into the dreaded context lost.</li>
+</ul>
+<ul>
+<li><a href="https://hacks.mozilla.org/2016/01/webgl-off-the-main-thread/">WebGL Off the Main Thread</a> - How to use Web Workers in WebGL.</li>
+</ul>
+<ul>
+<li><a href="https://www.soft8soft.com/docs/manual/en/introduction/Optimizing-WebGL-performance.html">Optimizing Scenes for Better WebGL Performance</a> - optimization techniques that proved to work well for creating WebGL-based interactives.</li>
+</ul>
+<ul>
+<li><a href="https://dev.to/aralroca/first-steps-in-webgl-385c">First steps in WebGL</a> - Learn what WebGL is and how it works by drawing a triangle. </li>
+</('ul', 0)>
+<h3>Blog Series</h3>
+
+<blockquote>
+<p>Blog series of WebGL topics</p>
+</blockquote>
+
+<ul>
+<li><a href="http://codeflow.org/tags/webgl.html">Codeflow</a> - Many blogs on different tricks and techniques.</li>
+</ul>
+<ul>
+<li><a href="http://www.realtimerendering.com/blog/tag/webgl/">Real-Time Rendering</a> - This is the blog for the book <em>Real-Time Rendering</em>.</li>
+</ul>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL<em>API/WebGL</em>best_practices">WebGL Best Practices</a> - Mozilla's offical set of best practices.</li>
+</ul>
+<ul>
+<li><a href="http://webglinsights.blogspot.com/">WebGL Insights</a> - This is the blog for the book <em>WebGL Insights</em>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lesnitsky/webgl-month">WebGL Month</a> – Daily WebGL tutorial for a month.</li>
+</ul>
+<ul>
+<li><a href="https://maximmcnair.com/webgl-image-processing">WebGL Image Processing</a> - Covers a range of <em>Image Processing</em> algorithms in WebGL such as Color Correction, Blend Modes, Thresholding, Dithering, Convolution and Film Grain.</li>
+</('ul', 0)>
+<h3>Books</h3>
+
+<blockquote>
+<p>Popular books about WebGL</p>
+</blockquote>
+
+<ul>
+<li><a href="https://www.amazon.com/Interactive-Computer-Graphics-Top-Down-Approach/dp/0133574849">Interactive Computer Graphics: A Top-Down Approach with WebGL</a> by <strong>Edward Angel</strong> and <strong>Dave Shreiner</strong> - Suitable for undergraduate students in computer science and engineering, for students in other disciplines who have good programming skills, and for professionals interested in computer animation and graphics using the latest version of WebGL.</li>
+</ul>
+<ul>
+<li><a href="https://www.amazon.com/Professional-WebGL-Programming-Developing-Graphics/dp/1119968860">Professional WebGL Programming</a> by <strong>Andreas Anyuru</strong> - Everything you need to know about developing hardware-accelerated 3D graphics with WebGL.</li>
+</ul>
+<ul>
+<li><a href="https://www.amazon.com/Programming-Applications-HTML5-WebGL-Visualization/dp/1449362966">Programming 3D Applications with HTML5 and WebGL</a> by <strong>Tony Parisi</strong> - Create high-performance, visually stunning 3D applications for the Web, using HTML5 and related technologies such as CSS3 and WebGL—the emerging web graphics standard.</li>
+</ul>
+<ul>
+<li><a href="https://www.amazon.com/WebGL-Beginners-Guide-Diego-Cantor/dp/184969172X">WebGL Beginner's guide</a> by <strong>Diego Cantor</strong> and <strong>Brandon Jones</strong> - For JavaScript developer who wants to take the plunge into 3D web development via WebGL.</li>
+</ul>
+<ul>
+<li><a href="https://www.amazon.com/WebGL-Hotshot-Mitch-Williams-ebook/dp/B00KLAJ65Y">WebGL Hotshot</a> by <strong>Mitch Williams</strong> - For web designer looking to expand your knowledge of 3D graphics concepts and broaden your existing skill set.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/WebGLInsights/WebGLInsights.github.io/releases/download/v1.0/WebGL.Insights.-.Patrick.Cozzi.pdf">WebGL Insights</a> by <strong>Patrick Cozzi</strong> - Presents real-world techniques for intermediate and advanced WebGL developers by assembling contributions from experienced WebGL engine and application developers, GPU vendors, browser developers, researchers, and educators.</li>
+<ul>
+<li><a href="http://www.webglinsights.com/">Book's Personal Site</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://www.amazon.com/WebGL-Programming-Guide-Interactive-Graphics/dp/0321902920">WebGL Programming Guide: Interactive 3D Graphics Programming with WebGL</a> by <strong>Kouichi Matsuda</strong> and <strong>Rodger Lea</strong> - WebGL Programming Guide will help you get started quickly with interactive WebGL 3D programming, even if you have no prior knowledge of HTML5, JavaScript, 3D graphics, mathematics, or OpenGL.</li>
+</('ul', 0)>
+<h3>Bug Reporting</h3>
+
+<blockquote>
+<p>Reporting bugs helps everyone in long run</p>
+</blockquote>
+
+<ul>
+<li><a href="https://bugs.chromium.org/p/chromium/issues/list">Chrome Bug Report</a> - Chrome related bugs</li>
+</ul>
+<ul>
+<li><a href="https://github.com/KhronosGroup/WebGL/issues">Khronos Github Issue Page</a> - Spec or Conformance related bugs</li>
+</ul>
+<ul>
+<li><a href="https://bugzilla.mozilla.org">Mozilla BugZilla</a> - Firefox related bugs</li>
+</ul>
+<ul>
+<li><a href="https://bugs.webkit.org/enter<em>bug.cgi?assigned</em>to=cmarrin%40apple.com&attachurl=&blocked=&bug<em>file</em>loc=http%3A%2F%2F&bug<em>severity=Normal&bug</em>status=NEW&comment=&component=WebGL&contenttypeentry=&contenttypemethod=autodetect&contenttypeselection=text%2Fplain&data=&dependson=&description=&flag<em>type-1=X&flag</em>type-3=X&form<em>name=enter</em>bug&keywords=&maketemplate=Remember%20values%20as%20bookmarkable%20template&op<em>sys=Mac%20OS%20X%2010.5&priority=P2&product=WebKit&rep</em>platform=PC&short_desc=&version=528%2B%20%28Nightly%20build%29">WebKit Bugzilla</a> - Safari related bugs</li>
+</('ul', 0)>
+<h3>GLSL Editors</h3>
+
+<blockquote>
+<p>Online GLSL Editors</p>
+<p>></p>
+<p>NOTE: <a href="https://www.khronos.org/registry/webgl/specs/1.0.3/#4.3">WebGL must conform to The OpenGL ES Shading Language, Version 1.00</a></p>
+<p></p>
+<p><a href="https://www.khronos.org/registry/OpenGL/specs/es/2.0/GLSL<em>ES</em>Specification_1.00.pdf">Official Specs for GLSL Version 1.00</a></p>
+<p>></p>
+<p><a href="https://www.khronos.org/registry/OpenGL/specs/es/2.0/es<em>full</em>spec_2.0.pdf">Official Specs for Open ES Version 2.0.25</a></p>
+</blockquote>
+
+<ul>
+<li><a href="http://hirnsohle.de/test/fractalLab/">Fractal Lab</a> - Online fractal explorer allowing you to explore 2D and 2D fractal.</li>
+</ul>
+<ul>
+<li><a href="http://glslsandbox.com">GLSL Sandbox</a> - Online live editor for fragment shaders.</li>
+</ul>
+<ul>
+<li><a href="http://glslb.in">GLSLbin</a> - Fragment shader sandbox supporting <a href="https://github.com/glslify/glslify">glslify</a>.</li>
+</ul>
+<ul>
+<li><a href="https://www.shadertoy.com">Shader Toy</a> - Most popular live editor for fragment shaders.</li>
+</ul>
+<ul>
+<li><a href="https://shaderfrog.com/">ShaderFrog</a> - WebGL Shader Editor and Composer.</li>
+</ul>
+<ul>
+<li><a href="http://shdr.bkcore.com">SHDR Editor</a> - Live GLSL shader editor, viewer and validator.</li>
+</ul>
+<ul>
+<li><a href="https://anuraghazra.github.io/ShaderExpo/">ShaderExpo</a> - Dependency free shader editor featuring inline error logs, auto completions, models and textures loading. </li>
+</('ul', 0)>
+<h3>References</h3>
+
+<blockquote>
+<p>WebGL references</p>
+</blockquote>
+
+<ul>
+<li><a href="https://github.com/google/angle">Google Project ANGLE</a> - Default WebGL backend for both Google Chrome and Mozilla Firefox on Windows platforms.</li>
+</ul>
+<ul>
+<li><a href="https://www.khronos.org/webgl/wiki/">Khronos Official Wiki</a> - The official wiki for WebGL.</li>
+</ul>
+<ul>
+<li><a href="https://www.w3.org/community/immersive-web/">WebVR Community Group</a> - Group who's goal is to help bring high-performance Virtual Reality to the open Web.</li>
+</ul>
+<ul>
+<li><a href="https://www.khronos.org/webgl/wiki/Errata<em>to</em>the<em>WebGL</em>Specification">WebGL Errata</a> - Known bugs in graphics drivers affect the conformance suite, and consequently, portability of code.</li>
+</ul>
+<ul>
+<li><a href="https://www.khronos.org/registry/webgl/extensions/">WebGL Extensions</a> - List of extensions for WebGL</li>
+</ul>
+<ul>
+<li><a href="https://www.khronos.org/files/webgl/webgl-reference-card-1_0.pdf">WebGL Reference Card</a> - WebGL 1.0 API Quick Reference Card for printing.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/KhronosGroup/WebGL">WebGL Source Code</a> - Source code to both view and contribute.</li>
+</ul>
+<ul>
+<li><a href="https://www.khronos.org/registry/webgl/specs/1.0/">WebGL Spec Sheet</a> - All the detailed information about WebGL.</li>
+</('ul', 0)>
+<h3>Talks</h3>
+
+<blockquote>
+<p>WebGL related talks</p>
+</blockquote>
+
+<ul>
+<li><a href="https://www.khronos.org/webgl/wiki/Presentations">List of Presentations</a> - List presented by Khronos of various WebGL related presentations.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=K2JzIUIHIhc">Next-Generation 3D Graphics on the Web</a> - Talk at Google I/O 19 from Ricardo Cabello (MrDoob).</li>
+</('ul', 0)>
+<h3>Tools/Debugging</h3>
+
+<blockquote>
+<p>Tools for development and debugging WebGL</p>
+</blockquote>
+
+<ul>
+<li><a href="https://github.com/KhronosGroup/WebGLDeveloperTools">Khronos Dev Tools</a> - Useful WebGL developer tools, intended to be used as an ES6 module.</li>
+</ul>
+<ul>
+<li><a href="https://spector.babylonjs.com/">Spector.js</a> - Agnostic JavaScript framework for exploring and troubleshooting your WebGL scenes.</li>
+</ul>
+<ul>
+<li><a href="http://benvanik.github.io/WebGL-Inspector/">WebGL Inspector</a> - Tool inspired by gDEBugger and PIX with the goal of making the development of advanced WebGL applications easier.</li>
+</ul>
+<ul>
+<li><a href="http://jessevdk.github.io/webgl-play/">WebGl Playground</a> - The editor lets you work on the JavaScript code and the GLSL vertex/fragment shaders (if you have any) at the same time in a convenient way. Everything is organized, formatted and highlighted properly, just as you would like.</li>
+</ul>
+<ul>
+<li><a href="http://webglreport.com/?v=1">WebGL Report</a> - Way to view the details of what your browser supports for WebGL.</li>
+</ul>
+<ul>
+<li><a href="http://webglstats.com/">WebGL Support Stats</a> - Interactive dashboard showing the support for WebGL features in different browsers and devices.</li>
+</ul>
+<ul>
+<li><a href="http://toji.github.io/texture-tester/">WebGL Texture Tester</a> - Attempts to load one of every texture format supported by WebGL, intended to quickly show which formats your browser/device supports.</li>
+</ul>
+<ul>
+<li><a href="http://google.github.io/tracing-framework/index.html">Web Tracing Framework</a> - Set of libraries, tools, and visualizers for the tracing and investigation of complex web applications.</li>
+</('ul', 0)>
+<h4>Chrome Specific Tools/Debugger</h4>
+
+<ul>
+<li><a href="https://github.com/spite/ShaderEditorExtension">GLSL Shader Editor Extension</a> - Chrome DevTools extension to help you edit shaders live in the browser.</li>
+</ul>
+<ul>
+<li><a href="https://chrome.google.com/webstore/detail/spectorjs/denbgaamihkadbghdceggmchnflmhpmk">Spector.js Extension</a> - Explore and Troubleshoot your WebGL and WebGL2 scenes easily.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/3Dparallax/insight">Webgl Insight</a> - Chrome extension WebGL debugging toolkit providing a variety of capabilities.</li>
+</('ul', 0)>
+<h4>Firefox Specific Tools/Debugger</h4>
+
+<ul>
+<li><a href="https://hacks.mozilla.org/2014/03/introducing-the-canvas-debugger-in-firefox-developer-tools/">Canvas Debugger</a> - Quick tutorial how to use Firefox's developer tools to debug WebGL Shaders.</li>
+</ul>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Tools">Firefox Developer Tools</a> - The official list of all of Firefox's debugger tools.</li>
+</ul>
+<ul>
+<li><a href="https://hacks.mozilla.org/2013/11/live-editing-webgl-shaders-with-firefox-developer-tools/">Shader Editor</a> - Quick tutorial how to use Firefox's developer tools to debug WebGL Shaders.</li>
+</('ul', 0)>
+<h3>Tutorials</h3>
+
+<blockquote>
+<p>Online WebGL Tutorials (non-video)</p>
+</blockquote>
+
+<ul>
+<li><a href="http://chinedufn.com/webgl-shadow-mapping-tutorial/">Directional Shadow Mapping</a> - Concepts behind real time directional light shadow mapping.</li>
+</ul>
+<ul>
+<li><a href="https://www.khronos.org/webgl/wiki/Tutorial">Get Started Tutorial</a> - Khronos' tutorial how to get up and running with WebGL.</li>
+</ul>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL<em>API/Tutorial/Getting</em>started<em>with</em>WebGL">Getting Started with WebGL</a> - Mozilla Foundation guide to getting started with WebGL.</li>
+</ul>
+<ul>
+<li><a href="https://www.tutorialspoint.com/webgl/index.htm">Learn WebGL</a> - Tutorials Point set of article to get you familiar with WebGL terms.</li>
+</ul>
+<ul>
+<li><a href="http://learningwebgl.com/blog/?page<em>id=1217">Learning WebGL</a> - Tutorials from the author of </em>WebGL Up and Running_.</li>
+</ul>
+<ul>
+<li><a href="http://chinedufn.com/webgl-multitexture-blend-map-tutorial/">Multitexturing using a Blendmap</a> - How to use a blendmap to multitexture a terrain.</li>
+</ul>
+<ul>
+<li><a href="http://chinedufn.com/webgl-particle-effect-billboard-tutorial/">Particle Effects via Billboards</a> - Create particle effects by applying a technique called billboarding.</li>
+</ul>
+<ul>
+<li><a href="https://thebookofshaders.com/">The Book of Shaders</a> - Gentle step-by-step guide through the abstract and complex universe of Fragment Shaders.</li>
+</ul>
+<ul>
+<li><a href="http://www.webglacademy.com/">WebGL Academy</a> - Simplified online IDE with automatic indentation, syntax highlighting for HTML, Javascript, GLSL and Python. You can run your code and download your projects.</li>
+</ul>
+<ul>
+<li><a href="https://webglfundamentals.org/">WebGL Fundamentals</a> - Series of online tutorials with code samples and live demonstrations.</li>
+</ul>
+<ul>
+<li><a href="http://webgl-workshop.com/">WebGL Workshop</a> - Interactive workshop to get you up and running with WebGL.</li>
+</('ul', 0)>
+<h3>Videos</h3>
+
+<blockquote>
+<p>WebGL Related Videos</p>
+</blockquote>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=tgVLb6fOVVc&feature=youtu.be">An Introduction to WebGL Programming</a> - 3 hour overview of WebGL by SIGGRAPH University.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/playlist?list=PLjcVFFANLS5zH<em>PeKC6I8p0Pt1hzph</em>rt">WebGL Tutorials - YouTube</a> - Series of lecture style video tutorials from Indigo Code on YouTube.</li>
+</('ul', 0)>
+<h2>WebGL 2</h2>
+
+<blockquote>
+<p>Information about the upcoming WebGL 2 specs</p>
+<p>></p>
+<p>Anything pertaining to WebGL in general is found in the <a href="#WebGL">WebGL</a> section</p>
+</blockquote>
+
+<h3>WebGL 2 sub-categories</h3>
+<ul>
+<li><a href="#articles-1">Articles</a></li>
+</ul>
+<ul>
+<li><a href="#references-1">References</a></li>
+</ul>
+<ul>
+<li><a href="#tutorials-1">Tutorials</a></li>
+</ul>
+<ul>
+<li><a href="#videos-1">Videos</a></li>
+</('ul', 0)>
+<h3>Articles</h3>
+
+<blockquote>
+<p>WebGL 2 articles and/or blog posts (non-tutorials)</p>
+</blockquote>
+
+<ul>
+<li><a href="https://webgl2fundamentals.org/webgl/lessons/webgl2-whats-new.html">WebGL 2 What's New</a> - Look into the new features added in WebGL 2.</li>
+</ul>
+<ul>
+<li><a href="https://blog.tojicode.com/2013/09/whats-coming-in-webgl-20.html">What's Coming in WebGL 2.0</a> - Look into the upcoming features of WebGL 2.</li>
+</ul>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1Orx0GB0cQcYhHkYsaEcoo5js3c5-pv7ahPniIRIzzfg/edit#slide=id.p">WebGL 2 SIGGRAPH Asia 2015</a> - Presentation by Zhenyao Mo, Ken Russell of Google during SIGGRAPH Asia 2015.</li>
+</ul>
+<ul>
+<li><a href="https://hacks.mozilla.org/2017/01/webgl-2-lands-in-firefox/">WebGL 2 Lands in Firefox</a> - Information the support for WebGL 2 starting with Firefox 51.</li>
+</ul>
+<ul>
+<li><a href="http://www.realtimerendering.com/blog/webgl-2-basics/">WebGL 2 Basics</a> - Blog post about getting started with WebGL 2.</li>
+</ul>
+<ul>
+<li><a href="http://www.realtimerendering.com/blog/webgl-2-new-features/">WebGL 2 New Features</a> - Blog post about whats new and cool in WebGl 2.</li>
+</('ul', 0)>
+<h3>References</h3>
+
+<blockquote>
+<p>WebGL 2 references</p>
+</blockquote>
+
+<ul>
+<li><a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/">WebGL 2 Spec Sheet (Editor Draft)</a> - All the detailed information about WebGL 2.</li>
+</ul>
+<ul>
+<li><a href="https://www.khronos.org/files/webgl20-reference-guide.pdf">WebGL 2 Reference Card</a> - WebGL 2.0 API Quick Reference Card for printing.</li>
+</ul>
+<ul>
+<li><a href="https://caniuse.com/#feat=webgl2">WebGL 2 Compatible Chart</a> - Chart to show current browsers supporting WebGL 2</li>
+</('ul', 0)>
+<h3>Tutorials</h3>
+<ul>
+<li><a href="https://webgl2fundamentals.org/">WebGL 2 Fundamentals</a>- Series of online tutorials with code samples and live demonstrations.</li>
+</ul>
+<ul>
+<li><a href="http://webglsamples.org/WebGL2Samples/">WebGL 2 Samples</a> - Great source of many different WebGL 2 work with very good commenting.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tsherif/webgl2examples">WebGL 2 Examples</a> - Rendering algorithms implemented in raw WebGL 2.</li>
+</('ul', 0)>
+<h3>Videos</h3>
+
+<blockquote>
+<p>WebGL related Videos</p>
+</blockquote>
+
+<ul>
+<li><a href="https://www.youtube.com/playlist?list=PLMinhigDWz6emRKVkVIEAaePW7vtIkaIF">Fun with WebGL 2.0</a> - Video tutorial series on getting started with WebGL 2, still actively adding videos.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=Xf65duJ_QFs">WebGL 2.0 is Here: What You Need To Know</a> - Khronos Webinar April 2017.</li>
+<ul>
+<li><a href="https://www.khronos.org/assets/uploads/developers/library/2017-webgl-webinar/Khronos-Webinar-WebGL-20-is-here<em>What-you-need-to-know</em>Apr17.pdf">Slides</a></li>
+</('ul', 4)>
+</('ul', 0)>
+<h2>WebVR</h2>
+
+<blockquote>
+<p>Information about different parts of the new and upcoming WebVR ecosystem</p>
+<p>></p>
+<p>All items related to more developers and less on where to find WebVR content as entertainment</p>
+</blockquote>
+
+<h3>WebVR sub-categories</h3>
+
+<ul>
+<li><a href="#articles-2">Articles</a></li>
+</ul>
+<ul>
+<li><a href="#blog-series-1">Blog Series</a></li>
+</ul>
+<ul>
+<li><a href="#platforms">Platforms</a></li>
+</ul>
+<ul>
+<li><a href="#references-2">References</a></li>
+</('ul', 0)>
+<h3>Articles</h3>
+
+<blockquote>
+<p>WebVR articles and/or blog posts (non-tutorials)</p>
+</blockquote>
+
+<h3>Blog Series</h3>
+
+<blockquote>
+<p>Maintained blog series of WebVR focused topics</p>
+</blockquote>
+
+<ul>
+<li><a href="https://blog.mozvr.com/">Mozilla VR Blog</a> - WebVR focused blog from makers of Firefox.</li>
+</('ul', 0)>
+<h3>Platforms</h3>
+
+<blockquote>
+<p>WebVR designed platforms to experience</p>
+</blockquote>
+
+<ul>
+<li><a href="https://janusvr.com/">JanusVR</a> - Webpages as collaborative 3D webspaces interconnected by portals.</li>
+</('ul', 0)>
+<h3>References</h3>
+
+<blockquote>
+<p>WebVR references</p>
+</blockquote>
+
+<ul>
+<li><a href="https://webvr.rocks/">Browser Support</a> - Shows support by browser, headset, and OS.</li>
+</ul>
+<ul>
+<li><a href="https://mixedreality.mozilla.org/">Mozilla VR</a> - Mozilla's official WebVR page.</li>
+</ul>
+<ul>
+<li><a href="https://www.uxofvr.com/">UX of VR</a> - Curated list of resources to help create good UX in WebVR.</li>
+</ul>
+<ul>
+<li><a href="https://immersive-web.github.io/webxr/">WebXR Device API</a> - The W3C draft API for WebXR.</li>
+</ul>
+<ul>
+<li><a href="https://w3c.github.io/webvr/">WebVR Spec</a> - The official W3C WebVR spec (legacy).</li>
+<ul>
+<li><a href="https://dassur.ma/things/reading-specs/">How to read WebVR Specs</a></li>
+</('ul', 2)>
+</('ul', 0)>
+<h2>Libraries</h2>
+
+<blockquote>
+<p><a href="https://github.com/sjfricke/awesome-webgl/tree/master/Libraries">More detailed information about the different libraries can be found in the Libraries directory.</a></p>
+</blockquote>
+
+<h3>2D</h3>
+<ul>
+<li><a href="https://github.com/schteppe/p2.js">p2.js</a> - 2D rigid body physics engine written in JavaScript.</li>
+</ul>
+<ul>
+<li><a href="https://phaser.io/">Phaser</a> - Open source HTML5 2D game framework for Canvas and WebGL, supports mobile web browsers.</li>
+</ul>
+<ul>
+<li><a href="http://www.pixijs.com/">PixiJS</a> - powerful 2D Javascript renderer based on WebGL.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/shakiba/planck.js">Planck.js</a> - 2D physics engine for cross-platform HTML5 game development.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/shakiba/stage.js">Stage.js</a> - 2D Library for cross-platform HTML5 game development.</li>
+</('ul', 0)>
+<h3>Compute (GPGPU)</h3>
+
+<h4>Computer Vision</h4>
+<ul>
+<li><a href="https://gammacv.com">GammaCV</a> - WebGL accelerated Computer Vision library for browser.</li>
+</('ul', 0)>
+<h4>Particles</h4>
+<ul>
+<li><a href="https://github.com/vaneenige/phenomenon">Phenomenon</a> - Very small, low-level WebGL library that provides the essentials to deliver a high performance experience.</li>
+</('ul', 0)>
+<h3>Maps and Visualizations</h3>
+<ul>
+<li><a href="https://cesiumjs.org/">Cesium</a> - Open-source library for world-class 3D globes and maps.</li>
+</ul>
+<ul>
+<li><a href="http://deck.gl/">Deck.gl</a> - WebGL overlay suite for React providing a set of highly performant data visualization overlays.</li>
+</ul>
+<ul>
+<li><a href="https://luma.gl/">Luma.gl</a> - WebGL2 powered framework for GPU-powered data visualization and computation.</li>
+</ul>
+<ul>
+<li><a href="https://xeokit.io/">xeokit</a> - Web Graphics SDK for AEC/BIM applications with 3D-tiles, real-world coordinates and double precision.</li>
+</('ul', 0)>
+<h3>Math</h3>
+<ul>
+<li><a href="http://glmatrix.net/">glMatrix</a> - Javascript matrix and vector library for high performance WebGL apps.</li>
+</ul>
+<ul>
+<li><a href="http://sylvester.jcoglan.com/">Sylvester</a> - Sylvester is a vector, matrix and geometry library for JavaScript.</li>
+</ul>
+<ul>
+<li><a href="http://twgljs.org/">TWGL</a> - Sole purpose is to make using the WebGL API less verbose.</li>
+</('ul', 0)>
+<h3>Rendering</h3>
+<ul>
+<li><a href="https://github.com/emadurandal/GLBoost">GLBoost</a> - Rendering library for 3D graphic geeks.</li>
+</ul>
+<ul>
+<li><a href="https://grimoire.gl/">GrimoireGL</a> - Bridge between Web engineers and CG engineers.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/hiloteam/Hilo3d">Hilo3d</a> - WebGL rendering engine for 3D games.</li>
+</('ul', 0)>
+<h3>Physics</h3>
+<ul>
+<li><a href="https://github.com/kripken/ammo.js/">Ammo.js</a> - Direct port of the Bullet physics engine to JavaScript using Emscripten.</li>
+</ul>
+<ul>
+<li><a href="http://schteppe.github.io/cannon.js/">Cannon.js</a> - Lightweight and simple 3D physics engine for the web.</li>
+</('ul', 0)>
+<h3>WebGL 2</h3>
+<ul>
+<li><a href="https://tsherif.github.io/picogl.js/">PicoGL.js</a> - Minimal WebGL 2-only rendering library.</li>
+</('ul', 0)>
+<h3>WebVR</h3>
+<ul>
+<li><a href="https://aframe.io/">A-Frame</a> - Web framework for building virtual reality experiences.</li>
+<ul>
+<li><a href="https://github.com/aframevr/awesome-aframe">Awesome-AFrame</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://hologram.cool/">Hologram</a> - Desktop app that let you create and prototype WebVR in interactive way needing no previous coding knowledge.</li>
+</ul>
+<ul>
+<li><a href="https://lovr.org/">LÖVR</a> - Simple framework for creating VR with Lua.</li>
+</ul>
+<ul>
+<li><a href="https://facebook.github.io/react-360/">React 360</a> - Build VR websites and interactive 360 experiences with React.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/capnmidnight/Primrose/">Primrose</a> - Rapidly prototype VR applications in your browser.</li>
+</('ul', 0)>
+<h3>Others</h3>
+<ul>
+<li><a href="https://www.babylonjs.com/">Babylon.js</a> - Complete JavaScript framework for building 3D games with HTML5, WebGL and Web Audio.</li>
+</ul>
+<ul>
+<li><a href="https://www.blend4web.com/en/">Blend4Web</a> - Tool for interactive 3D visualization on the Internet.</li>
+</ul>
+<ul>
+<li><a href="http://claygl.xyz/">ClayGL</a> - WebGL graphic Library for building scalable Web3D applications.</li>
+</ul>
+<ul>
+<li><a href="https://www.ambiera.com/copperlicht/index.html">CopperLicht</a> - JavaScript library and WebGL 3D engine for creating games and 3D applications.</li>
+</ul>
+<ul>
+<li><a href="http://www.glge.org/">GLGE</a> - Javascript library intended to ease the use of WebGL.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/evanw/lightgl.js">Lightgl.js</a> - Lightweight and explict library to help prototype.</li>
+</ul>
+<ul>
+<li><a href="https://cedricpinson.github.io/osgjs-website/">OSG.js</a> - WebGL framework based on OpenSceneGraph concepts to interact with WebGL.</li>
+</ul>
+<ul>
+<li><a href="http://vorg.github.io/pex/">Pex-gl</a> - JavaScript libraries for computational thinking in Plask/Node.js and WebGL.</li>
+</ul>
+<ul>
+<li><a href="https://playcanvas.com/">PlayCanvas</a> - Game engine platform to build interactive experiences.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/gportelli/pocket.gl">Pocket.gl</a> - Fully customizable webgl shader sandbox to embed in your pages.</li>
+</ul>
+<ul>
+<li><a href="http://regl.party/">Regl</a> - Light declarative and stateless library, functional abstraction for WebGL.</li>
+</ul>
+<ul>
+<li><a href="http://scenejs.org/">Scene.js</a> - Extensible WebGL-based engine for high-detail 3D visualisation.</li>
+</ul>
+<ul>
+<li><a href="https://threejs.org/">Three.js</a> - Aimed to create an easy to use, lightweight, 3D library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/turbulenz/turbulenz_engine">Turbulenz</a> - Modular 3D and 2D game framework for making HTML5 powered games for browsers, desktops and mobile devices.</li>
+</ul>
+<ul>
+<li><a href="https://www.soft8soft.com/verge3d/">Verge3D</a> - an artist-friendly toolkit for creating 3D web experiences.</li>
+</ul>
+<ul>
+<li><a href="https://whs.io/">Whitestorm.js</a> - Framework for developing 3D web apps with physics.</li>
+</('ul', 0)>
+<h2>Community</h2>
+<ul>
+<li><a href="https://stackoverflow.com/questions/tagged/webgl">Stack Overflow</a></li>
+</ul>
+<ul>
+<li><a href="https://www.reddit.com/r/webgl/">Reddit</a></li>
+</ul>
+<ul>
+<li><a href="https://www.facebook.com/groups/webgl/about/">Facebook</a></li>
+</ul>
+<ul>
+<li><a href="https://twitter.com/webgl">Twitter</a></li>
+</ul>
+<ul>
+<li><a href="http://webchat.freenode.net/?channels=webgl">Freenode IRC</a></li>
+</ul>
+<ul>
+<li><a href="https://community.khronos.org/c/other-standards/webgl">Khronos Forum</a></li>
+</ul>
+<ul>
+<li><a href="https://groups.google.com/forum/#!forum/webgl-dev-list">Google Group</a></li>
+</ul>
+<ul>
+<li><a href="https://plus.google.com/communities/114915309361980512257">Google Plus</a></li>
+</ul>
+<ul>
+<li><a href="https://www.khronos.org/webgl/public-mailing-list/">Public Mailing List</a></li>
+</ul>
+<ul>
+<li><a href="http://webvr-slack.herokuapp.com/">WebVR Slack</a></li>
+</ul>
+<ul>
+<li><a href="https://lists.w3.org/Archives/Public/public-webvr/">WebVR Public Mailing List</a></li>
+</ul>
+<ul>
+<li>Active Meetup Groups</li>
+<ul>
+<li><a href="https://www.meetup.com/WebGL-Developers-Meetup/">San Francisco, CA</a></li>
+</ul>
+<ul>
+<li><a href="https://www.meetup.com/Silicon-Valley-HTML5-WebGL-Meetup/">Mountain View, CA</a></li>
+</ul>
+<ul>
+<li><a href="https://www.meetup.com/WebGL-Workshop-London/">London, United Kingdom</a></li>
+</ul>
+<ul>
+<li><a href="https://www.meetup.com/NYC-WebGL-Developers/">New York, NY</a></li>
+</('ul', 2)>
+</('ul', 0)>
+<h2>Related lists</h2>
+
+<blockquote>
+<p>Similar awesome lists</p>
+</blockquote>
+
+<ul>
+<li><a href="https://github.com/sindresorhus/awesome">awesome</a> - Curated list of awesome lists.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/eug/awesome-opengl">awesome-opengl</a> - Curated list of awesome OpenGL libraries, debuggers and resources. Inspired by awesome-... stuff.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/vinjn/awesome-vulkan">awesome-vulkan</a> - Curated list of awesome Vulkan projects and ecosystem.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ellisonleao/magictools">gamedev</a> - Awesome list about game development.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/KhronosGroup/glTF">glTF</a> - Runtime 3D Asset Delivery designed for the web.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/mattdesl/graphics-resources">graphics-resources</a> - List of graphic programming resources.</li>
+</('ul', 0)>
+<h2>Contributing</h2>
+<p>Please see <a href="https://github.com/sjfricke/awesome-webgl/blob/master/CONTRIBUTING.md">CONTRIBUTING</a> for details.</p>
+
+<h2>Testing</h2>
+<p>Travis CI testing automation thanks to <a href="https://github.com/dkhamsing/awesome<em>bot">awesome</em>bot</a>!</p>
+
+<h2>License</h2>
+
+<p><a href="http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg"><img src="https://creativecommons.org/publicdomain/zero/1.0/" alt="CC0</a>"></p>
+
+<p>To the extent possible under law, <a href="https://github.com/sjfricke">Spencer Fricke</a> has waived all copyright and related or neighboring rights to this work.</p>
+
+</body>
+</html>

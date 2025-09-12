@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next.js</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Next.js</h1>
+
+<p><strong>Repository:</strong> https://github.com/unicodeveloper/awesome-nextjs#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<h1>Awesome Next.js <a href="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg"><img src="https://github.com/sindresorhus/awesome" alt="Awesome</a>"> <img src="https://img.shields.io/badge/unicodeveloper-approved-brightgreen.svg" alt=""></h1>
+
+<p><a href="https://github.com/vercel/next.js"><img src="http://res.cloudinary.com/unicodeveloper/image/upload/v1524776764/next-jslogo.svg" align="right" width="250"></a></p>
+
+<blockquote>
+<p>Curated list of resources: books, videos, articles about using Next.js.</p>
+</blockquote>
+
+<p><a href="https://github.com/vercel/next.js">Next.js</a>: The React Framework.</p>
+
+<p><em>List inspired by the <a href="https://github.com/sindresorhus/awesome">awesome</a> list thing. You might also like <a href="https://github.com/unicodeveloper/awesome-tdd">awesome-tdd</a>.</em></p>
+
+<h2>Contents</h2>
+
+<ul>
+<li><a href="#awesome-nextjs--">Awesome Next.js </a></li>
+<ul>
+<li><a href="#contents">Contents</a></li>
+</ul>
+<ul>
+<li><a href="#community">Community</a></li>
+</ul>
+<ul>
+<li><a href="#essentials">Essentials</a></li>
+</ul>
+<ul>
+<li><a href="#articles">Articles</a></li>
+</ul>
+<ul>
+<li><a href="#boilerplates">Boilerplates</a></li>
+</ul>
+<ul>
+<li><a href="#extensions">Extensions</a></li>
+</ul>
+<ul>
+<li><a href="#apps">Apps</a></li>
+</ul>
+<ul>
+<li><a href="#books">Books</a></li>
+</ul>
+<ul>
+<li><a href="#videos">Videos</a></li>
+</ul>
+<ul>
+<li><a href="#projectsbeginner-level">Projects(Beginner level)</a></li>
+</ul>
+<ul>
+<li><a href="#newsletters">Newsletters</a></li>
+</ul>
+<ul>
+<li><a href="#contributing">Contributing</a></li>
+</ul>
+<ul>
+<li><a href="#license">License</a></li>
+</('ul', 2)>
+</('ul', 0)>
+<h2>Community</h2>
+
+<ul>
+<li><a href="https://github.com/vercel/next.js">GitHub</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/vercel/next.js/discussions">GitHub discussions for Next.js</a></li>
+</ul>
+<ul>
+<li><a href="https://vercel.community/">Vercel Community</a></li>
+</('ul', 0)>
+<h2>Essentials</h2>
+
+<ul>
+<li><a href="https://nextjs.org/blog">Blog</a></li>
+</ul>
+<ul>
+<li><a href="https://nextjs.org/learn">Learn</a></li>
+</ul>
+<ul>
+<li><a href="https://vercel.com/tv">Vercel TV</a></li>
+</ul>
+<ul>
+<li><a href="https://getstarted.sh/bulletproof-next">Bulletproof Next</a></li>
+</('ul', 0)>
+<h2>Articles</h2>
+
+<ul>
+<li><a href="https://echobind.com/post/instant-site-updates-with-on-demand-revalidation-and-directus">Instant Site Updates with On-Demand Revalidation and Directus</a></li>
+</ul>
+<ul>
+<li><a href="https://echobind.com/post/dynamic-cms-driven-redirects">Dynamic CMS-driven Redirects with Next.js</a></li>
+</ul>
+<ul>
+<li><a href="https://www.permit.io/blog/how-to-add-rbac-in-nextjs">Implementing RBAC Authorization in Next.js - Step-by-Step Guide</a></li>
+</ul>
+<ul>
+<li><a href="https://echobind.com/post/getting-started-with-nextjs-graphl-and-react-query">Getting Started with Next.js, GraphQL and React Query</a></li>
+</ul>
+<ul>
+<li><a href="https://snipcart.com/blog/nextjs-faunadb">Using Next.js with FaunaDB: How to Query the Database from Your App</a></li>
+</ul>
+<ul>
+<li><a href="https://buttercms.com/blog/next-js-cms-tutorial">How to Build a Serverless Next.js Blog with ButterCMS</a></li>
+</ul>
+<ul>
+<li><a href="https://auth0.com/blog/building-universal-apps-with-nextjs">Build a Universal JavaScript App with Next.js</a></li>
+</ul>
+<ul>
+<li><a href="https://labs.redantler.com/getting-started-with-next-js-article-one-a1d9780ea9e0#.863nl4wnq">Getting Started with Next.js — Setting Up Your App</a></li>
+</ul>
+<ul>
+<li><a href="https://labs.redantler.com/getting-started-with-next-js-bringing-data-in-bf40558698e2#.twjv5xk5w">Getting Started with Next.js — Bringing Data In</a></li>
+</ul>
+<ul>
+<li><a href="https://medium.com/cosmicjs/how-to-build-a-next-js-react-universal-app-e610a0bc2124#.b8ayt9f39">How to build a Next.js React Universal App</a></li>
+</ul>
+<ul>
+<li><a href="https://web.archive.org/web/20170202170122if_/https://jsmantra.com/next-on-next-js-1a134505f346#.bhihzecyc">Next on Next.js</a></li>
+</ul>
+<ul>
+<li><a href="https://hackernoon.com/accept-payments-on-your-site-with-nextjs-stripe-and-micro-371de95b22d5?source=activity---post_recommended">Accept payments on your site with nextjs, stripe, and micro</a></li>
+</ul>
+<ul>
+<li><a href="https://medium.com/@jthegedus/next-js-on-cloud-functions-for-firebase-with-firebase-hosting-7911465298f2">Next.js on Cloud Functions for Firebase with Firebase Hosting</a></li>
+</ul>
+<ul>
+<li><a href="https://timber.io/blog/building-a-blog-with-next-js">Building a Blog With Next.js</a></li>
+</ul>
+<ul>
+<li><a href="https://malloc.fi/using-google-analytics-with-next-js">Using Google Analytics with Next.js</a></li>
+</ul>
+<ul>
+<li>[Build a Universal JavaScript App with Next.js and Redux <em>[Russian]</em>](https://habrahabr.ru/post/323588/)</li>
+</ul>
+<ul>
+<li><a href="https://www.codementor.io/tgreco/5-of-the-many-things-to-love-about-zeit-s-next-js-bpszu99g1">5 (of the Many Reasons) to love Vercel's Next.js</a></li>
+</ul>
+<ul>
+<li><a href="https://nextjs.org/blog/next-5">Next.js 5: Universal Webpack, CSS Imports, Plugins and Zones</a></li>
+</ul>
+<ul>
+<li><a href="https://pusher.com/tutorials/realtime-data-visualization-nextjs">Realtime data visualization using Next.js and Chart.js</a></li>
+</ul>
+<ul>
+<li><a href="https://pusher.com/tutorials/chat-sentiment-analysis-nextjs">Build a chat app with sentiment analysis using Next.js</a></li>
+</ul>
+<ul>
+<li><a href="https://pusher.com/tutorials/realtime-tables-nextjs">Build a realtime table with Next.js</a></li>
+</ul>
+<ul>
+<li><a href="https://www.garymeehan.ie/blog/server-side-rendered-blog-with-nextjs-and-prismic">SSR blog with Next.js and Prismic.io</a></li>
+</ul>
+<ul>
+<li><a href="https://www.garymeehan.ie/blog/handling-seo-with-nextjs-and-prismic">SEO in Next.js and Prismic</a></li>
+</ul>
+<ul>
+<li><a href="https://www.garymeehan.ie/blog/seo-in-nextjs-with-next-seo">SEO in Next.js with next-seo</a></li>
+</ul>
+<ul>
+<li><a href="https://nextjs.org/blog/next-7">Next.js 7</a></li>
+</ul>
+<ul>
+<li><a href="https://blog.hasura.io/create-next-js-sites-using-graphql-on-postgres-199224ad1a39">Create SSR Next.js websites using GraphQL with Postgres</a></li>
+</ul>
+<ul>
+<li><a href="https://blog.strapi.io/strapi-next-setup">Cooking a Deliveroo clone with Next.js (React), GraphQL, Strapi and Stripe - Setup (part 1/7)</a></li>
+</ul>
+<ul>
+<li><a href="https://snipcart.com/blog/next-js-ecommerce-tutorial">Next.js E-commerce Tutorial: Quick Shopping Cart Integration</a></li>
+</ul>
+<ul>
+<li><a href="https://ghost.org/docs/api/nextjs/">Working with Ghost and Next.js</a></li>
+</ul>
+<ul>
+<li><a href="https://statickit.com/guides/next-js-tailwind">Using Tailwind CSS with Next.js</a></li>
+</ul>
+<ul>
+<li><a href="https://medium.com/frontend-digest/using-feature-flags-in-next-js-c5c8d0795a2?source=friends_link&sk=d846a29f376acf9cfa41e926883923ab">Using Feature Flags in Next.js</a></li>
+</ul>
+<ul>
+<li><a href="https://thetombomb.com/posts/adding-code-snippets-to-static-markdown-in-Next%20js">Adding code snippets to Next.js using react-syntax-highlighter</a></li>
+</ul>
+<ul>
+<li><a href="https://www.wrappixel.com/templates/category/nextjs-templates/?ref=232">Build company's Website/App with our astonishing Next.js template</a></li>
+</ul>
+<ul>
+<li><a href="https://www.bharathvaj.me/blog/implement-webhook-nextjs">Guaranteeing webhook delivery in NextJS Application</a></li>
+</ul>
+<ul>
+<li><a href="https://www.svix.com/blog/vercel-on-demand-isr-and-svix/">Building a Guestbook Using Next.js On-Demand ISR</a></li>
+</ul>
+<ul>
+<li><a href="https://adminmart.com/templates/nextjs/?ref=6">Useful Admin Templates to build your Website/App</a></li>
+</ul>
+<ul>
+<li><a href="https://tailwind-elements.com/docs/standard/integrations/next-integration/">Integrate Next app with Tailwind</a></li>
+</ul>
+<ul>
+<li><a href="https://blog.codedthemes.com/nextjs-admin-dashboard-templates/">Top Next.js Admin & Dashboard Templates</a></li>
+</ul>
+<ul>
+<li><a href="https://blog.codedthemes.com/nextjs-cheatsheet/">Next.js Cheatsheet</a></li>
+</ul>
+<ul>
+<li><a href="https://www.debugbear.com/blog/nextjs-performance">A Guide to Performance Optimization with Next.js</a></li>
+</('ul', 0)>
+<h2>Boilerplates</h2>
+
+<ul>
+<li><a href="https://kaminari.vercel.app/">Kaminari Template</a> - Power packed Next.js and Tailwind CSS template. Built with developer experience in mind. Contains Husky, CommitLint, Prettier, Eslint etc. configs. ✨</li>
+</ul>
+<ul>
+<li><a href="https://github.com/PictureElement/nextjs-strapi-portfolio-starter">Next.js, Strapi Portfolio Starter</a> – ⚡️ A modern portfolio starter with Next.js, Strapi, and Tailwind CSS, featuring automated XML sitemap, JSON-LD schemas, OpenGraph metadata, and a contact form with spam protection.</li>
+</ul>
+<ul>
+<li><a href="https://www.cosmicjs.com/apps/nextjs-static-blog">Next.js Static Blog</a> - Next.js static blog powered by the Cosmic Headless CMS</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ButterCMS/react-cms-blog-with-next-js">NextJS Headless CMS Powered Blog Starter</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/mattdamon108/nextjs-with-lambda">Next.js App with AWS Lambda</a> - Deploy a Next.js App to AWS Lambda using Apex Up.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/williamluke4/nitro">Nitro 🚀</a> - An Example of a PWA using Nextjs, Material-UI, Typescript and Auth0 💗</li>
+</ul>
+<ul>
+<li><a href="https://github.com/alepacheco/landing-template">Next & Now 2.0 Typescript template</a> - Serverless, Typescript, Jest, Github CI, SCSS, prettier boilerplate</li>
+</ul>
+<ul>
+<li><a href="https://github.com/UnlyEd/next-right-now">Next Right Now</a> - Flexible <strong>production-grade boilerplate</strong> with Next.js 9 and Vercel, with pre-configured Sentry, cookies, Amplitude, Emotion, FontAwesome, GraphQL/GraphCMS (Apollo), Bootstrap (Reactstrap), i18next (Locize), Jest, Cypress (E2E tests) and CI/CD (GH Actions), with full TypeScript support and <strong>support for B2B multi-tenants web apps (monorepo)</strong></li>
+</ul>
+<ul>
+<li><a href="https://github.com/Sebastp/Next-react-graphql-apollo<em>Boostrap">Next Graphql Apollo Typescript</em>Boostrap - Pobocha</a> - React + GraphQL + Next.js + Apollo + Scss + Typescript + Prettier & EsLint boilerplate</li>
+</ul>
+<ul>
+<li><a href="https://github.com/alepacheco/landing-template">Next & Vercel Typescript template</a> - Serverless, Typescript, Jest, Github CI, SCSS, prettier boilerplate</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ananddayalan/nextjs-in-firebase-with-bootstrap">NextJS in Firebase with Bootstrap</a> - Hosting NextJS app with Bootstrap in Firebase with Cloud Functions.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ooade/NextSimpleStarter">Next Simple Starter</a> - Simple PWA boilerplate with Next.js and Redux.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/iaincollins/nextjs-starter">NextJS Starter</a> - Starter project for Next.js with and email and oAuth authentication.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pbteja1998/nextjs-starter">nextjs-starter</a> - An SEO Optimized Next.js 10 starter kit template with React 17 + Typescript + Tailwind CSS 2 + React Query 3 + (GitHub Auth + Passwordless Auth) using (NextAuth.js and Fauna DB), ESLint, Prettier, Pre-commit hook with Husky. Can have different layouts for different pages.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sly777/ran">RAN!</a> - Production-ready boilerplate with support for GraphQL, SSR, Hot-reload, CSS-in-JS, caching, and more.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tscanlin/next-blog">Next Simple Blog</a> - Simple Markdown based blog built with Next.js with static exports.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/herschel666/phox">phox</a> - Create a static photo blog.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/MustansirZia/next-express-bootstrap-boilerplate">Next Express Bootstrap Boilerplate</a> - Boilerplate for a full stack app built using Next, Express, react-bootstrap, SCSS and SSR with eslint.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/suevalov/next-blog-firestore">Next Blog Firestore</a> - Blog with simple CMS built with Next.js, Firebase Firestore, styled-components and mobx-state-tree.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/CodementorIO/nextjs-redux-starter">Next Redux Starter</a> - Next.js starter with Express, Redux, and PostCSS.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/joaopaulomoraes/nextjs-with-redux-and-material-ui">NextJS Redux-Wrapper Material-UI</a> - 🤓 A boilerplate NextJS with Redux and Material UI.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/nmaro/staart">Staart</a> - 😎 Actively maintained Next.js components library <em>and</em> minimal boilerplate to rapidly get staarted with app with working user accounts based on Ooth.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/deptno/next.js-typescript-starter-kit">NextJS TypeScript Starter Kit</a> - :tada: TypeScript + NextJS, Styled-jsx, Redux, PostCSS, configurable SEO</li>
+</ul>
+<ul>
+<li><a href="https://arefaslani.github.io/next-boilerplate">Next Boilerplate</a> - External CSS and Sass + Importing images from anywhere + Prettier and Eslint + Environment variables and many more features.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/YuriBrunetto/next-starter">next-starter</a> - A full and simple boilerplate with <code>sass (.scss)</code> and <code>postcss</code>built in.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/deptno/typescript-monorepo-next-example">Typescript Monorepo Next Example</a> - A minimalistic next.js + typescript monorepo.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tomimick/tm-nextjs-starter">tomimick/tm-nextjs-starter</a> - A minimal starter/demo with basic CRUD, axios/localstorage, MobX, SASS, static site export, live demo</li>
+</ul>
+<ul>
+<li><a href="https://github.com/csprance/next-smrt">csprance/next-smrt</a> - A minimal boilerplate with redux, styled-components, material-ui and typescript with a custom express server.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/saltyshiomix/nextron">Nextron</a> - An Electron with Next.js apps generator ⚡</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pankod/next-boilerplate">next-boilerplate</a> - A well-structured production ready Next.js boilerplate with Typescript, Redux, Express.js, Sass, Css, EnvConfig, Reverse Proxy, Bundle</li>
+</ul>
+<ul>
+<li><a href="https://github.com/oh-my-c0de/oh-my-fullstack">Oh My Fullstack</a> - Full stack web application skeleton (Next.js, Redux, RxJS, Immutable, Express)</li>
+</ul>
+<ul>
+<li><a href="https://github.com/brandontle/next-postgres-with-typescript">Next-Postgres-With-Typescript</a> - Forum-like fullstack web app with Next 7.0.2 + Sequelize 4/Postgres + Typescript + Redux + Passport Local Auth + Emotion</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pd-smith/next-express-babel">Next.js with Express and Babel</a> - An application skeleton for those who want to transpile their Express as well as their Next.js code using Babel.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/hasura/graphql-engine/tree/master/community/sample-apps/nextjs-postgres-graphql">next-postgres-graphql</a> - Create SSR Next.js websites using GraphQL with Postgres (Next.js, Postgres, GraphQL)</li>
+</ul>
+<ul>
+<li><a href="https://github.com/hoangvvo/nextjs-mongodb-app">nextjs-mongodb-app</a> - Full-fledged app made with Next.JS and MongoDB, with authentication and much more (Next.js 9, MongoDB)</li>
+</ul>
+<ul>
+<li><a href="https://github.com/react-next-boilerplate/react-next-boilerplate">react-next-boilerplate</a> - :rocket: A basis for reducing the configuration of your projects with nextJS, best development practices and popular libraries in the developer community.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/novellito/the-nextjs-starter">The-Nextjs-starter</a> - typescript + redux + styled-components + react-testing-library + eslint + fontawesome</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tudorconstantin/knests/">The Knests Stack</a> - Full stack boilerplate/hackathon starter with: PostgreSQL, Knex.js, NestJS, Next.js (obviously), GraphQL, React (with hooks and typescript), Material-UI, Docker multistage images for, Docker compose and a Gitlab CI/CD pipeline fully configured.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/vriad/devii">Devii</a> - A Medium-inspired dev blog starter built with Next.js, React, and TypeScript, with Markdown rendering, syntax highlighting, SEO/meta tags, and RSS feed generation out of the box.</li>
+</ul>
+<ul>
+<li><a href="https://creativedesignsguru.com/demo/Nextjs-Blog-Boilerplate/">Nextjs Blog Starter</a> - 🚀 The perfect starter code for your blog based on Next.js framework. ⚡️ Made with Next.js, TypeScript, ESLint, Prettier, PostCSS, Tailwind CSS.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/wutali/nextjs-netlify-blog-template">Next.js and Netlify Blogging Template</a> - A perfect boilerplate for building a blog website on Netlify stacks with standard features like tagging, CMS, and shortcodes.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/inblack67/GraphQL-Next-Setup">Nextjs Apollo Nexus</a> - GraphQL Apollo Client-Server integration in Next.js with Nexus Schema (Code first approach).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/vickOnRails/next-starter-peacock">Nextjs Starter Peacock</a> - 🦚 Beautiful Nextjs portfolio starter for software engineers and designers to show work they're so proud of.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tancredi/nextatic">Nextatic</a> - 🌍 Static website multi-language boilerplate with user-editable pages and navigation using Netlify CMS + Next.js + SCSS + Typescript.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/stovv/next-strapi-sitemap">Sitemap generator for NextJS & StrAPI</a> - 🦾 An additional server on express that runs alongside nextjs and regenerates sitemap ( with index sitemap ) and robots.txt files on request from STR API.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/pankod/superplate">superplate</a> - superplate creates Next.js app in seconds with TypeScript, styled-components, SWR, Storybook, and 35+ plugin.</li>
+</ul>
+<ul>
+<li><a href="https://statichunt.com/themes/nextjs-hydrogen">Hydrogen</a> - Hydrogen is a Nextjs blog starter template build with tailwindCss and MDX supports. It has all necessary MDX shortcodes out of the box.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/hrushikedar33/next-fire-auth">Next-Fire-Auth</a> - A awesome boilerplate for startup application with authentication using Next.js + Typescript + Tailwind CSS + Firebase-auth + React-Firebase-Hooks</li>
+</ul>
+<ul>
+<li><a href="https://github.com/bharathvaj-ganesan/chargebee-saas-stack">NextJS Chargebee Subscription</a> - A Chargebee focused T3 Stack that integrates User Subscriptions, Authentication and Testing. Driven by Prisma ORM.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/Blazity/next-enterprise">Next.js Enterprise</a> - enterprise-grade boilerplate for high-performance, maintainable apps. Built with Tailwind CSS, RadixUI, TypeScript and more.</li>
+</ul>
+<ul>
+<li>[Start UI [web]](https://github.com/BearStudio/start-ui-web) - 🚀 opinionated UI starter with TypeScript, React, NextJS, Chakra UI, tRPC, Prisma, TanStack Query, Storybook, Playwright, Formiz</li>
+</('ul', 0)>
+<h2>Extensions</h2>
+
+<ul>
+<li><a href="https://github.com/UnlyEd/universal-language-detector">Next universal language detector</a> - Language detector that works universally (browser + server) - Meant to be used with a universal framework, such as Next.js <a href="https://universal-language-detector.now.sh/">DEMO</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/fridays/next-routes">Next Routes</a> - Universal named routes for Next.js.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/onready/next-pkg">Next-Pkg</a> - Extended Next.js server with <a href="https://github.com/vercel/pkg">pkg</a> support.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lfades/next-plugin-graphql">Next Plugin Graphql</a> - Next.js plugin for .graphql and .gql files using graphql-tag</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lfades/next-with-apollo">Next With Apollo</a> - Apollo Graphql integration for Next.js</li>
+</ul>
+<ul>
+<li><a href="https://github.com/garmeeh/next-seo">Next SEO</a> - SEO made easy for Next.js</li>
+</ul>
+<ul>
+<li><a href="https://github.com/iamvishnusankar/next-sitemap">Next-Sitemap</a> - Sitemap generator for Next.js</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tokuda109/next-useragent">Next UserAgent</a> - UserAgent parser for Next.js</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tokuda109/next-cookie">Next Cookie</a> - Cookie serializer and deserializer library for Next.js.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/elmasse/nextein">Nextein</a> - A static site generator based in Next.js.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/hipstersmoothie/next-mdx-blog">next-mdx-blog</a> - Easily add a blog to any next.js based project</li>
+</ul>
+<ul>
+<li><a href="https://github.com/isaachinman/next-i18next">next-i18next</a> - The easiest way to translate your NextJs apps.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/revskill10/next-routes-middleware">next-routes-middleware</a> - A NextJS routing middleware</li>
+</ul>
+<ul>
+<li><a href="https://github.com/danielcondemarin/serverless-nextjs-plugin">Serverless Framework plugin for Next.js</a> - Deploy serverless applications with ease.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ematipico/terraform-nextjs-plugin">Terraform For Next.js</a> - Deploy your application using Terraform</li>
+</ul>
+<ul>
+<li><a href="https://github.com/hoangvvo/next-session">next-session</a> - Session middleware for Next.js</li>
+</ul>
+<ul>
+<li><a href="https://github.com/vvo/next-iron-session">next-iron-session</a> - Next.js stateless session utility using signed and encrypted cookies to store data</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lucleray/next-purgecss">Next PurgeCSS</a> - Easily integrate <a href="https://www.purgecss.com/">Purgecss</a>, which helps you remove unused CSS from your bundle.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/shadowwalker/next-pwa">Next PWA</a> - Zero config PWA plugin for Next.js with workbox</li>
+</ul>
+<ul>
+<li><a href="https://github.com/piglovesyou/flow-middleware">flow-middleware</a> - Run any of Express middlewares on Next.js without polluting native objects.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/hoangvvo/next-connect">next-connect</a> - The Express/Connect-compatible router and middleware layer for Next.js.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/humaans/next-img/">next-img</a> - a plugin for embedding optimized images with ease.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/iaincollins/next-auth">next-auth</a> - Easy authentication for Next.js and Serverless</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lone-cloud/next-deploy">next-deploy</a> - 🚀 Effortless deployment to AWS and GitHub Pages.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/codecoolture/next-joi">next-joi</a> - Validate Next.js API Routes, with <em>joi</em>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/martpie/next-transpile-modules">next-transpile-modules</a> - Next.js plugin to transpile code from node_modules. Useful for monorepos.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/liveduo/destack">Destack for Next.js</a> - Next.js extension to visually build landing pages locally.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/random-bits-studio/use-siwe">UseSIWE</a> - React hooks and Next.js API routes that make it super easy to add Sign-In with Ethereum to your app.</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/@cuww/runtime-env">Runtime Environment Variables for Next.js</a> – Stop configuring ENV variables in CI/CD, use a cloud-native approach.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/XD2Sketch/next-google-tag-manager">next-google-tag-manager</a> – Easily add Google Tag Manager to Next 13 and up.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/storyofams/next-api-decorators">next-api-decorators</a> - Decorators to create typed Next.js API routes, with easy request validation and transformation.</li>
+</('ul', 0)>
+<h2>Apps</h2>
+
+<ul>
+<li><a href="https://github.com/codelit/courselit">CourseLit</a> - An open source alternative to Thinkific, Teachable etc.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/feednext/feednext">Feednext</a> - An open source social media application.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/auth0-blog/nextjs-got">NextJS GOT</a> - Simple Next.js application that showcases Game of Thrones Characters.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/RelateNow/relate">Relate</a> - Mindfulness community - React, GraphQL, Next.js.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dotcypress/password">Password</a> - One password, right way.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lipp/next-todos">Next Todos</a> - Todo list written in Next.js.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lipp/hackernews">Hacker News</a> - Another Hacker News written in Next.js.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/lipp/jet-chat">Jet Chat</a> - Jet and Next.js powered Chat demo.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/arunoda/nextgram">Nextgram</a> - Sample Next.js v2 app for showing off its capabilities.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/rauchg/blog">Rauchg Blog</a> - Blog built by a Next.js core maintainer.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/renatorib/next-jph">Next JPH</a> - JsonPlaceholder sample app made with Next.js.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dawsbot/mailto">Mailto</a> - HTML mailto's made easy.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/knipferrc/plate">Plate</a> - The task management app to rule them all.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/danielbayerlein/dashboard">Dashboard</a> - Create your own team dashboard with custom widgets.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ritz078/snape">Snape</a> - A torrent client to search, stream and download torrents.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/juliandavidmr/TrelloResume">Trello Resume</a> - Converts trello data into fast read information.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/estrada9166/server-authentication-next.js">Server Authentication with JWT</a> - Server authentication, prevent render before validation.</li>
+</ul>
+<ul>
+<li><a href="https://gitlab.com/kachkaev/website-frontend/">Alexander Kachkaev’s website</a> – personal homepage built with Next.js, GraphQL, Docker and Kubernetes. Uses apollo client, react-intl, styled-components and recompose. Docker images are automatically built by GitLab CI.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/estrada9166/cookie-handler-next.js">Cookie handler with server render</a> - Cookie handler with server render, access the cookie before render.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/OrangeXC/gank">Gank</a> - A Next.js App use gank-api, mobx and antd</li>
+</ul>
+<ul>
+<li><a href="https://github.com/janit/decoupled-cms-nextjs-graphql">Decoupled CMS example with GraphQL and Next.js</a></li>
+</ul>
+<ul>
+<li><a href="https://vr.mozilla.org/">Mozilla VR Home</a> - Mozilla VR Home</li>
+</ul>
+<ul>
+<li><a href="https://www.eltonjohn.com">Elton John's website</a> - Elton John's Website</li>
+</ul>
+<ul>
+<li><a href="https://data.iota.org/">IOTA's Data Market Place</a> - IOTA Market Place</li>
+</ul>
+<ul>
+<li><a href="https://www.magicleap.com/">magicleap.com</a> - Magic Leap</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/search">NPM.js Search Page</a> - NPM's Search Page</li>
+</ul>
+<ul>
+<li><a href="https://success.docker.com">Docker Success Center</a> - Docker Success Center</li>
+</ul>
+<ul>
+<li><a href="https://github.com/neo-search/urteile-gesetze-web">Urteile & Gesetze</a> - German Legal Information System licensed under GPLv3.</li>
+</ul>
+<ul>
+<li><a href="https://www.tiktok.com/">TikTok's HomePage</a> - TikTok's Home Page</li>
+</ul>
+<ul>
+<li><a href="https://njt.now.sh">njt.now.sh</a> - npm jump to 🐸 (package navigation shortcuts you dreamed about). Partially statically-rendered, partially deployed as lambda. Automatically updated on each commit to the <a href="https://github.com/kachkaev/njt">github repo</a>, thanks to Now integration.</li>
+</ul>
+<ul>
+<li><a href="https://caseconverter.pro">caseconverter.pro</a> - A text case converter.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/poulainv/tottem">Tottem</a> - Bookmark manager on steroid built with NextJs / Auth0 / Apollo Tools / Prisma2</li>
+</ul>
+<ul>
+<li><a href="https://slowtvmap.com">Slow TV Map</a> - A fun way to discover relaxing virtual experiences. Next.js + Chakra UI + MySQL hosted on Vercel.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/AlandSleman/t3-twitter-clone">Twitter Clone</a> - Twitter clone built with Next.js + T3 Stack + NextAuth + Supabase + Prisma.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/shadcn/taxonomy">Taxonomy</a> - An example app built using Next.js 13 server components.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/shadcn/ui">shadcn/ui</a> - Beautifully designed components that you can copy and paste into your apps.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/AlandSleman/StorageBox">StorageBox</a> - A Simple File Storage Service Built with Go and Next.js.</li>
+</('ul', 0)>
+<h2>Books</h2>
+
+<ul>
+<li><a href="https://leanpub.com/hands-on-nextjs">Hands On Next.js</a> - A practical fullstack book on universal (server) rendering for react applications.</li>
+</ul>
+<ul>
+<li><a href="https://www.packtpub.com/web-development/nextjs-quick-start-guide">Next.js Quick Start Guide</a> - Create, build and deploy universal JavaScript applications using Next.js</li>
+</ul>
+<ul>
+<li><a href="https://flaviocopes.com/page/nextjs-handbook/">The Next.js Handbook</a> - Build a frontend React application that transparently handles server-side rendering for you.</li>
+</ul>
+<ul>
+<li><a href="https://www.amazon.com/dp/B0BHRPMF74">Serverless Web Applications with React and Next.js</a> - Use Next.js serverless features to access databases and authenticate users in your React applications</li>
+</ul>
+<ul>
+<li><a href="https://www.cutintothejamstack.com/">Cut Into The Jamstack: Build a SaaS with React and Next.js</a> - Build a full-stack software-as-a-service application using Next.js, Prisma ORM, Cloudinary API, Chakra-UI and React Hook Form.</li>
+</ul>
+<ul>
+<li><a href="https://www.amazon.com/Real-World-Next-js-high-performance-applications-production-ebook/dp/B08XY1MCV1?Adv-Srch-Books-Submit.x=0&Adv-Srch-Books-Submit.y=0&qid=1652828645&refinements=p<em>66:9781801079877&s=books&sr=1-1&unfiltered=1&linkCode=sl1&tag=misko0a-20&linkId=1039970a67ec37bfcaa25cf6c77a5591&language=en</em>US&ref<em>=as</em>li<em>ss</em>tl">Real World Next.js</a> - Build scalable, high-performance, and modern web applications using Next.js, the React framework for production</li>
+</('ul', 0)>
+<h2>Videos</h2>
+
+<ul>
+<li>[Create your first ReactJS application with NextJS <em>[Spanish]</em>](https://www.youtube.com/watch?v=-7Ft5LxPeWs)</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=JEBkh_vleTs&t">React Server Side Rendering with NextJS</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=DLGJfa3Xv-0">Guillermo Rauch - Next.js by Example</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=evaMpdSiZKk">Guillermo Rauch - Next.js: Universal React Made Easy and Simple</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=Fnw3lNeH-XI">Introduction to Next.js</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=h6rETZH6Ym0">Next.js in production</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=2cJya4h5ync">Parameterized Routing with Next.js</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=lLNJsuXB4CI">JSHeroes 2017 | Guillermo Rauch - Static and Dynamic Next.js</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=w9Or7B4kTRY">Programming the Universal Future with Next.js - Guillermo Rauch · JSConf China 2017</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=4cfozXTyjWQ">BPJS: Special - Introduction to Next.js</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=ms2aOV06_qk">Next for Next.js</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=g_LA1quUIi8">Data Management With Next.js and GraphQL</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=oQ60Grn4RYQ">Next.js Register User</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=IkOVe40Sy0U">Next.js Crash Course - Server Side React</a></li>
+</ul>
+<ul>
+<li><a href="https://masteringnextjs.com/">Mastering Next.js</a> - 50+ lesson video course for building applications with Next.js and React.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=7J4iL1HDshQ&list=PLYSZyzpwBEWSQsrukurP09ksi49H9Yj40">Next.js Tutorial</a> - In depth Next.js tutorials.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/playlist?list=PLBnKlKpPeagnT2Cmv4giCbosfrbKnuYTD">Next.js Conf 2020</a> - All the videos from the 2020 Next.js conference</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/playlist?list=PLTRTpHrUcSB8elpwJKDIQNfNlqpPTNHGG">Full-stack food ordering app with Hasura, Next.js, and Vercel</a></li>
+</ul>
+<ul>
+<li><a href="https://youtu.be/fqXC2V-MSV4">How to use Credentials Authentication in Next.js with NextAuth?</a></li>
+</('ul', 0)>
+<h2>Projects(Beginner level)</h2>
+
+<ul>
+<li><a href="https://youtu.be/mqUN4N2q4qY">Full Stack Netflix Clone in React, Tailwind CSS, Next.JS, Prisma, MongoDB, NextAuth & Vercel (2023)</a></li>
+</ul>
+<ul>
+<li><a href="https://youtu.be/ugCN_gynFYw">Build and Deploy a Modern Next 13 Website With Framer Motion & Tailwind CSS</a></li>
+</ul>
+<ul>
+<li><a href="https://youtu.be/OHEMPreO09Q">Next js 13 project - IMBb Clone - next js tailwind css project - nextjs project</a></li>
+</ul>
+<ul>
+<li><a href="https://youtu.be/h9zlVmoUV5I">Next js 13 project - Google clone (next.js 13, tailwind css 3, google search api, app router</a></li>
+</ul>
+<ul>
+<li><a href="https://youtu.be/PnvDPSg5bQM">next js project - Twitter clone</a></li>
+</ul>
+<ul>
+<li><a href="https://youtu.be/ytkG7RT6SvU">Build and Deploy: TWITTER clone with React, Tailwind, Next, Prisma, Mongo, NextAuth & Vercel (2023)</a></li>
+</ul>
+<ul>
+<li><a href="https://youtu.be/Hiabp1GY8fA">NextJS 13 Tutorial: Create a Static Blog from Markdown Files</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=c<em>-b</em>isI4vg&t=11529s">Full Stack Airbnb Clone with Next.js 13 App Router: React, Tailwind, Prisma, MongoDB, NextAuth 2023</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=PGPGcKBpAk8&t=1922s">Real-Time Messenger Clone: Next.js 13, React, Tailwind, Prisma, MongoDB, NextAuth, Pusher (2023)</a></li>
+</ul>
+<ul>
+<li><a href="https://youtube.com/watch?v=2aeMRB8LL4o&t=4402s">Full Stack Spotify Clone: Next 13.4, React, Stripe, Supabase, PostgreSQL, Tailwind (2023)</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=5miHyP6lExg&t=1908s">Full Stack E-Commerce + Dashboard & CMS: Next.js 13 App Router, React, Tailwind, Prisma, MySQL, 2023</a></li>
+</('ul', 0)>
+<h2>Newsletters</h2>
+
+<ul>
+<li><a href="https://nextjsnews.com">Next.js News</a> - Monthly Next.js newsletter showcasing new and upcoming features, best articles, tools, and plugins.</li>
+</ul>
+<ul>
+<li><a href="https://nextjsnotes.com">Next.js Notes</a> - Monthly Next.js and JavaScript platform news.</li>
+</('ul', 0)>
+<h2>Contributing</h2>
+
+<p>Found an awesome package, article, blog, video etc.? Send me a pull request! Just follow the <a href="/CONTRIBUTING.md">guidelines</a>. Thank you!</p>
+
+<hr>
+
+<p><strong>Check out my <a href="https://goodheads.io">blog</a> or say <em>hi</em> on <a href="https://twitter.com/unicodeveloper">Twitter</a>.</strong></p>
+
+<h2>License</h2>
+
+<p><a href="http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg"><img src="http://creativecommons.org/publicdomain/zero/1.0/" alt="CC0</a>"></p>
+
+</body>
+</html>

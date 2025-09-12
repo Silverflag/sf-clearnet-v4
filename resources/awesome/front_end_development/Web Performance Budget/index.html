@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Performance Budget</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Web Performance Budget</h1>
+
+<p><strong>Repository:</strong> https://github.com/pajaydev/awesome-web-performance-budget#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<h1>Awesome Web Performance Budget <a href="https://awesome.re/badge.svg"><img src="https://awesome.re" alt="Awesome</a>"></h1>
+<blockquote>
+<p>Web Performance Budget is a group of limits to certain values that affect site performance that should not be exceeded in the design and development of any web project. By setting up the performance budget, we can focus more towards performance which can improve the speed and overall user experience of our websites. This list help us to provide link to various articles, projects, tools and techniques to maintain performance budget.</p>
+</blockquote>
+
+<h2>Contents</h2>
+
+<ul>
+<li><a href="#articles">Articles</a></li>
+</ul>
+<ul>
+<li><a href="#tools-to-measure-performance-budget">Tools to measure Performance Budget</a></li>
+</ul>
+<ul>
+<li><a href="#open-source-tools">Open source tools</a></li>
+</ul>
+<ul>
+<li><a href="#build-tools-to-set-up-performance-budget">Build Tools to set up performance budget</a></li>
+</ul>
+<ul>
+<li><a href="#bundle-analyzers">Bundle Analyzers</a></li>
+</ul>
+<ul>
+<li><a href="#website-analyzers">Website Analyzers</a></li>
+</ul>
+<ul>
+<li><a href="#blogs">Blogs</a></li>
+</ul>
+<ul>
+<li><a href="#podcasts">Podcasts</a></li>
+</ul>
+<ul>
+<li><a href="#videos">Videos</a></li>
+</ul>
+<ul>
+<li><a href="#books">Books</a></li>
+</ul>
+<ul>
+<li><a href="#case-studies">Case Studies</a></li>
+</('ul', 0)>
+<h2>Articles</h2>
+<ul>
+<li><a href="https://medium.com/reloading/javascript-start-up-performance-69200f43b201">JavaScript Start-up Performance</a> - Performance Budget by Addyosmani.</li>
+</ul>
+<ul>
+<li><a href="https://addyosmani.com/blog/performance-budgets/">Performance Budget</a> - Performance Budget by Addyosmani.</li>
+</ul>
+<ul>
+<li><a href="https://web.dev/your-first-performance-budget/">Your first performance budget</a> - Explained how to define your first performance budget in a few simple steps.</li>
+</ul>
+<ul>
+<li><a href="http://designingforperformance.com/index.html#table-of-contents">Designing for Performance</a> - How performance is important for designers.</li>
+</ul>
+<ul>
+<li><a href="https://csswizardry.com/2013/01/front-end-performance-for-web-designers-and-front-end-developers/">Web Performance for Designers and developers</a> - Front-end performance for web designers and front-end developers.</li>
+</ul>
+<ul>
+<li><a href="http://bradfrost.com/blog/post/performance-as-design/">Performance as design</a> - Best practise to see performance as an essential design feature.</li>
+</ul>
+<ul>
+<li><a href="https://www.invisionapp.com/inside-design/setting-a-web-performance-budget/">Inside Design - Setting a web performance budget</a> - Setting a performance budget by Invision.</li>
+</ul>
+<ul>
+<li><a href="https://infrequently.org/2017/10/can-you-afford-it-real-world-web-performance-budgets/">Real-world Web Performance Budgets By Alex Russel</a> - Can You Afford It?: Real-world Web Performance Budgets.</li>
+</ul>
+<ul>
+<li><a href="https://medium.com/dailyjs/how-did-angular-cli-budgets-save-my-day-and-how-they-can-save-yours-300d534aae7a">Performance Budget using Angular CLI</a> - Implementing Performance Budget in Angular projects.</li>
+</ul>
+<ul>
+<li><a href="https://web.dev/performance-budgets-101/">Performance budgets 101</a> - How to start a journey by setting up the performance budget.</li>
+</ul>
+<ul>
+<li><a href="https://web.dev/incorporate-performance-budgets-into-your-build-tools">Incorporate performance budgets into your build process</a> - Set up performance budget into your build process.</li>
+</ul>
+<ul>
+<li><a href="http://v3.danielmall.com/articles/how-to-make-a-performance-budget/">How to make Performance Budget</a> - Instructions for developing the performance budget.</li>
+</ul>
+<ul>
+<li><a href="https://paulcalvano.com/2018-07-02-impact-of-page-weight-on-load-time/">Impact of Page Weight on Load Time</a> - Impact of Page Weight on Load Time.</li>
+</('ul', 0)>
+<h2>Tools to measure Performance Budget</h2>
+
+<ul>
+<li><a href="http://www.performancebudget.io/">Performance Budget Calculator</a> - Calculate A Performance Budget For Your Site.</li>
+</ul>
+<ul>
+<li><a href="https://www.webpagetest.org/easy">Web Page Test</a> - Test your performance.</li>
+</ul>
+<ul>
+<li><a href="https://www.lightest.app/">lightest app</a> - Visualize web performance against competitors.</li>
+</ul>
+<ul>
+<li><a href="https://speedcurve.com">Speed Curve</a> - Measuring web performance, get today's performance metrics.</li>
+</ul>
+<ul>
+<li><a href="https://yellowlab.tools/">Yellow Lab Tools</a> - Online test to help speeding up heavy web pages.</li>
+</ul>
+<ul>
+<li><a href="https://www.sitespeed.io/">Sitespeed.io</a> - Easy to monitor and measure the performance of your web site.</li>
+</ul>
+<ul>
+<li><a href="https://perf-track.web.app/">Perf Track</a> - Tracking framework performance at scale.</li>
+</('ul', 0)>
+<h2>Open source tools</h2>
+
+<ul>
+<li><a href="https://zizzamia.github.io/perfume/">Perfume.js</a> - Tiny, web performance monitoring library that reports field data back to your favorite analytics tool.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/theodo/falco">Falco</a> - Helps you monitor, analyze, and optimize your websites.</li>
+</('ul', 0)>
+<h2>Build Tools to set up performance budget</h2>
+
+<ul>
+<li><a href="https://github.com/siddharthkp/bundlesize">Bundle Size</a> - Keep your bundle size in check.</li>
+</ul>
+<ul>
+<li><a href="https://webpack.js.org/configuration/performance/">Webpack Perf Budget</a> - If you are using Webpack in your project then you can prefer this.</li>
+</ul>
+<ul>
+<li><a href="https://web.dev/use-lighthouse-for-performance-budgets/">Lighthouse</a> - How to set up a performance budget using <a href="https://developers.google.com/web/tools/lighthouse">lighthouse</a> and automate using <a href="https://web.dev/using-lighthouse-bot-to-set-a-performance-budget/">Lighthouse bot</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tkadlec/grunt-perfbudget">Grunt-perfbudget</a> - Grunt task for performance budgeting.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ai/size-limit">Size Limit</a> - Calculate the real cost to run your JS app or lib to keep good performance. Show error in pull request if the cost exceeds the limit.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/GoogleChromeLabs/size-plugin">Size Plugin</a> - Track compressed Webpack asset sizes over time.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/GoogleChromeLabs/pr-bot">Performance Budget Builder</a> - Lay out your template types, set a size budget for each template type, then plug in the sizes for each asset category that will load in the template.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/paulirish/pwmetrics">Progressive Web Metrics</a> - Lay out your template types, set a size budget for each template type, then plug in the sizes for each asset category that will load in the template. </li>
+</ul>
+<ul>
+<li><a href="https://github.com/TrySound/rollup-plugin-size-snapshot">rollup-plugin-size-snapshot</a> - CLI tool and lib to gather performance metrics via Lighthouse.</li>
+</ul>
+<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost">ImportCost - VS Extension</a> - Extension to display inline in the VS code editor the size of the imported package.</li>
+</('ul', 0)>
+<h2>Bundle Analyzers</h2>
+
+<ul>
+<li><a href="https://bundlephobia.com/">Bundlephobia</a> - Find the cost of adding a npm package to your bundle.</li>
+</ul>
+<ul>
+<li><a href="https://bundle-buddy.firebaseapp.com/">bundle-buddy</a> - A tool to help you find source code duplication across your JavaScript chunks/splits.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/webpack-contrib/webpack-bundle-analyzer">webpack-bundle-analyzer</a> - Webpack plugin and CLI utility that represents bundle content as convenient interactive zoomable treemap.</li>
+</ul>
+<ul>
+<li><a href="http://hughsk.io/disc/">Disc</a> - Visualise the module tree of browserify project bundles and track down bloat. </li>
+</ul>
+<ul>
+<li><a href="https://github.com/ajay2507/lasso-analyzer">lasso-analyzer</a> - Analyze and Visualise project bundles created by Lasso.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/btd/rollup-plugin-visualizer">Rollup Visualizer</a> - Visualize and analyze your Rollup bundle to see which modules are taking up space.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/gregtillbrook/parcel-plugin-bundle-visualiser">Parcel plugin Visualizer</a> - A plugin for the parcel bundler to visualise bundle contents.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/macbre/analyze-css">CSS Analyzer</a> - CSS selectors complexity and performance analyzer.</li>
+</('ul', 0)>
+<h2>Website Analyzers</h2>
+<ul>
+<li><a href="https://lighthouse-metrics.com/">Lighthouse Metrics</a> - Lighthouse Metrics provides easy insights for your site's performance. Save your time by running tests from multiple locations to get the valuable insight you need.</li>
+</ul>
+<ul>
+<li><a href="https://uitest.com/check/">UITest.com Site Check</a> - Test your website in more than 80 tools (web-based and free).</li>
+</('ul', 0)>
+<h2>Blogs</h2>
+<ul>
+<li><a href="https://calendar.perfplanet.com/2020/">Web Performance Calender</a> - Speed geek's favorite time of the year.</li>
+</ul>
+<ul>
+<li><a href="https://uxify.com/blog/post/web-performance-budget-guide">Web Performance Budget: How to Set up, Calculate, And Apply</a> - How to Set up budget, Calculate, And Apply</li>
+</('ul', 0)>
+<h2>Podcasts</h2>
+<ul>
+<li><a href="https://chasingwaterfalls.io/">Chasing Waterfalls</a> - Conversation with people to make web faster by <a href="https://timkadlec.com/">Tim kadlec</a></li>
+</ul>
+<ul>
+<li><a href="https://shoptalkshow.com/">Shoptalk Show</a> - A podcast about building websites.</li>
+</('ul', 0)>
+<h2>Videos</h2>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?list=PLYo5nh8xQFpkwsu9QNlCpPGkmCCuTTWDJ&v=yqejmZrtmNg">Concept of Performance Budget</a> - Performance Budget with Tim Kadlec.</li>
+</ul>
+<ul>
+<li><a href="https://youtu.be/vVlpCmK1l5k">Implementing Performance Budgets</a> - How to implement performance budgets to avoid regression - Google Chrome Developers.</li>
+</ul>
+<ul>
+<li><a href="https://vimeo.com/108328247">Design Decisions Through The Lens Of A Performance Budget</a> - How we can make smarter design decisions, from the beginning of a project, to ensure that our sites perform well.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=cnr3CJwpaps">Revisiting Performance Budgets</a> - Revisiting Performance Budgets</li>
+</('ul', 0)>
+<h2>Books</h2>
+
+<ul>
+<li><a href="https://www.oreilly.com/library/view/web-performance-warrior/9781492048114/">Web Performance Warrior</a></li>
+</ul>
+<ul>
+<li><a href="http://designingforperformance.com/">Designing for Performance</a></li>
+</('ul', 0)>
+<h2>Case Studies</h2>
+
+<ul>
+<li><a href="https://wpostats.com/">Web Performance Optimization case studies</a> - Case studies and experiments demonstrating the impact of web performance optimization (WPO) on user experience and business metrics.</li>
+</ul>
+<ul>
+<li><a href="http://responsivenews.co.uk/post/18948466399/cutting-the-mustard">BBC - Cutting the mustard</a> - Optimizations while building responsive websites.</li>
+</ul>
+<ul>
+<li><a href="https://medium.com/caspertechteam/we-shaved-1-7-seconds-off-casper-com-by-self-hosting-optimizely-2704bcbff8ec">Casper.com Self-hosting Optimization</a> - How we shaved 1.7 seconds off casper.com by self-hosting Optimizely.</li>
+</ul>
+<ul>
+<li><a href="https://medium.com/dev-channel/a-netflix-web-performance-case-study-c0bcde26a9d9">Netflix Performance Improvement by shipping less JS</a> - A Netflix Web Performance Case Study.</li>
+</ul>
+<ul>
+<li><a href="https://medium.com/dev-channel/a-pinterest-progressive-web-app-performance-case-study-3bd6ed2e6154/">Pinterest Web App Optimization</a> - A Pinterest Progressive Web App Performance Case Study.</li>
+</ul>
+<ul>
+<li><a href="https://www.smashingmagazine.com/2014/09/improving-smashing-magazine-performance-case-study/">Smashing Magazine's Web Performance</a> - Improving Smashing Magazine's Web Performance Case Study.</li>
+</ul>
+<ul>
+<li><a href="https://medium.com/@addyosmani/a-tinder-progressive-web-app-performance-case-study-78919d98ece0/">Tinder Web App Performance</a> - A Tinder Progressive Web App Performance Case Study.</li>
+</ul>
+<ul>
+<li><a href="https://medium.com/dev-channel/treebo-a-react-and-preact-progressive-web-app-performance-case-study-5e4f450d5299/">Treebo PWA Case Study</a> - Treebo - React And Preact PWA Performance Case Study.</li>
+</ul>
+<ul>
+<li><a href="https://medium.com/@paularmstrong/twitter-lite-and-high-performance-react-progressive-web-apps-at-scale-d28a00e780a3/">Twitter Lite</a> - A Twitter Lite Web App at Scale.</li>
+</ul>
+<ul>
+<li><a href="https://medium.com/the-telegraph-engineering/improving-third-party-web-performance-at-the-telegraph-a0a1000be5">Telegraph - Creating a web performance culture</a> - Improving third-party web performance at The Telegraph.</li>
+</ul>
+<ul>
+<li><a href="https://www.zillow.com/engineering/bigger-faster-more-engaging-budget/">Zillow's Performance Budget</a> - A true story of how Zillow uses performance budgeting.</li>
+</('ul', 0)>
+<h2>License</h2>
+
+<p><a href="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg"><img src="https://creativecommons.org/publicdomain/zero/1.0" alt="CC0</a>"></p>
+
+</body>
+</html>

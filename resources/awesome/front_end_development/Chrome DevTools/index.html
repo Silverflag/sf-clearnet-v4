@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chrome DevTools</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Chrome DevTools</h1>
+
+<p><strong>Repository:</strong> https://github.com/ChromeDevTools/awesome-chrome-devtools#readme</p>
+<p><strong>Source File:</strong> readme.md</p>
+
+<hr>
+
+<h1>Awesome Chrome DevTools <a href="https://awesome.re/badge.svg"><img src="https://awesome.re" alt="Awesome</a>"></h1>
+
+<blockquote>
+<p>Awesome tooling and resources in the Chrome DevTools ecosystem</p>
+</blockquote>
+
+<h2>Contents</h2>
+
+<ul>
+<li><a href="#learning">Learning</a></li>
+</ul>
+<ul>
+<li><a href="#devtools-tooling-and-ecosystem">DevTools tooling and ecosystem</a></li>
+</ul>
+<ul>
+<li><a href="#chrome-devtools-protocol">Chrome DevTools Protocol</a></li>
+</ul>
+<ul>
+<li><a href="#using-devtools-frontend-with-other-platforms">Using DevTools frontend with other platforms</a></li>
+</ul>
+<ul>
+<li><a href="#devtools-extensions">DevTools Extensions</a></li>
+</ul>
+<ul>
+<li><a href="#alumni">Alumni</a></li>
+<hr>
+</('ul', 0)>
+<h2>Learning</h2>
+<ul>
+<li><a href="https://umaar.com/dev-tips/">Dev Tips</a> - Large collection of tips as animated gifs.</li>
+</ul>
+<ul>
+<li><a href="https://devtoolstips.org/">DevTools Tips</a> - Collection of illustrated tips as mini tutorials.</li>
+</ul>
+<ul>
+<li><a href="https://www.canidev.tools/">Can I DevTools?</a> - Various workflows, documented. Also a weekly tips & tricks <a href="https://canidevtools.substack.com/">newsletter</a>.</li>
+</ul>
+<ul>
+<li><a href="https://codepo8.github.io/web-cheatcodes/">Web cheatcodes</a> - Browser developer tools for non-developers.</li>
+</ul>
+<ul>
+<li><a href="https://codepo8.github.io/dearconsole">Dear Console</a> - A collection of snippets to use in the browser console.</li>
+<hr>
+</('ul', 0)>
+<h2>DevTools tooling and ecosystem</h2>
+
+<h3>Object formatting</h3>
+<ul>
+<li><a href="https://github.com/andrewdavey/immutable-devtools">immutable-devtools</a> - Custom formatter for Immutable-js values.</li>
+</('ul', 0)>
+<h3>Network Inspection</h3>
+<ul>
+<li><a href="https://github.com/kdzwinel/betwixt">betwixt</a> - System level network proxy, providing inspection via Network panel.</li>
+</ul>
+<ul>
+<li><a href="https://weerdbg.com/">Weer</a> - A HTTP protocol debugger <strong>(closed source)</strong></li>
+</('ul', 0)>
+<h3>CPU profile</h3>
+<ul>
+<li><a href="https://github.com/brendankenny/call-trace">call-trace</a> - Can instrument your JS with hooks, and then generate a <code>.cpuprofile</code>  of the of the complete (non-sampled) execution. View either time or call counts.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/thlorenz/cpuprofilify">cpuprofilify</a> - Converts output of various profiling/sampling tools to the <code>.cpuprofile</code> format.</li>
+</ul>
+<ul>
+<li><a href="https://wishbone.readthedocs.io/en/latest/misc/profiling.html">Wishbone python framework</a> - Profiling data can export as <code>.cpuprofile</code>.</li>
+</('ul', 0)>
+<h3>Multimedia</h3>
+<ul>
+<li><a href="https://github.com/pmdartus/snapline">snapline</a> - Converts timeline screenshots to gif.</li>
+</('ul', 0)>
+<h3>Timeline, Tracing & Profiling</h3>
+<ul>
+<li><a href="https://chromedevtools.github.io/timeline-viewer/">DevTools Timeline Viewer</a> - Share URLs of your timeline recordings.</li>
+</('ul', 0)>
+<h3>Chrome Debugger integration with Editors</h3>
+<ul>
+<li><a href="https://github.com/Microsoft/vscode-chrome-debug/">VS Code - Debugger for Chrome</a> - Breakpoint debugging in VS Code.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/microsoft/vscode-edge-devtools">VS Code - Elements for Microsoft Edge</a> - Elements panel inside VS Code.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/acarabott/ChromeREPL">ChromeREPL</a> - Within Sublime Text, use the Chrome console.</li>
+</ul>
+<ul>
+<li><a href="http://sokolovstas.github.io/SublimeWebInspector/">Sublime Web Inspector</a> - JavaScript Breakpoint debugging right in Sublime Text.</li>
+</ul>
+<ul>
+<li><a href="https://www.jetbrains.com/help/webstorm/2017.1/configuring-javascript-debugger-and-jetbrains-chrome-extension.html">WebStorm/JetBrains Chrome Extension</a> - The WebStorm IDE can debug JavaScript, view the DOM tree, and edit HTML, CSS and JS live.</li>
+<hr>
+</('ul', 0)>
+<h2>Chrome DevTools Protocol</h2>
+<ul>
+<li><a href="https://github.com/chromedevtools/devtools-protocol">ChromeDevTools/devtools-protocol</a> - <strong>Canonical location of the protocol JSON</strong>. Issue tracker for protocol bugs. TypeScript types.</li>
+</ul>
+<ul>
+<li><a href="https://chromedevtools.github.io/devtools-protocol/">DevTools Protocol API Docs</a> - Easy browsable UI for exploring the protocol's domains, methods and events.</li>
+</('ul', 0)>
+<h3>Developing with the protocol</h3>
+<ul>
+<li><a href="https://github.com/cyrus-and/chrome-remote-interface/wiki">chrome-remote-interface Wiki</a> - Many useful recipes.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/wendigo/chrome-protocol-proxy">Chrome Protocol Proxy</a> - Tool for debugging clients using devtools protocol.</li>
+</('ul', 0)>
+<h3>The big two automation libraries</h3>
+<ul>
+<li><a href="https://github.com/GoogleChrome/puppeteer/">Puppeteer</a> - Node.js offering a high-level API to control headless Chrome over the DevTools Protocol. See also <a href="https://github.com/transitive-bullshit/awesome-puppeteer">awesome-puppeteer</a>.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/microsoft/playwright">Playwright</a> - Library to automate Chromium, Firefox and WebKit with a single API. Available for Node.js, Python, .Net, Java. See also <a href="https://github.com/mxschmitt/awesome-playwright">awesome-playwright</a>.</li>
+</('ul', 0)>
+<h3>Libraries for driving the protocol (or a layer above)</h3>
+
+<ul>
+<li>JavaScript/Node.js: <a href="https://github.com/cyrus-and/chrome-remote-interface">chrome-remote-interface</a></li>
+</ul>
+<ul>
+<li>TypeScript/Node.js: <a href="https://github.com/TracerBench/chrome-debugging-client">chrome-debugging-client</a></li>
+</ul>
+<ul>
+<li>Typescript/Node.js: <a href="https://www.npmjs.com/package/noice-json-rpc">noice-json-rpc</a> - A proxy-based implementation to expose the CDP as its API.</li>
+</ul>
+<ul>
+<li>Typescript/Node.js: <a href="https://github.com/getgauge/taiko/">Taiko</a></li>
+</ul>
+<ul>
+<li>Rust: <a href="https://github.com/atroche/rust-headless-chrome/">Rust Headless Chrome</a></li>
+</ul>
+<ul>
+<li>Java: <a href="https://github.com/kklisura/chrome-devtools-java-client">chrome-devtools-java-client</a></li>
+</ul>
+<ul>
+<li>Java: <a href="https://github.com/fanyong920/jvppeteer">jvppeteer</a>  - Headless Chrome For Java </li>
+</ul>
+<ul>
+<li>Python: <a href="https://github.com/hyperiongray/python-chrome-devtools-protocol">PyCDP</a> - Pure-Python, sans-IO wrappers. See also the <a href="https://github.com/hyperiongray/trio-chrome-devtools-protocol">Trio CDP driver</a></li>
+</ul>
+<ul>
+<li>Python: <a href="https://github.com/chuckus/chromewhip">chromewhip</a> - drop-in replacement for the <code>splash</code> service</li>
+</ul>
+<ul>
+<li>Python: <a href="https://github.com/pyppeteer/pyppeteer">pyppeteer</a> - puppeteer port</li>
+</ul>
+<ul>
+<li>Python: <a href="https://github.com/fake-name/ChromeController">ChromeController</a> - high-level browser mgmt</li>
+</ul>
+<ul>
+<li>Go: <a href="https://github.com/chromedp/chromedp">chromedp</a> - High-level actions and tasks for driving browsers</li>
+</ul>
+<ul>
+<li>Go: <a href="https://github.com/mafredri/cdp">cdp</a></li>
+</ul>
+<ul>
+<li>Go: <a href="https://github.com/wirepair/gcd">gcd</a></li>
+</ul>
+<ul>
+<li>Go: <a href="https://github.com/raff/godet">godet</a></li>
+</ul>
+<ul>
+<li>Go: <a href="https://github.com/go-rod/rod">Rod</a></li>
+</ul>
+<ul>
+<li>C#/.NET: <a href="https://github.com/hardkoded/puppeteer-sharp">Puppeteer Sharp</a> - puppeteer port</li>
+</ul>
+<ul>
+<li>C#/dotnet: <a href="https://github.com/BaristaLabs/chrome-dev-tools">chrome-dev-tools</a> - Protocol wrapper generator that can be customized by editing handlebars templates. Includes .Net Core template.</li>
+</ul>
+<ul>
+<li>C#/.NET: <a href="https://github.com/seclerp/dotnet-chrome-protocol">dotnet-chrome-protocol</a> - A runtime library and schema code generation tools for Chrome DevTools Protocol support in C#/.NET.</li>
+</ul>
+<ul>
+<li>Ruby: <a href="https://github.com/route/ferrum">Ferrum</a> - high-level API to control Chrome in Ruby</li>
+</ul>
+<ul>
+<li>Ruby: <a href="https://github.com/machinio/cuprite">Cuprite</a> - Capybara driver</li>
+</ul>
+<ul>
+<li>Kotlin: <a href="https://github.com/wendigo/chrome-reactive-kotlin">chrome-reactive-kotlin</a> - reactive (rxjava 2.x), low-level client library in Kotlin</li>
+</ul>
+<ul>
+<li>Kotlin: <a href="https://github.com/joffrey-bion/chrome-devtools-kotlin">chrome-devtools-kotlin</a> - A coroutine-based client library, providing low-level CDP primitives and high-level extensions.</li>
+</ul>
+<ul>
+<li>Clojure: <a href="https://github.com/tatut/clj-chrome-devtools">clj-chrome-devtools</a> - The CDP wrapper API is autogenerated and will be updated when CDP protocol changes.</li>
+</ul>
+<ul>
+<li>Clojure: <a href="https://github.com/milankinen/cuic">cuic</a> - Providing a high-level API for UI test automation over the DevTools Protocol.</li>
+</ul>
+<ul>
+<li>PHP: <a href="https://github.com/jakubkulhan/chrome-devtools-protocol">chrome-devtools-protocol</a> - A PHP client library for the protocol.</li>
+</ul>
+<ul>
+<li>PHP: <a href="https://github.com/rialto-php/puphpeteer">PuPHPeteer</a> - php bridge to node puppeteer</li>
+</('ul', 0)>
+<h3>Browser Adapters</h3>
+<ul>
+<li><a href="https://github.com/Nice-PLQ/devtools-remote-debugger">devtools-remote-debugger</a> - Use devtools against a webpage; a CDP agent implemeted in client-side JS.</li>
+</ul>
+<ul>
+<li><a href="https://inspect.dev/">Inspect</a> - Use devtools against iOS and Android, easily. Browser and Webviews. <strong>(closed source)</strong></li>
+</('ul', 0)>
+<h2>Using DevTools frontend with other platforms</h2>
+
+<h4>Android</h4>
+<ul>
+<li><a href="https://github.com/facebook/stetho">Facebook Stetho</a> - Native Android debugging with Chrome DevTools.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/AlexTrotsenko/j2v8-debugger">j2v8-debugger</a> - Debugging JavaScript running in <a href="https://github.com/eclipsesource/J2V8">J2V8</a> with Chrome DevTools.</li>
+</('ul', 0)>
+<h4>ClojureScript</h4>
+<ul>
+<li><a href="https://github.com/binaryage/dirac">Dirac</a> - Debugging of ClojsureScript.</li>
+</('ul', 0)>
+<h4>iOS</h4>
+<ul>
+<li><a href="https://github.com/square/PonyDebugger">PonyDebugger</a> - Remote network and data debugging iOS apps with Chrome DevTools.</li>
+</('ul', 0)>
+<h4>Node.js</h4>
+<ul>
+<li><a href="https://github.com/GoogleChromeLabs/ndb">ndb</a> - An improved Node.js debugging experience with the DevTools Frontend.</li>
+</ul>
+<ul>
+<li><a href="https://medium.com/@paul_irish/debugging-node-js-nightlies-with-chrome-devtools-7c4a1b95ae27">Debugging Node.js with Chrome DevTools</a> - Guide on using the full debugging and profiling support in Node v6.3+.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/sfninja/thetool">thetool</a> - CPU, memory, coverage, type profiling with Node.</li>
+</ul>
+<ul>
+<li><a href="https://www.npmjs.com/package/chrome-devtools-frontend">chrome-devtools-frontend</a> - Mirror of the frontend that ships in Chrome.</li>
+</('ul', 0)>
+<h4>Ruby</h4>
+<ul>
+<li><a href="https://github.com/ruby/debug">ruby/debug</a> - Debugging functionality for Ruby.</li>
+<hr>
+</('ul', 0)>
+<h2>DevTools Extensions</h2>
+
+<h3>Accessibility (A11y)</h3>
+<ul>
+<li><a href="https://chrome.google.com/webstore/detail/chromelens/idikgljglpfilbhaboonnpnnincjhjkd">Chromelens</a> - See how your web app will look to people with different types of vision and the path users will travel when tabbing through your page.</li>
+</('ul', 0)>
+<h3>Workflow</h3>
+<ul>
+<li><a href="https://chrome.google.com/webstore/detail/clockwork/dmggabnehkmmfmdffgajcflpdjlnoemp?hl=en">Clockwork</a> - View PHP application profiling data.</li>
+</ul>
+<ul>
+<li><a href="https://chrome.google.com/webstore/detail/emulated-device-lab/oaonfodocibcdobdeelbbfggjombamff">Emulated Device Lab</a> - Experiment with multiple devices being emulated at the same time.</li>
+</ul>
+<ul>
+<li><a href="https://chrome.google.com/webstore/detail/railspanel/gjpfobpafnhjhbajcjgccbbdofdckggg?hl=en-US">RailsPanel</a> - View Ruby on Rails application profiling data.</li>
+</ul>
+<ul>
+<li><a href="https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi">React Developer Tools</a> - Inspect the React component hierarchies.</li>
+</ul>
+<ul>
+<li><a href="https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi">EmberJS Inspector</a> - Allows you to inspect EmberJS objects in your application.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/vuejs/vue-devtools">VueJS Developer Tools</a> - Inspect VueJS components and manipulate their data.</li>
+</ul>
+<ul>
+<li><a href="https://chrome.google.com/webstore/detail/angularjs-batarang/ighdmehidhipcmcojjgiloacoafjmpfk">Angular Batarang</a> - Inspect an Angular application's scope and profile its data.</li>
+</ul>
+<ul>
+<li><a href="https://augury.angular.io">Augury</a> - Debugging and Profiling for Angular 2 applications.</li>
+</ul>
+<ul>
+<li><a href="https://chrome.google.com/webstore/detail/marionette-inspector/fbgfjlockdhidoaempmjcddibjklhpka">Marionette Inspector</a> - Inspect a Marionette application's views, events, and live data.</li>
+</ul>
+<ul>
+<li><a href="https://chrome.google.com/webstore/detail/backbone-debugger/bhljhndlimiafopmmhjlgfpnnchjjbhd">Backbone Debugger</a> - Inspect a Backbone application's views, models, events, and routes.</li>
+</ul>
+<ul>
+<li><a href="https://chrome.google.com/webstore/detail/app-inspector-for-sencha/pbeapidedgdpniokbedbfbaacglkceae">App Inspector for Sencha</a> - Inspect a Sencha ExtJS/Touch application's component tree, data stores, events, and layouts.</li>
+</ul>
+<ul>
+<li><a href="https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd">Redux Devtools</a> - Inspect Redux with actions history, undo and replay.</li>
+</ul>
+<ul>
+<li><a href="https://chrome.google.com/webstore/detail/threejs-editor-extension/fbgbekpggeldiacgjkacbkkcbjhmakea/">Three.js</a> - Edit any three.js project.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/3Dparallax/insight/">Insight</a> - A WebGL debugging toolkit which enables more productive WebGL development and more efficient WebGL applications.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/escaton/bem-chrome-devtools">BEM devtools</a> - Inspect BEM entities expressed in <code>i-bem</code> framework.</li>
+</ul>
+<ul>
+<li><a href="https://chrome.google.com/webstore/detail/metaljs-developer-tools/fagnjmppkokolnbloalifcmcooldhiik">Metal.js Developer Tools</a> - Inspect the Metal component hierarchies.</li>
+</ul>
+<ul>
+<li><a href="https://chrome.google.com/webstore/detail/web-component-devtools/gdniinfdlmmmjpnhgnkmfpffipenjljo">Web Component DevTools</a> - Inspect, modify and observe Web Components on page.</li>
+</('ul', 0)>
+<h3>Themes</h3>
+<ul>
+<li><a href="https://chrome.google.com/webstore/detail/devtools-author/egfhcfdfnajldliefpdoaojgahefjhhi">DevTools Author</a> - A selection of themes to modify parts of DevTools related to authoring web applications.</li>
+</ul>
+<ul>
+<li><a href="https://chrome.google.com/webstore/detail/devtools-theme-zero-dark/bomhdjeadceaggdgfoefmpeafkjhegbo">Zero Dark Matrix</a> - Dark theme for Chrome Developer Tools.</li>
+</ul>
+<ul>
+<li><a href="https://chrome.google.com/webstore/detail/material-devtools-theme-c/jmefikbdhgocdjeejjnnepgnfkkbpgjo">Material UI Theme</a> - Provides various Material Design inspired themes.</li>
+</('ul', 0)>
+<h3>Performance</h3>
+<ul>
+<li><a href="https://github.com/denar90/sloth">sloth</a> - Chrome extension allows to enable and save CPU and network throttling for selected tabs.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/TracerBench/tracerbench">TracerBench</a> - TracerBench is a controlled performance benchmarking tool for web applications, providing clear, actionable and usable insights into performance deltas.</li>
+</('ul', 0)>
+<h3>Automation</h3>
+<ul>
+<li><a href="https://github.com/gajananpp/puppeteer-ide-extension">Puppeteer IDE</a> - Standalone Puppeteer playground in browser's developer tools.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/grafana/xk6-browser">k6 browser</a> - Browser automation and end-to-end web testing tool that interacts with browsers and collects frontend performance metrics.</li>
+</('ul', 0)>
+<h2>Alumni</h2>
+<p>Old projects, likely not maintained any longer… But still cool.</p>
+
+<ul>
+<li><a href="https://github.com/RemoteDebug/remotedebug-gateway">Remote Debug Gateway</a> - Allows you to connect a client to multiple browsers at once.  </li>
+<ul>
+<li>Multiuser DevTools: <a href="https://github.com/auchenberg/devtools-remote">DevTools Remote</a> - Remotely debug someone else's browser.</li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://github.com/christian-bromann/devtools-backend">DevTools Backend</a> - Standalone implementation of the Chrome DevTools backend to debug arbitrary web environments.</li>
+</ul>
+<ul>
+<li>Python CDP driver: <a href="https://github.com/fate0/pychrome">pychrome</a> - low level CDP transport handler</li>
+</ul>
+<ul>
+<li><a href="https://github.com/google/ios-webkit-debug-proxy">ios-webkit-debug-proxy</a> - Exposes Mobile Safari & UIWebView instances via the CDP.</li>
+<ul>
+<li><a href="https://github.com/RemoteDebug/remotedebug-ios-webkit-adapter">Remote Debug iOS WebKit adapter</a> - Builts upon ios-webkit-debug-proxy and translates WebKit's Remote Debugging Protocol API to the CDP.</li>
+</ul>
+</ul>
+<ul>
+<li><a href="https://github.com/Microsoft/IEDiagnosticsAdapter">IE Diagnostics Adapter</a> - Protocol adaptor for Microsoft IE 11 to CDP.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/allada/go-debugger-devtools">go-debugger-devtools</a></li>
+</ul>
+</body>
+</html>

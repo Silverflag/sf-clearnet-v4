@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charting</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Charting</h1>
+
+<p><strong>Repository:</strong> https://github.com/zingchart/awesome-charting#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<img src="https://cdn.rawgit.com/zingchart/awesome-charting/media/assets/awesome-charting.svg" alt="awesome">
+
+<p>A curated list of chart and dataviz resources that developers may find useful. Focused on relevant and currently active JavaScript charting libraries for different use cases. Ordered alphabetically in each category.</p>
+
+<p><em>Inspired by the <a href="https://github.com/sindresorhus/awesome">Awesome</a> thing.</em></p>
+
+<p>Brought to you by</p>
+
+<p><a href="https://github.com/zingchart/awesome-charting/blob/assets/assets/zingchart-logo-full-color.svg?raw=true"><img src="https://www.zingchart.com" alt="ZingChart</a>"></p>
+
+<p>A declarative, efficient, and simple JavaScript library for building responsive charts</p>
+
+<p><a href="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg"><img src="https://github.com/sindresorhus/awesome" alt="Awesome</a>"> <a href="https://travis-ci.org/zingchart/awesome-charting.svg?branch=master"><img src="https://travis-ci.org/zingchart/awesome-charting" alt="Build Status</a>"></p>
+
+<p><strong>Table of Contents</strong></p>
+<ul>
+<li><a href="#commercial-libraries">Commercial Libraries</a></li>
+</ul>
+<ul>
+<li><a href="#free-and-open-source-libraries">Free and Open Source Libraries</a></li>
+</ul>
+<ul>
+<li><a href="#free-libraries">Free Libraries</a></li>
+</ul>
+<ul>
+<li><a href="#framework-specific-libraries">Framework-Specific Libraries</a></li>
+</ul>
+<ul>
+<li><a href="#data-visualization-resources">Data Visualization Resources</a></li>
+</('ul', 0)>
+<h2>Commercial Libraries</h2>
+<ul>
+<li><a href="https://www.amcharts.com/">amCharts</a> - Three libraries for traditional charts, stock, and maps. Features a hand-drawn style theme option.</li>
+</ul>
+<ul>
+<li><a href="http://www.anychart.com/">AnyChart</a> - Set of products for charting different types of data. Has a special Oracle Apex integration option.</li>
+</ul>
+<ul>
+<li><a href="http://canvasjs.com/">CanvasJS</a> - A tight set of chart types in a library with a small file size. Different looking default theme than other commercial libraries.</li>
+</ul>
+<ul>
+<li><a href="http://www.fusioncharts.com/">FusionCharts</a> - Charting library with a strong maps component.</li>
+</ul>
+<ul>
+<li><a href="http://www.highcharts.com/">Highcharts</a> - A series of charting libraries for a variety of uses. Can be compatible back to IE6.</li>
+</ul>
+<ul>
+<li><a href="https://JSCharting.com/">JSCharting</a> - Integrated suite of charting libraries with traditional charts types plus maps, stock, Gantt, grid and org charts in one package.</li>
+</ul>
+<ul>
+<li><a href="https://www.telerik.com/kendo-ui">Kendo UI</a> - Premium charting library with native UI components available for Angular, React, and Vue.</li>
+</ul>
+<ul>
+<li><a href="http://www.zingchart.com">ZingChart</a> - Built to render large data sets other libraries can't handle. Super customizable styling and new features added often. Everything in one modular library.</li>
+</('ul', 0)>
+<h2>Free and Open Source Libraries</h2>
+<ul>
+<li><a href="https://github.com/apexcharts/apexcharts.js">apexcharts.js</a> - A JavaScript Chart Library with simple API.</li>
+</ul>
+<ul>
+<li><a href="https://naver.github.io/billboard.js/">Billboard.js</a> - a fork of C3 that tracks D3 releases more closely.</li>
+</ul>
+<ul>
+<li><a href="http://c3js.org/">C3.js</a> - D3 based reusable chart library.</li>
+</ul>
+<ul>
+<li><a href="http://www.chartjs.org/">Chart.js</a> - Tiny library (11kb!) including core chart types.</li>
+</ul>
+<ul>
+<li><a href="https://chartscss.org/">Charts.css</a> - CSS data visualization framework.</li>
+</ul>
+<ul>
+<li><a href="https://gionkunz.github.io/chartist-js/">Chartist</a> - Simple, lightweight chart library that uses SVG to render the chart, and CSS to style it.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ankane/chartkick">Chartkick</a> - JavaScript charts with one line of Ruby.</li>
+</ul>
+<ul>
+<li><a href="https://d3js.org/">D3.js</a> - Allows the user to manipulate documents based on data to render charts in SVG.</li>
+</ul>
+<ul>
+<li><a href="https://dc-js.github.io/dc.js/">dc.js</a> - D3 Library with <a href="http://square.github.io/crossfilter/">crossfilter</a> support</li>
+</ul>
+<ul>
+<li><a href="https://github.com/danvk/dygraphs">dygraphs</a> - Interactive zoomable time series charts.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/ecomfe/echarts">ECharts</a> - A powerful charting and visualization library for browser.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/EmpriseCorporation/EJSCharts">EJSChart</a> - enterprise ready charting library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/frewsxcv/graphosaurus">Graphosaurus</a> - 3D graph viewer powered by WebGL (three.js)</li>
+</ul>
+<ul>
+<li><a href="https://github.com/tradingview/lightweight-charts">lightweight-charts</a> - Financial lightweight charts built with HTML5 canvas</li>
+</ul>
+<ul>
+<li><a href="http://morrisjs.github.io/morris.js">Morris.js</a> - Simple API to render line, bar, area, and donut charts</li>
+</ul>
+<ul>
+<li><a href="https://github.com/plotly/plotly.js">Plotly</a> - Built on top of d3 and stack.gl, allowing users to create basic charts and SVG maps.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/palantir/plottable">Plottable</a> - Library with OOP style syntax to build charts.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/typpo/quickchart">QuickChart</a> - Web API that renders static chart images.</li>
+</ul>
+<ul>
+<li><a href="http://www.rgraph.net/">rgraph</a> - 2D/3D javascript charts with google sheets import capabilites.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jacomyal/sigma.js">sigma.js</a> - Graphs / Network diagram library built with canvas.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/joewalnes/smoothie">Smoothie Charts</a> - JavaScript charts for realtime streaming data.</li>
+</ul>
+<ul>
+<li><a href="https://www.taucharts.com/">TauCharts</a> - Unique syntax that lets the developer describe the data using DSL. Has the ability to create facets.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/leeoniya/uPlot">μPlot</a> - A small (< 25 KB min), fast chart for time series, lines, areas, ohlc & bars.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/imaginea/uvCharts">uvCharts</a> - JavaScript Charting library built using d3.js</li>
+</ul>
+<ul>
+<li><a href="http://visjs.org/">vis.js</a> - Network diagrams, descriptive timelines with labels, and has 3D graphs.</li>
+</ul>
+<ul>
+<li><a href="https://reaviz.io">reaviz</a> - Modular chart component library for React.</li>
+</ul>
+<ul>
+<li><a href="https://reaflow.dev">reaflow</a> - Modular diagram engine for build static or interactive editors. </li>
+</('ul', 0)>
+<h2>Free Libraries</h2>
+<ul>
+<li><a href="https://developers.google.com/chart/">Google Charts</a> - Maps are dialed in (of course) and some cool animation options. Extensive docs and use community (forum).</li>
+</('ul', 0)>
+<h2>Framework-Specific Libraries</h2>
+<h3>Angular</h3>
+<ul>
+<li><a href="http://jtblin.github.io/angular-chart.js">Angular-Chart</a>- Simple API to render line, bar, area, and donut charts</li>
+</ul>
+<ul>
+<li><a href="https://github.com/n3-charts/line-chart">n3-charts</a> - Easy to use library written with AngularJS, rendering charts with D3.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kirillstepkin/scale">Angular-scale</a> - Simple and lightweight library for creating line charts</li>
+</('ul', 0)>
+<h3>Ember</h3>
+<ul>
+<li><a href="http://addepar.github.io/ember-charts/#/overview">Ember Charts</a> - Five basic chart types ready to go in Ember.js projects.</li>
+</('ul', 0)>
+<h3>jQuery</h3>
+<ul>
+<li><a href="http://www.flotcharts.org/">Flot</a> - A JavaScript charting library for jQuery. Contains useful chart types but looks like it may no longer be in active development.</li>
+</ul>
+<ul>
+<li><a href="http://www.jqplot.com">jqPlot</a> - Open source jQuery plugin for drawing charts. Contains many commonly used features but may use different naming conventions for these items.</li>
+</ul>
+<ul>
+<li><a href="http://www.jqwidgets.com/jquery-widgets-documentation/documentation/jqxchart/jquery-chart-getting-started.htm">jqxChart</a> - Plenty of chart types rendering in SVG, Canvas, and VML.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/kirillstepkin/jquery-linechart">JQuery-linechart</a> - Simple and lightweight library for creating line charts</li>
+</('ul', 0)>
+<h3>Lit-html</h3>
+<ul>
+<li><a href="https://github.com/apinet/lit-line">lit-line</a> - {fast, small, interactive, fully responsive} Line Chart web component build on top of lit-html.</li>
+</('ul', 0)>
+<h3>React</h3>
+<ul>
+<li><a href="https://github.com/plouc/nivo">nivo</a> - React components to easily build dataviz apps, built on top of D3.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/uber/react-vis">react-vis</a> - a composable visualization system by Uber</li>
+</ul>
+<ul>
+<li><a href="https://vx-demo.now.sh/">vx</a> collection of reusable low-level visualization components, on top of d3</li>
+</ul>
+<ul>
+<li><a href="http://numberpicture.com/build">Potion</a> - Low-level building blocks for constructing animated visualizations with React & D3.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/jerairrest/react-chartjs-2">react-chart-js</a> - React wrapper for Chart.js</li>
+</ul>
+<ul>
+<li><a href="https://github.com/esbullington/react-d3">react-d3</a> - Charting library that relies on React for generating SVG markup and d3 to calculate path values.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/chartshq/react-muze">react-muze</a> - React wrapper for <a href="https://muzejs.org/">muze</a> (free data visualization library for creating exploratory data visualizations in browser, using WebAssembly)</li>
+</ul>
+<ul>
+<li><a href="https://github.com/uber-common/react-vis">react-vis</a> - A collection of React components to render common data visualization charts</li>
+</ul>
+<ul>
+<li><a href="http://recharts.org">recharts</a> - Redefined chart library built with React and D3</li>
+</ul>
+<ul>
+<li><a href="https://github.com/FormidableLabs/victory">Victory</a> - A collection of composable React components for building interactive data visualizations</li>
+</('ul', 0)>
+<h2>Data Visualization Resources</h2>
+<ul>
+<li><a href="http://datavizcatalogue.com">Dataviz Catalogue</a> - A place to go when you're wondering which chart type is best. A project by Severino Ribecca.</li>
+</ul>
+<ul>
+<li><a href="http://stephanieevergreen.com">Evergreen Data</a> - Information and opinions on presenting data more effectively.</li>
+</ul>
+<ul>
+<li><a href="http://flowingdata.com">Flowing Data</a> - A resource on maps, visualizations, stats, and design by Nathan Yau, formerly of the New York Times.</li>
+</ul>
+<ul>
+<li><a href="http://junkcharts.typepad.com">Junk Charts</a> - Dataviz critic (and Columbia professor) Kaiser Fung breaks down data visualizations to identify what is wrong and recommends ways to make them better.</li>
+</ul>
+<ul>
+<li><a href="http://www.thefunctionalart.com">The Functional Art</a> - Noted data visualization author and professor Aberto Cairo's blog on dataviz trends and best practices.</li>
+</ul>
+<ul>
+<li><a href="http://www.visualisingdata.com">Visualizing Data</a> - Dataviz consultant Andy Kirk compiles examples, resources, and reference materials on the subject of charting and visualization.</li>
+</ul>
+<ul>
+<li><a href="http://well-formed-data.net/archives/1210/little-boxes">Well Formed Data</a> - Thought pieces on information visualization and design by Moritz Stefaner previously of the World Economic Forum.</li>
+</ul>
+</body>
+</html>
