@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umbraco</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Umbraco</h1>
+
+<p><strong>Repository:</strong> https://github.com/umbraco-community/awesome-umbraco#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<h1>Awesome Umbraco! <a href="https://cdn.rawgit.com/sindresorhus/awesome/main/media/badge.svg"><img src="https://github.com/sindresorhus/awesome" alt="Awesome</a>"> <a href="https://img.shields.io/badge/Umbraco-v9-blue"><img src="https://our.umbraco.com/download/releases/900" alt="UmbracoV9</a>"></h1>
+
+<blockquote>
+<p>A collection of awesome <a href="https://github.com/umbraco/Umbraco-CMS/">Umbraco CMS</a> packages, resources and shiny things.</p>
+</blockquote>
+
+<p>Inspired by <a href="https://github.com/sindresorhus/awesome">awesome lists</a>. For general C#/.NET please see the <a href="https://github.com/quozd/awesome-dotnet/">awesome-dotnet</a> collection!</p>
+
+<h3>Contributing</h3>
+
+<p><strong>Contributions are always welcome!</strong></p>
+
+<p>Please read the <a href="https://github.com/umbraco-community/awesome-umbraco/blob/master/CONTRIBUTING.md">contribution guidelines and quality standard</a> page before making a pull-request. If you see a resource or package here that is no longer maintained, please submit a pull request to help improve this collection.</p>
+
+<p>Thank you to all <a href="https://github.com/umbraco-community/awesome-umbraco/graphs/contributors">contributors</a>, you are awesome and this list wouldn't be possible without you! The goal is to build a categorized community-driven collection of very well-known resources.</p>
+
+<h3>Versions</h3>
+<p>This list is for Umbraco v10 packages. However, we also have lists for older versions! Check them out too.</p>
+
+<p><a href="https://img.shields.io/badge/Umbraco-v9-blue"><img src="UMBRACO-V9.md" alt="UmbracoV9</a>"></p>
+<p><a href="https://img.shields.io/badge/Umbraco-v8-blue"><img src="UMBRACO-V8.md" alt="UmbracoV8</a>"></p>
+<p><a href="https://img.shields.io/badge/Umbraco-v7-blue"><img src="UMBRACO-V7.md" alt="UmbracoV7</a>"></p>
+
+<h3>Contents</h3>
+<ul>
+<li><a href="#official">Official</a></li>
+</ul>
+<ul>
+<li><a href="#community">Community</a></li>
+</ul>
+<ul>
+<li><a href="#backoffice-extensions">Backoffice extensions</a></li>
+<ul>
+<li><a href="#form-builders">Form Builders</a></li>
+</ul>
+<ul>
+<li><a href="#property-editors">Property Editors</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#developer-tools">Developer tools</a></li>
+<ul>
+<li><a href="#deployment">Deployment</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#ecommerce--crm">eCommerce & CRM</a></li>
+</ul>
+<ul>
+<li><a href="#starter-kits">Starter Kits</a></li>
+</ul>
+<ul>
+<li><a href="#code-libraries">Code Libraries</a></li>
+</ul>
+<p>Please note * indicates that the package is commercial or may require a license to unlock all features.</p>
+
+<h2>Official</h2>
+
+<ul>
+<li><a href="https://umbraco.com">Umbraco website</a></li>
+</ul>
+<ul>
+<li><a href="https://codegarden20.com/">CodeGarden Conference</a></li>
+</ul>
+<ul>
+<li><a href="https://our.umbraco.com/documentation/">Documentation</a></li>
+</ul>
+<ul>
+<li><a href="https://our.umbraco.com/download/">Download</a></li>
+</ul>
+<ul>
+<li><a href="https://our.umbraco.com/forum/">Forum</a></li>
+</ul>
+<ul>
+<li><a href="https://www.meetup.com/pro/umbraco">Meetups</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/umbracohq">Official YouTube Channel</a> - tutorials and other helpful videos about Umbraco products.</li>
+</('ul', 0)>
+<h2>Community</h2>
+
+<ul>
+<li><a href="https://h5yr.com/">#h5yr</a> - High Five, You Rock!</li>
+</ul>
+<ul>
+<li><a href="https://24days.in/umbraco-cms/">24 Days In Umbraco</a> - yearly advent calendar for Umbraco content.</li>
+</ul>
+<ul>
+<li><a href="https://our.umbraco.com/community/blog-posts/">Blog Posts</a> - blog posts by members of the Umbraco community and Umbraco HQ.</li>
+</ul>
+<ul>
+<li><a href="https://candidcontributions.com/">Candid Contributions</a> - a fortnightly podcast discussing all things Umbraco and open source.</li>
+</ul>
+<ul>
+<li><a href="https://skrift.io/">Skrift</a> - a monthly magazine for sharing knowledge in the Umbraco community.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/umbracoffee">umbraCoffee</a> - a weekly YouTube series discussing recent Umbraco news.</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/c/umbracocommunity/">Official YouTube Channel</a> - the Umbraco community YouTube channel.</li>
+<hr>
+</('ul', 0)>
+<h2>Backoffice extensions</h2>
+
+<ul>
+<li><a href="https://our.umbraco.com/packages/backoffice-extensions/plumber-workflow-for-umbraco/">Plumber</a> - adds a heap of useful bits and pieces to Umbraco, to allow multi-staged workflow approval.</li>
+</ul>
+<ul>
+<li><a href="https://our.umbraco.com/packages/backoffice-extensions/translation-manager/">Translation Manager*</a> - lets you handle all of the steps of the translation process from within Umbraco.</li>
+</ul>
+<ul>
+<li><a href="https://our.umbraco.com/packages/backoffice-extensions/hot-chilli-page-not-found-manager">Page Not Found Manager</a> - Manage your sites 404 page(s) from Umbraco.</li>
+</ul>
+<ul>
+<li><a href="https://our.umbraco.com/packages/backoffice-extensions/contentment/">Contentment</a> - A handy collection of Umbraco components developed for use in your Umbraco projects.</li>
+</ul>
+<ul>
+<li><a href="https://our.umbraco.com/packages/website-utilities/skybrud-redirects/">Skybrud.Umbraco.Redirects</a> - Redirects manager for Umbraco.</li>
+</ul>
+<ul>
+<li><a href="https://our.umbraco.com/packages/backoffice-extensions/simpleredirects/">SimpleRedirects</a> - Redirects manager for Umbraco.</li>
+</ul>
+<ul>
+<li><a href="https://our.umbraco.com/packages/backoffice-extensions/newsletter-studio-the-email-studio/">Newsletter Studio*</a> - Responsive email editor to create emails for all clients.</li>
+</ul>
+<ul>
+<li><a href="https://our.umbraco.com/packages/backoffice-extensions/backoffice-themes/">Backoffice Themes</a> - Allows choosing your own themes for in the backoffice.</li>
+</('ul', 0)>
+<h3>Form Builders</h3>
+
+<ul>
+<li><a href="https://umbraco.com/products/umbraco-forms/">Umbraco Forms*</a> - A package to easily add customisable forms to your website. <strong>(Developed by Umbraco HQ)</strong></li>
+</('ul', 0)>
+<h3>Property Editors</h3>
+
+<ul>
+<li><a href="https://our.umbraco.com/packages/website-utilities/meganav/">Meganav</a> - A flexible, draggable link picker for constructing site navigation menus, big or small.</li>
+</ul>
+<ul>
+<li><a href="https://our.umbraco.org/projects/backoffice-extensions/ueditornotes/">uEditorNotes</a> - Provides a way to display instructional messages for content editors, at the point of content entry.</li>
+</('ul', 0)>
+<h3>SEO Tools</h3>
+
+<ul>
+<li><a href="https://soetemansoftware.nl/seo-checker">SEO Checker*</a> - find common SEO issues in your Umbraco website.</li>
+</ul>
+<ul>
+<li><a href="https://our.umbraco.com/packages/backoffice-extensions/seotoolkit/">SeoToolkit</a> - Package that provides SEO features like meta fields, redirects, etc.</li>
+</('ul', 0)>
+<h2>Developer tools</h2>
+
+<ul>
+<li><a href="https://soetemansoftware.nl/cmsimport">CMSImport*</a> - import content or members from any datasource into Umbraco.</li>
+</ul>
+<ul>
+<li><a href="https://our.umbraco.org/projects/developer-tools/usync/">uSync</a> - Syncing tool for reading and writing the database elements to disk.</li>
+</ul>
+<ul>
+<li><a href="https://our.umbraco.com/packages/developer-tools/diplo-god-mode/">Diplo God Mode</a> - Exposes a lot of information for developers.</li>
+</ul>
+<ul>
+<li><a href="https://our.umbraco.com/packages/developer-tools/datefolders/">DateFolders</a> - Creates Datefolders (year/month(/day)) for the specified doctype for Umbraco</li>
+</ul>
+<ul>
+<li><a href="https://our.umbraco.com/packages/developer-tools/alphabetfolders/">AlphabetFolders</a> - Creates AlphabetFolders for the specified doctype for Umbraco</li>
+</ul>
+<ul>
+<li><a href="https://our.umbraco.com/packages/backoffice-extensions/konstrukt/">Konstrukt*</a> - Backoffice UI builder through code.</li>
+</('ul', 0)>
+<h3>Deployment</h3>
+
+<ul>
+<li><a href="https://github.com/umbraco/Umbraco.Deploy.Contrib">Deploy Contrib</a> - Offers value-connectors for the most popular Umbraco community packages. To allow Umbraco Cloud deploy to transfer content/property-data to a target environment. <strong>(Maintained by Umbraco HQ)</strong> <em>Umbraco Cloud only</em></li>
+</('ul', 0)>
+<h2>eCommerce &amp; CRM</h2>
+
+<ul>
+<li><a href="https://vendr.net/">Vendr*</a> - eCommerce built on top of Umbraco.</li>
+</('ul', 0)>
+<h2>Starter Kits</h2>
+
+<ul>
+<li><a href="https://our.umbraco.com/packages/starter-kits/clean-starter-kit/">Clean Starter Kit</a> - Clean and simple website to get started with</li>
+</('ul', 0)>
+<h2>Website Utilities</h2>
+
+<ul>
+<li><a href="https://our.umbraco.com/packages/website-utilities/full-text-search-for-umbraco/">Full Text Search</a> - Fast and easy way to setup search for your website.</li>
+</('ul', 0)>
+<h2>Code Libraries</h2>
+
+<p>None yet :(. But if you have any, then please feel free to make a pull request for it!</p>
+
+<hr>
+
+<h1>License</h1>
+
+<p><a href="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"><img src="http://creativecommons.org/licenses/by-sa/4.0/" alt="CC BY-SA 4.0</a>"></p>
+
+<p>This work is licensed under a <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+
+</body>
+</html>

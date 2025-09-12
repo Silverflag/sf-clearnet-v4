@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Textpattern</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Awesome Textpattern <a href="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg"><img src="https://github.com/sindresorhus/awesome" alt="Awesome</a>"></h1>
+
+<p>A curated list of amazingly awesome <a href="http://textpattern.com">Textpattern CMS</a> plugins, resources and shiny things.</p>
+
+<p><strong>This list is for the latest version of Textpattern (v4.7.x).</strong> For Textpattern v4.6.x see the <a href="https://github.com/drmonkeyninja/awesome-textpattern/tree/txp-4.6">txp-4.6 branch</a>.</p>
+
+<h2>Contributing</h2>
+
+<p>This list is for the community and curated by it, so please contribute. See <a href="https://github.com/drmonkeyninja/awesome-textpattern/blob/master/CONTRIBUTING.textile">CONTRIBUTING</a> for details.</p>
+
+<h2>Contents</h2>
+
+<ul>
+<li><a href="#plugins">Plugins</a></li>
+<ul>
+<li><a href="#admin">Admin</a></li>
+</ul>
+<ul>
+<li><a href="#comments">Comments</a></li>
+</ul>
+<ul>
+<li><a href="#content">Content</a></li>
+</ul>
+<ul>
+<li><a href="#embedding">Embedding</a></li>
+</ul>
+<ul>
+<li><a href="#forms">Forms</a></li>
+</ul>
+<ul>
+<li><a href="#images">Images</a></li>
+</ul>
+<ul>
+<li><a href="#navigation">Navigation</a></li>
+</ul>
+<ul>
+<li><a href="#performance">Performance</a></li>
+</ul>
+<ul>
+<li><a href="#seo">SEO</a></li>
+</ul>
+<ul>
+<li><a href="#social">Social</a></li>
+</ul>
+<ul>
+<li><a href="#miscellaneous">Miscellaneous</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#plugin-development">Plugin Development</a></li>
+</ul>
+<ul>
+<li><a href="#themes">Themes</a></li>
+<ul>
+<li><a href="#back-end">Back-end</a></li>
+</ul>
+<ul>
+<li><a href="#front-end">Front-end</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#resources">Resources</a></li>
+<ul>
+<li><a href="#official-resources">Official resources</a></li>
+</ul>
+<ul>
+<li><a href="#migration">Migration</a></li>
+</ul>
+<ul>
+<li><a href="#web-development-software-integration">Web development software integration</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#community">Community</a></li>
+<ul>
+<li><a href="#core-team">Core Team</a></li>
+</ul>
+<ul>
+<li><a href="#plugins-developers">Plugins Developers</a></li>
+</ul>
+<ul>
+<li><a href="#blogs">Blogs</a></li>
+</ul>
+</ul>
+<ul>
+<li><a href="#related">Related</a></li>
+</ul>
+<ul>
+<li><a href="#license">License</a></li>
+</('ul', 0)>
+<h2>Plugins</h2>
+
+<h3>Admin</h3>
+
+<ul>
+<li><a href="https://github.com/ClaireBrione/cbe<em>frontauth">cbe</em>frontauth</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/hakjoon/hak<em>tinymce">hak</em>tinymce</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/jbach/jbx<em>multiple</em>image<em>upload">jbx</em>multiple<em>image</em>upload</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/gocom/rah<em>privileges">rah</em>privileges</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/spiffin/spf<em>codemirror">spf</em>codemirror</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/spiffin/spf<em>js">spf</em>js</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/Sacripant/tom<em>image</em>grid">tom<em>image</em>grid</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/trenc/yab<em>copy</em>to<em>new">yab</em>copy<em>to</em>new</a></li>
+</('ul', 0)>
+<h3>Comments</h3>
+
+<ul>
+<li><a href="https://github.com/drmonkeyninja/arc<em>admin</em>comment<em>preview">arc</em>admin<em>comment</em>preview</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/juanjonavarro/jnm<em>recent</em>comments<em>unique">jnm</em>recent<em>comments</em>unique</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/gocom/rah<em>comments">rah</em>comments</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/gocom/rah<em>comment</em>spam">rah<em>comment</em>spam</a></li>
+</('ul', 0)>
+<h3>Content</h3>
+
+<ul>
+<li><a href="https://github.com/gerhard/glz<em>custom</em>fields">glz<em>custom</em>fields</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/Bloke/smd<em>tags">smd</em>tags</a></li>
+</('ul', 0)>
+<h3>Embedding</h3>
+
+<ul>
+<li><a href="https://github.com/drmonkeyninja/arc<em>vimeo">arc</em>vimeo</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/drmonkeyninja/arc<em>youtube">arc</em>youtube</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/NicolasGraph/oui<em>embed">oui</em>embed</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/NicolasGraph/oui<em>instagram">oui</em>instagram</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/NicolasGraph/oui<em>player">oui</em>player</a></li>
+</('ul', 0)>
+<h3>Forms</h3>
+
+<ul>
+<li><a href="https://github.com/Bloke/zem<em>contact</em>reborn">zem<em>contact</em>reborn</a></li>
+</('ul', 0)>
+<h3>Images</h3>
+
+<ul>
+<li><a href="https://github.com/Bloke/smd<em>imagery">smd</em>imagery</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/Bloke/smd<em>thumbnail">smd</em>thumbnail</a></li>
+</('ul', 0)>
+<h3>Navigation</h3>
+
+<ul>
+<li><a href="http://www.greatoceanmedia.com.au/txp/?plugin=adi<em>menu">adi</em>menu</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/etc-plugins/etc<em>pagination">etc</em>pagination</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/Bloke/smd<em>horizon">smd</em>horizon</a></li>
+</('ul', 0)>
+<h3>Performance</h3>
+
+<ul>
+<li><a href="http://textpattern.org.ua/plugins/aks<em>cache">aks</em>cache</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/netcarver/asy<em>jpcache">asy</em>jpcache</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/etc-plugins/etc<em>cache">etc</em>cache</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/gocom/rah<em>cache">rah</em>cache</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/gocom/rah<em>cache</em>minify">rah<em>cache</em>minify</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/gocom/rah<em>memcached">rah</em>memcached</a></li>
+</ul>
+<ul>
+<li><a href="https://vanmelick.com/txp/rvm<em>css.php?help">rvm</em>css</a></li>
+</('ul', 0)>
+<h3>SEO</h3>
+
+<ul>
+<li><a href="https://github.com/drmonkeyninja/arc<em>meta">arc</em>meta</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/drmonkeyninja/arc<em>redirect">arc</em>redirect</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/gocom/rah<em>sitemap">rah</em>sitemap</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/wcz-txp/Unicode-url-for-Textpattern">wcz<em>utf8</em>url</a></li>
+</('ul', 0)>
+<h3>Social</h3>
+
+<ul>
+<li><a href="https://github.com/drmonkeyninja/arc<em>social</em>share">arc<em>social</em>share</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/cara-tm/pat<em>article</em>social">pat<em>article</em>social</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/drmonkeyninja/TXP-Tweet">TXP Tweet</a></li>
+</('ul', 0)>
+<h3>Miscellaneous</h3>
+
+<ul>
+<li><a href="https://github.com/brachycera/fly<em>excerpt">fly</em>excerpt</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/NicolasGraph/oui<em>cookie">oui</em>cookie</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/NicolasGraph/oui<em>quote">oui</em>quote</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/cara-tm/pat<em>if</em>amp">pat<em>if</em>amp</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/cara-tm/pat<em>eu</em>cookies<em>law">pat</em>eu<em>cookies</em>law</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/gocom/rah<em>backup">rah</em>backup</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/NicolasGraph/rah<em>flat">rah</em>flat</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/gocom/rah<em>terminal">rah</em>terminal</a></li>
+</ul>
+<ul>
+<li><a href="https://vanmelick.com/txp/rvm<em>maintenance.php?help">rvm</em>maintenance</a></li>
+</ul>
+<ul>
+<li><a href="http://stefdawson.com/sw/plugins/smd<em>if">smd</em>if</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/gocom/textpattern-installer">textpattern-installer</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/wcz-txp/upm<em>pending</em>notify">upm<em>pending</em>notify</a></li>
+</('ul', 0)>
+<h2>Plugin Development</h2>
+
+<ul>
+<li><a href="https://github.com/Bloke/ied<em>plugin</em>composer">ied<em>plugin</em>composer</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/gocom/MassPlugCompiler">MassPlugCompiler</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/textpattern/textpattern-plugin-template">Plugin template repo</a></li>
+</('ul', 0)>
+<h2>Themes</h2>
+
+<h3>Back-end</h3>
+
+<ul>
+<li><a href="http://design-patterns.textpattern.io/docs/">Hive theme design patterns</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/textpattern/textpattern-jquery-ui-theme">jQuery UI theme repo</a></li>
+</('ul', 0)>
+<h3>Front-end</h3>
+
+<ul>
+<li><a href="https://github.com/textpattern/textpattern-default-theme">Default theme repo</a></li>
+</('ul', 0)>
+<h2>Resources</h2>
+
+<h3>Official resources</h3>
+
+<ul>
+<li><a href="https://textpattern.com/">Official website</a></li>
+</ul>
+<ul>
+<li><a href="https://docs.textpattern.com">Textpattern Documentation</a></li>
+</('ul', 0)>
+<h3>Migration</h3>
+
+<ul>
+<li><a href="https://github.com/NicolasGraph/wp-to-txp">WP to Txp</a></li>
+</('ul', 0)>
+<h3>Web development software integration</h3>
+
+<ul>
+<li><a href="https://github.com/philwareham/Textpattern-for-Panic-Coda">Textpattern for Panic Coda</a></li>
+</('ul', 0)>
+<h2>Community</h2>
+
+<ul>
+<li><a href="https://twitter.com/textpattern">@textpattern on Twitter</a></li>
+</ul>
+<ul>
+<li><a href="https://plus.google.com/u/0/communities/111366418300163664690">Google+</a></li>
+</ul>
+<ul>
+<li><a href="https://forum.textpattern.com/">Textpattern Forum</a></li>
+</('ul', 0)>
+<h3>Core Team</h3>
+
+<ul>
+<li>Stef Dawson aka <a href="https://forum.textpattern.com/profile.php?id=8181">Bloke</a> on <a href="https://github.com/Bloke">GitHub</a></li>
+</ul>
+<ul>
+<li>Oleg Loukianov aka <a href="https://forum.textpattern.com/profile.php?id=96820">etc</a> on <a href="https://github.com/bloatware">GitHub</a></li>
+</ul>
+<ul>
+<li>Phil Wareham aka <a href="https://forum.textpattern.com/profile.php?id=39206">philwareham</a> on <a href="https://github.com/philwareham">GitHub</a></li>
+</ul>
+<ul>
+<li>Robert Wetzlmayr aka <a href="https://forum.textpattern.com/profile.php?id=5463">wet</a> on <a href="https://github.com/rwetzlmayr">GitHub</a></li>
+</('ul', 0)>
+<h3>Plugins Developers</h3>
+
+<ul>
+<li>adi aka <a href="https://forum.textpattern.com/profile.php?id=15145">gomedia</a> on <a href="https://github.com/gomedia-adi">GitHub</a></li>
+</ul>
+<ul>
+<li>arc aka <a href="https://forum.textpattern.com/profile.php?id=18747">monkeyninja</a> (Andy Carter) on <a href="https://github.com/drmonkeyninja">GitHub</a></li>
+</ul>
+<ul>
+<li>bot aka <a href="https://forum.textpattern.com/profile.php?id=8379">redbot</a> on <a href="https://github.com/redbotxx">GitHub</a></li>
+</ul>
+<ul>
+<li>cbe aka <a href="https://forum.textpattern.com/profile.php?id=76735">CeBe</a> (Claire Brione) on <a href="https://github.com/ClaireBrione">GitHub</a></li>
+</ul>
+<ul>
+<li>goe aka <a href="https://forum.textpattern.com/profile.php?id=173137">goechsler</a> on <a href="https://github.com/goechsler">GitHub</a></li>
+</ul>
+<ul>
+<li>jcr aka <a href="https://github.com/jools-r">jools-r</a></li>
+</ul>
+<ul>
+<li>mkp aka <a href="https://forum.textpattern.com/profile.php?id=109">michaelkpate</a> on <a href="https://github.com/michaelkpate">GitHub</a></li>
+</ul>
+<ul>
+<li>oui aka <a href="https://forum.textpattern.com/profile.php?id=15445">NicolasGraph</a> (Nicolas Morand) on <a href="https://github.com/NicolasGraph">GitHub</a></li>
+</ul>
+<ul>
+<li>pat aka <a href="https://forum.textpattern.com/profile.php?id=7660">Pat64</a> (Patrick Lefevre) on <a href="https://github.com/cara-tm">GitHub</a></li>
+</ul>
+<ul>
+<li>rah aka <a href="https://forum.textpattern.com/profile.php?id=9632">Gocom</a> (Jukka Svahn) on <a href="https://github.com/gocom">GitHub</a></li>
+</ul>
+<ul>
+<li>smd aka <a href="https://forum.textpattern.com/profile.php?id=8181">Bloke</a> (Stef Dawson) on <a href="https://github.com/Bloke">GitHub</a></li>
+</('ul', 0)>
+<h3>Blogs</h3>
+
+<ul>
+<li><a href="http://www.textpattern.tips/">Textpattern Tips</a></li>
+</('ul', 0)>
+<h2>Related</h2>
+
+<ul>
+<li><a href="https://github.com/ziadoz/awesome-php">Awesome PHP</a></li>
+</('ul', 0)>
+<h2>License</h2>
+
+<p><a href="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"><img src="http://creativecommons.org/licenses/by-sa/4.0/" alt="Creative Commons Licence</a>"></p>
+
+<p><strong>Awesome Textpattern</strong> by <a href="http://andy-carter.com">Andy Carter</a> is licensed under a <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+
+</body>
+</html>

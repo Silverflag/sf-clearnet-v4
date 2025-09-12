@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #4dabf7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: #0a0a0a;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        details {
+            margin: 1rem 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        details[open] summary {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        del {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Plone</h1>
+
+<p><strong>Repository:</strong> https://github.com/collective/awesome-plone#readme</p>
+<p><strong>Source File:</strong> README.md</p>
+
+<hr>
+
+<h1>Awesome Plone <a href="https://awesome.re/badge.svg"><img src="https://awesome.re" alt="Awesome</a>"></h1>
+
+<!--lint ignore double-link-->
+<p><a href="https://plone.org"><img align="right" src="logo.png" height="64"></a></p>
+
+<blockquote>
+<p>A community-curated list of <em>awesome</em> Plone add-ons.</p>
+</blockquote>
+
+<!--lint ignore double-link-->
+<p><a href="https://plone.org">Plone</a> is a open source CMS written in Python with a focus on functionality, customizability and security out of the box.</p>
+
+<p>There are over <a href="https://pypi.org/search/?q=&o=&c=Framework+%3A%3A+Plone">3000 add-ons for Plone on pypi</a> and over 1500 repositories in the <a href="https://github.com/collective/">collective</a>. If you want to know if there is already a add-on for Plone that fits your needs, searching for it on GitHub or pypi can be hard. It's hard to understand which one could be a good solution or not.</p>
+
+<p>This list is intended to fill that gap, and create a shared knowledge about common products and techniques.</p>
+
+<p>For a filterable list of addons aggreating all Plone related packages from PyPi see https://pag.derico.tech.</p>
+
+<p>This list only covers add-ons that work with the latest major versions of Plone (currently 5.2 and 6) and only those that support Python 3.</p>
+
+<p>Plone 6 comes with a new default frontend called Volto, which is written in React and uses <code>plone.restapi</code> to communicate with Plone. Volto is very extendable in itself. Checkout the <a href="https://github.com/collective/awesome-volto">awesome-volto list</a> for add-ons to Volto.</p>
+
+<h2>Contents</h2>
+
+<ul>
+<li><a href="#content-and-utilities-for-content">Content and utilities for content</a></li>
+</ul>
+<ul>
+<li><a href="#searching-and-categorizing">Searching and Categorizing</a></li>
+</ul>
+<ul>
+<li><a href="#layout">Layout</a></li>
+</ul>
+<ul>
+<li><a href="#tiles">Tiles</a></li>
+</ul>
+<ul>
+<li><a href="#events">Events</a></li>
+</ul>
+<ul>
+<li><a href="#forms">Forms</a></li>
+</ul>
+<ul>
+<li><a href="#multilingual">Multilingual</a></li>
+</ul>
+<ul>
+<li><a href="#media">Media</a></li>
+</ul>
+<ul>
+<li><a href="#security">Security</a></li>
+</ul>
+<ul>
+<li><a href="#seo">SEO</a></li>
+</ul>
+<ul>
+<li><a href="#authentication">Authentication</a></li>
+</ul>
+<ul>
+<li><a href="#shop">Shop</a></li>
+</ul>
+<ul>
+<li><a href="#export-import-and-migrations">Export, Import and Migrations</a></li>
+</ul>
+<ul>
+<li><a href="#themes">Themes</a></li>
+</ul>
+<ul>
+<li><a href="#develop">Develop</a></li>
+</ul>
+<ul>
+<li><a href="#sysadmin">Sysadmin</a></li>
+</ul>
+<ul>
+<li><a href="#finding-more-add-ons">Finding more add-ons</a></li>
+</ul>
+<ul>
+<li><a href="#official-resources">Official resources</a></li>
+<hr>
+</('ul', 0)>
+<h2>Content and utilities for content</h2>
+
+<p><em>Add-ons that provide content-types or additional functionality for content</em></p>
+
+<ul>
+<li><a href="https://github.com/collective/collective.a11ycheck">collective.a11ycheck</a> - Reports accessibility issues to your site editors when a page is saved.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.bbcodesnippets">collective.bbcodesnippets</a> - Provides generic and extensible BBCode markup integration for Plone.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.consent">collective.consent</a> - Ask users for consent to different topics, before they can continue.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.dexteritytextindexer">collective.dexteritytextindexer</a> - Dynamic SearchableText index for dexterity content types. For Plone 6 this was merged into Plone core.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.documentgenerator">collective.documentgenerator</a> - Generate Documents (.odt, .pdf, .doc) from content based on appy framework (https://appyframe.work/) and OpenOffice/LibreOffice.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.documentviewer">collective.documentviewer</a> - Very nice document viewer that integrates DocumentCloud viewer and PDF processing into Plone.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.easyformplugin.createdx">collective.easyformplugin.createdx</a> - Creates Plone content objects from EasyForm submissions.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.embeddedpage">collective.embeddedpage</a> - A content type to embed remote HTML pages in Plone Classic and Volto.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.folderishtraverse">collective.folderishtraverse</a> - Traverse to first item in folder.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.folderishtypes">collective.folderishtypes</a> - Provides the types "Folderish Event", "Folderish News Item" and "Folderish Document" as replacements for default types. Those types are able to hold any other content, like a Folder.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.geolocationbehavior">collective.geolocationbehavior</a> - Geotagging for Plone content using LeafletJS.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.glossary">collective.glossary</a> - Content type to define a glossary and its terms.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.immediatecreate">collective.immediatecreate</a> - Create content immediatly and skip the add form.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.lineage">collective.lineage</a> - Subsites: Turns subfolders of a Plone site to appear as autonomous Plone sites. There is also a whole ecosystem off addons specific to subsites.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.mailchimp">collective.mailchimp</a> - MailChimp newsletter integration for Plone.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.mirror">collective.mirror</a> - A content type that mirrors the content of any other container.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.mustread">collective.mustread</a> - Tracking user views on content that are marked as must-read.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.remoteproxy">collective.remoteproxy</a> - Proxy for remote content. All remote URLs for which a local proxy was created are replaced in the resulting content.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.restrictportlets">collective.restrictportlets</a> - Allows you to restrict the available portlets that non-Managers can add.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.richdescription">collective.richdescription</a> - Formatable description field for Plone.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.workspace">collective.workspace</a> - Easily manage 'membership' in specific areas of a Plone Site. It allows to grant people access to areas of content using a membership group rather than local roles for each user, and to delegate control over that group to people who don't have access to the site-wide user/group control panel.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/dexterity.membrane">dexterity.membrane</a> - Enables content to be used as users and groups in Plone sites.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/plone/plone.pdfexport">plone.pdfexport</a> - Generic PDF export functionality for Plone content.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/Products.EasyNewsletter">Products.EasyNewsletter</a> - Powerful newsletter/mailing product for Plone.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/zopyx/zopyx.ipsumplone">zopyx.ipsumplone</a> - Creates demo content and demo images for Plone.</li>
+</('ul', 0)>
+<h2>Searching and Categorizing</h2>
+
+<ul>
+<li><a href="https://github.com/collective/cioppino.twothumbs">cioppino.twothumbs</a> - Rate content using up- and down-thumbs.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.bookmarks">collective.bookmarks</a> - Bookmarks/ favorites/ wish-list for Plone.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.collectionfilter">collective.collectionfilter</a> - Faceted navigation filter for collection or contentlisting tiles.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.elasticsearch">collective.elasticsearch</a> - Use ElasticSearch as the search backend for Plone.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.elastic.plone">collective.elastic.plone</a> - ElasticSearch Integration for Plone content.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.searchandreplace">collective.searchandreplace</a> - Find and replace text in Plone content objects.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.solr">collective.solr</a> - Solr search engine integration for Plone.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.taxonomy">collective.taxonomy</a> - Create, edit and use hierarchical taxonomies to categorize content.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/eea.facetednavigation">eea.facetednavigation</a> - Very powerful interface to improve search without programming skills. Configuration is done through-the-web and lets you gradually select and explore different facets (metadata/properties) of the content and narrow down you search quickly and dynamically.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/Products.PloneKeywordManager">Products.PloneKeywordManager</a> - Change, merge and delete keywords/tags/subjects).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/zopyx/zopyx.typesense">zopyx.typesense</a> - Plone integration with the external Typesense search server (open-source). This is an alternative to collective.solr or Elasticsearch.</li>
+</('ul', 0)>
+<h2>Layout</h2>
+
+<p><em>Products and resources that help developers and users to create and manage site layouts.</em></p>
+
+<ul>
+<li><a href="https://github.com/plone/plone.app.mosaic">plone.app.mosaic</a> - Powerful and extendable editor that allows users to compose the content of a page with different tiles.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.cover">collective.cover</a> - Cover allows the creation of elaborate covers built around a drag-and-drop interface. Uses the same blocks/tiles ecosystem as plone.app.mosaic but a different approach to editing.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.contentsections">collective.contentsections</a> - Offers a block approach for Plone 6 Classic based entirely on Dexterity content types.</li>
+</('ul', 0)>
+<h2>Tiles</h2>
+
+<p><em>Add-ons that extend the layout editor plone.app.mosaic.</em></p>
+
+<ul>
+<li><a href="https://github.com/plone/plone.app.standardtiles">plone.app.standardtiles</a> - A set of standard tiles used by Mosaic, but can be used from any other tile manager.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.tiles.carousel">collective.tiles.carousel</a> - A slider tile for plone.app.mosaic based on the carousel component of Bootstrap 5.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.tiles.advancedstatic">collective.tiles.advancedstatic</a> - A tile that shows html text (similar to the static text portlet), with some additional configuration like the possibility to add custom css classes.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.tiles.collection">collective.tiles.collection</a> - A tile that shows a set of collection results with possibility to choose (and develop) custom layouts.</li>
+</('ul', 0)>
+<h2>Events</h2>
+
+<p><em>Add-ons that handle events and calendars.</em></p>
+
+<ul>
+<li><a href="https://github.com/collective/collective.easyformplugin.registration">collective.easyformplugin.registration</a> - Add a behavior to collective.easyform to manage registration forms for events.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.fullcalendar">collective.fullcalendar</a> - Display events in a nice calendar UI using https://fullcalendar.io.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.venue">collective.venue</a> - Venue type with geolocation support for use with events or any other location specific content.</li>
+</('ul', 0)>
+<h2>Forms</h2>
+
+<p><em>Add-ons that allow generating and using forms.</em></p>
+
+<ul>
+<li><a href="https://github.com/collective/collective.easyform">collective.easyform</a> - EasyForm provides a Plone form builder through-the-web using fields, widgets, actions and validators. Form input can be saved or emailed. A simple and user-friendly interface allows non-programmers to create custom forms.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.fieldedit">collective.fieldedit</a> - A flexible form to edit selected fields of a content type.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.honeypot">collective.honeypot</a> - Honeypot protection for forms.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.z3cform.datagridfield">collective.z3cform.datagridfield</a> - A field with a datagrid (table), where each row is a sub form.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.z3cform.norobots">collective.z3cform.norobots</a> - A "human" captcha widget based on a list of questions/answers.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/plone/plone.formwidget.hcaptcha">plone.formwidgets.hcaptcha</a> - HCaptcha widget to protect Plone from bots, spam, and other forms of automated abuse.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/bluedynamics/yafowil.plone">yafowil.plone</a> - Yafowil is a form library for Python. This is its Plone Integration package.</li>
+</('ul', 0)>
+<h2>Multilingual</h2>
+
+<p><em>Add-ons to help manage multilingual sites.</em></p>
+
+<ul>
+<li><a href="https://github.com/collective/collective.linguatags">collective.linguatags</a> - Multilingual Tags for Plone.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/plone/plone.app.multilingualindexes">plone.app.multilingualindexes</a> - Indexes optimized to query multilingual content made with plone.app.multilingual.</li>
+</('ul', 0)>
+<h2>Media</h2>
+
+<p><em>Add-ons that handle image, video and audio content.</em></p>
+
+<ul>
+<li><a href="https://github.com/collective/collective.autoscaling">collective.autoscaling</a> - Automatic scaling of large images. Useful to reduce your database size when editors upload too large images.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.behavior.banner">collective.behavior.banner</a> - A behavior to create banners and sliders from banners.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.behavior.relatedmedia">collective.behavior.relatedmedia</a> - A behavior to create/upload/manage media relations (Image, File) for content types.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.lazysizes">collective.lazysizes</a> - Integration of lazysizes, a lightweight lazy loader, into Plone.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.wavesurfer">collective.wavesurfer</a> - Implementation of https://wavesurfer-js.org audio player for Plone.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/plone.app.imagecropping">plone.app.imagecropping</a> - Crops Images in Plone manually using cropper JS library.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/plone/plone.gallery">plone.gallery</a> - Photo gallery view for Plone.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/RedTurtle/redturtle.gallery">redturtle.gallery</a> - Adds a gallery view with a carousel made with slick.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/wildcard.media">wildcard.media</a> - Provides audio and video content types and behaviors.</li>
+</('ul', 0)>
+<h2>Security</h2>
+
+<ul>
+<li><a href="https://github.com/collective/collective.explicitacquisition">collective.explicitacquisition</a> - Disallow access to acquired content outside the current path.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.geotransform">collective.geotransform</a> - Graceful E-mail Obfuscation for Plone.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.contactformprotection">collective.contactformprotection</a> - Disables the default <code>contact-info</code> form or protect it with <code>plone.formwidget.[h|re]captcha</code>.</li>
+</('ul', 0)>
+<h2>SEO</h2>
+
+<p><em>Add-ons for search engine optimization.</em></p>
+
+<ul>
+<li><a href="https://github.com/bluedynamics/bda.plone.gtm">bda.plone.gtm</a> - Google Tag Manager Integration.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.behavior.seo">collective.behavior.seo</a> - Adds extra fields used for SEO optimisation.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.splitsitemap">collective.splitsitemap</a> - Provides a cached split sitemap on big public sites.</li>
+</('ul', 0)>
+<h2>Authentication</h2>
+
+<p><em>A list of authentication plugins, to integrate Plone with external user , Importsources and Migrations.import</em></p>
+
+<ul>
+<li><a href="https://github.com/collective/pas.plugins.ldap">pas.plugins.ldap</a> - Provides users and groups from a LDAP directory.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/pas.plugins.authomatic">pas.plugins.authomatic</a> - Authomatic OAuth1/OAuth2/OpenID Login Integration with Plone.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/iw.rejectanonymous">iw.rejectanonymous</a> - Reject unconditionnally anonymous users from a Plone site, without any change in your security policy matrix or workflows. The basic use case is an extranet, where all visitors must be authenticated.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/pas.plugins.headers">pas.plugins.headers</a> - Reads request headers and uses them for authentication. Think SAML headers that are set by a front web server like Apache or nginx.</li>
+</ul>
+<ul>
+<li><a href="https://pypi.org/project/dm.zope.saml2/">dm.zope.saml2</a> - Supports SAML2 based Single Sign-On.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.impersonate">collective.impersonate</a> - Allow administrators to impersonate another user. Useful for verifying workflow/permission set up on real content.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.pwexpiry">collective.pwexpiry</a> - Provideds methods for stronger user passwords in Plone and password attack protection.</li>
+</('ul', 0)>
+<h2>Shop</h2>
+
+<ul>
+<li><a href="https://github.com/bluedynamics/bda.plone.productshop">bda.plone.productshop</a> - Flexible and modular e-commerce solution for Plone.</li>
+</('ul', 0)>
+<h2>Export, Import and Migrations</h2>
+
+<ul>
+<li><a href="https://github.com/collective/collective.exportimport/">collective.exportimport</a> - Export and import content and a lot of other data from and to Plone. The main solution for all kinds of migrations based on plone.restapi.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.migrationhelpers/">collective.migrationhelpers</a> - Helpers and examples to use during migrations.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.jsonify">collective.jsonify</a> - Export Plone content to JSON.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.transmogrifier">collective.transmogrifier</a> - A configurable pipeline, aimed at transforming content for import and export.</li>
+</('ul', 0)>
+<h2>Themes</h2>
+
+<ul>
+<li><a href="https://github.com/collective/plonetheme.tokyo">plonetheme.tokyo</a> - Tokyo Theme for Plone implements Bootstrap 4 into Plone, with an emphasis on keeping things as close to "default" as possible.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/plonetheme.grueezibuesi">plonetheme.grueezibuesi</a> - A kitten inspired theme for Plone 6.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.sidebar">collective.sidebar</a> - A sidebar that consolidates toolbar and navigation.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/RedTurtle/collective.editablemenu">collective.editablemenu</a> - A customizable navigation menu for Plone.</li>
+</('ul', 0)>
+<h2>Develop</h2>
+
+<p><em>Add-ons that help developing Plone</em></p>
+
+<ul>
+<li><a href="https://github.com/collective/Products.PDBDebugMode">Products.PDBDebugMode</a> - Post-mortem debugging: open a pdb session whenever an exception occurs so you you can find out what is going wrong. Plus: By adding /pdb to a url you end up you in a pdb session on the current context. A killer tool for developers.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/plone/plone.app.debugtoolbar">plone.app.debugtoolbar</a> - A toolbar that shows a wealth of debug information about a running Plone site and the content you are inspecting. Also includes a interactive python-shell, a TALES-expression evaluator and and code-reload.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/plone/plone.reload">plone.reload</a> - Code and configuration reload without server restarts.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/Products.PrintingMailHost">Products.PrintingMailHost</a> - Log mail messages instead of sending mail.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/experimental.gracefulblobmissing/">experimental.gracefulblobmissing</a> - Gracefully handle missing binary files in Plone.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.patchwatcher">collective.patchwatcher</a> - A great companion for keeping track of patched or overridden files.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.relationhelpers">collective.relationhelpers</a> - Helpers to manage, create, export and rebuild relations in Plone 5.x. For Plone 6 this was merged into Plone core.</li>
+</('ul', 0)>
+<h2>Sysadmin</h2>
+
+<p><em>Add-ons that help admins deploying and maintaining Plone</em></p>
+
+<ul>
+<li><a href="https://github.com/collective/collective.catalogcleanup">collective.catalogcleanup</a> - Removes data from the catalog that no longer belong to an actual object.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.fingerpointing">collective.fingerpointing</a> - Keeps track of different events and write them down to an audit log.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.ifttt">collective.ifttt</a> - Enables any Plone site to play in the IFTTT ecosystem. For example when a news item is published, then tweet about it or post it on Facebook.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.purgebyid">collective.purgebyid</a> - Use tag-based cache invalidation in Plone (e.g. with Varnish's xkey module).</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.recipe.backup">collective.recipe.backup</a> - Powerful and flexible backup/restore solution for Plone.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.regenv">collective.regenv</a> - Override registry settings using environment variables.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.revisionmanager">collective.revisionmanager</a> - Manage Products.CMFEditions histories that can bloat your database.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/collective.sentry">collective.sentry</a> - Sentry integration to aggregate errors and help finding their causes.</li>
+</ul>
+<ul>
+<li><a href="https://pypi.org/project/dm.historical">dm.historical</a> - Access any historical state of your database. Can be useful to find out what happened to objects in the past and to restore accidentally deleted or modified objects.</li>
+</ul>
+<ul>
+<li><a href="https://github.com/collective/haufe.requestmonitoring">haufe.requestmonitoring</a> - Detailed request logging functionality on top of the publication events. Useful to find out what takes longer than it should.</li>
+</('ul', 0)>
+<h2>Finding more add-ons</h2>
+
+<p>It can be hard to find the right add-on for your requirements.</p>
+<p>Here are some tips:</p>
+
+<ul>
+<li>Make a list of required features.</li>
+</ul>
+<ul>
+<li>Look in this list first.</li>
+</ul>
+<ul>
+<li>Search pypi: https://pypi.org/search/?c=Framework+%3A%3A+Plone</li>
+</ul>
+<ul>
+<li>Search the collective organization on github: https://github.com/collective</li>
+</ul>
+<ul>
+<li>Search the plone organization on github: https://github.com/plone</li>
+</ul>
+<ul>
+<li>Google for your requirements</li>
+</ul>
+<p>Once you have a shortlist, test these add-ons. Here are the main issues you need to test before you install an add-on on a production site:</p>
+
+<ul>
+<li>Test all required features. Read but do not trust the documentation</li>
+</ul>
+<ul>
+<li>Check if the add-on runs on your required version</li>
+</ul>
+<ul>
+<li>Check if it is maintained</li>
+</ul>
+<ul>
+<li>Does it have i18n-support, i.e. is the user-interface translated to your language?</li>
+</ul>
+<ul>
+<li>Does it uninstall cleanly?</li>
+</ul>
+<ul>
+<li>Check for unwanted dependencies</li>
+</ul>
+<p>Once you found an add-on you like, you can ask the community if you made a good choice or if you missed something:</p>
+
+<ul>
+<li>Message Board: https://community.plone.org</li>
+</ul>
+<p>If you can't find something that fits your requirements 100% you can:</p>
+
+<ul>
+<li>Adapt your requirements to what is available.</li>
+</ul>
+<ul>
+<li>Invest the time & money to customize an existing add-ons to better fit your needs.</li>
+</ul>
+<ul>
+<li>Create a new add-on that does exactly what you need.</li>
+</('ul', 0)>
+<h2>Official resources</h2>
+
+<p><em>Because Plone also has a lot of good official info resources</em></p>
+
+<!--lint ignore double-link-->
+<ul>
+<li><a href="https://plone.org/">plone.org</a> - Official website for developers and community.</li>
+</ul>
+<ul>
+<li><a href="https://community.plone.org/">community.plone.org</a> - Official community forum, the best place to get help.</li>
+</ul>
+<ul>
+<li><a href="https://discord.gg/zFY3EBbjaj">Discord chat</a> - Discord is the best way to chat with members of the Plone community.</li>
+</ul>
+<ul>
+<li><a href="https://plone.org/support">Plone support</a> - Where to find help.</li>
+</ul>
+<ul>
+<li><a href="https://docs.plone.org/">docs.plone.org</a> - Official documentation for developers/integrators.</li>
+</ul>
+<ul>
+<li><a href="https://6.dev-docs.plone.org/">Plone 6 Documentation</a> - Official documentation for the upcoming Plone 6 (work on progress).</li>
+</ul>
+<ul>
+<li><a href="https://training.plone.org/">training.plone.org</a> - Training classes for developers/integrators/users/designers.</li>
+</ul>
+<ul>
+<li><a href="https://6.dev-docs.plone.org/plone.api/index.html">plone.api</a> - Documentation for plone.api.</li>
+</('ul', 0)>
+<h2>Contributing</h2>
+
+<p>Contributions are welcome! Read the <a href="contributing.md">contribution guidelines</a>.</p>
+
+</body>
+</html>
